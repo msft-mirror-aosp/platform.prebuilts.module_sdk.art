@@ -1,0 +1,2068 @@
+// This is auto-generated. DO NOT EDIT.
+
+java_import {
+    name: "art-module-sdk_core-lambda-stubs@current",
+    sdk_member_name: "core-lambda-stubs",
+    visibility: ["//visibility:public"],
+    apex_available: ["//apex_available:platform"],
+    jars: ["java/core-lambda-stubs.jar"],
+}
+
+java_import {
+    name: "core-lambda-stubs",
+    prefer: false,
+    visibility: ["//visibility:public"],
+    apex_available: ["//apex_available:platform"],
+    jars: ["java/core-lambda-stubs.jar"],
+}
+
+java_import {
+    name: "art-module-sdk_core.current.stubs@current",
+    sdk_member_name: "core.current.stubs",
+    visibility: ["//visibility:public"],
+    apex_available: ["//apex_available:platform"],
+    jars: ["java/core.current.stubs.jar"],
+}
+
+java_import {
+    name: "core.current.stubs",
+    prefer: false,
+    visibility: ["//visibility:public"],
+    apex_available: ["//apex_available:platform"],
+    jars: ["java/core.current.stubs.jar"],
+}
+
+java_import {
+    name: "art-module-sdk_legacy.core.platform.api.stubs@current",
+    sdk_member_name: "legacy.core.platform.api.stubs",
+    visibility: ["//visibility:public"],
+    apex_available: ["//apex_available:platform"],
+    jars: ["java/legacy.core.platform.api.stubs.jar"],
+}
+
+java_import {
+    name: "legacy.core.platform.api.stubs",
+    prefer: false,
+    visibility: ["//visibility:public"],
+    apex_available: ["//apex_available:platform"],
+    jars: ["java/legacy.core.platform.api.stubs.jar"],
+}
+
+java_import {
+    name: "art-module-sdk_stable.core.platform.api.stubs@current",
+    sdk_member_name: "stable.core.platform.api.stubs",
+    visibility: ["//visibility:public"],
+    apex_available: ["//apex_available:platform"],
+    jars: ["java/stable.core.platform.api.stubs.jar"],
+}
+
+java_import {
+    name: "stable.core.platform.api.stubs",
+    prefer: false,
+    visibility: ["//visibility:public"],
+    apex_available: ["//apex_available:platform"],
+    jars: ["java/stable.core.platform.api.stubs.jar"],
+}
+
+java_import {
+    name: "art-module-sdk_art.module.public.api.stubs@current",
+    sdk_member_name: "art.module.public.api.stubs",
+    visibility: ["//visibility:private"],
+    apex_available: ["//apex_available:platform"],
+    jars: ["java/art.module.public.api.stubs.jar"],
+}
+
+java_import {
+    name: "art-module-sdk_art.module.public.api.stubs",
+    prefer: false,
+    visibility: ["//visibility:private"],
+    apex_available: ["//apex_available:platform"],
+    jars: ["java/art.module.public.api.stubs.jar"],
+}
+
+java_import {
+    name: "art-module-sdk_core-lambda-stubs-for-system-modules@current",
+    sdk_member_name: "core-lambda-stubs-for-system-modules",
+    visibility: ["//visibility:private"],
+    apex_available: ["//apex_available:platform"],
+    jars: ["java/core-lambda-stubs-for-system-modules.jar"],
+}
+
+java_import {
+    name: "art-module-sdk_core-lambda-stubs-for-system-modules",
+    prefer: false,
+    visibility: ["//visibility:private"],
+    apex_available: ["//apex_available:platform"],
+    jars: ["java/core-lambda-stubs-for-system-modules.jar"],
+}
+
+java_import {
+    name: "art-module-sdk_core-generated-annotation-stubs@current",
+    sdk_member_name: "core-generated-annotation-stubs",
+    visibility: ["//visibility:private"],
+    apex_available: ["//apex_available:platform"],
+    jars: ["java/core-generated-annotation-stubs.jar"],
+}
+
+java_import {
+    name: "art-module-sdk_core-generated-annotation-stubs",
+    prefer: false,
+    visibility: ["//visibility:private"],
+    apex_available: ["//apex_available:platform"],
+    jars: ["java/core-generated-annotation-stubs.jar"],
+}
+
+java_import {
+    name: "art-module-sdk_art.module.api.annotations.for.system.modules@current",
+    sdk_member_name: "art.module.api.annotations.for.system.modules",
+    visibility: ["//visibility:private"],
+    apex_available: ["//apex_available:platform"],
+    jars: ["java/art.module.api.annotations.for.system.modules.jar"],
+}
+
+java_import {
+    name: "art-module-sdk_art.module.api.annotations.for.system.modules",
+    prefer: false,
+    visibility: ["//visibility:private"],
+    apex_available: ["//apex_available:platform"],
+    jars: ["java/art.module.api.annotations.for.system.modules.jar"],
+}
+
+java_import {
+    name: "art-module-sdk_stub-annotations@current",
+    sdk_member_name: "stub-annotations",
+    visibility: ["//visibility:private"],
+    apex_available: ["//apex_available:platform"],
+    jars: ["java/stub-annotations.jar"],
+}
+
+java_import {
+    name: "art-module-sdk_stub-annotations",
+    prefer: false,
+    visibility: ["//visibility:private"],
+    apex_available: ["//apex_available:platform"],
+    jars: ["java/stub-annotations.jar"],
+}
+
+java_import {
+    name: "art-module-sdk_art.module.intra.core.api.stubs@current",
+    sdk_member_name: "art.module.intra.core.api.stubs",
+    visibility: ["//visibility:private"],
+    apex_available: ["//apex_available:platform"],
+    jars: ["java/art.module.intra.core.api.stubs.jar"],
+}
+
+java_import {
+    name: "art-module-sdk_art.module.intra.core.api.stubs",
+    prefer: false,
+    visibility: ["//visibility:private"],
+    apex_available: ["//apex_available:platform"],
+    jars: ["java/art.module.intra.core.api.stubs.jar"],
+}
+
+java_import {
+    name: "art-module-sdk_art-module-intra-core-api-stubs-system-modules-lib@current",
+    sdk_member_name: "art-module-intra-core-api-stubs-system-modules-lib",
+    visibility: ["//visibility:private"],
+    apex_available: ["//apex_available:platform"],
+    jars: ["java/art-module-intra-core-api-stubs-system-modules-lib.jar"],
+}
+
+java_import {
+    name: "art-module-sdk_art-module-intra-core-api-stubs-system-modules-lib",
+    prefer: false,
+    visibility: ["//visibility:private"],
+    apex_available: ["//apex_available:platform"],
+    jars: ["java/art-module-intra-core-api-stubs-system-modules-lib.jar"],
+}
+
+java_import {
+    name: "art-module-sdk_legacy.art.module.platform.api.stubs@current",
+    sdk_member_name: "legacy.art.module.platform.api.stubs",
+    visibility: ["//visibility:private"],
+    apex_available: ["//apex_available:platform"],
+    jars: ["java/legacy.art.module.platform.api.stubs.jar"],
+}
+
+java_import {
+    name: "art-module-sdk_legacy.art.module.platform.api.stubs",
+    prefer: false,
+    visibility: ["//visibility:private"],
+    apex_available: ["//apex_available:platform"],
+    jars: ["java/legacy.art.module.platform.api.stubs.jar"],
+}
+
+java_import {
+    name: "art-module-sdk_stable.art.module.platform.api.stubs@current",
+    sdk_member_name: "stable.art.module.platform.api.stubs",
+    visibility: ["//visibility:private"],
+    apex_available: ["//apex_available:platform"],
+    jars: ["java/stable.art.module.platform.api.stubs.jar"],
+}
+
+java_import {
+    name: "art-module-sdk_stable.art.module.platform.api.stubs",
+    prefer: false,
+    visibility: ["//visibility:private"],
+    apex_available: ["//apex_available:platform"],
+    jars: ["java/stable.art.module.platform.api.stubs.jar"],
+}
+
+java_import {
+    name: "art-module-sdk_core-current-stubs-for-system-modules@current",
+    sdk_member_name: "core-current-stubs-for-system-modules",
+    visibility: ["//visibility:private"],
+    apex_available: ["//apex_available:platform"],
+    jars: ["java/core-current-stubs-for-system-modules.jar"],
+}
+
+java_import {
+    name: "art-module-sdk_core-current-stubs-for-system-modules",
+    prefer: false,
+    visibility: ["//visibility:private"],
+    apex_available: ["//apex_available:platform"],
+    jars: ["java/core-current-stubs-for-system-modules.jar"],
+}
+
+java_sdk_library_import {
+    name: "art-module-sdk_art.module.public.api@current",
+    sdk_member_name: "art.module.public.api",
+    visibility: [
+        "//art/build/sdk",
+        "//frameworks/base",
+        "//libcore",
+        "//prebuilts:__subpackages__",
+    ],
+    apex_available: ["//apex_available:platform"],
+    shared_library: false,
+    doctag_files: ["doctags/known_oj_tags.txt"],
+    libs: ["i18n.module.intra.core.api.stubs"],
+    public: {
+        jars: ["sdk_library/public/art.module.public.api-stubs.jar"],
+        stub_srcs: ["sdk_library/public/art.module.public.api_stub_sources"],
+        current_api: "sdk_library/public/art.module.public.api.txt",
+        removed_api: "sdk_library/public/art.module.public.api-removed.txt",
+        sdk_version: "none",
+    },
+}
+
+java_sdk_library_import {
+    name: "art.module.public.api",
+    prefer: false,
+    visibility: [
+        "//art/build/sdk",
+        "//frameworks/base",
+        "//libcore",
+        "//prebuilts:__subpackages__",
+    ],
+    apex_available: ["//apex_available:platform"],
+    shared_library: false,
+    doctag_files: ["doctags/known_oj_tags.txt"],
+    libs: ["i18n.module.intra.core.api.stubs"],
+    public: {
+        jars: ["sdk_library/public/art.module.public.api-stubs.jar"],
+        stub_srcs: ["sdk_library/public/art.module.public.api_stub_sources"],
+        current_api: "sdk_library/public/art.module.public.api.txt",
+        removed_api: "sdk_library/public/art.module.public.api-removed.txt",
+        sdk_version: "none",
+    },
+}
+
+java_system_modules_import {
+    name: "art-module-sdk_art-module-public-api-stubs-system-modules@current",
+    sdk_member_name: "art-module-public-api-stubs-system-modules",
+    visibility: [
+        "//art/build/sdk",
+        "//external/conscrypt",
+        "//external/icu/android_icu4j",
+        "//external/wycheproof",
+        "//libcore",
+        "//prebuilts:__subpackages__",
+    ],
+    libs: [
+        "art-module-sdk_art.module.public.api.stubs@current",
+        "art-module-sdk_core-lambda-stubs-for-system-modules@current",
+        "art-module-sdk_core-generated-annotation-stubs@current",
+        "art-module-sdk_art.module.api.annotations.for.system.modules@current",
+        "art-module-sdk_stub-annotations@current",
+    ],
+}
+
+java_system_modules_import {
+    name: "art-module-public-api-stubs-system-modules",
+    prefer: false,
+    visibility: [
+        "//art/build/sdk",
+        "//external/conscrypt",
+        "//external/icu/android_icu4j",
+        "//external/wycheproof",
+        "//libcore",
+        "//prebuilts:__subpackages__",
+    ],
+    libs: [
+        "art-module-sdk_art.module.public.api.stubs",
+        "art-module-sdk_core-lambda-stubs-for-system-modules",
+        "art-module-sdk_core-generated-annotation-stubs",
+        "art-module-sdk_art.module.api.annotations.for.system.modules",
+        "art-module-sdk_stub-annotations",
+    ],
+}
+
+java_system_modules_import {
+    name: "art-module-sdk_art-module-intra-core-api-stubs-system-modules@current",
+    sdk_member_name: "art-module-intra-core-api-stubs-system-modules",
+    visibility: [
+        "//art/build/sdk",
+        "//external/bouncycastle",
+        "//external/conscrypt",
+        "//external/icu/android_icu4j",
+        "//libcore/mmodules/intracoreapi",
+        "//prebuilts:__subpackages__",
+    ],
+    libs: [
+        "art-module-sdk_art.module.intra.core.api.stubs@current",
+        "art-module-sdk_art-module-intra-core-api-stubs-system-modules-lib@current",
+    ],
+}
+
+java_system_modules_import {
+    name: "art-module-intra-core-api-stubs-system-modules",
+    prefer: false,
+    visibility: [
+        "//art/build/sdk",
+        "//external/bouncycastle",
+        "//external/conscrypt",
+        "//external/icu/android_icu4j",
+        "//libcore/mmodules/intracoreapi",
+        "//prebuilts:__subpackages__",
+    ],
+    libs: [
+        "art-module-sdk_art.module.intra.core.api.stubs",
+        "art-module-sdk_art-module-intra-core-api-stubs-system-modules-lib",
+    ],
+}
+
+java_system_modules_import {
+    name: "art-module-sdk_legacy-art-module-platform-api-stubs-system-modules@current",
+    sdk_member_name: "legacy-art-module-platform-api-stubs-system-modules",
+    visibility: [
+        "//art/build/sdk",
+        "//external/conscrypt",
+        "//external/icu/android_icu4j",
+        "//external/wycheproof",
+        "//libcore/mmodules/core_platform_api",
+        "//prebuilts:__subpackages__",
+    ],
+    libs: ["art-module-sdk_legacy.art.module.platform.api.stubs@current"],
+}
+
+java_system_modules_import {
+    name: "legacy-art-module-platform-api-stubs-system-modules",
+    prefer: false,
+    visibility: [
+        "//art/build/sdk",
+        "//external/conscrypt",
+        "//external/icu/android_icu4j",
+        "//external/wycheproof",
+        "//libcore/mmodules/core_platform_api",
+        "//prebuilts:__subpackages__",
+    ],
+    libs: ["art-module-sdk_legacy.art.module.platform.api.stubs"],
+}
+
+java_system_modules_import {
+    name: "art-module-sdk_stable-art-module-platform-api-stubs-system-modules@current",
+    sdk_member_name: "stable-art-module-platform-api-stubs-system-modules",
+    visibility: [
+        "//art/build/sdk",
+        "//external/conscrypt",
+        "//external/icu/android_icu4j",
+        "//external/wycheproof",
+        "//libcore/mmodules/core_platform_api",
+        "//prebuilts:__subpackages__",
+    ],
+    libs: ["art-module-sdk_stable.art.module.platform.api.stubs@current"],
+}
+
+java_system_modules_import {
+    name: "stable-art-module-platform-api-stubs-system-modules",
+    prefer: false,
+    visibility: [
+        "//art/build/sdk",
+        "//external/conscrypt",
+        "//external/icu/android_icu4j",
+        "//external/wycheproof",
+        "//libcore/mmodules/core_platform_api",
+        "//prebuilts:__subpackages__",
+    ],
+    libs: ["art-module-sdk_stable.art.module.platform.api.stubs"],
+}
+
+java_system_modules_import {
+    name: "art-module-sdk_core-current-stubs-system-modules@current",
+    sdk_member_name: "core-current-stubs-system-modules",
+    visibility: ["//visibility:public"],
+    libs: ["art-module-sdk_core-current-stubs-for-system-modules@current"],
+}
+
+java_system_modules_import {
+    name: "core-current-stubs-system-modules",
+    prefer: false,
+    visibility: ["//visibility:public"],
+    libs: ["art-module-sdk_core-current-stubs-for-system-modules"],
+}
+
+java_system_modules_import {
+    name: "art-module-sdk_legacy-core-platform-api-stubs-system-modules@current",
+    sdk_member_name: "legacy-core-platform-api-stubs-system-modules",
+    visibility: ["//visibility:public"],
+    libs: [
+        "art-module-sdk_legacy.core.platform.api.stubs@current",
+        "art-module-sdk_core-lambda-stubs-for-system-modules@current",
+        "art-module-sdk_core-generated-annotation-stubs@current",
+    ],
+}
+
+java_system_modules_import {
+    name: "legacy-core-platform-api-stubs-system-modules",
+    prefer: false,
+    visibility: ["//visibility:public"],
+    libs: [
+        "legacy.core.platform.api.stubs",
+        "art-module-sdk_core-lambda-stubs-for-system-modules",
+        "art-module-sdk_core-generated-annotation-stubs",
+    ],
+}
+
+java_system_modules_import {
+    name: "art-module-sdk_stable-core-platform-api-stubs-system-modules@current",
+    sdk_member_name: "stable-core-platform-api-stubs-system-modules",
+    visibility: ["//visibility:public"],
+    libs: [
+        "art-module-sdk_stable.core.platform.api.stubs@current",
+        "art-module-sdk_core-lambda-stubs-for-system-modules@current",
+        "art-module-sdk_core-generated-annotation-stubs@current",
+    ],
+}
+
+java_system_modules_import {
+    name: "stable-core-platform-api-stubs-system-modules",
+    prefer: false,
+    visibility: ["//visibility:public"],
+    libs: [
+        "stable.core.platform.api.stubs",
+        "art-module-sdk_core-lambda-stubs-for-system-modules",
+        "art-module-sdk_core-generated-annotation-stubs",
+    ],
+}
+
+cc_prebuilt_library_headers {
+    name: "art-module-sdk_jni_headers@current",
+    sdk_member_name: "jni_headers",
+    visibility: ["//visibility:public"],
+    apex_available: [
+        "//apex_available:anyapex",
+        "//apex_available:platform",
+    ],
+    host_supported: true,
+    recovery_available: true,
+    vendor_available: true,
+    sdk_version: "minimum",
+    stl: "none",
+    compile_multilib: "both",
+    system_shared_libs: [],
+    export_include_dirs: ["common_os/include/libnativehelper/include_jni"],
+    target: {
+        host: {
+            enabled: false,
+        },
+        linux_glibc_x86_64: {
+            enabled: true,
+        },
+        linux_glibc_x86: {
+            enabled: true,
+        },
+    },
+}
+
+cc_prebuilt_library_headers {
+    name: "jni_headers",
+    prefer: false,
+    visibility: ["//visibility:public"],
+    apex_available: [
+        "//apex_available:anyapex",
+        "//apex_available:platform",
+    ],
+    host_supported: true,
+    recovery_available: true,
+    vendor_available: true,
+    sdk_version: "minimum",
+    stl: "none",
+    compile_multilib: "both",
+    system_shared_libs: [],
+    export_include_dirs: ["common_os/include/libnativehelper/include_jni"],
+    target: {
+        host: {
+            enabled: false,
+        },
+        linux_glibc_x86_64: {
+            enabled: true,
+        },
+        linux_glibc_x86: {
+            enabled: true,
+        },
+    },
+}
+
+cc_prebuilt_library_headers {
+    name: "art-module-sdk_libartpalette-headers@current",
+    sdk_member_name: "libartpalette-headers",
+    visibility: [
+        "//art:__subpackages__",
+        "//prebuilts:__subpackages__",
+        "//system/libartpalette",
+    ],
+    apex_available: ["//apex_available:platform"],
+    host_supported: true,
+    compile_multilib: "both",
+    export_include_dirs: ["common_os/include/art/libartpalette/include"],
+    target: {
+        host: {
+            enabled: false,
+        },
+        linux_glibc_x86_64: {
+            enabled: true,
+        },
+        linux_glibc_x86: {
+            enabled: true,
+        },
+    },
+}
+
+cc_prebuilt_library_headers {
+    name: "libartpalette-headers",
+    prefer: false,
+    visibility: [
+        "//art:__subpackages__",
+        "//prebuilts:__subpackages__",
+        "//system/libartpalette",
+    ],
+    apex_available: ["//apex_available:platform"],
+    host_supported: true,
+    compile_multilib: "both",
+    export_include_dirs: ["common_os/include/art/libartpalette/include"],
+    target: {
+        host: {
+            enabled: false,
+        },
+        linux_glibc_x86_64: {
+            enabled: true,
+        },
+        linux_glibc_x86: {
+            enabled: true,
+        },
+    },
+}
+
+cc_prebuilt_library_headers {
+    name: "art-module-sdk_libnativehelper_header_only@current",
+    sdk_member_name: "libnativehelper_header_only",
+    visibility: ["//visibility:public"],
+    apex_available: [
+        "//apex_available:anyapex",
+        "//apex_available:platform",
+    ],
+    host_supported: true,
+    sdk_version: "minimum",
+    compile_multilib: "both",
+    export_include_dirs: [
+        "common_os/include/libnativehelper/header_only_include",
+        "common_os/include/libnativehelper/include_jni",
+    ],
+    target: {
+        host: {
+            enabled: false,
+        },
+        linux_glibc_x86_64: {
+            enabled: true,
+        },
+        linux_glibc_x86: {
+            enabled: true,
+        },
+    },
+}
+
+cc_prebuilt_library_headers {
+    name: "libnativehelper_header_only",
+    prefer: false,
+    visibility: ["//visibility:public"],
+    apex_available: [
+        "//apex_available:anyapex",
+        "//apex_available:platform",
+    ],
+    host_supported: true,
+    sdk_version: "minimum",
+    compile_multilib: "both",
+    export_include_dirs: [
+        "common_os/include/libnativehelper/header_only_include",
+        "common_os/include/libnativehelper/include_jni",
+    ],
+    target: {
+        host: {
+            enabled: false,
+        },
+        linux_glibc_x86_64: {
+            enabled: true,
+        },
+        linux_glibc_x86: {
+            enabled: true,
+        },
+    },
+}
+
+cc_prebuilt_library_headers {
+    name: "art-module-sdk_libopenjdkjvmti_headers@current",
+    sdk_member_name: "libopenjdkjvmti_headers",
+    visibility: ["//visibility:public"],
+    apex_available: [
+        "//apex_available:platform",
+        "com.android.art",
+        "com.android.art.debug",
+    ],
+    host_supported: true,
+    sdk_version: "current",
+    compile_multilib: "both",
+    export_include_dirs: [
+        "common_os/include/art/openjdkjvmti/include",
+        "common_os/include/libnativehelper/include_jni",
+    ],
+    target: {
+        host: {
+            enabled: false,
+        },
+        linux_glibc_x86_64: {
+            enabled: true,
+        },
+        linux_glibc_x86: {
+            enabled: true,
+        },
+    },
+}
+
+cc_prebuilt_library_headers {
+    name: "libopenjdkjvmti_headers",
+    prefer: false,
+    visibility: ["//visibility:public"],
+    apex_available: [
+        "//apex_available:platform",
+        "com.android.art",
+        "com.android.art.debug",
+    ],
+    host_supported: true,
+    sdk_version: "current",
+    compile_multilib: "both",
+    export_include_dirs: [
+        "common_os/include/art/openjdkjvmti/include",
+        "common_os/include/libnativehelper/include_jni",
+    ],
+    target: {
+        host: {
+            enabled: false,
+        },
+        linux_glibc_x86_64: {
+            enabled: true,
+        },
+        linux_glibc_x86: {
+            enabled: true,
+        },
+    },
+}
+
+cc_prebuilt_library_headers {
+    name: "art-module-sdk_libnativeloader-headers@current",
+    sdk_member_name: "libnativeloader-headers",
+    visibility: [
+        "//art:__subpackages__",
+        "//frameworks/av/media/libstagefright",
+        "//frameworks/native/libs/graphicsenv",
+        "//frameworks/native/vulkan/libvulkan",
+        "//prebuilts:__subpackages__",
+    ],
+    apex_available: [
+        "//apex_available:platform",
+        "com.android.art",
+        "com.android.art.debug",
+        "com.android.media",
+    ],
+    compile_multilib: "both",
+    export_include_dirs: [
+        "include/art/libnativeloader/include",
+        "include/libnativehelper/include_jni",
+    ],
+}
+
+cc_prebuilt_library_headers {
+    name: "libnativeloader-headers",
+    prefer: false,
+    visibility: [
+        "//art:__subpackages__",
+        "//frameworks/av/media/libstagefright",
+        "//frameworks/native/libs/graphicsenv",
+        "//frameworks/native/vulkan/libvulkan",
+        "//prebuilts:__subpackages__",
+    ],
+    apex_available: [
+        "//apex_available:platform",
+        "com.android.art",
+        "com.android.art.debug",
+        "com.android.media",
+    ],
+    compile_multilib: "both",
+    export_include_dirs: [
+        "include/art/libnativeloader/include",
+        "include/libnativehelper/include_jni",
+    ],
+}
+
+cc_prebuilt_library {
+    name: "art-module-sdk_libdexfile_support@current",
+    sdk_member_name: "libdexfile_support",
+    visibility: ["//visibility:public"],
+    apex_available: [
+        "//apex_available:platform",
+        "com.android.art",
+        "com.android.art.debug",
+        "com.android.media",
+        "com.android.media.swcodec",
+        "com.android.runtime",
+    ],
+    host_supported: true,
+    installable: false,
+    compile_multilib: "both",
+    shared_libs: ["liblog"],
+    export_include_dirs: [
+        "common_os/include/art/libdexfile/external/include",
+        "common_os/include/system/libbase/include",
+    ],
+    target: {
+        host: {
+            enabled: false,
+        },
+        android_arm64: {
+            static: {
+                srcs: ["android/arm64/lib/libdexfile_support.a"],
+            },
+            shared: {
+                srcs: ["android/arm64/lib/libdexfile_support.so"],
+            },
+        },
+        android_x86_64: {
+            static: {
+                srcs: ["android/x86_64/lib/libdexfile_support.a"],
+            },
+            shared: {
+                srcs: ["android/x86_64/lib/libdexfile_support.so"],
+            },
+        },
+        android_arm: {
+            static: {
+                srcs: ["android/arm/lib/libdexfile_support.a"],
+            },
+            shared: {
+                srcs: ["android/arm/lib/libdexfile_support.so"],
+            },
+        },
+        android_x86: {
+            static: {
+                srcs: ["android/x86/lib/libdexfile_support.a"],
+            },
+            shared: {
+                srcs: ["android/x86/lib/libdexfile_support.so"],
+            },
+        },
+        linux_glibc_x86_64: {
+            enabled: true,
+            static: {
+                srcs: ["linux_glibc/x86_64/lib/libdexfile_support.a"],
+            },
+            shared: {
+                srcs: ["linux_glibc/x86_64/lib/libdexfile_support.so"],
+            },
+        },
+        linux_glibc_x86: {
+            enabled: true,
+            static: {
+                srcs: ["linux_glibc/x86/lib/libdexfile_support.a"],
+            },
+            shared: {
+                srcs: ["linux_glibc/x86/lib/libdexfile_support.so"],
+            },
+        },
+    },
+}
+
+cc_prebuilt_library {
+    name: "libdexfile_support",
+    prefer: false,
+    visibility: ["//visibility:public"],
+    apex_available: [
+        "//apex_available:platform",
+        "com.android.art",
+        "com.android.art.debug",
+        "com.android.media",
+        "com.android.media.swcodec",
+        "com.android.runtime",
+    ],
+    host_supported: true,
+    compile_multilib: "both",
+    shared_libs: ["liblog"],
+    export_include_dirs: [
+        "common_os/include/art/libdexfile/external/include",
+        "common_os/include/system/libbase/include",
+    ],
+    target: {
+        host: {
+            enabled: false,
+        },
+        android_arm64: {
+            static: {
+                srcs: ["android/arm64/lib/libdexfile_support.a"],
+            },
+            shared: {
+                srcs: ["android/arm64/lib/libdexfile_support.so"],
+            },
+        },
+        android_x86_64: {
+            static: {
+                srcs: ["android/x86_64/lib/libdexfile_support.a"],
+            },
+            shared: {
+                srcs: ["android/x86_64/lib/libdexfile_support.so"],
+            },
+        },
+        android_arm: {
+            static: {
+                srcs: ["android/arm/lib/libdexfile_support.a"],
+            },
+            shared: {
+                srcs: ["android/arm/lib/libdexfile_support.so"],
+            },
+        },
+        android_x86: {
+            static: {
+                srcs: ["android/x86/lib/libdexfile_support.a"],
+            },
+            shared: {
+                srcs: ["android/x86/lib/libdexfile_support.so"],
+            },
+        },
+        linux_glibc_x86_64: {
+            enabled: true,
+            static: {
+                srcs: ["linux_glibc/x86_64/lib/libdexfile_support.a"],
+            },
+            shared: {
+                srcs: ["linux_glibc/x86_64/lib/libdexfile_support.so"],
+            },
+        },
+        linux_glibc_x86: {
+            enabled: true,
+            static: {
+                srcs: ["linux_glibc/x86/lib/libdexfile_support.a"],
+            },
+            shared: {
+                srcs: ["linux_glibc/x86/lib/libdexfile_support.so"],
+            },
+        },
+    },
+}
+
+cc_prebuilt_library {
+    name: "art-module-sdk_libsigchain@current",
+    sdk_member_name: "libsigchain",
+    visibility: [
+        "//art:__subpackages__",
+        "//frameworks/base/cmds/app_process",
+        "//prebuilts:__subpackages__",
+    ],
+    apex_available: [
+        "//apex_available:platform",
+        "com.android.art",
+        "com.android.art.debug",
+    ],
+    host_supported: true,
+    installable: false,
+    compile_multilib: "both",
+    target: {
+        host: {
+            enabled: false,
+        },
+        android: {
+            export_include_dirs: [
+                "android/include/art/sigchainlib",
+                "android/include/prebuilts/runtime/mainline/runtime/sdk/common_os/include/bionic/libc/async_safe/include",
+                "android/include/prebuilts/runtime/mainline/runtime/sdk/common_os/include/system/logging/liblog/include",
+            ],
+        },
+        android_arm64: {
+            export_system_include_dirs: [
+                "android/include/prebuilts/runtime/mainline/runtime/sdk/android/arm64/include/bionic/libc/include",
+                "android/include/prebuilts/runtime/mainline/runtime/sdk/android/arm64/include/bionic/libc/kernel/uapi",
+                "android/include/prebuilts/runtime/mainline/runtime/sdk/android/arm64/include/bionic/libc/kernel/android/scsi",
+                "android/include/prebuilts/runtime/mainline/runtime/sdk/android/arm64/include/bionic/libc/kernel/android/uapi",
+                "android/include/prebuilts/runtime/mainline/runtime/sdk/android/arm64/include/bionic/libc/kernel/uapi/asm-arm64",
+            ],
+            static: {
+                srcs: ["android/arm64/lib/libsigchain.a"],
+            },
+            shared: {
+                srcs: ["android/arm64/lib/libsigchain.so"],
+            },
+        },
+        android_x86_64: {
+            export_system_include_dirs: [
+                "android/include/prebuilts/runtime/mainline/runtime/sdk/android/x86_64/include/bionic/libc/include",
+                "android/include/prebuilts/runtime/mainline/runtime/sdk/android/x86_64/include/bionic/libc/kernel/uapi",
+                "android/include/prebuilts/runtime/mainline/runtime/sdk/android/x86_64/include/bionic/libc/kernel/android/scsi",
+                "android/include/prebuilts/runtime/mainline/runtime/sdk/android/x86_64/include/bionic/libc/kernel/android/uapi",
+                "android/include/prebuilts/runtime/mainline/runtime/sdk/android/x86_64/include/bionic/libc/kernel/uapi/asm-x86",
+            ],
+            static: {
+                srcs: ["android/x86_64/lib/libsigchain.a"],
+            },
+            shared: {
+                srcs: ["android/x86_64/lib/libsigchain.so"],
+            },
+        },
+        android_arm: {
+            export_system_include_dirs: [
+                "android/include/prebuilts/runtime/mainline/runtime/sdk/android/arm/include/bionic/libc/include",
+                "android/include/prebuilts/runtime/mainline/runtime/sdk/android/arm/include/bionic/libc/kernel/uapi",
+                "android/include/prebuilts/runtime/mainline/runtime/sdk/android/arm/include/bionic/libc/kernel/android/scsi",
+                "android/include/prebuilts/runtime/mainline/runtime/sdk/android/arm/include/bionic/libc/kernel/android/uapi",
+                "android/include/prebuilts/runtime/mainline/runtime/sdk/android/arm/include/bionic/libc/kernel/uapi/asm-arm",
+            ],
+            static: {
+                srcs: ["android/arm/lib/libsigchain.a"],
+            },
+            shared: {
+                srcs: ["android/arm/lib/libsigchain.so"],
+            },
+        },
+        android_x86: {
+            export_system_include_dirs: [
+                "android/include/prebuilts/runtime/mainline/runtime/sdk/android/x86/include/bionic/libc/include",
+                "android/include/prebuilts/runtime/mainline/runtime/sdk/android/x86/include/bionic/libc/kernel/uapi",
+                "android/include/prebuilts/runtime/mainline/runtime/sdk/android/x86/include/bionic/libc/kernel/android/scsi",
+                "android/include/prebuilts/runtime/mainline/runtime/sdk/android/x86/include/bionic/libc/kernel/android/uapi",
+                "android/include/prebuilts/runtime/mainline/runtime/sdk/android/x86/include/bionic/libc/kernel/uapi/asm-x86",
+            ],
+            static: {
+                srcs: ["android/x86/lib/libsigchain.a"],
+            },
+            shared: {
+                srcs: ["android/x86/lib/libsigchain.so"],
+            },
+        },
+        linux_glibc: {
+            export_include_dirs: ["linux_glibc/include/art/sigchainlib"],
+        },
+        linux_glibc_x86_64: {
+            enabled: true,
+            static: {
+                srcs: ["linux_glibc/x86_64/lib/libsigchain.a"],
+            },
+            shared: {
+                srcs: ["linux_glibc/x86_64/lib/libsigchain.so"],
+            },
+        },
+        linux_glibc_x86: {
+            enabled: true,
+            static: {
+                srcs: ["linux_glibc/x86/lib/libsigchain.a"],
+            },
+            shared: {
+                srcs: ["linux_glibc/x86/lib/libsigchain.so"],
+            },
+        },
+    },
+}
+
+cc_prebuilt_library {
+    name: "libsigchain",
+    prefer: false,
+    visibility: [
+        "//art:__subpackages__",
+        "//frameworks/base/cmds/app_process",
+        "//prebuilts:__subpackages__",
+    ],
+    apex_available: [
+        "//apex_available:platform",
+        "com.android.art",
+        "com.android.art.debug",
+    ],
+    host_supported: true,
+    compile_multilib: "both",
+    target: {
+        host: {
+            enabled: false,
+        },
+        android: {
+            export_include_dirs: [
+                "android/include/art/sigchainlib",
+                "android/include/prebuilts/runtime/mainline/runtime/sdk/common_os/include/bionic/libc/async_safe/include",
+                "android/include/prebuilts/runtime/mainline/runtime/sdk/common_os/include/system/logging/liblog/include",
+            ],
+        },
+        android_arm64: {
+            export_system_include_dirs: [
+                "android/include/prebuilts/runtime/mainline/runtime/sdk/android/arm64/include/bionic/libc/include",
+                "android/include/prebuilts/runtime/mainline/runtime/sdk/android/arm64/include/bionic/libc/kernel/uapi",
+                "android/include/prebuilts/runtime/mainline/runtime/sdk/android/arm64/include/bionic/libc/kernel/android/scsi",
+                "android/include/prebuilts/runtime/mainline/runtime/sdk/android/arm64/include/bionic/libc/kernel/android/uapi",
+                "android/include/prebuilts/runtime/mainline/runtime/sdk/android/arm64/include/bionic/libc/kernel/uapi/asm-arm64",
+            ],
+            static: {
+                srcs: ["android/arm64/lib/libsigchain.a"],
+            },
+            shared: {
+                srcs: ["android/arm64/lib/libsigchain.so"],
+            },
+        },
+        android_x86_64: {
+            export_system_include_dirs: [
+                "android/include/prebuilts/runtime/mainline/runtime/sdk/android/x86_64/include/bionic/libc/include",
+                "android/include/prebuilts/runtime/mainline/runtime/sdk/android/x86_64/include/bionic/libc/kernel/uapi",
+                "android/include/prebuilts/runtime/mainline/runtime/sdk/android/x86_64/include/bionic/libc/kernel/android/scsi",
+                "android/include/prebuilts/runtime/mainline/runtime/sdk/android/x86_64/include/bionic/libc/kernel/android/uapi",
+                "android/include/prebuilts/runtime/mainline/runtime/sdk/android/x86_64/include/bionic/libc/kernel/uapi/asm-x86",
+            ],
+            static: {
+                srcs: ["android/x86_64/lib/libsigchain.a"],
+            },
+            shared: {
+                srcs: ["android/x86_64/lib/libsigchain.so"],
+            },
+        },
+        android_arm: {
+            export_system_include_dirs: [
+                "android/include/prebuilts/runtime/mainline/runtime/sdk/android/arm/include/bionic/libc/include",
+                "android/include/prebuilts/runtime/mainline/runtime/sdk/android/arm/include/bionic/libc/kernel/uapi",
+                "android/include/prebuilts/runtime/mainline/runtime/sdk/android/arm/include/bionic/libc/kernel/android/scsi",
+                "android/include/prebuilts/runtime/mainline/runtime/sdk/android/arm/include/bionic/libc/kernel/android/uapi",
+                "android/include/prebuilts/runtime/mainline/runtime/sdk/android/arm/include/bionic/libc/kernel/uapi/asm-arm",
+            ],
+            static: {
+                srcs: ["android/arm/lib/libsigchain.a"],
+            },
+            shared: {
+                srcs: ["android/arm/lib/libsigchain.so"],
+            },
+        },
+        android_x86: {
+            export_system_include_dirs: [
+                "android/include/prebuilts/runtime/mainline/runtime/sdk/android/x86/include/bionic/libc/include",
+                "android/include/prebuilts/runtime/mainline/runtime/sdk/android/x86/include/bionic/libc/kernel/uapi",
+                "android/include/prebuilts/runtime/mainline/runtime/sdk/android/x86/include/bionic/libc/kernel/android/scsi",
+                "android/include/prebuilts/runtime/mainline/runtime/sdk/android/x86/include/bionic/libc/kernel/android/uapi",
+                "android/include/prebuilts/runtime/mainline/runtime/sdk/android/x86/include/bionic/libc/kernel/uapi/asm-x86",
+            ],
+            static: {
+                srcs: ["android/x86/lib/libsigchain.a"],
+            },
+            shared: {
+                srcs: ["android/x86/lib/libsigchain.so"],
+            },
+        },
+        linux_glibc: {
+            export_include_dirs: ["linux_glibc/include/art/sigchainlib"],
+        },
+        linux_glibc_x86_64: {
+            enabled: true,
+            static: {
+                srcs: ["linux_glibc/x86_64/lib/libsigchain.a"],
+            },
+            shared: {
+                srcs: ["linux_glibc/x86_64/lib/libsigchain.so"],
+            },
+        },
+        linux_glibc_x86: {
+            enabled: true,
+            static: {
+                srcs: ["linux_glibc/x86/lib/libsigchain.a"],
+            },
+            shared: {
+                srcs: ["linux_glibc/x86/lib/libsigchain.so"],
+            },
+        },
+    },
+}
+
+cc_prebuilt_library_shared {
+    name: "art-module-sdk_libandroidio@current",
+    sdk_member_name: "libandroidio",
+    visibility: [
+        "//art/build/apex",
+        "//art/build/sdk",
+        "//external/conscrypt",
+        "//libcore",
+        "//prebuilts:__subpackages__",
+    ],
+    apex_available: [
+        "com.android.art",
+        "com.android.art.debug",
+        "com.android.conscrypt",
+        "test_com.android.conscrypt",
+    ],
+    host_supported: true,
+    installable: false,
+    compile_multilib: "both",
+    stubs: {
+        versions: ["1"],
+    },
+    target: {
+        host: {
+            enabled: false,
+        },
+        android_arm64: {
+            srcs: ["android/arm64/lib/libandroidio.so"],
+        },
+        android_x86_64: {
+            srcs: ["android/x86_64/lib/libandroidio.so"],
+        },
+        android_arm: {
+            srcs: ["android/arm/lib/libandroidio.so"],
+        },
+        android_x86: {
+            srcs: ["android/x86/lib/libandroidio.so"],
+        },
+        linux_glibc_x86_64: {
+            enabled: true,
+            srcs: ["linux_glibc/x86_64/lib/libandroidio.so"],
+        },
+        linux_glibc_x86: {
+            enabled: true,
+            srcs: ["linux_glibc/x86/lib/libandroidio.so"],
+        },
+    },
+}
+
+cc_prebuilt_library_shared {
+    name: "libandroidio",
+    prefer: false,
+    visibility: [
+        "//art/build/apex",
+        "//art/build/sdk",
+        "//external/conscrypt",
+        "//libcore",
+        "//prebuilts:__subpackages__",
+    ],
+    apex_available: [
+        "com.android.art",
+        "com.android.art.debug",
+        "com.android.conscrypt",
+        "test_com.android.conscrypt",
+    ],
+    host_supported: true,
+    compile_multilib: "both",
+    stubs: {
+        versions: ["1"],
+    },
+    target: {
+        host: {
+            enabled: false,
+        },
+        android_arm64: {
+            srcs: ["android/arm64/lib/libandroidio.so"],
+        },
+        android_x86_64: {
+            srcs: ["android/x86_64/lib/libandroidio.so"],
+        },
+        android_arm: {
+            srcs: ["android/arm/lib/libandroidio.so"],
+        },
+        android_x86: {
+            srcs: ["android/x86/lib/libandroidio.so"],
+        },
+        linux_glibc_x86_64: {
+            enabled: true,
+            srcs: ["linux_glibc/x86_64/lib/libandroidio.so"],
+        },
+        linux_glibc_x86: {
+            enabled: true,
+            srcs: ["linux_glibc/x86/lib/libandroidio.so"],
+        },
+    },
+}
+
+cc_prebuilt_library_shared {
+    name: "art-module-sdk_libdexfile_external@current",
+    sdk_member_name: "libdexfile_external",
+    visibility: ["//visibility:public"],
+    apex_available: [
+        "com.android.art",
+        "com.android.art.debug",
+    ],
+    host_supported: true,
+    installable: false,
+    compile_multilib: "both",
+    export_include_dirs: [
+        "common_os/include/libnativehelper/include_jni",
+        "common_os/include/art/libdexfile/external/include",
+        "common_os/include/system/libbase/include",
+    ],
+    stubs: {
+        versions: ["1"],
+    },
+    target: {
+        host: {
+            enabled: false,
+        },
+        android_arm64: {
+            srcs: ["android/arm64/lib/libdexfile_external.so"],
+        },
+        android_x86_64: {
+            srcs: ["android/x86_64/lib/libdexfile_external.so"],
+        },
+        android_arm: {
+            srcs: ["android/arm/lib/libdexfile_external.so"],
+        },
+        android_x86: {
+            srcs: ["android/x86/lib/libdexfile_external.so"],
+        },
+        linux_glibc_x86_64: {
+            enabled: true,
+            srcs: ["linux_glibc/x86_64/lib/libdexfile_external.so"],
+        },
+        linux_glibc_x86: {
+            enabled: true,
+            srcs: ["linux_glibc/x86/lib/libdexfile_external.so"],
+        },
+    },
+}
+
+cc_prebuilt_library_shared {
+    name: "libdexfile_external",
+    prefer: false,
+    visibility: ["//visibility:public"],
+    apex_available: [
+        "com.android.art",
+        "com.android.art.debug",
+    ],
+    host_supported: true,
+    compile_multilib: "both",
+    export_include_dirs: [
+        "common_os/include/libnativehelper/include_jni",
+        "common_os/include/art/libdexfile/external/include",
+        "common_os/include/system/libbase/include",
+    ],
+    stubs: {
+        versions: ["1"],
+    },
+    target: {
+        host: {
+            enabled: false,
+        },
+        android_arm64: {
+            srcs: ["android/arm64/lib/libdexfile_external.so"],
+        },
+        android_x86_64: {
+            srcs: ["android/x86_64/lib/libdexfile_external.so"],
+        },
+        android_arm: {
+            srcs: ["android/arm/lib/libdexfile_external.so"],
+        },
+        android_x86: {
+            srcs: ["android/x86/lib/libdexfile_external.so"],
+        },
+        linux_glibc_x86_64: {
+            enabled: true,
+            srcs: ["linux_glibc/x86_64/lib/libdexfile_external.so"],
+        },
+        linux_glibc_x86: {
+            enabled: true,
+            srcs: ["linux_glibc/x86/lib/libdexfile_external.so"],
+        },
+    },
+}
+
+cc_prebuilt_library_shared {
+    name: "art-module-sdk_libnativebridge@current",
+    sdk_member_name: "libnativebridge",
+    visibility: [
+        "//art:__subpackages__",
+        "//frameworks/base/cmds/app_process",
+        "//frameworks/base/native/webview/loader/libwebviewchromium_loader",
+        "//prebuilts:__subpackages__",
+    ],
+    apex_available: [
+        "com.android.art",
+        "com.android.art.debug",
+    ],
+    host_supported: true,
+    installable: false,
+    compile_multilib: "both",
+    export_include_dirs: [
+        "common_os/include/art/libnativebridge/include",
+        "common_os/include/libnativehelper/include_jni",
+    ],
+    stubs: {
+        versions: ["1"],
+    },
+    target: {
+        host: {
+            enabled: false,
+        },
+        android_arm64: {
+            srcs: ["android/arm64/lib/libnativebridge.so"],
+        },
+        android_x86_64: {
+            srcs: ["android/x86_64/lib/libnativebridge.so"],
+        },
+        android_arm: {
+            srcs: ["android/arm/lib/libnativebridge.so"],
+        },
+        android_x86: {
+            srcs: ["android/x86/lib/libnativebridge.so"],
+        },
+        linux_glibc_x86_64: {
+            enabled: true,
+            srcs: ["linux_glibc/x86_64/lib/libnativebridge.so"],
+        },
+        linux_glibc_x86: {
+            enabled: true,
+            srcs: ["linux_glibc/x86/lib/libnativebridge.so"],
+        },
+    },
+}
+
+cc_prebuilt_library_shared {
+    name: "libnativebridge",
+    prefer: false,
+    visibility: [
+        "//art:__subpackages__",
+        "//frameworks/base/cmds/app_process",
+        "//frameworks/base/native/webview/loader/libwebviewchromium_loader",
+        "//prebuilts:__subpackages__",
+    ],
+    apex_available: [
+        "com.android.art",
+        "com.android.art.debug",
+    ],
+    host_supported: true,
+    compile_multilib: "both",
+    export_include_dirs: [
+        "common_os/include/art/libnativebridge/include",
+        "common_os/include/libnativehelper/include_jni",
+    ],
+    stubs: {
+        versions: ["1"],
+    },
+    target: {
+        host: {
+            enabled: false,
+        },
+        android_arm64: {
+            srcs: ["android/arm64/lib/libnativebridge.so"],
+        },
+        android_x86_64: {
+            srcs: ["android/x86_64/lib/libnativebridge.so"],
+        },
+        android_arm: {
+            srcs: ["android/arm/lib/libnativebridge.so"],
+        },
+        android_x86: {
+            srcs: ["android/x86/lib/libnativebridge.so"],
+        },
+        linux_glibc_x86_64: {
+            enabled: true,
+            srcs: ["linux_glibc/x86_64/lib/libnativebridge.so"],
+        },
+        linux_glibc_x86: {
+            enabled: true,
+            srcs: ["linux_glibc/x86/lib/libnativebridge.so"],
+        },
+    },
+}
+
+cc_prebuilt_library_shared {
+    name: "art-module-sdk_libnativehelper@current",
+    sdk_member_name: "libnativehelper",
+    visibility: ["//visibility:public"],
+    apex_available: [
+        "com.android.art",
+        "com.android.art.debug",
+    ],
+    host_supported: true,
+    installable: false,
+    stl: "none",
+    compile_multilib: "both",
+    export_include_dirs: [
+        "common_os/include/libnativehelper/header_only_include",
+        "common_os/include/libnativehelper/include",
+        "common_os/include/libnativehelper/include_jni",
+        "common_os/include/libnativehelper/include_platform",
+        "common_os/include/libnativehelper/include_platform_header_only",
+    ],
+    stubs: {
+        versions: ["S"],
+    },
+    target: {
+        host: {
+            enabled: false,
+        },
+        android_arm64: {
+            srcs: ["android/arm64/lib/libnativehelper.so"],
+        },
+        android_x86_64: {
+            srcs: ["android/x86_64/lib/libnativehelper.so"],
+        },
+        android_arm: {
+            srcs: ["android/arm/lib/libnativehelper.so"],
+        },
+        android_x86: {
+            srcs: ["android/x86/lib/libnativehelper.so"],
+        },
+        linux_glibc_x86_64: {
+            enabled: true,
+            srcs: ["linux_glibc/x86_64/lib/libnativehelper.so"],
+        },
+        linux_glibc_x86: {
+            enabled: true,
+            srcs: ["linux_glibc/x86/lib/libnativehelper.so"],
+        },
+    },
+}
+
+cc_prebuilt_library_shared {
+    name: "libnativehelper",
+    prefer: false,
+    visibility: ["//visibility:public"],
+    apex_available: [
+        "com.android.art",
+        "com.android.art.debug",
+    ],
+    host_supported: true,
+    stl: "none",
+    compile_multilib: "both",
+    export_include_dirs: [
+        "common_os/include/libnativehelper/header_only_include",
+        "common_os/include/libnativehelper/include",
+        "common_os/include/libnativehelper/include_jni",
+        "common_os/include/libnativehelper/include_platform",
+        "common_os/include/libnativehelper/include_platform_header_only",
+    ],
+    stubs: {
+        versions: ["S"],
+    },
+    target: {
+        host: {
+            enabled: false,
+        },
+        android_arm64: {
+            srcs: ["android/arm64/lib/libnativehelper.so"],
+        },
+        android_x86_64: {
+            srcs: ["android/x86_64/lib/libnativehelper.so"],
+        },
+        android_arm: {
+            srcs: ["android/arm/lib/libnativehelper.so"],
+        },
+        android_x86: {
+            srcs: ["android/x86/lib/libnativehelper.so"],
+        },
+        linux_glibc_x86_64: {
+            enabled: true,
+            srcs: ["linux_glibc/x86_64/lib/libnativehelper.so"],
+        },
+        linux_glibc_x86: {
+            enabled: true,
+            srcs: ["linux_glibc/x86/lib/libnativehelper.so"],
+        },
+    },
+}
+
+cc_prebuilt_library_shared {
+    name: "art-module-sdk_libnativeloader@current",
+    sdk_member_name: "libnativeloader",
+    visibility: [
+        "//art:__subpackages__",
+        "//frameworks/base/cmds/app_process",
+        "//frameworks/base/native/webview/loader",
+        "//prebuilts:__subpackages__",
+    ],
+    apex_available: [
+        "com.android.art",
+        "com.android.art.debug",
+    ],
+    host_supported: true,
+    installable: false,
+    compile_multilib: "both",
+    export_include_dirs: [
+        "common_os/include/art/libnativeloader/include",
+        "common_os/include/libnativehelper/include_jni",
+    ],
+    stubs: {
+        versions: ["1"],
+    },
+    target: {
+        host: {
+            enabled: false,
+        },
+        android_arm64: {
+            srcs: ["android/arm64/lib/libnativeloader.so"],
+        },
+        android_x86_64: {
+            srcs: ["android/x86_64/lib/libnativeloader.so"],
+        },
+        android_arm: {
+            srcs: ["android/arm/lib/libnativeloader.so"],
+        },
+        android_x86: {
+            srcs: ["android/x86/lib/libnativeloader.so"],
+        },
+        linux_glibc_x86_64: {
+            enabled: true,
+            srcs: ["linux_glibc/x86_64/lib/libnativeloader.so"],
+        },
+        linux_glibc_x86: {
+            enabled: true,
+            srcs: ["linux_glibc/x86/lib/libnativeloader.so"],
+        },
+    },
+}
+
+cc_prebuilt_library_shared {
+    name: "libnativeloader",
+    prefer: false,
+    visibility: [
+        "//art:__subpackages__",
+        "//frameworks/base/cmds/app_process",
+        "//frameworks/base/native/webview/loader",
+        "//prebuilts:__subpackages__",
+    ],
+    apex_available: [
+        "com.android.art",
+        "com.android.art.debug",
+    ],
+    host_supported: true,
+    compile_multilib: "both",
+    export_include_dirs: [
+        "common_os/include/art/libnativeloader/include",
+        "common_os/include/libnativehelper/include_jni",
+    ],
+    stubs: {
+        versions: ["1"],
+    },
+    target: {
+        host: {
+            enabled: false,
+        },
+        android_arm64: {
+            srcs: ["android/arm64/lib/libnativeloader.so"],
+        },
+        android_x86_64: {
+            srcs: ["android/x86_64/lib/libnativeloader.so"],
+        },
+        android_arm: {
+            srcs: ["android/arm/lib/libnativeloader.so"],
+        },
+        android_x86: {
+            srcs: ["android/x86/lib/libnativeloader.so"],
+        },
+        linux_glibc_x86_64: {
+            enabled: true,
+            srcs: ["linux_glibc/x86_64/lib/libnativeloader.so"],
+        },
+        linux_glibc_x86: {
+            enabled: true,
+            srcs: ["linux_glibc/x86/lib/libnativeloader.so"],
+        },
+    },
+}
+
+cc_prebuilt_library_shared {
+    name: "art-module-sdk_libnativebridge_lazy@current",
+    sdk_member_name: "libnativebridge_lazy",
+    visibility: [
+        "//art/libnativebridge/tests",
+        "//art:__subpackages__",
+        "//frameworks/base/core/jni",
+        "//frameworks/native/opengl/libs",
+        "//frameworks/native/vulkan/libvulkan",
+        "//prebuilts:__subpackages__",
+    ],
+    apex_available: [
+        "//apex_available:platform",
+        "com.android.media",
+        "com.android.media.swcodec",
+    ],
+    installable: false,
+    compile_multilib: "both",
+    shared_libs: ["liblog"],
+    export_include_dirs: [
+        "include/libnativehelper/include_jni",
+        "include/art/libnativebridge/include",
+    ],
+    arch: {
+        arm64: {
+            srcs: ["arm64/lib/libnativebridge_lazy.so"],
+        },
+        x86_64: {
+            srcs: ["x86_64/lib/libnativebridge_lazy.so"],
+        },
+        arm: {
+            srcs: ["arm/lib/libnativebridge_lazy.so"],
+        },
+        x86: {
+            srcs: ["x86/lib/libnativebridge_lazy.so"],
+        },
+    },
+}
+
+cc_prebuilt_library_shared {
+    name: "libnativebridge_lazy",
+    prefer: false,
+    visibility: [
+        "//art/libnativebridge/tests",
+        "//art:__subpackages__",
+        "//frameworks/base/core/jni",
+        "//frameworks/native/opengl/libs",
+        "//frameworks/native/vulkan/libvulkan",
+        "//prebuilts:__subpackages__",
+    ],
+    apex_available: [
+        "//apex_available:platform",
+        "com.android.media",
+        "com.android.media.swcodec",
+    ],
+    compile_multilib: "both",
+    shared_libs: ["liblog"],
+    export_include_dirs: [
+        "include/libnativehelper/include_jni",
+        "include/art/libnativebridge/include",
+    ],
+    arch: {
+        arm64: {
+            srcs: ["arm64/lib/libnativebridge_lazy.so"],
+        },
+        x86_64: {
+            srcs: ["x86_64/lib/libnativebridge_lazy.so"],
+        },
+        arm: {
+            srcs: ["arm/lib/libnativebridge_lazy.so"],
+        },
+        x86: {
+            srcs: ["x86/lib/libnativebridge_lazy.so"],
+        },
+    },
+}
+
+cc_prebuilt_library_shared {
+    name: "art-module-sdk_libnativehelper_compat_libc++@current",
+    sdk_member_name: "libnativehelper_compat_libc++",
+    visibility: [
+        "//art:__subpackages__",
+        "//cts:__subpackages__",
+        "//external/perfetto:__subpackages__",
+        "//frameworks/base/packages/Tethering:__subpackages__",
+        "//frameworks/base/tests/net/integration",
+        "//libnativehelper:__subpackages__",
+        "//packages/modules/Connectivity/Tethering:__subpackages__",
+        "//packages/modules/Connectivity/tests:__subpackages__",
+        "//packages/modules/NetworkStack:__subpackages__",
+        "//prebuilts:__subpackages__",
+    ],
+    apex_available: [
+        "//apex_available:platform",
+        "com.android.tethering",
+    ],
+    installable: false,
+    stl: "none",
+    compile_multilib: "both",
+    shared_libs: ["liblog"],
+    export_include_dirs: [
+        "include/libnativehelper/header_only_include",
+        "include/libnativehelper/include",
+        "include/libnativehelper/include_jni",
+    ],
+    arch: {
+        arm64: {
+            srcs: ["arm64/lib/libnativehelper_compat_libc++.so"],
+        },
+        x86_64: {
+            srcs: ["x86_64/lib/libnativehelper_compat_libc++.so"],
+        },
+        arm: {
+            srcs: ["arm/lib/libnativehelper_compat_libc++.so"],
+        },
+        x86: {
+            srcs: ["x86/lib/libnativehelper_compat_libc++.so"],
+        },
+    },
+}
+
+cc_prebuilt_library_shared {
+    name: "libnativehelper_compat_libc++",
+    prefer: false,
+    visibility: [
+        "//art:__subpackages__",
+        "//cts:__subpackages__",
+        "//external/perfetto:__subpackages__",
+        "//frameworks/base/packages/Tethering:__subpackages__",
+        "//frameworks/base/tests/net/integration",
+        "//libnativehelper:__subpackages__",
+        "//packages/modules/Connectivity/Tethering:__subpackages__",
+        "//packages/modules/Connectivity/tests:__subpackages__",
+        "//packages/modules/NetworkStack:__subpackages__",
+        "//prebuilts:__subpackages__",
+    ],
+    apex_available: [
+        "//apex_available:platform",
+        "com.android.tethering",
+    ],
+    stl: "none",
+    compile_multilib: "both",
+    shared_libs: ["liblog"],
+    export_include_dirs: [
+        "include/libnativehelper/header_only_include",
+        "include/libnativehelper/include",
+        "include/libnativehelper/include_jni",
+    ],
+    arch: {
+        arm64: {
+            srcs: ["arm64/lib/libnativehelper_compat_libc++.so"],
+        },
+        x86_64: {
+            srcs: ["x86_64/lib/libnativehelper_compat_libc++.so"],
+        },
+        arm: {
+            srcs: ["arm/lib/libnativehelper_compat_libc++.so"],
+        },
+        x86: {
+            srcs: ["x86/lib/libnativehelper_compat_libc++.so"],
+        },
+    },
+}
+
+cc_prebuilt_library_shared {
+    name: "art-module-sdk_libnativeloader_lazy@current",
+    sdk_member_name: "libnativeloader_lazy",
+    visibility: [
+        "//art:__subpackages__",
+        "//frameworks/base/core/jni",
+        "//frameworks/native/opengl/libs",
+        "//frameworks/native/vulkan/libvulkan",
+        "//prebuilts:__subpackages__",
+    ],
+    apex_available: [
+        "//apex_available:platform",
+        "com.android.media",
+        "com.android.media.swcodec",
+    ],
+    installable: false,
+    compile_multilib: "both",
+    shared_libs: ["liblog"],
+    export_include_dirs: [
+        "include/art/libnativeloader/include",
+        "include/libnativehelper/include_jni",
+    ],
+    arch: {
+        arm64: {
+            srcs: ["arm64/lib/libnativeloader_lazy.so"],
+        },
+        x86_64: {
+            srcs: ["x86_64/lib/libnativeloader_lazy.so"],
+        },
+        arm: {
+            srcs: ["arm/lib/libnativeloader_lazy.so"],
+        },
+        x86: {
+            srcs: ["x86/lib/libnativeloader_lazy.so"],
+        },
+    },
+}
+
+cc_prebuilt_library_shared {
+    name: "libnativeloader_lazy",
+    prefer: false,
+    visibility: [
+        "//art:__subpackages__",
+        "//frameworks/base/core/jni",
+        "//frameworks/native/opengl/libs",
+        "//frameworks/native/vulkan/libvulkan",
+        "//prebuilts:__subpackages__",
+    ],
+    apex_available: [
+        "//apex_available:platform",
+        "com.android.media",
+        "com.android.media.swcodec",
+    ],
+    compile_multilib: "both",
+    shared_libs: ["liblog"],
+    export_include_dirs: [
+        "include/art/libnativeloader/include",
+        "include/libnativehelper/include_jni",
+    ],
+    arch: {
+        arm64: {
+            srcs: ["arm64/lib/libnativeloader_lazy.so"],
+        },
+        x86_64: {
+            srcs: ["x86_64/lib/libnativeloader_lazy.so"],
+        },
+        arm: {
+            srcs: ["arm/lib/libnativeloader_lazy.so"],
+        },
+        x86: {
+            srcs: ["x86/lib/libnativeloader_lazy.so"],
+        },
+    },
+}
+
+cc_prebuilt_library_static {
+    name: "art-module-sdk_libdexfile_external_static@current",
+    sdk_member_name: "libdexfile_external_static",
+    visibility: [
+        "//art:__subpackages__",
+        "//cts/tests/tests/simpleperf",
+        "//prebuilts:__subpackages__",
+        "//system/extras/simpleperf",
+    ],
+    apex_available: ["//apex_available:platform"],
+    host_supported: true,
+    installable: false,
+    compile_multilib: "both",
+    export_include_dirs: [
+        "common_os/include/system/libbase/include",
+        "common_os/include/external/fmtlib/include",
+        "common_os/include/art/libartpalette/include",
+        "common_os/include/prebuilts/runtime/mainline/platform/sdk/common_os/include/system/logging/liblog/include",
+        "common_os/include/external/zlib",
+        "common_os/include/system/libziparchive/include",
+        "common_os/include/external/googletest/googletest/include",
+        "common_os/include/art/libartbase",
+        "common_os/include/art/libdexfile",
+        "common_os/include/libnativehelper/include_jni",
+        "common_os/include/art/libdexfile/external/include",
+    ],
+    target: {
+        host: {
+            enabled: false,
+        },
+        android_arm64: {
+            srcs: ["android/arm64/lib/libdexfile_external_static.a"],
+        },
+        android_x86_64: {
+            srcs: ["android/x86_64/lib/libdexfile_external_static.a"],
+        },
+        android_arm: {
+            srcs: ["android/arm/lib/libdexfile_external_static.a"],
+        },
+        android_x86: {
+            srcs: ["android/x86/lib/libdexfile_external_static.a"],
+        },
+        linux_glibc_x86_64: {
+            enabled: true,
+            srcs: ["linux_glibc/x86_64/lib/libdexfile_external_static.a"],
+        },
+        linux_glibc_x86: {
+            enabled: true,
+            srcs: ["linux_glibc/x86/lib/libdexfile_external_static.a"],
+        },
+    },
+}
+
+cc_prebuilt_library_static {
+    name: "libdexfile_external_static",
+    prefer: false,
+    visibility: [
+        "//art:__subpackages__",
+        "//cts/tests/tests/simpleperf",
+        "//prebuilts:__subpackages__",
+        "//system/extras/simpleperf",
+    ],
+    apex_available: ["//apex_available:platform"],
+    host_supported: true,
+    compile_multilib: "both",
+    export_include_dirs: [
+        "common_os/include/system/libbase/include",
+        "common_os/include/external/fmtlib/include",
+        "common_os/include/art/libartpalette/include",
+        "common_os/include/prebuilts/runtime/mainline/platform/sdk/common_os/include/system/logging/liblog/include",
+        "common_os/include/external/zlib",
+        "common_os/include/system/libziparchive/include",
+        "common_os/include/external/googletest/googletest/include",
+        "common_os/include/art/libartbase",
+        "common_os/include/art/libdexfile",
+        "common_os/include/libnativehelper/include_jni",
+        "common_os/include/art/libdexfile/external/include",
+    ],
+    target: {
+        host: {
+            enabled: false,
+        },
+        android_arm64: {
+            srcs: ["android/arm64/lib/libdexfile_external_static.a"],
+        },
+        android_x86_64: {
+            srcs: ["android/x86_64/lib/libdexfile_external_static.a"],
+        },
+        android_arm: {
+            srcs: ["android/arm/lib/libdexfile_external_static.a"],
+        },
+        android_x86: {
+            srcs: ["android/x86/lib/libdexfile_external_static.a"],
+        },
+        linux_glibc_x86_64: {
+            enabled: true,
+            srcs: ["linux_glibc/x86_64/lib/libdexfile_external_static.a"],
+        },
+        linux_glibc_x86: {
+            enabled: true,
+            srcs: ["linux_glibc/x86/lib/libdexfile_external_static.a"],
+        },
+    },
+}
+
+cc_prebuilt_library_static {
+    name: "art-module-sdk_libctstiagent@current",
+    sdk_member_name: "libctstiagent",
+    visibility: [
+        "//art:__subpackages__",
+        "//cts/hostsidetests/jvmti:__subpackages__",
+        "//prebuilts:__subpackages__",
+    ],
+    apex_available: ["com.android.art.debug"],
+    installable: false,
+    stl: "c++_static",
+    compile_multilib: "both",
+    shared_libs: ["libz"],
+    export_include_dirs: [
+        "include/art/test/ti-agent",
+        "include/tools/dexter/slicer/export",
+    ],
+    arch: {
+        arm64: {
+            srcs: ["arm64/lib/libctstiagent.a"],
+        },
+        x86_64: {
+            srcs: ["x86_64/lib/libctstiagent.a"],
+        },
+        arm: {
+            srcs: ["arm/lib/libctstiagent.a"],
+        },
+        x86: {
+            srcs: ["x86/lib/libctstiagent.a"],
+        },
+    },
+}
+
+cc_prebuilt_library_static {
+    name: "libctstiagent",
+    prefer: false,
+    visibility: [
+        "//art:__subpackages__",
+        "//cts/hostsidetests/jvmti:__subpackages__",
+        "//prebuilts:__subpackages__",
+    ],
+    apex_available: ["com.android.art.debug"],
+    stl: "c++_static",
+    compile_multilib: "both",
+    shared_libs: ["libz"],
+    export_include_dirs: [
+        "include/art/test/ti-agent",
+        "include/tools/dexter/slicer/export",
+    ],
+    arch: {
+        arm64: {
+            srcs: ["arm64/lib/libctstiagent.a"],
+        },
+        x86_64: {
+            srcs: ["x86_64/lib/libctstiagent.a"],
+        },
+        arm: {
+            srcs: ["arm/lib/libctstiagent.a"],
+        },
+        x86: {
+            srcs: ["x86/lib/libctstiagent.a"],
+        },
+    },
+}
+
+sdk_snapshot {
+    name: "art-module-sdk@current",
+    visibility: ["//art:__subpackages__"],
+    host_supported: true,
+    native_libs: [
+        "art-module-sdk_libdexfile_support@current",
+        "art-module-sdk_libsigchain@current",
+    ],
+    target: {
+        android: {
+            java_header_libs: [
+                "art-module-sdk_core-lambda-stubs@current",
+                "art-module-sdk_core.current.stubs@current",
+                "art-module-sdk_legacy.core.platform.api.stubs@current",
+                "art-module-sdk_stable.core.platform.api.stubs@current",
+            ],
+            java_sdk_libs: ["art-module-sdk_art.module.public.api@current"],
+            java_system_modules: [
+                "art-module-sdk_art-module-public-api-stubs-system-modules@current",
+                "art-module-sdk_art-module-intra-core-api-stubs-system-modules@current",
+                "art-module-sdk_legacy-art-module-platform-api-stubs-system-modules@current",
+                "art-module-sdk_stable-art-module-platform-api-stubs-system-modules@current",
+                "art-module-sdk_core-current-stubs-system-modules@current",
+                "art-module-sdk_legacy-core-platform-api-stubs-system-modules@current",
+                "art-module-sdk_stable-core-platform-api-stubs-system-modules@current",
+            ],
+            native_header_libs: [
+                "art-module-sdk_jni_headers@current",
+                "art-module-sdk_libartpalette-headers@current",
+                "art-module-sdk_libnativehelper_header_only@current",
+                "art-module-sdk_libopenjdkjvmti_headers@current",
+                "art-module-sdk_libnativeloader-headers@current",
+            ],
+            native_shared_libs: [
+                "art-module-sdk_libandroidio@current",
+                "art-module-sdk_libdexfile_external@current",
+                "art-module-sdk_libnativebridge@current",
+                "art-module-sdk_libnativehelper@current",
+                "art-module-sdk_libnativeloader@current",
+                "art-module-sdk_libnativebridge_lazy@current",
+                "art-module-sdk_libnativehelper_compat_libc++@current",
+                "art-module-sdk_libnativeloader_lazy@current",
+            ],
+            native_static_libs: [
+                "art-module-sdk_libdexfile_external_static@current",
+                "art-module-sdk_libctstiagent@current",
+            ],
+        },
+        linux_glibc: {
+            native_header_libs: [
+                "art-module-sdk_jni_headers@current",
+                "art-module-sdk_libartpalette-headers@current",
+                "art-module-sdk_libnativehelper_header_only@current",
+                "art-module-sdk_libopenjdkjvmti_headers@current",
+            ],
+            native_shared_libs: [
+                "art-module-sdk_libandroidio@current",
+                "art-module-sdk_libdexfile_external@current",
+                "art-module-sdk_libnativebridge@current",
+                "art-module-sdk_libnativehelper@current",
+                "art-module-sdk_libnativeloader@current",
+            ],
+            native_static_libs: ["art-module-sdk_libdexfile_external_static@current"],
+        },
+        host: {
+            enabled: false,
+        },
+        linux_glibc_x86_64: {
+            enabled: true,
+        },
+        linux_glibc_x86: {
+            enabled: true,
+        },
+    },
+}
+

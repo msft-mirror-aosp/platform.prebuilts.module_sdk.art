@@ -1,0 +1,254 @@
+// This is auto-generated. DO NOT EDIT.
+
+java_import {
+    name: "art-module-host-exports_art.module.api.annotations@current",
+    sdk_member_name: "art.module.api.annotations",
+    visibility: [
+        "//art/build/sdk",
+        "//external/icu/android_icu4j",
+        "//frameworks/base",
+        "//libcore",
+        "//prebuilts:__subpackages__",
+    ],
+    apex_available: ["//apex_available:platform"],
+    device_supported: false,
+    host_supported: true,
+    jars: ["java/art.module.api.annotations.jar"],
+}
+
+java_import {
+    name: "art.module.api.annotations",
+    prefer: false,
+    visibility: [
+        "//art/build/sdk",
+        "//external/icu/android_icu4j",
+        "//frameworks/base",
+        "//libcore",
+        "//prebuilts:__subpackages__",
+    ],
+    apex_available: ["//apex_available:platform"],
+    device_supported: false,
+    host_supported: true,
+    jars: ["java/art.module.api.annotations.jar"],
+}
+
+java_import {
+    name: "art-module-host-exports_okhttp-norepackage@current",
+    sdk_member_name: "okhttp-norepackage",
+    visibility: [
+        "//art/build/sdk",
+        "//external/grpc-grpc-java/okhttp",
+        "//external/okhttp",
+        "//prebuilts:__subpackages__",
+    ],
+    apex_available: ["//apex_available:platform"],
+    device_supported: false,
+    host_supported: true,
+    jars: ["java/okhttp-norepackage.jar"],
+}
+
+java_import {
+    name: "okhttp-norepackage",
+    prefer: false,
+    visibility: [
+        "//art/build/sdk",
+        "//external/grpc-grpc-java/okhttp",
+        "//external/okhttp",
+        "//prebuilts:__subpackages__",
+    ],
+    apex_available: ["//apex_available:platform"],
+    device_supported: false,
+    host_supported: true,
+    jars: ["java/okhttp-norepackage.jar"],
+}
+
+java_import {
+    name: "art-module-host-exports_art-notices-for-framework-stubs-jar@current",
+    sdk_member_name: "art-notices-for-framework-stubs-jar",
+    visibility: [
+        "//art/build/sdk",
+        "//frameworks/base",
+        "//libcore",
+        "//prebuilts:__subpackages__",
+    ],
+    apex_available: ["//apex_available:platform"],
+    jars: ["java/art-notices-for-framework-stubs-jar.jar"],
+}
+
+java_import {
+    name: "art-notices-for-framework-stubs-jar",
+    prefer: false,
+    visibility: [
+        "//art/build/sdk",
+        "//frameworks/base",
+        "//libcore",
+        "//prebuilts:__subpackages__",
+    ],
+    apex_available: ["//apex_available:platform"],
+    jars: ["java/art-notices-for-framework-stubs-jar.jar"],
+}
+
+cc_prebuilt_binary {
+    name: "art-module-host-exports_hiddenapi@current",
+    sdk_member_name: "hiddenapi",
+    visibility: [
+        "//art:__subpackages__",
+        "//prebuilts:__subpackages__",
+    ],
+    apex_available: ["//apex_available:platform"],
+    device_supported: false,
+    host_supported: true,
+    installable: false,
+    stl: "c++_static",
+    compile_multilib: "64",
+    target: {
+        host: {
+            enabled: false,
+        },
+        linux_glibc_x86_64: {
+            enabled: true,
+            srcs: ["x86_64/bin/hiddenapi"],
+        },
+    },
+}
+
+cc_prebuilt_binary {
+    name: "hiddenapi",
+    prefer: false,
+    visibility: [
+        "//art:__subpackages__",
+        "//prebuilts:__subpackages__",
+    ],
+    apex_available: ["//apex_available:platform"],
+    device_supported: false,
+    host_supported: true,
+    stl: "c++_static",
+    compile_multilib: "64",
+    target: {
+        host: {
+            enabled: false,
+        },
+        linux_glibc_x86_64: {
+            enabled: true,
+            srcs: ["x86_64/bin/hiddenapi"],
+        },
+    },
+}
+
+cc_prebuilt_binary {
+    name: "art-module-host-exports_dex2oat@current",
+    sdk_member_name: "dex2oat",
+    visibility: ["//visibility:public"],
+    apex_available: [
+        "com.android.art",
+        "com.android.art.debug",
+    ],
+    device_supported: false,
+    host_supported: true,
+    installable: false,
+    stl: "c++_static",
+    compile_multilib: "64",
+    target: {
+        host: {
+            enabled: false,
+        },
+        linux_glibc_x86_64: {
+            enabled: true,
+            srcs: ["x86_64/bin/dex2oat64"],
+        },
+    },
+}
+
+cc_prebuilt_binary {
+    name: "dex2oat",
+    prefer: false,
+    visibility: ["//visibility:public"],
+    apex_available: [
+        "com.android.art",
+        "com.android.art.debug",
+    ],
+    device_supported: false,
+    host_supported: true,
+    stl: "c++_static",
+    compile_multilib: "64",
+    target: {
+        host: {
+            enabled: false,
+        },
+        linux_glibc_x86_64: {
+            enabled: true,
+            srcs: ["x86_64/bin/dex2oat64"],
+        },
+    },
+}
+
+cc_prebuilt_binary {
+    name: "art-module-host-exports_dex2oatd@current",
+    sdk_member_name: "dex2oatd",
+    visibility: ["//visibility:public"],
+    apex_available: ["com.android.art.debug"],
+    device_supported: false,
+    host_supported: true,
+    installable: false,
+    stl: "c++_static",
+    compile_multilib: "64",
+    target: {
+        host: {
+            enabled: false,
+        },
+        linux_glibc_x86_64: {
+            enabled: true,
+            srcs: ["x86_64/bin/dex2oatd64"],
+        },
+    },
+}
+
+cc_prebuilt_binary {
+    name: "dex2oatd",
+    prefer: false,
+    visibility: ["//visibility:public"],
+    apex_available: ["com.android.art.debug"],
+    device_supported: false,
+    host_supported: true,
+    stl: "c++_static",
+    compile_multilib: "64",
+    target: {
+        host: {
+            enabled: false,
+        },
+        linux_glibc_x86_64: {
+            enabled: true,
+            srcs: ["x86_64/bin/dex2oatd64"],
+        },
+    },
+}
+
+module_exports_snapshot {
+    name: "art-module-host-exports@current",
+    visibility: ["//art:__subpackages__"],
+    host_supported: true,
+    target: {
+        android: {
+            java_libs: ["art-module-host-exports_art-notices-for-framework-stubs-jar@current"],
+        },
+        linux_glibc: {
+            compile_multilib: "64",
+            java_libs: [
+                "art-module-host-exports_art.module.api.annotations@current",
+                "art-module-host-exports_okhttp-norepackage@current",
+            ],
+            native_binaries: [
+                "art-module-host-exports_hiddenapi@current",
+                "art-module-host-exports_dex2oat@current",
+                "art-module-host-exports_dex2oatd@current",
+            ],
+        },
+        host: {
+            enabled: false,
+        },
+        linux_glibc_x86_64: {
+            enabled: true,
+        },
+    },
+}
+
