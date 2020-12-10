@@ -1,5 +1,21 @@
 // This is auto-generated. DO NOT EDIT.
 
+// Soong config variable stanza added by art/build/update-art-module-prebuilts.py.
+soong_config_module_type_import {
+    from: "prebuilts/module_sdk/art/SoongConfig.bp",
+    module_types: [
+        "art_prebuilt_cc_prebuilt_library",
+        "art_prebuilt_cc_prebuilt_library_headers",
+        "art_prebuilt_cc_prebuilt_library_shared",
+        "art_prebuilt_cc_prebuilt_library_static",
+        "art_prebuilt_java_import",
+        "art_prebuilt_java_sdk_library_import",
+        "art_prebuilt_java_system_modules_import",
+    ],
+}
+
+art_module_prefer_prebuilts = false
+
 java_import {
     name: "art-module-sdk_core-lambda-stubs@current",
     sdk_member_name: "core-lambda-stubs",
@@ -8,9 +24,15 @@ java_import {
     jars: ["java/core-lambda-stubs.jar"],
 }
 
-java_import {
+art_prebuilt_java_import {
     name: "core-lambda-stubs",
-    prefer: false,
+    // Do not prefer prebuilt if SOONG_CONFIG_art_module_source_build is true.
+    prefer: art_module_prefer_prebuilts,
+    soong_config_variables: {
+        source_build: {
+            prefer: false,
+        },
+    },
     visibility: ["//visibility:public"],
     apex_available: ["//apex_available:platform"],
     jars: ["java/core-lambda-stubs.jar"],
@@ -24,9 +46,15 @@ java_import {
     jars: ["java/core.current.stubs.jar"],
 }
 
-java_import {
+art_prebuilt_java_import {
     name: "core.current.stubs",
-    prefer: false,
+    // Do not prefer prebuilt if SOONG_CONFIG_art_module_source_build is true.
+    prefer: art_module_prefer_prebuilts,
+    soong_config_variables: {
+        source_build: {
+            prefer: false,
+        },
+    },
     visibility: ["//visibility:public"],
     apex_available: ["//apex_available:platform"],
     jars: ["java/core.current.stubs.jar"],
@@ -40,9 +68,15 @@ java_import {
     jars: ["java/legacy.core.platform.api.stubs.jar"],
 }
 
-java_import {
+art_prebuilt_java_import {
     name: "legacy.core.platform.api.stubs",
-    prefer: false,
+    // Do not prefer prebuilt if SOONG_CONFIG_art_module_source_build is true.
+    prefer: art_module_prefer_prebuilts,
+    soong_config_variables: {
+        source_build: {
+            prefer: false,
+        },
+    },
     visibility: ["//visibility:public"],
     apex_available: ["//apex_available:platform"],
     jars: ["java/legacy.core.platform.api.stubs.jar"],
@@ -56,9 +90,15 @@ java_import {
     jars: ["java/stable.core.platform.api.stubs.jar"],
 }
 
-java_import {
+art_prebuilt_java_import {
     name: "stable.core.platform.api.stubs",
-    prefer: false,
+    // Do not prefer prebuilt if SOONG_CONFIG_art_module_source_build is true.
+    prefer: art_module_prefer_prebuilts,
+    soong_config_variables: {
+        source_build: {
+            prefer: false,
+        },
+    },
     visibility: ["//visibility:public"],
     apex_available: ["//apex_available:platform"],
     jars: ["java/stable.core.platform.api.stubs.jar"],
@@ -72,9 +112,15 @@ java_import {
     jars: ["java/art.module.public.api.stubs.jar"],
 }
 
-java_import {
+art_prebuilt_java_import {
     name: "art-module-sdk_art.module.public.api.stubs",
-    prefer: false,
+    // Do not prefer prebuilt if SOONG_CONFIG_art_module_source_build is true.
+    prefer: art_module_prefer_prebuilts,
+    soong_config_variables: {
+        source_build: {
+            prefer: false,
+        },
+    },
     visibility: ["//visibility:private"],
     apex_available: ["//apex_available:platform"],
     jars: ["java/art.module.public.api.stubs.jar"],
@@ -88,9 +134,15 @@ java_import {
     jars: ["java/core-lambda-stubs-for-system-modules.jar"],
 }
 
-java_import {
+art_prebuilt_java_import {
     name: "art-module-sdk_core-lambda-stubs-for-system-modules",
-    prefer: false,
+    // Do not prefer prebuilt if SOONG_CONFIG_art_module_source_build is true.
+    prefer: art_module_prefer_prebuilts,
+    soong_config_variables: {
+        source_build: {
+            prefer: false,
+        },
+    },
     visibility: ["//visibility:private"],
     apex_available: ["//apex_available:platform"],
     jars: ["java/core-lambda-stubs-for-system-modules.jar"],
@@ -104,9 +156,15 @@ java_import {
     jars: ["java/core-generated-annotation-stubs.jar"],
 }
 
-java_import {
+art_prebuilt_java_import {
     name: "art-module-sdk_core-generated-annotation-stubs",
-    prefer: false,
+    // Do not prefer prebuilt if SOONG_CONFIG_art_module_source_build is true.
+    prefer: art_module_prefer_prebuilts,
+    soong_config_variables: {
+        source_build: {
+            prefer: false,
+        },
+    },
     visibility: ["//visibility:private"],
     apex_available: ["//apex_available:platform"],
     jars: ["java/core-generated-annotation-stubs.jar"],
@@ -120,9 +178,15 @@ java_import {
     jars: ["java/art.module.api.annotations.for.system.modules.jar"],
 }
 
-java_import {
+art_prebuilt_java_import {
     name: "art-module-sdk_art.module.api.annotations.for.system.modules",
-    prefer: false,
+    // Do not prefer prebuilt if SOONG_CONFIG_art_module_source_build is true.
+    prefer: art_module_prefer_prebuilts,
+    soong_config_variables: {
+        source_build: {
+            prefer: false,
+        },
+    },
     visibility: ["//visibility:private"],
     apex_available: ["//apex_available:platform"],
     jars: ["java/art.module.api.annotations.for.system.modules.jar"],
@@ -136,9 +200,15 @@ java_import {
     jars: ["java/stub-annotations.jar"],
 }
 
-java_import {
+art_prebuilt_java_import {
     name: "art-module-sdk_stub-annotations",
-    prefer: false,
+    // Do not prefer prebuilt if SOONG_CONFIG_art_module_source_build is true.
+    prefer: art_module_prefer_prebuilts,
+    soong_config_variables: {
+        source_build: {
+            prefer: false,
+        },
+    },
     visibility: ["//visibility:private"],
     apex_available: ["//apex_available:platform"],
     jars: ["java/stub-annotations.jar"],
@@ -152,9 +222,15 @@ java_import {
     jars: ["java/art.module.intra.core.api.stubs.jar"],
 }
 
-java_import {
+art_prebuilt_java_import {
     name: "art-module-sdk_art.module.intra.core.api.stubs",
-    prefer: false,
+    // Do not prefer prebuilt if SOONG_CONFIG_art_module_source_build is true.
+    prefer: art_module_prefer_prebuilts,
+    soong_config_variables: {
+        source_build: {
+            prefer: false,
+        },
+    },
     visibility: ["//visibility:private"],
     apex_available: ["//apex_available:platform"],
     jars: ["java/art.module.intra.core.api.stubs.jar"],
@@ -168,9 +244,15 @@ java_import {
     jars: ["java/art-module-intra-core-api-stubs-system-modules-lib.jar"],
 }
 
-java_import {
+art_prebuilt_java_import {
     name: "art-module-sdk_art-module-intra-core-api-stubs-system-modules-lib",
-    prefer: false,
+    // Do not prefer prebuilt if SOONG_CONFIG_art_module_source_build is true.
+    prefer: art_module_prefer_prebuilts,
+    soong_config_variables: {
+        source_build: {
+            prefer: false,
+        },
+    },
     visibility: ["//visibility:private"],
     apex_available: ["//apex_available:platform"],
     jars: ["java/art-module-intra-core-api-stubs-system-modules-lib.jar"],
@@ -184,9 +266,15 @@ java_import {
     jars: ["java/legacy.art.module.platform.api.stubs.jar"],
 }
 
-java_import {
+art_prebuilt_java_import {
     name: "art-module-sdk_legacy.art.module.platform.api.stubs",
-    prefer: false,
+    // Do not prefer prebuilt if SOONG_CONFIG_art_module_source_build is true.
+    prefer: art_module_prefer_prebuilts,
+    soong_config_variables: {
+        source_build: {
+            prefer: false,
+        },
+    },
     visibility: ["//visibility:private"],
     apex_available: ["//apex_available:platform"],
     jars: ["java/legacy.art.module.platform.api.stubs.jar"],
@@ -200,9 +288,15 @@ java_import {
     jars: ["java/stable.art.module.platform.api.stubs.jar"],
 }
 
-java_import {
+art_prebuilt_java_import {
     name: "art-module-sdk_stable.art.module.platform.api.stubs",
-    prefer: false,
+    // Do not prefer prebuilt if SOONG_CONFIG_art_module_source_build is true.
+    prefer: art_module_prefer_prebuilts,
+    soong_config_variables: {
+        source_build: {
+            prefer: false,
+        },
+    },
     visibility: ["//visibility:private"],
     apex_available: ["//apex_available:platform"],
     jars: ["java/stable.art.module.platform.api.stubs.jar"],
@@ -216,9 +310,15 @@ java_import {
     jars: ["java/core-current-stubs-for-system-modules.jar"],
 }
 
-java_import {
+art_prebuilt_java_import {
     name: "art-module-sdk_core-current-stubs-for-system-modules",
-    prefer: false,
+    // Do not prefer prebuilt if SOONG_CONFIG_art_module_source_build is true.
+    prefer: art_module_prefer_prebuilts,
+    soong_config_variables: {
+        source_build: {
+            prefer: false,
+        },
+    },
     visibility: ["//visibility:private"],
     apex_available: ["//apex_available:platform"],
     jars: ["java/core-current-stubs-for-system-modules.jar"],
@@ -246,9 +346,15 @@ java_sdk_library_import {
     },
 }
 
-java_sdk_library_import {
+art_prebuilt_java_sdk_library_import {
     name: "art.module.public.api",
-    prefer: false,
+    // Do not prefer prebuilt if SOONG_CONFIG_art_module_source_build is true.
+    prefer: art_module_prefer_prebuilts,
+    soong_config_variables: {
+        source_build: {
+            prefer: false,
+        },
+    },
     visibility: [
         "//art/build/sdk",
         "//frameworks/base",
@@ -288,9 +394,15 @@ java_system_modules_import {
     ],
 }
 
-java_system_modules_import {
+art_prebuilt_java_system_modules_import {
     name: "art-module-public-api-stubs-system-modules",
-    prefer: false,
+    // Do not prefer prebuilt if SOONG_CONFIG_art_module_source_build is true.
+    prefer: art_module_prefer_prebuilts,
+    soong_config_variables: {
+        source_build: {
+            prefer: false,
+        },
+    },
     visibility: [
         "//art/build/sdk",
         "//external/conscrypt",
@@ -325,9 +437,15 @@ java_system_modules_import {
     ],
 }
 
-java_system_modules_import {
+art_prebuilt_java_system_modules_import {
     name: "art-module-intra-core-api-stubs-system-modules",
-    prefer: false,
+    // Do not prefer prebuilt if SOONG_CONFIG_art_module_source_build is true.
+    prefer: art_module_prefer_prebuilts,
+    soong_config_variables: {
+        source_build: {
+            prefer: false,
+        },
+    },
     visibility: [
         "//art/build/sdk",
         "//external/bouncycastle",
@@ -356,9 +474,15 @@ java_system_modules_import {
     libs: ["art-module-sdk_legacy.art.module.platform.api.stubs@current"],
 }
 
-java_system_modules_import {
+art_prebuilt_java_system_modules_import {
     name: "legacy-art-module-platform-api-stubs-system-modules",
-    prefer: false,
+    // Do not prefer prebuilt if SOONG_CONFIG_art_module_source_build is true.
+    prefer: art_module_prefer_prebuilts,
+    soong_config_variables: {
+        source_build: {
+            prefer: false,
+        },
+    },
     visibility: [
         "//art/build/sdk",
         "//external/conscrypt",
@@ -384,9 +508,15 @@ java_system_modules_import {
     libs: ["art-module-sdk_stable.art.module.platform.api.stubs@current"],
 }
 
-java_system_modules_import {
+art_prebuilt_java_system_modules_import {
     name: "stable-art-module-platform-api-stubs-system-modules",
-    prefer: false,
+    // Do not prefer prebuilt if SOONG_CONFIG_art_module_source_build is true.
+    prefer: art_module_prefer_prebuilts,
+    soong_config_variables: {
+        source_build: {
+            prefer: false,
+        },
+    },
     visibility: [
         "//art/build/sdk",
         "//external/conscrypt",
@@ -405,9 +535,15 @@ java_system_modules_import {
     libs: ["art-module-sdk_core-current-stubs-for-system-modules@current"],
 }
 
-java_system_modules_import {
+art_prebuilt_java_system_modules_import {
     name: "core-current-stubs-system-modules",
-    prefer: false,
+    // Do not prefer prebuilt if SOONG_CONFIG_art_module_source_build is true.
+    prefer: art_module_prefer_prebuilts,
+    soong_config_variables: {
+        source_build: {
+            prefer: false,
+        },
+    },
     visibility: ["//visibility:public"],
     libs: ["art-module-sdk_core-current-stubs-for-system-modules"],
 }
@@ -423,9 +559,15 @@ java_system_modules_import {
     ],
 }
 
-java_system_modules_import {
+art_prebuilt_java_system_modules_import {
     name: "legacy-core-platform-api-stubs-system-modules",
-    prefer: false,
+    // Do not prefer prebuilt if SOONG_CONFIG_art_module_source_build is true.
+    prefer: art_module_prefer_prebuilts,
+    soong_config_variables: {
+        source_build: {
+            prefer: false,
+        },
+    },
     visibility: ["//visibility:public"],
     libs: [
         "legacy.core.platform.api.stubs",
@@ -445,9 +587,15 @@ java_system_modules_import {
     ],
 }
 
-java_system_modules_import {
+art_prebuilt_java_system_modules_import {
     name: "stable-core-platform-api-stubs-system-modules",
-    prefer: false,
+    // Do not prefer prebuilt if SOONG_CONFIG_art_module_source_build is true.
+    prefer: art_module_prefer_prebuilts,
+    soong_config_variables: {
+        source_build: {
+            prefer: false,
+        },
+    },
     visibility: ["//visibility:public"],
     libs: [
         "stable.core.platform.api.stubs",
@@ -485,9 +633,15 @@ cc_prebuilt_library_headers {
     },
 }
 
-cc_prebuilt_library_headers {
+art_prebuilt_cc_prebuilt_library_headers {
     name: "jni_headers",
-    prefer: false,
+    // Do not prefer prebuilt if SOONG_CONFIG_art_module_source_build is true.
+    prefer: art_module_prefer_prebuilts,
+    soong_config_variables: {
+        source_build: {
+            prefer: false,
+        },
+    },
     visibility: ["//visibility:public"],
     apex_available: [
         "//apex_available:anyapex",
@@ -539,9 +693,15 @@ cc_prebuilt_library_headers {
     },
 }
 
-cc_prebuilt_library_headers {
+art_prebuilt_cc_prebuilt_library_headers {
     name: "libartpalette-headers",
-    prefer: false,
+    // Do not prefer prebuilt if SOONG_CONFIG_art_module_source_build is true.
+    prefer: art_module_prefer_prebuilts,
+    soong_config_variables: {
+        source_build: {
+            prefer: false,
+        },
+    },
     visibility: [
         "//art:__subpackages__",
         "//prebuilts:__subpackages__",
@@ -592,9 +752,15 @@ cc_prebuilt_library_headers {
     },
 }
 
-cc_prebuilt_library_headers {
+art_prebuilt_cc_prebuilt_library_headers {
     name: "libnativehelper_header_only",
-    prefer: false,
+    // Do not prefer prebuilt if SOONG_CONFIG_art_module_source_build is true.
+    prefer: art_module_prefer_prebuilts,
+    soong_config_variables: {
+        source_build: {
+            prefer: false,
+        },
+    },
     visibility: ["//visibility:public"],
     apex_available: [
         "//apex_available:anyapex",
@@ -649,9 +815,15 @@ cc_prebuilt_library_headers {
     },
 }
 
-cc_prebuilt_library_headers {
+art_prebuilt_cc_prebuilt_library_headers {
     name: "libopenjdkjvmti_headers",
-    prefer: false,
+    // Do not prefer prebuilt if SOONG_CONFIG_art_module_source_build is true.
+    prefer: art_module_prefer_prebuilts,
+    soong_config_variables: {
+        source_build: {
+            prefer: false,
+        },
+    },
     visibility: ["//visibility:public"],
     apex_available: [
         "//apex_available:platform",
@@ -701,9 +873,15 @@ cc_prebuilt_library_headers {
     ],
 }
 
-cc_prebuilt_library_headers {
+art_prebuilt_cc_prebuilt_library_headers {
     name: "libnativeloader-headers",
-    prefer: false,
+    // Do not prefer prebuilt if SOONG_CONFIG_art_module_source_build is true.
+    prefer: art_module_prefer_prebuilts,
+    soong_config_variables: {
+        source_build: {
+            prefer: false,
+        },
+    },
     visibility: [
         "//art:__subpackages__",
         "//frameworks/av/media/libstagefright",
@@ -801,9 +979,15 @@ cc_prebuilt_library {
     },
 }
 
-cc_prebuilt_library {
+art_prebuilt_cc_prebuilt_library {
     name: "libdexfile_support",
-    prefer: false,
+    // Do not prefer prebuilt if SOONG_CONFIG_art_module_source_build is true.
+    prefer: art_module_prefer_prebuilts,
+    soong_config_variables: {
+        source_build: {
+            prefer: false,
+        },
+    },
     visibility: ["//visibility:public"],
     apex_available: [
         "//apex_available:platform",
@@ -988,9 +1172,15 @@ cc_prebuilt_library {
     },
 }
 
-cc_prebuilt_library {
+art_prebuilt_cc_prebuilt_library {
     name: "libsigchain",
-    prefer: false,
+    // Do not prefer prebuilt if SOONG_CONFIG_art_module_source_build is true.
+    prefer: art_module_prefer_prebuilts,
+    soong_config_variables: {
+        source_build: {
+            prefer: false,
+        },
+    },
     visibility: [
         "//art:__subpackages__",
         "//frameworks/base/cmds/app_process",
@@ -1147,9 +1337,15 @@ cc_prebuilt_library_shared {
     },
 }
 
-cc_prebuilt_library_shared {
+art_prebuilt_cc_prebuilt_library_shared {
     name: "libandroidio",
-    prefer: false,
+    // Do not prefer prebuilt if SOONG_CONFIG_art_module_source_build is true.
+    prefer: art_module_prefer_prebuilts,
+    soong_config_variables: {
+        source_build: {
+            prefer: false,
+        },
+    },
     visibility: [
         "//art/build/apex",
         "//art/build/sdk",
@@ -1241,9 +1437,15 @@ cc_prebuilt_library_shared {
     },
 }
 
-cc_prebuilt_library_shared {
+art_prebuilt_cc_prebuilt_library_shared {
     name: "libdexfile_external",
-    prefer: false,
+    // Do not prefer prebuilt if SOONG_CONFIG_art_module_source_build is true.
+    prefer: art_module_prefer_prebuilts,
+    soong_config_variables: {
+        source_build: {
+            prefer: false,
+        },
+    },
     visibility: ["//visibility:public"],
     apex_available: [
         "com.android.art",
@@ -1336,9 +1538,15 @@ cc_prebuilt_library_shared {
     },
 }
 
-cc_prebuilt_library_shared {
+art_prebuilt_cc_prebuilt_library_shared {
     name: "libnativebridge",
-    prefer: false,
+    // Do not prefer prebuilt if SOONG_CONFIG_art_module_source_build is true.
+    prefer: art_module_prefer_prebuilts,
+    soong_config_variables: {
+        source_build: {
+            prefer: false,
+        },
+    },
     visibility: [
         "//art:__subpackages__",
         "//frameworks/base/cmds/app_process",
@@ -1434,9 +1642,15 @@ cc_prebuilt_library_shared {
     },
 }
 
-cc_prebuilt_library_shared {
+art_prebuilt_cc_prebuilt_library_shared {
     name: "libnativehelper",
-    prefer: false,
+    // Do not prefer prebuilt if SOONG_CONFIG_art_module_source_build is true.
+    prefer: art_module_prefer_prebuilts,
+    soong_config_variables: {
+        source_build: {
+            prefer: false,
+        },
+    },
     visibility: ["//visibility:public"],
     apex_available: [
         "com.android.art",
@@ -1532,9 +1746,15 @@ cc_prebuilt_library_shared {
     },
 }
 
-cc_prebuilt_library_shared {
+art_prebuilt_cc_prebuilt_library_shared {
     name: "libnativeloader",
-    prefer: false,
+    // Do not prefer prebuilt if SOONG_CONFIG_art_module_source_build is true.
+    prefer: art_module_prefer_prebuilts,
+    soong_config_variables: {
+        source_build: {
+            prefer: false,
+        },
+    },
     visibility: [
         "//art:__subpackages__",
         "//frameworks/base/cmds/app_process",
@@ -1620,9 +1840,15 @@ cc_prebuilt_library_shared {
     },
 }
 
-cc_prebuilt_library_shared {
+art_prebuilt_cc_prebuilt_library_shared {
     name: "libnativebridge_lazy",
-    prefer: false,
+    // Do not prefer prebuilt if SOONG_CONFIG_art_module_source_build is true.
+    prefer: art_module_prefer_prebuilts,
+    soong_config_variables: {
+        source_build: {
+            prefer: false,
+        },
+    },
     visibility: [
         "//art/libnativebridge/tests",
         "//art:__subpackages__",
@@ -1702,9 +1928,15 @@ cc_prebuilt_library_shared {
     },
 }
 
-cc_prebuilt_library_shared {
+art_prebuilt_cc_prebuilt_library_shared {
     name: "libnativehelper_compat_libc++",
-    prefer: false,
+    // Do not prefer prebuilt if SOONG_CONFIG_art_module_source_build is true.
+    prefer: art_module_prefer_prebuilts,
+    soong_config_variables: {
+        source_build: {
+            prefer: false,
+        },
+    },
     visibility: [
         "//art:__subpackages__",
         "//cts:__subpackages__",
@@ -1783,9 +2015,15 @@ cc_prebuilt_library_shared {
     },
 }
 
-cc_prebuilt_library_shared {
+art_prebuilt_cc_prebuilt_library_shared {
     name: "libnativeloader_lazy",
-    prefer: false,
+    // Do not prefer prebuilt if SOONG_CONFIG_art_module_source_build is true.
+    prefer: art_module_prefer_prebuilts,
+    soong_config_variables: {
+        source_build: {
+            prefer: false,
+        },
+    },
     visibility: [
         "//art:__subpackages__",
         "//frameworks/base/core/jni",
@@ -1873,9 +2111,15 @@ cc_prebuilt_library_static {
     },
 }
 
-cc_prebuilt_library_static {
+art_prebuilt_cc_prebuilt_library_static {
     name: "libdexfile_external_static",
-    prefer: false,
+    // Do not prefer prebuilt if SOONG_CONFIG_art_module_source_build is true.
+    prefer: art_module_prefer_prebuilts,
+    soong_config_variables: {
+        source_build: {
+            prefer: false,
+        },
+    },
     visibility: [
         "//art:__subpackages__",
         "//cts/tests/tests/simpleperf",
@@ -1958,9 +2202,15 @@ cc_prebuilt_library_static {
     },
 }
 
-cc_prebuilt_library_static {
+art_prebuilt_cc_prebuilt_library_static {
     name: "libctstiagent",
-    prefer: false,
+    // Do not prefer prebuilt if SOONG_CONFIG_art_module_source_build is true.
+    prefer: art_module_prefer_prebuilts,
+    soong_config_variables: {
+        source_build: {
+            prefer: false,
+        },
+    },
     visibility: [
         "//art:__subpackages__",
         "//cts/hostsidetests/jvmti:__subpackages__",
@@ -2065,4 +2315,3 @@ sdk_snapshot {
         },
     },
 }
-
