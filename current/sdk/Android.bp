@@ -14,8 +14,6 @@ soong_config_module_type_import {
     ],
 }
 
-art_module_prefer_prebuilts = false
-
 java_import {
     name: "art-module-sdk_core-lambda-stubs@current",
     sdk_member_name: "core-lambda-stubs",
@@ -27,7 +25,7 @@ java_import {
 art_prebuilt_java_import {
     name: "core-lambda-stubs",
     // Do not prefer prebuilt if SOONG_CONFIG_art_module_source_build is true.
-    prefer: art_module_prefer_prebuilts,
+    prefer: true,
     soong_config_variables: {
         source_build: {
             prefer: false,
@@ -49,7 +47,7 @@ java_import {
 art_prebuilt_java_import {
     name: "core.current.stubs",
     // Do not prefer prebuilt if SOONG_CONFIG_art_module_source_build is true.
-    prefer: art_module_prefer_prebuilts,
+    prefer: true,
     soong_config_variables: {
         source_build: {
             prefer: false,
@@ -71,7 +69,7 @@ java_import {
 art_prebuilt_java_import {
     name: "legacy.core.platform.api.stubs",
     // Do not prefer prebuilt if SOONG_CONFIG_art_module_source_build is true.
-    prefer: art_module_prefer_prebuilts,
+    prefer: true,
     soong_config_variables: {
         source_build: {
             prefer: false,
@@ -93,7 +91,7 @@ java_import {
 art_prebuilt_java_import {
     name: "stable.core.platform.api.stubs",
     // Do not prefer prebuilt if SOONG_CONFIG_art_module_source_build is true.
-    prefer: art_module_prefer_prebuilts,
+    prefer: true,
     soong_config_variables: {
         source_build: {
             prefer: false,
@@ -115,7 +113,7 @@ java_import {
 art_prebuilt_java_import {
     name: "art-module-sdk_art.module.public.api.stubs",
     // Do not prefer prebuilt if SOONG_CONFIG_art_module_source_build is true.
-    prefer: art_module_prefer_prebuilts,
+    prefer: true,
     soong_config_variables: {
         source_build: {
             prefer: false,
@@ -137,7 +135,7 @@ java_import {
 art_prebuilt_java_import {
     name: "art-module-sdk_core-lambda-stubs-for-system-modules",
     // Do not prefer prebuilt if SOONG_CONFIG_art_module_source_build is true.
-    prefer: art_module_prefer_prebuilts,
+    prefer: true,
     soong_config_variables: {
         source_build: {
             prefer: false,
@@ -159,7 +157,7 @@ java_import {
 art_prebuilt_java_import {
     name: "art-module-sdk_core-generated-annotation-stubs",
     // Do not prefer prebuilt if SOONG_CONFIG_art_module_source_build is true.
-    prefer: art_module_prefer_prebuilts,
+    prefer: true,
     soong_config_variables: {
         source_build: {
             prefer: false,
@@ -181,7 +179,7 @@ java_import {
 art_prebuilt_java_import {
     name: "art-module-sdk_art.module.api.annotations.for.system.modules",
     // Do not prefer prebuilt if SOONG_CONFIG_art_module_source_build is true.
-    prefer: art_module_prefer_prebuilts,
+    prefer: true,
     soong_config_variables: {
         source_build: {
             prefer: false,
@@ -203,7 +201,7 @@ java_import {
 art_prebuilt_java_import {
     name: "art-module-sdk_stub-annotations",
     // Do not prefer prebuilt if SOONG_CONFIG_art_module_source_build is true.
-    prefer: art_module_prefer_prebuilts,
+    prefer: true,
     soong_config_variables: {
         source_build: {
             prefer: false,
@@ -225,7 +223,7 @@ java_import {
 art_prebuilt_java_import {
     name: "art-module-sdk_art.module.intra.core.api.stubs",
     // Do not prefer prebuilt if SOONG_CONFIG_art_module_source_build is true.
-    prefer: art_module_prefer_prebuilts,
+    prefer: true,
     soong_config_variables: {
         source_build: {
             prefer: false,
@@ -247,7 +245,7 @@ java_import {
 art_prebuilt_java_import {
     name: "art-module-sdk_art-module-intra-core-api-stubs-system-modules-lib",
     // Do not prefer prebuilt if SOONG_CONFIG_art_module_source_build is true.
-    prefer: art_module_prefer_prebuilts,
+    prefer: true,
     soong_config_variables: {
         source_build: {
             prefer: false,
@@ -269,7 +267,7 @@ java_import {
 art_prebuilt_java_import {
     name: "art-module-sdk_legacy.art.module.platform.api.stubs",
     // Do not prefer prebuilt if SOONG_CONFIG_art_module_source_build is true.
-    prefer: art_module_prefer_prebuilts,
+    prefer: true,
     soong_config_variables: {
         source_build: {
             prefer: false,
@@ -291,7 +289,7 @@ java_import {
 art_prebuilt_java_import {
     name: "art-module-sdk_stable.art.module.platform.api.stubs",
     // Do not prefer prebuilt if SOONG_CONFIG_art_module_source_build is true.
-    prefer: art_module_prefer_prebuilts,
+    prefer: true,
     soong_config_variables: {
         source_build: {
             prefer: false,
@@ -313,7 +311,7 @@ java_import {
 art_prebuilt_java_import {
     name: "art-module-sdk_core-current-stubs-for-system-modules",
     // Do not prefer prebuilt if SOONG_CONFIG_art_module_source_build is true.
-    prefer: art_module_prefer_prebuilts,
+    prefer: true,
     soong_config_variables: {
         source_build: {
             prefer: false,
@@ -349,7 +347,7 @@ java_sdk_library_import {
 art_prebuilt_java_sdk_library_import {
     name: "art.module.public.api",
     // Do not prefer prebuilt if SOONG_CONFIG_art_module_source_build is true.
-    prefer: art_module_prefer_prebuilts,
+    prefer: true,
     soong_config_variables: {
         source_build: {
             prefer: false,
@@ -397,7 +395,7 @@ java_system_modules_import {
 art_prebuilt_java_system_modules_import {
     name: "art-module-public-api-stubs-system-modules",
     // Do not prefer prebuilt if SOONG_CONFIG_art_module_source_build is true.
-    prefer: art_module_prefer_prebuilts,
+    prefer: true,
     soong_config_variables: {
         source_build: {
             prefer: false,
@@ -440,7 +438,7 @@ java_system_modules_import {
 art_prebuilt_java_system_modules_import {
     name: "art-module-intra-core-api-stubs-system-modules",
     // Do not prefer prebuilt if SOONG_CONFIG_art_module_source_build is true.
-    prefer: art_module_prefer_prebuilts,
+    prefer: true,
     soong_config_variables: {
         source_build: {
             prefer: false,
@@ -477,7 +475,7 @@ java_system_modules_import {
 art_prebuilt_java_system_modules_import {
     name: "legacy-art-module-platform-api-stubs-system-modules",
     // Do not prefer prebuilt if SOONG_CONFIG_art_module_source_build is true.
-    prefer: art_module_prefer_prebuilts,
+    prefer: true,
     soong_config_variables: {
         source_build: {
             prefer: false,
@@ -511,7 +509,7 @@ java_system_modules_import {
 art_prebuilt_java_system_modules_import {
     name: "stable-art-module-platform-api-stubs-system-modules",
     // Do not prefer prebuilt if SOONG_CONFIG_art_module_source_build is true.
-    prefer: art_module_prefer_prebuilts,
+    prefer: true,
     soong_config_variables: {
         source_build: {
             prefer: false,
@@ -538,7 +536,7 @@ java_system_modules_import {
 art_prebuilt_java_system_modules_import {
     name: "core-current-stubs-system-modules",
     // Do not prefer prebuilt if SOONG_CONFIG_art_module_source_build is true.
-    prefer: art_module_prefer_prebuilts,
+    prefer: true,
     soong_config_variables: {
         source_build: {
             prefer: false,
@@ -562,7 +560,7 @@ java_system_modules_import {
 art_prebuilt_java_system_modules_import {
     name: "legacy-core-platform-api-stubs-system-modules",
     // Do not prefer prebuilt if SOONG_CONFIG_art_module_source_build is true.
-    prefer: art_module_prefer_prebuilts,
+    prefer: true,
     soong_config_variables: {
         source_build: {
             prefer: false,
@@ -590,7 +588,7 @@ java_system_modules_import {
 art_prebuilt_java_system_modules_import {
     name: "stable-core-platform-api-stubs-system-modules",
     // Do not prefer prebuilt if SOONG_CONFIG_art_module_source_build is true.
-    prefer: art_module_prefer_prebuilts,
+    prefer: true,
     soong_config_variables: {
         source_build: {
             prefer: false,
@@ -636,7 +634,7 @@ cc_prebuilt_library_headers {
 art_prebuilt_cc_prebuilt_library_headers {
     name: "jni_headers",
     // Do not prefer prebuilt if SOONG_CONFIG_art_module_source_build is true.
-    prefer: art_module_prefer_prebuilts,
+    prefer: true,
     soong_config_variables: {
         source_build: {
             prefer: false,
@@ -696,7 +694,7 @@ cc_prebuilt_library_headers {
 art_prebuilt_cc_prebuilt_library_headers {
     name: "libartpalette-headers",
     // Do not prefer prebuilt if SOONG_CONFIG_art_module_source_build is true.
-    prefer: art_module_prefer_prebuilts,
+    prefer: true,
     soong_config_variables: {
         source_build: {
             prefer: false,
@@ -755,7 +753,7 @@ cc_prebuilt_library_headers {
 art_prebuilt_cc_prebuilt_library_headers {
     name: "libnativehelper_header_only",
     // Do not prefer prebuilt if SOONG_CONFIG_art_module_source_build is true.
-    prefer: art_module_prefer_prebuilts,
+    prefer: true,
     soong_config_variables: {
         source_build: {
             prefer: false,
@@ -818,7 +816,7 @@ cc_prebuilt_library_headers {
 art_prebuilt_cc_prebuilt_library_headers {
     name: "libopenjdkjvmti_headers",
     // Do not prefer prebuilt if SOONG_CONFIG_art_module_source_build is true.
-    prefer: art_module_prefer_prebuilts,
+    prefer: true,
     soong_config_variables: {
         source_build: {
             prefer: false,
@@ -876,7 +874,7 @@ cc_prebuilt_library_headers {
 art_prebuilt_cc_prebuilt_library_headers {
     name: "libnativeloader-headers",
     // Do not prefer prebuilt if SOONG_CONFIG_art_module_source_build is true.
-    prefer: art_module_prefer_prebuilts,
+    prefer: true,
     soong_config_variables: {
         source_build: {
             prefer: false,
@@ -982,7 +980,7 @@ cc_prebuilt_library {
 art_prebuilt_cc_prebuilt_library {
     name: "libdexfile_support",
     // Do not prefer prebuilt if SOONG_CONFIG_art_module_source_build is true.
-    prefer: art_module_prefer_prebuilts,
+    prefer: true,
     soong_config_variables: {
         source_build: {
             prefer: false,
@@ -1175,7 +1173,7 @@ cc_prebuilt_library {
 art_prebuilt_cc_prebuilt_library {
     name: "libsigchain",
     // Do not prefer prebuilt if SOONG_CONFIG_art_module_source_build is true.
-    prefer: art_module_prefer_prebuilts,
+    prefer: true,
     soong_config_variables: {
         source_build: {
             prefer: false,
@@ -1340,7 +1338,7 @@ cc_prebuilt_library_shared {
 art_prebuilt_cc_prebuilt_library_shared {
     name: "libandroidio",
     // Do not prefer prebuilt if SOONG_CONFIG_art_module_source_build is true.
-    prefer: art_module_prefer_prebuilts,
+    prefer: true,
     soong_config_variables: {
         source_build: {
             prefer: false,
@@ -1440,7 +1438,7 @@ cc_prebuilt_library_shared {
 art_prebuilt_cc_prebuilt_library_shared {
     name: "libdexfile_external",
     // Do not prefer prebuilt if SOONG_CONFIG_art_module_source_build is true.
-    prefer: art_module_prefer_prebuilts,
+    prefer: true,
     soong_config_variables: {
         source_build: {
             prefer: false,
@@ -1541,7 +1539,7 @@ cc_prebuilt_library_shared {
 art_prebuilt_cc_prebuilt_library_shared {
     name: "libnativebridge",
     // Do not prefer prebuilt if SOONG_CONFIG_art_module_source_build is true.
-    prefer: art_module_prefer_prebuilts,
+    prefer: true,
     soong_config_variables: {
         source_build: {
             prefer: false,
@@ -1645,7 +1643,7 @@ cc_prebuilt_library_shared {
 art_prebuilt_cc_prebuilt_library_shared {
     name: "libnativehelper",
     // Do not prefer prebuilt if SOONG_CONFIG_art_module_source_build is true.
-    prefer: art_module_prefer_prebuilts,
+    prefer: true,
     soong_config_variables: {
         source_build: {
             prefer: false,
@@ -1749,7 +1747,7 @@ cc_prebuilt_library_shared {
 art_prebuilt_cc_prebuilt_library_shared {
     name: "libnativeloader",
     // Do not prefer prebuilt if SOONG_CONFIG_art_module_source_build is true.
-    prefer: art_module_prefer_prebuilts,
+    prefer: true,
     soong_config_variables: {
         source_build: {
             prefer: false,
@@ -1843,7 +1841,7 @@ cc_prebuilt_library_shared {
 art_prebuilt_cc_prebuilt_library_shared {
     name: "libnativebridge_lazy",
     // Do not prefer prebuilt if SOONG_CONFIG_art_module_source_build is true.
-    prefer: art_module_prefer_prebuilts,
+    prefer: true,
     soong_config_variables: {
         source_build: {
             prefer: false,
@@ -1931,7 +1929,7 @@ cc_prebuilt_library_shared {
 art_prebuilt_cc_prebuilt_library_shared {
     name: "libnativehelper_compat_libc++",
     // Do not prefer prebuilt if SOONG_CONFIG_art_module_source_build is true.
-    prefer: art_module_prefer_prebuilts,
+    prefer: true,
     soong_config_variables: {
         source_build: {
             prefer: false,
@@ -2018,7 +2016,7 @@ cc_prebuilt_library_shared {
 art_prebuilt_cc_prebuilt_library_shared {
     name: "libnativeloader_lazy",
     // Do not prefer prebuilt if SOONG_CONFIG_art_module_source_build is true.
-    prefer: art_module_prefer_prebuilts,
+    prefer: true,
     soong_config_variables: {
         source_build: {
             prefer: false,
@@ -2114,7 +2112,7 @@ cc_prebuilt_library_static {
 art_prebuilt_cc_prebuilt_library_static {
     name: "libdexfile_external_static",
     // Do not prefer prebuilt if SOONG_CONFIG_art_module_source_build is true.
-    prefer: art_module_prefer_prebuilts,
+    prefer: true,
     soong_config_variables: {
         source_build: {
             prefer: false,
@@ -2205,7 +2203,7 @@ cc_prebuilt_library_static {
 art_prebuilt_cc_prebuilt_library_static {
     name: "libctstiagent",
     // Do not prefer prebuilt if SOONG_CONFIG_art_module_source_build is true.
-    prefer: art_module_prefer_prebuilts,
+    prefer: true,
     soong_config_variables: {
         source_build: {
             prefer: false,
