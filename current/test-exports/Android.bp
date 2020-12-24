@@ -54,6 +54,7 @@ java_import {
         "//frameworks/base/location/tests/locationtests",
         "//frameworks/base/wifi/tests",
         "//libcore",
+        "//packages/modules/Wifi/framework/tests",
         "//prebuilts:__subpackages__",
     ],
     apex_available: ["//apex_available:platform"],
