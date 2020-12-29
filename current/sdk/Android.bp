@@ -356,6 +356,7 @@ art_prebuilt_java_sdk_library_import {
     visibility: [
         "//art/build/sdk",
         "//frameworks/base",
+        "//frameworks/base/api",
         "//libcore",
         "//prebuilts:__subpackages__",
     ],
