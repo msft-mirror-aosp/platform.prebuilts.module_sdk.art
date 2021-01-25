@@ -75,7 +75,7 @@ public class Level implements java.io.Serializable {
  * @throws java.lang.NullPointerException if the name is null
  */
 
-protected Level(@android.annotation.NonNull java.lang.String name, int value) { throw new RuntimeException("Stub!"); }
+protected Level(@androidx.annotation.RecentlyNonNull java.lang.String name, int value) { throw new RuntimeException("Stub!"); }
 
 /**
  * Create a named Level with a given integer value and a
@@ -89,7 +89,7 @@ protected Level(@android.annotation.NonNull java.lang.String name, int value) { 
  * @throws java.lang.NullPointerException if the name is null
  */
 
-protected Level(@android.annotation.NonNull java.lang.String name, int value, @android.annotation.Nullable java.lang.String resourceBundleName) { throw new RuntimeException("Stub!"); }
+protected Level(@androidx.annotation.RecentlyNonNull java.lang.String name, int value, @androidx.annotation.RecentlyNullable java.lang.String resourceBundleName) { throw new RuntimeException("Stub!"); }
 
 /**
  * Return the level's localization resource bundle name, or
@@ -98,7 +98,7 @@ protected Level(@android.annotation.NonNull java.lang.String name, int value, @a
  * @return localization resource bundle name
  */
 
-@android.annotation.Nullable
+@androidx.annotation.RecentlyNullable
 public java.lang.String getResourceBundleName() { throw new RuntimeException("Stub!"); }
 
 /**
@@ -107,7 +107,7 @@ public java.lang.String getResourceBundleName() { throw new RuntimeException("St
  * @return non-localized name
  */
 
-@android.annotation.NonNull
+@androidx.annotation.RecentlyNonNull
 public java.lang.String getName() { throw new RuntimeException("Stub!"); }
 
 /**
@@ -120,7 +120,7 @@ public java.lang.String getName() { throw new RuntimeException("Stub!"); }
  * @return localized name
  */
 
-@android.annotation.NonNull
+@androidx.annotation.RecentlyNonNull
 public java.lang.String getLocalizedName() { throw new RuntimeException("Stub!"); }
 
 /**
@@ -129,7 +129,7 @@ public java.lang.String getLocalizedName() { throw new RuntimeException("Stub!")
  * @return the non-localized name of the Level, for example "INFO".
  */
 
-@android.annotation.NonNull
+@androidx.annotation.RecentlyNonNull
 public final java.lang.String toString() { throw new RuntimeException("Stub!"); }
 
 /**
@@ -169,15 +169,15 @@ public final int intValue() { throw new RuntimeException("Stub!"); }
  * initialized to that value.
  */
 
-@android.annotation.NonNull
-public static synchronized java.util.logging.Level parse(@android.annotation.NonNull java.lang.String name) throws java.lang.IllegalArgumentException { throw new RuntimeException("Stub!"); }
+@androidx.annotation.RecentlyNonNull
+public static synchronized java.util.logging.Level parse(@androidx.annotation.RecentlyNonNull java.lang.String name) throws java.lang.IllegalArgumentException { throw new RuntimeException("Stub!"); }
 
 /**
  * Compare two objects for value equality.
  * @return true if and only if the two objects have the same level value.
  */
 
-public boolean equals(@android.annotation.Nullable java.lang.Object ox) { throw new RuntimeException("Stub!"); }
+public boolean equals(@androidx.annotation.RecentlyNullable java.lang.Object ox) { throw new RuntimeException("Stub!"); }
 
 /**
  * Generate a hashcode.
@@ -191,7 +191,7 @@ public int hashCode() { throw new RuntimeException("Stub!"); }
  * This level is initialized to <CODE>Integer.MIN_VALUE</CODE>.
  */
 
-@android.annotation.NonNull public static final java.util.logging.Level ALL;
+@androidx.annotation.RecentlyNonNull public static final java.util.logging.Level ALL;
 static { ALL = null; }
 
 /**
@@ -205,7 +205,7 @@ static { ALL = null; }
  * This level is initialized to <CODE>700</CODE>.
  */
 
-@android.annotation.NonNull public static final java.util.logging.Level CONFIG;
+@androidx.annotation.RecentlyNonNull public static final java.util.logging.Level CONFIG;
 static { CONFIG = null; }
 
 /**
@@ -228,7 +228,7 @@ static { CONFIG = null; }
  * This level is initialized to <CODE>500</CODE>.
  */
 
-@android.annotation.NonNull public static final java.util.logging.Level FINE;
+@androidx.annotation.RecentlyNonNull public static final java.util.logging.Level FINE;
 static { FINE = null; }
 
 /**
@@ -238,7 +238,7 @@ static { FINE = null; }
  * This level is initialized to <CODE>400</CODE>.
  */
 
-@android.annotation.NonNull public static final java.util.logging.Level FINER;
+@androidx.annotation.RecentlyNonNull public static final java.util.logging.Level FINER;
 static { FINER = null; }
 
 /**
@@ -246,7 +246,7 @@ static { FINER = null; }
  * This level is initialized to <CODE>300</CODE>.
  */
 
-@android.annotation.NonNull public static final java.util.logging.Level FINEST;
+@androidx.annotation.RecentlyNonNull public static final java.util.logging.Level FINEST;
 static { FINEST = null; }
 
 /**
@@ -259,7 +259,7 @@ static { FINEST = null; }
  * This level is initialized to <CODE>800</CODE>.
  */
 
-@android.annotation.NonNull public static final java.util.logging.Level INFO;
+@androidx.annotation.RecentlyNonNull public static final java.util.logging.Level INFO;
 static { INFO = null; }
 
 /**
@@ -267,7 +267,7 @@ static { INFO = null; }
  * This level is initialized to <CODE>Integer.MAX_VALUE</CODE>.
  */
 
-@android.annotation.NonNull public static final java.util.logging.Level OFF;
+@androidx.annotation.RecentlyNonNull public static final java.util.logging.Level OFF;
 static { OFF = null; }
 
 /**
@@ -280,7 +280,7 @@ static { OFF = null; }
  * This level is initialized to <CODE>1000</CODE>.
  */
 
-@android.annotation.NonNull public static final java.util.logging.Level SEVERE;
+@androidx.annotation.RecentlyNonNull public static final java.util.logging.Level SEVERE;
 static { SEVERE = null; }
 
 /**
@@ -292,7 +292,7 @@ static { SEVERE = null; }
  * This level is initialized to <CODE>900</CODE>.
  */
 
-@android.annotation.NonNull public static final java.util.logging.Level WARNING;
+@androidx.annotation.RecentlyNonNull public static final java.util.logging.Level WARNING;
 static { WARNING = null; }
 }
 

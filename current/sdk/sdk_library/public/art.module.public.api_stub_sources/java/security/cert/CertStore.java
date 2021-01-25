@@ -177,7 +177,7 @@ public final java.util.Collection<? extends java.security.cert.CRL> getCRLs(java
  * Provider that supports the specified type is returned.
  *
  * <p> Note that the list of registered providers may be retrieved via
- * the {@link java.security.Security#getProviders() Security#getProviders()} method.
+ * the {@link java.security.Security#getProviders() Security.getProviders()} method.
  *
  * <p>The {@code CertStore} that is returned is initialized with the
  * specified {@code CertStoreParameters}. The type of parameters
@@ -218,7 +218,7 @@ public static java.security.cert.CertStore getInstance(java.lang.String type, ja
  * in the security provider list.
  *
  * <p> Note that the list of registered providers may be retrieved via
- * the {@link java.security.Security#getProviders() Security#getProviders()} method.
+ * the {@link java.security.Security#getProviders() Security.getProviders()} method.
  *
  * <p>The {@code CertStore} that is returned is initialized with the
  * specified {@code CertStoreParameters}. The type of parameters

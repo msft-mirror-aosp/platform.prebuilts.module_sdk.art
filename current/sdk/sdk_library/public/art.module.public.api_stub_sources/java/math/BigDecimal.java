@@ -55,7 +55,7 @@ package java.math;
  * modes</em> are provided for the control of rounding.  Using the
  * integer fields in this class (such as {@link #ROUND_HALF_UP}) to
  * represent rounding mode is largely obsolete; the enumeration values
- * of the {@code RoundingMode} {@code enum}, (such as {@link java.math.RoundingMode#HALF_UP RoundingMode#HALF_UP}) should be used instead.
+ * of the {@code RoundingMode} {@code enum}, (such as {@link java.math.RoundingMode#HALF_UP  }) should be used instead.
  *
  * <p>When a {@code MathContext} object is supplied with a precision
  * setting of 0 (for example, {@link java.math.MathContext#UNLIMITED MathContext#UNLIMITED}),
@@ -145,7 +145,7 @@ package java.math;
  * returned.  In particular, an exactly representable quotient may be
  * represented in fewer than {@code precision} digits by removing
  * trailing zeros and decreasing the scale.  For example, rounding to
- * three digits using the {@linkplain java.math.RoundingMode#FLOOR RoundingMode#FLOOR}
+ * three digits using the {@linkplain java.math.RoundingMode#FLOOR floor}
  * rounding mode, <br>
  *
  * {@code 19/100 = 0.19   // integer=19,  scale=2} <br>
@@ -326,7 +326,7 @@ public BigDecimal(char[] in, java.math.MathContext mc) { throw new RuntimeExcept
  * <p>The exponent consists of the character {@code 'e'}
  * (<tt>'&#92;u0065'</tt>) or {@code 'E'} (<tt>'&#92;u0045'</tt>)
  * followed by one or more decimal digits.  The value of the
- * exponent must lie between -{@link java.lang.Integer#MAX_VALUE Integer#MAX_VALUE} ({@link java.lang.Integer#MIN_VALUE Integer#MIN_VALUE}+1) and {@link java.lang.Integer#MAX_VALUE Integer#MAX_VALUE}, inclusive.
+ * exponent must lie between -{@link java.lang.Integer#MAX_VALUE Integer#MAX_VALUE} ({@link java.lang.Integer#MIN_VALUE  }+1) and {@link java.lang.Integer#MAX_VALUE Integer#MAX_VALUE}, inclusive.
  *
  * <p>More formally, the strings this constructor accepts are
  * described by the following grammar:
@@ -1776,7 +1776,7 @@ public byte byteValueExact() { throw new RuntimeException("Stub!"); }
  * <cite>The Java&trade; Language Specification</cite>:
  * if this {@code BigDecimal} has too great a
  * magnitude to represent as a {@code float}, it will be
- * converted to {@link java.lang.Float#NEGATIVE_INFINITY Float#NEGATIVE_INFINITY} or {@link java.lang.Float#POSITIVE_INFINITY Float#POSITIVE_INFINITY} as appropriate.  Note that even when
+ * converted to {@link java.lang.Float#NEGATIVE_INFINITY Float#NEGATIVE_INFINITY} or {@link java.lang.Float#POSITIVE_INFINITY  } as appropriate.  Note that even when
  * the return value is finite, this conversion can lose
  * information about the precision of the {@code BigDecimal}
  * value.
@@ -1794,7 +1794,7 @@ public float floatValue() { throw new RuntimeException("Stub!"); }
  * <cite>The Java&trade; Language Specification</cite>:
  * if this {@code BigDecimal} has too great a
  * magnitude represent as a {@code double}, it will be
- * converted to {@link java.lang.Double#NEGATIVE_INFINITY Double#NEGATIVE_INFINITY} or {@link java.lang.Double#POSITIVE_INFINITY Double#POSITIVE_INFINITY} as appropriate.  Note that even when
+ * converted to {@link java.lang.Double#NEGATIVE_INFINITY Double#NEGATIVE_INFINITY} or {@link java.lang.Double#POSITIVE_INFINITY  } as appropriate.  Note that even when
  * the return value is finite, this conversion can lose
  * information about the precision of the {@code BigDecimal}
  * value.

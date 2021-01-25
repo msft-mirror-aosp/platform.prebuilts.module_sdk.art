@@ -28,8 +28,8 @@ package java.nio.charset;
 
 
 /**
- * Error thrown when the {@link java.nio.charset.CharsetDecoder#decodeLoop CharsetDecoder#decodeLoop} method of
- * a {@link java.nio.charset.CharsetDecoder CharsetDecoder}, or the {@link java.nio.charset.CharsetEncoder#encodeLoop CharsetEncoder#encodeLoop} method of a {@link java.nio.charset.CharsetEncoder CharsetEncoder}, throws an unexpected
+ * Error thrown when the {@link java.nio.charset.CharsetDecoder#decodeLoop decodeLoop} method of
+ * a {@link java.nio.charset.CharsetDecoder CharsetDecoder}, or the {@link java.nio.charset.CharsetEncoder#encodeLoop  encodeLoop} method of a {@link java.nio.charset.CharsetEncoder CharsetEncoder}, throws an unexpected
  * exception.
  *
  * @since 1.4

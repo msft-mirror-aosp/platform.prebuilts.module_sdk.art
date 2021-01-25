@@ -694,7 +694,7 @@ public int compareTo(java.nio.IntBuffer that) { throw new RuntimeException("Stub
  * Retrieves this buffer's byte order.
  *
  * <p> The byte order of an int buffer created by allocation or by
- * wrapping an existing <tt>int</tt> array is the {@link java.nio.ByteOrder#nativeOrder ByteOrder#nativeOrder} of the underlying
+ * wrapping an existing <tt>int</tt> array is the {@link java.nio.ByteOrder#nativeOrder native order} of the underlying
  * hardware.  The byte order of an int buffer created as a <a
  * href="ByteBuffer.html#views">view</a> of a byte buffer is that of the
  * byte buffer at the moment that the view is created.  </p>

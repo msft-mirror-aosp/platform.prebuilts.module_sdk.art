@@ -32,7 +32,7 @@ package java.util.regex;
  * An engine that performs match operations on a {@linkplain java.lang.CharSequence
  * character sequence} by interpreting a {@link java.util.regex.Pattern Pattern}.
  *
- * <p> A matcher is created from a pattern by invoking the pattern's {@link java.util.regex.Pattern#matcher Pattern#matcher} method.  Once created, a matcher can be used to
+ * <p> A matcher is created from a pattern by invoking the pattern's {@link java.util.regex.Pattern#matcher matcher} method.  Once created, a matcher can be used to
  * perform three different kinds of match operations:
  *
  * <ul>
@@ -112,7 +112,7 @@ Matcher() { throw new RuntimeException("Stub!"); }
  * @return  The pattern for which this matcher was created
  */
 
-@android.annotation.NonNull
+@androidx.annotation.RecentlyNonNull
 public java.util.regex.Pattern pattern() { throw new RuntimeException("Stub!"); }
 
 /**
@@ -124,7 +124,7 @@ public java.util.regex.Pattern pattern() { throw new RuntimeException("Stub!"); 
  * @since 1.5
  */
 
-@android.annotation.NonNull
+@androidx.annotation.RecentlyNonNull
 public java.util.regex.MatchResult toMatchResult() { throw new RuntimeException("Stub!"); }
 
 /**
@@ -144,8 +144,8 @@ public java.util.regex.MatchResult toMatchResult() { throw new RuntimeException(
  * @since 1.5
  */
 
-@android.annotation.NonNull
-public java.util.regex.Matcher usePattern(@android.annotation.NonNull java.util.regex.Pattern newPattern) { throw new RuntimeException("Stub!"); }
+@androidx.annotation.RecentlyNonNull
+public java.util.regex.Matcher usePattern(@androidx.annotation.RecentlyNonNull java.util.regex.Pattern newPattern) { throw new RuntimeException("Stub!"); }
 
 /**
  * Resets this matcher.
@@ -158,7 +158,7 @@ public java.util.regex.Matcher usePattern(@android.annotation.NonNull java.util.
  * @return  This matcher
  */
 
-@android.annotation.NonNull
+@androidx.annotation.RecentlyNonNull
 public java.util.regex.Matcher reset() { throw new RuntimeException("Stub!"); }
 
 /**
@@ -176,8 +176,8 @@ public java.util.regex.Matcher reset() { throw new RuntimeException("Stub!"); }
  * @return  This matcher
  */
 
-@android.annotation.NonNull
-public java.util.regex.Matcher reset(@android.annotation.NonNull java.lang.CharSequence input) { throw new RuntimeException("Stub!"); }
+@androidx.annotation.RecentlyNonNull
+public java.util.regex.Matcher reset(@androidx.annotation.RecentlyNonNull java.lang.CharSequence input) { throw new RuntimeException("Stub!"); }
 
 /**
  * Returns the start index of the previous match.
@@ -240,7 +240,7 @@ public int start(int group) { throw new RuntimeException("Stub!"); }
  * @since 1.8
  */
 
-public int start(@android.annotation.NonNull java.lang.String name) { throw new RuntimeException("Stub!"); }
+public int start(@androidx.annotation.RecentlyNonNull java.lang.String name) { throw new RuntimeException("Stub!"); }
 
 /**
  * Returns the offset after the last character matched.
@@ -303,7 +303,7 @@ public int end(int group) { throw new RuntimeException("Stub!"); }
  * @since 1.8
  */
 
-public int end(@android.annotation.NonNull java.lang.String name) { throw new RuntimeException("Stub!"); }
+public int end(@androidx.annotation.RecentlyNonNull java.lang.String name) { throw new RuntimeException("Stub!"); }
 
 /**
  * Returns the input subsequence matched by the previous match.
@@ -325,7 +325,7 @@ public int end(@android.annotation.NonNull java.lang.String name) { throw new Ru
  *          or if the previous match operation failed
  */
 
-@android.annotation.NonNull
+@androidx.annotation.RecentlyNonNull
 public java.lang.String group() { throw new RuntimeException("Stub!"); }
 
 /**
@@ -364,7 +364,7 @@ public java.lang.String group() { throw new RuntimeException("Stub!"); }
  *          with the given index
  */
 
-@android.annotation.Nullable
+@androidx.annotation.RecentlyNullable
 public java.lang.String group(int group) { throw new RuntimeException("Stub!"); }
 
 /**
@@ -395,8 +395,8 @@ public java.lang.String group(int group) { throw new RuntimeException("Stub!"); 
  * @since 1.7
  */
 
-@android.annotation.Nullable
-public java.lang.String group(@android.annotation.NonNull java.lang.String name) { throw new RuntimeException("Stub!"); }
+@androidx.annotation.RecentlyNullable
+public java.lang.String group(@androidx.annotation.RecentlyNonNull java.lang.String name) { throw new RuntimeException("Stub!"); }
 
 /**
  * Returns the number of capturing groups in this matcher's pattern.
@@ -498,8 +498,8 @@ public boolean lookingAt() { throw new RuntimeException("Stub!"); }
  * @since 1.5
  */
 
-@android.annotation.NonNull
-public static java.lang.String quoteReplacement(@android.annotation.NonNull java.lang.String s) { throw new RuntimeException("Stub!"); }
+@androidx.annotation.RecentlyNonNull
+public static java.lang.String quoteReplacement(@androidx.annotation.RecentlyNonNull java.lang.String s) { throw new RuntimeException("Stub!"); }
 
 /**
  * Implements a non-terminal append-and-replace step.
@@ -582,8 +582,8 @@ public static java.lang.String quoteReplacement(@android.annotation.NonNull java
  *          that does not exist in the pattern
  */
 
-@android.annotation.NonNull
-public java.util.regex.Matcher appendReplacement(@android.annotation.NonNull java.lang.StringBuffer sb, @android.annotation.NonNull java.lang.String replacement) { throw new RuntimeException("Stub!"); }
+@androidx.annotation.RecentlyNonNull
+public java.util.regex.Matcher appendReplacement(@androidx.annotation.RecentlyNonNull java.lang.StringBuffer sb, @androidx.annotation.RecentlyNonNull java.lang.String replacement) { throw new RuntimeException("Stub!"); }
 
 /**
  * Implements a terminal append-and-replace step.
@@ -600,8 +600,8 @@ public java.util.regex.Matcher appendReplacement(@android.annotation.NonNull jav
  * @return  The target string buffer
  */
 
-@android.annotation.NonNull
-public java.lang.StringBuffer appendTail(@android.annotation.NonNull java.lang.StringBuffer sb) { throw new RuntimeException("Stub!"); }
+@androidx.annotation.RecentlyNonNull
+public java.lang.StringBuffer appendTail(@androidx.annotation.RecentlyNonNull java.lang.StringBuffer sb) { throw new RuntimeException("Stub!"); }
 
 /**
  * Replaces every subsequence of the input sequence that matches the
@@ -638,8 +638,8 @@ public java.lang.StringBuffer appendTail(@android.annotation.NonNull java.lang.S
  *          as needed
  */
 
-@android.annotation.NonNull
-public java.lang.String replaceAll(@android.annotation.NonNull java.lang.String replacement) { throw new RuntimeException("Stub!"); }
+@androidx.annotation.RecentlyNonNull
+public java.lang.String replaceAll(@androidx.annotation.RecentlyNonNull java.lang.String replacement) { throw new RuntimeException("Stub!"); }
 
 /**
  * Replaces the first subsequence of the input sequence that matches the
@@ -675,8 +675,8 @@ public java.lang.String replaceAll(@android.annotation.NonNull java.lang.String 
  *          subsequences as needed
  */
 
-@android.annotation.NonNull
-public java.lang.String replaceFirst(@android.annotation.NonNull java.lang.String replacement) { throw new RuntimeException("Stub!"); }
+@androidx.annotation.RecentlyNonNull
+public java.lang.String replaceFirst(@androidx.annotation.RecentlyNonNull java.lang.String replacement) { throw new RuntimeException("Stub!"); }
 
 /**
  * Sets the limits of this matcher's region. The region is the part of the
@@ -704,7 +704,7 @@ public java.lang.String replaceFirst(@android.annotation.NonNull java.lang.Strin
  * @since 1.5
  */
 
-@android.annotation.NonNull
+@androidx.annotation.RecentlyNonNull
 public java.util.regex.Matcher region(int start, int end) { throw new RuntimeException("Stub!"); }
 
 /**
@@ -778,7 +778,7 @@ public boolean hasTransparentBounds() { throw new RuntimeException("Stub!"); }
  * @since 1.5
  */
 
-@android.annotation.NonNull
+@androidx.annotation.RecentlyNonNull
 public java.util.regex.Matcher useTransparentBounds(boolean b) { throw new RuntimeException("Stub!"); }
 
 /**
@@ -822,7 +822,7 @@ public boolean hasAnchoringBounds() { throw new RuntimeException("Stub!"); }
  * @since 1.5
  */
 
-@android.annotation.NonNull
+@androidx.annotation.RecentlyNonNull
 public java.util.regex.Matcher useAnchoringBounds(boolean b) { throw new RuntimeException("Stub!"); }
 
 /**
@@ -834,7 +834,7 @@ public java.util.regex.Matcher useAnchoringBounds(boolean b) { throw new Runtime
  * @since 1.5
  */
 
-@android.annotation.NonNull
+@androidx.annotation.RecentlyNonNull
 public java.lang.String toString() { throw new RuntimeException("Stub!"); }
 
 /**

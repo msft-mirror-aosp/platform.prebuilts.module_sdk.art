@@ -42,7 +42,7 @@ import java.util.Collection;
 import java.util.Spliterator;
 
 /**
- * A {@linkplain java.util.concurrent.BlockingQueue BlockingQueue} in which each insert
+ * A {@linkplain java.util.concurrent.BlockingQueue blocking queue} in which each insert
  * operation must wait for a corresponding remove operation by another
  * thread, and vice versa.  A synchronous queue does not have any
  * internal capacity, not even a capacity of one.  You cannot

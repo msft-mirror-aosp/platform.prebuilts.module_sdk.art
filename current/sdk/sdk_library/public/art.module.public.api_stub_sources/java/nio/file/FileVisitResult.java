@@ -38,7 +38,7 @@ package java.nio.file;
 @SuppressWarnings({"unchecked", "deprecation", "all"})
 public enum FileVisitResult {
 /**
- * Continue. When returned from a {@link java.nio.file.FileVisitor#preVisitDirectory FileVisitor#preVisitDirectory} method then the entries in the directory should also
+ * Continue. When returned from a {@link java.nio.file.FileVisitor#preVisitDirectory  preVisitDirectory} method then the entries in the directory should also
  * be visited.
  */
 
@@ -50,15 +50,15 @@ CONTINUE,
 TERMINATE,
 /**
  * Continue without visiting the entries in this directory. This result
- * is only meaningful when returned from the {@link java.nio.file.FileVisitor#preVisitDirectory FileVisitor#preVisitDirectory} method; otherwise
+ * is only meaningful when returned from the {@link java.nio.file.FileVisitor#preVisitDirectory preVisitDirectory} method; otherwise
  * this result type is the same as returning {@link #CONTINUE}.
  */
 
 SKIP_SUBTREE,
 /**
  * Continue without visiting the <em>siblings</em> of this file or directory.
- * If returned from the {@link java.nio.file.FileVisitor#preVisitDirectory FileVisitor#preVisitDirectory} method then the entries in the directory are also
- * skipped and the {@link java.nio.file.FileVisitor#postVisitDirectory FileVisitor#postVisitDirectory}
+ * If returned from the {@link java.nio.file.FileVisitor#preVisitDirectory  preVisitDirectory} method then the entries in the directory are also
+ * skipped and the {@link java.nio.file.FileVisitor#postVisitDirectory postVisitDirectory}
  * method is not invoked.
  */
 

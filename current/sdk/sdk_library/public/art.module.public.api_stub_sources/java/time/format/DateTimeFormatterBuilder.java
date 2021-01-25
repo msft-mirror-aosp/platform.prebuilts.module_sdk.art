@@ -91,10 +91,10 @@ import java.time.temporal.TemporalAccessor;
  * <li>Fraction - a fractional value including the decimal place. Always use this when
  * outputting fractions to ensure that the fraction is parsed correctly</li>
  * <li>Text - the textual equivalent for the value</li>
- * <li>OffsetId/Offset - the {@linkplain java.time.ZoneOffset ZoneOffset}</li>
- * <li>ZoneId - the {@linkplain java.time.ZoneId ZoneId} id</li>
+ * <li>OffsetId/Offset - the {@linkplain java.time.ZoneOffset zone offset}</li>
+ * <li>ZoneId - the {@linkplain java.time.ZoneId time-zone} id</li>
  * <li>ZoneText - the name of the time-zone</li>
- * <li>ChronologyId - the {@linkplain java.time.chrono.Chronology Chronology} id</li>
+ * <li>ChronologyId - the {@linkplain java.time.chrono.Chronology chronology} id</li>
  * <li>ChronologyText - the name of the chronology</li>
  * <li>Literal - a text literal</li>
  * <li>Nested and Optional - formats can be nested or made optional</li>
@@ -558,11 +558,11 @@ public java.time.format.DateTimeFormatterBuilder appendText(java.time.temporal.T
  * or nine digits digits as necessary.
  * The localized decimal style is not used.
  * <p>
- * The instant is obtained using {@link java.time.temporal.ChronoField#INSTANT_SECONDS ChronoField#INSTANT_SECONDS}
+ * The instant is obtained using {@link java.time.temporal.ChronoField#INSTANT_SECONDS INSTANT_SECONDS}
  * and optionally (@code NANO_OF_SECOND). The value of {@code INSTANT_SECONDS}
  * may be outside the maximum range of {@code LocalDateTime}.
  * <p>
- * The {@linkplain java.time.format.ResolverStyle ResolverStyle} has no effect on instant parsing.
+ * The {@linkplain java.time.format.ResolverStyle resolver style} has no effect on instant parsing.
  * The end-of-day time of '24:00' is handled as midnight at the start of the following day.
  * The leap-second time of '23:59:59' is handled to some degree, see
  * {@link java.time.format.DateTimeFormatter#parsedLeapSecond() DateTimeFormatter#parsedLeapSecond()} for full details.
@@ -594,11 +594,11 @@ public java.time.format.DateTimeFormatterBuilder appendInstant() { throw new Run
  * fractional digits. When parsing in lenient mode, any number of fractional
  * digits from zero to nine are accepted.
  * <p>
- * The instant is obtained using {@link java.time.temporal.ChronoField#INSTANT_SECONDS ChronoField#INSTANT_SECONDS}
+ * The instant is obtained using {@link java.time.temporal.ChronoField#INSTANT_SECONDS INSTANT_SECONDS}
  * and optionally (@code NANO_OF_SECOND). The value of {@code INSTANT_SECONDS}
  * may be outside the maximum range of {@code LocalDateTime}.
  * <p>
- * The {@linkplain java.time.format.ResolverStyle ResolverStyle} has no effect on instant parsing.
+ * The {@linkplain java.time.format.ResolverStyle resolver style} has no effect on instant parsing.
  * The end-of-day time of '24:00' is handled as midnight at the start of the following day.
  * The leap-second time of '23:59:60' is handled to some degree, see
  * {@link java.time.format.DateTimeFormatter#parsedLeapSecond() DateTimeFormatter#parsedLeapSecond()} for full details.
@@ -669,13 +669,13 @@ public java.time.format.DateTimeFormatterBuilder appendOffset(java.lang.String p
  * Appends the localized zone offset, such as 'GMT+01:00', to the formatter.
  * <p>
  * This appends a localized zone offset to the builder, the format of the
- * localized offset is controlled by the specified {@link java.time.format.FormatStyle FormatStyle}
+ * localized offset is controlled by the specified {@link java.time.format.FormatStyle style}
  * to this method:
  * <ul>
- * <li>{@link java.time.format.TextStyle#FULL TextStyle#FULL} - formats with localized offset text, such
+ * <li>{@link java.time.format.TextStyle#FULL full} - formats with localized offset text, such
  * as 'GMT, 2-digit hour and minute field, optional second field if non-zero,
  * and colon.
- * <li>{@link java.time.format.TextStyle#SHORT TextStyle#SHORT} - formats with localized offset text,
+ * <li>{@link java.time.format.TextStyle#SHORT short} - formats with localized offset text,
  * such as 'GMT, hour without leading zero, optional 2-digit minute and
  * second if non-zero, and colon.
  * </ul>
@@ -691,7 +691,7 @@ public java.time.format.DateTimeFormatterBuilder appendOffset(java.lang.String p
  * <p>
  * @param style  the format style to use, not null
  * @return this, for chaining, not null
- * @throws java.lang.IllegalArgumentException if style is neither {@link java.time.format.TextStyle#FULL TextStyle#FULL} nor {@link java.time.format.TextStyle#SHORT TextStyle#SHORT}
+ * @throws java.lang.IllegalArgumentException if style is neither {@link java.time.format.TextStyle#FULL  full} nor {@link java.time.format.TextStyle#SHORT short}
  */
 
 public java.time.format.DateTimeFormatterBuilder appendLocalizedOffset(java.time.format.TextStyle style) { throw new RuntimeException("Stub!"); }
@@ -868,7 +868,7 @@ public java.time.format.DateTimeFormatterBuilder appendZoneOrOffsetId() { throw 
  * If the temporal object being printed represents an instant, then the text
  * will be the summer or winter time text as appropriate.
  * If the lookup for text does not find any suitable result, then the
- * {@link java.time.ZoneId#getId() ZoneId#getId()} will be printed instead.
+ * {@link java.time.ZoneId#getId() ID} will be printed instead.
  * If the zone cannot be obtained then an exception is thrown unless the
  * section of the formatter is optional.
  * <p>
@@ -876,7 +876,7 @@ public java.time.format.DateTimeFormatterBuilder appendZoneOrOffsetId() { throw 
  * is accepted. Many textual zone names are not unique, such as CST can be
  * for both "Central Standard Time" and "China Standard Time". In this
  * situation, the zone id will be determined by the region information from
- * formatter's  {@link java.time.format.DateTimeFormatter#getLocale() DateTimeFormatter#getLocale()} and the standard
+ * formatter's  {@link java.time.format.DateTimeFormatter#getLocale() locale} and the standard
  * zone id for that area, for example, America/New_York for the America Eastern
  * zone. The {@link #appendZoneText(java.time.format.TextStyle,java.util.Set)} may be used
  * to specify a set of preferred {@link java.time.ZoneId ZoneId} in this situation.
@@ -902,7 +902,7 @@ public java.time.format.DateTimeFormatterBuilder appendZoneText(java.time.format
  * If the temporal object being printed represents an instant, then the text
  * will be the summer or winter time text as appropriate.
  * If the lookup for text does not find any suitable result, then the
- * {@link java.time.ZoneId#getId() ZoneId#getId()} will be printed instead.
+ * {@link java.time.ZoneId#getId() ID} will be printed instead.
  * If the zone cannot be obtained then an exception is thrown unless the
  * section of the formatter is optional.
  * <p>
@@ -910,7 +910,7 @@ public java.time.format.DateTimeFormatterBuilder appendZoneText(java.time.format
  * is accepted. Many textual zone names are not unique, such as CST can be
  * for both "Central Standard Time" and "China Standard Time". In this
  * situation, the zone id will be determined by the region information from
- * formatter's  {@link java.time.format.DateTimeFormatter#getLocale() DateTimeFormatter#getLocale()} and the standard
+ * formatter's  {@link java.time.format.DateTimeFormatter#getLocale() locale} and the standard
  * zone id for that area, for example, America/New_York for the America Eastern
  * zone. This method also allows a set of preferred {@link java.time.ZoneId ZoneId} to be
  * specified for parsing. The matched preferred zone id will be used if the
@@ -1366,9 +1366,9 @@ public java.time.format.DateTimeFormatterBuilder optionalEnd() { throw new Runti
  * Completes this builder by creating the {@code DateTimeFormatter}
  * using the default locale.
  * <p>
- * This will create a formatter with the {@linkplain java.util.Locale#getDefault(java.util.Locale.Category) Locale#getDefault(Locale.Category)}.
+ * This will create a formatter with the {@linkplain java.util.Locale#getDefault(java.util.Locale.Category) default FORMAT locale}.
  * Numbers will be printed and parsed using the standard DecimalStyle.
- * The resolver style will be {@link java.time.format.ResolverStyle#SMART ResolverStyle#SMART}.
+ * The resolver style will be {@link java.time.format.ResolverStyle#SMART SMART}.
  * <p>
  * Calling this method will end any open optional sections by repeatedly
  * calling {@link #optionalEnd()} before creating the formatter.
@@ -1387,7 +1387,7 @@ public java.time.format.DateTimeFormatter toFormatter() { throw new RuntimeExcep
  * <p>
  * This will create a formatter with the specified locale.
  * Numbers will be printed and parsed using the standard DecimalStyle.
- * The resolver style will be {@link java.time.format.ResolverStyle#SMART ResolverStyle#SMART}.
+ * The resolver style will be {@link java.time.format.ResolverStyle#SMART SMART}.
  * <p>
  * Calling this method will end any open optional sections by repeatedly
  * calling {@link #optionalEnd()} before creating the formatter.

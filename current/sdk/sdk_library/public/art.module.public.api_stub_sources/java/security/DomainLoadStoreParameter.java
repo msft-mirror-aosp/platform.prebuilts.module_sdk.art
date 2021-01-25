@@ -34,8 +34,8 @@ import java.net.URI;
  * A keystore domain is a collection of keystores that are presented as a
  * single logical keystore. The configuration data is used during
  * {@code KeyStore}
- * {@link java.security.KeyStore#load(java.security.KeyStore.LoadStoreParameter) KeyStore#load(KeyStore.LoadStoreParameter)} and
- * {@link java.security.KeyStore#store(java.security.KeyStore.LoadStoreParameter) KeyStore#store(KeyStore.LoadStoreParameter)} operations.
+ * {@link java.security.KeyStore#load(java.security.KeyStore.LoadStoreParameter) load} and
+ * {@link java.security.KeyStore#store(java.security.KeyStore.LoadStoreParameter) store} operations.
  * <p>
  * The following syntax is supported for configuration data:
  * <pre>{@code

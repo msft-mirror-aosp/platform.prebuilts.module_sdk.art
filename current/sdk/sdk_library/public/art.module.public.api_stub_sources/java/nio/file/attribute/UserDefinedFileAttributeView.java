@@ -44,7 +44,7 @@ import java.io.IOException;
  * attribute. The value has opaque content. This attribute view defines the
  * {@link #read read} and {@link #write write} methods to read the value into
  * or write from a {@link java.nio.ByteBuffer ByteBuffer}. This {@code FileAttributeView} is not
- * intended for use where the size of an attribute value is larger than {@link java.lang.Integer#MAX_VALUE Integer#MAX_VALUE}.
+ * intended for use where the size of an attribute value is larger than {@link java.lang.Integer#MAX_VALUE  }.
  *
  * <p> User-defined attributes may be used in some implementations to store
  * security related attributes so consequently, in the case of the default
@@ -88,7 +88,7 @@ public java.lang.String name();
  * @throws  java.lang.SecurityException
  *          In the case of the default provider, a security manager is
  *          installed, and it denies {@link java.lang.RuntimePermission RuntimePermission}<tt>("accessUserDefinedAttributes")</tt>
- *          or its {@link java.lang.SecurityManager#checkRead(java.lang.String) SecurityManager#checkRead(String)} method
+ *          or its {@link java.lang.SecurityManager#checkRead(java.lang.String) checkRead} method
  *          denies read access to the file.
  */
 
@@ -109,7 +109,7 @@ public java.util.List<java.lang.String> list() throws java.io.IOException;
  * @throws  java.lang.SecurityException
  *          In the case of the default provider, a security manager is
  *          installed, and it denies {@link java.lang.RuntimePermission RuntimePermission}<tt>("accessUserDefinedAttributes")</tt>
- *          or its {@link java.lang.SecurityManager#checkRead(java.lang.String) SecurityManager#checkRead(String)} method
+ *          or its {@link java.lang.SecurityManager#checkRead(java.lang.String) checkRead} method
  *          denies read access to the file.
  */
 
@@ -155,7 +155,7 @@ public int size(java.lang.String name) throws java.io.IOException;
  * @throws  java.lang.SecurityException
  *          In the case of the default provider, a security manager is
  *          installed, and it denies {@link java.lang.RuntimePermission RuntimePermission}<tt>("accessUserDefinedAttributes")</tt>
- *          or its {@link java.lang.SecurityManager#checkRead(java.lang.String) SecurityManager#checkRead(String)} method
+ *          or its {@link java.lang.SecurityManager#checkRead(java.lang.String) checkRead} method
  *          denies read access to the file.
  *
  * @see #size
@@ -205,7 +205,7 @@ public int read(java.lang.String name, java.nio.ByteBuffer dst) throws java.io.I
  * @throws  java.lang.SecurityException
  *          In the case of the default provider, a security manager is
  *          installed, and it denies {@link java.lang.RuntimePermission RuntimePermission}<tt>("accessUserDefinedAttributes")</tt>
- *          or its {@link java.lang.SecurityManager#checkWrite(java.lang.String) SecurityManager#checkWrite(String)}
+ *          or its {@link java.lang.SecurityManager#checkWrite(java.lang.String) checkWrite}
  *          method denies write access to the file.
  */
 
@@ -222,7 +222,7 @@ public int write(java.lang.String name, java.nio.ByteBuffer src) throws java.io.
  * @throws  java.lang.SecurityException
  *          In the case of the default provider, a security manager is
  *          installed, and it denies {@link java.lang.RuntimePermission RuntimePermission}<tt>("accessUserDefinedAttributes")</tt>
- *          or its {@link java.lang.SecurityManager#checkWrite(java.lang.String) SecurityManager#checkWrite(String)}
+ *          or its {@link java.lang.SecurityManager#checkWrite(java.lang.String) checkWrite}
  *          method denies write access to the file.
  */
 

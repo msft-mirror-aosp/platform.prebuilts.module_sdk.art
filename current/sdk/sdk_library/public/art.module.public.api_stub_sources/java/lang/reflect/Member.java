@@ -50,7 +50,7 @@ public interface Member {
  * underlying member
  */
 
-@android.annotation.NonNull
+@androidx.annotation.RecentlyNonNull
 public java.lang.Class<?> getDeclaringClass();
 
 /**
@@ -60,7 +60,7 @@ public java.lang.Class<?> getDeclaringClass();
  * @return the simple name of the underlying member
  */
 
-@android.annotation.NonNull
+@androidx.annotation.RecentlyNonNull
 public java.lang.String getName();
 
 /**

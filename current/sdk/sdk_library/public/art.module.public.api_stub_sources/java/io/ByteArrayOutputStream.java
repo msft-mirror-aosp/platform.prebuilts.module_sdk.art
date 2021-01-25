@@ -79,7 +79,7 @@ public synchronized void write(int b) { throw new RuntimeException("Stub!"); }
  * @param   len   the number of bytes to write.
  */
 
-public synchronized void write(@android.annotation.NonNull byte[] b, int off, int len) { throw new RuntimeException("Stub!"); }
+public synchronized void write(@androidx.annotation.RecentlyNonNull byte[] b, int off, int len) { throw new RuntimeException("Stub!"); }
 
 /**
  * Writes the complete contents of this byte array output stream to
@@ -90,7 +90,7 @@ public synchronized void write(@android.annotation.NonNull byte[] b, int off, in
  * @exception  java.io.IOException  if an I/O error occurs.
  */
 
-public synchronized void writeTo(@android.annotation.NonNull java.io.OutputStream out) throws java.io.IOException { throw new RuntimeException("Stub!"); }
+public synchronized void writeTo(@androidx.annotation.RecentlyNonNull java.io.OutputStream out) throws java.io.IOException { throw new RuntimeException("Stub!"); }
 
 /**
  * Resets the <code>count</code> field of this byte array output
@@ -112,7 +112,7 @@ public synchronized void reset() { throw new RuntimeException("Stub!"); }
  * @see     java.io.ByteArrayOutputStream#size()
  */
 
-@android.annotation.NonNull
+@androidx.annotation.RecentlyNonNull
 public synchronized byte[] toByteArray() { throw new RuntimeException("Stub!"); }
 
 /**
@@ -141,7 +141,7 @@ public synchronized int size() { throw new RuntimeException("Stub!"); }
  * @since  JDK1.1
  */
 
-@android.annotation.NonNull
+@androidx.annotation.RecentlyNonNull
 public synchronized java.lang.String toString() { throw new RuntimeException("Stub!"); }
 
 /**
@@ -163,8 +163,8 @@ public synchronized java.lang.String toString() { throw new RuntimeException("St
  * @since      JDK1.1
  */
 
-@android.annotation.NonNull
-public synchronized java.lang.String toString(@android.annotation.NonNull java.lang.String charsetName) throws java.io.UnsupportedEncodingException { throw new RuntimeException("Stub!"); }
+@androidx.annotation.RecentlyNonNull
+public synchronized java.lang.String toString(@androidx.annotation.RecentlyNonNull java.lang.String charsetName) throws java.io.UnsupportedEncodingException { throw new RuntimeException("Stub!"); }
 
 /**
  * Creates a newly allocated string. Its size is the current size of
@@ -190,7 +190,7 @@ public synchronized java.lang.String toString(@android.annotation.NonNull java.l
  */
 
 @Deprecated
-@android.annotation.NonNull
+@androidx.annotation.RecentlyNonNull
 public synchronized java.lang.String toString(int hibyte) { throw new RuntimeException("Stub!"); }
 
 /**
@@ -205,7 +205,7 @@ public void close() throws java.io.IOException { throw new RuntimeException("Stu
  * The buffer where data is stored.
  */
 
-@android.annotation.NonNull protected byte[] buf;
+@androidx.annotation.RecentlyNonNull protected byte[] buf;
 
 /**
  * The number of valid bytes in the buffer.

@@ -102,7 +102,7 @@ public ThreadLocal() { throw new RuntimeException("Stub!"); }
  * @return the initial value for this thread-local
  */
 
-@android.annotation.Nullable
+@androidx.annotation.RecentlyNullable
 protected T initialValue() { throw new RuntimeException("Stub!"); }
 
 /**
@@ -116,8 +116,8 @@ protected T initialValue() { throw new RuntimeException("Stub!"); }
  * @since 1.8
  */
 
-@android.annotation.NonNull
-public static <S> java.lang.ThreadLocal<S> withInitial(@android.annotation.NonNull java.util.function.Supplier<? extends S> supplier) { throw new RuntimeException("Stub!"); }
+@androidx.annotation.RecentlyNonNull
+public static <S> java.lang.ThreadLocal<S> withInitial(@androidx.annotation.RecentlyNonNull java.util.function.Supplier<? extends S> supplier) { throw new RuntimeException("Stub!"); }
 
 /**
  * Returns the value in the current thread's copy of this
@@ -128,7 +128,7 @@ public static <S> java.lang.ThreadLocal<S> withInitial(@android.annotation.NonNu
  * @return the current thread's value of this thread-local
  */
 
-@android.annotation.Nullable
+@androidx.annotation.RecentlyNullable
 public T get() { throw new RuntimeException("Stub!"); }
 
 /**

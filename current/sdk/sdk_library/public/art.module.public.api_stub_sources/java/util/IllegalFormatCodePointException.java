@@ -52,7 +52,7 @@ public class IllegalFormatCodePointException extends java.util.IllegalFormatExce
 public IllegalFormatCodePointException(int c) { throw new RuntimeException("Stub!"); }
 
 /**
- * Returns the illegal code point as defined by {@link java.lang.Character#isValidCodePoint Character#isValidCodePoint}.
+ * Returns the illegal code point as defined by {@link java.lang.Character#isValidCodePoint  }.
  *
  * @return  The illegal Unicode code point
  */

@@ -53,7 +53,7 @@ package java.util.concurrent;
  * unused {@code ExecutorService} should be shut down to allow
  * reclamation of its resources.
  *
- * <p>Method {@code submit} extends base method {@link java.util.concurrent.Executor#execute(java.lang.Runnable) Executor#execute(Runnable)} by creating and returning a {@link java.util.concurrent.Future Future}
+ * <p>Method {@code submit} extends base method {@link java.util.concurrent.Executor#execute(java.lang.Runnable)  } by creating and returning a {@link java.util.concurrent.Future Future}
  * that can be used to cancel execution and/or wait for completion.
  * Methods {@code invokeAny} and {@code invokeAll} perform the most
  * commonly useful forms of bulk execution, executing a collection of
@@ -67,7 +67,7 @@ package java.util.concurrent;
  * <h3>Usage Examples</h3>
  *
  * Here is a sketch of a network service in which threads in a thread
- * pool service incoming requests. It uses the preconfigured {@link java.util.concurrent.Executors#newFixedThreadPool Executors#newFixedThreadPool} factory method:
+ * pool service incoming requests. It uses the preconfigured {@link java.util.concurrent.Executors#newFixedThreadPool  } factory method:
  *
  * <pre> {@code
  * class NetworkService implements Runnable {

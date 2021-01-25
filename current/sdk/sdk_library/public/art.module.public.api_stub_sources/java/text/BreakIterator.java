@@ -399,7 +399,7 @@ public abstract void setText(java.text.CharacterIterator newText);
 /**
  * Returns a new <code>BreakIterator</code> instance
  * for <a href="BreakIterator.html#word">word breaks</a>
- * for the {@linkplain java.util.Locale#getDefault() Locale#getDefault()}.
+ * for the {@linkplain java.util.Locale#getDefault() default locale}.
  * @return A break iterator for word breaks
  */
 
@@ -419,7 +419,7 @@ public static java.text.BreakIterator getWordInstance(java.util.Locale locale) {
 /**
  * Returns a new <code>BreakIterator</code> instance
  * for <a href="BreakIterator.html#line">line breaks</a>
- * for the {@linkplain java.util.Locale#getDefault() Locale#getDefault()}.
+ * for the {@linkplain java.util.Locale#getDefault() default locale}.
  * @return A break iterator for line breaks
  */
 
@@ -439,7 +439,7 @@ public static java.text.BreakIterator getLineInstance(java.util.Locale locale) {
 /**
  * Returns a new <code>BreakIterator</code> instance
  * for <a href="BreakIterator.html#character">character breaks</a>
- * for the {@linkplain java.util.Locale#getDefault() Locale#getDefault()}.
+ * for the {@linkplain java.util.Locale#getDefault() default locale}.
  * @return A break iterator for character breaks
  */
 
@@ -459,7 +459,7 @@ public static java.text.BreakIterator getCharacterInstance(java.util.Locale loca
 /**
  * Returns a new <code>BreakIterator</code> instance
  * for <a href="BreakIterator.html#sentence">sentence breaks</a>
- * for the {@linkplain java.util.Locale#getDefault() Locale#getDefault()}.
+ * for the {@linkplain java.util.Locale#getDefault() default locale}.
  * @return A break iterator for sentence breaks
  */
 

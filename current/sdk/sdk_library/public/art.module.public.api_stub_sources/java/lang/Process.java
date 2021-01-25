@@ -30,7 +30,7 @@ import java.io.*;
 
 /**
  * The {@link java.lang.ProcessBuilder#start() ProcessBuilder#start()} and
- * {@link java.lang.Runtime#exec(java.lang.String[],java.lang.String[],java.io.File) Runtime#exec(String[],String[],File)}
+ * {@link java.lang.Runtime#exec(java.lang.String[],java.lang.String[],java.io.File) Runtime.exec}
  * methods create a native process and return an instance of a
  * subclass of {@code Process} that can be used to control the process
  * and obtain information about it.  The class {@code Process}
@@ -86,7 +86,7 @@ public Process() { throw new RuntimeException("Stub!"); }
  * input of the process represented by this {@code Process} object.
  *
  * <p>If the standard input of the subprocess has been redirected using
- * {@link java.lang.ProcessBuilder#redirectInput(Redirect) ProcessBuilder#redirectInput(Redirect)}
+ * {@link java.lang.ProcessBuilder#redirectInput(Redirect)  ProcessBuilder.redirectInput}
  * then this method will return a
  * <a href="ProcessBuilder.html#redirect-input">null output stream</a>.
  *
@@ -105,13 +105,13 @@ public abstract java.io.OutputStream getOutputStream();
  * output of the process represented by this {@code Process} object.
  *
  * <p>If the standard output of the subprocess has been redirected using
- * {@link java.lang.ProcessBuilder#redirectOutput(Redirect) ProcessBuilder#redirectOutput(Redirect)}
+ * {@link java.lang.ProcessBuilder#redirectOutput(Redirect)  ProcessBuilder.redirectOutput}
  * then this method will return a
  * <a href="ProcessBuilder.html#redirect-output">null input stream</a>.
  *
  * <p>Otherwise, if the standard error of the subprocess has been
  * redirected using
- * {@link java.lang.ProcessBuilder#redirectErrorStream(boolean) ProcessBuilder#redirectErrorStream(boolean)}
+ * {@link java.lang.ProcessBuilder#redirectErrorStream(boolean)  ProcessBuilder.redirectErrorStream}
  * then the input stream returned by this method will receive the
  * merged standard output and the standard error of the subprocess.
  *
@@ -130,8 +130,8 @@ public abstract java.io.InputStream getInputStream();
  * of the process represented by this {@code Process} object.
  *
  * <p>If the standard error of the subprocess has been redirected using
- * {@link java.lang.ProcessBuilder#redirectError(Redirect) ProcessBuilder#redirectError(Redirect)} or
- * {@link java.lang.ProcessBuilder#redirectErrorStream(boolean) ProcessBuilder#redirectErrorStream(boolean)}
+ * {@link java.lang.ProcessBuilder#redirectError(Redirect)  ProcessBuilder.redirectError} or
+ * {@link java.lang.ProcessBuilder#redirectErrorStream(boolean)  ProcessBuilder.redirectErrorStream}
  * then this method will return a
  * <a href="ProcessBuilder.html#redirect-output">null input stream</a>.
  *
@@ -156,7 +156,7 @@ public abstract java.io.InputStream getErrorStream();
  *         {@code Process} object.  By convention, the value
  *         {@code 0} indicates normal termination.
  * @throws java.lang.InterruptedException if the current thread is
- *         {@linkplain java.lang.Thread#interrupt() Thread#interrupt()} by another
+ *         {@linkplain java.lang.Thread#interrupt() interrupted} by another
  *         thread while it is waiting, then the wait is ended and
  *         an {@link java.lang.InterruptedException InterruptedException} is thrown.
  */

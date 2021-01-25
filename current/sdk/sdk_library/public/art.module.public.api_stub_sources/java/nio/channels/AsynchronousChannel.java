@@ -62,7 +62,7 @@ import java.io.IOException;
  *
  * <h2>Cancellation</h2>
  *
- * <p> The {@code Future} interface defines the {@link java.util.concurrent.Future#cancel Future#cancel}
+ * <p> The {@code Future} interface defines the {@link java.util.concurrent.Future#cancel cancel}
  * method to cancel execution. This causes all threads waiting on the result of
  * the I/O operation to throw {@link java.util.concurrent.CancellationException}.
  * Whether the underlying I/O operation can be cancelled is highly implementation
@@ -79,7 +79,7 @@ import java.io.IOException;
  * channel then subsequent attempts to initiate a {@code write} will fail with
  * an unspecified runtime exception.
  *
- * <p> Where the {@link java.util.concurrent.Future#cancel Future#cancel} method is invoked with the {@code
+ * <p> Where the {@link java.util.concurrent.Future#cancel cancel} method is invoked with the {@code
  * mayInterruptIfRunning} parameter set to {@code true} then the I/O operation
  * may be interrupted by closing the channel. In that case all threads waiting
  * on the result of the I/O operation throw {@code CancellationException} and

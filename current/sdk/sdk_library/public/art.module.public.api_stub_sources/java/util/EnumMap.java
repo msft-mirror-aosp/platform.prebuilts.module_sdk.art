@@ -248,7 +248,7 @@ public java.util.Set<java.util.Map.Entry<K,V>> entrySet() { throw new RuntimeExc
 /**
  * Compares the specified object with this map for equality.  Returns
  * <tt>true</tt> if the given object is also a map and the two maps
- * represent the same mappings, as specified in the {@link java.util.Map#equals(java.lang.Object) Map#equals(Object)} contract.
+ * represent the same mappings, as specified in the {@link java.util.Map#equals(java.lang.Object)  } contract.
  *
  * @param o the object to be compared for equality with this map
  * @return <tt>true</tt> if the specified object is equal to this map

@@ -50,7 +50,7 @@ package java.util;
  * naturally encapsulates the set.
  *
  * If no such object exists, the set should be "wrapped" using the
- * {@link java.util.Collections#synchronizedSet Collections#synchronizedSet}
+ * {@link java.util.Collections#synchronizedSet Collections.synchronizedSet}
  * method.  This is best done at creation time, to prevent accidental
  * unsynchronized access to the set:<pre>
  *   Set s = Collections.synchronizedSet(new HashSet(...));</pre>
@@ -106,7 +106,7 @@ public HashSet() { throw new RuntimeException("Stub!"); }
  * @throws java.lang.NullPointerException if the specified collection is null
  */
 
-public HashSet(@android.annotation.NonNull java.util.Collection<? extends E> c) { throw new RuntimeException("Stub!"); }
+public HashSet(@androidx.annotation.RecentlyNonNull java.util.Collection<? extends E> c) { throw new RuntimeException("Stub!"); }
 
 /**
  * Constructs a new, empty set; the backing <tt>HashMap</tt> instance has
@@ -139,7 +139,7 @@ public HashSet(int initialCapacity) { throw new RuntimeException("Stub!"); }
  * @see java.util.ConcurrentModificationException
  */
 
-@android.annotation.NonNull
+@androidx.annotation.RecentlyNonNull
 public java.util.Iterator<E> iterator() { throw new RuntimeException("Stub!"); }
 
 /**
@@ -168,7 +168,7 @@ public boolean isEmpty() { throw new RuntimeException("Stub!"); }
  * @return <tt>true</tt> if this set contains the specified element
  */
 
-public boolean contains(@android.annotation.Nullable java.lang.Object o) { throw new RuntimeException("Stub!"); }
+public boolean contains(@androidx.annotation.RecentlyNullable java.lang.Object o) { throw new RuntimeException("Stub!"); }
 
 /**
  * Adds the specified element to this set if it is not already present.
@@ -198,7 +198,7 @@ public boolean add(E e) { throw new RuntimeException("Stub!"); }
  * @return <tt>true</tt> if the set contained the specified element
  */
 
-public boolean remove(@android.annotation.Nullable java.lang.Object o) { throw new RuntimeException("Stub!"); }
+public boolean remove(@androidx.annotation.RecentlyNullable java.lang.Object o) { throw new RuntimeException("Stub!"); }
 
 /**
  * Removes all of the elements from this set.
@@ -214,7 +214,7 @@ public void clear() { throw new RuntimeException("Stub!"); }
  * @return a shallow copy of this set
  */
 
-@android.annotation.NonNull
+@androidx.annotation.RecentlyNonNull
 public java.lang.Object clone() { throw new RuntimeException("Stub!"); }
 
 /**
@@ -230,7 +230,7 @@ public java.lang.Object clone() { throw new RuntimeException("Stub!"); }
  * @since 1.8
  */
 
-@android.annotation.NonNull
+@androidx.annotation.RecentlyNonNull
 public java.util.Spliterator<E> spliterator() { throw new RuntimeException("Stub!"); }
 }
 

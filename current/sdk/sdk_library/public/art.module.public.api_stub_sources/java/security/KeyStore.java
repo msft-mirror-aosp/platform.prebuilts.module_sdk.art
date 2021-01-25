@@ -230,7 +230,7 @@ protected KeyStore(java.security.KeyStoreSpi keyStoreSpi, java.security.Provider
  * Provider that supports the specified type is returned.
  *
  * <p> Note that the list of registered providers may be retrieved via
- * the {@link java.security.Security#getProviders() Security#getProviders()} method.
+ * the {@link java.security.Security#getProviders() Security.getProviders()} method.
  *
  * @param type the type of keystore.
  * See the KeyStore section in the <a href=
@@ -258,7 +258,7 @@ public static java.security.KeyStore getInstance(java.lang.String type) throws j
  * in the security provider list.
  *
  * <p> Note that the list of registered providers may be retrieved via
- * the {@link java.security.Security#getProviders() Security#getProviders()} method.
+ * the {@link java.security.Security#getProviders() Security.getProviders()} method.
  *
  * @param type the type of keystore.
  * See the KeyStore section in the <a href=
@@ -686,7 +686,7 @@ public final void store(java.security.KeyStore.LoadStoreParameter param) throws 
  * @exception java.io.IOException if there is an I/O or format problem with the
  * keystore data, if a password is required but not given,
  * or if the given password was incorrect. If the error is due to a
- * wrong password, the {@link java.lang.Throwable#getCause Throwable#getCause} of the
+ * wrong password, the {@link java.lang.Throwable#getCause cause} of the
  * {@code IOException} should be an
  * {@code UnrecoverableKeyException}
  * @exception java.security.NoSuchAlgorithmException if the algorithm used to check
@@ -713,7 +713,7 @@ public final void load(java.io.InputStream stream, char[] password) throws java.
  * @exception java.io.IOException if there is an I/O or format problem with the
  *          keystore data. If the error is due to an incorrect
  *         {@code ProtectionParameter} (e.g. wrong password)
- *         the {@link java.lang.Throwable#getCause Throwable#getCause} of the
+ *         the {@link java.lang.Throwable#getCause cause} of the
  *         {@code IOException} should be an
  *         {@code UnrecoverableKeyException}
  * @exception java.security.NoSuchAlgorithmException if the algorithm used to check
@@ -844,12 +844,12 @@ public abstract java.security.KeyStore getKeyStore() throws java.security.KeySto
 
 /**
  * Returns the ProtectionParameters that should be used to obtain
- * the {@link java.security.KeyStore.Entry KeyStore.Entry} with the given alias.
+ * the {@link java.security.KeyStore.Entry Entry} with the given alias.
  * The {@code getKeyStore} method must be invoked before this
  * method may be called.
  *
  * @return the ProtectionParameters that should be used to obtain
- *   the {@link java.security.KeyStore.Entry KeyStore.Entry} with the given alias.
+ *   the {@link java.security.KeyStore.Entry Entry} with the given alias.
  * @param alias the alias of the KeyStore entry
  * @throws java.lang.NullPointerException if alias is null
  * @throws java.security.KeyStoreException if an error occurred during the
@@ -887,7 +887,7 @@ public static java.security.KeyStore.Builder newInstance(java.security.KeyStore 
  *
  * <p>The first call to the {@link #getKeyStore} method on the returned
  * builder will create a KeyStore of type {@code type} and call
- * its {@link java.security.KeyStore#load KeyStore#load} method.
+ * its {@link java.security.KeyStore#load load()} method.
  * The {@code inputStream} argument is constructed from
  * {@code file}.
  * If {@code protection} is a
@@ -906,7 +906,7 @@ public static java.security.KeyStore.Builder newInstance(java.security.KeyStore 
  * non-null. Otherwise, all installed providers are searched.
  *
  * <p>Calls to {@link #getProtectionParameter getProtectionParameter()}
- * will return a {@link java.security.KeyStore.PasswordProtection KeyStore.PasswordProtection}
+ * will return a {@link java.security.KeyStore.PasswordProtection PasswordProtection}
  * object encapsulating the password that was used to invoke the
  * {@code load} method.
  *
@@ -933,7 +933,7 @@ public static java.security.KeyStore.Builder newInstance(java.lang.String type, 
  *
  * <p>Each call to the {@link #getKeyStore} method on the returned
  * builder will return a new KeyStore object of type {@code type}.
- * Its {@link java.security.KeyStore#load(java.security.KeyStore.LoadStoreParameter) KeyStore#load(KeyStore.LoadStoreParameter)}
+ * Its {@link java.security.KeyStore#load(java.security.KeyStore.LoadStoreParameter) load()}
  * method is invoked using a
  * {@code LoadStoreParameter} that encapsulates
  * {@code protection}.

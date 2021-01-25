@@ -67,7 +67,7 @@ public interface ParameterizedType extends java.lang.reflect.Type {
  * @since 1.5
  */
 
-@android.annotation.NonNull
+@androidx.annotation.RecentlyNonNull
 public java.lang.reflect.Type[] getActualTypeArguments();
 
 /**
@@ -79,7 +79,7 @@ public java.lang.reflect.Type[] getActualTypeArguments();
  * @since 1.5
  */
 
-@android.annotation.NonNull
+@androidx.annotation.RecentlyNonNull
 public java.lang.reflect.Type getRawType();
 
 /**
@@ -100,7 +100,7 @@ public java.lang.reflect.Type getRawType();
  * @since 1.5
  */
 
-@android.annotation.Nullable
+@androidx.annotation.RecentlyNullable
 public java.lang.reflect.Type getOwnerType();
 }
 

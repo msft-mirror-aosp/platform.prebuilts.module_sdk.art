@@ -40,7 +40,7 @@ import java.io.IOException;
  * any order.
  *
  * <p> Where possible, a newly constructed {@code DatagramSocket} has the
- * {@link java.net.SocketOptions#SO_BROADCAST SocketOptions#SO_BROADCAST} socket option enabled so as
+ * {@link java.net.SocketOptions#SO_BROADCAST SO_BROADCAST} socket option enabled so as
  * to allow the transmission of broadcast datagrams. In order to receive
  * broadcast packets a DatagramSocket should be bound to the wildcard address.
  * In some implementations, broadcast packets may also be received when
@@ -70,7 +70,7 @@ public class DatagramSocket implements java.io.Closeable {
 /**
  * Constructs a datagram socket and binds it to any available port
  * on the local host machine.  The socket will be bound to the
- * {@link java.net.InetAddress#isAnyLocalAddress InetAddress#isAnyLocalAddress} address,
+ * {@link java.net.InetAddress#isAnyLocalAddress wildcard} address,
  * an IP address chosen by the kernel.
  *
  * <p>If there is a security manager,
@@ -128,7 +128,7 @@ public DatagramSocket(java.net.SocketAddress bindaddr) throws java.net.SocketExc
 /**
  * Constructs a datagram socket and binds it to the specified port
  * on the local host machine.  The socket will be bound to the
- * {@link java.net.InetAddress#isAnyLocalAddress InetAddress#isAnyLocalAddress} address,
+ * {@link java.net.InetAddress#isAnyLocalAddress wildcard} address,
  * an IP address chosen by the kernel.
  *
  * <p>If there is a security manager,
@@ -152,7 +152,7 @@ public DatagramSocket(int port) throws java.net.SocketException { throw new Runt
  * Creates a datagram socket, bound to the specified local
  * address.  The local port must be between 0 and 65535 inclusive.
  * If the IP address is 0.0.0.0, the socket will be bound to the
- * {@link java.net.InetAddress#isAnyLocalAddress InetAddress#isAnyLocalAddress} address,
+ * {@link java.net.InetAddress#isAnyLocalAddress wildcard} address,
  * an IP address chosen by the kernel.
  *
  * <p>If there is a security manager,
@@ -207,7 +207,7 @@ public synchronized void bind(java.net.SocketAddress addr) throws java.net.Socke
  *
  * <p> If a security manager has been installed then it is invoked to check
  * access to the remote address. Specifically, if the given {@code address}
- * is a {@link java.net.InetAddress#isMulticastAddress InetAddress#isMulticastAddress},
+ * is a {@link java.net.InetAddress#isMulticastAddress multicast address},
  * the security manager's {@link
  * java.lang.SecurityManager#checkMulticast(InetAddress)
  * checkMulticast} method is invoked with the given {@code address}.
@@ -450,7 +450,7 @@ public synchronized void receive(java.net.DatagramPacket p) throws java.io.IOExc
  * @return  the local address to which the socket is bound,
  *          {@code null} if the socket is closed, or
  *          an {@code InetAddress} representing
- *          {@link java.net.InetAddress#isAnyLocalAddress InetAddress#isAnyLocalAddress}
+ *          {@link java.net.InetAddress#isAnyLocalAddress wildcard}
  *          address if either the socket is not bound, or
  *          the security manager {@code checkConnect}
  *          method does not allow the operation

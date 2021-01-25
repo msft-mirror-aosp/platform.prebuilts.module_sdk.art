@@ -79,7 +79,7 @@ public Long(long value) { throw new RuntimeException("Stub!"); }
  * @see        java.lang.Long#parseLong(java.lang.String, int)
  */
 
-public Long(@android.annotation.NonNull java.lang.String s) throws java.lang.NumberFormatException { throw new RuntimeException("Stub!"); }
+public Long(@androidx.annotation.RecentlyNonNull java.lang.String s) throws java.lang.NumberFormatException { throw new RuntimeException("Stub!"); }
 
 /**
  * Returns a string representation of the first argument in the
@@ -126,7 +126,7 @@ public Long(@android.annotation.NonNull java.lang.String s) throws java.lang.Num
  * @see     java.lang.Character#MIN_RADIX
  */
 
-@android.annotation.NonNull
+@androidx.annotation.RecentlyNonNull
 public static java.lang.String toString(long i, int radix) { throw new RuntimeException("Stub!"); }
 
 /**
@@ -156,7 +156,7 @@ public static java.lang.String toString(long i, int radix) { throw new RuntimeEx
  * @since 1.8
  */
 
-@android.annotation.NonNull
+@androidx.annotation.RecentlyNonNull
 public static java.lang.String toUnsignedString(long i, int radix) { throw new RuntimeException("Stub!"); }
 
 /**
@@ -170,7 +170,7 @@ public static java.lang.String toUnsignedString(long i, int radix) { throw new R
  * leading {@code 0}s.
  *
  * <p>The value of the argument can be recovered from the returned
- * string {@code s} by calling {@link java.lang.Long#parseUnsignedLong(java.lang.String,int) Long#parseUnsignedLong(String, int)}.
+ * string {@code s} by calling {@link java.lang.Long#parseUnsignedLong(java.lang.String,int)  16)}.
  *
  * <p>If the unsigned magnitude is zero, it is represented by a
  * single zero character {@code '0'} ({@code '\u005Cu0030'});
@@ -201,7 +201,7 @@ public static java.lang.String toUnsignedString(long i, int radix) { throw new R
  * @since   JDK 1.0.2
  */
 
-@android.annotation.NonNull
+@androidx.annotation.RecentlyNonNull
 public static java.lang.String toHexString(long i) { throw new RuntimeException("Stub!"); }
 
 /**
@@ -215,7 +215,7 @@ public static java.lang.String toHexString(long i) { throw new RuntimeException(
  * {@code 0}s.
  *
  * <p>The value of the argument can be recovered from the returned
- * string {@code s} by calling {@link java.lang.Long#parseUnsignedLong(java.lang.String,int) Long#parseUnsignedLong(String, int)}.
+ * string {@code s} by calling {@link java.lang.Long#parseUnsignedLong(java.lang.String,int)  8)}.
  *
  * <p>If the unsigned magnitude is zero, it is represented by a
  * single zero character {@code '0'} ({@code '\u005Cu0030'});
@@ -238,7 +238,7 @@ public static java.lang.String toHexString(long i) { throw new RuntimeException(
  * @since   JDK 1.0.2
  */
 
-@android.annotation.NonNull
+@androidx.annotation.RecentlyNonNull
 public static java.lang.String toOctalString(long i) { throw new RuntimeException("Stub!"); }
 
 /**
@@ -252,7 +252,7 @@ public static java.lang.String toOctalString(long i) { throw new RuntimeExceptio
  * {@code 0}s.
  *
  * <p>The value of the argument can be recovered from the returned
- * string {@code s} by calling {@link java.lang.Long#parseUnsignedLong(java.lang.String,int) Long#parseUnsignedLong(String, int)}.
+ * string {@code s} by calling {@link java.lang.Long#parseUnsignedLong(java.lang.String,int)  2)}.
  *
  * <p>If the unsigned magnitude is zero, it is represented by a
  * single zero character {@code '0'} ({@code '\u005Cu0030'});
@@ -269,7 +269,7 @@ public static java.lang.String toOctalString(long i) { throw new RuntimeExceptio
  * @since   JDK 1.0.2
  */
 
-@android.annotation.NonNull
+@androidx.annotation.RecentlyNonNull
 public static java.lang.String toBinaryString(long i) { throw new RuntimeException("Stub!"); }
 
 /**
@@ -283,7 +283,7 @@ public static java.lang.String toBinaryString(long i) { throw new RuntimeExcepti
  * @return  a string representation of the argument in base&nbsp;10.
  */
 
-@android.annotation.NonNull
+@androidx.annotation.RecentlyNonNull
 public static java.lang.String toString(long i) { throw new RuntimeException("Stub!"); }
 
 /**
@@ -300,7 +300,7 @@ public static java.lang.String toString(long i) { throw new RuntimeException("St
  * @since 1.8
  */
 
-@android.annotation.NonNull
+@androidx.annotation.RecentlyNonNull
 public static java.lang.String toUnsignedString(long i) { throw new RuntimeException("Stub!"); }
 
 /**
@@ -365,7 +365,7 @@ public static java.lang.String toUnsignedString(long i) { throw new RuntimeExcep
  *             parsable {@code long}.
  */
 
-public static long parseLong(@android.annotation.NonNull java.lang.String s, int radix) throws java.lang.NumberFormatException { throw new RuntimeException("Stub!"); }
+public static long parseLong(@androidx.annotation.RecentlyNonNull java.lang.String s, int radix) throws java.lang.NumberFormatException { throw new RuntimeException("Stub!"); }
 
 /**
  * Parses the string argument as a signed decimal {@code long}.
@@ -392,7 +392,7 @@ public static long parseLong(@android.annotation.NonNull java.lang.String s, int
  *             parsable {@code long}.
  */
 
-public static long parseLong(@android.annotation.NonNull java.lang.String s) throws java.lang.NumberFormatException { throw new RuntimeException("Stub!"); }
+public static long parseLong(@androidx.annotation.RecentlyNonNull java.lang.String s) throws java.lang.NumberFormatException { throw new RuntimeException("Stub!"); }
 
 /**
  * Parses the string argument as an unsigned {@code long} in the
@@ -438,7 +438,7 @@ public static long parseLong(@android.annotation.NonNull java.lang.String s) thr
  * @since 1.8
  */
 
-public static long parseUnsignedLong(@android.annotation.NonNull java.lang.String s, int radix) throws java.lang.NumberFormatException { throw new RuntimeException("Stub!"); }
+public static long parseUnsignedLong(@androidx.annotation.RecentlyNonNull java.lang.String s, int radix) throws java.lang.NumberFormatException { throw new RuntimeException("Stub!"); }
 
 /**
  * Parses the string argument as an unsigned decimal {@code long}. The
@@ -457,7 +457,7 @@ public static long parseUnsignedLong(@android.annotation.NonNull java.lang.Strin
  * @since 1.8
  */
 
-public static long parseUnsignedLong(@android.annotation.NonNull java.lang.String s) throws java.lang.NumberFormatException { throw new RuntimeException("Stub!"); }
+public static long parseUnsignedLong(@androidx.annotation.RecentlyNonNull java.lang.String s) throws java.lang.NumberFormatException { throw new RuntimeException("Stub!"); }
 
 /**
  * Returns a {@code Long} object holding the value
@@ -486,8 +486,8 @@ public static long parseUnsignedLong(@android.annotation.NonNull java.lang.Strin
  *             contain a parsable {@code long}.
  */
 
-@android.annotation.NonNull
-public static java.lang.Long valueOf(@android.annotation.NonNull java.lang.String s, int radix) throws java.lang.NumberFormatException { throw new RuntimeException("Stub!"); }
+@androidx.annotation.RecentlyNonNull
+public static java.lang.Long valueOf(@androidx.annotation.RecentlyNonNull java.lang.String s, int radix) throws java.lang.NumberFormatException { throw new RuntimeException("Stub!"); }
 
 /**
  * Returns a {@code Long} object holding the value
@@ -512,8 +512,8 @@ public static java.lang.Long valueOf(@android.annotation.NonNull java.lang.Strin
  *             as a {@code long}.
  */
 
-@android.annotation.NonNull
-public static java.lang.Long valueOf(@android.annotation.NonNull java.lang.String s) throws java.lang.NumberFormatException { throw new RuntimeException("Stub!"); }
+@androidx.annotation.RecentlyNonNull
+public static java.lang.Long valueOf(@androidx.annotation.RecentlyNonNull java.lang.String s) throws java.lang.NumberFormatException { throw new RuntimeException("Stub!"); }
 
 /**
  * Returns a {@code Long} instance representing the specified
@@ -524,7 +524,7 @@ public static java.lang.Long valueOf(@android.annotation.NonNull java.lang.Strin
  * significantly better space and time performance by caching
  * frequently requested values.
  *
- * Note that unlike the {@linkplain java.lang.Integer#valueOf(int) Integer#valueOf(int)} in the {@code Integer} class, this method
+ * Note that unlike the {@linkplain java.lang.Integer#valueOf(int)  corresponding method} in the {@code Integer} class, this method
  * is <em>not</em> required to cache values within a particular
  * range.
  *
@@ -533,7 +533,7 @@ public static java.lang.Long valueOf(@android.annotation.NonNull java.lang.Strin
  * @since  1.5
  */
 
-@android.annotation.NonNull
+@androidx.annotation.RecentlyNonNull
 public static java.lang.Long valueOf(long l) { throw new RuntimeException("Stub!"); }
 
 /**
@@ -580,8 +580,8 @@ public static java.lang.Long valueOf(long l) { throw new RuntimeException("Stub!
  * @since 1.2
  */
 
-@android.annotation.NonNull
-public static java.lang.Long decode(@android.annotation.NonNull java.lang.String nm) throws java.lang.NumberFormatException { throw new RuntimeException("Stub!"); }
+@androidx.annotation.RecentlyNonNull
+public static java.lang.Long decode(@androidx.annotation.RecentlyNonNull java.lang.String nm) throws java.lang.NumberFormatException { throw new RuntimeException("Stub!"); }
 
 /**
  * Returns the value of this {@code Long} as a {@code byte} after
@@ -641,7 +641,7 @@ public double doubleValue() { throw new RuntimeException("Stub!"); }
  *          base&nbsp;10.
  */
 
-@android.annotation.NonNull
+@androidx.annotation.RecentlyNonNull
 public java.lang.String toString() { throw new RuntimeException("Stub!"); }
 
 /**
@@ -681,7 +681,7 @@ public static int hashCode(long value) { throw new RuntimeException("Stub!"); }
  *          {@code false} otherwise.
  */
 
-public boolean equals(@android.annotation.Nullable java.lang.Object obj) { throw new RuntimeException("Stub!"); }
+public boolean equals(@androidx.annotation.RecentlyNullable java.lang.Object obj) { throw new RuntimeException("Stub!"); }
 
 /**
  * Determines the {@code long} value of the system property
@@ -691,7 +691,7 @@ public boolean equals(@android.annotation.Nullable java.lang.Object obj) { throw
  * property.  System properties are accessible through the {@link
  * java.lang.System#getProperty(java.lang.String)} method. The
  * string value of this property is then interpreted as a {@code
- * long} value using the grammar supported by {@link java.lang.Long#decode Long#decode}
+ * long} value using the grammar supported by {@link java.lang.Long#decode decode}
  * and a {@code Long} object representing this value is returned.
  *
  * <p>If there is no property with the specified name, if the
@@ -709,13 +709,13 @@ public boolean equals(@android.annotation.Nullable java.lang.Object obj) { throw
  * @param   nm   property name.
  * @return  the {@code Long} value of the property.
  * @throws  java.lang.SecurityException for the same reasons as
- *          {@link java.lang.System#getProperty(java.lang.String) System#getProperty(String)}
+ *          {@link java.lang.System#getProperty(java.lang.String) System.getProperty}
  * @see     java.lang.System#getProperty(java.lang.String)
  * @see     java.lang.System#getProperty(java.lang.String, java.lang.String)
  */
 
-@android.annotation.Nullable
-public static java.lang.Long getLong(@android.annotation.NonNull java.lang.String nm) { throw new RuntimeException("Stub!"); }
+@androidx.annotation.RecentlyNullable
+public static java.lang.Long getLong(@androidx.annotation.RecentlyNonNull java.lang.String nm) { throw new RuntimeException("Stub!"); }
 
 /**
  * Determines the {@code long} value of the system property
@@ -725,7 +725,7 @@ public static java.lang.Long getLong(@android.annotation.NonNull java.lang.Strin
  * property.  System properties are accessible through the {@link
  * java.lang.System#getProperty(java.lang.String)} method. The
  * string value of this property is then interpreted as a {@code
- * long} value using the grammar supported by {@link java.lang.Long#decode Long#decode}
+ * long} value using the grammar supported by {@link java.lang.Long#decode decode}
  * and a {@code Long} object representing this value is returned.
  *
  * <p>The second argument is the default value. A {@code Long} object
@@ -754,13 +754,13 @@ public static java.lang.Long getLong(@android.annotation.NonNull java.lang.Strin
  * @param   val   default value.
  * @return  the {@code Long} value of the property.
  * @throws  java.lang.SecurityException for the same reasons as
- *          {@link java.lang.System#getProperty(java.lang.String) System#getProperty(String)}
+ *          {@link java.lang.System#getProperty(java.lang.String) System.getProperty}
  * @see     java.lang.System#getProperty(java.lang.String)
  * @see     java.lang.System#getProperty(java.lang.String, java.lang.String)
  */
 
-@android.annotation.Nullable
-public static java.lang.Long getLong(@android.annotation.NonNull java.lang.String nm, long val) { throw new RuntimeException("Stub!"); }
+@androidx.annotation.RecentlyNullable
+public static java.lang.Long getLong(@androidx.annotation.RecentlyNonNull java.lang.String nm, long val) { throw new RuntimeException("Stub!"); }
 
 /**
  * Returns the {@code long} value of the system property with
@@ -769,7 +769,7 @@ public static java.lang.Long getLong(@android.annotation.NonNull java.lang.Strin
  * the {@link java.lang.System#getProperty(java.lang.String)}
  * method. The string value of this property is then interpreted
  * as a {@code long} value, as per the
- * {@link java.lang.Long#decode Long#decode} method, and a {@code Long} object
+ * {@link java.lang.Long#decode decode} method, and a {@code Long} object
  * representing this value is returned; in summary:
  *
  * <ul>
@@ -802,13 +802,13 @@ public static java.lang.Long getLong(@android.annotation.NonNull java.lang.Strin
  * @param   val   default value.
  * @return  the {@code Long} value of the property.
  * @throws  java.lang.SecurityException for the same reasons as
- *          {@link java.lang.System#getProperty(java.lang.String) System#getProperty(String)}
+ *          {@link java.lang.System#getProperty(java.lang.String) System.getProperty}
  * @see     java.lang.System#getProperty(java.lang.String)
  * @see     java.lang.System#getProperty(java.lang.String, java.lang.String)
  */
 
-@android.annotation.Nullable
-public static java.lang.Long getLong(@android.annotation.NonNull java.lang.String nm, @android.annotation.Nullable java.lang.Long val) { throw new RuntimeException("Stub!"); }
+@androidx.annotation.RecentlyNullable
+public static java.lang.Long getLong(@androidx.annotation.RecentlyNonNull java.lang.String nm, @androidx.annotation.RecentlyNullable java.lang.Long val) { throw new RuntimeException("Stub!"); }
 
 /**
  * Compares two {@code Long} objects numerically.
@@ -824,7 +824,7 @@ public static java.lang.Long getLong(@android.annotation.NonNull java.lang.Strin
  * @since   1.2
  */
 
-public int compareTo(@android.annotation.NonNull java.lang.Long anotherLong) { throw new RuntimeException("Stub!"); }
+public int compareTo(@androidx.annotation.RecentlyNonNull java.lang.Long anotherLong) { throw new RuntimeException("Stub!"); }
 
 /**
  * Compares two {@code long} values numerically.
@@ -1077,7 +1077,7 @@ public static long sum(long a, long b) { throw new RuntimeException("Stub!"); }
 
 /**
  * Returns the greater of two {@code long} values
- * as if by calling {@link java.lang.Math#max(long,long) Math#max(long, long)}.
+ * as if by calling {@link java.lang.Math#max(long,long) Math.max}.
  *
  * @param a the first operand
  * @param b the second operand
@@ -1090,7 +1090,7 @@ public static long max(long a, long b) { throw new RuntimeException("Stub!"); }
 
 /**
  * Returns the smaller of two {@code long} values
- * as if by calling {@link java.lang.Math#min(long,long) Math#min(long, long)}.
+ * as if by calling {@link java.lang.Math#min(long,long) Math.min}.
  *
  * @param a the first operand
  * @param b the second operand

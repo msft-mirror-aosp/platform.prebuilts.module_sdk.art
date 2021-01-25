@@ -101,7 +101,7 @@ package java.util;
  * synchronizing on some object that naturally encapsulates the map.
  *
  * If no such object exists, the map should be "wrapped" using the
- * {@link java.util.Collections#synchronizedMap Collections#synchronizedMap}
+ * {@link java.util.Collections#synchronizedMap Collections.synchronizedMap}
  * method.  This is best done at creation time, to prevent accidental
  * unsynchronized access to the map:<pre>
  *   Map m = Collections.synchronizedMap(new LinkedHashMap(...));</pre>

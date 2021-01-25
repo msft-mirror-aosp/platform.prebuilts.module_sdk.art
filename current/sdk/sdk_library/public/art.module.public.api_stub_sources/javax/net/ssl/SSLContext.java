@@ -115,7 +115,7 @@ protected SSLContext(javax.net.ssl.SSLContextSpi contextSpi, java.security.Provi
  *
  * @return the default SSL context
  * @throws java.security.NoSuchAlgorithmException if the
- *   {@link javax.net.ssl.SSLContext#getInstance SSLContext#getInstance} call fails
+ *   {@link javax.net.ssl.SSLContext#getInstance SSLContext.getInstance()} call fails
  * @since 1.6
  */
 
@@ -152,7 +152,7 @@ public static synchronized void setDefault(javax.net.ssl.SSLContext context) { t
  * Provider that supports the specified protocol is returned.
  *
  * <p> Note that the list of registered providers may be retrieved via
- * the {@link java.security.Security#getProviders() Security#getProviders()} method.
+ * the {@link java.security.Security#getProviders() Security.getProviders()} method.
  *
  * @param protocol the standard name of the requested protocol.
  *          See the SSLContext section in the <a href=
@@ -183,7 +183,7 @@ public static javax.net.ssl.SSLContext getInstance(java.lang.String protocol) th
  * in the security provider list.
  *
  * <p> Note that the list of registered providers may be retrieved via
- * the {@link java.security.Security#getProviders() Security#getProviders()} method.
+ * the {@link java.security.Security#getProviders() Security.getProviders()} method.
  *
  * @param protocol the standard name of the requested protocol.
  *          See the SSLContext section in the <a href=

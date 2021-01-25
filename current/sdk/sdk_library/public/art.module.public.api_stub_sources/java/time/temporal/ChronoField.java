@@ -593,7 +593,7 @@ INSTANT_SECONDS,
  * <p>
  * A {@link java.time.ZoneOffset ZoneOffset} represents the period of time that local time differs from UTC/Greenwich.
  * This is usually a fixed number of hours and minutes.
- * It is equivalent to the {@link java.time.ZoneOffset#getTotalSeconds() ZoneOffset#getTotalSeconds()} of the offset in seconds.
+ * It is equivalent to the {@link java.time.ZoneOffset#getTotalSeconds() total amount} of the offset in seconds.
  * For example, during the winter Paris has an offset of {@code +01:00}, which is 3600 seconds.
  * <p>
  * This field is strictly defined to have the same meaning in all calendar systems.

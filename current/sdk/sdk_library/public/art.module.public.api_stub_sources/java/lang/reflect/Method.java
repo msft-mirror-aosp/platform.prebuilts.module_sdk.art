@@ -58,7 +58,7 @@ private Method() { throw new RuntimeException("Stub!"); }
  * {@inheritDoc}
  */
 
-@android.annotation.NonNull
+@androidx.annotation.RecentlyNonNull
 public java.lang.Class<?> getDeclaringClass() { throw new RuntimeException("Stub!"); }
 
 /**
@@ -66,7 +66,7 @@ public java.lang.Class<?> getDeclaringClass() { throw new RuntimeException("Stub
  * object, as a {@code String}.
  */
 
-@android.annotation.NonNull
+@androidx.annotation.RecentlyNonNull
 public java.lang.String getName() { throw new RuntimeException("Stub!"); }
 
 /**
@@ -81,7 +81,7 @@ public int getModifiers() { throw new RuntimeException("Stub!"); }
  * @since 1.5
  */
 
-@android.annotation.NonNull
+@androidx.annotation.RecentlyNonNull
 public java.lang.reflect.TypeVariable<java.lang.reflect.Method>[] getTypeParameters() { throw new RuntimeException("Stub!"); }
 
 /**
@@ -91,7 +91,7 @@ public java.lang.reflect.TypeVariable<java.lang.reflect.Method>[] getTypeParamet
  * @return the return type for the method this object represents
  */
 
-@android.annotation.NonNull
+@androidx.annotation.RecentlyNonNull
 public java.lang.Class<?> getReturnType() { throw new RuntimeException("Stub!"); }
 
 /**
@@ -119,14 +119,14 @@ public java.lang.Class<?> getReturnType() { throw new RuntimeException("Stub!");
  * @since 1.5
  */
 
-@android.annotation.NonNull
+@androidx.annotation.RecentlyNonNull
 public java.lang.reflect.Type getGenericReturnType() { throw new RuntimeException("Stub!"); }
 
 /**
  * {@inheritDoc}
  */
 
-@android.annotation.NonNull
+@androidx.annotation.RecentlyNonNull
 public java.lang.Class<?>[] getParameterTypes() { throw new RuntimeException("Stub!"); }
 
 /**
@@ -144,14 +144,14 @@ public int getParameterCount() { throw new RuntimeException("Stub!"); }
  * @since 1.5
  */
 
-@android.annotation.NonNull
+@androidx.annotation.RecentlyNonNull
 public java.lang.reflect.Type[] getGenericParameterTypes() { throw new RuntimeException("Stub!"); }
 
 /**
  * {@inheritDoc}
  */
 
-@android.annotation.NonNull
+@androidx.annotation.RecentlyNonNull
 public native java.lang.Class<?>[] getExceptionTypes();
 
 /**
@@ -162,7 +162,7 @@ public native java.lang.Class<?>[] getExceptionTypes();
  * @since 1.5
  */
 
-@android.annotation.NonNull
+@androidx.annotation.RecentlyNonNull
 public java.lang.reflect.Type[] getGenericExceptionTypes() { throw new RuntimeException("Stub!"); }
 
 /**
@@ -172,7 +172,7 @@ public java.lang.reflect.Type[] getGenericExceptionTypes() { throw new RuntimeEx
  * and formal parameter types and return type.
  */
 
-public boolean equals(@android.annotation.Nullable java.lang.Object obj) { throw new RuntimeException("Stub!"); }
+public boolean equals(@androidx.annotation.RecentlyNullable java.lang.Object obj) { throw new RuntimeException("Stub!"); }
 
 /**
  * Returns a hashcode for this {@code Method}.  The hashcode is computed
@@ -209,7 +209,7 @@ public int hashCode() { throw new RuntimeException("Stub!"); }
  * @jls 8.4.3 Method Modifiers
  */
 
-@android.annotation.NonNull
+@androidx.annotation.RecentlyNonNull
 public java.lang.String toString() { throw new RuntimeException("Stub!"); }
 
 /**
@@ -252,7 +252,7 @@ public java.lang.String toString() { throw new RuntimeException("Stub!"); }
  * @jls 8.4.3 Method Modifiers
  */
 
-@android.annotation.NonNull
+@androidx.annotation.RecentlyNonNull
 public java.lang.String toGenericString() { throw new RuntimeException("Stub!"); }
 
 /**
@@ -313,8 +313,8 @@ public java.lang.String toGenericString() { throw new RuntimeException("Stub!");
  * provoked by this method fails.
  */
 
-@android.annotation.Nullable
-public native java.lang.Object invoke(@android.annotation.Nullable java.lang.Object obj, @android.annotation.Nullable java.lang.Object... args) throws java.lang.IllegalAccessException, java.lang.IllegalArgumentException, java.lang.reflect.InvocationTargetException;
+@androidx.annotation.RecentlyNullable
+public native java.lang.Object invoke(@androidx.annotation.RecentlyNullable java.lang.Object obj, @androidx.annotation.RecentlyNullable java.lang.Object... args) throws java.lang.IllegalAccessException, java.lang.IllegalArgumentException, java.lang.reflect.InvocationTargetException;
 
 /**
  * Returns {@code true} if this method is a bridge
@@ -372,7 +372,7 @@ public boolean isDefault() { throw new RuntimeException("Stub!"); }
  * @since  1.5
  */
 
-@android.annotation.Nullable
+@androidx.annotation.RecentlyNullable
 public native java.lang.Object getDefaultValue();
 
 /**
@@ -381,15 +381,15 @@ public native java.lang.Object getDefaultValue();
  * @since 1.5
  */
 
-@android.annotation.Nullable
-public <T extends java.lang.annotation.Annotation> T getAnnotation(@android.annotation.NonNull java.lang.Class<T> annotationClass) { throw new RuntimeException("Stub!"); }
+@androidx.annotation.RecentlyNullable
+public <T extends java.lang.annotation.Annotation> T getAnnotation(@androidx.annotation.RecentlyNonNull java.lang.Class<T> annotationClass) { throw new RuntimeException("Stub!"); }
 
 /**
  * {@inheritDoc}
  * @since 1.5
  */
 
-@android.annotation.NonNull
+@androidx.annotation.RecentlyNonNull
 public java.lang.annotation.Annotation[] getDeclaredAnnotations() { throw new RuntimeException("Stub!"); }
 
 /**
@@ -397,7 +397,7 @@ public java.lang.annotation.Annotation[] getDeclaredAnnotations() { throw new Ru
  * @since 1.5
  */
 
-@android.annotation.NonNull
+@androidx.annotation.RecentlyNonNull
 public java.lang.annotation.Annotation[][] getParameterAnnotations() { throw new RuntimeException("Stub!"); }
 }
 
