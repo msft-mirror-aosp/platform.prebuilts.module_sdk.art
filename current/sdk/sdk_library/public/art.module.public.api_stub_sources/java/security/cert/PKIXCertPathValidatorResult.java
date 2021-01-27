@@ -32,7 +32,7 @@ package java.security.cert;
  * path validation algorithm.
  *
  * <p>Instances of {@code PKIXCertPathValidatorResult} are returned by the
- * {@link java.security.cert.CertPathValidator#validate CertPathValidator#validate} method of
+ * {@link java.security.cert.CertPathValidator#validate validate} method of
  * {@code CertPathValidator} objects implementing the PKIX algorithm.
  *
  * <p> All {@code PKIXCertPathValidatorResult} objects contain the
@@ -94,8 +94,8 @@ public java.security.cert.TrustAnchor getTrustAnchor() { throw new RuntimeExcept
  * policy-related parameters in {@code PKIXParameters}. However, more
  * sophisticated applications, especially those that process policy
  * qualifiers, may need to traverse the valid policy tree using the
- * {@link java.security.cert.PolicyNode#getParent PolicyNode#getParent} and
- * {@link java.security.cert.PolicyNode#getChildren PolicyNode#getChildren} methods.
+ * {@link java.security.cert.PolicyNode#getParent PolicyNode.getParent} and
+ * {@link java.security.cert.PolicyNode#getChildren PolicyNode.getChildren} methods.
  *
  * @return the root node of the valid policy tree, or {@code null}
  * if there are no valid policies

@@ -35,10 +35,10 @@ import java.util.function.ToDoubleFunction;
 /**
  * A comparison function, which imposes a <i>total ordering</i> on some
  * collection of objects.  Comparators can be passed to a sort method (such
- * as {@link java.util.Collections#sort(java.util.List,java.util.Comparator) Collections#sort(List,Comparator)} or {@link java.util.Arrays#sort(java.lang.Object[],java.util.Comparator) Arrays#sort(Object[],Comparator)}) to allow precise control
+ * as {@link java.util.Collections#sort(java.util.List,java.util.Comparator) Collections.sort} or {@link java.util.Arrays#sort(java.lang.Object[],java.util.Comparator) Arrays.sort}) to allow precise control
  * over the sort order.  Comparators can also be used to control the order of
- * certain data structures (such as {@link java.util.SortedSet SortedSet} or {@link java.util.SortedMap SortedMap}), or to provide an ordering for collections of
- * objects that don't have a {@link java.lang.Comparable Comparable}.<p>
+ * certain data structures (such as {@link java.util.SortedSet sorted sets} or {@link java.util.SortedMap sorted maps}), or to provide an ordering for collections of
+ * objects that don't have a {@link java.lang.Comparable natural ordering}.<p>
  *
  * The ordering imposed by a comparator <tt>c</tt> on a set of elements
  * <tt>S</tt> is said to be <i>consistent with equals</i> if and only if
@@ -62,7 +62,7 @@ import java.util.function.ToDoubleFunction;
  * true (and the size of the tree set will increase) because {@code a} and
  * {@code b} are not equivalent from the tree set's perspective, even though
  * this is contrary to the specification of the
- * {@link java.util.Set#add Set#add} method.<p>
+ * {@link java.util.Set#add Set.add} method.<p>
  *
  * Note: It is generally a good idea for comparators to also implement
  * <tt>java.io.Serializable</tt>, as they may be used as ordering methods in
@@ -83,7 +83,7 @@ import java.util.function.ToDoubleFunction;
  * imposed ordering is a <i>total order</i> on <tt>S</tt>.  When we say that
  * the ordering imposed by <tt>c</tt> on <tt>S</tt> is <i>consistent with
  * equals</i>, we mean that the quotient for the ordering is the equivalence
- * relation defined by the objects' {@link java.lang.Object#equals(java.lang.Object) Object#equals(Object)} method(s):<pre>
+ * relation defined by the objects' {@link java.lang.Object#equals(java.lang.Object)  equals(Object)} method(s):<pre>
  *     {(x, y) such that x.equals(y)}. </pre>
  *
  * <p>Unlike {@code Comparable}, a comparator may optionally permit

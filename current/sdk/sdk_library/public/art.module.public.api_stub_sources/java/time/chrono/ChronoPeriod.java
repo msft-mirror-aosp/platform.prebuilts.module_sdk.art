@@ -120,8 +120,8 @@ public static java.time.chrono.ChronoPeriod between(java.time.chrono.ChronoLocal
  * Gets the value of the requested unit.
  * <p>
  * The supported units are chronology specific.
- * They will typically be {@link java.time.temporal.ChronoUnit#YEARS ChronoUnit#YEARS},
- * {@link java.time.temporal.ChronoUnit#MONTHS ChronoUnit#MONTHS} and {@link java.time.temporal.ChronoUnit#DAYS ChronoUnit#DAYS}.
+ * They will typically be {@link java.time.temporal.ChronoUnit#YEARS YEARS},
+ * {@link java.time.temporal.ChronoUnit#MONTHS MONTHS} and {@link java.time.temporal.ChronoUnit#DAYS DAYS}.
  * Requesting an unsupported unit will throw an exception.
  *
  * @param unit the {@code TemporalUnit} for which to return the value
@@ -136,8 +136,8 @@ public long get(java.time.temporal.TemporalUnit unit);
  * Gets the set of units supported by this period.
  * <p>
  * The supported units are chronology specific.
- * They will typically be {@link java.time.temporal.ChronoUnit#YEARS ChronoUnit#YEARS},
- * {@link java.time.temporal.ChronoUnit#MONTHS ChronoUnit#MONTHS} and {@link java.time.temporal.ChronoUnit#DAYS ChronoUnit#DAYS}.
+ * They will typically be {@link java.time.temporal.ChronoUnit#YEARS YEARS},
+ * {@link java.time.temporal.ChronoUnit#MONTHS MONTHS} and {@link java.time.temporal.ChronoUnit#DAYS DAYS}.
  * They are returned in order from largest to smallest.
  * <p>
  * This set can be used in conjunction with {@link #get(java.time.temporal.TemporalUnit)}

@@ -85,7 +85,7 @@ protected AbstractSet() { throw new RuntimeException("Stub!"); }
  * @return <tt>true</tt> if the specified object is equal to this set
  */
 
-public boolean equals(@android.annotation.Nullable java.lang.Object o) { throw new RuntimeException("Stub!"); }
+public boolean equals(@androidx.annotation.RecentlyNullable java.lang.Object o) { throw new RuntimeException("Stub!"); }
 
 /**
  * Returns the hash code value for this set.  The hash code of a set is
@@ -145,6 +145,6 @@ public int hashCode() { throw new RuntimeException("Stub!"); }
  * @see #contains(Object)
  */
 
-public boolean removeAll(@android.annotation.NonNull java.util.Collection<?> c) { throw new RuntimeException("Stub!"); }
+public boolean removeAll(@androidx.annotation.RecentlyNonNull java.util.Collection<?> c) { throw new RuntimeException("Stub!"); }
 }
 

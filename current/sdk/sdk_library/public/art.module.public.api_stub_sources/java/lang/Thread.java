@@ -152,7 +152,7 @@ public Thread() { throw new RuntimeException("Stub!"); }
  *         nothing.
  */
 
-public Thread(@android.annotation.Nullable java.lang.Runnable target) { throw new RuntimeException("Stub!"); }
+public Thread(@androidx.annotation.RecentlyNullable java.lang.Runnable target) { throw new RuntimeException("Stub!"); }
 
 /**
  * Allocates a new {@code Thread} object. This constructor has the same
@@ -163,7 +163,7 @@ public Thread(@android.annotation.Nullable java.lang.Runnable target) { throw ne
  *
  * @param  group
  *         the thread group. If {@code null} and there is a security
- *         manager, the group is determined by {@linkplain java.lang.SecurityManager#getThreadGroup SecurityManager#getThreadGroup}.
+ *         manager, the group is determined by {@linkplain java.lang.SecurityManager#getThreadGroup SecurityManager.getThreadGroup()}.
  *         If there is not a security manager or {@code
  *         SecurityManager.getThreadGroup()} returns {@code null}, the group
  *         is set to the current thread's thread group.
@@ -177,7 +177,7 @@ public Thread(@android.annotation.Nullable java.lang.Runnable target) { throw ne
  *          thread group
  */
 
-public Thread(@android.annotation.Nullable java.lang.ThreadGroup group, @android.annotation.Nullable java.lang.Runnable target) { throw new RuntimeException("Stub!"); }
+public Thread(@androidx.annotation.RecentlyNullable java.lang.ThreadGroup group, @androidx.annotation.RecentlyNullable java.lang.Runnable target) { throw new RuntimeException("Stub!"); }
 
 /**
  * Allocates a new {@code Thread} object. This constructor has the same
@@ -188,7 +188,7 @@ public Thread(@android.annotation.Nullable java.lang.ThreadGroup group, @android
  *          the name of the new thread
  */
 
-public Thread(@android.annotation.NonNull java.lang.String name) { throw new RuntimeException("Stub!"); }
+public Thread(@androidx.annotation.RecentlyNonNull java.lang.String name) { throw new RuntimeException("Stub!"); }
 
 /**
  * Allocates a new {@code Thread} object. This constructor has the same
@@ -197,7 +197,7 @@ public Thread(@android.annotation.NonNull java.lang.String name) { throw new Run
  *
  * @param  group
  *         the thread group. If {@code null} and there is a security
- *         manager, the group is determined by {@linkplain java.lang.SecurityManager#getThreadGroup SecurityManager#getThreadGroup}.
+ *         manager, the group is determined by {@linkplain java.lang.SecurityManager#getThreadGroup SecurityManager.getThreadGroup()}.
  *         If there is not a security manager or {@code
  *         SecurityManager.getThreadGroup()} returns {@code null}, the group
  *         is set to the current thread's thread group.
@@ -210,7 +210,7 @@ public Thread(@android.annotation.NonNull java.lang.String name) { throw new Run
  *          thread group
  */
 
-public Thread(@android.annotation.Nullable java.lang.ThreadGroup group, @android.annotation.NonNull java.lang.String name) { throw new RuntimeException("Stub!"); }
+public Thread(@androidx.annotation.RecentlyNullable java.lang.ThreadGroup group, @androidx.annotation.RecentlyNonNull java.lang.String name) { throw new RuntimeException("Stub!"); }
 
 /**
  * Allocates a new {@code Thread} object. This constructor has the same
@@ -225,7 +225,7 @@ public Thread(@android.annotation.Nullable java.lang.ThreadGroup group, @android
  *         the name of the new thread
  */
 
-public Thread(@android.annotation.Nullable java.lang.Runnable target, @android.annotation.NonNull java.lang.String name) { throw new RuntimeException("Stub!"); }
+public Thread(@androidx.annotation.RecentlyNullable java.lang.Runnable target, @androidx.annotation.RecentlyNonNull java.lang.String name) { throw new RuntimeException("Stub!"); }
 
 /**
  * Allocates a new {@code Thread} object so that it has {@code target}
@@ -233,7 +233,7 @@ public Thread(@android.annotation.Nullable java.lang.Runnable target, @android.a
  * and belongs to the thread group referred to by {@code group}.
  *
  * <p>If there is a security manager, its
- * {@link java.lang.SecurityManager#checkAccess(java.lang.ThreadGroup) SecurityManager#checkAccess(ThreadGroup)}
+ * {@link java.lang.SecurityManager#checkAccess(java.lang.ThreadGroup) checkAccess}
  * method is invoked with the ThreadGroup as its argument.
  *
  * <p>In addition, its {@code checkPermission} method is invoked with
@@ -254,7 +254,7 @@ public Thread(@android.annotation.Nullable java.lang.Runnable target, @android.a
  *
  * @param  group
  *         the thread group. If {@code null} and there is a security
- *         manager, the group is determined by {@linkplain java.lang.SecurityManager#getThreadGroup SecurityManager#getThreadGroup}.
+ *         manager, the group is determined by {@linkplain java.lang.SecurityManager#getThreadGroup SecurityManager.getThreadGroup()}.
  *         If there is not a security manager or {@code
  *         SecurityManager.getThreadGroup()} returns {@code null}, the group
  *         is set to the current thread's thread group.
@@ -271,7 +271,7 @@ public Thread(@android.annotation.Nullable java.lang.Runnable target, @android.a
  *          thread group or cannot override the context class loader methods.
  */
 
-public Thread(@android.annotation.Nullable java.lang.ThreadGroup group, @android.annotation.Nullable java.lang.Runnable target, @android.annotation.NonNull java.lang.String name) { throw new RuntimeException("Stub!"); }
+public Thread(@androidx.annotation.RecentlyNullable java.lang.ThreadGroup group, @androidx.annotation.RecentlyNullable java.lang.Runnable target, @androidx.annotation.RecentlyNonNull java.lang.String name) { throw new RuntimeException("Stub!"); }
 
 /**
  * Allocates a new {@code Thread} object so that it has {@code target}
@@ -323,7 +323,7 @@ public Thread(@android.annotation.Nullable java.lang.ThreadGroup group, @android
  *
  * @param  group
  *         the thread group. If {@code null} and there is a security
- *         manager, the group is determined by {@linkplain java.lang.SecurityManager#getThreadGroup SecurityManager#getThreadGroup}.
+ *         manager, the group is determined by {@linkplain java.lang.SecurityManager#getThreadGroup SecurityManager.getThreadGroup()}.
  *         If there is not a security manager or {@code
  *         SecurityManager.getThreadGroup()} returns {@code null}, the group
  *         is set to the current thread's thread group.
@@ -346,7 +346,7 @@ public Thread(@android.annotation.Nullable java.lang.ThreadGroup group, @android
  * @since 1.4
  */
 
-public Thread(@android.annotation.Nullable java.lang.ThreadGroup group, @android.annotation.Nullable java.lang.Runnable target, @android.annotation.NonNull java.lang.String name, long stackSize) { throw new RuntimeException("Stub!"); }
+public Thread(@androidx.annotation.RecentlyNullable java.lang.ThreadGroup group, @androidx.annotation.RecentlyNullable java.lang.Runnable target, @androidx.annotation.RecentlyNonNull java.lang.String name, long stackSize) { throw new RuntimeException("Stub!"); }
 
 /**
  * Returns a reference to the currently executing thread object.
@@ -354,7 +354,7 @@ public Thread(@android.annotation.Nullable java.lang.ThreadGroup group, @android
  * @return  the currently executing thread.
  */
 
-@android.annotation.NonNull
+@androidx.annotation.RecentlyNonNull
 public static native java.lang.Thread currentThread();
 
 /**
@@ -429,7 +429,7 @@ public static void sleep(long millis, int nanos) throws java.lang.InterruptedExc
  *          always
  */
 
-@android.annotation.NonNull
+@androidx.annotation.RecentlyNonNull
 protected java.lang.Object clone() throws java.lang.CloneNotSupportedException { throw new RuntimeException("Stub!"); }
 
 /**
@@ -512,7 +512,7 @@ public final void stop() { throw new RuntimeException("Stub!"); }
  */
 
 @Deprecated
-public final synchronized void stop(@android.annotation.Nullable java.lang.Throwable obj) { throw new RuntimeException("Stub!"); }
+public final synchronized void stop(@androidx.annotation.RecentlyNullable java.lang.Throwable obj) { throw new RuntimeException("Stub!"); }
 
 /**
  * Interrupts this thread.
@@ -521,7 +521,7 @@ public final synchronized void stop(@android.annotation.Nullable java.lang.Throw
  * always permitted, the {@link #checkAccess() checkAccess} method
  * of this thread is invoked, which may cause a {@link java.lang.SecurityException SecurityException} to be thrown.
  *
- * <p> If this thread is blocked in an invocation of the {@link java.lang.Object#wait() Object#wait()}, {@link java.lang.Object#wait(long) Object#wait(long)}, or {@link java.lang.Object#wait(long,int) Object#wait(long, int)} methods of the {@link java.lang.Object Object}
+ * <p> If this thread is blocked in an invocation of the {@link java.lang.Object#wait() wait()}, {@link java.lang.Object#wait(long) wait(long)}, or {@link java.lang.Object#wait(long,int) wait(long, int)} methods of the {@link java.lang.Object Object}
  * class, or of the {@link #join()}, {@link #join(long)}, {@link
  * #join(long,int)}, {@link #sleep(long)}, or {@link #sleep(long,int)},
  * methods of this class, then its interrupt status will be cleared and it
@@ -704,7 +704,7 @@ public final int getPriority() { throw new RuntimeException("Stub!"); }
  * @see        #checkAccess()
  */
 
-public final synchronized void setName(@android.annotation.NonNull java.lang.String name) { throw new RuntimeException("Stub!"); }
+public final synchronized void setName(@androidx.annotation.RecentlyNonNull java.lang.String name) { throw new RuntimeException("Stub!"); }
 
 /**
  * Returns this thread's name.
@@ -713,7 +713,7 @@ public final synchronized void setName(@android.annotation.NonNull java.lang.Str
  * @see     #setName(String)
  */
 
-@android.annotation.NonNull
+@androidx.annotation.RecentlyNonNull
 public final java.lang.String getName() { throw new RuntimeException("Stub!"); }
 
 /**
@@ -724,7 +724,7 @@ public final java.lang.String getName() { throw new RuntimeException("Stub!"); }
  * @return  this thread's thread group.
  */
 
-@android.annotation.Nullable
+@androidx.annotation.RecentlyNullable
 public final java.lang.ThreadGroup getThreadGroup() { throw new RuntimeException("Stub!"); }
 
 /**
@@ -921,7 +921,7 @@ public final void checkAccess() { throw new RuntimeException("Stub!"); }
  * @return  a string representation of this thread.
  */
 
-@android.annotation.NonNull
+@androidx.annotation.RecentlyNonNull
 public java.lang.String toString() { throw new RuntimeException("Stub!"); }
 
 /**
@@ -935,7 +935,7 @@ public java.lang.String toString() { throw new RuntimeException("Stub!"); }
  *
  * <p>If a security manager is present, and the invoker's class loader is not
  * {@code null} and is not the same as or an ancestor of the context class
- * loader, then this method invokes the security manager's {@link java.lang.SecurityManager#checkPermission(java.security.Permission) SecurityManager#checkPermission(java.security.Permission)}
+ * loader, then this method invokes the security manager's {@link java.lang.SecurityManager#checkPermission(java.security.Permission) checkPermission}
  * method with a {@link java.lang.RuntimePermission RuntimePermission}{@code
  * ("getClassLoader")} permission to verify that retrieval of the context
  * class loader is permitted.
@@ -950,7 +950,7 @@ public java.lang.String toString() { throw new RuntimeException("Stub!"); }
  * @since 1.2
  */
 
-@android.annotation.Nullable
+@androidx.annotation.RecentlyNullable
 public java.lang.ClassLoader getContextClassLoader() { throw new RuntimeException("Stub!"); }
 
 /**
@@ -960,7 +960,7 @@ public java.lang.ClassLoader getContextClassLoader() { throw new RuntimeExceptio
  * through {@code getContextClassLoader}, to code running in the thread
  * when loading classes and resources.
  *
- * <p>If a security manager is present, its {@link java.lang.SecurityManager#checkPermission(java.security.Permission) SecurityManager#checkPermission(java.security.Permission)}
+ * <p>If a security manager is present, its {@link java.lang.SecurityManager#checkPermission(java.security.Permission) checkPermission}
  * method is invoked with a {@link java.lang.RuntimePermission RuntimePermission}{@code
  * ("setContextClassLoader")} permission to see if setting the context
  * ClassLoader is permitted.
@@ -975,7 +975,7 @@ public java.lang.ClassLoader getContextClassLoader() { throw new RuntimeExceptio
  * @since 1.2
  */
 
-public void setContextClassLoader(@android.annotation.Nullable java.lang.ClassLoader cl) { throw new RuntimeException("Stub!"); }
+public void setContextClassLoader(@androidx.annotation.RecentlyNullable java.lang.ClassLoader cl) { throw new RuntimeException("Stub!"); }
 
 /**
  * Returns <tt>true</tt> if and only if the current thread holds the
@@ -994,7 +994,7 @@ public void setContextClassLoader(@android.annotation.Nullable java.lang.ClassLo
  * @since 1.4
  */
 
-public static native boolean holdsLock(@android.annotation.NonNull java.lang.Object obj);
+public static native boolean holdsLock(@androidx.annotation.RecentlyNonNull java.lang.Object obj);
 
 /**
  * Returns an array of stack trace elements representing the stack dump
@@ -1033,7 +1033,7 @@ public static native boolean holdsLock(@android.annotation.NonNull java.lang.Obj
  * @since 1.5
  */
 
-@android.annotation.NonNull
+@androidx.annotation.RecentlyNonNull
 public java.lang.StackTraceElement[] getStackTrace() { throw new RuntimeException("Stub!"); }
 
 /**
@@ -1072,7 +1072,7 @@ public java.lang.StackTraceElement[] getStackTrace() { throw new RuntimeExceptio
  * @since 1.5
  */
 
-@android.annotation.NonNull
+@androidx.annotation.RecentlyNonNull
 public static java.util.Map<java.lang.Thread,java.lang.StackTraceElement[]> getAllStackTraces() { throw new RuntimeException("Stub!"); }
 
 /**
@@ -1096,7 +1096,7 @@ public long getId() { throw new RuntimeException("Stub!"); }
  * @since 1.5
  */
 
-@android.annotation.NonNull
+@androidx.annotation.RecentlyNonNull
 public java.lang.Thread.State getState() { throw new RuntimeException("Stub!"); }
 
 /**
@@ -1134,7 +1134,7 @@ public java.lang.Thread.State getState() { throw new RuntimeException("Stub!"); 
  * @since 1.5
  */
 
-public static void setDefaultUncaughtExceptionHandler(@android.annotation.Nullable java.lang.Thread.UncaughtExceptionHandler eh) { throw new RuntimeException("Stub!"); }
+public static void setDefaultUncaughtExceptionHandler(@androidx.annotation.RecentlyNullable java.lang.Thread.UncaughtExceptionHandler eh) { throw new RuntimeException("Stub!"); }
 
 /**
  * Returns the default handler invoked when a thread abruptly terminates
@@ -1145,7 +1145,7 @@ public static void setDefaultUncaughtExceptionHandler(@android.annotation.Nullab
  * @return the default uncaught exception handler for all threads
  */
 
-@android.annotation.Nullable
+@androidx.annotation.RecentlyNullable
 public static java.lang.Thread.UncaughtExceptionHandler getDefaultUncaughtExceptionHandler() { throw new RuntimeException("Stub!"); }
 
 /**
@@ -1158,7 +1158,7 @@ public static java.lang.Thread.UncaughtExceptionHandler getDefaultUncaughtExcept
  * @return the uncaught exception handler for this thread
  */
 
-@android.annotation.Nullable
+@androidx.annotation.RecentlyNullable
 public java.lang.Thread.UncaughtExceptionHandler getUncaughtExceptionHandler() { throw new RuntimeException("Stub!"); }
 
 /**
@@ -1177,7 +1177,7 @@ public java.lang.Thread.UncaughtExceptionHandler getUncaughtExceptionHandler() {
  * @since 1.5
  */
 
-public void setUncaughtExceptionHandler(@android.annotation.Nullable java.lang.Thread.UncaughtExceptionHandler eh) { throw new RuntimeException("Stub!"); }
+public void setUncaughtExceptionHandler(@androidx.annotation.RecentlyNullable java.lang.Thread.UncaughtExceptionHandler eh) { throw new RuntimeException("Stub!"); }
 
 /**
  * The maximum priority that a thread can have.
@@ -1251,7 +1251,7 @@ RUNNABLE,
  * A thread in the blocked state is waiting for a monitor lock
  * to enter a synchronized block/method or
  * reenter a synchronized block/method after calling
- * {@link java.lang.Object#wait() Object#wait()}.
+ * {@link java.lang.Object#wait() Object.wait}.
  */
 
 BLOCKED,
@@ -1260,9 +1260,9 @@ BLOCKED,
  * A thread is in the waiting state due to calling one of the
  * following methods:
  * <ul>
- *   <li>{@link java.lang.Object#wait() Object#wait()} with no timeout</li>
+ *   <li>{@link java.lang.Object#wait() Object.wait} with no timeout</li>
  *   <li>{@link #join() Thread.join} with no timeout</li>
- *   <li>{@link java.util.concurrent.locks.LockSupport#park() LockSupport#park()}</li>
+ *   <li>{@link java.util.concurrent.locks.LockSupport#park() LockSupport.park}</li>
  * </ul>
  *
  * <p>A thread in the waiting state is waiting for another thread to
@@ -1282,10 +1282,10 @@ WAITING,
  * the following methods with a specified positive waiting time:
  * <ul>
  *   <li>{@link #sleep Thread.sleep}</li>
- *   <li>{@link java.lang.Object#wait(long) Object#wait(long)} with timeout</li>
+ *   <li>{@link java.lang.Object#wait(long) Object.wait} with timeout</li>
  *   <li>{@link #join(long) Thread.join} with timeout</li>
- *   <li>{@link java.util.concurrent.locks.LockSupport#parkNanos LockSupport#parkNanos}</li>
- *   <li>{@link java.util.concurrent.locks.LockSupport#parkUntil LockSupport#parkUntil}</li>
+ *   <li>{@link java.util.concurrent.locks.LockSupport#parkNanos LockSupport.parkNanos}</li>
+ *   <li>{@link java.util.concurrent.locks.LockSupport#parkUntil LockSupport.parkUntil}</li>
  * </ul>
  */
 
@@ -1334,7 +1334,7 @@ public static interface UncaughtExceptionHandler {
  * @param e the exception
  */
 
-public void uncaughtException(@android.annotation.NonNull java.lang.Thread t, @android.annotation.NonNull java.lang.Throwable e);
+public void uncaughtException(@androidx.annotation.RecentlyNonNull java.lang.Thread t, @androidx.annotation.RecentlyNonNull java.lang.Throwable e);
 }
 
 }

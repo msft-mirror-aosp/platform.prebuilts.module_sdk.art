@@ -41,12 +41,12 @@ import java.io.IOException;
  * typical strategy is to transform the name into a file name and then read a
  * "class file" of that name from a file system.
  *
- * <p> Every {@link java.lang.Class Class} object contains a {@link java.lang.Class#getClassLoader() Class#getClassLoader()} to the <tt>ClassLoader</tt> that defined
+ * <p> Every {@link java.lang.Class <tt>Class</tt>} object contains a {@link java.lang.Class#getClassLoader() reference} to the <tt>ClassLoader</tt> that defined
  * it.
  *
  * <p> <tt>Class</tt> objects for array classes are not created by class
  * loaders, but are created automatically as required by the Java runtime.
- * The class loader for an array class, as returned by {@link java.lang.Class#getClassLoader() Class#getClassLoader()} is the same as the class loader for its element
+ * The class loader for an array class, as returned by {@link java.lang.Class#getClassLoader()  } is the same as the class loader for its element
  * type; if the element type is a primitive type, then the array class has no
  * class loader.
  *
@@ -90,7 +90,7 @@ import java.io.IOException;
  * application.  The method {@link #defineClass(java.lang.String,byte[],int,int)
  * <tt>defineClass</tt>} converts an array of bytes into an instance of class
  * <tt>Class</tt>. Instances of this newly defined class can be created using
- * {@link java.lang.Class#newInstance Class#newInstance}.
+ * {@link java.lang.Class#newInstance <tt>Class.newInstance</tt>}.
  *
  * <p> The methods and constructors of objects created by a class loader may
  * reference other classes.  To determine the class(es) referred to, the Java
@@ -154,7 +154,7 @@ public abstract class ClassLoader {
  * Creates a new class loader using the specified parent class loader for
  * delegation.
  *
- * <p> If there is a security manager, its {@link java.lang.SecurityManager#checkCreateClassLoader() SecurityManager#checkCreateClassLoader()} method is invoked.  This may result in
+ * <p> If there is a security manager, its {@link java.lang.SecurityManager#checkCreateClassLoader()  <tt>checkCreateClassLoader</tt>} method is invoked.  This may result in
  * a security exception.  </p>
  *
  * @param  parent
@@ -175,7 +175,7 @@ protected ClassLoader(java.lang.ClassLoader parent) { throw new RuntimeException
  * the method {@link #getSystemClassLoader()
  * <tt>getSystemClassLoader()</tt>} as the parent class loader.
  *
- * <p> If there is a security manager, its {@link java.lang.SecurityManager#checkCreateClassLoader() SecurityManager#checkCreateClassLoader()} method is invoked.  This may result in
+ * <p> If there is a security manager, its {@link java.lang.SecurityManager#checkCreateClassLoader()  <tt>checkCreateClassLoader</tt>} method is invoked.  This may result in
  * a security exception.  </p>
  *
  * @throws  java.lang.SecurityException
@@ -394,7 +394,7 @@ protected final java.lang.Class<?> defineClass(java.lang.String name, byte[] b, 
  * all classes in the "<tt>java.*</tt> packages can only be defined by the
  * bootstrap class loader.  If <tt>name</tt> is not <tt>null</tt>, it
  * must be equal to the <a href="#name">binary name</a> of the class
- * specified by the byte array "<tt>b</tt>", otherwise a {@link java.lang.NoClassDefFoundError NoClassDefFoundError} will be thrown. </p>
+ * specified by the byte array "<tt>b</tt>", otherwise a {@link java.lang.NoClassDefFoundError <tt>NoClassDefFoundError</tt>} will be thrown. </p>
  *
  * @param  name
  *         The expected <a href="#name">binary name</a> of the class, or
@@ -777,7 +777,7 @@ public static java.io.InputStream getSystemResourceAsStream(java.lang.String nam
  *
  * <p> If a security manager is present, and the invoker's class loader is
  * not <tt>null</tt> and is not an ancestor of this class loader, then this
- * method invokes the security manager's {@link java.lang.SecurityManager#checkPermission(java.security.Permission) SecurityManager#checkPermission(java.security.Permission)} method with a {@link java.lang.RuntimePermission#RuntimePermission(java.lang.String) RuntimePermission#RuntimePermission(String)} permission to verify
+ * method invokes the security manager's {@link java.lang.SecurityManager#checkPermission(java.security.Permission)  <tt>checkPermission</tt>} method with a {@link java.lang.RuntimePermission#RuntimePermission(java.lang.String)  <tt>RuntimePermission("getClassLoader")</tt>} permission to verify
  * access to the parent class loader is permitted.  If not, a
  * <tt>SecurityException</tt> will be thrown.  </p>
  *
@@ -808,7 +808,7 @@ public final java.lang.ClassLoader getParent() { throw new RuntimeException("Stu
  * <p> If a security manager is present, and the invoker's class loader is
  * not <tt>null</tt> and the invoker's class loader is not the same as or
  * an ancestor of the system class loader, then this method invokes the
- * security manager's {@link java.lang.SecurityManager#checkPermission(java.security.Permission) SecurityManager#checkPermission(java.security.Permission)} method with a {@link java.lang.RuntimePermission#RuntimePermission(java.lang.String) RuntimePermission#RuntimePermission(String)} permission to verify
+ * security manager's {@link java.lang.SecurityManager#checkPermission(java.security.Permission)  <tt>checkPermission</tt>} method with a {@link java.lang.RuntimePermission#RuntimePermission(java.lang.String)  <tt>RuntimePermission("getClassLoader")</tt>} permission to verify
  * access to the system class loader.  If not, a
  * <tt>SecurityException</tt> will be thrown.  </p>
  *

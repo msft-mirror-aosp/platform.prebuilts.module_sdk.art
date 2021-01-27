@@ -75,7 +75,7 @@ private Collections() { throw new RuntimeException("Stub!"); }
 
 /**
  * Sorts the specified list into ascending order, according to the
- * {@linkplain java.lang.Comparable Comparable} of its elements.
+ * {@linkplain java.lang.Comparable natural ordering} of its elements.
  * All elements in the list must implement the {@link java.lang.Comparable Comparable}
  * interface.  Furthermore, all elements in the list must be
  * <i>mutually comparable</i> (that is, {@code e1.compareTo(e2)}
@@ -108,7 +108,7 @@ private Collections() { throw new RuntimeException("Stub!"); }
  * @see java.util.List#sort(Comparator)
  */
 
-public static <T extends java.lang.Comparable<? super T>> void sort(@android.annotation.NonNull java.util.List<T> list) { throw new RuntimeException("Stub!"); }
+public static <T extends java.lang.Comparable<? super T>> void sort(@androidx.annotation.RecentlyNonNull java.util.List<T> list) { throw new RuntimeException("Stub!"); }
 
 /**
  * Sorts the specified list according to the order induced by the
@@ -145,12 +145,12 @@ public static <T extends java.lang.Comparable<? super T>> void sort(@android.ann
  * @see java.util.List#sort(Comparator)
  */
 
-public static <T> void sort(@android.annotation.NonNull java.util.List<T> list, @android.annotation.Nullable java.util.Comparator<? super T> c) { throw new RuntimeException("Stub!"); }
+public static <T> void sort(@androidx.annotation.RecentlyNonNull java.util.List<T> list, @androidx.annotation.RecentlyNullable java.util.Comparator<? super T> c) { throw new RuntimeException("Stub!"); }
 
 /**
  * Searches the specified list for the specified object using the binary
  * search algorithm.  The list must be sorted into ascending order
- * according to the {@linkplain java.lang.Comparable Comparable} of its
+ * according to the {@linkplain java.lang.Comparable natural ordering} of its
  * elements (as by the {@link #sort(java.util.List)} method) prior to making this
  * call.  If it is not sorted, the results are undefined.  If the list
  * contains multiple elements equal to the specified object, there is no
@@ -179,7 +179,7 @@ public static <T> void sort(@android.annotation.NonNull java.util.List<T> list, 
  *         with the elements of the list.
  */
 
-public static <T> int binarySearch(@android.annotation.NonNull java.util.List<? extends java.lang.Comparable<? super T>> list, @android.annotation.NonNull T key) { throw new RuntimeException("Stub!"); }
+public static <T> int binarySearch(@androidx.annotation.RecentlyNonNull java.util.List<? extends java.lang.Comparable<? super T>> list, @androidx.annotation.RecentlyNonNull T key) { throw new RuntimeException("Stub!"); }
 
 /**
  * Searches the specified list for the specified object using the binary
@@ -202,7 +202,7 @@ public static <T> int binarySearch(@android.annotation.NonNull java.util.List<? 
  * @param  key the key to be searched for.
  * @param  c the comparator by which the list is ordered.
  *         A <tt>null</tt> value indicates that the elements'
- *         {@linkplain java.lang.Comparable Comparable} should be used.
+ *         {@linkplain java.lang.Comparable natural ordering} should be used.
  * @return the index of the search key, if it is contained in the list;
  *         otherwise, <tt>(-(<i>insertion point</i>) - 1)</tt>.  The
  *         <i>insertion point</i> is defined as the point at which the
@@ -217,7 +217,7 @@ public static <T> int binarySearch(@android.annotation.NonNull java.util.List<? 
  *         elements of the list using this comparator.
  */
 
-public static <T> int binarySearch(@android.annotation.NonNull java.util.List<? extends T> list, T key, @android.annotation.Nullable java.util.Comparator<? super T> c) { throw new RuntimeException("Stub!"); }
+public static <T> int binarySearch(@androidx.annotation.RecentlyNonNull java.util.List<? extends T> list, T key, @androidx.annotation.RecentlyNullable java.util.Comparator<? super T> c) { throw new RuntimeException("Stub!"); }
 
 /**
  * Reverses the order of the elements in the specified list.<p>
@@ -229,7 +229,7 @@ public static <T> int binarySearch(@android.annotation.NonNull java.util.List<? 
  *         its list-iterator does not support the <tt>set</tt> operation.
  */
 
-public static void reverse(@android.annotation.NonNull java.util.List<?> list) { throw new RuntimeException("Stub!"); }
+public static void reverse(@androidx.annotation.RecentlyNonNull java.util.List<?> list) { throw new RuntimeException("Stub!"); }
 
 /**
  * Randomly permutes the specified list using a default source of
@@ -260,7 +260,7 @@ public static void reverse(@android.annotation.NonNull java.util.List<?> list) {
  *         its list-iterator does not support the <tt>set</tt> operation.
  */
 
-public static void shuffle(@android.annotation.NonNull java.util.List<?> list) { throw new RuntimeException("Stub!"); }
+public static void shuffle(@androidx.annotation.RecentlyNonNull java.util.List<?> list) { throw new RuntimeException("Stub!"); }
 
 /**
  * Randomly permute the specified list using the specified source of
@@ -286,7 +286,7 @@ public static void shuffle(@android.annotation.NonNull java.util.List<?> list) {
  *         list-iterator does not support the <tt>set</tt> operation.
  */
 
-public static void shuffle(@android.annotation.NonNull java.util.List<?> list, @android.annotation.NonNull java.util.Random rnd) { throw new RuntimeException("Stub!"); }
+public static void shuffle(@androidx.annotation.RecentlyNonNull java.util.List<?> list, @androidx.annotation.RecentlyNonNull java.util.Random rnd) { throw new RuntimeException("Stub!"); }
 
 /**
  * Swaps the elements at the specified positions in the specified list.
@@ -302,7 +302,7 @@ public static void shuffle(@android.annotation.NonNull java.util.List<?> list, @
  * @since 1.4
  */
 
-public static void swap(@android.annotation.NonNull java.util.List<?> list, int i, int j) { throw new RuntimeException("Stub!"); }
+public static void swap(@androidx.annotation.RecentlyNonNull java.util.List<?> list, int i, int j) { throw new RuntimeException("Stub!"); }
 
 /**
  * Replaces all of the elements of the specified list with the specified
@@ -317,7 +317,7 @@ public static void swap(@android.annotation.NonNull java.util.List<?> list, int 
  *         list-iterator does not support the <tt>set</tt> operation.
  */
 
-public static <T> void fill(@android.annotation.NonNull java.util.List<? super T> list, T obj) { throw new RuntimeException("Stub!"); }
+public static <T> void fill(@androidx.annotation.RecentlyNonNull java.util.List<? super T> list, T obj) { throw new RuntimeException("Stub!"); }
 
 /**
  * Copies all of the elements from one list into another.  After the
@@ -337,7 +337,7 @@ public static <T> void fill(@android.annotation.NonNull java.util.List<? super T
  *         list-iterator does not support the <tt>set</tt> operation.
  */
 
-public static <T> void copy(@android.annotation.NonNull java.util.List<? super T> dest, @android.annotation.NonNull java.util.List<? extends T> src) { throw new RuntimeException("Stub!"); }
+public static <T> void copy(@androidx.annotation.RecentlyNonNull java.util.List<? super T> dest, @androidx.annotation.RecentlyNonNull java.util.List<? extends T> src) { throw new RuntimeException("Stub!"); }
 
 /**
  * Returns the minimum element of the given collection, according to the
@@ -362,8 +362,8 @@ public static <T> void copy(@android.annotation.NonNull java.util.List<? super T
  * @see java.lang.Comparable
  */
 
-@android.annotation.NonNull
-public static <T extends java.lang.Object & java.lang.Comparable<? super T>> T min(@android.annotation.NonNull java.util.Collection<? extends T> coll) { throw new RuntimeException("Stub!"); }
+@androidx.annotation.RecentlyNonNull
+public static <T extends java.lang.Object & java.lang.Comparable<? super T>> T min(@androidx.annotation.RecentlyNonNull java.util.Collection<? extends T> coll) { throw new RuntimeException("Stub!"); }
 
 /**
  * Returns the minimum element of the given collection, according to the
@@ -389,7 +389,7 @@ public static <T extends java.lang.Object & java.lang.Comparable<? super T>> T m
  * @see java.lang.Comparable
  */
 
-public static <T> T min(@android.annotation.NonNull java.util.Collection<? extends T> coll, @android.annotation.Nullable java.util.Comparator<? super T> comp) { throw new RuntimeException("Stub!"); }
+public static <T> T min(@androidx.annotation.RecentlyNonNull java.util.Collection<? extends T> coll, @androidx.annotation.RecentlyNullable java.util.Comparator<? super T> comp) { throw new RuntimeException("Stub!"); }
 
 /**
  * Returns the maximum element of the given collection, according to the
@@ -414,8 +414,8 @@ public static <T> T min(@android.annotation.NonNull java.util.Collection<? exten
  * @see java.lang.Comparable
  */
 
-@android.annotation.NonNull
-public static <T extends java.lang.Object & java.lang.Comparable<? super T>> T max(@android.annotation.NonNull java.util.Collection<? extends T> coll) { throw new RuntimeException("Stub!"); }
+@androidx.annotation.RecentlyNonNull
+public static <T extends java.lang.Object & java.lang.Comparable<? super T>> T max(@androidx.annotation.RecentlyNonNull java.util.Collection<? extends T> coll) { throw new RuntimeException("Stub!"); }
 
 /**
  * Returns the maximum element of the given collection, according to the
@@ -441,7 +441,7 @@ public static <T extends java.lang.Object & java.lang.Comparable<? super T>> T m
  * @see java.lang.Comparable
  */
 
-public static <T> T max(@android.annotation.NonNull java.util.Collection<? extends T> coll, @android.annotation.Nullable java.util.Comparator<? super T> comp) { throw new RuntimeException("Stub!"); }
+public static <T> T max(@androidx.annotation.RecentlyNonNull java.util.Collection<? extends T> coll, @androidx.annotation.RecentlyNullable java.util.Comparator<? super T> comp) { throw new RuntimeException("Stub!"); }
 
 /**
  * Rotates the elements in the specified list by the specified distance.
@@ -498,7 +498,7 @@ public static <T> T max(@android.annotation.NonNull java.util.Collection<? exten
  * @since 1.4
  */
 
-public static void rotate(@android.annotation.NonNull java.util.List<?> list, int distance) { throw new RuntimeException("Stub!"); }
+public static void rotate(@androidx.annotation.RecentlyNonNull java.util.List<?> list, int distance) { throw new RuntimeException("Stub!"); }
 
 /**
  * Replaces all occurrences of one specified value in a list with another.
@@ -520,7 +520,7 @@ public static void rotate(@android.annotation.NonNull java.util.List<?> list, in
  * @since  1.4
  */
 
-public static <T> boolean replaceAll(@android.annotation.NonNull java.util.List<T> list, T oldVal, T newVal) { throw new RuntimeException("Stub!"); }
+public static <T> boolean replaceAll(@androidx.annotation.RecentlyNonNull java.util.List<T> list, T oldVal, T newVal) { throw new RuntimeException("Stub!"); }
 
 /**
  * Returns the starting position of the first occurrence of the specified
@@ -543,7 +543,7 @@ public static <T> boolean replaceAll(@android.annotation.NonNull java.util.List<
  * @since  1.4
  */
 
-public static int indexOfSubList(@android.annotation.NonNull java.util.List<?> source, @android.annotation.NonNull java.util.List<?> target) { throw new RuntimeException("Stub!"); }
+public static int indexOfSubList(@androidx.annotation.RecentlyNonNull java.util.List<?> source, @androidx.annotation.RecentlyNonNull java.util.List<?> target) { throw new RuntimeException("Stub!"); }
 
 /**
  * Returns the starting position of the last occurrence of the specified
@@ -566,7 +566,7 @@ public static int indexOfSubList(@android.annotation.NonNull java.util.List<?> s
  * @since  1.4
  */
 
-public static int lastIndexOfSubList(@android.annotation.NonNull java.util.List<?> source, @android.annotation.NonNull java.util.List<?> target) { throw new RuntimeException("Stub!"); }
+public static int lastIndexOfSubList(@androidx.annotation.RecentlyNonNull java.util.List<?> source, @androidx.annotation.RecentlyNonNull java.util.List<?> target) { throw new RuntimeException("Stub!"); }
 
 /**
  * Returns an unmodifiable view of the specified collection.  This method
@@ -591,8 +591,8 @@ public static int lastIndexOfSubList(@android.annotation.NonNull java.util.List<
  * @return an unmodifiable view of the specified collection.
  */
 
-@android.annotation.NonNull
-public static <T> java.util.Collection<T> unmodifiableCollection(@android.annotation.NonNull java.util.Collection<? extends T> c) { throw new RuntimeException("Stub!"); }
+@androidx.annotation.RecentlyNonNull
+public static <T> java.util.Collection<T> unmodifiableCollection(@androidx.annotation.RecentlyNonNull java.util.Collection<? extends T> c) { throw new RuntimeException("Stub!"); }
 
 /**
  * Returns an unmodifiable view of the specified set.  This method allows
@@ -609,8 +609,8 @@ public static <T> java.util.Collection<T> unmodifiableCollection(@android.annota
  * @return an unmodifiable view of the specified set.
  */
 
-@android.annotation.NonNull
-public static <T> java.util.Set<T> unmodifiableSet(@android.annotation.NonNull java.util.Set<? extends T> s) { throw new RuntimeException("Stub!"); }
+@androidx.annotation.RecentlyNonNull
+public static <T> java.util.Set<T> unmodifiableSet(@androidx.annotation.RecentlyNonNull java.util.Set<? extends T> s) { throw new RuntimeException("Stub!"); }
 
 /**
  * Returns an unmodifiable view of the specified sorted set.  This method
@@ -630,8 +630,8 @@ public static <T> java.util.Set<T> unmodifiableSet(@android.annotation.NonNull j
  * @return an unmodifiable view of the specified sorted set.
  */
 
-@android.annotation.NonNull
-public static <T> java.util.SortedSet<T> unmodifiableSortedSet(@android.annotation.NonNull java.util.SortedSet<T> s) { throw new RuntimeException("Stub!"); }
+@androidx.annotation.RecentlyNonNull
+public static <T> java.util.SortedSet<T> unmodifiableSortedSet(@androidx.annotation.RecentlyNonNull java.util.SortedSet<T> s) { throw new RuntimeException("Stub!"); }
 
 /**
  * Returns an unmodifiable view of the specified navigable set.  This method
@@ -652,8 +652,8 @@ public static <T> java.util.SortedSet<T> unmodifiableSortedSet(@android.annotati
  * @since 1.8
  */
 
-@android.annotation.NonNull
-public static <T> java.util.NavigableSet<T> unmodifiableNavigableSet(@android.annotation.NonNull java.util.NavigableSet<T> s) { throw new RuntimeException("Stub!"); }
+@androidx.annotation.RecentlyNonNull
+public static <T> java.util.NavigableSet<T> unmodifiableNavigableSet(@androidx.annotation.RecentlyNonNull java.util.NavigableSet<T> s) { throw new RuntimeException("Stub!"); }
 
 /**
  * Returns an unmodifiable view of the specified list.  This method allows
@@ -672,8 +672,8 @@ public static <T> java.util.NavigableSet<T> unmodifiableNavigableSet(@android.an
  * @return an unmodifiable view of the specified list.
  */
 
-@android.annotation.NonNull
-public static <T> java.util.List<T> unmodifiableList(@android.annotation.NonNull java.util.List<? extends T> list) { throw new RuntimeException("Stub!"); }
+@androidx.annotation.RecentlyNonNull
+public static <T> java.util.List<T> unmodifiableList(@androidx.annotation.RecentlyNonNull java.util.List<? extends T> list) { throw new RuntimeException("Stub!"); }
 
 /**
  * Returns an unmodifiable view of the specified map.  This method
@@ -692,8 +692,8 @@ public static <T> java.util.List<T> unmodifiableList(@android.annotation.NonNull
  * @return an unmodifiable view of the specified map.
  */
 
-@android.annotation.NonNull
-public static <K, V> java.util.Map<K,V> unmodifiableMap(@android.annotation.NonNull java.util.Map<? extends K,? extends V> m) { throw new RuntimeException("Stub!"); }
+@androidx.annotation.RecentlyNonNull
+public static <K, V> java.util.Map<K,V> unmodifiableMap(@androidx.annotation.RecentlyNonNull java.util.Map<? extends K,? extends V> m) { throw new RuntimeException("Stub!"); }
 
 /**
  * Returns an unmodifiable view of the specified sorted map.  This method
@@ -714,8 +714,8 @@ public static <K, V> java.util.Map<K,V> unmodifiableMap(@android.annotation.NonN
  * @return an unmodifiable view of the specified sorted map.
  */
 
-@android.annotation.NonNull
-public static <K, V> java.util.SortedMap<K,V> unmodifiableSortedMap(@android.annotation.NonNull java.util.SortedMap<K,? extends V> m) { throw new RuntimeException("Stub!"); }
+@androidx.annotation.RecentlyNonNull
+public static <K, V> java.util.SortedMap<K,V> unmodifiableSortedMap(@androidx.annotation.RecentlyNonNull java.util.SortedMap<K,? extends V> m) { throw new RuntimeException("Stub!"); }
 
 /**
  * Returns an unmodifiable view of the specified navigable map.  This method
@@ -737,8 +737,8 @@ public static <K, V> java.util.SortedMap<K,V> unmodifiableSortedMap(@android.ann
  * @since 1.8
  */
 
-@android.annotation.NonNull
-public static <K, V> java.util.NavigableMap<K,V> unmodifiableNavigableMap(@android.annotation.NonNull java.util.NavigableMap<K,? extends V> m) { throw new RuntimeException("Stub!"); }
+@androidx.annotation.RecentlyNonNull
+public static <K, V> java.util.NavigableMap<K,V> unmodifiableNavigableMap(@androidx.annotation.RecentlyNonNull java.util.NavigableMap<K,? extends V> m) { throw new RuntimeException("Stub!"); }
 
 /**
  * Returns a synchronized (thread-safe) collection backed by the specified
@@ -774,8 +774,8 @@ public static <K, V> java.util.NavigableMap<K,V> unmodifiableNavigableMap(@andro
  * @return a synchronized view of the specified collection.
  */
 
-@android.annotation.NonNull
-public static <T> java.util.Collection<T> synchronizedCollection(@android.annotation.NonNull java.util.Collection<T> c) { throw new RuntimeException("Stub!"); }
+@androidx.annotation.RecentlyNonNull
+public static <T> java.util.Collection<T> synchronizedCollection(@androidx.annotation.RecentlyNonNull java.util.Collection<T> c) { throw new RuntimeException("Stub!"); }
 
 /**
  * Returns a synchronized (thread-safe) set backed by the specified
@@ -804,8 +804,8 @@ public static <T> java.util.Collection<T> synchronizedCollection(@android.annota
  * @return a synchronized view of the specified set.
  */
 
-@android.annotation.NonNull
-public static <T> java.util.Set<T> synchronizedSet(@android.annotation.NonNull java.util.Set<T> s) { throw new RuntimeException("Stub!"); }
+@androidx.annotation.RecentlyNonNull
+public static <T> java.util.Set<T> synchronizedSet(@androidx.annotation.RecentlyNonNull java.util.Set<T> s) { throw new RuntimeException("Stub!"); }
 
 /**
  * Returns a synchronized (thread-safe) sorted set backed by the specified
@@ -846,8 +846,8 @@ public static <T> java.util.Set<T> synchronizedSet(@android.annotation.NonNull j
  * @return a synchronized view of the specified sorted set.
  */
 
-@android.annotation.NonNull
-public static <T> java.util.SortedSet<T> synchronizedSortedSet(@android.annotation.NonNull java.util.SortedSet<T> s) { throw new RuntimeException("Stub!"); }
+@androidx.annotation.RecentlyNonNull
+public static <T> java.util.SortedSet<T> synchronizedSortedSet(@androidx.annotation.RecentlyNonNull java.util.SortedSet<T> s) { throw new RuntimeException("Stub!"); }
 
 /**
  * Returns a synchronized (thread-safe) navigable set backed by the
@@ -890,8 +890,8 @@ public static <T> java.util.SortedSet<T> synchronizedSortedSet(@android.annotati
  * @since 1.8
  */
 
-@android.annotation.NonNull
-public static <T> java.util.NavigableSet<T> synchronizedNavigableSet(@android.annotation.NonNull java.util.NavigableSet<T> s) { throw new RuntimeException("Stub!"); }
+@androidx.annotation.RecentlyNonNull
+public static <T> java.util.NavigableSet<T> synchronizedNavigableSet(@androidx.annotation.RecentlyNonNull java.util.NavigableSet<T> s) { throw new RuntimeException("Stub!"); }
 
 /**
  * Returns a synchronized (thread-safe) list backed by the specified
@@ -920,8 +920,8 @@ public static <T> java.util.NavigableSet<T> synchronizedNavigableSet(@android.an
  * @return a synchronized view of the specified list.
  */
 
-@android.annotation.NonNull
-public static <T> java.util.List<T> synchronizedList(@android.annotation.NonNull java.util.List<T> list) { throw new RuntimeException("Stub!"); }
+@androidx.annotation.RecentlyNonNull
+public static <T> java.util.List<T> synchronizedList(@androidx.annotation.RecentlyNonNull java.util.List<T> list) { throw new RuntimeException("Stub!"); }
 
 /**
  * Returns a synchronized (thread-safe) map backed by the specified
@@ -953,8 +953,8 @@ public static <T> java.util.List<T> synchronizedList(@android.annotation.NonNull
  * @return a synchronized view of the specified map.
  */
 
-@android.annotation.NonNull
-public static <K, V> java.util.Map<K,V> synchronizedMap(@android.annotation.NonNull java.util.Map<K,V> m) { throw new RuntimeException("Stub!"); }
+@androidx.annotation.RecentlyNonNull
+public static <K, V> java.util.Map<K,V> synchronizedMap(@androidx.annotation.RecentlyNonNull java.util.Map<K,V> m) { throw new RuntimeException("Stub!"); }
 
 /**
  * Returns a synchronized (thread-safe) sorted map backed by the specified
@@ -1001,8 +1001,8 @@ public static <K, V> java.util.Map<K,V> synchronizedMap(@android.annotation.NonN
  * @return a synchronized view of the specified sorted map.
  */
 
-@android.annotation.NonNull
-public static <K, V> java.util.SortedMap<K,V> synchronizedSortedMap(@android.annotation.NonNull java.util.SortedMap<K,V> m) { throw new RuntimeException("Stub!"); }
+@androidx.annotation.RecentlyNonNull
+public static <K, V> java.util.SortedMap<K,V> synchronizedSortedMap(@androidx.annotation.RecentlyNonNull java.util.SortedMap<K,V> m) { throw new RuntimeException("Stub!"); }
 
 /**
  * Returns a synchronized (thread-safe) navigable map backed by the
@@ -1051,8 +1051,8 @@ public static <K, V> java.util.SortedMap<K,V> synchronizedSortedMap(@android.ann
  * @since 1.8
  */
 
-@android.annotation.NonNull
-public static <K, V> java.util.NavigableMap<K,V> synchronizedNavigableMap(@android.annotation.NonNull java.util.NavigableMap<K,V> m) { throw new RuntimeException("Stub!"); }
+@androidx.annotation.RecentlyNonNull
+public static <K, V> java.util.NavigableMap<K,V> synchronizedNavigableMap(@androidx.annotation.RecentlyNonNull java.util.NavigableMap<K,V> m) { throw new RuntimeException("Stub!"); }
 
 /**
  * Returns a dynamically typesafe view of the specified collection.
@@ -1116,8 +1116,8 @@ public static <K, V> java.util.NavigableMap<K,V> synchronizedNavigableMap(@andro
  * @since 1.5
  */
 
-@android.annotation.NonNull
-public static <E> java.util.Collection<E> checkedCollection(@android.annotation.NonNull java.util.Collection<E> c, @android.annotation.NonNull java.lang.Class<E> type) { throw new RuntimeException("Stub!"); }
+@androidx.annotation.RecentlyNonNull
+public static <E> java.util.Collection<E> checkedCollection(@androidx.annotation.RecentlyNonNull java.util.Collection<E> c, @androidx.annotation.RecentlyNonNull java.lang.Class<E> type) { throw new RuntimeException("Stub!"); }
 
 /**
  * Returns a dynamically typesafe view of the specified queue.
@@ -1147,8 +1147,8 @@ public static <E> java.util.Collection<E> checkedCollection(@android.annotation.
  * @since 1.8
  */
 
-@android.annotation.NonNull
-public static <E> java.util.Queue<E> checkedQueue(@android.annotation.NonNull java.util.Queue<E> queue, @android.annotation.NonNull java.lang.Class<E> type) { throw new RuntimeException("Stub!"); }
+@androidx.annotation.RecentlyNonNull
+public static <E> java.util.Queue<E> checkedQueue(@androidx.annotation.RecentlyNonNull java.util.Queue<E> queue, @androidx.annotation.RecentlyNonNull java.lang.Class<E> type) { throw new RuntimeException("Stub!"); }
 
 /**
  * Returns a dynamically typesafe view of the specified set.
@@ -1178,8 +1178,8 @@ public static <E> java.util.Queue<E> checkedQueue(@android.annotation.NonNull ja
  * @since 1.5
  */
 
-@android.annotation.NonNull
-public static <E> java.util.Set<E> checkedSet(@android.annotation.NonNull java.util.Set<E> s, @android.annotation.NonNull java.lang.Class<E> type) { throw new RuntimeException("Stub!"); }
+@androidx.annotation.RecentlyNonNull
+public static <E> java.util.Set<E> checkedSet(@androidx.annotation.RecentlyNonNull java.util.Set<E> s, @androidx.annotation.RecentlyNonNull java.lang.Class<E> type) { throw new RuntimeException("Stub!"); }
 
 /**
  * Returns a dynamically typesafe view of the specified sorted set.
@@ -1210,8 +1210,8 @@ public static <E> java.util.Set<E> checkedSet(@android.annotation.NonNull java.u
  * @since 1.5
  */
 
-@android.annotation.NonNull
-public static <E> java.util.SortedSet<E> checkedSortedSet(@android.annotation.NonNull java.util.SortedSet<E> s, @android.annotation.NonNull java.lang.Class<E> type) { throw new RuntimeException("Stub!"); }
+@androidx.annotation.RecentlyNonNull
+public static <E> java.util.SortedSet<E> checkedSortedSet(@androidx.annotation.RecentlyNonNull java.util.SortedSet<E> s, @androidx.annotation.RecentlyNonNull java.lang.Class<E> type) { throw new RuntimeException("Stub!"); }
 
 /**
  * Returns a dynamically typesafe view of the specified navigable set.
@@ -1242,8 +1242,8 @@ public static <E> java.util.SortedSet<E> checkedSortedSet(@android.annotation.No
  * @since 1.8
  */
 
-@android.annotation.NonNull
-public static <E> java.util.NavigableSet<E> checkedNavigableSet(@android.annotation.NonNull java.util.NavigableSet<E> s, @android.annotation.NonNull java.lang.Class<E> type) { throw new RuntimeException("Stub!"); }
+@androidx.annotation.RecentlyNonNull
+public static <E> java.util.NavigableSet<E> checkedNavigableSet(@androidx.annotation.RecentlyNonNull java.util.NavigableSet<E> s, @androidx.annotation.RecentlyNonNull java.lang.Class<E> type) { throw new RuntimeException("Stub!"); }
 
 /**
  * Returns a dynamically typesafe view of the specified list.
@@ -1273,8 +1273,8 @@ public static <E> java.util.NavigableSet<E> checkedNavigableSet(@android.annotat
  * @since 1.5
  */
 
-@android.annotation.NonNull
-public static <E> java.util.List<E> checkedList(@android.annotation.NonNull java.util.List<E> list, @android.annotation.NonNull java.lang.Class<E> type) { throw new RuntimeException("Stub!"); }
+@androidx.annotation.RecentlyNonNull
+public static <E> java.util.List<E> checkedList(@androidx.annotation.RecentlyNonNull java.util.List<E> list, @androidx.annotation.RecentlyNonNull java.lang.Class<E> type) { throw new RuntimeException("Stub!"); }
 
 /**
  * Returns a dynamically typesafe view of the specified map.
@@ -1284,7 +1284,7 @@ public static <E> java.util.List<E> checkedList(@android.annotation.NonNull java
  * a key will result in an immediate {@link java.lang.ClassCastException ClassCastException},
  * whether the modification is attempted directly through the map
  * itself, or through a {@link java.util.Map.Entry Map.Entry} instance obtained from the
- * map's {@link java.util.Map#entrySet() Map#entrySet()} view.
+ * map's {@link java.util.Map#entrySet() entry set} view.
  *
  * <p>Assuming a map contains no incorrectly typed keys or values
  * prior to the time a dynamically typesafe view is generated, and
@@ -1313,8 +1313,8 @@ public static <E> java.util.List<E> checkedList(@android.annotation.NonNull java
  * @since 1.5
  */
 
-@android.annotation.NonNull
-public static <K, V> java.util.Map<K,V> checkedMap(@android.annotation.NonNull java.util.Map<K,V> m, @android.annotation.NonNull java.lang.Class<K> keyType, @android.annotation.NonNull java.lang.Class<V> valueType) { throw new RuntimeException("Stub!"); }
+@androidx.annotation.RecentlyNonNull
+public static <K, V> java.util.Map<K,V> checkedMap(@androidx.annotation.RecentlyNonNull java.util.Map<K,V> m, @androidx.annotation.RecentlyNonNull java.lang.Class<K> keyType, @androidx.annotation.RecentlyNonNull java.lang.Class<V> valueType) { throw new RuntimeException("Stub!"); }
 
 /**
  * Returns a dynamically typesafe view of the specified sorted map.
@@ -1324,7 +1324,7 @@ public static <K, V> java.util.Map<K,V> checkedMap(@android.annotation.NonNull j
  * a key will result in an immediate {@link java.lang.ClassCastException ClassCastException},
  * whether the modification is attempted directly through the map
  * itself, or through a {@link java.util.Map.Entry Map.Entry} instance obtained from the
- * map's {@link java.util.Map#entrySet() Map#entrySet()} view.
+ * map's {@link java.util.Map#entrySet() entry set} view.
  *
  * <p>Assuming a map contains no incorrectly typed keys or values
  * prior to the time a dynamically typesafe view is generated, and
@@ -1353,8 +1353,8 @@ public static <K, V> java.util.Map<K,V> checkedMap(@android.annotation.NonNull j
  * @since 1.5
  */
 
-@android.annotation.NonNull
-public static <K, V> java.util.SortedMap<K,V> checkedSortedMap(@android.annotation.NonNull java.util.SortedMap<K,V> m, @android.annotation.NonNull java.lang.Class<K> keyType, @android.annotation.NonNull java.lang.Class<V> valueType) { throw new RuntimeException("Stub!"); }
+@androidx.annotation.RecentlyNonNull
+public static <K, V> java.util.SortedMap<K,V> checkedSortedMap(@androidx.annotation.RecentlyNonNull java.util.SortedMap<K,V> m, @androidx.annotation.RecentlyNonNull java.lang.Class<K> keyType, @androidx.annotation.RecentlyNonNull java.lang.Class<V> valueType) { throw new RuntimeException("Stub!"); }
 
 /**
  * Returns a dynamically typesafe view of the specified navigable map.
@@ -1364,7 +1364,7 @@ public static <K, V> java.util.SortedMap<K,V> checkedSortedMap(@android.annotati
  * a key will result in an immediate {@link java.lang.ClassCastException ClassCastException},
  * whether the modification is attempted directly through the map
  * itself, or through a {@link java.util.Map.Entry Map.Entry} instance obtained from the
- * map's {@link java.util.Map#entrySet() Map#entrySet()} view.
+ * map's {@link java.util.Map#entrySet() entry set} view.
  *
  * <p>Assuming a map contains no incorrectly typed keys or values
  * prior to the time a dynamically typesafe view is generated, and
@@ -1393,17 +1393,17 @@ public static <K, V> java.util.SortedMap<K,V> checkedSortedMap(@android.annotati
  * @since 1.8
  */
 
-@android.annotation.NonNull
-public static <K, V> java.util.NavigableMap<K,V> checkedNavigableMap(@android.annotation.NonNull java.util.NavigableMap<K,V> m, @android.annotation.NonNull java.lang.Class<K> keyType, @android.annotation.NonNull java.lang.Class<V> valueType) { throw new RuntimeException("Stub!"); }
+@androidx.annotation.RecentlyNonNull
+public static <K, V> java.util.NavigableMap<K,V> checkedNavigableMap(@androidx.annotation.RecentlyNonNull java.util.NavigableMap<K,V> m, @androidx.annotation.RecentlyNonNull java.lang.Class<K> keyType, @androidx.annotation.RecentlyNonNull java.lang.Class<V> valueType) { throw new RuntimeException("Stub!"); }
 
 /**
  * Returns an iterator that has no elements.  More precisely,
  *
  * <ul>
- * <li>{@link java.util.Iterator#hasNext Iterator#hasNext} always returns {@code
+ * <li>{@link java.util.Iterator#hasNext hasNext} always returns {@code
  * false}.</li>
- * <li>{@link java.util.Iterator#next Iterator#next} always throws {@link java.util.NoSuchElementException NoSuchElementException}.</li>
- * <li>{@link java.util.Iterator#remove Iterator#remove} always throws {@link java.lang.IllegalStateException IllegalStateException}.</li>
+ * <li>{@link java.util.Iterator#next next} always throws {@link java.util.NoSuchElementException NoSuchElementException}.</li>
+ * <li>{@link java.util.Iterator#remove remove} always throws {@link java.lang.IllegalStateException IllegalStateException}.</li>
  * </ul>
  *
  * <p>Implementations of this method are permitted, but not
@@ -1414,21 +1414,21 @@ public static <K, V> java.util.NavigableMap<K,V> checkedNavigableMap(@android.an
  * @since 1.7
  */
 
-@android.annotation.NonNull
+@androidx.annotation.RecentlyNonNull
 public static <T> java.util.Iterator<T> emptyIterator() { throw new RuntimeException("Stub!"); }
 
 /**
  * Returns a list iterator that has no elements.  More precisely,
  *
  * <ul>
- * <li>{@link java.util.Iterator#hasNext Iterator#hasNext} and {@link java.util.ListIterator#hasPrevious ListIterator#hasPrevious} always return {@code
+ * <li>{@link java.util.Iterator#hasNext hasNext} and {@link java.util.ListIterator#hasPrevious hasPrevious} always return {@code
  * false}.</li>
- * <li>{@link java.util.Iterator#next Iterator#next} and {@link java.util.ListIterator#previous ListIterator#previous} always throw {@link java.util.NoSuchElementException NoSuchElementException}.</li>
- * <li>{@link java.util.Iterator#remove Iterator#remove} and {@link java.util.ListIterator#set ListIterator#set} always throw {@link java.lang.IllegalStateException IllegalStateException}.</li>
- * <li>{@link java.util.ListIterator#add ListIterator#add} always throws {@link java.lang.UnsupportedOperationException UnsupportedOperationException}.</li>
- * <li>{@link java.util.ListIterator#nextIndex ListIterator#nextIndex} always returns
+ * <li>{@link java.util.Iterator#next next} and {@link java.util.ListIterator#previous  previous} always throw {@link java.util.NoSuchElementException NoSuchElementException}.</li>
+ * <li>{@link java.util.Iterator#remove remove} and {@link java.util.ListIterator#set  set} always throw {@link java.lang.IllegalStateException IllegalStateException}.</li>
+ * <li>{@link java.util.ListIterator#add add} always throws {@link java.lang.UnsupportedOperationException UnsupportedOperationException}.</li>
+ * <li>{@link java.util.ListIterator#nextIndex nextIndex} always returns
  * {@code 0}.</li>
- * <li>{@link java.util.ListIterator#previousIndex ListIterator#previousIndex} always
+ * <li>{@link java.util.ListIterator#previousIndex previousIndex} always
  * returns {@code -1}.</li>
  * </ul>
  *
@@ -1440,16 +1440,16 @@ public static <T> java.util.Iterator<T> emptyIterator() { throw new RuntimeExcep
  * @since 1.7
  */
 
-@android.annotation.NonNull
+@androidx.annotation.RecentlyNonNull
 public static <T> java.util.ListIterator<T> emptyListIterator() { throw new RuntimeException("Stub!"); }
 
 /**
  * Returns an enumeration that has no elements.  More precisely,
  *
  * <ul>
- * <li>{@link java.util.Enumeration#hasMoreElements Enumeration#hasMoreElements} always
+ * <li>{@link java.util.Enumeration#hasMoreElements hasMoreElements} always
  * returns {@code false}.</li>
- * <li> {@link java.util.Enumeration#nextElement Enumeration#nextElement} always throws
+ * <li> {@link java.util.Enumeration#nextElement nextElement} always throws
  * {@link java.util.NoSuchElementException NoSuchElementException}.</li>
  * </ul>
  *
@@ -1461,7 +1461,7 @@ public static <T> java.util.ListIterator<T> emptyListIterator() { throw new Runt
  * @since 1.7
  */
 
-@android.annotation.NonNull
+@androidx.annotation.RecentlyNonNull
 public static <T> java.util.Enumeration<T> emptyEnumeration() { throw new RuntimeException("Stub!"); }
 
 /**
@@ -1484,7 +1484,7 @@ public static <T> java.util.Enumeration<T> emptyEnumeration() { throw new Runtim
  * @since 1.5
  */
 
-@android.annotation.NonNull
+@androidx.annotation.RecentlyNonNull
 public static final <T> java.util.Set<T> emptySet() { throw new RuntimeException("Stub!"); }
 
 /**
@@ -1504,7 +1504,7 @@ public static final <T> java.util.Set<T> emptySet() { throw new RuntimeException
  * @since 1.8
  */
 
-@android.annotation.NonNull
+@androidx.annotation.RecentlyNonNull
 public static <E> java.util.SortedSet<E> emptySortedSet() { throw new RuntimeException("Stub!"); }
 
 /**
@@ -1524,7 +1524,7 @@ public static <E> java.util.SortedSet<E> emptySortedSet() { throw new RuntimeExc
  * @since 1.8
  */
 
-@android.annotation.NonNull
+@androidx.annotation.RecentlyNonNull
 public static <E> java.util.NavigableSet<E> emptyNavigableSet() { throw new RuntimeException("Stub!"); }
 
 /**
@@ -1548,7 +1548,7 @@ public static <E> java.util.NavigableSet<E> emptyNavigableSet() { throw new Runt
  * @since 1.5
  */
 
-@android.annotation.NonNull
+@androidx.annotation.RecentlyNonNull
 public static final <T> java.util.List<T> emptyList() { throw new RuntimeException("Stub!"); }
 
 /**
@@ -1570,7 +1570,7 @@ public static final <T> java.util.List<T> emptyList() { throw new RuntimeExcepti
  * @since 1.5
  */
 
-@android.annotation.NonNull
+@androidx.annotation.RecentlyNonNull
 public static final <K, V> java.util.Map<K,V> emptyMap() { throw new RuntimeException("Stub!"); }
 
 /**
@@ -1590,7 +1590,7 @@ public static final <K, V> java.util.Map<K,V> emptyMap() { throw new RuntimeExce
  * @since 1.8
  */
 
-@android.annotation.NonNull
+@androidx.annotation.RecentlyNonNull
 public static final <K, V> java.util.SortedMap<K,V> emptySortedMap() { throw new RuntimeException("Stub!"); }
 
 /**
@@ -1610,7 +1610,7 @@ public static final <K, V> java.util.SortedMap<K,V> emptySortedMap() { throw new
  * @since 1.8
  */
 
-@android.annotation.NonNull
+@androidx.annotation.RecentlyNonNull
 public static final <K, V> java.util.NavigableMap<K,V> emptyNavigableMap() { throw new RuntimeException("Stub!"); }
 
 /**
@@ -1622,7 +1622,7 @@ public static final <K, V> java.util.NavigableMap<K,V> emptyNavigableMap() { thr
  * @return an immutable set containing only the specified object.
  */
 
-@android.annotation.NonNull
+@androidx.annotation.RecentlyNonNull
 public static <T> java.util.Set<T> singleton(T o) { throw new RuntimeException("Stub!"); }
 
 /**
@@ -1635,7 +1635,7 @@ public static <T> java.util.Set<T> singleton(T o) { throw new RuntimeException("
  * @since 1.3
  */
 
-@android.annotation.NonNull
+@androidx.annotation.RecentlyNonNull
 public static <T> java.util.List<T> singletonList(T o) { throw new RuntimeException("Stub!"); }
 
 /**
@@ -1651,7 +1651,7 @@ public static <T> java.util.List<T> singletonList(T o) { throw new RuntimeExcept
  * @since 1.3
  */
 
-@android.annotation.NonNull
+@androidx.annotation.RecentlyNonNull
 public static <K, V> java.util.Map<K,V> singletonMap(K key, V value) { throw new RuntimeException("Stub!"); }
 
 /**
@@ -1672,7 +1672,7 @@ public static <K, V> java.util.Map<K,V> singletonMap(K key, V value) { throw new
  * @see    java.util.List#addAll(int, Collection)
  */
 
-@android.annotation.NonNull
+@androidx.annotation.RecentlyNonNull
 public static <T> java.util.List<T> nCopies(int n, T o) { throw new RuntimeException("Stub!"); }
 
 /**
@@ -1696,7 +1696,7 @@ public static <T> java.util.List<T> nCopies(int n, T o) { throw new RuntimeExcep
  * @see java.lang.Comparable
  */
 
-@android.annotation.NonNull
+@androidx.annotation.RecentlyNonNull
 public static <T> java.util.Comparator<T> reverseOrder() { throw new RuntimeException("Stub!"); }
 
 /**
@@ -1717,8 +1717,8 @@ public static <T> java.util.Comparator<T> reverseOrder() { throw new RuntimeExce
  * @since 1.5
  */
 
-@android.annotation.NonNull
-public static <T> java.util.Comparator<T> reverseOrder(@android.annotation.Nullable java.util.Comparator<T> cmp) { throw new RuntimeException("Stub!"); }
+@androidx.annotation.RecentlyNonNull
+public static <T> java.util.Comparator<T> reverseOrder(@androidx.annotation.RecentlyNullable java.util.Comparator<T> cmp) { throw new RuntimeException("Stub!"); }
 
 /**
  * Returns an enumeration over the specified collection.  This provides
@@ -1731,8 +1731,8 @@ public static <T> java.util.Comparator<T> reverseOrder(@android.annotation.Nulla
  * @see java.util.Enumeration
  */
 
-@android.annotation.NonNull
-public static <T> java.util.Enumeration<T> enumeration(@android.annotation.NonNull java.util.Collection<T> c) { throw new RuntimeException("Stub!"); }
+@androidx.annotation.RecentlyNonNull
+public static <T> java.util.Enumeration<T> enumeration(@androidx.annotation.RecentlyNonNull java.util.Collection<T> c) { throw new RuntimeException("Stub!"); }
 
 /**
  * Returns an array list containing the elements returned by the
@@ -1751,8 +1751,8 @@ public static <T> java.util.Enumeration<T> enumeration(@android.annotation.NonNu
  * @see java.util.ArrayList
  */
 
-@android.annotation.NonNull
-public static <T> java.util.ArrayList<T> list(@android.annotation.NonNull java.util.Enumeration<T> e) { throw new RuntimeException("Stub!"); }
+@androidx.annotation.RecentlyNonNull
+public static <T> java.util.ArrayList<T> list(@androidx.annotation.RecentlyNonNull java.util.Enumeration<T> e) { throw new RuntimeException("Stub!"); }
 
 /**
  * Returns the number of elements in the specified collection equal to the
@@ -1768,7 +1768,7 @@ public static <T> java.util.ArrayList<T> list(@android.annotation.NonNull java.u
  * @since 1.5
  */
 
-public static int frequency(@android.annotation.NonNull java.util.Collection<?> c, @android.annotation.Nullable java.lang.Object o) { throw new RuntimeException("Stub!"); }
+public static int frequency(@androidx.annotation.RecentlyNonNull java.util.Collection<?> c, @androidx.annotation.RecentlyNullable java.lang.Object o) { throw new RuntimeException("Stub!"); }
 
 /**
  * Returns {@code true} if the two specified collections have no
@@ -1809,7 +1809,7 @@ public static int frequency(@android.annotation.NonNull java.util.Collection<?> 
  * @since 1.5
  */
 
-public static boolean disjoint(@android.annotation.NonNull java.util.Collection<?> c1, @android.annotation.NonNull java.util.Collection<?> c2) { throw new RuntimeException("Stub!"); }
+public static boolean disjoint(@androidx.annotation.RecentlyNonNull java.util.Collection<?> c1, @androidx.annotation.RecentlyNonNull java.util.Collection<?> c2) { throw new RuntimeException("Stub!"); }
 
 /**
  * Adds all of the specified elements to the specified collection.
@@ -1840,7 +1840,7 @@ public static boolean disjoint(@android.annotation.NonNull java.util.Collection<
  */
 
 @java.lang.SafeVarargs
-public static <T> boolean addAll(@android.annotation.NonNull java.util.Collection<? super T> c, @android.annotation.NonNull T... elements) { throw new RuntimeException("Stub!"); }
+public static <T> boolean addAll(@androidx.annotation.RecentlyNonNull java.util.Collection<? super T> c, @androidx.annotation.RecentlyNonNull T... elements) { throw new RuntimeException("Stub!"); }
 
 /**
  * Returns a set backed by the specified map.  The resulting set displays
@@ -1873,8 +1873,8 @@ public static <T> boolean addAll(@android.annotation.NonNull java.util.Collectio
  * @since 1.6
  */
 
-@android.annotation.NonNull
-public static <E> java.util.Set<E> newSetFromMap(@android.annotation.NonNull java.util.Map<E,java.lang.Boolean> map) { throw new RuntimeException("Stub!"); }
+@androidx.annotation.RecentlyNonNull
+public static <E> java.util.Set<E> newSetFromMap(@androidx.annotation.RecentlyNonNull java.util.Map<E,java.lang.Boolean> map) { throw new RuntimeException("Stub!"); }
 
 /**
  * Returns a view of a {@link java.util.Deque Deque} as a Last-in-first-out (Lifo)
@@ -1885,8 +1885,8 @@ public static <E> java.util.Set<E> newSetFromMap(@android.annotation.NonNull jav
  *
  * <p>Each method invocation on the queue returned by this method
  * results in exactly one method invocation on the backing deque, with
- * one exception.  The {@link java.util.Queue#addAll Queue#addAll} method is
- * implemented as a sequence of {@link java.util.Deque#addFirst Deque#addFirst}
+ * one exception.  The {@link java.util.Queue#addAll addAll} method is
+ * implemented as a sequence of {@link java.util.Deque#addFirst addFirst}
  * invocations on the backing deque.
  *
  * @param  <T> the class of the objects in the deque
@@ -1895,8 +1895,8 @@ public static <E> java.util.Set<E> newSetFromMap(@android.annotation.NonNull jav
  * @since  1.6
  */
 
-@android.annotation.NonNull
-public static <T> java.util.Queue<T> asLifoQueue(@android.annotation.NonNull java.util.Deque<T> deque) { throw new RuntimeException("Stub!"); }
+@androidx.annotation.RecentlyNonNull
+public static <T> java.util.Queue<T> asLifoQueue(@androidx.annotation.RecentlyNonNull java.util.Deque<T> deque) { throw new RuntimeException("Stub!"); }
 
 /**
  * The empty list (immutable).  This list is serializable.
@@ -1904,7 +1904,7 @@ public static <T> java.util.Queue<T> asLifoQueue(@android.annotation.NonNull jav
  * @see #emptyList()
  */
 
-@android.annotation.NonNull public static final java.util.List EMPTY_LIST;
+@androidx.annotation.RecentlyNonNull public static final java.util.List EMPTY_LIST;
 static { EMPTY_LIST = null; }
 
 /**
@@ -1914,7 +1914,7 @@ static { EMPTY_LIST = null; }
  * @since 1.3
  */
 
-@android.annotation.NonNull public static final java.util.Map EMPTY_MAP;
+@androidx.annotation.RecentlyNonNull public static final java.util.Map EMPTY_MAP;
 static { EMPTY_MAP = null; }
 
 /**
@@ -1923,7 +1923,7 @@ static { EMPTY_MAP = null; }
  * @see #emptySet()
  */
 
-@android.annotation.NonNull public static final java.util.Set EMPTY_SET;
+@androidx.annotation.RecentlyNonNull public static final java.util.Set EMPTY_SET;
 static { EMPTY_SET = null; }
 }
 

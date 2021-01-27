@@ -57,7 +57,7 @@ public ExtendedSSLSession() { throw new RuntimeException("Stub!"); }
  * <p>
  * Note: the local supported signature algorithms should conform to
  * the algorithm constraints specified by
- * {@link javax.net.ssl.SSLParameters#getAlgorithmConstraints SSLParameters#getAlgorithmConstraints}
+ * {@link javax.net.ssl.SSLParameters#getAlgorithmConstraints getAlgorithmConstraints()}
  * method in <code>SSLParameters</code>.
  *
  * @return An array of supported signature algorithms, in descending

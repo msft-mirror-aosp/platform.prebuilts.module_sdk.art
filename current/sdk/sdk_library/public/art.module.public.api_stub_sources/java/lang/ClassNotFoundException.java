@@ -43,7 +43,7 @@ package java.lang;
  * the general purpose exception-chaining mechanism.  The "optional exception
  * that was raised while loading the class" that may be provided at
  * construction time and accessed via the {@link #getException()} method is
- * now known as the <i>cause</i>, and may be accessed via the {@link java.lang.Throwable#getCause() Throwable#getCause()} method, as well as the aforementioned "legacy method."
+ * now known as the <i>cause</i>, and may be accessed via the {@link java.lang.Throwable#getCause()  } method, as well as the aforementioned "legacy method."
  *
  * @author  unascribed
  * @see     java.lang.Class#forName(java.lang.String)

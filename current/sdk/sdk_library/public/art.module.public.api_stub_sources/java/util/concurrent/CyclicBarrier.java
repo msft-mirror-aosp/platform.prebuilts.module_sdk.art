@@ -184,9 +184,9 @@ public int getParties() { throw new RuntimeException("Stub!"); }
  * one of the following things happens:
  * <ul>
  * <li>The last thread arrives; or
- * <li>Some other thread {@linkplain java.lang.Thread#interrupt Thread#interrupt}
+ * <li>Some other thread {@linkplain java.lang.Thread#interrupt interrupts}
  * the current thread; or
- * <li>Some other thread {@linkplain java.lang.Thread#interrupt Thread#interrupt}
+ * <li>Some other thread {@linkplain java.lang.Thread#interrupt interrupts}
  * one of the other waiting threads; or
  * <li>Some other thread times out while waiting for barrier; or
  * <li>Some other thread invokes {@link #reset} on this barrier.
@@ -195,7 +195,7 @@ public int getParties() { throw new RuntimeException("Stub!"); }
  * <p>If the current thread:
  * <ul>
  * <li>has its interrupted status set on entry to this method; or
- * <li>is {@linkplain java.lang.Thread#interrupt Thread#interrupt} while waiting
+ * <li>is {@linkplain java.lang.Thread#interrupt interrupted} while waiting
  * </ul>
  * then {@link java.lang.InterruptedException InterruptedException} is thrown and the current thread's
  * interrupted status is cleared.
@@ -205,7 +205,7 @@ public int getParties() { throw new RuntimeException("Stub!"); }
  * {@code await} is invoked, or while any thread is waiting, then
  * {@link java.util.concurrent.BrokenBarrierException BrokenBarrierException} is thrown.
  *
- * <p>If any thread is {@linkplain java.lang.Thread#interrupt Thread#interrupt} while waiting,
+ * <p>If any thread is {@linkplain java.lang.Thread#interrupt interrupted} while waiting,
  * then all other waiting threads will throw
  * {@link java.util.concurrent.BrokenBarrierException BrokenBarrierException} and the barrier is placed in the broken
  * state.
@@ -242,9 +242,9 @@ public int await() throws java.util.concurrent.BrokenBarrierException, java.lang
  * <ul>
  * <li>The last thread arrives; or
  * <li>The specified timeout elapses; or
- * <li>Some other thread {@linkplain java.lang.Thread#interrupt Thread#interrupt}
+ * <li>Some other thread {@linkplain java.lang.Thread#interrupt interrupts}
  * the current thread; or
- * <li>Some other thread {@linkplain java.lang.Thread#interrupt Thread#interrupt}
+ * <li>Some other thread {@linkplain java.lang.Thread#interrupt interrupts}
  * one of the other waiting threads; or
  * <li>Some other thread times out while waiting for barrier; or
  * <li>Some other thread invokes {@link #reset} on this barrier.
@@ -253,7 +253,7 @@ public int await() throws java.util.concurrent.BrokenBarrierException, java.lang
  * <p>If the current thread:
  * <ul>
  * <li>has its interrupted status set on entry to this method; or
- * <li>is {@linkplain java.lang.Thread#interrupt Thread#interrupt} while waiting
+ * <li>is {@linkplain java.lang.Thread#interrupt interrupted} while waiting
  * </ul>
  * then {@link java.lang.InterruptedException InterruptedException} is thrown and the current thread's
  * interrupted status is cleared.
@@ -267,7 +267,7 @@ public int await() throws java.util.concurrent.BrokenBarrierException, java.lang
  * {@code await} is invoked, or while any thread is waiting, then
  * {@link java.util.concurrent.BrokenBarrierException BrokenBarrierException} is thrown.
  *
- * <p>If any thread is {@linkplain java.lang.Thread#interrupt Thread#interrupt} while
+ * <p>If any thread is {@linkplain java.lang.Thread#interrupt interrupted} while
  * waiting, then all other waiting threads will throw {@link java.util.concurrent.BrokenBarrierException BrokenBarrierException} and the barrier is placed in the broken
  * state.
  *

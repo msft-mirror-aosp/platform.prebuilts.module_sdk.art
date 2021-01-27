@@ -136,7 +136,7 @@ public abstract class MessageDigest extends java.security.MessageDigestSpi {
  * for information about standard algorithm names.
  */
 
-protected MessageDigest(@android.annotation.NonNull java.lang.String algorithm) { throw new RuntimeException("Stub!"); }
+protected MessageDigest(@androidx.annotation.RecentlyNonNull java.lang.String algorithm) { throw new RuntimeException("Stub!"); }
 
 /**
  * Returns a MessageDigest object that implements the specified digest
@@ -149,7 +149,7 @@ protected MessageDigest(@android.annotation.NonNull java.lang.String algorithm) 
  * Provider that supports the specified algorithm is returned.
  *
  * <p> Note that the list of registered providers may be retrieved via
- * the {@link java.security.Security#getProviders() Security#getProviders()} method.
+ * the {@link java.security.Security#getProviders() Security.getProviders()} method.
  *
  * @param algorithm the name of the algorithm requested.
  * See the MessageDigest section in the <a href=
@@ -166,8 +166,8 @@ protected MessageDigest(@android.annotation.NonNull java.lang.String algorithm) 
  * @see java.security.Provider
  */
 
-@android.annotation.NonNull
-public static java.security.MessageDigest getInstance(@android.annotation.NonNull java.lang.String algorithm) throws java.security.NoSuchAlgorithmException { throw new RuntimeException("Stub!"); }
+@androidx.annotation.RecentlyNonNull
+public static java.security.MessageDigest getInstance(@androidx.annotation.RecentlyNonNull java.lang.String algorithm) throws java.security.NoSuchAlgorithmException { throw new RuntimeException("Stub!"); }
 
 /**
  * Returns a MessageDigest object that implements the specified digest
@@ -179,7 +179,7 @@ public static java.security.MessageDigest getInstance(@android.annotation.NonNul
  * in the security provider list.
  *
  * <p> Note that the list of registered providers may be retrieved via
- * the {@link java.security.Security#getProviders() Security#getProviders()} method.
+ * the {@link java.security.Security#getProviders() Security.getProviders()} method.
  *
  * @param algorithm the name of the algorithm requested.
  * See the MessageDigest section in the <a href=
@@ -204,8 +204,8 @@ public static java.security.MessageDigest getInstance(@android.annotation.NonNul
  * @see java.security.Provider
  */
 
-@android.annotation.NonNull
-public static java.security.MessageDigest getInstance(@android.annotation.NonNull java.lang.String algorithm, @android.annotation.NonNull java.lang.String provider) throws java.security.NoSuchAlgorithmException, java.security.NoSuchProviderException { throw new RuntimeException("Stub!"); }
+@androidx.annotation.RecentlyNonNull
+public static java.security.MessageDigest getInstance(@androidx.annotation.RecentlyNonNull java.lang.String algorithm, @androidx.annotation.RecentlyNonNull java.lang.String provider) throws java.security.NoSuchAlgorithmException, java.security.NoSuchProviderException { throw new RuntimeException("Stub!"); }
 
 /**
  * Returns a MessageDigest object that implements the specified digest
@@ -237,8 +237,8 @@ public static java.security.MessageDigest getInstance(@android.annotation.NonNul
  * @since 1.4
  */
 
-@android.annotation.NonNull
-public static java.security.MessageDigest getInstance(@android.annotation.NonNull java.lang.String algorithm, @android.annotation.NonNull java.security.Provider provider) throws java.security.NoSuchAlgorithmException { throw new RuntimeException("Stub!"); }
+@androidx.annotation.RecentlyNonNull
+public static java.security.MessageDigest getInstance(@androidx.annotation.RecentlyNonNull java.lang.String algorithm, @androidx.annotation.RecentlyNonNull java.security.Provider provider) throws java.security.NoSuchAlgorithmException { throw new RuntimeException("Stub!"); }
 
 /**
  * Returns the provider of this message digest object.
@@ -246,7 +246,7 @@ public static java.security.MessageDigest getInstance(@android.annotation.NonNul
  * @return the provider of this message digest object
  */
 
-@android.annotation.NonNull
+@androidx.annotation.RecentlyNonNull
 public final java.security.Provider getProvider() { throw new RuntimeException("Stub!"); }
 
 /**
@@ -269,7 +269,7 @@ public void update(byte input) { throw new RuntimeException("Stub!"); }
  * {@code offset}.
  */
 
-public void update(@android.annotation.NonNull byte[] input, int offset, int len) { throw new RuntimeException("Stub!"); }
+public void update(@androidx.annotation.RecentlyNonNull byte[] input, int offset, int len) { throw new RuntimeException("Stub!"); }
 
 /**
  * Updates the digest using the specified array of bytes.
@@ -277,7 +277,7 @@ public void update(@android.annotation.NonNull byte[] input, int offset, int len
  * @param input the array of bytes.
  */
 
-public void update(@android.annotation.NonNull byte[] input) { throw new RuntimeException("Stub!"); }
+public void update(@androidx.annotation.RecentlyNonNull byte[] input) { throw new RuntimeException("Stub!"); }
 
 /**
  * Update the digest using the specified ByteBuffer. The digest is
@@ -290,7 +290,7 @@ public void update(@android.annotation.NonNull byte[] input) { throw new Runtime
  * @since 1.5
  */
 
-public final void update(@android.annotation.NonNull java.nio.ByteBuffer input) { throw new RuntimeException("Stub!"); }
+public final void update(@androidx.annotation.RecentlyNonNull java.nio.ByteBuffer input) { throw new RuntimeException("Stub!"); }
 
 /**
  * Completes the hash computation by performing final operations
@@ -299,7 +299,7 @@ public final void update(@android.annotation.NonNull java.nio.ByteBuffer input) 
  * @return the array of bytes for the resulting hash value.
  */
 
-@android.annotation.NonNull
+@androidx.annotation.RecentlyNonNull
 public byte[] digest() { throw new RuntimeException("Stub!"); }
 
 /**
@@ -317,7 +317,7 @@ public byte[] digest() { throw new RuntimeException("Stub!"); }
  * @exception java.security.DigestException if an error occurs.
  */
 
-public int digest(@android.annotation.NonNull byte[] buf, int offset, int len) throws java.security.DigestException { throw new RuntimeException("Stub!"); }
+public int digest(@androidx.annotation.RecentlyNonNull byte[] buf, int offset, int len) throws java.security.DigestException { throw new RuntimeException("Stub!"); }
 
 /**
  * Performs a final update on the digest using the specified array
@@ -332,14 +332,14 @@ public int digest(@android.annotation.NonNull byte[] buf, int offset, int len) t
  * @return the array of bytes for the resulting hash value.
  */
 
-@android.annotation.NonNull
-public byte[] digest(@android.annotation.NonNull byte[] input) { throw new RuntimeException("Stub!"); }
+@androidx.annotation.RecentlyNonNull
+public byte[] digest(@androidx.annotation.RecentlyNonNull byte[] input) { throw new RuntimeException("Stub!"); }
 
 /**
  * Returns a string representation of this message digest object.
  */
 
-@android.annotation.NonNull
+@androidx.annotation.RecentlyNonNull
 public java.lang.String toString() { throw new RuntimeException("Stub!"); }
 
 /**
@@ -352,7 +352,7 @@ public java.lang.String toString() { throw new RuntimeException("Stub!"); }
  * @return true if the digests are equal, false otherwise.
  */
 
-public static boolean isEqual(@android.annotation.Nullable byte[] digesta, @android.annotation.Nullable byte[] digestb) { throw new RuntimeException("Stub!"); }
+public static boolean isEqual(@androidx.annotation.RecentlyNullable byte[] digesta, @androidx.annotation.RecentlyNullable byte[] digestb) { throw new RuntimeException("Stub!"); }
 
 /**
  * Resets the digest for further use.
@@ -372,7 +372,7 @@ public void reset() { throw new RuntimeException("Stub!"); }
  * @return the name of the algorithm
  */
 
-@android.annotation.NonNull
+@androidx.annotation.RecentlyNonNull
 public final java.lang.String getAlgorithm() { throw new RuntimeException("Stub!"); }
 
 /**
@@ -396,7 +396,7 @@ public final int getDigestLength() { throw new RuntimeException("Stub!"); }
  * implementation that does not support {@code Cloneable}.
  */
 
-@android.annotation.NonNull
+@androidx.annotation.RecentlyNonNull
 public java.lang.Object clone() throws java.lang.CloneNotSupportedException { throw new RuntimeException("Stub!"); }
 }
 

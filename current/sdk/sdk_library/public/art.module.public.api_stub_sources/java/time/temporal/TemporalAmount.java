@@ -168,7 +168,7 @@ public java.util.List<java.time.temporal.TemporalUnit> getUnits();
  * <p>
  * The input temporal object may be in a calendar system other than ISO.
  * Implementations may choose to document compatibility with other calendar systems,
- * or reject non-ISO temporal objects by {@link java.time.temporal.TemporalQueries#chronology() TemporalQueries#chronology()}.
+ * or reject non-ISO temporal objects by {@link java.time.temporal.TemporalQueries#chronology() querying the chronology}.
  * <p>
  * This method may be called from multiple threads in parallel.
  * It must be thread-safe when invoked.
@@ -211,7 +211,7 @@ public java.time.temporal.Temporal addTo(java.time.temporal.Temporal temporal);
  * <p>
  * The input temporal object may be in a calendar system other than ISO.
  * Implementations may choose to document compatibility with other calendar systems,
- * or reject non-ISO temporal objects by {@link java.time.temporal.TemporalQueries#chronology() TemporalQueries#chronology()}.
+ * or reject non-ISO temporal objects by {@link java.time.temporal.TemporalQueries#chronology() querying the chronology}.
  * <p>
  * This method may be called from multiple threads in parallel.
  * It must be thread-safe when invoked.

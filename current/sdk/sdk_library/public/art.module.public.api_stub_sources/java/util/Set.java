@@ -66,7 +66,7 @@ package java.util;
  * interface.
  *
  * <h2><a id="immutable">Immutable Set Static Factory Methods</a></h2>
- * <p>The {@link java.util.Set#of(java.lang.Object...) Set#of(Object...)} static factory methods
+ * <p>The {@link java.util.Set#of(java.lang.Object...) Set.of()} static factory methods
  * provide a convenient way to create immutable sets. The {@code Set}
  * instances created by these methods have the following characteristics:
  *
@@ -148,7 +148,7 @@ public boolean isEmpty();
  * (<a href="Collection.html#optional-restrictions">optional</a>)
  */
 
-public boolean contains(@android.annotation.Nullable java.lang.Object o);
+public boolean contains(@androidx.annotation.RecentlyNullable java.lang.Object o);
 
 /**
  * Returns an iterator over the elements in this set.  The elements are
@@ -158,7 +158,7 @@ public boolean contains(@android.annotation.Nullable java.lang.Object o);
  * @return an iterator over the elements in this set
  */
 
-@android.annotation.NonNull
+@androidx.annotation.RecentlyNonNull
 public java.util.Iterator<E> iterator();
 
 /**
@@ -178,7 +178,7 @@ public java.util.Iterator<E> iterator();
  * @return an array containing all the elements in this set
  */
 
-@android.annotation.NonNull
+@androidx.annotation.RecentlyNonNull
 public java.lang.Object[] toArray();
 
 /**
@@ -224,8 +224,8 @@ public java.lang.Object[] toArray();
  * @throws java.lang.NullPointerException if the specified array is null
  */
 
-@android.annotation.NonNull
-public <T> T[] toArray(@android.annotation.NonNull T[] a);
+@androidx.annotation.RecentlyNonNull
+public <T> T[] toArray(@androidx.annotation.RecentlyNonNull T[] a);
 
 /**
  * Adds the specified element to this set if it is not already present
@@ -241,7 +241,7 @@ public <T> T[] toArray(@android.annotation.NonNull T[] a);
  * <p>The stipulation above does not imply that sets must accept all
  * elements; sets may refuse to add any particular element, including
  * {@code null}, and throw an exception, as described in the
- * specification for {@link java.util.Collection#add Collection#add}.
+ * specification for {@link java.util.Collection#add Collection.add}.
  * Individual set implementations should clearly document any
  * restrictions on the elements that they may contain.
  *
@@ -282,7 +282,7 @@ public boolean add(E e);
  *         is not supported by this set
  */
 
-public boolean remove(@android.annotation.Nullable java.lang.Object o);
+public boolean remove(@androidx.annotation.RecentlyNullable java.lang.Object o);
 
 /**
  * Returns {@code true} if this set contains all of the elements of the
@@ -304,7 +304,7 @@ public boolean remove(@android.annotation.Nullable java.lang.Object o);
  * @see    #contains(Object)
  */
 
-public boolean containsAll(@android.annotation.NonNull java.util.Collection<?> c);
+public boolean containsAll(@androidx.annotation.RecentlyNonNull java.util.Collection<?> c);
 
 /**
  * Adds all of the elements in the specified collection to this set if
@@ -329,7 +329,7 @@ public boolean containsAll(@android.annotation.NonNull java.util.Collection<?> c
  * @see #add(Object)
  */
 
-public boolean addAll(@android.annotation.NonNull java.util.Collection<? extends E> c);
+public boolean addAll(@androidx.annotation.RecentlyNonNull java.util.Collection<? extends E> c);
 
 /**
  * Retains only the elements in this set that are contained in the
@@ -353,7 +353,7 @@ public boolean addAll(@android.annotation.NonNull java.util.Collection<? extends
  * @see #remove(Object)
  */
 
-public boolean retainAll(@android.annotation.NonNull java.util.Collection<?> c);
+public boolean retainAll(@androidx.annotation.RecentlyNonNull java.util.Collection<?> c);
 
 /**
  * Removes from this set all of its elements that are contained in the
@@ -377,7 +377,7 @@ public boolean retainAll(@android.annotation.NonNull java.util.Collection<?> c);
  * @see #contains(Object)
  */
 
-public boolean removeAll(@android.annotation.NonNull java.util.Collection<?> c);
+public boolean removeAll(@androidx.annotation.RecentlyNonNull java.util.Collection<?> c);
 
 /**
  * Removes all of the elements from this set (optional operation).
@@ -402,7 +402,7 @@ public void clear();
  * @return {@code true} if the specified object is equal to this set
  */
 
-public boolean equals(@android.annotation.Nullable java.lang.Object o);
+public boolean equals(@androidx.annotation.RecentlyNullable java.lang.Object o);
 
 /**
  * Returns the hash code value for this set.  The hash code of a set is
@@ -444,7 +444,7 @@ public int hashCode();
  * @since 1.8
  */
 
-@android.annotation.NonNull
+@androidx.annotation.RecentlyNonNull
 public default java.util.Spliterator<E> spliterator() { throw new RuntimeException("Stub!"); }
 
 /**
@@ -457,7 +457,7 @@ public default java.util.Spliterator<E> spliterator() { throw new RuntimeExcepti
  * @since 9
  */
 
-@android.annotation.NonNull
+@androidx.annotation.RecentlyNonNull
 public static <E> java.util.Set<E> of() { throw new RuntimeException("Stub!"); }
 
 /**
@@ -472,8 +472,8 @@ public static <E> java.util.Set<E> of() { throw new RuntimeException("Stub!"); }
  * @since 9
  */
 
-@android.annotation.NonNull
-public static <E> java.util.Set<E> of(@android.annotation.NonNull E e1) { throw new RuntimeException("Stub!"); }
+@androidx.annotation.RecentlyNonNull
+public static <E> java.util.Set<E> of(@androidx.annotation.RecentlyNonNull E e1) { throw new RuntimeException("Stub!"); }
 
 /**
  * Returns an immutable set containing two elements.
@@ -489,8 +489,8 @@ public static <E> java.util.Set<E> of(@android.annotation.NonNull E e1) { throw 
  * @since 9
  */
 
-@android.annotation.NonNull
-public static <E> java.util.Set<E> of(@android.annotation.NonNull E e1, @android.annotation.NonNull E e2) { throw new RuntimeException("Stub!"); }
+@androidx.annotation.RecentlyNonNull
+public static <E> java.util.Set<E> of(@androidx.annotation.RecentlyNonNull E e1, @androidx.annotation.RecentlyNonNull E e2) { throw new RuntimeException("Stub!"); }
 
 /**
  * Returns an immutable set containing three elements.
@@ -507,8 +507,8 @@ public static <E> java.util.Set<E> of(@android.annotation.NonNull E e1, @android
  * @since 9
  */
 
-@android.annotation.NonNull
-public static <E> java.util.Set<E> of(@android.annotation.NonNull E e1, @android.annotation.NonNull E e2, @android.annotation.NonNull E e3) { throw new RuntimeException("Stub!"); }
+@androidx.annotation.RecentlyNonNull
+public static <E> java.util.Set<E> of(@androidx.annotation.RecentlyNonNull E e1, @androidx.annotation.RecentlyNonNull E e2, @androidx.annotation.RecentlyNonNull E e3) { throw new RuntimeException("Stub!"); }
 
 /**
  * Returns an immutable set containing four elements.
@@ -526,8 +526,8 @@ public static <E> java.util.Set<E> of(@android.annotation.NonNull E e1, @android
  * @since 9
  */
 
-@android.annotation.NonNull
-public static <E> java.util.Set<E> of(@android.annotation.NonNull E e1, @android.annotation.NonNull E e2, @android.annotation.NonNull E e3, @android.annotation.NonNull E e4) { throw new RuntimeException("Stub!"); }
+@androidx.annotation.RecentlyNonNull
+public static <E> java.util.Set<E> of(@androidx.annotation.RecentlyNonNull E e1, @androidx.annotation.RecentlyNonNull E e2, @androidx.annotation.RecentlyNonNull E e3, @androidx.annotation.RecentlyNonNull E e4) { throw new RuntimeException("Stub!"); }
 
 /**
  * Returns an immutable set containing five elements.
@@ -546,8 +546,8 @@ public static <E> java.util.Set<E> of(@android.annotation.NonNull E e1, @android
  * @since 9
  */
 
-@android.annotation.NonNull
-public static <E> java.util.Set<E> of(@android.annotation.NonNull E e1, @android.annotation.NonNull E e2, @android.annotation.NonNull E e3, @android.annotation.NonNull E e4, @android.annotation.NonNull E e5) { throw new RuntimeException("Stub!"); }
+@androidx.annotation.RecentlyNonNull
+public static <E> java.util.Set<E> of(@androidx.annotation.RecentlyNonNull E e1, @androidx.annotation.RecentlyNonNull E e2, @androidx.annotation.RecentlyNonNull E e3, @androidx.annotation.RecentlyNonNull E e4, @androidx.annotation.RecentlyNonNull E e5) { throw new RuntimeException("Stub!"); }
 
 /**
  * Returns an immutable set containing six elements.
@@ -567,8 +567,8 @@ public static <E> java.util.Set<E> of(@android.annotation.NonNull E e1, @android
  * @since 9
  */
 
-@android.annotation.NonNull
-public static <E> java.util.Set<E> of(@android.annotation.NonNull E e1, @android.annotation.NonNull E e2, @android.annotation.NonNull E e3, @android.annotation.NonNull E e4, @android.annotation.NonNull E e5, @android.annotation.NonNull E e6) { throw new RuntimeException("Stub!"); }
+@androidx.annotation.RecentlyNonNull
+public static <E> java.util.Set<E> of(@androidx.annotation.RecentlyNonNull E e1, @androidx.annotation.RecentlyNonNull E e2, @androidx.annotation.RecentlyNonNull E e3, @androidx.annotation.RecentlyNonNull E e4, @androidx.annotation.RecentlyNonNull E e5, @androidx.annotation.RecentlyNonNull E e6) { throw new RuntimeException("Stub!"); }
 
 /**
  * Returns an immutable set containing seven elements.
@@ -589,8 +589,8 @@ public static <E> java.util.Set<E> of(@android.annotation.NonNull E e1, @android
  * @since 9
  */
 
-@android.annotation.NonNull
-public static <E> java.util.Set<E> of(@android.annotation.NonNull E e1, @android.annotation.NonNull E e2, @android.annotation.NonNull E e3, @android.annotation.NonNull E e4, @android.annotation.NonNull E e5, @android.annotation.NonNull E e6, @android.annotation.NonNull E e7) { throw new RuntimeException("Stub!"); }
+@androidx.annotation.RecentlyNonNull
+public static <E> java.util.Set<E> of(@androidx.annotation.RecentlyNonNull E e1, @androidx.annotation.RecentlyNonNull E e2, @androidx.annotation.RecentlyNonNull E e3, @androidx.annotation.RecentlyNonNull E e4, @androidx.annotation.RecentlyNonNull E e5, @androidx.annotation.RecentlyNonNull E e6, @androidx.annotation.RecentlyNonNull E e7) { throw new RuntimeException("Stub!"); }
 
 /**
  * Returns an immutable set containing eight elements.
@@ -612,8 +612,8 @@ public static <E> java.util.Set<E> of(@android.annotation.NonNull E e1, @android
  * @since 9
  */
 
-@android.annotation.NonNull
-public static <E> java.util.Set<E> of(@android.annotation.NonNull E e1, @android.annotation.NonNull E e2, @android.annotation.NonNull E e3, @android.annotation.NonNull E e4, @android.annotation.NonNull E e5, @android.annotation.NonNull E e6, @android.annotation.NonNull E e7, @android.annotation.NonNull E e8) { throw new RuntimeException("Stub!"); }
+@androidx.annotation.RecentlyNonNull
+public static <E> java.util.Set<E> of(@androidx.annotation.RecentlyNonNull E e1, @androidx.annotation.RecentlyNonNull E e2, @androidx.annotation.RecentlyNonNull E e3, @androidx.annotation.RecentlyNonNull E e4, @androidx.annotation.RecentlyNonNull E e5, @androidx.annotation.RecentlyNonNull E e6, @androidx.annotation.RecentlyNonNull E e7, @androidx.annotation.RecentlyNonNull E e8) { throw new RuntimeException("Stub!"); }
 
 /**
  * Returns an immutable set containing nine elements.
@@ -636,8 +636,8 @@ public static <E> java.util.Set<E> of(@android.annotation.NonNull E e1, @android
  * @since 9
  */
 
-@android.annotation.NonNull
-public static <E> java.util.Set<E> of(@android.annotation.NonNull E e1, @android.annotation.NonNull E e2, @android.annotation.NonNull E e3, @android.annotation.NonNull E e4, @android.annotation.NonNull E e5, @android.annotation.NonNull E e6, @android.annotation.NonNull E e7, @android.annotation.NonNull E e8, @android.annotation.NonNull E e9) { throw new RuntimeException("Stub!"); }
+@androidx.annotation.RecentlyNonNull
+public static <E> java.util.Set<E> of(@androidx.annotation.RecentlyNonNull E e1, @androidx.annotation.RecentlyNonNull E e2, @androidx.annotation.RecentlyNonNull E e3, @androidx.annotation.RecentlyNonNull E e4, @androidx.annotation.RecentlyNonNull E e5, @androidx.annotation.RecentlyNonNull E e6, @androidx.annotation.RecentlyNonNull E e7, @androidx.annotation.RecentlyNonNull E e8, @androidx.annotation.RecentlyNonNull E e9) { throw new RuntimeException("Stub!"); }
 
 /**
  * Returns an immutable set containing ten elements.
@@ -661,8 +661,8 @@ public static <E> java.util.Set<E> of(@android.annotation.NonNull E e1, @android
  * @since 9
  */
 
-@android.annotation.NonNull
-public static <E> java.util.Set<E> of(@android.annotation.NonNull E e1, @android.annotation.NonNull E e2, @android.annotation.NonNull E e3, @android.annotation.NonNull E e4, @android.annotation.NonNull E e5, @android.annotation.NonNull E e6, @android.annotation.NonNull E e7, @android.annotation.NonNull E e8, @android.annotation.NonNull E e9, @android.annotation.NonNull E e10) { throw new RuntimeException("Stub!"); }
+@androidx.annotation.RecentlyNonNull
+public static <E> java.util.Set<E> of(@androidx.annotation.RecentlyNonNull E e1, @androidx.annotation.RecentlyNonNull E e2, @androidx.annotation.RecentlyNonNull E e3, @androidx.annotation.RecentlyNonNull E e4, @androidx.annotation.RecentlyNonNull E e5, @androidx.annotation.RecentlyNonNull E e6, @androidx.annotation.RecentlyNonNull E e7, @androidx.annotation.RecentlyNonNull E e8, @androidx.annotation.RecentlyNonNull E e9, @androidx.annotation.RecentlyNonNull E e10) { throw new RuntimeException("Stub!"); }
 
 /**
  * Returns an immutable set containing an arbitrary number of elements.
@@ -679,7 +679,7 @@ public static <E> java.util.Set<E> of(@android.annotation.NonNull E e1, @android
  *     Set<String[]> list = Set.<String[]>of(array);
  * }</pre>
  *
- * This will cause the {@link java.util.Set#of(java.lang.Object) Set#of(Object)} method
+ * This will cause the {@link java.util.Set#of(java.lang.Object) Set.of(E)} method
  * to be invoked instead.
  *
  * @param <E> the {@code Set}'s element type
@@ -691,8 +691,28 @@ public static <E> java.util.Set<E> of(@android.annotation.NonNull E e1, @android
  * @since 9
  */
 
-@android.annotation.NonNull
+@androidx.annotation.RecentlyNonNull
 @java.lang.SafeVarargs
-public static <E> java.util.Set<E> of(@android.annotation.NonNull E... elements) { throw new RuntimeException("Stub!"); }
+public static <E> java.util.Set<E> of(@androidx.annotation.RecentlyNonNull E... elements) { throw new RuntimeException("Stub!"); }
+
+/**
+ * Returns an <a href="#unmodifiable">unmodifiable Set</a> containing the elements
+ * of the given Collection. The given Collection must not be null, and it must not
+ * contain any null elements. If the given Collection contains duplicate elements,
+ * an arbitrary element of the duplicates is preserved. If the given Collection is
+ * subsequently modified, the returned Set will not reflect such modifications.
+ *
+ * @implNote
+ * If the given Collection is an <a href="#unmodifiable">unmodifiable Set</a>,
+ * calling copyOf will generally not create a copy.
+ *
+ * @param <E> the {@code Set}'s element type
+ * @param coll a {@code Collection} from which elements are drawn, must be non-null
+ * @return a {@code Set} containing the elements of the given {@code Collection}
+ * @throws java.lang.NullPointerException if coll is null, or if it contains any nulls
+ * @since 10
+ */
+
+public static <E> java.util.Set<E> copyOf(java.util.Collection<? extends E> coll) { throw new RuntimeException("Stub!"); }
 }
 

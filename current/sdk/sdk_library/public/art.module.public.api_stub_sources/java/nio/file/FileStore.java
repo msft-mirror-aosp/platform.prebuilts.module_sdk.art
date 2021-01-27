@@ -33,8 +33,8 @@ import java.io.IOException;
  * Storage for files. A {@code FileStore} represents a storage pool, device,
  * partition, volume, concrete file system or other implementation specific means
  * of file storage. The {@code FileStore} for where a file is stored is obtained
- * by invoking the {@link java.nio.file.Files#getFileStore Files#getFileStore} method, or all file
- * stores can be enumerated by invoking the {@link java.nio.file.FileSystem#getFileStores FileSystem#getFileStores} method.
+ * by invoking the {@link java.nio.file.Files#getFileStore getFileStore} method, or all file
+ * stores can be enumerated by invoking the {@link java.nio.file.FileSystem#getFileStores  getFileStores} method.
  *
  * <p> In addition to the methods defined by this class, a file store may support
  * one or more {@link java.nio.file.attribute.FileStoreAttributeView FileStoreAttributeView} classes
@@ -58,7 +58,7 @@ protected FileStore() { throw new RuntimeException("Stub!"); }
  * pool or volume.
  *
  * <p> The string returned by this method may differ from the string
- * returned by the {@link java.lang.Object#toString() Object#toString()} method.
+ * returned by the {@link java.lang.Object#toString() toString} method.
  *
  * @return  the name of this file store
  */
@@ -164,7 +164,7 @@ public abstract boolean supportsFileAttributeView(java.lang.Class<? extends java
  * specific and therefore unspecified.
  *
  * @param   name
- *          the {@link java.nio.file.attribute.FileAttributeView#name FileAttributeView#name} of file attribute view
+ *          the {@link java.nio.file.attribute.FileAttributeView#name name} of file attribute view
  *
  * @return  {@code true} if, and only if, the file attribute view is
  *          supported
@@ -201,8 +201,8 @@ public abstract <V extends java.nio.file.attribute.FileStoreAttributeView> V get
  * </blockquote>
  * where the character {@code ':'} stands for itself.
  *
- * <p> <i>view-name</i> is the {@link java.nio.file.attribute.FileStoreAttributeView#name FileStoreAttributeView#name} of
- * a {@link java.nio.file.FileStore FileStore} that identifies a set of file attributes.
+ * <p> <i>view-name</i> is the {@link java.nio.file.attribute.FileStoreAttributeView#name name} of
+ * a {@link java.nio.file.FileStore AttributeView} that identifies a set of file attributes.
  * <i>attribute-name</i> is the name of the attribute.
  *
  * <p> <b>Usage Example:</b>

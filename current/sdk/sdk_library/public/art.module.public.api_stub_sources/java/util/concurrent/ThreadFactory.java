@@ -39,7 +39,7 @@ package java.util.concurrent;
 
 /**
  * An object that creates new threads on demand.  Using thread factories
- * removes hardwiring of calls to {@link java.lang.Thread#Thread(java.lang.Runnable) Thread#Thread(Runnable)},
+ * removes hardwiring of calls to {@link java.lang.Thread#Thread(java.lang.Runnable) new Thread},
  * enabling applications to use special thread subclasses, priorities, etc.
  *
  * <p>

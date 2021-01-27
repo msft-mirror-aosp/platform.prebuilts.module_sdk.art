@@ -340,7 +340,7 @@ public void engineStore(java.security.KeyStore.LoadStoreParameter param) throws 
  * @exception java.io.IOException if there is an I/O or format problem with the
  * keystore data, if a password is required but not given,
  * or if the given password was incorrect. If the error is due to a
- * wrong password, the {@link java.lang.Throwable#getCause Throwable#getCause} of the
+ * wrong password, the {@link java.lang.Throwable#getCause cause} of the
  * {@code IOException} should be an
  * {@code UnrecoverableKeyException}
  * @exception java.security.NoSuchAlgorithmException if the algorithm used to check
@@ -368,7 +368,7 @@ public abstract void engineLoad(java.io.InputStream stream, char[] password) thr
  * @exception java.io.IOException if there is an I/O or format problem with the
  *          keystore data. If the error is due to an incorrect
  *         {@code ProtectionParameter} (e.g. wrong password)
- *         the {@link java.lang.Throwable#getCause Throwable#getCause} of the
+ *         the {@link java.lang.Throwable#getCause cause} of the
  *         {@code IOException} should be an
  *         {@code UnrecoverableKeyException}
  * @exception java.security.NoSuchAlgorithmException if the algorithm used to check

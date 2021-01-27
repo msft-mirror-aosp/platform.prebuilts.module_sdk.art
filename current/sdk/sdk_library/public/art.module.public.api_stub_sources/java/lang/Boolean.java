@@ -74,7 +74,7 @@ public Boolean(boolean value) { throw new RuntimeException("Stub!"); }
  * @param   s   the string to be converted to a {@code Boolean}.
  */
 
-public Boolean(@android.annotation.Nullable java.lang.String s) { throw new RuntimeException("Stub!"); }
+public Boolean(@androidx.annotation.RecentlyNullable java.lang.String s) { throw new RuntimeException("Stub!"); }
 
 /**
  * Parses the string argument as a boolean.  The {@code boolean}
@@ -90,7 +90,7 @@ public Boolean(@android.annotation.Nullable java.lang.String s) { throw new Runt
  * @since 1.5
  */
 
-public static boolean parseBoolean(@android.annotation.Nullable java.lang.String s) { throw new RuntimeException("Stub!"); }
+public static boolean parseBoolean(@androidx.annotation.RecentlyNullable java.lang.String s) { throw new RuntimeException("Stub!"); }
 
 /**
  * Returns the value of this {@code Boolean} object as a boolean
@@ -116,7 +116,7 @@ public boolean booleanValue() { throw new RuntimeException("Stub!"); }
  * @since  1.4
  */
 
-@android.annotation.NonNull
+@androidx.annotation.RecentlyNonNull
 public static java.lang.Boolean valueOf(boolean b) { throw new RuntimeException("Stub!"); }
 
 /**
@@ -129,8 +129,8 @@ public static java.lang.Boolean valueOf(boolean b) { throw new RuntimeException(
  * @return  the {@code Boolean} value represented by the string.
  */
 
-@android.annotation.NonNull
-public static java.lang.Boolean valueOf(@android.annotation.Nullable java.lang.String s) { throw new RuntimeException("Stub!"); }
+@androidx.annotation.RecentlyNonNull
+public static java.lang.Boolean valueOf(@androidx.annotation.RecentlyNullable java.lang.String s) { throw new RuntimeException("Stub!"); }
 
 /**
  * Returns a {@code String} object representing the specified
@@ -143,7 +143,7 @@ public static java.lang.Boolean valueOf(@android.annotation.Nullable java.lang.S
  * @since 1.4
  */
 
-@android.annotation.NonNull
+@androidx.annotation.RecentlyNonNull
 public static java.lang.String toString(boolean b) { throw new RuntimeException("Stub!"); }
 
 /**
@@ -155,7 +155,7 @@ public static java.lang.String toString(boolean b) { throw new RuntimeException(
  * @return  a string representation of this object.
  */
 
-@android.annotation.NonNull
+@androidx.annotation.RecentlyNonNull
 public java.lang.String toString() { throw new RuntimeException("Stub!"); }
 
 /**
@@ -189,7 +189,7 @@ public static int hashCode(boolean value) { throw new RuntimeException("Stub!");
  *          same value; {@code false} otherwise.
  */
 
-public boolean equals(@android.annotation.Nullable java.lang.Object obj) { throw new RuntimeException("Stub!"); }
+public boolean equals(@androidx.annotation.RecentlyNullable java.lang.Object obj) { throw new RuntimeException("Stub!"); }
 
 /**
  * Returns {@code true} if and only if the system property
@@ -206,12 +206,12 @@ public boolean equals(@android.annotation.Nullable java.lang.Object obj) { throw
  * @param   name   the system property name.
  * @return  the {@code boolean} value of the system property.
  * @throws  java.lang.SecurityException for the same reasons as
- *          {@link java.lang.System#getProperty(java.lang.String) System#getProperty(String)}
+ *          {@link java.lang.System#getProperty(java.lang.String) System.getProperty}
  * @see     java.lang.System#getProperty(java.lang.String)
  * @see     java.lang.System#getProperty(java.lang.String, java.lang.String)
  */
 
-public static boolean getBoolean(@android.annotation.NonNull java.lang.String name) { throw new RuntimeException("Stub!"); }
+public static boolean getBoolean(@androidx.annotation.RecentlyNonNull java.lang.String name) { throw new RuntimeException("Stub!"); }
 
 /**
  * Compares this {@code Boolean} instance with another.
@@ -226,7 +226,7 @@ public static boolean getBoolean(@android.annotation.NonNull java.lang.String na
  * @since  1.5
  */
 
-public int compareTo(@android.annotation.NonNull java.lang.Boolean b) { throw new RuntimeException("Stub!"); }
+public int compareTo(@androidx.annotation.RecentlyNonNull java.lang.Boolean b) { throw new RuntimeException("Stub!"); }
 
 /**
  * Compares two {@code boolean} values.

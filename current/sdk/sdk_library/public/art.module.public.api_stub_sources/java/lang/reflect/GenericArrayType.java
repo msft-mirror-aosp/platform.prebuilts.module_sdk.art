@@ -54,7 +54,7 @@ public interface GenericArrayType extends java.lang.reflect.Type {
  *     parameterized type that cannot be instantiated for any reason
  */
 
-@android.annotation.NonNull
+@androidx.annotation.RecentlyNonNull
 public java.lang.reflect.Type getGenericComponentType();
 }
 

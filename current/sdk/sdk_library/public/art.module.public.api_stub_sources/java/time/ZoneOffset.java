@@ -197,7 +197,7 @@ public static java.time.ZoneOffset ofHoursMinutesSeconds(int hours, int minutes,
  * This factory converts the arbitrary temporal object to an instance of {@code ZoneOffset}.
  * <p>
  * The conversion uses the {@link java.time.temporal.TemporalQueries#offset() TemporalQueries#offset()} query, which relies
- * on extracting the {@link java.time.temporal.ChronoField#OFFSET_SECONDS ChronoField#OFFSET_SECONDS} field.
+ * on extracting the {@link java.time.temporal.ChronoField#OFFSET_SECONDS OFFSET_SECONDS} field.
  * <p>
  * This method matches the signature of the functional interface {@link java.time.temporal.TemporalQuery TemporalQuery}
  * allowing it to be used as a query via method reference, {@code ZoneOffset::from}.

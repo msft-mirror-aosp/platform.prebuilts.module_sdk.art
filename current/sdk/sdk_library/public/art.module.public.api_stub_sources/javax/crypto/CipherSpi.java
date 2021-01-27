@@ -42,7 +42,7 @@ import java.nio.ByteBuffer;
  * <p>In order to create an instance of <code>Cipher</code>, which
  * encapsulates an instance of this <code>CipherSpi</code> class, an
  * application calls one of the
- * {@link javax.crypto.Cipher#getInstance(java.lang.String) Cipher#getInstance(java.lang.String)}
+ * {@link javax.crypto.Cipher#getInstance(java.lang.String) getInstance}
  * factory methods of the
  * {@link javax.crypto.Cipher Cipher} engine class and specifies the requested
  * <i>transformation</i>.

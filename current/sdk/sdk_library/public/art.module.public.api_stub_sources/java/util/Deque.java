@@ -74,24 +74,24 @@ package java.util;
  *  </tr>
  *  <tr>
  *    <td><b>Insert</b></td>
- *    <td>{@link java.util.Deque#addFirst Deque#addFirst}</td>
- *    <td>{@link java.util.Deque#offerFirst Deque#offerFirst}</td>
- *    <td>{@link java.util.Deque#addLast Deque#addLast}</td>
- *    <td>{@link java.util.Deque#offerLast Deque#offerLast}</td>
+ *    <td>{@link java.util.Deque#addFirst addFirst(e)}</td>
+ *    <td>{@link java.util.Deque#offerFirst offerFirst(e)}</td>
+ *    <td>{@link java.util.Deque#addLast addLast(e)}</td>
+ *    <td>{@link java.util.Deque#offerLast offerLast(e)}</td>
  *  </tr>
  *  <tr>
  *    <td><b>Remove</b></td>
- *    <td>{@link java.util.Deque#removeFirst Deque#removeFirst}</td>
- *    <td>{@link java.util.Deque#pollFirst Deque#pollFirst}</td>
- *    <td>{@link java.util.Deque#removeLast Deque#removeLast}</td>
- *    <td>{@link java.util.Deque#pollLast Deque#pollLast}</td>
+ *    <td>{@link java.util.Deque#removeFirst removeFirst()}</td>
+ *    <td>{@link java.util.Deque#pollFirst pollFirst()}</td>
+ *    <td>{@link java.util.Deque#removeLast removeLast()}</td>
+ *    <td>{@link java.util.Deque#pollLast pollLast()}</td>
  *  </tr>
  *  <tr>
  *    <td><b>Examine</b></td>
- *    <td>{@link java.util.Deque#getFirst Deque#getFirst}</td>
- *    <td>{@link java.util.Deque#peekFirst Deque#peekFirst}</td>
- *    <td>{@link java.util.Deque#getLast Deque#getLast}</td>
- *    <td>{@link java.util.Deque#peekLast Deque#peekLast}</td>
+ *    <td>{@link java.util.Deque#getFirst getFirst()}</td>
+ *    <td>{@link java.util.Deque#peekFirst peekFirst()}</td>
+ *    <td>{@link java.util.Deque#getLast getLast()}</td>
+ *    <td>{@link java.util.Deque#peekLast peekLast()}</td>
  *  </tr>
  * </table>
  *
@@ -301,7 +301,7 @@ public E removeLast();
  * @return the head of this deque, or {@code null} if this deque is empty
  */
 
-@android.annotation.Nullable
+@androidx.annotation.RecentlyNullable
 public E pollFirst();
 
 /**
@@ -311,7 +311,7 @@ public E pollFirst();
  * @return the tail of this deque, or {@code null} if this deque is empty
  */
 
-@android.annotation.Nullable
+@androidx.annotation.RecentlyNullable
 public E pollLast();
 
 /**
@@ -344,7 +344,7 @@ public E getLast();
  * @return the head of this deque, or {@code null} if this deque is empty
  */
 
-@android.annotation.Nullable
+@androidx.annotation.RecentlyNullable
 public E peekFirst();
 
 /**
@@ -354,7 +354,7 @@ public E peekFirst();
  * @return the tail of this deque, or {@code null} if this deque is empty
  */
 
-@android.annotation.Nullable
+@androidx.annotation.RecentlyNullable
 public E peekLast();
 
 /**
@@ -375,7 +375,7 @@ public E peekLast();
  * (<a href="Collection.html#optional-restrictions">optional</a>)
  */
 
-public boolean removeFirstOccurrence(@android.annotation.Nullable java.lang.Object o);
+public boolean removeFirstOccurrence(@androidx.annotation.RecentlyNullable java.lang.Object o);
 
 /**
  * Removes the last occurrence of the specified element from this deque.
@@ -395,7 +395,7 @@ public boolean removeFirstOccurrence(@android.annotation.Nullable java.lang.Obje
  * (<a href="Collection.html#optional-restrictions">optional</a>)
  */
 
-public boolean removeLastOccurrence(@android.annotation.Nullable java.lang.Object o);
+public boolean removeLastOccurrence(@androidx.annotation.RecentlyNullable java.lang.Object o);
 
 /**
  * Inserts the specified element into the queue represented by this deque
@@ -471,7 +471,7 @@ public E remove();
  *         this deque is empty
  */
 
-@android.annotation.Nullable
+@androidx.annotation.RecentlyNullable
 public E poll();
 
 /**
@@ -499,7 +499,7 @@ public E element();
  *         {@code null} if this deque is empty
  */
 
-@android.annotation.Nullable
+@androidx.annotation.RecentlyNullable
 public E peek();
 
 /**
@@ -556,7 +556,7 @@ public E pop();
  * (<a href="Collection.html#optional-restrictions">optional</a>)
  */
 
-public boolean remove(@android.annotation.Nullable java.lang.Object o);
+public boolean remove(@androidx.annotation.RecentlyNullable java.lang.Object o);
 
 /**
  * Returns {@code true} if this deque contains the specified element.
@@ -573,7 +573,7 @@ public boolean remove(@android.annotation.Nullable java.lang.Object o);
  * (<a href="Collection.html#optional-restrictions">optional</a>)
  */
 
-public boolean contains(@android.annotation.Nullable java.lang.Object o);
+public boolean contains(@androidx.annotation.RecentlyNullable java.lang.Object o);
 
 /**
  * Returns the number of elements in this deque.
@@ -590,7 +590,7 @@ public int size();
  * @return an iterator over the elements in this deque in proper sequence
  */
 
-@android.annotation.NonNull
+@androidx.annotation.RecentlyNonNull
 public java.util.Iterator<E> iterator();
 
 /**
@@ -602,7 +602,7 @@ public java.util.Iterator<E> iterator();
  * sequence
  */
 
-@android.annotation.NonNull
+@androidx.annotation.RecentlyNonNull
 public java.util.Iterator<E> descendingIterator();
 }
 

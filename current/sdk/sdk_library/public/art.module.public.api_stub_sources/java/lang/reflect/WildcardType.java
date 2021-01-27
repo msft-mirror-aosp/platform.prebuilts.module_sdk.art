@@ -59,7 +59,7 @@ public interface WildcardType extends java.lang.reflect.Type {
  *     for any reason
  */
 
-@android.annotation.NonNull
+@androidx.annotation.RecentlyNonNull
 public java.lang.reflect.Type[] getUpperBounds();
 
 /**
@@ -85,7 +85,7 @@ public java.lang.reflect.Type[] getUpperBounds();
  *     for any reason
  */
 
-@android.annotation.NonNull
+@androidx.annotation.RecentlyNonNull
 public java.lang.reflect.Type[] getLowerBounds();
 }
 

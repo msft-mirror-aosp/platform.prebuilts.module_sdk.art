@@ -39,8 +39,8 @@ import java.util.Collection;
  * extension of each certificate in a certification path.
  *
  * <p>Instances of {@code PKIXCertPathChecker} are passed as parameters
- * using the {@link java.security.cert.PKIXParameters#setCertPathCheckers PKIXParameters#setCertPathCheckers}
- * or {@link java.security.cert.PKIXParameters#addCertPathChecker PKIXParameters#addCertPathChecker} methods
+ * using the {@link java.security.cert.PKIXParameters#setCertPathCheckers setCertPathCheckers}
+ * or {@link java.security.cert.PKIXParameters#addCertPathChecker addCertPathChecker} methods
  * of the {@code PKIXParameters} and {@code PKIXBuilderParameters}
  * class. Each of the {@code PKIXCertPathChecker}s {@link #check check}
  * methods will be called, in turn, for each certificate processed by a PKIX

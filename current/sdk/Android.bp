@@ -15,6 +15,136 @@ soong_config_module_type_import {
 }
 
 java_import {
+    name: "art-module-sdk_apache-xml@current",
+    sdk_member_name: "apache-xml",
+    visibility: [
+        "//art/build/apex",
+        "//art/build/sdk",
+        "//external/apache-xml",
+        "//libcore",
+        "//packages/modules/ArtPrebuilt",
+        "//prebuilts:__subpackages__",
+    ],
+    apex_available: [
+        "com.android.art",
+        "com.android.art.debug",
+    ],
+    jars: ["java_boot_libs/snapshot/jars/are/invalid/apache-xml.jar"],
+}
+
+art_prebuilt_java_import {
+    name: "apache-xml",
+    // Do not prefer prebuilt if SOONG_CONFIG_art_module_source_build is true.
+    prefer: true,
+    soong_config_variables: {
+        source_build: {
+            prefer: false,
+        },
+    },
+    visibility: [
+        "//art/build/apex",
+        "//art/build/sdk",
+        "//external/apache-xml",
+        "//libcore",
+        "//packages/modules/ArtPrebuilt",
+        "//prebuilts:__subpackages__",
+    ],
+    apex_available: [
+        "com.android.art",
+        "com.android.art.debug",
+    ],
+    jars: ["java_boot_libs/snapshot/jars/are/invalid/apache-xml.jar"],
+}
+
+java_import {
+    name: "art-module-sdk_bouncycastle@current",
+    sdk_member_name: "bouncycastle",
+    visibility: [
+        "//art/build/apex",
+        "//art/build/sdk",
+        "//external/bouncycastle",
+        "//external/wycheproof",
+        "//libcore",
+        "//packages/modules/ArtPrebuilt",
+        "//prebuilts:__subpackages__",
+    ],
+    apex_available: [
+        "com.android.art",
+        "com.android.art.debug",
+    ],
+    jars: ["java_boot_libs/snapshot/jars/are/invalid/bouncycastle.jar"],
+}
+
+art_prebuilt_java_import {
+    name: "bouncycastle",
+    // Do not prefer prebuilt if SOONG_CONFIG_art_module_source_build is true.
+    prefer: true,
+    soong_config_variables: {
+        source_build: {
+            prefer: false,
+        },
+    },
+    visibility: [
+        "//art/build/apex",
+        "//art/build/sdk",
+        "//external/bouncycastle",
+        "//external/wycheproof",
+        "//libcore",
+        "//packages/modules/ArtPrebuilt",
+        "//prebuilts:__subpackages__",
+    ],
+    apex_available: [
+        "com.android.art",
+        "com.android.art.debug",
+    ],
+    jars: ["java_boot_libs/snapshot/jars/are/invalid/bouncycastle.jar"],
+}
+
+java_import {
+    name: "art-module-sdk_core-oj@current",
+    sdk_member_name: "core-oj",
+    visibility: [
+        "//art/build/apex",
+        "//art/build/sdk",
+        "//external/wycheproof",
+        "//libcore",
+        "//libcore/benchmarks",
+        "//packages/modules/ArtPrebuilt",
+        "//prebuilts:__subpackages__",
+    ],
+    apex_available: [
+        "com.android.art",
+        "com.android.art.debug",
+    ],
+    jars: ["java_boot_libs/snapshot/jars/are/invalid/core-oj.jar"],
+}
+
+art_prebuilt_java_import {
+    name: "core-oj",
+    // Do not prefer prebuilt if SOONG_CONFIG_art_module_source_build is true.
+    prefer: true,
+    soong_config_variables: {
+        source_build: {
+            prefer: false,
+        },
+    },
+    visibility: [
+        "//art/build/apex",
+        "//art/build/sdk",
+        "//external/wycheproof",
+        "//libcore",
+        "//libcore/benchmarks",
+        "//packages/modules/ArtPrebuilt",
+        "//prebuilts:__subpackages__",
+    ],
+    apex_available: [
+        "com.android.art",
+        "com.android.art.debug",
+    ],
+    jars: ["java_boot_libs/snapshot/jars/are/invalid/core-oj.jar"],
+}
+
+java_import {
     name: "art-module-sdk_core-lambda-stubs@current",
     sdk_member_name: "core-lambda-stubs",
     visibility: ["//visibility:public"],
@@ -328,6 +458,7 @@ java_sdk_library_import {
     visibility: [
         "//art/build/sdk",
         "//frameworks/base",
+        "//frameworks/base/api",
         "//libcore",
         "//prebuilts:__subpackages__",
     ],
@@ -1724,15 +1855,19 @@ cc_prebuilt_library_shared {
         },
         android_arm64: {
             srcs: ["android/arm64/lib/libnativeloader.so"],
+            export_include_dirs: ["android/arm64/include_gen/libnativeloader"],
         },
         android_x86_64: {
             srcs: ["android/x86_64/lib/libnativeloader.so"],
+            export_include_dirs: ["android/x86_64/include_gen/libnativeloader"],
         },
         android_arm: {
             srcs: ["android/arm/lib/libnativeloader.so"],
+            export_include_dirs: ["android/arm/include_gen/libnativeloader"],
         },
         android_x86: {
             srcs: ["android/x86/lib/libnativeloader.so"],
+            export_include_dirs: ["android/x86/include_gen/libnativeloader"],
         },
         linux_glibc_x86_64: {
             enabled: true,
@@ -1779,15 +1914,19 @@ art_prebuilt_cc_prebuilt_library_shared {
         },
         android_arm64: {
             srcs: ["android/arm64/lib/libnativeloader.so"],
+            export_include_dirs: ["android/arm64/include_gen/libnativeloader"],
         },
         android_x86_64: {
             srcs: ["android/x86_64/lib/libnativeloader.so"],
+            export_include_dirs: ["android/x86_64/include_gen/libnativeloader"],
         },
         android_arm: {
             srcs: ["android/arm/lib/libnativeloader.so"],
+            export_include_dirs: ["android/arm/include_gen/libnativeloader"],
         },
         android_x86: {
             srcs: ["android/x86/lib/libnativeloader.so"],
+            export_include_dirs: ["android/x86/include_gen/libnativeloader"],
         },
         linux_glibc_x86_64: {
             enabled: true,
@@ -2249,6 +2388,11 @@ sdk_snapshot {
     ],
     target: {
         android: {
+            java_boot_libs: [
+                "art-module-sdk_apache-xml@current",
+                "art-module-sdk_bouncycastle@current",
+                "art-module-sdk_core-oj@current",
+            ],
             java_header_libs: [
                 "art-module-sdk_core-lambda-stubs@current",
                 "art-module-sdk_core.current.stubs@current",

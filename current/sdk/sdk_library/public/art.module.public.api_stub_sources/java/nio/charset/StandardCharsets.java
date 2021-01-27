@@ -27,7 +27,7 @@ package java.nio.charset;
 
 
 /**
- * Constant definitions for the standard {@link java.nio.charset.Charset Charset}. These
+ * Constant definitions for the standard {@link java.nio.charset.Charset Charsets}. These
  * charsets are guaranteed to be available on every implementation of the Java
  * platform.
  *

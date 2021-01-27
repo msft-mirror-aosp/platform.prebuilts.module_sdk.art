@@ -154,61 +154,61 @@ import java.io.InvalidObjectException;
  *    <tr>
  *       <td headers="ft" rowspan=5><code>number</code>
  *       <td headers="fs"><i>(none)</i>
- *       <td headers="sc">{@link java.text.NumberFormat#getInstance(java.util.Locale) NumberFormat#getInstance(Locale)}{@code (getLocale())}
+ *       <td headers="sc">{@link java.text.NumberFormat#getInstance(java.util.Locale) NumberFormat.getInstance}{@code (getLocale())}
  *    <tr>
  *       <td headers="fs"><code>integer</code>
- *       <td headers="sc">{@link java.text.NumberFormat#getIntegerInstance(java.util.Locale) NumberFormat#getIntegerInstance(Locale)}{@code (getLocale())}
+ *       <td headers="sc">{@link java.text.NumberFormat#getIntegerInstance(java.util.Locale) NumberFormat.getIntegerInstance}{@code (getLocale())}
  *    <tr>
  *       <td headers="fs"><code>currency</code>
- *       <td headers="sc">{@link java.text.NumberFormat#getCurrencyInstance(java.util.Locale) NumberFormat#getCurrencyInstance(Locale)}{@code (getLocale())}
+ *       <td headers="sc">{@link java.text.NumberFormat#getCurrencyInstance(java.util.Locale) NumberFormat.getCurrencyInstance}{@code (getLocale())}
  *    <tr>
  *       <td headers="fs"><code>percent</code>
- *       <td headers="sc">{@link java.text.NumberFormat#getPercentInstance(java.util.Locale) NumberFormat#getPercentInstance(Locale)}{@code (getLocale())}
+ *       <td headers="sc">{@link java.text.NumberFormat#getPercentInstance(java.util.Locale) NumberFormat.getPercentInstance}{@code (getLocale())}
  *    <tr>
  *       <td headers="fs"><i>SubformatPattern</i>
- *       <td headers="sc">{@code new} {@link java.text.DecimalFormat#DecimalFormat(java.lang.String,java.text.DecimalFormatSymbols) DecimalFormat#DecimalFormat(String,DecimalFormatSymbols)}{@code (subformatPattern,} {@link java.text.DecimalFormatSymbols#getInstance(java.util.Locale) DecimalFormatSymbols#getInstance(Locale)}{@code (getLocale()))}
+ *       <td headers="sc">{@code new} {@link java.text.DecimalFormat#DecimalFormat(java.lang.String,java.text.DecimalFormatSymbols) DecimalFormat}{@code (subformatPattern,} {@link java.text.DecimalFormatSymbols#getInstance(java.util.Locale) DecimalFormatSymbols.getInstance}{@code (getLocale()))}
  *    <tr>
  *       <td headers="ft" rowspan=6><code>date</code>
  *       <td headers="fs"><i>(none)</i>
- *       <td headers="sc">{@link java.text.DateFormat#getDateInstance(int,java.util.Locale) DateFormat#getDateInstance(int,Locale)}{@code (}{@link java.text.DateFormat#DEFAULT DateFormat#DEFAULT}{@code , getLocale())}
+ *       <td headers="sc">{@link java.text.DateFormat#getDateInstance(int,java.util.Locale) DateFormat.getDateInstance}{@code (}{@link java.text.DateFormat#DEFAULT DateFormat#DEFAULT}{@code , getLocale())}
  *    <tr>
  *       <td headers="fs"><code>short</code>
- *       <td headers="sc">{@link java.text.DateFormat#getDateInstance(int,java.util.Locale) DateFormat#getDateInstance(int,Locale)}{@code (}{@link java.text.DateFormat#SHORT DateFormat#SHORT}{@code , getLocale())}
+ *       <td headers="sc">{@link java.text.DateFormat#getDateInstance(int,java.util.Locale) DateFormat.getDateInstance}{@code (}{@link java.text.DateFormat#SHORT DateFormat#SHORT}{@code , getLocale())}
  *    <tr>
  *       <td headers="fs"><code>medium</code>
- *       <td headers="sc">{@link java.text.DateFormat#getDateInstance(int,java.util.Locale) DateFormat#getDateInstance(int,Locale)}{@code (}{@link java.text.DateFormat#DEFAULT DateFormat#DEFAULT}{@code , getLocale())}
+ *       <td headers="sc">{@link java.text.DateFormat#getDateInstance(int,java.util.Locale) DateFormat.getDateInstance}{@code (}{@link java.text.DateFormat#DEFAULT DateFormat#DEFAULT}{@code , getLocale())}
  *    <tr>
  *       <td headers="fs"><code>long</code>
- *       <td headers="sc">{@link java.text.DateFormat#getDateInstance(int,java.util.Locale) DateFormat#getDateInstance(int,Locale)}{@code (}{@link java.text.DateFormat#LONG DateFormat#LONG}{@code , getLocale())}
+ *       <td headers="sc">{@link java.text.DateFormat#getDateInstance(int,java.util.Locale) DateFormat.getDateInstance}{@code (}{@link java.text.DateFormat#LONG DateFormat#LONG}{@code , getLocale())}
  *    <tr>
  *       <td headers="fs"><code>full</code>
- *       <td headers="sc">{@link java.text.DateFormat#getDateInstance(int,java.util.Locale) DateFormat#getDateInstance(int,Locale)}{@code (}{@link java.text.DateFormat#FULL DateFormat#FULL}{@code , getLocale())}
+ *       <td headers="sc">{@link java.text.DateFormat#getDateInstance(int,java.util.Locale) DateFormat.getDateInstance}{@code (}{@link java.text.DateFormat#FULL DateFormat#FULL}{@code , getLocale())}
  *    <tr>
  *       <td headers="fs"><i>SubformatPattern</i>
- *       <td headers="sc">{@code new} {@link java.text.SimpleDateFormat#SimpleDateFormat(java.lang.String,java.util.Locale) SimpleDateFormat#SimpleDateFormat(String,Locale)}{@code (subformatPattern, getLocale())}
+ *       <td headers="sc">{@code new} {@link java.text.SimpleDateFormat#SimpleDateFormat(java.lang.String,java.util.Locale) SimpleDateFormat}{@code (subformatPattern, getLocale())}
  *    <tr>
  *       <td headers="ft" rowspan=6><code>time</code>
  *       <td headers="fs"><i>(none)</i>
- *       <td headers="sc">{@link java.text.DateFormat#getTimeInstance(int,java.util.Locale) DateFormat#getTimeInstance(int,Locale)}{@code (}{@link java.text.DateFormat#DEFAULT DateFormat#DEFAULT}{@code , getLocale())}
+ *       <td headers="sc">{@link java.text.DateFormat#getTimeInstance(int,java.util.Locale) DateFormat.getTimeInstance}{@code (}{@link java.text.DateFormat#DEFAULT DateFormat#DEFAULT}{@code , getLocale())}
  *    <tr>
  *       <td headers="fs"><code>short</code>
- *       <td headers="sc">{@link java.text.DateFormat#getTimeInstance(int,java.util.Locale) DateFormat#getTimeInstance(int,Locale)}{@code (}{@link java.text.DateFormat#SHORT DateFormat#SHORT}{@code , getLocale())}
+ *       <td headers="sc">{@link java.text.DateFormat#getTimeInstance(int,java.util.Locale) DateFormat.getTimeInstance}{@code (}{@link java.text.DateFormat#SHORT DateFormat#SHORT}{@code , getLocale())}
  *    <tr>
  *       <td headers="fs"><code>medium</code>
- *       <td headers="sc">{@link java.text.DateFormat#getTimeInstance(int,java.util.Locale) DateFormat#getTimeInstance(int,Locale)}{@code (}{@link java.text.DateFormat#DEFAULT DateFormat#DEFAULT}{@code , getLocale())}
+ *       <td headers="sc">{@link java.text.DateFormat#getTimeInstance(int,java.util.Locale) DateFormat.getTimeInstance}{@code (}{@link java.text.DateFormat#DEFAULT DateFormat#DEFAULT}{@code , getLocale())}
  *    <tr>
  *       <td headers="fs"><code>long</code>
- *       <td headers="sc">{@link java.text.DateFormat#getTimeInstance(int,java.util.Locale) DateFormat#getTimeInstance(int,Locale)}{@code (}{@link java.text.DateFormat#LONG DateFormat#LONG}{@code , getLocale())}
+ *       <td headers="sc">{@link java.text.DateFormat#getTimeInstance(int,java.util.Locale) DateFormat.getTimeInstance}{@code (}{@link java.text.DateFormat#LONG DateFormat#LONG}{@code , getLocale())}
  *    <tr>
  *       <td headers="fs"><code>full</code>
- *       <td headers="sc">{@link java.text.DateFormat#getTimeInstance(int,java.util.Locale) DateFormat#getTimeInstance(int,Locale)}{@code (}{@link java.text.DateFormat#FULL DateFormat#FULL}{@code , getLocale())}
+ *       <td headers="sc">{@link java.text.DateFormat#getTimeInstance(int,java.util.Locale) DateFormat.getTimeInstance}{@code (}{@link java.text.DateFormat#FULL DateFormat#FULL}{@code , getLocale())}
  *    <tr>
  *       <td headers="fs"><i>SubformatPattern</i>
- *       <td headers="sc">{@code new} {@link java.text.SimpleDateFormat#SimpleDateFormat(java.lang.String,java.util.Locale) SimpleDateFormat#SimpleDateFormat(String,Locale)}{@code (subformatPattern, getLocale())}
+ *       <td headers="sc">{@code new} {@link java.text.SimpleDateFormat#SimpleDateFormat(java.lang.String,java.util.Locale) SimpleDateFormat}{@code (subformatPattern, getLocale())}
  *    <tr>
  *       <td headers="ft"><code>choice</code>
  *       <td headers="fs"><i>SubformatPattern</i>
- *       <td headers="sc">{@code new} {@link java.text.ChoiceFormat#ChoiceFormat(java.lang.String) ChoiceFormat#ChoiceFormat(String)}{@code (subformatPattern)}
+ *       <td headers="sc">{@code new} {@link java.text.ChoiceFormat#ChoiceFormat(java.lang.String) ChoiceFormat}{@code (subformatPattern)}
  * </table>
  *
  * <h4>Usage Information</h4>

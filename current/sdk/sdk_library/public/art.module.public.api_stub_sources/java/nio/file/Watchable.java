@@ -36,7 +36,7 @@ import java.io.IOException;
  * the object with a {@link java.nio.file.WatchService WatchService} returning a {@link java.nio.file.WatchKey WatchKey} to
  * represent the registration. An object may be registered with more than one
  * watch service. Registration with a watch service is cancelled by invoking the
- * key's {@link java.nio.file.WatchKey#cancel WatchKey#cancel} method.
+ * key's {@link java.nio.file.WatchKey#cancel cancel} method.
  *
  * @since 1.7
  *
@@ -54,7 +54,7 @@ public interface Watchable {
  * registration, is returned after changing the event set or modifiers to
  * those specified by the {@code events} and {@code modifiers} parameters.
  * Changing the event set does not cause pending events for the object to be
- * discarded. Objects are automatically registered for the {@link java.nio.file.StandardWatchEventKinds#OVERFLOW StandardWatchEventKinds#OVERFLOW} event. This event is not
+ * discarded. Objects are automatically registered for the {@link java.nio.file.StandardWatchEventKinds#OVERFLOW OVERFLOW} event. This event is not
  * required to be present in the array of events.
  *
  * <p> Otherwise the file system object has not yet been registered with the

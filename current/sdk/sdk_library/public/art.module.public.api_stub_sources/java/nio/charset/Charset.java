@@ -487,7 +487,7 @@ public boolean canEncode() { throw new RuntimeException("Stub!"); }
  *
  * <p> This method always replaces malformed-input and unmappable-character
  * sequences with this charset's default replacement byte array.  In order
- * to detect such sequences, use the {@link java.nio.charset.CharsetDecoder#decode(java.nio.ByteBuffer) CharsetDecoder#decode(java.nio.ByteBuffer)} method directly.  </p>
+ * to detect such sequences, use the {@link java.nio.charset.CharsetDecoder#decode(java.nio.ByteBuffer)  } method directly.  </p>
  *
  * @param  bb  The byte buffer to be decoded
  *
@@ -514,7 +514,7 @@ public final java.nio.CharBuffer decode(java.nio.ByteBuffer bb) { throw new Runt
  *
  * <p> This method always replaces malformed-input and unmappable-character
  * sequences with this charset's default replacement string.  In order to
- * detect such sequences, use the {@link java.nio.charset.CharsetEncoder#encode(java.nio.CharBuffer) CharsetEncoder#encode(java.nio.CharBuffer)} method directly.  </p>
+ * detect such sequences, use the {@link java.nio.charset.CharsetEncoder#encode(java.nio.CharBuffer)  } method directly.  </p>
  *
  * @param  cb  The char buffer to be encoded
  *

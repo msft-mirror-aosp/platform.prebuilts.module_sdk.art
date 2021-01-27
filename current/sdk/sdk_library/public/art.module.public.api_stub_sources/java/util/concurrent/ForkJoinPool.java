@@ -119,7 +119,7 @@ import java.util.concurrent.locks.ReentrantLock;
  *
  * <p>The common pool is by default constructed with default
  * parameters, but these may be controlled by setting three
- * {@linkplain java.lang.System#getProperty System#getProperty}:
+ * {@linkplain java.lang.System#getProperty system properties}:
  * <ul>
  * <li>{@code java.util.concurrent.ForkJoinPool.common.parallelism}
  * - the parallelism level, a non-negative integer
@@ -591,10 +591,10 @@ public boolean awaitTermination(long timeout, java.util.concurrent.TimeUnit unit
 public boolean awaitQuiescence(long timeout, java.util.concurrent.TimeUnit unit) { throw new RuntimeException("Stub!"); }
 
 /**
- * Runs the given possibly blocking task.  When {@linkplain java.util.concurrent.ForkJoinTask#inForkJoinPool() ForkJoinTask#inForkJoinPool()}, this
+ * Runs the given possibly blocking task.  When {@linkplain java.util.concurrent.ForkJoinTask#inForkJoinPool() running in a ForkJoinPool}, this
  * method possibly arranges for a spare thread to be activated if
  * necessary to ensure sufficient parallelism while the current
- * thread is blocked in {@link java.util.concurrent.ForkJoinPool.ManagedBlocker#block ManagedBlocker#block}.
+ * thread is blocked in {@link java.util.concurrent.ForkJoinPool.ManagedBlocker#block blocker.block()}.
  *
  * <p>This method repeatedly calls {@code blocker.isReleasable()} and
  * {@code blocker.block()} until either method returns {@code true}.

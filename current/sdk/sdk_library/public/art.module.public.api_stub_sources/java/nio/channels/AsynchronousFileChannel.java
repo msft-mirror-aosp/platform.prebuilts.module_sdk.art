@@ -83,7 +83,7 @@ import java.util.Set;
  * defined by the {@link java.nio.channels.AsynchronousChannelGroup AsynchronousChannelGroup} class.
  *
  * <p> Channels of this type are safe for use by multiple concurrent threads. The
- * {@link java.nio.channels.Channel#close Channel#close} method may be invoked at any time, as specified
+ * {@link java.nio.channels.Channel#close close} method may be invoked at any time, as specified
  * by the {@link java.nio.channels.Channel Channel} interface. This causes all outstanding asynchronous
  * operations on the channel to complete with the exception {@link java.nio.channels.AsynchronousCloseException AsynchronousCloseException}. Multiple read and write operations may be
  * outstanding at the same time. When multiple read and write operations are
@@ -123,7 +123,7 @@ protected AsynchronousFileChannel() { throw new RuntimeException("Stub!"); }
  * asynchronous file channel to access the file.
  *
  * <p> The {@code options} parameter determines how the file is opened.
- * The {@link java.nio.file.StandardOpenOption#READ StandardOpenOption#READ} and {@link java.nio.file.StandardOpenOption#WRITE StandardOpenOption#WRITE} options determines if the file should be opened for reading and/or
+ * The {@link java.nio.file.StandardOpenOption#READ READ} and {@link java.nio.file.StandardOpenOption#WRITE  WRITE} options determines if the file should be opened for reading and/or
  * writing. If neither option is contained in the array then an existing file
  * is opened for  reading.
  *
@@ -133,13 +133,13 @@ protected AsynchronousFileChannel() { throw new RuntimeException("Stub!"); }
  * <table border=1 cellpadding=5 summary="">
  * <tr> <th>Option</th> <th>Description</th> </tr>
  * <tr>
- *   <td> {@link java.nio.file.StandardOpenOption#TRUNCATE_EXISTING StandardOpenOption#TRUNCATE_EXISTING} </td>
+ *   <td> {@link java.nio.file.StandardOpenOption#TRUNCATE_EXISTING TRUNCATE_EXISTING} </td>
  *   <td> When opening an existing file, the file is first truncated to a
  *   size of 0 bytes. This option is ignored when the file is opened only
  *   for reading.</td>
  * </tr>
  * <tr>
- *   <td> {@link java.nio.file.StandardOpenOption#CREATE_NEW StandardOpenOption#CREATE_NEW} </td>
+ *   <td> {@link java.nio.file.StandardOpenOption#CREATE_NEW CREATE_NEW} </td>
  *   <td> If this option is present then a new file is created, failing if
  *   the file already exists. When creating a file the check for the
  *   existence of the file and the creation of the file if it does not exist
@@ -147,7 +147,7 @@ protected AsynchronousFileChannel() { throw new RuntimeException("Stub!"); }
  *   ignored when the file is opened only for reading. </td>
  * </tr>
  * <tr>
- *   <td > {@link java.nio.file.StandardOpenOption#CREATE StandardOpenOption#CREATE} </td>
+ *   <td > {@link java.nio.file.StandardOpenOption#CREATE CREATE} </td>
  *   <td> If this option is present then an existing file is opened if it
  *   exists, otherwise a new file is created. When creating a file the check
  *   for the existence of the file and the creation of the file if it does
@@ -156,7 +156,7 @@ protected AsynchronousFileChannel() { throw new RuntimeException("Stub!"); }
  *   the file is opened only for reading. </td>
  * </tr>
  * <tr>
- *   <td > {@link java.nio.file.StandardOpenOption#DELETE_ON_CLOSE StandardOpenOption#DELETE_ON_CLOSE} </td>
+ *   <td > {@link java.nio.file.StandardOpenOption#DELETE_ON_CLOSE DELETE_ON_CLOSE} </td>
  *   <td> When this option is present then the implementation makes a
  *   <em>best effort</em> attempt to delete the file when closed by the
  *   the {@link #close close} method. If the {@code close} method is not
@@ -164,20 +164,20 @@ protected AsynchronousFileChannel() { throw new RuntimeException("Stub!"); }
  *   when the Java virtual machine terminates. </td>
  * </tr>
  * <tr>
- *   <td>{@link java.nio.file.StandardOpenOption#SPARSE StandardOpenOption#SPARSE} </td>
+ *   <td>{@link java.nio.file.StandardOpenOption#SPARSE SPARSE} </td>
  *   <td> When creating a new file this option is a <em>hint</em> that the
  *   new file will be sparse. This option is ignored when not creating
  *   a new file. </td>
  * </tr>
  * <tr>
- *   <td> {@link java.nio.file.StandardOpenOption#SYNC StandardOpenOption#SYNC} </td>
+ *   <td> {@link java.nio.file.StandardOpenOption#SYNC SYNC} </td>
  *   <td> Requires that every update to the file's content or metadata be
  *   written synchronously to the underlying storage device. (see <a
  *   href="../file/package-summary.html#integrity"> Synchronized I/O file
  *   integrity</a>). </td>
  * </tr>
  * <tr>
- *   <td> {@link java.nio.file.StandardOpenOption#DSYNC StandardOpenOption#DSYNC} </td>
+ *   <td> {@link java.nio.file.StandardOpenOption#DSYNC DSYNC} </td>
  *   <td> Requires that every update to the file's content be written
  *   synchronously to the underlying storage device. (see <a
  *   href="../file/package-summary.html#integrity"> Synchronized I/O file
@@ -193,13 +193,13 @@ protected AsynchronousFileChannel() { throw new RuntimeException("Stub!"); }
  * The nature of these tasks is highly implementation specific and so care
  * should be taken when configuring the {@code Executor}. Minimally it
  * should support an unbounded work queue and should not run tasks on the
- * caller thread of the {@link java.util.concurrent.ExecutorService#execute ExecutorService#execute} method.
+ * caller thread of the {@link java.util.concurrent.ExecutorService#execute execute} method.
  * Shutting down the executor service while the channel is open results in
  * unspecified behavior.
  *
- * <p> The {@code attrs} parameter is an optional array of file {@link java.nio.file.attribute.FileAttribute FileAttribute} to set atomically when creating the file.
+ * <p> The {@code attrs} parameter is an optional array of file {@link java.nio.file.attribute.FileAttribute file-attributes} to set atomically when creating the file.
  *
- * <p> The new channel is created by invoking the {@link java.nio.file.spi.FileSystemProvider#newFileChannel FileSystemProvider#newFileChannel} method on the
+ * <p> The new channel is created by invoking the {@link java.nio.file.spi.FileSystemProvider#newFileChannel newFileChannel} method on the
  * provider that created the {@code Path}.
  *
  * @param   file
@@ -227,8 +227,8 @@ protected AsynchronousFileChannel() { throw new RuntimeException("Stub!"); }
  * @throws  java.lang.SecurityException
  *          If a security manager is installed and it denies an
  *          unspecified permission required by the implementation.
- *          In the case of the default provider, the {@link java.lang.SecurityManager#checkRead(java.lang.String) SecurityManager#checkRead(String)} method is invoked to check
- *          read access if the file is opened for reading. The {@link java.lang.SecurityManager#checkWrite(java.lang.String) SecurityManager#checkWrite(String)} method is invoked to check
+ *          In the case of the default provider, the {@link java.lang.SecurityManager#checkRead(java.lang.String)           } method is invoked to check
+ *          read access if the file is opened for reading. The {@link java.lang.SecurityManager#checkWrite(java.lang.String)           } method is invoked to check
  *          write access if the file is opened for writing
  */
 
@@ -270,8 +270,8 @@ public static java.nio.channels.AsynchronousFileChannel open(java.nio.file.Path 
  * @throws  java.lang.SecurityException
  *          If a security manager is installed and it denies an
  *          unspecified permission required by the implementation.
- *          In the case of the default provider, the {@link java.lang.SecurityManager#checkRead(java.lang.String) SecurityManager#checkRead(String)} method is invoked to check
- *          read access if the file is opened for reading. The {@link java.lang.SecurityManager#checkWrite(java.lang.String) SecurityManager#checkWrite(String)} method is invoked to check
+ *          In the case of the default provider, the {@link java.lang.SecurityManager#checkRead(java.lang.String)           } method is invoked to check
+ *          read access if the file is opened for reading. The {@link java.lang.SecurityManager#checkWrite(java.lang.String)           } method is invoked to check
  *          write access if the file is opened for writing
  */
 
@@ -397,7 +397,7 @@ public abstract void force(boolean metaData) throws java.io.IOException;
  * <p> Some operating systems do not support shared locks, in which case a
  * request for a shared lock is automatically converted into a request for
  * an exclusive lock.  Whether the newly-acquired lock is shared or
- * exclusive may be tested by invoking the resulting lock object's {@link java.nio.channels.FileLock#isShared() FileLock#isShared()} method.
+ * exclusive may be tested by invoking the resulting lock object's {@link java.nio.channels.FileLock#isShared() isShared} method.
  *
  * <p> File locks are held on behalf of the entire Java virtual machine.
  * They are not suitable for controlling access to a file by multiple
@@ -474,7 +474,7 @@ public final <A> void lock(A attachment, java.nio.channels.CompletionHandler<jav
  * manner as the {@link #lock(long,long,boolean,java.lang.Object,java.nio.channels.CompletionHandler)}
  * method except that instead of specifying a completion handler, this
  * method returns a {@code Future} representing the pending result. The
- * {@code Future}'s {@link java.util.concurrent.Future#get() Future#get()} method returns the {@link java.nio.channels.FileLock FileLock} on successful completion.
+ * {@code Future}'s {@link java.util.concurrent.Future#get() get} method returns the {@link java.nio.channels.FileLock FileLock} on successful completion.
  *
  * @param   position
  *          The position at which the locked region is to start; must be
@@ -508,7 +508,7 @@ public abstract java.util.concurrent.Future<java.nio.channels.FileLock> lock(lon
  *
  * <p> This method initiates an operation to acquire an exclusive lock on this
  * channel's file. The method returns a {@code Future} representing the
- * pending result of the operation. The {@code Future}'s {@link java.util.concurrent.Future#get() Future#get()} method returns the {@link java.nio.channels.FileLock FileLock} on successful completion.
+ * pending result of the operation. The {@code Future}'s {@link java.util.concurrent.Future#get()  get} method returns the {@link java.nio.channels.FileLock FileLock} on successful completion.
  *
  * <p> An invocation of this method behaves in exactly the same way as the
  * invocation
@@ -619,7 +619,7 @@ public final java.nio.channels.FileLock tryLock() throws java.io.IOException { t
  * position is greater than or equal to the file's size at the time that the
  * read is attempted.
  *
- * <p> This method works in the same manner as the {@link java.nio.channels.AsynchronousByteChannel#read(java.nio.ByteBuffer,java.lang.Object,java.nio.channels.CompletionHandler) AsynchronousByteChannel#read(ByteBuffer,Object,CompletionHandler)}
+ * <p> This method works in the same manner as the {@link java.nio.channels.AsynchronousByteChannel#read(java.nio.ByteBuffer,java.lang.Object,java.nio.channels.CompletionHandler)  }
  * method, except that bytes are read starting at the given file position.
  * If the given file position is greater than the file's size at the time
  * that the read is attempted then no bytes are read.
@@ -651,11 +651,11 @@ public abstract <A> void read(java.nio.ByteBuffer dst, long position, A attachme
  * <p> This method initiates the reading of a sequence of bytes from this
  * channel into the given buffer, starting at the given file position. This
  * method returns a {@code Future} representing the pending result of the
- * operation. The {@code Future}'s {@link java.util.concurrent.Future#get() Future#get()} method returns
+ * operation. The {@code Future}'s {@link java.util.concurrent.Future#get() get} method returns
  * the number of bytes read or {@code -1} if the given position is greater
  * than or equal to the file's size at the time that the read is attempted.
  *
- * <p> This method works in the same manner as the {@link java.nio.channels.AsynchronousByteChannel#read(java.nio.ByteBuffer) AsynchronousByteChannel#read(ByteBuffer)} method, except that bytes are
+ * <p> This method works in the same manner as the {@link java.nio.channels.AsynchronousByteChannel#read(java.nio.ByteBuffer)  } method, except that bytes are
  * read starting at the given file position. If the given file position is
  * greater than the file's size at the time that the read is attempted then
  * no bytes are read.
@@ -680,7 +680,7 @@ public abstract java.util.concurrent.Future<java.lang.Integer> read(java.nio.Byt
  * Writes a sequence of bytes to this channel from the given buffer, starting
  * at the given file position.
  *
- * <p> This method works in the same manner as the {@link java.nio.channels.AsynchronousByteChannel#write(java.nio.ByteBuffer,java.lang.Object,java.nio.channels.CompletionHandler) AsynchronousByteChannel#write(ByteBuffer,Object,CompletionHandler)}
+ * <p> This method works in the same manner as the {@link java.nio.channels.AsynchronousByteChannel#write(java.nio.ByteBuffer,java.lang.Object,java.nio.channels.CompletionHandler)  }
  * method, except that bytes are written starting at the given file position.
  * If the given position is greater than the file's size, at the time that
  * the write is attempted, then the file will be grown to accommodate the new
@@ -714,10 +714,10 @@ public abstract <A> void write(java.nio.ByteBuffer src, long position, A attachm
  * <p> This method initiates the writing of a sequence of bytes to this
  * channel from the given buffer, starting at the given file position. The
  * method returns a {@code Future} representing the pending result of the
- * write operation. The {@code Future}'s {@link java.util.concurrent.Future#get() Future#get()} method
+ * write operation. The {@code Future}'s {@link java.util.concurrent.Future#get() get} method
  * returns the number of bytes written.
  *
- * <p> This method works in the same manner as the {@link java.nio.channels.AsynchronousByteChannel#write(java.nio.ByteBuffer) AsynchronousByteChannel#write(ByteBuffer)} method, except that bytes are
+ * <p> This method works in the same manner as the {@link java.nio.channels.AsynchronousByteChannel#write(java.nio.ByteBuffer)  } method, except that bytes are
  * written starting at the given file position. If the given position is
  * greater than the file's size, at the time that the write is attempted,
  * then the file will be grown to accommodate the new bytes; the values of

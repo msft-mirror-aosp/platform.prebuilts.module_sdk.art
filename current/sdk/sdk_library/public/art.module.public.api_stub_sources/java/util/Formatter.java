@@ -102,7 +102,7 @@ import java.io.IOException;
  * </pre></blockquote>
  *
  * <p> Like C's {@code sprintf(3)}, Strings may be formatted using the static
- * method {@link java.lang.String#format(java.lang.String,java.lang.Object...) String#format(String,Object...)}:
+ * method {@link java.lang.String#format(java.lang.String,java.lang.Object...) String.format}:
  *
  * <blockquote><pre>
  *   // Format a string containing a date.
@@ -221,7 +221,7 @@ import java.io.IOException;
  *
  * <li> <b>Character</b> - may be applied to basic types which represent
  * Unicode characters: {@code char}, {@link java.lang.Character Character}, {@code byte}, {@link java.lang.Byte Byte}, {@code short}, and {@link java.lang.Short Short}. This conversion may also be
- * applied to the types {@code int} and {@link java.lang.Integer Integer} when {@link java.lang.Character#isValidCodePoint Character#isValidCodePoint} returns {@code true}
+ * applied to the types {@code int} and {@link java.lang.Integer Integer} when {@link java.lang.Character#isValidCodePoint  } returns {@code true}
  *
  * <li> <b>Numeric</b>
  *
@@ -254,7 +254,7 @@ import java.io.IOException;
  * {@code 'A'}, and {@code 'T'}) are the same as those for the corresponding
  * lower-case conversion characters except that the result is converted to
  * upper case according to the rules of the prevailing {@link java.util.Locale
- * Locale}.  The result is equivalent to the following invocation of {@link java.lang.String#toUpperCase() String#toUpperCase()}
+ * Locale}.  The result is equivalent to the following invocation of {@link java.lang.String#toUpperCase()  }
  *
  * <pre>
  *    out.toUpperCase() </pre>
@@ -268,7 +268,7 @@ import java.io.IOException;
  * <tr><td valign="top"> {@code 'b'}, {@code 'B'}
  *     <td valign="top"> general
  *     <td> If the argument <i>arg</i> is {@code null}, then the result is
- *     "{@code false}".  If <i>arg</i> is a {@code boolean} or {@link java.lang.Boolean Boolean}, then the result is the string returned by {@link java.lang.String#valueOf(boolean) String#valueOf(boolean)}.  Otherwise, the result is
+ *     "{@code false}".  If <i>arg</i> is a {@code boolean} or {@link java.lang.Boolean Boolean}, then the result is the string returned by {@link java.lang.String#valueOf(boolean) String.valueOf(arg)}.  Otherwise, the result is
  *     "true".
  *
  * <tr><td valign="top"> {@code 'h'}, {@code 'H'}
@@ -281,7 +281,7 @@ import java.io.IOException;
  *     <td valign="top"> general
  *     <td> If the argument <i>arg</i> is {@code null}, then the result is
  *     "{@code null}".  If <i>arg</i> implements {@link java.util.Formattable Formattable}, then
- *     {@link java.util.Formattable#formatTo Formattable#formatTo} is invoked. Otherwise, the
+ *     {@link java.util.Formattable#formatTo arg.formatTo} is invoked. Otherwise, the
  *     result is obtained by invoking {@code arg.toString()}.
  *
  * <tr><td valign="top">{@code 'c'}, {@code 'C'}
@@ -394,14 +394,14 @@ import java.io.IOException;
  *     style numeric time zone offset from GMT, e.g. {@code -0800}.  This
  *     value will be adjusted as necessary for Daylight Saving Time.  For
  *     {@code long}, {@link java.lang.Long Long}, and {@link java.util.Date Date} the time zone used is
- *     the {@linkplain java.util.TimeZone#getDefault() TimeZone#getDefault()} for this
+ *     the {@linkplain java.util.TimeZone#getDefault() default time zone} for this
  *     instance of the Java virtual machine.
  *
  * <tr><td valign="top">{@code 'Z'}
  *     <td> A string representing the abbreviation for the time zone.  This
  *     value will be adjusted as necessary for Daylight Saving Time.  For
  *     {@code long}, {@link java.lang.Long Long}, and {@link java.util.Date Date} the  time zone used is
- *     the {@linkplain java.util.TimeZone#getDefault() TimeZone#getDefault()} for this
+ *     the {@linkplain java.util.TimeZone#getDefault() default time zone} for this
  *     instance of the Java virtual machine.  The Formatter's locale will
  *     supersede the locale of the argument (if any).
  *
@@ -648,7 +648,7 @@ import java.io.IOException;
  *
  * <p> All specified exceptions may be thrown by any of the {@code format}
  * methods of {@code Formatter} as well as by any {@code format} convenience
- * methods such as {@link java.lang.String#format(java.lang.String,java.lang.Object...) String#format(String,Object...)} and
+ * methods such as {@link java.lang.String#format(java.lang.String,java.lang.Object...) String.format} and
  * {@link java.io.PrintStream#printf(String,Object...) PrintStream.printf}.
  *
  * <p> Conversions denoted by an upper-case character (i.e. {@code 'B'},
@@ -674,7 +674,7 @@ import java.io.IOException;
  *     {@link java.lang.Boolean#toString(boolean) Boolean#toString(boolean)}.
  *
  *     <p> If the argument is {@code null}, then the result is
- *     "{@code false}".  If the argument is a {@code boolean} or {@link java.lang.Boolean Boolean}, then the result is the string returned by {@link java.lang.String#valueOf(boolean) String#valueOf(boolean)}.  Otherwise, the result is
+ *     "{@code false}".  If the argument is a {@code boolean} or {@link java.lang.Boolean Boolean}, then the result is the string returned by {@link java.lang.String#valueOf(boolean) String.valueOf()}.  Otherwise, the result is
  *     "{@code true}".
  *
  *     <p> If the {@code '#'} flag is given, then a {@link java.util.FormatFlagsConversionMismatchException FormatFlagsConversionMismatchException} will be thrown.
@@ -703,7 +703,7 @@ import java.io.IOException;
  *
  *     <p> If the argument is {@code null}, then the result is
  *     "{@code null}".  If the argument implements {@link java.util.Formattable Formattable}, then
- *     its {@link java.util.Formattable#formatTo Formattable#formatTo} method is invoked.
+ *     its {@link java.util.Formattable#formatTo formatTo} method is invoked.
  *     Otherwise, the result is obtained by invoking the argument's
  *     {@code toString()} method.
  *
@@ -877,8 +877,8 @@ import java.io.IOException;
  *     <p> If <i>x</i> is negative then the result will be an unsigned value
  *     generated by adding 2<sup>n</sup> to the value where {@code n} is the
  *     number of bits in the type as returned by the static {@code SIZE} field
- *     in the {@linkplain java.lang.Byte#SIZE Byte#SIZE}, {@linkplain java.lang.Short#SIZE Short#SIZE},
- *     {@linkplain java.lang.Integer#SIZE Integer#SIZE}, or {@linkplain java.lang.Long#SIZE Long#SIZE}
+ *     in the {@linkplain java.lang.Byte#SIZE Byte}, {@linkplain java.lang.Short#SIZE Short},
+ *     {@linkplain java.lang.Integer#SIZE Integer}, or {@linkplain java.lang.Long#SIZE Long}
  *     classes as appropriate.
  *
  *     <p> If the {@code '#'} flag is given then the output will always begin
@@ -899,8 +899,8 @@ import java.io.IOException;
  *     <p> If <i>x</i> is negative then the result will be an unsigned value
  *     generated by adding 2<sup>n</sup> to the value where {@code n} is the
  *     number of bits in the type as returned by the static {@code SIZE} field
- *     in the {@linkplain java.lang.Byte#SIZE Byte#SIZE}, {@linkplain java.lang.Short#SIZE Short#SIZE},
- *     {@linkplain java.lang.Integer#SIZE Integer#SIZE}, or {@linkplain java.lang.Long#SIZE Long#SIZE}
+ *     in the {@linkplain java.lang.Byte#SIZE Byte}, {@linkplain java.lang.Short#SIZE Short},
+ *     {@linkplain java.lang.Integer#SIZE Integer}, or {@linkplain java.lang.Long#SIZE Long}
  *     classes as appropriate.
  *
  *     <p> If the {@code '#'} flag is given then the output will always begin
@@ -916,7 +916,7 @@ import java.io.IOException;
  * <tr><td valign="top"> {@code 'X'}
  *     <td valign="top"> <tt>'&#92;u0058'</tt>
  *     <td> The upper-case variant of {@code 'x'}.  The entire string
- *     representing the number will be converted to {@linkplain java.lang.String#toUpperCase String#toUpperCase} including the {@code 'x'} (if any) and
+ *     representing the number will be converted to {@linkplain java.lang.String#toUpperCase upper case} including the {@code 'x'} (if any) and
  *     all hexadecimal digits {@code 'a'} - {@code 'f'}
  *     (<tt>'&#92;u0061'</tt> -  <tt>'&#92;u0066'</tt>).
  *
@@ -1068,7 +1068,7 @@ import java.io.IOException;
  * <tr><td valign="top"> {@code 'X'}
  *     <td valign="top"> <tt>'&#92;u0058'</tt>
  *     <td> The upper-case variant of {@code 'x'}.  The entire string
- *     representing the number will be converted to {@linkplain java.lang.String#toUpperCase String#toUpperCase} including the {@code 'x'} (if any) and
+ *     representing the number will be converted to {@linkplain java.lang.String#toUpperCase upper case} including the {@code 'x'} (if any) and
  *     all hexadecimal digits {@code 'a'} - {@code 'f'}
  *     (<tt>'&#92;u0061'</tt> - <tt>'&#92;u0066'</tt>).
  *
@@ -1140,10 +1140,10 @@ import java.io.IOException;
  *     <i>m</i> or <i>a</i> is equal to the precision.  If the precision is not
  *     specified then the default value is {@code 6}. If the precision is less
  *     than the number of digits which would appear after the decimal point in
- *     the string returned by {@link java.lang.Float#toString(float) Float#toString(float)} or {@link java.lang.Double#toString(double) Double#toString(double)} respectively, then the value will be rounded
+ *     the string returned by {@link java.lang.Float#toString(float) Float#toString(float)} or {@link java.lang.Double#toString(double)      } respectively, then the value will be rounded
  *     using the {@linkplain java.math.BigDecimal#ROUND_HALF_UP round half up
  *     algorithm}.  Otherwise, zeros may be appended to reach the precision.
- *     For a canonical representation of the value, use {@link java.lang.Float#toString(float) Float#toString(float)} or {@link java.lang.Double#toString(double) Double#toString(double)} as
+ *     For a canonical representation of the value, use {@link java.lang.Float#toString(float)      } or {@link java.lang.Double#toString(double) Double#toString(double)} as
  *     appropriate.
  *
  *     <p>If the {@code ','} flag is given, then an {@link java.util.FormatFlagsConversionMismatchException FormatFlagsConversionMismatchException} will be thrown.
@@ -1207,10 +1207,10 @@ import java.io.IOException;
  *     <i>m</i> or <i>a</i> is equal to the precision.  If the precision is not
  *     specified then the default value is {@code 6}. If the precision is less
  *     than the number of digits which would appear after the decimal point in
- *     the string returned by {@link java.lang.Float#toString(float) Float#toString(float)} or {@link java.lang.Double#toString(double) Double#toString(double)} respectively, then the value will be rounded
+ *     the string returned by {@link java.lang.Float#toString(float) Float#toString(float)} or {@link java.lang.Double#toString(double)      } respectively, then the value will be rounded
  *     using the {@linkplain java.math.BigDecimal#ROUND_HALF_UP round half up
  *     algorithm}.  Otherwise, zeros may be appended to reach the precision.
- *     For a canonical representation of the value, use {@link java.lang.Float#toString(float) Float#toString(float)} or {@link java.lang.Double#toString(double) Double#toString(double)} as
+ *     For a canonical representation of the value, use {@link java.lang.Float#toString(float)      } or {@link java.lang.Double#toString(double) Double#toString(double)} as
  *     appropriate.
  *
  * <tr><td valign="top"> {@code 'a'}
@@ -1244,7 +1244,7 @@ import java.io.IOException;
  *     {@code "0x1."} followed by the hexadecimal representation of the rest
  *     of the significand as a fraction.  The exponent is represented by
  *     {@code 'p'} (<tt>'&#92;u0070'</tt>) followed by a decimal string of the
- *     unbiased exponent as if produced by invoking {@link java.lang.Integer#toString(int) Integer#toString(int)} on the exponent value.  If the
+ *     unbiased exponent as if produced by invoking {@link java.lang.Integer#toString(int) Integer.toString} on the exponent value.  If the
  *     precision is specified, the value is rounded to the given number of
  *     hexadecimal digits.
  *
@@ -1321,7 +1321,7 @@ import java.io.IOException;
  *
  * <p> If the conversion is {@code 'a'} or {@code 'A'}, then the precision
  * is the number of hexadecimal digits after the radix point.  If the
- * precision is not provided, then all of the digits as returned by {@link java.lang.Double#toHexString(double) Double#toHexString(double)} will be output.
+ * precision is not provided, then all of the digits as returned by {@link java.lang.Double#toHexString(double)  } will be output.
  *
  * <p><a name="dnbdec"><b> BigDecimal </b></a>
  *
@@ -1366,7 +1366,7 @@ import java.io.IOException;
  *     the value will be rounded using the
  *     {@linkplain java.math.BigDecimal#ROUND_HALF_UP round half up
  *     algorithm}.  Otherwise, zeros may be appended to reach the precision.
- *     For a canonical representation of the value, use {@link java.math.BigDecimal#toString() BigDecimal#toString()}.
+ *     For a canonical representation of the value, use {@link java.math.BigDecimal#toString()      }.
  *
  *     <p> If the {@code ','} flag is given, then an {@link java.util.FormatFlagsConversionMismatchException FormatFlagsConversionMismatchException} will be thrown.
  *
@@ -1426,7 +1426,7 @@ import java.io.IOException;
  *     then the value will be rounded using the
  *     {@linkplain java.math.BigDecimal#ROUND_HALF_UP round half up
  *     algorithm}.  Otherwise, zeros may be appended to reach the precision.
- *     For a canonical representation of the value, use {@link java.math.BigDecimal#toString() BigDecimal#toString()}.
+ *     For a canonical representation of the value, use {@link java.math.BigDecimal#toString()      }.
  *
  * </table>
  *
@@ -1530,7 +1530,7 @@ import java.io.IOException;
  *     style numeric time zone offset from GMT, e.g. {@code -0800}.  This
  *     value will be adjusted as necessary for Daylight Saving Time.  For
  *     {@code long}, {@link java.lang.Long Long}, and {@link java.util.Date Date} the time zone used is
- *     the {@linkplain java.util.TimeZone#getDefault() TimeZone#getDefault()} for this
+ *     the {@linkplain java.util.TimeZone#getDefault() default time zone} for this
  *     instance of the Java virtual machine.
  *
  * <tr><td valign="top">{@code 'Z'}
@@ -1538,7 +1538,7 @@ import java.io.IOException;
  *     <td> A string representing the abbreviation for the time zone.  This
  *     value will be adjusted as necessary for Daylight Saving Time.  For
  *     {@code long}, {@link java.lang.Long Long}, and {@link java.util.Date Date} the time zone used is
- *     the {@linkplain java.util.TimeZone#getDefault() TimeZone#getDefault()} for this
+ *     the {@linkplain java.util.TimeZone#getDefault() default time zone} for this
  *     instance of the Java virtual machine.  The Formatter's locale will
  *     supersede the locale of the argument (if any).
  *
@@ -1710,7 +1710,7 @@ import java.io.IOException;
  * <table cellpadding=5 summary="DTConv">
  *
  * <tr><td valign="top">{@code 'n'}
- *     <td> the platform-specific line separator as returned by {@link java.lang.System#getProperty System#getProperty}.
+ *     <td> the platform-specific line separator as returned by {@link java.lang.System#getProperty System.getProperty("line.separator")}.
  *
  * </table>
  *
@@ -1796,8 +1796,8 @@ public final class Formatter implements java.io.Closeable, java.io.Flushable {
  * <p> The destination of the formatted output is a {@link java.lang.StringBuilder StringBuilder}
  * which may be retrieved by invoking {@link #out out()} and whose
  * current content may be converted into a string by invoking {@link
- * #toString toString()}.  The locale used is the {@linkplain java.util.Locale#getDefault(java.util.Locale.Category) Locale#getDefault(Locale.Category)} for
- * {@linkplain java.util.Locale.Category#FORMAT Locale.Category#FORMAT} for this instance of the Java
+ * #toString toString()}.  The locale used is the {@linkplain java.util.Locale#getDefault(java.util.Locale.Category) default locale} for
+ * {@linkplain java.util.Locale.Category#FORMAT formatting} for this instance of the Java
  * virtual machine.
  */
 
@@ -1806,8 +1806,8 @@ public Formatter() { throw new RuntimeException("Stub!"); }
 /**
  * Constructs a new formatter with the specified destination.
  *
- * <p> The locale used is the {@linkplain java.util.Locale#getDefault(java.util.Locale.Category) Locale#getDefault(Locale.Category)} for
- * {@linkplain java.util.Locale.Category#FORMAT Locale.Category#FORMAT} for this instance of the Java
+ * <p> The locale used is the {@linkplain java.util.Locale#getDefault(java.util.Locale.Category) default locale} for
+ * {@linkplain java.util.Locale.Category#FORMAT formatting} for this instance of the Java
  * virtual machine.
  *
  * @param  a
@@ -1855,8 +1855,8 @@ public Formatter(java.lang.Appendable a, java.util.Locale l) { throw new Runtime
  * java.nio.charset.Charset#defaultCharset() default charset} for this
  * instance of the Java virtual machine.
  *
- * <p> The locale used is the {@linkplain java.util.Locale#getDefault(java.util.Locale.Category) Locale#getDefault(Locale.Category)} for
- * {@linkplain java.util.Locale.Category#FORMAT Locale.Category#FORMAT} for this instance of the Java
+ * <p> The locale used is the {@linkplain java.util.Locale#getDefault(java.util.Locale.Category) default locale} for
+ * {@linkplain java.util.Locale.Category#FORMAT formatting} for this instance of the Java
  * virtual machine.
  *
  * @param  fileName
@@ -1866,7 +1866,7 @@ public Formatter(java.lang.Appendable a, java.util.Locale l) { throw new Runtime
  *         will be written to the file and is buffered.
  *
  * @throws  java.lang.SecurityException
- *          If a security manager is present and {@link java.lang.SecurityManager#checkWrite SecurityManager#checkWrite} denies write
+ *          If a security manager is present and {@link java.lang.SecurityManager#checkWrite checkWrite(fileName)} denies write
  *          access to the file
  *
  * @throws  java.io.FileNotFoundException
@@ -1881,8 +1881,8 @@ public Formatter(java.lang.String fileName) throws java.io.FileNotFoundException
 /**
  * Constructs a new formatter with the specified file name and charset.
  *
- * <p> The locale used is the {@linkplain java.util.Locale#getDefault(java.util.Locale.Category) Locale#getDefault(Locale.Category)} for
- * {@linkplain java.util.Locale.Category#FORMAT Locale.Category#FORMAT} for this instance of the Java
+ * <p> The locale used is the {@linkplain java.util.Locale#getDefault(java.util.Locale.Category) default locale} for
+ * {@linkplain java.util.Locale.Category#FORMAT formatting} for this instance of the Java
  * virtual machine.
  *
  * @param  fileName
@@ -1902,7 +1902,7 @@ public Formatter(java.lang.String fileName) throws java.io.FileNotFoundException
  *          creating the file
  *
  * @throws  java.lang.SecurityException
- *          If a security manager is present and {@link java.lang.SecurityManager#checkWrite SecurityManager#checkWrite} denies write
+ *          If a security manager is present and {@link java.lang.SecurityManager#checkWrite checkWrite(fileName)} denies write
  *          access to the file
  *
  * @throws  java.io.UnsupportedEncodingException
@@ -1937,7 +1937,7 @@ public Formatter(java.lang.String fileName, java.lang.String csn) throws java.io
  *          creating the file
  *
  * @throws  java.lang.SecurityException
- *          If a security manager is present and {@link java.lang.SecurityManager#checkWrite SecurityManager#checkWrite} denies write
+ *          If a security manager is present and {@link java.lang.SecurityManager#checkWrite checkWrite(fileName)} denies write
  *          access to the file
  *
  * @throws  java.io.UnsupportedEncodingException
@@ -1953,8 +1953,8 @@ public Formatter(java.lang.String fileName, java.lang.String csn, java.util.Loca
  * java.nio.charset.Charset#defaultCharset() default charset} for this
  * instance of the Java virtual machine.
  *
- * <p> The locale used is the {@linkplain java.util.Locale#getDefault(java.util.Locale.Category) Locale#getDefault(Locale.Category)} for
- * {@linkplain java.util.Locale.Category#FORMAT Locale.Category#FORMAT} for this instance of the Java
+ * <p> The locale used is the {@linkplain java.util.Locale#getDefault(java.util.Locale.Category) default locale} for
+ * {@linkplain java.util.Locale.Category#FORMAT formatting} for this instance of the Java
  * virtual machine.
  *
  * @param  file
@@ -1964,7 +1964,7 @@ public Formatter(java.lang.String fileName, java.lang.String csn, java.util.Loca
  *         file and is buffered.
  *
  * @throws  java.lang.SecurityException
- *          If a security manager is present and {@link java.lang.SecurityManager#checkWrite SecurityManager#checkWrite} denies
+ *          If a security manager is present and {@link java.lang.SecurityManager#checkWrite checkWrite(file.getPath())} denies
  *          write access to the file
  *
  * @throws  java.io.FileNotFoundException
@@ -1979,8 +1979,8 @@ public Formatter(java.io.File file) throws java.io.FileNotFoundException { throw
 /**
  * Constructs a new formatter with the specified file and charset.
  *
- * <p> The locale used is the {@linkplain java.util.Locale#getDefault(java.util.Locale.Category) Locale#getDefault(Locale.Category)} for
- * {@linkplain java.util.Locale.Category#FORMAT Locale.Category#FORMAT} for this instance of the Java
+ * <p> The locale used is the {@linkplain java.util.Locale#getDefault(java.util.Locale.Category) default locale} for
+ * {@linkplain java.util.Locale.Category#FORMAT formatting} for this instance of the Java
  * virtual machine.
  *
  * @param  file
@@ -2000,7 +2000,7 @@ public Formatter(java.io.File file) throws java.io.FileNotFoundException { throw
  *          creating the file
  *
  * @throws  java.lang.SecurityException
- *          If a security manager is present and {@link java.lang.SecurityManager#checkWrite SecurityManager#checkWrite} denies
+ *          If a security manager is present and {@link java.lang.SecurityManager#checkWrite checkWrite(file.getPath())} denies
  *          write access to the file
  *
  * @throws  java.io.UnsupportedEncodingException
@@ -2035,7 +2035,7 @@ public Formatter(java.io.File file, java.lang.String csn) throws java.io.FileNot
  *          creating the file
  *
  * @throws  java.lang.SecurityException
- *          If a security manager is present and {@link java.lang.SecurityManager#checkWrite SecurityManager#checkWrite} denies
+ *          If a security manager is present and {@link java.lang.SecurityManager#checkWrite checkWrite(file.getPath())} denies
  *          write access to the file
  *
  * @throws  java.io.UnsupportedEncodingException
@@ -2047,8 +2047,8 @@ public Formatter(java.io.File file, java.lang.String csn, java.util.Locale l) th
 /**
  * Constructs a new formatter with the specified print stream.
  *
- * <p> The locale used is the {@linkplain java.util.Locale#getDefault(java.util.Locale.Category) Locale#getDefault(Locale.Category)} for
- * {@linkplain java.util.Locale.Category#FORMAT Locale.Category#FORMAT} for this instance of the Java
+ * <p> The locale used is the {@linkplain java.util.Locale#getDefault(java.util.Locale.Category) default locale} for
+ * {@linkplain java.util.Locale.Category#FORMAT formatting} for this instance of the Java
  * virtual machine.
  *
  * <p> Characters are written to the given {@link java.io.PrintStream
@@ -2068,8 +2068,8 @@ public Formatter(java.io.PrintStream ps) { throw new RuntimeException("Stub!"); 
  * java.nio.charset.Charset#defaultCharset() default charset} for this
  * instance of the Java virtual machine.
  *
- * <p> The locale used is the {@linkplain java.util.Locale#getDefault(java.util.Locale.Category) Locale#getDefault(Locale.Category)} for
- * {@linkplain java.util.Locale.Category#FORMAT Locale.Category#FORMAT} for this instance of the Java
+ * <p> The locale used is the {@linkplain java.util.Locale#getDefault(java.util.Locale.Category) default locale} for
+ * {@linkplain java.util.Locale.Category#FORMAT formatting} for this instance of the Java
  * virtual machine.
  *
  * @param  os
@@ -2083,8 +2083,8 @@ public Formatter(java.io.OutputStream os) { throw new RuntimeException("Stub!");
  * Constructs a new formatter with the specified output stream and
  * charset.
  *
- * <p> The locale used is the {@linkplain java.util.Locale#getDefault(java.util.Locale.Category) Locale#getDefault(Locale.Category)} for
- * {@linkplain java.util.Locale.Category#FORMAT Locale.Category#FORMAT} for this instance of the Java
+ * <p> The locale used is the {@linkplain java.util.Locale#getDefault(java.util.Locale.Category) default locale} for
+ * {@linkplain java.util.Locale.Category#FORMAT formatting} for this instance of the Java
  * virtual machine.
  *
  * @param  os

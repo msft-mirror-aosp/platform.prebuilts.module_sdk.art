@@ -49,14 +49,14 @@ private Paths() { throw new RuntimeException("Stub!"); }
  * non-empty string, including {@code first}, is considered to be a sequence
  * of name elements (see {@link java.nio.file.Path Path}) and is joined to form a path string.
  * The details as to how the Strings are joined is provider specific but
- * typically they will be joined using the {@link java.nio.file.FileSystem#getSeparator FileSystem#getSeparator} as the separator. For example, if the name separator is
+ * typically they will be joined using the {@link java.nio.file.FileSystem#getSeparator  name-separator} as the separator. For example, if the name separator is
  * "{@code /}" and {@code getPath("/foo","bar","gus")} is invoked, then the
  * path string {@code "/foo/bar/gus"} is converted to a {@code Path}.
  * A {@code Path} representing an empty path is returned if {@code first}
  * is the empty string and {@code more} does not contain any non-empty
  * strings.
  *
- * <p> The {@code Path} is obtained by invoking the {@link java.nio.file.FileSystem#getPath FileSystem#getPath} method of the {@link java.nio.file.FileSystems#getDefault FileSystems#getDefault} {@link java.nio.file.FileSystem FileSystem}.
+ * <p> The {@code Path} is obtained by invoking the {@link java.nio.file.FileSystem#getPath  getPath} method of the {@link java.nio.file.FileSystems#getDefault default} {@link java.nio.file.FileSystem FileSystem}.
  *
  * <p> Note that while this method is very convenient, using it will imply
  * an assumed reference to the default {@code FileSystem} and limit the
@@ -86,23 +86,23 @@ public static java.nio.file.Path get(java.lang.String first, java.lang.String...
 /**
  * Converts the given URI to a {@link java.nio.file.Path Path} object.
  *
- * <p> This method iterates over the {@link java.nio.file.spi.FileSystemProvider#installedProviders() FileSystemProvider#installedProviders()} providers to locate the provider that is identified by the
- * URI {@link java.net.URI#getScheme URI#getScheme} of the given URI. URI schemes are
- * compared without regard to case. If the provider is found then its {@link java.nio.file.spi.FileSystemProvider#getPath FileSystemProvider#getPath} method is invoked to convert the
+ * <p> This method iterates over the {@link java.nio.file.spi.FileSystemProvider#installedProviders()  installed} providers to locate the provider that is identified by the
+ * URI {@link java.net.URI#getScheme scheme} of the given URI. URI schemes are
+ * compared without regard to case. If the provider is found then its {@link java.nio.file.spi.FileSystemProvider#getPath getPath} method is invoked to convert the
  * URI.
  *
  * <p> In the case of the default provider, identified by the URI scheme
  * "file", the given URI has a non-empty path component, and undefined query
  * and fragment components. Whether the authority component may be present
  * is platform specific. The returned {@code Path} is associated with the
- * {@link java.nio.file.FileSystems#getDefault FileSystems#getDefault} file system.
+ * {@link java.nio.file.FileSystems#getDefault default} file system.
  *
  * <p> The default provider provides a similar <em>round-trip</em> guarantee
  * to the {@link java.io.File} class. For a given {@code Path} <i>p</i> it
  * is guaranteed that
  * <blockquote><tt>
- * Paths.get(</tt><i>p</i><tt>.{@link java.nio.file.Path#toUri() Path#toUri()}()).equals(</tt>
- * <i>p</i><tt>.{@link java.nio.file.Path#toAbsolutePath() Path#toAbsolutePath()}())</tt>
+ * Paths.get(</tt><i>p</i><tt>.{@link java.nio.file.Path#toUri() toUri}()).equals(</tt>
+ * <i>p</i><tt>.{@link java.nio.file.Path#toAbsolutePath() toAbsolutePath}())</tt>
  * </blockquote>
  * so long as the original {@code Path}, the {@code URI}, and the new {@code
  * Path} are all created in (possibly different invocations of) the same

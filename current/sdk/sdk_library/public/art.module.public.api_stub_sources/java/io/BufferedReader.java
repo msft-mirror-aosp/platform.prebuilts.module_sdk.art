@@ -102,7 +102,7 @@ public int read() throws java.io.IOException { throw new RuntimeException("Stub!
  * Reads characters into a portion of an array.
  *
  * <p> This method implements the general contract of the corresponding
- * <code>{@link java.io.Reader#read(char[],int,int) Reader#read(char[], int, int)}</code> method of the
+ * <code>{@link java.io.Reader#read(char[],int,int) read}</code> method of the
  * <code>{@link java.io.Reader Reader}</code> class.  As an additional convenience, it
  * attempts to read as many characters as possible by repeatedly invoking
  * the <code>read</code> method of the underlying stream.  This iterated
