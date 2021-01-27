@@ -55,37 +55,37 @@ package java.util;
  * <em>start-rule</em> and <em>end-rule</em>. A day when daylight saving time
  * starts or ends is specified by a combination of <em>month</em>,
  * <em>day-of-month</em>, and <em>day-of-week</em> values. The <em>month</em>
- * value is represented by a Calendar {@link java.util.Calendar#MONTH Calendar#MONTH} field
+ * value is represented by a Calendar {@link java.util.Calendar#MONTH MONTH} field
  * value, such as {@link java.util.Calendar#MARCH Calendar#MARCH}. The <em>day-of-week</em> value is
- * represented by a Calendar {@link java.util.Calendar#DAY_OF_WEEK Calendar#DAY_OF_WEEK} value,
- * such as {@link java.util.Calendar#SUNDAY Calendar#SUNDAY}. The meanings of value combinations
+ * represented by a Calendar {@link java.util.Calendar#DAY_OF_WEEK DAY_OF_WEEK} value,
+ * such as {@link java.util.Calendar#SUNDAY SUNDAY}. The meanings of value combinations
  * are as follows.
  *
  * <ul>
  * <li><b>Exact day of month</b><br>
  * To specify an exact day of month, set the <em>month</em> and
  * <em>day-of-month</em> to an exact value, and <em>day-of-week</em> to zero. For
- * example, to specify March 1, set the <em>month</em> to {@link java.util.Calendar#MARCH Calendar#MARCH}, <em>day-of-month</em> to 1, and <em>day-of-week</em> to 0.</li>
+ * example, to specify March 1, set the <em>month</em> to {@link java.util.Calendar#MARCH  MARCH}, <em>day-of-month</em> to 1, and <em>day-of-week</em> to 0.</li>
  *
  * <li><b>Day of week on or after day of month</b><br>
  * To specify a day of week on or after an exact day of month, set the
  * <em>month</em> to an exact month value, <em>day-of-month</em> to the day on
- * or after which the rule is applied, and <em>day-of-week</em> to a negative {@link java.util.Calendar#DAY_OF_WEEK Calendar#DAY_OF_WEEK} field value. For example, to specify the
- * second Sunday of April, set <em>month</em> to {@link java.util.Calendar#APRIL Calendar#APRIL},
- * <em>day-of-month</em> to 8, and <em>day-of-week</em> to <code>-</code>{@link java.util.Calendar#SUNDAY Calendar#SUNDAY}.</li>
+ * or after which the rule is applied, and <em>day-of-week</em> to a negative {@link java.util.Calendar#DAY_OF_WEEK DAY_OF_WEEK} field value. For example, to specify the
+ * second Sunday of April, set <em>month</em> to {@link java.util.Calendar#APRIL APRIL},
+ * <em>day-of-month</em> to 8, and <em>day-of-week</em> to <code>-</code>{@link java.util.Calendar#SUNDAY SUNDAY}.</li>
  *
  * <li><b>Day of week on or before day of month</b><br>
  * To specify a day of the week on or before an exact day of the month, set
  * <em>day-of-month</em> and <em>day-of-week</em> to a negative value. For
  * example, to specify the last Wednesday on or before the 21st of March, set
- * <em>month</em> to {@link java.util.Calendar#MARCH Calendar#MARCH}, <em>day-of-month</em> is -21
- * and <em>day-of-week</em> is <code>-</code>{@link java.util.Calendar#WEDNESDAY Calendar#WEDNESDAY}. </li>
+ * <em>month</em> to {@link java.util.Calendar#MARCH MARCH}, <em>day-of-month</em> is -21
+ * and <em>day-of-week</em> is <code>-</code>{@link java.util.Calendar#WEDNESDAY WEDNESDAY}. </li>
  *
  * <li><b>Last day-of-week of month</b><br>
  * To specify, the last day-of-week of the month, set <em>day-of-week</em> to a
- * {@link java.util.Calendar#DAY_OF_WEEK Calendar#DAY_OF_WEEK} value and <em>day-of-month</em> to
+ * {@link java.util.Calendar#DAY_OF_WEEK DAY_OF_WEEK} value and <em>day-of-month</em> to
  * -1. For example, to specify the last Sunday of October, set <em>month</em>
- * to {@link java.util.Calendar#OCTOBER Calendar#OCTOBER}, <em>day-of-week</em> to {@link java.util.Calendar#SUNDAY Calendar#SUNDAY} and <em>day-of-month</em> to -1.  </li>
+ * to {@link java.util.Calendar#OCTOBER OCTOBER}, <em>day-of-week</em> to {@link java.util.Calendar#SUNDAY SUNDAY} and <em>day-of-month</em> to -1.  </li>
  *
  * </ul>
  * The time of the day at which daylight saving time starts or ends is
@@ -177,7 +177,7 @@ public SimpleTimeZone(int rawOffset, java.lang.String ID) { throw new RuntimeExc
  * @param rawOffset       The given base time zone offset from GMT.
  * @param ID              The time zone ID which is given to this object.
  * @param startMonth      The daylight saving time starting month. Month is
- *                        a {@link java.util.Calendar#MONTH Calendar#MONTH} field value (0-based. e.g., 0
+ *                        a {@link java.util.Calendar#MONTH MONTH} field value (0-based. e.g., 0
  *                        for January).
  * @param startDay        The day of the month on which the daylight saving time starts.
  *                        See the class description for the special cases of this parameter.
@@ -187,7 +187,7 @@ public SimpleTimeZone(int rawOffset, java.lang.String ID) { throw new RuntimeExc
  *                        time (in milliseconds within the day), which is local
  *                        standard time in this case.
  * @param endMonth        The daylight saving time ending month. Month is
- *                        a {@link java.util.Calendar#MONTH Calendar#MONTH} field
+ *                        a {@link java.util.Calendar#MONTH MONTH} field
  *                        value (0-based. e.g., 9 for October).
  * @param endDay          The day of the month on which the daylight saving time ends.
  *                        See the class description for the special cases of this parameter.
@@ -227,7 +227,7 @@ public SimpleTimeZone(int rawOffset, java.lang.String ID, int startMonth, int st
  * @param rawOffset       The given base time zone offset from GMT.
  * @param ID              The time zone ID which is given to this object.
  * @param startMonth      The daylight saving time starting month. Month is
- *                        a {@link java.util.Calendar#MONTH Calendar#MONTH} field
+ *                        a {@link java.util.Calendar#MONTH MONTH} field
  *                        value (0-based. e.g., 0 for January).
  * @param startDay        The day of the month on which the daylight saving time starts.
  *                        See the class description for the special cases of this parameter.
@@ -236,7 +236,7 @@ public SimpleTimeZone(int rawOffset, java.lang.String ID, int startMonth, int st
  * @param startTime       The daylight saving time starting time in local wall clock
  *                        time, which is local standard time in this case.
  * @param endMonth        The daylight saving time ending month. Month is
- *                        a {@link java.util.Calendar#MONTH Calendar#MONTH} field
+ *                        a {@link java.util.Calendar#MONTH MONTH} field
  *                        value (0-based. e.g., 9 for October).
  * @param endDay          The day of the month on which the daylight saving time ends.
  *                        See the class description for the special cases of this parameter.
@@ -266,7 +266,7 @@ public SimpleTimeZone(int rawOffset, java.lang.String ID, int startMonth, int st
  * @param rawOffset       The given base time zone offset from GMT.
  * @param ID              The time zone ID which is given to this object.
  * @param startMonth      The daylight saving time starting month. Month is
- *                        a {@link java.util.Calendar#MONTH Calendar#MONTH} field
+ *                        a {@link java.util.Calendar#MONTH MONTH} field
  *                        value (0-based. e.g., 0 for January).
  * @param startDay        The day of the month on which the daylight saving time starts.
  *                        See the class description for the special cases of this parameter.
@@ -276,7 +276,7 @@ public SimpleTimeZone(int rawOffset, java.lang.String ID, int startMonth, int st
  *                        specified by <code>startTimeMode</code>.
  * @param startTimeMode   The mode of the start time specified by startTime.
  * @param endMonth        The daylight saving time ending month. Month is
- *                        a {@link java.util.Calendar#MONTH Calendar#MONTH} field
+ *                        a {@link java.util.Calendar#MONTH MONTH} field
  *                        value (0-based. e.g., 9 for October).
  * @param endDay          The day of the month on which the daylight saving time ends.
  *                        See the class description for the special cases of this parameter.
@@ -316,7 +316,7 @@ public void setStartYear(int year) { throw new RuntimeException("Stub!"); }
  * <pre><code>setStartRule(Calendar.APRIL, 1, Calendar.SUNDAY, 2*60*60*1000);</code></pre>
  *
  * @param startMonth      The daylight saving time starting month. Month is
- *                        a {@link java.util.Calendar#MONTH Calendar#MONTH} field
+ *                        a {@link java.util.Calendar#MONTH MONTH} field
  *                        value (0-based. e.g., 0 for January).
  * @param startDay        The day of the month on which the daylight saving time starts.
  *                        See the class description for the special cases of this parameter.
@@ -336,7 +336,7 @@ public void setStartRule(int startMonth, int startDay, int startDayOfWeek, int s
  * <pre><code>setStartRule(startMonth, startDay, 0, startTime)</code></pre>
  *
  * @param startMonth      The daylight saving time starting month. Month is
- *                        a {@link java.util.Calendar#MONTH Calendar#MONTH} field
+ *                        a {@link java.util.Calendar#MONTH MONTH} field
  *                        value (0-based. e.g., 0 for January).
  * @param startDay        The day of the month on which the daylight saving time starts.
  * @param startTime       The daylight saving time starting time in local wall clock
@@ -354,7 +354,7 @@ public void setStartRule(int startMonth, int startDay, int startTime) { throw ne
  * a month, e.g., the first Monday on or after the 8th.
  *
  * @param startMonth      The daylight saving time starting month. Month is
- *                        a {@link java.util.Calendar#MONTH Calendar#MONTH} field
+ *                        a {@link java.util.Calendar#MONTH MONTH} field
  *                        value (0-based. e.g., 0 for January).
  * @param startDay        The day of the month on which the daylight saving time starts.
  * @param startDayOfWeek  The daylight saving time starting day-of-week.
@@ -378,7 +378,7 @@ public void setStartRule(int startMonth, int startDay, int startDayOfWeek, int s
  * <code>setEndRule(Calendar.OCTOBER, -1, Calendar.SUNDAY, 2*60*60*1000);</code>
  *
  * @param endMonth        The daylight saving time ending month. Month is
- *                        a {@link java.util.Calendar#MONTH Calendar#MONTH} field
+ *                        a {@link java.util.Calendar#MONTH MONTH} field
  *                        value (0-based. e.g., 9 for October).
  * @param endDay          The day of the month on which the daylight saving time ends.
  *                        See the class description for the special cases of this parameter.
@@ -399,7 +399,7 @@ public void setEndRule(int endMonth, int endDay, int endDayOfWeek, int endTime) 
  * <pre><code>setEndRule(endMonth, endDay, 0, endTime)</code></pre>
  *
  * @param endMonth        The daylight saving time ending month. Month is
- *                        a {@link java.util.Calendar#MONTH Calendar#MONTH} field
+ *                        a {@link java.util.Calendar#MONTH MONTH} field
  *                        value (0-based. e.g., 9 for October).
  * @param endDay          The day of the month on which the daylight saving time ends.
  * @param endTime         The daylight saving ending time in local wall clock time,
@@ -417,7 +417,7 @@ public void setEndRule(int endMonth, int endDay, int endTime) { throw new Runtim
  * a month, e.g., the first Monday on or after the 8th.
  *
  * @param endMonth        The daylight saving time ending month. Month is
- *                        a {@link java.util.Calendar#MONTH Calendar#MONTH} field
+ *                        a {@link java.util.Calendar#MONTH MONTH} field
  *                        value (0-based. e.g., 9 for October).
  * @param endDay          The day of the month on which the daylight saving time ends.
  * @param endDayOfWeek    The daylight saving time ending day-of-week.

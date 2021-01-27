@@ -49,7 +49,7 @@ public interface RejectedExecutionHandler {
 
 /**
  * Method that may be invoked by a {@link java.util.concurrent.ThreadPoolExecutor ThreadPoolExecutor} when
- * {@link java.util.concurrent.ThreadPoolExecutor#execute ThreadPoolExecutor#execute} cannot accept a
+ * {@link java.util.concurrent.ThreadPoolExecutor#execute execute} cannot accept a
  * task.  This may occur when no more threads or queue slots are
  * available because their bounds would be exceeded, or upon
  * shutdown of the Executor.

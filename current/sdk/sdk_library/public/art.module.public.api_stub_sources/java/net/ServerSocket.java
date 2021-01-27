@@ -257,7 +257,7 @@ public void bind(java.net.SocketAddress endpoint, int backlog) throws java.io.IO
  * If there is a security manager set, its {@code checkConnect} method is
  * called with the local address and {@code -1} as its arguments to see
  * if the operation is allowed. If the operation is not allowed,
- * the {@link java.net.InetAddress#getLoopbackAddress InetAddress#getLoopbackAddress} address is returned.
+ * the {@link java.net.InetAddress#getLoopbackAddress loopback} address is returned.
  *
  * @return  the address to which this socket is bound,
  *          or the loopback address if denied by the security manager,
@@ -292,7 +292,7 @@ public int getLocalPort() { throw new RuntimeException("Stub!"); }
  * called with the local address and {@code -1} as its arguments to see
  * if the operation is allowed. If the operation is not allowed,
  * a {@code SocketAddress} representing the
- * {@link java.net.InetAddress#getLoopbackAddress InetAddress#getLoopbackAddress} address and the local
+ * {@link java.net.InetAddress#getLoopbackAddress loopback} address and the local
  * port to which the socket is bound is returned.
  *
  * @return a {@code SocketAddress} representing the local endpoint of
@@ -413,7 +413,7 @@ public boolean isBound() { throw new RuntimeException("Stub!"); }
 public boolean isClosed() { throw new RuntimeException("Stub!"); }
 
 /**
- * Enable/disable {@link java.net.SocketOptions#SO_TIMEOUT SocketOptions#SO_TIMEOUT} with the
+ * Enable/disable {@link java.net.SocketOptions#SO_TIMEOUT SO_TIMEOUT} with the
  * specified timeout, in milliseconds.  With this option set to a non-zero
  * timeout, a call to accept() for this ServerSocket
  * will block for only this amount of time.  If the timeout expires,
@@ -432,9 +432,9 @@ public boolean isClosed() { throw new RuntimeException("Stub!"); }
 public synchronized void setSoTimeout(int timeout) throws java.net.SocketException { throw new RuntimeException("Stub!"); }
 
 /**
- * Retrieve setting for {@link java.net.SocketOptions#SO_TIMEOUT SocketOptions#SO_TIMEOUT}.
+ * Retrieve setting for {@link java.net.SocketOptions#SO_TIMEOUT SO_TIMEOUT}.
  * 0 returns implies that the option is disabled (i.e., timeout of infinity).
- * @return the {@link java.net.SocketOptions#SO_TIMEOUT SocketOptions#SO_TIMEOUT} value
+ * @return the {@link java.net.SocketOptions#SO_TIMEOUT SO_TIMEOUT} value
  * @exception java.io.IOException if an I/O error occurs
  * @since   JDK1.1
  * @see #setSoTimeout(int)
@@ -443,7 +443,7 @@ public synchronized void setSoTimeout(int timeout) throws java.net.SocketExcepti
 public synchronized int getSoTimeout() throws java.io.IOException { throw new RuntimeException("Stub!"); }
 
 /**
- * Enable/disable the {@link java.net.SocketOptions#SO_REUSEADDR SocketOptions#SO_REUSEADDR}
+ * Enable/disable the {@link java.net.SocketOptions#SO_REUSEADDR SO_REUSEADDR}
  * socket option.
  * <p>
  * When a TCP connection is closed the connection may remain
@@ -455,22 +455,22 @@ public synchronized int getSoTimeout() throws java.io.IOException { throw new Ru
  * {@code SocketAddress} if there is a connection in the
  * timeout state involving the socket address or port.
  * <p>
- * Enabling {@link java.net.SocketOptions#SO_REUSEADDR SocketOptions#SO_REUSEADDR} prior to
+ * Enabling {@link java.net.SocketOptions#SO_REUSEADDR SO_REUSEADDR} prior to
  * binding the socket using {@link #bind(java.net.SocketAddress)} allows the socket
  * to be bound even though a previous connection is in a timeout state.
  * <p>
  * When a {@code ServerSocket} is created the initial setting
- * of {@link java.net.SocketOptions#SO_REUSEADDR SocketOptions#SO_REUSEADDR} is not defined.
+ * of {@link java.net.SocketOptions#SO_REUSEADDR SO_REUSEADDR} is not defined.
  * Applications can use {@link #getReuseAddress()} to determine the initial
- * setting of {@link java.net.SocketOptions#SO_REUSEADDR SocketOptions#SO_REUSEADDR}.
+ * setting of {@link java.net.SocketOptions#SO_REUSEADDR SO_REUSEADDR}.
  * <p>
- * The behaviour when {@link java.net.SocketOptions#SO_REUSEADDR SocketOptions#SO_REUSEADDR} is
+ * The behaviour when {@link java.net.SocketOptions#SO_REUSEADDR SO_REUSEADDR} is
  * enabled or disabled after a socket is bound (See {@link #isBound()})
  * is not defined.
  *
  * @param on  whether to enable or disable the socket option
  * @exception java.net.SocketException if an error occurs enabling or
- *            disabling the {@link java.net.SocketOptions#SO_REUSEADDR SocketOptions#SO_REUSEADDR}
+ *            disabling the {@link java.net.SocketOptions#SO_REUSEADDR SO_REUSEADDR}
  *            socket option, or the socket is closed.
  * @since 1.4
  * @see #getReuseAddress()
@@ -482,10 +482,10 @@ public synchronized int getSoTimeout() throws java.io.IOException { throw new Ru
 public void setReuseAddress(boolean on) throws java.net.SocketException { throw new RuntimeException("Stub!"); }
 
 /**
- * Tests if {@link java.net.SocketOptions#SO_REUSEADDR SocketOptions#SO_REUSEADDR} is enabled.
+ * Tests if {@link java.net.SocketOptions#SO_REUSEADDR SO_REUSEADDR} is enabled.
  *
  * @return a {@code boolean} indicating whether or not
- *         {@link java.net.SocketOptions#SO_REUSEADDR SocketOptions#SO_REUSEADDR} is enabled.
+ *         {@link java.net.SocketOptions#SO_REUSEADDR SO_REUSEADDR} is enabled.
  * @exception java.net.SocketException if there is an error
  * in the underlying protocol, such as a TCP error.
  * @since   1.4
@@ -502,7 +502,7 @@ public boolean getReuseAddress() throws java.net.SocketException { throw new Run
  * called with the local address and {@code -1} as its arguments to see
  * if the operation is allowed. If the operation is not allowed,
  * an {@code InetAddress} representing the
- * {@link java.net.InetAddress#getLoopbackAddress InetAddress#getLoopbackAddress} address is returned as
+ * {@link java.net.InetAddress#getLoopbackAddress loopback} address is returned as
  * the implementation address.
  *
  * @return  a string representation of this socket.
@@ -540,13 +540,13 @@ public static synchronized void setSocketFactory(java.net.SocketImplFactory fac)
 
 /**
  * Sets a default proposed value for the
- * {@link java.net.SocketOptions#SO_RCVBUF SocketOptions#SO_RCVBUF} option for sockets
+ * {@link java.net.SocketOptions#SO_RCVBUF SO_RCVBUF} option for sockets
  * accepted from this {@code ServerSocket}. The value actually set
  * in the accepted socket must be determined by calling
  * {@link java.net.Socket#getReceiveBufferSize() Socket#getReceiveBufferSize()} after the socket
  * is returned by {@link #accept()}.
  * <p>
- * The value of {@link java.net.SocketOptions#SO_RCVBUF SocketOptions#SO_RCVBUF} is used both to
+ * The value of {@link java.net.SocketOptions#SO_RCVBUF SO_RCVBUF} is used both to
  * set the size of the internal socket receive buffer, and to set the size
  * of the TCP receive window that is advertized to the remote peer.
  * <p>
@@ -578,13 +578,13 @@ public static synchronized void setSocketFactory(java.net.SocketImplFactory fac)
 public synchronized void setReceiveBufferSize(int size) throws java.net.SocketException { throw new RuntimeException("Stub!"); }
 
 /**
- * Gets the value of the {@link java.net.SocketOptions#SO_RCVBUF SocketOptions#SO_RCVBUF} option
+ * Gets the value of the {@link java.net.SocketOptions#SO_RCVBUF SO_RCVBUF} option
  * for this {@code ServerSocket}, that is the proposed buffer size that
  * will be used for Sockets accepted from this {@code ServerSocket}.
  *
  * <p>Note, the value actually set in the accepted socket is determined by
  * calling {@link java.net.Socket#getReceiveBufferSize() Socket#getReceiveBufferSize()}.
- * @return the value of the {@link java.net.SocketOptions#SO_RCVBUF SocketOptions#SO_RCVBUF}
+ * @return the value of the {@link java.net.SocketOptions#SO_RCVBUF SO_RCVBUF}
  *         option for this {@code Socket}.
  * @exception java.net.SocketException if there is an error
  *            in the underlying protocol, such as a TCP error.

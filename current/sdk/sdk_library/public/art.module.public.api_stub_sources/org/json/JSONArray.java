@@ -20,16 +20,16 @@ package org.json;
 
 /**
  * A dense indexed sequence of values. Values may be any mix of
- * {@link org.json.JSONObject JSONObject}, other {@link org.json.JSONArray JSONArray}, Strings,
+ * {@link org.json.JSONObject JSONObjects}, other {@link org.json.JSONArray JSONArrays}, Strings,
  * Booleans, Integers, Longs, Doubles, {@code null} or {@link org.json.JSONObject#NULL JSONObject#NULL}.
- * Values may not be {@link java.lang.Double#isNaN() Double#isNaN()}, {@link java.lang.Double#isInfinite() Double#isInfinite()}, or of any type not listed here.
+ * Values may not be {@link java.lang.Double#isNaN() NaNs}, {@link java.lang.Double#isInfinite()  infinities}, or of any type not listed here.
  *
  * <p>{@code JSONArray} has the same type coercion behavior and
  * optional/mandatory accessors as {@link org.json.JSONObject JSONObject}. See that class'
  * documentation for details.
  *
  * <p><strong>Warning:</strong> this class represents null in two incompatible
- * ways: the standard Java {@code null} reference, and the sentinel value {@link org.json.JSONObject#NULL JSONObject#NULL}. In particular, {@code get} fails if the requested index
+ * ways: the standard Java {@code null} reference, and the sentinel value {@link org.json.JSONObject#NULL  }. In particular, {@code get} fails if the requested index
  * holds the null reference, but succeeds if it holds {@code JSONObject.NULL}.
  *
  * <p>Instances of this class are not thread safe. Although this class is
@@ -104,8 +104,8 @@ public org.json.JSONArray put(boolean value) { throw new RuntimeException("Stub!
 /**
  * Appends {@code value} to the end of this array.
  *
- * @param value a finite value. May not be {@link java.lang.Double#isNaN() Double#isNaN()} or
- *     {@link java.lang.Double#isInfinite() Double#isInfinite()}.
+ * @param value a finite value. May not be {@link java.lang.Double#isNaN() NaNs} or
+ *     {@link java.lang.Double#isInfinite() infinities}.
  * @return this array.
  */
 
@@ -132,7 +132,7 @@ public org.json.JSONArray put(long value) { throw new RuntimeException("Stub!");
  *
  * @param value a {@link org.json.JSONObject JSONObject}, {@link org.json.JSONArray JSONArray}, String, Boolean,
  *     Integer, Long, Double, {@link org.json.JSONObject#NULL JSONObject#NULL}, or {@code null}. May
- *     not be {@link java.lang.Double#isNaN() Double#isNaN()} or {@link java.lang.Double#isInfinite() Double#isInfinite()}. Unsupported values are not permitted and will cause the
+ *     not be {@link java.lang.Double#isNaN() NaNs} or {@link java.lang.Double#isInfinite()      infinities}. Unsupported values are not permitted and will cause the
  *     array to be in an inconsistent state.
  * @return this array.
  */
@@ -154,8 +154,8 @@ public org.json.JSONArray put(int index, boolean value) throws org.json.JSONExce
  * to the required length if necessary. If a value already exists at {@code
  * index}, it will be replaced.
  *
- * @param value a finite value. May not be {@link java.lang.Double#isNaN() Double#isNaN()} or
- *     {@link java.lang.Double#isInfinite() Double#isInfinite()}.
+ * @param value a finite value. May not be {@link java.lang.Double#isNaN() NaNs} or
+ *     {@link java.lang.Double#isInfinite() infinities}.
  * @return this array.
  */
 
@@ -188,7 +188,7 @@ public org.json.JSONArray put(int index, long value) throws org.json.JSONExcepti
  *
  * @param value a {@link org.json.JSONObject JSONObject}, {@link org.json.JSONArray JSONArray}, String, Boolean,
  *     Integer, Long, Double, {@link org.json.JSONObject#NULL JSONObject#NULL}, or {@code null}. May
- *     not be {@link java.lang.Double#isNaN() Double#isNaN()} or {@link java.lang.Double#isInfinite() Double#isInfinite()}.
+ *     not be {@link java.lang.Double#isNaN() NaNs} or {@link java.lang.Double#isInfinite()      infinities}.
  * @return this array.
  */
 

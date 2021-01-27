@@ -136,7 +136,7 @@ protected KeyFactory(java.security.KeyFactorySpi keyFacSpi, java.security.Provid
  * Provider that supports the specified algorithm is returned.
  *
  * <p> Note that the list of registered providers may be retrieved via
- * the {@link java.security.Security#getProviders() Security#getProviders()} method.
+ * the {@link java.security.Security#getProviders() Security.getProviders()} method.
  *
  * @param algorithm the name of the requested key algorithm.
  * See the KeyFactory section in the <a href=
@@ -165,7 +165,7 @@ public static java.security.KeyFactory getInstance(java.lang.String algorithm) t
  * in the security provider list.
  *
  * <p> Note that the list of registered providers may be retrieved via
- * the {@link java.security.Security#getProviders() Security#getProviders()} method.
+ * the {@link java.security.Security#getProviders() Security.getProviders()} method.
  *
  * @param algorithm the name of the requested key algorithm.
  * See the KeyFactory section in the <a href=

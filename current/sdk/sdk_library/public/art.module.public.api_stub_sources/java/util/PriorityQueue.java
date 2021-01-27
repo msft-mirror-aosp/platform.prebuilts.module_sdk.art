@@ -28,9 +28,9 @@ package java.util;
 
 
 /**
- * An unbounded priority {@linkplain java.util.Queue Queue} based on a priority heap.
+ * An unbounded priority {@linkplain java.util.Queue queue} based on a priority heap.
  * The elements of the priority queue are ordered according to their
- * {@linkplain java.lang.Comparable Comparable}, or by a {@link java.util.Comparator Comparator}
+ * {@linkplain java.lang.Comparable natural ordering}, or by a {@link java.util.Comparator Comparator}
  * provided at queue construction time, depending on which constructor is
  * used.  A priority queue does not permit {@code null} elements.
  * A priority queue relying on natural ordering also does not permit
@@ -85,7 +85,7 @@ public class PriorityQueue<E> extends java.util.AbstractQueue<E> implements java
 /**
  * Creates a {@code PriorityQueue} with the default initial
  * capacity (11) that orders its elements according to their
- * {@linkplain java.lang.Comparable Comparable}.
+ * {@linkplain java.lang.Comparable natural ordering}.
  */
 
 public PriorityQueue() { throw new RuntimeException("Stub!"); }
@@ -93,7 +93,7 @@ public PriorityQueue() { throw new RuntimeException("Stub!"); }
 /**
  * Creates a {@code PriorityQueue} with the specified initial
  * capacity that orders its elements according to their
- * {@linkplain java.lang.Comparable Comparable}.
+ * {@linkplain java.lang.Comparable natural ordering}.
  *
  * @param initialCapacity the initial capacity for this priority queue
  * @throws java.lang.IllegalArgumentException if {@code initialCapacity} is less
@@ -107,7 +107,7 @@ public PriorityQueue(int initialCapacity) { throw new RuntimeException("Stub!");
  * whose elements are ordered according to the specified comparator.
  *
  * @param  comparator the comparator that will be used to order this
- *         priority queue.  If {@code null}, the {@linkplain java.lang.Comparable Comparable} of the elements will be used.
+ *         priority queue.  If {@code null}, the {@linkplain java.lang.Comparable          natural ordering} of the elements will be used.
  * @since 1.8
  */
 
@@ -119,7 +119,7 @@ public PriorityQueue(java.util.Comparator<? super E> comparator) { throw new Run
  *
  * @param  initialCapacity the initial capacity for this priority queue
  * @param  comparator the comparator that will be used to order this
- *         priority queue.  If {@code null}, the {@linkplain java.lang.Comparable Comparable} of the elements will be used.
+ *         priority queue.  If {@code null}, the {@linkplain java.lang.Comparable          natural ordering} of the elements will be used.
  * @throws java.lang.IllegalArgumentException if {@code initialCapacity} is
  *         less than 1
  */
@@ -132,7 +132,7 @@ public PriorityQueue(int initialCapacity, java.util.Comparator<? super E> compar
  * a {@link java.util.SortedSet SortedSet} or is another {@code PriorityQueue}, this
  * priority queue will be ordered according to the same ordering.
  * Otherwise, this priority queue will be ordered according to the
- * {@linkplain java.lang.Comparable Comparable} of its elements.
+ * {@linkplain java.lang.Comparable natural ordering} of its elements.
  *
  * @param  c the collection whose elements are to be placed
  *         into this priority queue
@@ -307,7 +307,7 @@ public E poll() { throw new RuntimeException("Stub!"); }
 /**
  * Returns the comparator used to order the elements in this
  * queue, or {@code null} if this queue is sorted according to
- * the {@linkplain java.lang.Comparable Comparable} of its elements.
+ * the {@linkplain java.lang.Comparable natural ordering} of its elements.
  *
  * @return the comparator used to order this queue, or
  *         {@code null} if this queue is sorted according to the

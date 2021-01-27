@@ -47,7 +47,7 @@ import java.util.NoSuchElementException;
 
 /**
  * A scalable concurrent {@link java.util.concurrent.ConcurrentNavigableMap ConcurrentNavigableMap} implementation.
- * The map is sorted according to the {@linkplain java.lang.Comparable Comparable} of its keys, or by a {@link java.util.Comparator Comparator} provided at map
+ * The map is sorted according to the {@linkplain java.lang.Comparable  ordering} of its keys, or by a {@link java.util.Comparator Comparator} provided at map
  * creation time, depending on which constructor is used.
  *
  * <p>This class implements a concurrent variant of <a
@@ -100,7 +100,7 @@ public class ConcurrentSkipListMap<K, V> extends java.util.AbstractMap<K,V> impl
 
 /**
  * Constructs a new, empty map, sorted according to the
- * {@linkplain java.lang.Comparable Comparable} of the keys.
+ * {@linkplain java.lang.Comparable natural ordering} of the keys.
  */
 
 public ConcurrentSkipListMap() { throw new RuntimeException("Stub!"); }
@@ -110,14 +110,14 @@ public ConcurrentSkipListMap() { throw new RuntimeException("Stub!"); }
  * comparator.
  *
  * @param comparator the comparator that will be used to order this map.
- *        If {@code null}, the {@linkplain java.lang.Comparable Comparable} of the keys will be used.
+ *        If {@code null}, the {@linkplain java.lang.Comparable         ordering} of the keys will be used.
  */
 
 public ConcurrentSkipListMap(java.util.Comparator<? super K> comparator) { throw new RuntimeException("Stub!"); }
 
 /**
  * Constructs a new map containing the same mappings as the given map,
- * sorted according to the {@linkplain java.lang.Comparable Comparable} of
+ * sorted according to the {@linkplain java.lang.Comparable natural ordering} of
  * the keys.
  *
  * @param  m the map whose mappings are to be placed in this map

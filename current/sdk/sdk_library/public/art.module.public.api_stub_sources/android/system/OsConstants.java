@@ -1172,6 +1172,9 @@ static { SOCK_STREAM = 0; }
 public static final int SOL_SOCKET;
 static { SOL_SOCKET = 0; }
 
+public static final int SOL_UDP;
+static { SOL_UDP = 0; }
+
 public static final int SO_BINDTODEVICE;
 static { SO_BINDTODEVICE = 0; }
 
@@ -1336,6 +1339,12 @@ static { TCP_NODELAY = 0; }
 
 public static final int TCP_USER_TIMEOUT;
 static { TCP_USER_TIMEOUT = 0; }
+
+public static final int UDP_GRO;
+static { UDP_GRO = 0; }
+
+public static final int UDP_SEGMENT;
+static { UDP_SEGMENT = 0; }
 
 public static final int WCONTINUED;
 static { WCONTINUED = 0; }

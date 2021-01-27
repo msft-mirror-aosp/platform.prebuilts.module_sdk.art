@@ -1452,7 +1452,7 @@ public java.lang.String getHandshakeApplicationProtocol() { throw new RuntimeExc
  * Registers a callback function that selects an application protocol
  * value for a SSL/TLS handshake.
  * The function overrides any values supplied using
- * {@link javax.net.ssl.SSLParameters#setApplicationProtocols SSLParameters#setApplicationProtocols} and it supports the following
+ * {@link javax.net.ssl.SSLParameters#setApplicationProtocols  SSLParameters.setApplicationProtocols} and it supports the following
  * type parameters:
  * <blockquote>
  * <dl>

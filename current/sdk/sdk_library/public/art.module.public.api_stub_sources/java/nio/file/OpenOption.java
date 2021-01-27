@@ -30,7 +30,7 @@ package java.nio.file;
 /**
  * An object that configures how to open or create a file.
  *
- * <p> Objects of this type are used by methods such as {@link java.nio.file.Files#newOutputStream(java.nio.file.Path,java.nio.file.OpenOption[]) Files#newOutputStream(Path,OpenOption[])}, {@link java.nio.file.Files#newByteChannel Files#newByteChannel}, {@link
+ * <p> Objects of this type are used by methods such as {@link java.nio.file.Files#newOutputStream(java.nio.file.Path,java.nio.file.OpenOption[]) newOutputStream}, {@link java.nio.file.Files#newByteChannel newByteChannel}, {@link
  * java.nio.channels.FileChannel#open FileChannel.open}, and {@link
  * java.nio.channels.AsynchronousFileChannel#open AsynchronousFileChannel.open}
  * when opening or creating a file.

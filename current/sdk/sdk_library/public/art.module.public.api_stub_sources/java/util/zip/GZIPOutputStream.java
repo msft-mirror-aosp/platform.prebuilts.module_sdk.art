@@ -60,7 +60,7 @@ public GZIPOutputStream(java.io.OutputStream out, int size) throws java.io.IOExc
  * @param size the output buffer size
  * @param syncFlush
  *        if {@code true} invocation of the inherited
- *        {@link java.util.zip.DeflaterOutputStream#flush() DeflaterOutputStream#flush()} method of
+ *        {@link java.util.zip.DeflaterOutputStream#flush() flush()} method of
  *        this instance flushes the compressor with flush mode
  *        {@link java.util.zip.Deflater#SYNC_FLUSH Deflater#SYNC_FLUSH} before flushing the output
  *        stream, otherwise only flushes the output stream
@@ -91,7 +91,7 @@ public GZIPOutputStream(java.io.OutputStream out) throws java.io.IOException { s
  * @param out the output stream
  * @param syncFlush
  *        if {@code true} invocation of the inherited
- *        {@link java.util.zip.DeflaterOutputStream#flush() DeflaterOutputStream#flush()} method of
+ *        {@link java.util.zip.DeflaterOutputStream#flush() flush()} method of
  *        this instance flushes the compressor with flush mode
  *        {@link java.util.zip.Deflater#SYNC_FLUSH Deflater#SYNC_FLUSH} before flushing the output
  *        stream, otherwise only flushes the output stream

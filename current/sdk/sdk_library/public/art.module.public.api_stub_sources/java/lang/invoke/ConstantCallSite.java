@@ -105,7 +105,7 @@ public final void setTarget(java.lang.invoke.MethodHandle ignore) { throw new Ru
 /**
  * Returns this call site's permanent target.
  * Since that target will never change, this is a correct implementation
- * of {@link java.lang.invoke.CallSite#dynamicInvoker CallSite#dynamicInvoker}.
+ * of {@link java.lang.invoke.CallSite#dynamicInvoker CallSite.dynamicInvoker}.
  * @return the immutable linkage state of this call site, a constant method handle
  * @throws java.lang.IllegalStateException if the {@code ConstantCallSite} constructor has not completed
  */

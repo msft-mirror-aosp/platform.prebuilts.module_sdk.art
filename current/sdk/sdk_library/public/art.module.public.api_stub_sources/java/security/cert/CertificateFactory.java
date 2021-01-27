@@ -166,7 +166,7 @@ protected CertificateFactory(java.security.cert.CertificateFactorySpi certFacSpi
  * Provider that supports the specified type is returned.
  *
  * <p> Note that the list of registered providers may be retrieved via
- * the {@link java.security.Security#getProviders() Security#getProviders()} method.
+ * the {@link java.security.Security#getProviders() Security.getProviders()} method.
  *
  * @param type the name of the requested certificate type.
  * See the CertificateFactory section in the <a href=
@@ -195,7 +195,7 @@ public static final java.security.cert.CertificateFactory getInstance(java.lang.
  * in the security provider list.
  *
  * <p> Note that the list of registered providers may be retrieved via
- * the {@link java.security.Security#getProviders() Security#getProviders()} method.
+ * the {@link java.security.Security#getProviders() Security.getProviders()} method.
  *
  * @param type the certificate type.
  * See the CertificateFactory section in the <a href=

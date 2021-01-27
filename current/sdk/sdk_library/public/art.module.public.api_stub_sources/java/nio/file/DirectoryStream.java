@@ -40,12 +40,12 @@ import java.io.IOException;
  * or subsequent iterator throws {@code IllegalStateException}. </b>
  *
  * <p> An important property of the directory stream's {@code Iterator} is that
- * its {@link java.util.Iterator#hasNext() Iterator#hasNext()} method is guaranteed to read-ahead by
+ * its {@link java.util.Iterator#hasNext() hasNext} method is guaranteed to read-ahead by
  * at least one element. If {@code hasNext} method returns {@code true}, and is
  * followed by a call to the {@code next} method, it is guaranteed that the
  * {@code next} method will not throw an exception due to an I/O error, or
  * because the stream has been {@link #close closed}. The {@code Iterator} does
- * not support the {@link java.util.Iterator#remove Iterator#remove} operation.
+ * not support the {@link java.util.Iterator#remove remove} operation.
  *
  * <p> A {@code DirectoryStream} is opened upon creation and is closed by
  * invoking the {@code close} method. Closing a directory stream releases any

@@ -599,7 +599,7 @@ public void complete(T rawResult) { throw new RuntimeException("Stub!"); }
 public final java.util.concurrent.CountedCompleter<?> firstComplete() { throw new RuntimeException("Stub!"); }
 
 /**
- * If this task does not have a completer, invokes {@link java.util.concurrent.ForkJoinTask#quietlyComplete ForkJoinTask#quietlyComplete} and returns {@code null}.  Or, if
+ * If this task does not have a completer, invokes {@link java.util.concurrent.ForkJoinTask#quietlyComplete  } and returns {@code null}.  Or, if
  * the completer's pending count is non-zero, decrements that
  * pending count and returns {@code null}.  Otherwise, returns the
  * completer.  This method can be used as part of a completion
