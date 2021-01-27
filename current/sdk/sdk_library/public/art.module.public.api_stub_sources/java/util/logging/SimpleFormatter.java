@@ -43,7 +43,7 @@ import java.util.Date;
  * specified in the {@code java.util.logging.SimpleFormatter.format}
  * property to {@linkplain #format format} the log messages.
  * This property can be defined
- * in the {@linkplain java.util.logging.LogManager#getProperty LogManager#getProperty}
+ * in the {@linkplain java.util.logging.LogManager#getProperty logging properties}
  * configuration file
  * or as a system property.  If this property is set in both
  * the logging properties and system properties,
@@ -70,7 +70,7 @@ public SimpleFormatter() { throw new RuntimeException("Stub!"); }
  * {@code java.util.logging.SimpleFormatter.format}</a> property.
  * The given {@code LogRecord} will be formatted as if by calling:
  * <pre>
- *    {@link java.lang.String#format String#format}(format, date, source, logger, level, message, thrown);
+ *    {@link java.lang.String#format String.format}(format, date, source, logger, level, message, thrown);
  * </pre>
  * where the arguments are:<br>
  * <ol>
@@ -79,18 +79,18 @@ public SimpleFormatter() { throw new RuntimeException("Stub!"); }
  *     {@code java.util.logging.SimpleFormatter.format} property
  *     or the default format.</li>
  * <li>{@code date} - a {@link java.util.Date Date} object representing
- *     {@linkplain java.util.logging.LogRecord#getMillis LogRecord#getMillis} of the log record.</li>
+ *     {@linkplain java.util.logging.LogRecord#getMillis event time} of the log record.</li>
  * <li>{@code source} - a string representing the caller, if available;
  *     otherwise, the logger's name.</li>
  * <li>{@code logger} - the logger's name.</li>
- * <li>{@code level} - the {@linkplain java.util.logging.Level#getLocalizedName Level#getLocalizedName}.</li>
+ * <li>{@code level} - the {@linkplain java.util.logging.Level#getLocalizedName      log level}.</li>
  * <li>{@code message} - the formatted log message
  *     returned from the {@link java.util.logging.Formatter#formatMessage(java.util.logging.LogRecord) Formatter#formatMessage(LogRecord)}
  *     method.  It uses {@link java.text.MessageFormat java.text}
  *     formatting and does not use the {@code java.util.Formatter
  *     format} argument.</li>
  * <li>{@code thrown} - a string representing
- *     the {@linkplain java.util.logging.LogRecord#getThrown LogRecord#getThrown}
+ *     the {@linkplain java.util.logging.LogRecord#getThrown throwable}
  *     associated with the log record and its backtrace
  *     beginning with a newline character, if any;
  *     otherwise, an empty string.</li>

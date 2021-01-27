@@ -30,7 +30,7 @@ package java.net;
 /**
  * Defines the <em>standard</em> socket options.
  *
- * <p> The {@link java.net.SocketOption#name SocketOption#name} of each socket option defined by this
+ * <p> The {@link java.net.SocketOption#name name} of each socket option defined by this
  * class is its field name.
  *
  * <p> In this release, the socket options defined here are used by {@link
@@ -50,7 +50,7 @@ private StandardSocketOptions() { throw new RuntimeException("Stub!"); }
  *
  * <p> The value of this socket option is a {@link java.net.NetworkInterface NetworkInterface} that
  * represents the outgoing interface for multicast datagrams sent by the
- * datagram-oriented socket. For {@link java.net.StandardProtocolFamily#INET6 StandardProtocolFamily#INET6}
+ * datagram-oriented socket. For {@link java.net.StandardProtocolFamily#INET6 IPv6}
  * sockets then it is system dependent whether setting this option also
  * sets the outgoing interface for multicast datagrams sent to IPv4
  * addresses.
@@ -79,7 +79,7 @@ static { IP_MULTICAST_IF = null; }
  * <p> The exact semantics of this socket options are system dependent.
  * In particular, it is system dependent whether the loopback applies to
  * multicast datagrams sent from the socket or received by the socket.
- * For {@link java.net.StandardProtocolFamily#INET6 StandardProtocolFamily#INET6} sockets then it is
+ * For {@link java.net.StandardProtocolFamily#INET6 IPv6} sockets then it is
  * system dependent whether the option also applies to multicast datagrams
  * sent to IPv4 addresses.
  *
@@ -101,10 +101,10 @@ static { IP_MULTICAST_LOOP = null; }
  * <p> The value of this socket option is an {@code Integer} in the range
  * {@code 0 <= value <= 255}. It is used to control the scope of multicast
  * datagrams sent by the datagram-oriented socket.
- * In the case of an {@link java.net.StandardProtocolFamily#INET StandardProtocolFamily#INET} socket
+ * In the case of an {@link java.net.StandardProtocolFamily#INET IPv4} socket
  * the option is the time-to-live (TTL) on multicast datagrams sent by the
  * socket. Datagrams with a TTL of zero are not transmitted on the network
- * but may be delivered locally. In the case of an {@link java.net.StandardProtocolFamily#INET6 StandardProtocolFamily#INET6} socket the option is the
+ * but may be delivered locally. In the case of an {@link java.net.StandardProtocolFamily#INET6 IPv6} socket the option is the
  * <em>hop limit</em> which is number of <em>hops</em> that the datagram can
  * pass through before expiring on the network. For IPv6 sockets it is
  * system dependent whether the option also sets the <em>time-to-live</em>
@@ -126,7 +126,7 @@ static { IP_MULTICAST_TTL = null; }
  * The Type of Service (ToS) octet in the Internet Protocol (IP) header.
  *
  * <p> The value of this socket option is an {@code Integer} representing
- * the value of the ToS octet in IP packets sent by sockets to an {@link java.net.StandardProtocolFamily#INET StandardProtocolFamily#INET} socket. The interpretation of the ToS
+ * the value of the ToS octet in IP packets sent by sockets to an {@link java.net.StandardProtocolFamily#INET IPv4} socket. The interpretation of the ToS
  * octet is network specific and is not defined by this class. Further
  * information on the ToS octet can be found in <a
  * href="http://www.ietf.org/rfc/rfc1349.txt">RFC&nbsp;1349</a> and <a
@@ -142,7 +142,7 @@ static { IP_MULTICAST_TTL = null; }
  * queried or changed prior to binding the socket.
  *
  * <p> The behavior of this socket option on a stream-oriented socket, or an
- * {@link java.net.StandardProtocolFamily#INET6 StandardProtocolFamily#INET6} socket, is not defined in this
+ * {@link java.net.StandardProtocolFamily#INET6 IPv6} socket, is not defined in this
  * release.
  *
  * @see java.net.DatagramSocket#setTrafficClass

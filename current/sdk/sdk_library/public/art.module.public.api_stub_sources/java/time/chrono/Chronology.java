@@ -343,7 +343,7 @@ public java.time.chrono.ChronoLocalDate dateYearDay(int prolepticYear, int dayOf
 /**
  * Obtains a local date in this chronology from the epoch-day.
  * <p>
- * The definition of {@link java.time.temporal.ChronoField#EPOCH_DAY ChronoField#EPOCH_DAY} is the same
+ * The definition of {@link java.time.temporal.ChronoField#EPOCH_DAY EPOCH_DAY} is the same
  * for all calendar systems, thus it can be used for conversion.
  *
  * @param epochDay  the epoch day
@@ -356,7 +356,7 @@ public java.time.chrono.ChronoLocalDate dateEpochDay(long epochDay);
 /**
  * Obtains the current local date in this chronology from the system clock in the default time-zone.
  * <p>
- * This will query the {@link java.time.Clock#systemDefaultZone() Clock#systemDefaultZone()} in the default
+ * This will query the {@link java.time.Clock#systemDefaultZone() system clock} in the default
  * time-zone to obtain the current date.
  * <p>
  * Using this method will prevent the ability to use an alternate clock for testing
@@ -374,7 +374,7 @@ public default java.time.chrono.ChronoLocalDate dateNow() { throw new RuntimeExc
 /**
  * Obtains the current local date in this chronology from the system clock in the specified time-zone.
  * <p>
- * This will query the {@link java.time.Clock#system(java.time.ZoneId) Clock#system(ZoneId)} to obtain the current date.
+ * This will query the {@link java.time.Clock#system(java.time.ZoneId) system clock} to obtain the current date.
  * Specifying the time-zone avoids dependence on the default time-zone.
  * <p>
  * Using this method will prevent the ability to use an alternate clock for testing
@@ -395,7 +395,7 @@ public default java.time.chrono.ChronoLocalDate dateNow(java.time.ZoneId zone) {
  * <p>
  * This will query the specified clock to obtain the current date - today.
  * Using this method allows the use of an alternate clock for testing.
- * The alternate clock may be introduced using {@link java.time.Clock Clock}.
+ * The alternate clock may be introduced using {@link java.time.Clock dependency injection}.
  *
  * @implSpec
  * The default implementation invokes {@link #date(java.time.temporal.TemporalAccessor)}.
@@ -414,7 +414,7 @@ public default java.time.chrono.ChronoLocalDate dateNow(java.time.Clock clock) {
  * A {@code TemporalAccessor} represents an arbitrary set of date and time information,
  * which this factory converts to an instance of {@code ChronoLocalDate}.
  * <p>
- * The conversion typically uses the {@link java.time.temporal.ChronoField#EPOCH_DAY ChronoField#EPOCH_DAY}
+ * The conversion typically uses the {@link java.time.temporal.ChronoField#EPOCH_DAY EPOCH_DAY}
  * field, which is standardized across calendar systems.
  * <p>
  * This method matches the signature of the functional interface {@link java.time.temporal.TemporalQuery TemporalQuery}

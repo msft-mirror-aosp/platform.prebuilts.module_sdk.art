@@ -31,7 +31,7 @@ import java.security.cert.CertPathParameters;
 /**
  * A wrapper for CertPathParameters. This class is used to pass validation
  * settings to CertPath based {@link javax.net.ssl.TrustManager TrustManager}s using the
- * {@link javax.net.ssl.TrustManagerFactory#init(javax.net.ssl.ManagerFactoryParameters) TrustManagerFactory#init(ManagerFactoryParameters)} method.
+ * {@link javax.net.ssl.TrustManagerFactory#init(javax.net.ssl.ManagerFactoryParameters)  TrustManagerFactory.init()} method.
  *
  * <p>Instances of this class are immutable.
  *

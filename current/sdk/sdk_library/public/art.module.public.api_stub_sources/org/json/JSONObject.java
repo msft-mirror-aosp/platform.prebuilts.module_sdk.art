@@ -23,22 +23,22 @@ import java.util.Map;
 
 /**
  * A modifiable set of name/value mappings. Names are unique, non-null strings.
- * Values may be any mix of {@link org.json.JSONObject JSONObject}, {@link org.json.JSONArray JSONArray}, Strings, Booleans, Integers, Longs, Doubles or {@link #NULL}.
- * Values may not be {@code null}, {@link java.lang.Double#isNaN() Double#isNaN()}, {@link java.lang.Double#isInfinite() Double#isInfinite()}, or of any type not listed here.
+ * Values may be any mix of {@link org.json.JSONObject JSONObjects}, {@link org.json.JSONArray  JSONArrays}, Strings, Booleans, Integers, Longs, Doubles or {@link #NULL}.
+ * Values may not be {@code null}, {@link java.lang.Double#isNaN() NaNs}, {@link java.lang.Double#isInfinite() infinities}, or of any type not listed here.
  *
  * <p>This class can coerce values to another type when requested.
  * <ul>
  *   <li>When the requested type is a boolean, strings will be coerced using a
  *       case-insensitive comparison to "true" and "false".
  *   <li>When the requested type is a double, other {@link java.lang.Number Number} types will
- *       be coerced using {@link java.lang.Number#doubleValue() Number#doubleValue()}. Strings
+ *       be coerced using {@link java.lang.Number#doubleValue() doubleValue}. Strings
  *       that can be coerced using {@link java.lang.Double#valueOf(java.lang.String) Double#valueOf(String)} will be.
  *   <li>When the requested type is an int, other {@link java.lang.Number Number} types will
- *       be coerced using {@link java.lang.Number#intValue() Number#intValue()}. Strings
+ *       be coerced using {@link java.lang.Number#intValue() intValue}. Strings
  *       that can be coerced using {@link java.lang.Double#valueOf(java.lang.String) Double#valueOf(String)} will be,
  *       and then cast to int.
  *   <li><a name="lossy">When the requested type is a long, other {@link java.lang.Number Number} types will
- *       be coerced using {@link java.lang.Number#longValue() Number#longValue()}. Strings
+ *       be coerced using {@link java.lang.Number#longValue() longValue}. Strings
  *       that can be coerced using {@link java.lang.Double#valueOf(java.lang.String) Double#valueOf(String)} will be,
  *       and then cast to long. This two-step conversion is lossy for very
  *       large values. For example, the string "9223372036854775806" yields the
@@ -60,7 +60,7 @@ import java.util.Map;
  * </ul>
  *
  * <p><strong>Warning:</strong> this class represents null in two incompatible
- * ways: the standard Java {@code null} reference, and the sentinel value {@link org.json.JSONObject#NULL JSONObject#NULL}. In particular, calling {@code put(name, null)} removes the
+ * ways: the standard Java {@code null} reference, and the sentinel value {@link org.json.JSONObject#NULL  }. In particular, calling {@code put(name, null)} removes the
  * named entry from the object but {@code put(name, JSONObject.NULL)} stores an
  * entry whose value is {@code JSONObject.NULL}.
  *
@@ -89,7 +89,7 @@ public JSONObject() { throw new RuntimeException("Stub!"); }
  * @throws java.lang.NullPointerException if any of the map's keys are null.
  */
 
-public JSONObject(@android.annotation.NonNull java.util.Map copyFrom) { throw new RuntimeException("Stub!"); }
+public JSONObject(@androidx.annotation.RecentlyNonNull java.util.Map copyFrom) { throw new RuntimeException("Stub!"); }
 
 /**
  * Creates a new {@code JSONObject} with name/value mappings from the next
@@ -101,7 +101,7 @@ public JSONObject(@android.annotation.NonNull java.util.Map copyFrom) { throw ne
  *     {@code JSONObject}.
  */
 
-public JSONObject(@android.annotation.NonNull org.json.JSONTokener readFrom) throws org.json.JSONException { throw new RuntimeException("Stub!"); }
+public JSONObject(@androidx.annotation.RecentlyNonNull org.json.JSONTokener readFrom) throws org.json.JSONException { throw new RuntimeException("Stub!"); }
 
 /**
  * Creates a new {@code JSONObject} with name/value mappings from the JSON
@@ -112,7 +112,7 @@ public JSONObject(@android.annotation.NonNull org.json.JSONTokener readFrom) thr
  *     JSONObject}.
  */
 
-public JSONObject(@android.annotation.NonNull java.lang.String json) throws org.json.JSONException { throw new RuntimeException("Stub!"); }
+public JSONObject(@androidx.annotation.RecentlyNonNull java.lang.String json) throws org.json.JSONException { throw new RuntimeException("Stub!"); }
 
 /**
  * Creates a new {@code JSONObject} by copying mappings for the listed names
@@ -120,7 +120,7 @@ public JSONObject(@android.annotation.NonNull java.lang.String json) throws org.
  * be skipped.
  */
 
-public JSONObject(@android.annotation.NonNull org.json.JSONObject copyFrom, @android.annotation.NonNull java.lang.String[] names) throws org.json.JSONException { throw new RuntimeException("Stub!"); }
+public JSONObject(@androidx.annotation.RecentlyNonNull org.json.JSONObject copyFrom, @androidx.annotation.RecentlyNonNull java.lang.String[] names) throws org.json.JSONException { throw new RuntimeException("Stub!"); }
 
 /**
  * Returns the number of name/value mappings in this object.
@@ -135,30 +135,20 @@ public int length() { throw new RuntimeException("Stub!"); }
  * @return this object.
  */
 
-@android.annotation.NonNull
-public org.json.JSONObject put(@android.annotation.NonNull java.lang.String name, boolean value) throws org.json.JSONException { throw new RuntimeException("Stub!"); }
+@androidx.annotation.RecentlyNonNull
+public org.json.JSONObject put(@androidx.annotation.RecentlyNonNull java.lang.String name, boolean value) throws org.json.JSONException { throw new RuntimeException("Stub!"); }
 
 /**
  * Maps {@code name} to {@code value}, clobbering any existing name/value
  * mapping with the same name.
  *
- * @param value a finite value. May not be {@link java.lang.Double#isNaN() Double#isNaN()} or
- *     {@link java.lang.Double#isInfinite() Double#isInfinite()}.
+ * @param value a finite value. May not be {@link java.lang.Double#isNaN() NaNs} or
+ *     {@link java.lang.Double#isInfinite() infinities}.
  * @return this object.
  */
 
-@android.annotation.NonNull
-public org.json.JSONObject put(@android.annotation.NonNull java.lang.String name, double value) throws org.json.JSONException { throw new RuntimeException("Stub!"); }
-
-/**
- * Maps {@code name} to {@code value}, clobbering any existing name/value
- * mapping with the same name.
- *
- * @return this object.
- */
-
-@android.annotation.NonNull
-public org.json.JSONObject put(@android.annotation.NonNull java.lang.String name, int value) throws org.json.JSONException { throw new RuntimeException("Stub!"); }
+@androidx.annotation.RecentlyNonNull
+public org.json.JSONObject put(@androidx.annotation.RecentlyNonNull java.lang.String name, double value) throws org.json.JSONException { throw new RuntimeException("Stub!"); }
 
 /**
  * Maps {@code name} to {@code value}, clobbering any existing name/value
@@ -167,8 +157,18 @@ public org.json.JSONObject put(@android.annotation.NonNull java.lang.String name
  * @return this object.
  */
 
-@android.annotation.NonNull
-public org.json.JSONObject put(@android.annotation.NonNull java.lang.String name, long value) throws org.json.JSONException { throw new RuntimeException("Stub!"); }
+@androidx.annotation.RecentlyNonNull
+public org.json.JSONObject put(@androidx.annotation.RecentlyNonNull java.lang.String name, int value) throws org.json.JSONException { throw new RuntimeException("Stub!"); }
+
+/**
+ * Maps {@code name} to {@code value}, clobbering any existing name/value
+ * mapping with the same name.
+ *
+ * @return this object.
+ */
+
+@androidx.annotation.RecentlyNonNull
+public org.json.JSONObject put(@androidx.annotation.RecentlyNonNull java.lang.String name, long value) throws org.json.JSONException { throw new RuntimeException("Stub!"); }
 
 /**
  * Maps {@code name} to {@code value}, clobbering any existing name/value
@@ -177,20 +177,20 @@ public org.json.JSONObject put(@android.annotation.NonNull java.lang.String name
  *
  * @param value a {@link org.json.JSONObject JSONObject}, {@link org.json.JSONArray JSONArray}, String, Boolean,
  *     Integer, Long, Double, {@link #NULL}, or {@code null}. May not be
- *     {@link java.lang.Double#isNaN() Double#isNaN()} or {@link java.lang.Double#isInfinite() Double#isInfinite()}.
+ *     {@link java.lang.Double#isNaN() NaNs} or {@link java.lang.Double#isInfinite()      infinities}.
  * @return this object.
  */
 
-@android.annotation.NonNull
-public org.json.JSONObject put(@android.annotation.NonNull java.lang.String name, @android.annotation.Nullable java.lang.Object value) throws org.json.JSONException { throw new RuntimeException("Stub!"); }
+@androidx.annotation.RecentlyNonNull
+public org.json.JSONObject put(@androidx.annotation.RecentlyNonNull java.lang.String name, @androidx.annotation.RecentlyNullable java.lang.Object value) throws org.json.JSONException { throw new RuntimeException("Stub!"); }
 
 /**
  * Equivalent to {@code put(name, value)} when both parameters are non-null;
  * does nothing otherwise.
  */
 
-@android.annotation.NonNull
-public org.json.JSONObject putOpt(@android.annotation.Nullable java.lang.String name, @android.annotation.Nullable java.lang.Object value) throws org.json.JSONException { throw new RuntimeException("Stub!"); }
+@androidx.annotation.RecentlyNonNull
+public org.json.JSONObject putOpt(@androidx.annotation.RecentlyNullable java.lang.String name, @androidx.annotation.RecentlyNullable java.lang.Object value) throws org.json.JSONException { throw new RuntimeException("Stub!"); }
 
 /**
  * Appends {@code value} to the array already mapped to {@code name}. If
@@ -207,11 +207,11 @@ public org.json.JSONObject putOpt(@android.annotation.Nullable java.lang.String 
  * depending on the number of calls to it.
  *
  * @param value a {@link org.json.JSONObject JSONObject}, {@link org.json.JSONArray JSONArray}, String, Boolean,
- *     Integer, Long, Double, {@link #NULL} or null. May not be {@link java.lang.Double#isNaN() Double#isNaN()} or {@link java.lang.Double#isInfinite() Double#isInfinite()}.
+ *     Integer, Long, Double, {@link #NULL} or null. May not be {@link java.lang.Double#isNaN() NaNs} or {@link java.lang.Double#isInfinite() infinities}.
  */
 
-@android.annotation.NonNull
-public org.json.JSONObject accumulate(@android.annotation.NonNull java.lang.String name, @android.annotation.Nullable java.lang.Object value) throws org.json.JSONException { throw new RuntimeException("Stub!"); }
+@androidx.annotation.RecentlyNonNull
+public org.json.JSONObject accumulate(@androidx.annotation.RecentlyNonNull java.lang.String name, @androidx.annotation.RecentlyNullable java.lang.Object value) throws org.json.JSONException { throw new RuntimeException("Stub!"); }
 
 /**
  * Removes the named mapping if it exists; does nothing otherwise.
@@ -220,22 +220,22 @@ public org.json.JSONObject accumulate(@android.annotation.NonNull java.lang.Stri
  *     no such mapping.
  */
 
-@android.annotation.Nullable
-public java.lang.Object remove(@android.annotation.Nullable java.lang.String name) { throw new RuntimeException("Stub!"); }
+@androidx.annotation.RecentlyNullable
+public java.lang.Object remove(@androidx.annotation.RecentlyNullable java.lang.String name) { throw new RuntimeException("Stub!"); }
 
 /**
  * Returns true if this object has no mapping for {@code name} or if it has
  * a mapping whose value is {@link #NULL}.
  */
 
-public boolean isNull(@android.annotation.Nullable java.lang.String name) { throw new RuntimeException("Stub!"); }
+public boolean isNull(@androidx.annotation.RecentlyNullable java.lang.String name) { throw new RuntimeException("Stub!"); }
 
 /**
  * Returns true if this object has a mapping for {@code name}. The mapping
  * may be {@link #NULL}.
  */
 
-public boolean has(@android.annotation.Nullable java.lang.String name) { throw new RuntimeException("Stub!"); }
+public boolean has(@androidx.annotation.RecentlyNullable java.lang.String name) { throw new RuntimeException("Stub!"); }
 
 /**
  * Returns the value mapped by {@code name}, or throws if no such mapping exists.
@@ -243,16 +243,16 @@ public boolean has(@android.annotation.Nullable java.lang.String name) { throw n
  * @throws org.json.JSONException if no such mapping exists.
  */
 
-@android.annotation.NonNull
-public java.lang.Object get(@android.annotation.NonNull java.lang.String name) throws org.json.JSONException { throw new RuntimeException("Stub!"); }
+@androidx.annotation.RecentlyNonNull
+public java.lang.Object get(@androidx.annotation.RecentlyNonNull java.lang.String name) throws org.json.JSONException { throw new RuntimeException("Stub!"); }
 
 /**
  * Returns the value mapped by {@code name}, or null if no such mapping
  * exists.
  */
 
-@android.annotation.Nullable
-public java.lang.Object opt(@android.annotation.Nullable java.lang.String name) { throw new RuntimeException("Stub!"); }
+@androidx.annotation.RecentlyNullable
+public java.lang.Object opt(@androidx.annotation.RecentlyNullable java.lang.String name) { throw new RuntimeException("Stub!"); }
 
 /**
  * Returns the value mapped by {@code name} if it exists and is a boolean or
@@ -262,21 +262,21 @@ public java.lang.Object opt(@android.annotation.Nullable java.lang.String name) 
  *     to a boolean.
  */
 
-public boolean getBoolean(@android.annotation.NonNull java.lang.String name) throws org.json.JSONException { throw new RuntimeException("Stub!"); }
+public boolean getBoolean(@androidx.annotation.RecentlyNonNull java.lang.String name) throws org.json.JSONException { throw new RuntimeException("Stub!"); }
 
 /**
  * Returns the value mapped by {@code name} if it exists and is a boolean or
  * can be coerced to a boolean, or false otherwise.
  */
 
-public boolean optBoolean(@android.annotation.Nullable java.lang.String name) { throw new RuntimeException("Stub!"); }
+public boolean optBoolean(@androidx.annotation.RecentlyNullable java.lang.String name) { throw new RuntimeException("Stub!"); }
 
 /**
  * Returns the value mapped by {@code name} if it exists and is a boolean or
  * can be coerced to a boolean, or {@code fallback} otherwise.
  */
 
-public boolean optBoolean(@android.annotation.Nullable java.lang.String name, boolean fallback) { throw new RuntimeException("Stub!"); }
+public boolean optBoolean(@androidx.annotation.RecentlyNullable java.lang.String name, boolean fallback) { throw new RuntimeException("Stub!"); }
 
 /**
  * Returns the value mapped by {@code name} if it exists and is a double or
@@ -286,21 +286,21 @@ public boolean optBoolean(@android.annotation.Nullable java.lang.String name, bo
  *     to a double.
  */
 
-public double getDouble(@android.annotation.NonNull java.lang.String name) throws org.json.JSONException { throw new RuntimeException("Stub!"); }
+public double getDouble(@androidx.annotation.RecentlyNonNull java.lang.String name) throws org.json.JSONException { throw new RuntimeException("Stub!"); }
 
 /**
  * Returns the value mapped by {@code name} if it exists and is a double or
  * can be coerced to a double, or {@code NaN} otherwise.
  */
 
-public double optDouble(@android.annotation.Nullable java.lang.String name) { throw new RuntimeException("Stub!"); }
+public double optDouble(@androidx.annotation.RecentlyNullable java.lang.String name) { throw new RuntimeException("Stub!"); }
 
 /**
  * Returns the value mapped by {@code name} if it exists and is a double or
  * can be coerced to a double, or {@code fallback} otherwise.
  */
 
-public double optDouble(@android.annotation.Nullable java.lang.String name, double fallback) { throw new RuntimeException("Stub!"); }
+public double optDouble(@androidx.annotation.RecentlyNullable java.lang.String name, double fallback) { throw new RuntimeException("Stub!"); }
 
 /**
  * Returns the value mapped by {@code name} if it exists and is an int or
@@ -310,21 +310,21 @@ public double optDouble(@android.annotation.Nullable java.lang.String name, doub
  *     to an int.
  */
 
-public int getInt(@android.annotation.NonNull java.lang.String name) throws org.json.JSONException { throw new RuntimeException("Stub!"); }
+public int getInt(@androidx.annotation.RecentlyNonNull java.lang.String name) throws org.json.JSONException { throw new RuntimeException("Stub!"); }
 
 /**
  * Returns the value mapped by {@code name} if it exists and is an int or
  * can be coerced to an int, or 0 otherwise.
  */
 
-public int optInt(@android.annotation.Nullable java.lang.String name) { throw new RuntimeException("Stub!"); }
+public int optInt(@androidx.annotation.RecentlyNullable java.lang.String name) { throw new RuntimeException("Stub!"); }
 
 /**
  * Returns the value mapped by {@code name} if it exists and is an int or
  * can be coerced to an int, or {@code fallback} otherwise.
  */
 
-public int optInt(@android.annotation.Nullable java.lang.String name, int fallback) { throw new RuntimeException("Stub!"); }
+public int optInt(@androidx.annotation.RecentlyNullable java.lang.String name, int fallback) { throw new RuntimeException("Stub!"); }
 
 /**
  * Returns the value mapped by {@code name} if it exists and is a long or
@@ -336,7 +336,7 @@ public int optInt(@android.annotation.Nullable java.lang.String name, int fallba
  *     to a long.
  */
 
-public long getLong(@android.annotation.NonNull java.lang.String name) throws org.json.JSONException { throw new RuntimeException("Stub!"); }
+public long getLong(@androidx.annotation.RecentlyNonNull java.lang.String name) throws org.json.JSONException { throw new RuntimeException("Stub!"); }
 
 /**
  * Returns the value mapped by {@code name} if it exists and is a long or
@@ -344,7 +344,7 @@ public long getLong(@android.annotation.NonNull java.lang.String name) throws or
  * so this is <a href="#lossy">lossy</a>; use strings to transfer numbers via JSON.
  */
 
-public long optLong(@android.annotation.Nullable java.lang.String name) { throw new RuntimeException("Stub!"); }
+public long optLong(@androidx.annotation.RecentlyNullable java.lang.String name) { throw new RuntimeException("Stub!"); }
 
 /**
  * Returns the value mapped by {@code name} if it exists and is a long or
@@ -353,7 +353,7 @@ public long optLong(@android.annotation.Nullable java.lang.String name) { throw 
  * numbers via JSON.
  */
 
-public long optLong(@android.annotation.Nullable java.lang.String name, long fallback) { throw new RuntimeException("Stub!"); }
+public long optLong(@androidx.annotation.RecentlyNullable java.lang.String name, long fallback) { throw new RuntimeException("Stub!"); }
 
 /**
  * Returns the value mapped by {@code name} if it exists, coercing it if
@@ -362,24 +362,24 @@ public long optLong(@android.annotation.Nullable java.lang.String name, long fal
  * @throws org.json.JSONException if no such mapping exists.
  */
 
-@android.annotation.NonNull
-public java.lang.String getString(@android.annotation.NonNull java.lang.String name) throws org.json.JSONException { throw new RuntimeException("Stub!"); }
+@androidx.annotation.RecentlyNonNull
+public java.lang.String getString(@androidx.annotation.RecentlyNonNull java.lang.String name) throws org.json.JSONException { throw new RuntimeException("Stub!"); }
 
 /**
  * Returns the value mapped by {@code name} if it exists, coercing it if
  * necessary, or the empty string if no such mapping exists.
  */
 
-@android.annotation.NonNull
-public java.lang.String optString(@android.annotation.Nullable java.lang.String name) { throw new RuntimeException("Stub!"); }
+@androidx.annotation.RecentlyNonNull
+public java.lang.String optString(@androidx.annotation.RecentlyNullable java.lang.String name) { throw new RuntimeException("Stub!"); }
 
 /**
  * Returns the value mapped by {@code name} if it exists, coercing it if
  * necessary, or {@code fallback} if no such mapping exists.
  */
 
-@android.annotation.NonNull
-public java.lang.String optString(@android.annotation.Nullable java.lang.String name, @android.annotation.NonNull java.lang.String fallback) { throw new RuntimeException("Stub!"); }
+@androidx.annotation.RecentlyNonNull
+public java.lang.String optString(@androidx.annotation.RecentlyNullable java.lang.String name, @androidx.annotation.RecentlyNonNull java.lang.String fallback) { throw new RuntimeException("Stub!"); }
 
 /**
  * Returns the value mapped by {@code name} if it exists and is a {@code
@@ -389,16 +389,16 @@ public java.lang.String optString(@android.annotation.Nullable java.lang.String 
  *     JSONArray}.
  */
 
-@android.annotation.NonNull
-public org.json.JSONArray getJSONArray(@android.annotation.NonNull java.lang.String name) throws org.json.JSONException { throw new RuntimeException("Stub!"); }
+@androidx.annotation.RecentlyNonNull
+public org.json.JSONArray getJSONArray(@androidx.annotation.RecentlyNonNull java.lang.String name) throws org.json.JSONException { throw new RuntimeException("Stub!"); }
 
 /**
  * Returns the value mapped by {@code name} if it exists and is a {@code
  * JSONArray}, or null otherwise.
  */
 
-@android.annotation.Nullable
-public org.json.JSONArray optJSONArray(@android.annotation.Nullable java.lang.String name) { throw new RuntimeException("Stub!"); }
+@androidx.annotation.RecentlyNullable
+public org.json.JSONArray optJSONArray(@androidx.annotation.RecentlyNullable java.lang.String name) { throw new RuntimeException("Stub!"); }
 
 /**
  * Returns the value mapped by {@code name} if it exists and is a {@code
@@ -408,16 +408,16 @@ public org.json.JSONArray optJSONArray(@android.annotation.Nullable java.lang.St
  *     JSONObject}.
  */
 
-@android.annotation.NonNull
-public org.json.JSONObject getJSONObject(@android.annotation.NonNull java.lang.String name) throws org.json.JSONException { throw new RuntimeException("Stub!"); }
+@androidx.annotation.RecentlyNonNull
+public org.json.JSONObject getJSONObject(@androidx.annotation.RecentlyNonNull java.lang.String name) throws org.json.JSONException { throw new RuntimeException("Stub!"); }
 
 /**
  * Returns the value mapped by {@code name} if it exists and is a {@code
  * JSONObject}, or null otherwise.
  */
 
-@android.annotation.Nullable
-public org.json.JSONObject optJSONObject(@android.annotation.Nullable java.lang.String name) { throw new RuntimeException("Stub!"); }
+@androidx.annotation.RecentlyNullable
+public org.json.JSONObject optJSONObject(@androidx.annotation.RecentlyNullable java.lang.String name) { throw new RuntimeException("Stub!"); }
 
 /**
  * Returns an array with the values corresponding to {@code names}. The
@@ -425,18 +425,18 @@ public org.json.JSONObject optJSONObject(@android.annotation.Nullable java.lang.
  * null if {@code names} is either null or empty.
  */
 
-@android.annotation.Nullable
-public org.json.JSONArray toJSONArray(@android.annotation.Nullable org.json.JSONArray names) throws org.json.JSONException { throw new RuntimeException("Stub!"); }
+@androidx.annotation.RecentlyNullable
+public org.json.JSONArray toJSONArray(@androidx.annotation.RecentlyNullable org.json.JSONArray names) throws org.json.JSONException { throw new RuntimeException("Stub!"); }
 
 /**
  * Returns an iterator of the {@code String} names in this object. The
- * returned iterator supports {@link java.util.Iterator#remove() Iterator#remove()}, which will
+ * returned iterator supports {@link java.util.Iterator#remove() remove}, which will
  * remove the corresponding mapping from this object. If this object is
  * modified after the iterator is returned, the iterator's behavior is
  * undefined. The order of the keys is undefined.
  */
 
-@android.annotation.NonNull
+@androidx.annotation.RecentlyNonNull
 public java.util.Iterator<java.lang.String> keys() { throw new RuntimeException("Stub!"); }
 
 /**
@@ -444,7 +444,7 @@ public java.util.Iterator<java.lang.String> keys() { throw new RuntimeException(
  * returns null if this object contains no mappings.
  */
 
-@android.annotation.Nullable
+@androidx.annotation.RecentlyNullable
 public org.json.JSONArray names() { throw new RuntimeException("Stub!"); }
 
 /**
@@ -452,7 +452,7 @@ public org.json.JSONArray names() { throw new RuntimeException("Stub!"); }
  * <pre>{"query":"Pizza","locations":[94043,90210]}</pre>
  */
 
-@android.annotation.NonNull
+@androidx.annotation.RecentlyNonNull
 public java.lang.String toString() { throw new RuntimeException("Stub!"); }
 
 /**
@@ -471,18 +471,18 @@ public java.lang.String toString() { throw new RuntimeException("Stub!"); }
  *     nesting.
  */
 
-@android.annotation.NonNull
+@androidx.annotation.RecentlyNonNull
 public java.lang.String toString(int indentSpaces) throws org.json.JSONException { throw new RuntimeException("Stub!"); }
 
 /**
  * Encodes the number as a JSON string.
  *
- * @param number a finite value. May not be {@link java.lang.Double#isNaN() Double#isNaN()} or
- *     {@link java.lang.Double#isInfinite() Double#isInfinite()}.
+ * @param number a finite value. May not be {@link java.lang.Double#isNaN() NaNs} or
+ *     {@link java.lang.Double#isInfinite() infinities}.
  */
 
-@android.annotation.NonNull
-public static java.lang.String numberToString(@android.annotation.NonNull java.lang.Number number) throws org.json.JSONException { throw new RuntimeException("Stub!"); }
+@androidx.annotation.RecentlyNonNull
+public static java.lang.String numberToString(@androidx.annotation.RecentlyNonNull java.lang.Number number) throws org.json.JSONException { throw new RuntimeException("Stub!"); }
 
 /**
  * Encodes {@code data} as a JSON string. This applies quotes and any
@@ -492,8 +492,8 @@ public static java.lang.String numberToString(@android.annotation.NonNull java.l
  *     string.
  */
 
-@android.annotation.NonNull
-public static java.lang.String quote(@android.annotation.Nullable java.lang.String data) { throw new RuntimeException("Stub!"); }
+@androidx.annotation.RecentlyNonNull
+public static java.lang.String quote(@androidx.annotation.RecentlyNullable java.lang.String data) { throw new RuntimeException("Stub!"); }
 
 /**
  * Wraps the given object if necessary.
@@ -508,8 +508,8 @@ public static java.lang.String quote(@android.annotation.Nullable java.lang.Stri
  * If wrapping fails, returns null.
  */
 
-@android.annotation.Nullable
-public static java.lang.Object wrap(@android.annotation.Nullable java.lang.Object o) { throw new RuntimeException("Stub!"); }
+@androidx.annotation.RecentlyNullable
+public static java.lang.Object wrap(@androidx.annotation.RecentlyNullable java.lang.Object o) { throw new RuntimeException("Stub!"); }
 
 /**
  * A sentinel value used to explicitly define a name with no value. Unlike
@@ -527,7 +527,7 @@ public static java.lang.Object wrap(@android.annotation.Nullable java.lang.Objec
  * method returns "null".
  */
 
-@android.annotation.NonNull public static final java.lang.Object NULL;
+@androidx.annotation.RecentlyNonNull public static final java.lang.Object NULL;
 static { NULL = null; }
 }
 

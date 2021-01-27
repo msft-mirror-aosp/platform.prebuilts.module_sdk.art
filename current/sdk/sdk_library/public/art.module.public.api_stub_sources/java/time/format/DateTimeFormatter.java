@@ -128,7 +128,7 @@ import java.time.temporal.IsoFields;
  * overrides the {@link java.time.format.DecimalStyle DecimalStyle}. The DecimalStyle symbols are used for
  * formatting and parsing.
  * <p>
- * Some applications may need to use the older {@link java.text.Format Format}
+ * Some applications may need to use the older {@link java.text.Format java.text.Format}
  * class for formatting. The {@link #toFormat()} method returns an
  * implementation of {@code java.text.Format}.
  *
@@ -311,9 +311,9 @@ import java.time.temporal.IsoFields;
  * <p>
  * <b>Text</b>: The text style is determined based on the number of pattern
  * letters used. Less than 4 pattern letters will use the
- * {@link java.time.format.TextStyle#SHORT TextStyle#SHORT}. Exactly 4 pattern letters will use the
- * {@link java.time.format.TextStyle#FULL TextStyle#FULL}. Exactly 5 pattern letters will use the
- * {@link java.time.format.TextStyle#NARROW TextStyle#NARROW}.
+ * {@link java.time.format.TextStyle#SHORT short form}. Exactly 4 pattern letters will use the
+ * {@link java.time.format.TextStyle#FULL full form}. Exactly 5 pattern letters will use the
+ * {@link java.time.format.TextStyle#NARROW narrow form}.
  * Pattern letters 'L', 'c', and 'q' specify the stand-alone form of the text styles.
  * <p>
  * <b>Number</b>: If the count of letters is one, then the value is output using
@@ -334,7 +334,7 @@ import java.time.temporal.IsoFields;
  * <p>
  * <b>Year</b>: The count of letters determines the minimum field width below
  * which padding is used. If the count of letters is two, then a
- * {@link java.time.format.DateTimeFormatterBuilder#appendValueReduced DateTimeFormatterBuilder#appendValueReduced} two digit form is
+ * {@link java.time.format.DateTimeFormatterBuilder#appendValueReduced reduced} two digit form is
  * used. For printing, this outputs the rightmost two digits. For parsing, this
  * will parse using the base value of 2000, resulting in a year within the range
  * 2000 to 2099 inclusive. If the count of letters is less than four (but not
@@ -364,11 +364,11 @@ import java.time.temporal.IsoFields;
  * (lower case) will output '+00', '+0000', or '+00:00'.
  * <p>
  * <b>Offset O</b>: This formats the localized offset based on the number of
- * pattern letters. One letter outputs the {@linkplain java.time.format.TextStyle#SHORT TextStyle#SHORT}
+ * pattern letters. One letter outputs the {@linkplain java.time.format.TextStyle#SHORT short}
  * form of the localized offset, which is localized offset text, such as 'GMT',
  * with hour without leading zero, optional 2-digit minute and second if
  * non-zero, and colon, for example 'GMT+8'. Four letters outputs the
- * {@linkplain java.time.format.TextStyle#FULL TextStyle#FULL} form, which is localized offset text,
+ * {@linkplain java.time.format.TextStyle#FULL full} form, which is localized offset text,
  * such as 'GMT, with 2-digit hour and minute field, optional second field
  * if non-zero, and colon, for example 'GMT+08:00'. Any other count of letters
  * throws {@code IllegalArgumentException}.
@@ -376,7 +376,7 @@ import java.time.temporal.IsoFields;
  * <b>Offset Z</b>: This formats the offset based on the number of pattern
  * letters. One, two or three letters outputs the hour and minute, without a
  * colon, such as '+0130'. The output will be '+0000' when the offset is zero.
- * Four letters outputs the {@linkplain java.time.format.TextStyle#FULL TextStyle#FULL} form of localized
+ * Four letters outputs the {@linkplain java.time.format.TextStyle#FULL full} form of localized
  * offset, equivalent to four letters of Offset-O. The output will be the
  * corresponding localized offset text if the offset is zero. Five
  * letters outputs the hour, minute, with optional second if non-zero, with
@@ -478,12 +478,12 @@ DateTimeFormatter() { throw new RuntimeException("Stub!"); }
  * as described in the class documentation.
  * For example, {@code d MMM uuuu} will format 2011-12-03 as '3 Dec 2011'.
  * <p>
- * The formatter will use the {@link java.util.Locale#getDefault(java.util.Locale.Category) Locale#getDefault(Locale.Category)}.
+ * The formatter will use the {@link java.util.Locale#getDefault(java.util.Locale.Category) default FORMAT locale}.
  * This can be changed using {@link java.time.format.DateTimeFormatter#withLocale(java.util.Locale) DateTimeFormatter#withLocale(Locale)} on the returned formatter
  * Alternatively use the {@link #ofPattern(java.lang.String,java.util.Locale)} variant of this method.
  * <p>
  * The returned formatter has no override chronology or zone.
- * It uses {@link java.time.format.ResolverStyle#SMART ResolverStyle#SMART} resolver style.
+ * It uses {@link java.time.format.ResolverStyle#SMART SMART} resolver style.
  *
  * @param pattern  the pattern to use, not null
  * @return the formatter based on the pattern, not null
@@ -505,7 +505,7 @@ public static java.time.format.DateTimeFormatter ofPattern(java.lang.String patt
  * This can be changed using {@link java.time.format.DateTimeFormatter#withLocale(java.util.Locale) DateTimeFormatter#withLocale(Locale)} on the returned formatter
  * <p>
  * The returned formatter has no override chronology or zone.
- * It uses {@link java.time.format.ResolverStyle#SMART ResolverStyle#SMART} resolver style.
+ * It uses {@link java.time.format.ResolverStyle#SMART SMART} resolver style.
  *
  * @param pattern  the pattern to use, not null
  * @param locale  the locale to use, not null
@@ -523,8 +523,8 @@ public static java.time.format.DateTimeFormatter ofPattern(java.lang.String patt
  * The exact format pattern used varies by locale.
  * <p>
  * The locale is determined from the formatter. The formatter returned directly by
- * this method will use the {@link java.util.Locale#getDefault(java.util.Locale.Category) Locale#getDefault(Locale.Category)}.
- * The locale can be controlled using {@link java.time.format.DateTimeFormatter#withLocale(java.util.Locale) DateTimeFormatter#withLocale(Locale)}
+ * this method will use the {@link java.util.Locale#getDefault(java.util.Locale.Category) default FORMAT locale}.
+ * The locale can be controlled using {@link java.time.format.DateTimeFormatter#withLocale(java.util.Locale) withLocale(Locale)}
  * on the result of this method.
  * <p>
  * Note that the localized pattern is looked up lazily.
@@ -533,7 +533,7 @@ public static java.time.format.DateTimeFormatter ofPattern(java.lang.String patt
  * <p>
  * The returned formatter has a chronology of ISO set to ensure dates in
  * other calendar systems are correctly converted.
- * It has no override zone and uses the {@link java.time.format.ResolverStyle#SMART ResolverStyle#SMART} resolver style.
+ * It has no override zone and uses the {@link java.time.format.ResolverStyle#SMART SMART} resolver style.
  *
  * @param dateStyle  the formatter style to obtain, not null
  * @return the date formatter, not null
@@ -548,8 +548,8 @@ public static java.time.format.DateTimeFormatter ofLocalizedDate(java.time.forma
  * The exact format pattern used varies by locale.
  * <p>
  * The locale is determined from the formatter. The formatter returned directly by
- * this method will use the {@link java.util.Locale#getDefault(java.util.Locale.Category) Locale#getDefault(Locale.Category)}.
- * The locale can be controlled using {@link java.time.format.DateTimeFormatter#withLocale(java.util.Locale) DateTimeFormatter#withLocale(Locale)}
+ * this method will use the {@link java.util.Locale#getDefault(java.util.Locale.Category) default FORMAT locale}.
+ * The locale can be controlled using {@link java.time.format.DateTimeFormatter#withLocale(java.util.Locale) withLocale(Locale)}
  * on the result of this method.
  * <p>
  * Note that the localized pattern is looked up lazily.
@@ -558,7 +558,7 @@ public static java.time.format.DateTimeFormatter ofLocalizedDate(java.time.forma
  * <p>
  * The returned formatter has a chronology of ISO set to ensure dates in
  * other calendar systems are correctly converted.
- * It has no override zone and uses the {@link java.time.format.ResolverStyle#SMART ResolverStyle#SMART} resolver style.
+ * It has no override zone and uses the {@link java.time.format.ResolverStyle#SMART SMART} resolver style.
  *
  * @param timeStyle  the formatter style to obtain, not null
  * @return the time formatter, not null
@@ -573,8 +573,8 @@ public static java.time.format.DateTimeFormatter ofLocalizedTime(java.time.forma
  * The exact format pattern used varies by locale.
  * <p>
  * The locale is determined from the formatter. The formatter returned directly by
- * this method will use the {@link java.util.Locale#getDefault(java.util.Locale.Category) Locale#getDefault(Locale.Category)}.
- * The locale can be controlled using {@link java.time.format.DateTimeFormatter#withLocale(java.util.Locale) DateTimeFormatter#withLocale(Locale)}
+ * this method will use the {@link java.util.Locale#getDefault(java.util.Locale.Category) default FORMAT locale}.
+ * The locale can be controlled using {@link java.time.format.DateTimeFormatter#withLocale(java.util.Locale) withLocale(Locale)}
  * on the result of this method.
  * <p>
  * Note that the localized pattern is looked up lazily.
@@ -583,7 +583,7 @@ public static java.time.format.DateTimeFormatter ofLocalizedTime(java.time.forma
  * <p>
  * The returned formatter has a chronology of ISO set to ensure dates in
  * other calendar systems are correctly converted.
- * It has no override zone and uses the {@link java.time.format.ResolverStyle#SMART ResolverStyle#SMART} resolver style.
+ * It has no override zone and uses the {@link java.time.format.ResolverStyle#SMART SMART} resolver style.
  *
  * @param dateTimeStyle  the formatter style to obtain, not null
  * @return the date-time formatter, not null
@@ -598,8 +598,8 @@ public static java.time.format.DateTimeFormatter ofLocalizedDateTime(java.time.f
  * The exact format pattern used varies by locale.
  * <p>
  * The locale is determined from the formatter. The formatter returned directly by
- * this method will use the {@link java.util.Locale#getDefault() Locale#getDefault()}.
- * The locale can be controlled using {@link java.time.format.DateTimeFormatter#withLocale(java.util.Locale) DateTimeFormatter#withLocale(Locale)}
+ * this method will use the {@link java.util.Locale#getDefault() default FORMAT locale}.
+ * The locale can be controlled using {@link java.time.format.DateTimeFormatter#withLocale(java.util.Locale) withLocale(Locale)}
  * on the result of this method.
  * <p>
  * Note that the localized pattern is looked up lazily.
@@ -608,7 +608,7 @@ public static java.time.format.DateTimeFormatter ofLocalizedDateTime(java.time.f
  * <p>
  * The returned formatter has a chronology of ISO set to ensure dates in
  * other calendar systems are correctly converted.
- * It has no override zone and uses the {@link java.time.format.ResolverStyle#SMART ResolverStyle#SMART} resolver style.
+ * It has no override zone and uses the {@link java.time.format.ResolverStyle#SMART SMART} resolver style.
  *
  * @param dateStyle  the date formatter style to obtain, not null
  * @param timeStyle  the time formatter style to obtain, not null
@@ -620,7 +620,7 @@ public static java.time.format.DateTimeFormatter ofLocalizedDateTime(java.time.f
 /**
  * A query that provides access to the excess days that were parsed.
  * <p>
- * This returns a singleton {@linkplain java.time.temporal.TemporalQuery TemporalQuery} that provides
+ * This returns a singleton {@linkplain java.time.temporal.TemporalQuery query} that provides
  * access to additional information from the parse. The query always returns
  * a non-null period, with a zero period returned instead of null.
  * <p>
@@ -663,7 +663,7 @@ public static java.time.temporal.TemporalQuery<java.time.Period> parsedExcessDay
 /**
  * A query that provides access to whether a leap-second was parsed.
  * <p>
- * This returns a singleton {@linkplain java.time.temporal.TemporalQuery TemporalQuery} that provides
+ * This returns a singleton {@linkplain java.time.temporal.TemporalQuery query} that provides
  * access to additional information from the parse. The query always returns
  * a non-null boolean, true if parsing saw a leap-second, false if not.
  * <p>
@@ -761,7 +761,7 @@ public java.time.chrono.Chronology getChronology() { throw new RuntimeException(
  * When formatting, if the temporal object contains a date, then it will
  * be converted to a date in the override chronology.
  * Whether the temporal contains a date is determined by querying the
- * {@link java.time.temporal.ChronoField#EPOCH_DAY ChronoField#EPOCH_DAY} field.
+ * {@link java.time.temporal.ChronoField#EPOCH_DAY EPOCH_DAY} field.
  * Any time or zone will be retained unaltered unless overridden.
  * <p>
  * If the temporal object does not contain a date, but does contain one
@@ -809,7 +809,7 @@ public java.time.ZoneId getZone() { throw new RuntimeException("Stub!"); }
  * When formatting, if the temporal object contains an instant, then it will
  * be converted to a zoned date-time using the override zone.
  * Whether the temporal is an instant is determined by querying the
- * {@link java.time.temporal.ChronoField#INSTANT_SECONDS ChronoField#INSTANT_SECONDS} field.
+ * {@link java.time.temporal.ChronoField#INSTANT_SECONDS INSTANT_SECONDS} field.
  * If the input has a chronology then it will be retained unless overridden.
  * If the input does not have a chronology, such as {@code Instant}, then
  * the ISO chronology will be used.
@@ -841,7 +841,7 @@ public java.time.format.DateTimeFormatter withZone(java.time.ZoneId zone) { thro
  * <p>
  * This returns the resolver style, used during the second phase of parsing
  * when fields are resolved into dates and times.
- * By default, a formatter has the {@link java.time.format.ResolverStyle#SMART ResolverStyle#SMART} resolver style.
+ * By default, a formatter has the {@link java.time.format.ResolverStyle#SMART SMART} resolver style.
  * See {@link #withResolverStyle(java.time.format.ResolverStyle)} for more details.
  *
  * @return the resolver style of this formatter, not null
@@ -854,7 +854,7 @@ public java.time.format.ResolverStyle getResolverStyle() { throw new RuntimeExce
  * <p>
  * This returns a formatter with similar state to this formatter but
  * with the resolver style set. By default, a formatter has the
- * {@link java.time.format.ResolverStyle#SMART ResolverStyle#SMART} resolver style.
+ * {@link java.time.format.ResolverStyle#SMART SMART} resolver style.
  * <p>
  * Changing the resolver style only has an effect during parsing.
  * Parsing a text string occurs in two phases.
@@ -899,8 +899,8 @@ public java.util.Set<java.time.temporal.TemporalField> getResolverFields() { thr
  * This can be used to select between two or more ways that a date or time might
  * be resolved. For example, if the formatter consists of year, month, day-of-month
  * and day-of-year, then there are two ways to resolve a date.
- * Calling this method with the arguments {@link java.time.temporal.ChronoField#YEAR ChronoField#YEAR} and
- * {@link java.time.temporal.ChronoField#DAY_OF_YEAR ChronoField#DAY_OF_YEAR} will ensure that the date is
+ * Calling this method with the arguments {@link java.time.temporal.ChronoField#YEAR YEAR} and
+ * {@link java.time.temporal.ChronoField#DAY_OF_YEAR DAY_OF_YEAR} will ensure that the date is
  * resolved using the year and day-of-year, effectively meaning that the month
  * and day-of-month are ignored during the resolving phase.
  * <p>
@@ -908,9 +908,9 @@ public java.util.Set<java.time.temporal.TemporalField> getResolverFields() { thr
  * would otherwise be cross-checked. For example, if the formatter consists of year,
  * month, day-of-month and day-of-week, then there is only one way to resolve a
  * date, but the parsed value for day-of-week will be cross-checked against the
- * resolved date. Calling this method with the arguments {@link java.time.temporal.ChronoField#YEAR ChronoField#YEAR},
- * {@link java.time.temporal.ChronoField#MONTH_OF_YEAR ChronoField#MONTH_OF_YEAR} and
- * {@link java.time.temporal.ChronoField#DAY_OF_MONTH ChronoField#DAY_OF_MONTH} will ensure that the date is
+ * resolved date. Calling this method with the arguments {@link java.time.temporal.ChronoField#YEAR YEAR},
+ * {@link java.time.temporal.ChronoField#MONTH_OF_YEAR MONTH_OF_YEAR} and
+ * {@link java.time.temporal.ChronoField#DAY_OF_MONTH DAY_OF_MONTH} will ensure that the date is
  * resolved correctly, but without any cross-check for the day-of-week.
  * <p>
  * In implementation terms, this method behaves as follows. The result of the
@@ -941,8 +941,8 @@ public java.time.format.DateTimeFormatter withResolverFields(java.time.temporal.
  * This can be used to select between two or more ways that a date or time might
  * be resolved. For example, if the formatter consists of year, month, day-of-month
  * and day-of-year, then there are two ways to resolve a date.
- * Calling this method with the arguments {@link java.time.temporal.ChronoField#YEAR ChronoField#YEAR} and
- * {@link java.time.temporal.ChronoField#DAY_OF_YEAR ChronoField#DAY_OF_YEAR} will ensure that the date is
+ * Calling this method with the arguments {@link java.time.temporal.ChronoField#YEAR YEAR} and
+ * {@link java.time.temporal.ChronoField#DAY_OF_YEAR DAY_OF_YEAR} will ensure that the date is
  * resolved using the year and day-of-year, effectively meaning that the month
  * and day-of-month are ignored during the resolving phase.
  * <p>
@@ -950,9 +950,9 @@ public java.time.format.DateTimeFormatter withResolverFields(java.time.temporal.
  * would otherwise be cross-checked. For example, if the formatter consists of year,
  * month, day-of-month and day-of-week, then there is only one way to resolve a
  * date, but the parsed value for day-of-week will be cross-checked against the
- * resolved date. Calling this method with the arguments {@link java.time.temporal.ChronoField#YEAR ChronoField#YEAR},
- * {@link java.time.temporal.ChronoField#MONTH_OF_YEAR ChronoField#MONTH_OF_YEAR} and
- * {@link java.time.temporal.ChronoField#DAY_OF_MONTH ChronoField#DAY_OF_MONTH} will ensure that the date is
+ * resolved date. Calling this method with the arguments {@link java.time.temporal.ChronoField#YEAR YEAR},
+ * {@link java.time.temporal.ChronoField#MONTH_OF_YEAR MONTH_OF_YEAR} and
+ * {@link java.time.temporal.ChronoField#DAY_OF_MONTH DAY_OF_MONTH} will ensure that the date is
  * resolved correctly, but without any cross-check for the day-of-week.
  * <p>
  * In implementation terms, this method behaves as follows. The result of the
@@ -1198,14 +1198,14 @@ public java.lang.String toString() { throw new RuntimeException("Stub!"); }
  * the ISO-8601 basic local date format.
  * The format consists of:
  * <ul>
- * <li>Four digits for the {@link java.time.temporal.ChronoField#YEAR ChronoField#YEAR}.
+ * <li>Four digits for the {@link java.time.temporal.ChronoField#YEAR year}.
  *  Only years in the range 0000 to 9999 are supported.
- * <li>Two digits for the {@link java.time.temporal.ChronoField#MONTH_OF_YEAR ChronoField#MONTH_OF_YEAR}.
+ * <li>Two digits for the {@link java.time.temporal.ChronoField#MONTH_OF_YEAR month-of-year}.
  *  This is pre-padded by zero to ensure two digits.
- * <li>Two digits for the {@link java.time.temporal.ChronoField#DAY_OF_MONTH ChronoField#DAY_OF_MONTH}.
+ * <li>Two digits for the {@link java.time.temporal.ChronoField#DAY_OF_MONTH day-of-month}.
  *  This is pre-padded by zero to ensure two digits.
  * <li>If the offset is not available to format or parse then the format is complete.
- * <li>The {@link java.time.ZoneOffset#getId() ZoneOffset#getId()} without colons. If the offset has
+ * <li>The {@link java.time.ZoneOffset#getId() offset ID} without colons. If the offset has
  *  seconds then they will be handled even though this is not part of the ISO-8601 standard.
  *  Parsing is case insensitive.
  * </ul>
@@ -1215,7 +1215,7 @@ public java.lang.String toString() { throw new RuntimeException("Stub!"); }
  * <p>
  * The returned formatter has a chronology of ISO set to ensure dates in
  * other calendar systems are correctly converted.
- * It has no override zone and uses the {@link java.time.format.ResolverStyle#STRICT ResolverStyle#STRICT} resolver style.
+ * It has no override zone and uses the {@link java.time.format.ResolverStyle#STRICT STRICT} resolver style.
  */
 
 public static final java.time.format.DateTimeFormatter BASIC_ISO_DATE;
@@ -1231,7 +1231,7 @@ static { BASIC_ISO_DATE = null; }
  * <ul>
  * <li>The {@link #ISO_LOCAL_DATE}
  * <li>If the offset is not available then the format is complete.
- * <li>The {@link java.time.ZoneOffset#getId() ZoneOffset#getId()}. If the offset has seconds then
+ * <li>The {@link java.time.ZoneOffset#getId() offset ID}. If the offset has seconds then
  *  they will be handled even though this is not part of the ISO-8601 standard.
  *  Parsing is case insensitive.
  * </ul>
@@ -1241,7 +1241,7 @@ static { BASIC_ISO_DATE = null; }
  * <p>
  * The returned formatter has a chronology of ISO set to ensure dates in
  * other calendar systems are correctly converted.
- * It has no override zone and uses the {@link java.time.format.ResolverStyle#STRICT ResolverStyle#STRICT} resolver style.
+ * It has no override zone and uses the {@link java.time.format.ResolverStyle#STRICT STRICT} resolver style.
  */
 
 public static final java.time.format.DateTimeFormatter ISO_DATE;
@@ -1259,11 +1259,11 @@ static { ISO_DATE = null; }
  * <ul>
  * <li>The {@link #ISO_LOCAL_DATE_TIME}
  * <li>If the offset is not available to format or parse then the format is complete.
- * <li>The {@link java.time.ZoneOffset#getId() ZoneOffset#getId()}. If the offset has seconds then
+ * <li>The {@link java.time.ZoneOffset#getId() offset ID}. If the offset has seconds then
  *  they will be handled even though this is not part of the ISO-8601 standard.
  * <li>If the zone ID is not available or is a {@code ZoneOffset} then the format is complete.
  * <li>An open square bracket '['.
- * <li>The {@link java.time.ZoneId#getId() ZoneId#getId()}. This is not part of the ISO-8601 standard.
+ * <li>The {@link java.time.ZoneId#getId() zone ID}. This is not part of the ISO-8601 standard.
  *  Parsing is case sensitive.
  * <li>A close square bracket ']'.
  * </ul>
@@ -1273,7 +1273,7 @@ static { ISO_DATE = null; }
  * <p>
  * The returned formatter has a chronology of ISO set to ensure dates in
  * other calendar systems are correctly converted.
- * It has no override zone and uses the {@link java.time.format.ResolverStyle#STRICT ResolverStyle#STRICT} resolver style.
+ * It has no override zone and uses the {@link java.time.format.ResolverStyle#STRICT STRICT} resolver style.
  */
 
 public static final java.time.format.DateTimeFormatter ISO_DATE_TIME;
@@ -1307,7 +1307,7 @@ static { ISO_DATE_TIME = null; }
  * </ul>
  * <p>
  * The returned formatter has no override chronology or zone.
- * It uses the {@link java.time.format.ResolverStyle#STRICT ResolverStyle#STRICT} resolver style.
+ * It uses the {@link java.time.format.ResolverStyle#STRICT STRICT} resolver style.
  */
 
 public static final java.time.format.DateTimeFormatter ISO_INSTANT;
@@ -1321,20 +1321,20 @@ static { ISO_INSTANT = null; }
  * the ISO-8601 extended local date format.
  * The format consists of:
  * <ul>
- * <li>Four digits or more for the {@link java.time.temporal.ChronoField#YEAR ChronoField#YEAR}.
+ * <li>Four digits or more for the {@link java.time.temporal.ChronoField#YEAR year}.
  * Years in the range 0000 to 9999 will be pre-padded by zero to ensure four digits.
  * Years outside that range will have a prefixed positive or negative symbol.
  * <li>A dash
- * <li>Two digits for the {@link java.time.temporal.ChronoField#MONTH_OF_YEAR ChronoField#MONTH_OF_YEAR}.
+ * <li>Two digits for the {@link java.time.temporal.ChronoField#MONTH_OF_YEAR month-of-year}.
  *  This is pre-padded by zero to ensure two digits.
  * <li>A dash
- * <li>Two digits for the {@link java.time.temporal.ChronoField#DAY_OF_MONTH ChronoField#DAY_OF_MONTH}.
+ * <li>Two digits for the {@link java.time.temporal.ChronoField#DAY_OF_MONTH day-of-month}.
  *  This is pre-padded by zero to ensure two digits.
  * </ul>
  * <p>
  * The returned formatter has a chronology of ISO set to ensure dates in
  * other calendar systems are correctly converted.
- * It has no override zone and uses the {@link java.time.format.ResolverStyle#STRICT ResolverStyle#STRICT} resolver style.
+ * It has no override zone and uses the {@link java.time.format.ResolverStyle#STRICT STRICT} resolver style.
  */
 
 public static final java.time.format.DateTimeFormatter ISO_LOCAL_DATE;
@@ -1355,7 +1355,7 @@ static { ISO_LOCAL_DATE = null; }
  * <p>
  * The returned formatter has a chronology of ISO set to ensure dates in
  * other calendar systems are correctly converted.
- * It has no override zone and uses the {@link java.time.format.ResolverStyle#STRICT ResolverStyle#STRICT} resolver style.
+ * It has no override zone and uses the {@link java.time.format.ResolverStyle#STRICT STRICT} resolver style.
  */
 
 public static final java.time.format.DateTimeFormatter ISO_LOCAL_DATE_TIME;
@@ -1369,23 +1369,23 @@ static { ISO_LOCAL_DATE_TIME = null; }
  * the ISO-8601 extended local time format.
  * The format consists of:
  * <ul>
- * <li>Two digits for the {@link java.time.temporal.ChronoField#HOUR_OF_DAY ChronoField#HOUR_OF_DAY}.
+ * <li>Two digits for the {@link java.time.temporal.ChronoField#HOUR_OF_DAY hour-of-day}.
  *  This is pre-padded by zero to ensure two digits.
  * <li>A colon
- * <li>Two digits for the {@link java.time.temporal.ChronoField#MINUTE_OF_HOUR ChronoField#MINUTE_OF_HOUR}.
+ * <li>Two digits for the {@link java.time.temporal.ChronoField#MINUTE_OF_HOUR minute-of-hour}.
  *  This is pre-padded by zero to ensure two digits.
  * <li>If the second-of-minute is not available then the format is complete.
  * <li>A colon
- * <li>Two digits for the {@link java.time.temporal.ChronoField#SECOND_OF_MINUTE ChronoField#SECOND_OF_MINUTE}.
+ * <li>Two digits for the {@link java.time.temporal.ChronoField#SECOND_OF_MINUTE second-of-minute}.
  *  This is pre-padded by zero to ensure two digits.
  * <li>If the nano-of-second is zero or not available then the format is complete.
  * <li>A decimal point
- * <li>One to nine digits for the {@link java.time.temporal.ChronoField#NANO_OF_SECOND ChronoField#NANO_OF_SECOND}.
+ * <li>One to nine digits for the {@link java.time.temporal.ChronoField#NANO_OF_SECOND nano-of-second}.
  *  As many digits will be output as required.
  * </ul>
  * <p>
  * The returned formatter has no override chronology or zone.
- * It uses the {@link java.time.format.ResolverStyle#STRICT ResolverStyle#STRICT} resolver style.
+ * It uses the {@link java.time.format.ResolverStyle#STRICT STRICT} resolver style.
  */
 
 public static final java.time.format.DateTimeFormatter ISO_LOCAL_TIME;
@@ -1400,14 +1400,14 @@ static { ISO_LOCAL_TIME = null; }
  * The format consists of:
  * <ul>
  * <li>The {@link #ISO_LOCAL_DATE}
- * <li>The {@link java.time.ZoneOffset#getId() ZoneOffset#getId()}. If the offset has seconds then
+ * <li>The {@link java.time.ZoneOffset#getId() offset ID}. If the offset has seconds then
  *  they will be handled even though this is not part of the ISO-8601 standard.
  *  Parsing is case insensitive.
  * </ul>
  * <p>
  * The returned formatter has a chronology of ISO set to ensure dates in
  * other calendar systems are correctly converted.
- * It has no override zone and uses the {@link java.time.format.ResolverStyle#STRICT ResolverStyle#STRICT} resolver style.
+ * It has no override zone and uses the {@link java.time.format.ResolverStyle#STRICT STRICT} resolver style.
  */
 
 public static final java.time.format.DateTimeFormatter ISO_OFFSET_DATE;
@@ -1422,14 +1422,14 @@ static { ISO_OFFSET_DATE = null; }
  * The format consists of:
  * <ul>
  * <li>The {@link #ISO_LOCAL_DATE_TIME}
- * <li>The {@link java.time.ZoneOffset#getId() ZoneOffset#getId()}. If the offset has seconds then
+ * <li>The {@link java.time.ZoneOffset#getId() offset ID}. If the offset has seconds then
  *  they will be handled even though this is not part of the ISO-8601 standard.
  *  Parsing is case insensitive.
  * </ul>
  * <p>
  * The returned formatter has a chronology of ISO set to ensure dates in
  * other calendar systems are correctly converted.
- * It has no override zone and uses the {@link java.time.format.ResolverStyle#STRICT ResolverStyle#STRICT} resolver style.
+ * It has no override zone and uses the {@link java.time.format.ResolverStyle#STRICT STRICT} resolver style.
  */
 
 public static final java.time.format.DateTimeFormatter ISO_OFFSET_DATE_TIME;
@@ -1444,13 +1444,13 @@ static { ISO_OFFSET_DATE_TIME = null; }
  * The format consists of:
  * <ul>
  * <li>The {@link #ISO_LOCAL_TIME}
- * <li>The {@link java.time.ZoneOffset#getId() ZoneOffset#getId()}. If the offset has seconds then
+ * <li>The {@link java.time.ZoneOffset#getId() offset ID}. If the offset has seconds then
  *  they will be handled even though this is not part of the ISO-8601 standard.
  *  Parsing is case insensitive.
  * </ul>
  * <p>
  * The returned formatter has no override chronology or zone.
- * It uses the {@link java.time.format.ResolverStyle#STRICT ResolverStyle#STRICT} resolver style.
+ * It uses the {@link java.time.format.ResolverStyle#STRICT STRICT} resolver style.
  */
 
 public static final java.time.format.DateTimeFormatter ISO_OFFSET_TIME;
@@ -1464,14 +1464,14 @@ static { ISO_OFFSET_TIME = null; }
  * the ISO-8601 extended ordinal date format.
  * The format consists of:
  * <ul>
- * <li>Four digits or more for the {@link java.time.temporal.ChronoField#YEAR ChronoField#YEAR}.
+ * <li>Four digits or more for the {@link java.time.temporal.ChronoField#YEAR year}.
  * Years in the range 0000 to 9999 will be pre-padded by zero to ensure four digits.
  * Years outside that range will have a prefixed positive or negative symbol.
  * <li>A dash
- * <li>Three digits for the {@link java.time.temporal.ChronoField#DAY_OF_YEAR ChronoField#DAY_OF_YEAR}.
+ * <li>Three digits for the {@link java.time.temporal.ChronoField#DAY_OF_YEAR day-of-year}.
  *  This is pre-padded by zero to ensure three digits.
  * <li>If the offset is not available to format or parse then the format is complete.
- * <li>The {@link java.time.ZoneOffset#getId() ZoneOffset#getId()}. If the offset has seconds then
+ * <li>The {@link java.time.ZoneOffset#getId() offset ID}. If the offset has seconds then
  *  they will be handled even though this is not part of the ISO-8601 standard.
  *  Parsing is case insensitive.
  * </ul>
@@ -1481,7 +1481,7 @@ static { ISO_OFFSET_TIME = null; }
  * <p>
  * The returned formatter has a chronology of ISO set to ensure dates in
  * other calendar systems are correctly converted.
- * It has no override zone and uses the {@link java.time.format.ResolverStyle#STRICT ResolverStyle#STRICT} resolver style.
+ * It has no override zone and uses the {@link java.time.format.ResolverStyle#STRICT STRICT} resolver style.
  */
 
 public static final java.time.format.DateTimeFormatter ISO_ORDINAL_DATE;
@@ -1497,7 +1497,7 @@ static { ISO_ORDINAL_DATE = null; }
  * <ul>
  * <li>The {@link #ISO_LOCAL_TIME}
  * <li>If the offset is not available then the format is complete.
- * <li>The {@link java.time.ZoneOffset#getId() ZoneOffset#getId()}. If the offset has seconds then
+ * <li>The {@link java.time.ZoneOffset#getId() offset ID}. If the offset has seconds then
  *  they will be handled even though this is not part of the ISO-8601 standard.
  *  Parsing is case insensitive.
  * </ul>
@@ -1506,7 +1506,7 @@ static { ISO_ORDINAL_DATE = null; }
  * {@link java.time.format.DateTimeFormatter#parseBest DateTimeFormatter#parseBest}.
  * <p>
  * The returned formatter has no override chronology or zone.
- * It uses the {@link java.time.format.ResolverStyle#STRICT ResolverStyle#STRICT} resolver style.
+ * It uses the {@link java.time.format.ResolverStyle#STRICT STRICT} resolver style.
  */
 
 public static final java.time.format.DateTimeFormatter ISO_TIME;
@@ -1520,18 +1520,18 @@ static { ISO_TIME = null; }
  * the ISO-8601 extended week-based date format.
  * The format consists of:
  * <ul>
- * <li>Four digits or more for the {@link java.time.temporal.IsoFields#WEEK_BASED_YEAR IsoFields#WEEK_BASED_YEAR}.
+ * <li>Four digits or more for the {@link java.time.temporal.IsoFields#WEEK_BASED_YEAR week-based-year}.
  * Years in the range 0000 to 9999 will be pre-padded by zero to ensure four digits.
  * Years outside that range will have a prefixed positive or negative symbol.
  * <li>A dash
  * <li>The letter 'W'. Parsing is case insensitive.
- * <li>Two digits for the {@link java.time.temporal.IsoFields#WEEK_OF_WEEK_BASED_YEAR IsoFields#WEEK_OF_WEEK_BASED_YEAR}.
+ * <li>Two digits for the {@link java.time.temporal.IsoFields#WEEK_OF_WEEK_BASED_YEAR week-of-week-based-year}.
  *  This is pre-padded by zero to ensure three digits.
  * <li>A dash
- * <li>One digit for the {@link java.time.temporal.ChronoField#DAY_OF_WEEK ChronoField#DAY_OF_WEEK}.
+ * <li>One digit for the {@link java.time.temporal.ChronoField#DAY_OF_WEEK day-of-week}.
  *  The value run from Monday (1) to Sunday (7).
  * <li>If the offset is not available to format or parse then the format is complete.
- * <li>The {@link java.time.ZoneOffset#getId() ZoneOffset#getId()}. If the offset has seconds then
+ * <li>The {@link java.time.ZoneOffset#getId() offset ID}. If the offset has seconds then
  *  they will be handled even though this is not part of the ISO-8601 standard.
  *  Parsing is case insensitive.
  * </ul>
@@ -1541,7 +1541,7 @@ static { ISO_TIME = null; }
  * <p>
  * The returned formatter has a chronology of ISO set to ensure dates in
  * other calendar systems are correctly converted.
- * It has no override zone and uses the {@link java.time.format.ResolverStyle#STRICT ResolverStyle#STRICT} resolver style.
+ * It has no override zone and uses the {@link java.time.format.ResolverStyle#STRICT STRICT} resolver style.
  */
 
 public static final java.time.format.DateTimeFormatter ISO_WEEK_DATE;
@@ -1560,14 +1560,14 @@ static { ISO_WEEK_DATE = null; }
  * <li>The {@link #ISO_OFFSET_DATE_TIME}
  * <li>If the zone ID is not available or is a {@code ZoneOffset} then the format is complete.
  * <li>An open square bracket '['.
- * <li>The {@link java.time.ZoneId#getId() ZoneId#getId()}. This is not part of the ISO-8601 standard.
+ * <li>The {@link java.time.ZoneId#getId() zone ID}. This is not part of the ISO-8601 standard.
  *  Parsing is case sensitive.
  * <li>A close square bracket ']'.
  * </ul>
  * <p>
  * The returned formatter has a chronology of ISO set to ensure dates in
  * other calendar systems are correctly converted.
- * It has no override zone and uses the {@link java.time.format.ResolverStyle#STRICT ResolverStyle#STRICT} resolver style.
+ * It has no override zone and uses the {@link java.time.format.ResolverStyle#STRICT STRICT} resolver style.
  */
 
 public static final java.time.format.DateTimeFormatter ISO_ZONED_DATE_TIME;
@@ -1586,27 +1586,27 @@ static { ISO_ZONED_DATE_TIME = null; }
  * The format consists of:
  * <ul>
  * <li>If the day-of-week is not available to format or parse then jump to day-of-month.
- * <li>Three letter {@link java.time.temporal.ChronoField#DAY_OF_WEEK ChronoField#DAY_OF_WEEK} in English.
+ * <li>Three letter {@link java.time.temporal.ChronoField#DAY_OF_WEEK day-of-week} in English.
  * <li>A comma
  * <li>A space
- * <li>One or two digits for the {@link java.time.temporal.ChronoField#DAY_OF_MONTH ChronoField#DAY_OF_MONTH}.
+ * <li>One or two digits for the {@link java.time.temporal.ChronoField#DAY_OF_MONTH day-of-month}.
  * <li>A space
- * <li>Three letter {@link java.time.temporal.ChronoField#MONTH_OF_YEAR ChronoField#MONTH_OF_YEAR} in English.
+ * <li>Three letter {@link java.time.temporal.ChronoField#MONTH_OF_YEAR month-of-year} in English.
  * <li>A space
- * <li>Four digits for the {@link java.time.temporal.ChronoField#YEAR ChronoField#YEAR}.
+ * <li>Four digits for the {@link java.time.temporal.ChronoField#YEAR year}.
  *  Only years in the range 0000 to 9999 are supported.
  * <li>A space
- * <li>Two digits for the {@link java.time.temporal.ChronoField#HOUR_OF_DAY ChronoField#HOUR_OF_DAY}.
+ * <li>Two digits for the {@link java.time.temporal.ChronoField#HOUR_OF_DAY hour-of-day}.
  *  This is pre-padded by zero to ensure two digits.
  * <li>A colon
- * <li>Two digits for the {@link java.time.temporal.ChronoField#MINUTE_OF_HOUR ChronoField#MINUTE_OF_HOUR}.
+ * <li>Two digits for the {@link java.time.temporal.ChronoField#MINUTE_OF_HOUR minute-of-hour}.
  *  This is pre-padded by zero to ensure two digits.
  * <li>If the second-of-minute is not available then jump to the next space.
  * <li>A colon
- * <li>Two digits for the {@link java.time.temporal.ChronoField#SECOND_OF_MINUTE ChronoField#SECOND_OF_MINUTE}.
+ * <li>Two digits for the {@link java.time.temporal.ChronoField#SECOND_OF_MINUTE second-of-minute}.
  *  This is pre-padded by zero to ensure two digits.
  * <li>A space
- * <li>The {@link java.time.ZoneOffset#getId() ZoneOffset#getId()} without colons or seconds.
+ * <li>The {@link java.time.ZoneOffset#getId() offset ID} without colons or seconds.
  *  An offset of zero uses "GMT". North American zone names and military zone names are not handled.
  * </ul>
  * <p>
@@ -1614,7 +1614,7 @@ static { ISO_ZONED_DATE_TIME = null; }
  * <p>
  * The returned formatter has a chronology of ISO set to ensure dates in
  * other calendar systems are correctly converted.
- * It has no override zone and uses the {@link java.time.format.ResolverStyle#SMART ResolverStyle#SMART} resolver style.
+ * It has no override zone and uses the {@link java.time.format.ResolverStyle#SMART SMART} resolver style.
  */
 
 public static final java.time.format.DateTimeFormatter RFC_1123_DATE_TIME;

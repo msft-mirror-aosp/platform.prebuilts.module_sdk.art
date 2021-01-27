@@ -65,14 +65,14 @@ private Array() { throw new RuntimeException("Stub!"); }
  * @return the new array
  * @exception java.lang.NullPointerException if the specified
  * {@code componentType} parameter is null
- * @exception java.lang.IllegalArgumentException if componentType is {@link java.lang.Void#TYPE Void#TYPE} or if the number of dimensions of the requested array
+ * @exception java.lang.IllegalArgumentException if componentType is {@link java.lang.Void#TYPE  } or if the number of dimensions of the requested array
  * instance exceed 255.
  * @exception java.lang.NegativeArraySizeException if the specified {@code length}
  * is negative
  */
 
-@android.annotation.NonNull
-public static java.lang.Object newInstance(@android.annotation.NonNull java.lang.Class<?> componentType, int length) throws java.lang.NegativeArraySizeException { throw new RuntimeException("Stub!"); }
+@androidx.annotation.RecentlyNonNull
+public static java.lang.Object newInstance(@androidx.annotation.RecentlyNonNull java.lang.Class<?> componentType, int length) throws java.lang.NegativeArraySizeException { throw new RuntimeException("Stub!"); }
 
 /**
  * Creates a new array
@@ -99,14 +99,14 @@ public static java.lang.Object newInstance(@android.annotation.NonNull java.lang
  * @exception java.lang.NullPointerException if the specified
  * {@code componentType} argument is null
  * @exception java.lang.IllegalArgumentException if the specified {@code dimensions}
- * argument is a zero-dimensional array, if componentType is {@link java.lang.Void#TYPE Void#TYPE}, or if the number of dimensions of the requested array
+ * argument is a zero-dimensional array, if componentType is {@link java.lang.Void#TYPE  }, or if the number of dimensions of the requested array
  * instance exceed 255.
  * @exception java.lang.NegativeArraySizeException if any of the components in
  * the specified {@code dimensions} argument is negative.
  */
 
-@android.annotation.NonNull
-public static java.lang.Object newInstance(@android.annotation.NonNull java.lang.Class<?> componentType, int... dimensions) throws java.lang.IllegalArgumentException, java.lang.NegativeArraySizeException { throw new RuntimeException("Stub!"); }
+@androidx.annotation.RecentlyNonNull
+public static java.lang.Object newInstance(@androidx.annotation.RecentlyNonNull java.lang.Class<?> componentType, int... dimensions) throws java.lang.IllegalArgumentException, java.lang.NegativeArraySizeException { throw new RuntimeException("Stub!"); }
 
 /**
  * Returns the length of the specified array object, as an {@code int}.
@@ -117,7 +117,7 @@ public static java.lang.Object newInstance(@android.annotation.NonNull java.lang
  * an array
  */
 
-public static int getLength(@android.annotation.NonNull java.lang.Object array) { throw new RuntimeException("Stub!"); }
+public static int getLength(@androidx.annotation.RecentlyNonNull java.lang.Object array) { throw new RuntimeException("Stub!"); }
 
 /**
  * Returns the value of the indexed component in the specified
@@ -136,8 +136,8 @@ public static int getLength(@android.annotation.NonNull java.lang.Object array) 
  * length of the specified array
  */
 
-@android.annotation.Nullable
-public static java.lang.Object get(@android.annotation.NonNull java.lang.Object array, int index) throws java.lang.ArrayIndexOutOfBoundsException, java.lang.IllegalArgumentException { throw new RuntimeException("Stub!"); }
+@androidx.annotation.RecentlyNullable
+public static java.lang.Object get(@androidx.annotation.RecentlyNonNull java.lang.Object array, int index) throws java.lang.ArrayIndexOutOfBoundsException, java.lang.IllegalArgumentException { throw new RuntimeException("Stub!"); }
 
 /**
  * Returns the value of the indexed component in the specified
@@ -156,7 +156,7 @@ public static java.lang.Object get(@android.annotation.NonNull java.lang.Object 
  * @see java.lang.reflect.Array#get
  */
 
-public static boolean getBoolean(@android.annotation.NonNull java.lang.Object array, int index) throws java.lang.ArrayIndexOutOfBoundsException, java.lang.IllegalArgumentException { throw new RuntimeException("Stub!"); }
+public static boolean getBoolean(@androidx.annotation.RecentlyNonNull java.lang.Object array, int index) throws java.lang.ArrayIndexOutOfBoundsException, java.lang.IllegalArgumentException { throw new RuntimeException("Stub!"); }
 
 /**
  * Returns the value of the indexed component in the specified
@@ -175,7 +175,7 @@ public static boolean getBoolean(@android.annotation.NonNull java.lang.Object ar
  * @see java.lang.reflect.Array#get
  */
 
-public static byte getByte(@android.annotation.NonNull java.lang.Object array, int index) throws java.lang.ArrayIndexOutOfBoundsException, java.lang.IllegalArgumentException { throw new RuntimeException("Stub!"); }
+public static byte getByte(@androidx.annotation.RecentlyNonNull java.lang.Object array, int index) throws java.lang.ArrayIndexOutOfBoundsException, java.lang.IllegalArgumentException { throw new RuntimeException("Stub!"); }
 
 /**
  * Returns the value of the indexed component in the specified
@@ -194,7 +194,7 @@ public static byte getByte(@android.annotation.NonNull java.lang.Object array, i
  * @see java.lang.reflect.Array#get
  */
 
-public static char getChar(@android.annotation.NonNull java.lang.Object array, int index) throws java.lang.ArrayIndexOutOfBoundsException, java.lang.IllegalArgumentException { throw new RuntimeException("Stub!"); }
+public static char getChar(@androidx.annotation.RecentlyNonNull java.lang.Object array, int index) throws java.lang.ArrayIndexOutOfBoundsException, java.lang.IllegalArgumentException { throw new RuntimeException("Stub!"); }
 
 /**
  * Returns the value of the indexed component in the specified
@@ -213,7 +213,7 @@ public static char getChar(@android.annotation.NonNull java.lang.Object array, i
  * @see java.lang.reflect.Array#get
  */
 
-public static short getShort(@android.annotation.NonNull java.lang.Object array, int index) throws java.lang.ArrayIndexOutOfBoundsException, java.lang.IllegalArgumentException { throw new RuntimeException("Stub!"); }
+public static short getShort(@androidx.annotation.RecentlyNonNull java.lang.Object array, int index) throws java.lang.ArrayIndexOutOfBoundsException, java.lang.IllegalArgumentException { throw new RuntimeException("Stub!"); }
 
 /**
  * Returns the value of the indexed component in the specified
@@ -232,7 +232,7 @@ public static short getShort(@android.annotation.NonNull java.lang.Object array,
  * @see java.lang.reflect.Array#get
  */
 
-public static int getInt(@android.annotation.NonNull java.lang.Object array, int index) throws java.lang.ArrayIndexOutOfBoundsException, java.lang.IllegalArgumentException { throw new RuntimeException("Stub!"); }
+public static int getInt(@androidx.annotation.RecentlyNonNull java.lang.Object array, int index) throws java.lang.ArrayIndexOutOfBoundsException, java.lang.IllegalArgumentException { throw new RuntimeException("Stub!"); }
 
 /**
  * Returns the value of the indexed component in the specified
@@ -251,7 +251,7 @@ public static int getInt(@android.annotation.NonNull java.lang.Object array, int
  * @see java.lang.reflect.Array#get
  */
 
-public static long getLong(@android.annotation.NonNull java.lang.Object array, int index) throws java.lang.ArrayIndexOutOfBoundsException, java.lang.IllegalArgumentException { throw new RuntimeException("Stub!"); }
+public static long getLong(@androidx.annotation.RecentlyNonNull java.lang.Object array, int index) throws java.lang.ArrayIndexOutOfBoundsException, java.lang.IllegalArgumentException { throw new RuntimeException("Stub!"); }
 
 /**
  * Returns the value of the indexed component in the specified
@@ -270,7 +270,7 @@ public static long getLong(@android.annotation.NonNull java.lang.Object array, i
  * @see java.lang.reflect.Array#get
  */
 
-public static float getFloat(@android.annotation.NonNull java.lang.Object array, int index) throws java.lang.ArrayIndexOutOfBoundsException, java.lang.IllegalArgumentException { throw new RuntimeException("Stub!"); }
+public static float getFloat(@androidx.annotation.RecentlyNonNull java.lang.Object array, int index) throws java.lang.ArrayIndexOutOfBoundsException, java.lang.IllegalArgumentException { throw new RuntimeException("Stub!"); }
 
 /**
  * Returns the value of the indexed component in the specified
@@ -289,7 +289,7 @@ public static float getFloat(@android.annotation.NonNull java.lang.Object array,
  * @see java.lang.reflect.Array#get
  */
 
-public static double getDouble(@android.annotation.NonNull java.lang.Object array, int index) throws java.lang.ArrayIndexOutOfBoundsException, java.lang.IllegalArgumentException { throw new RuntimeException("Stub!"); }
+public static double getDouble(@androidx.annotation.RecentlyNonNull java.lang.Object array, int index) throws java.lang.ArrayIndexOutOfBoundsException, java.lang.IllegalArgumentException { throw new RuntimeException("Stub!"); }
 
 /**
  * Sets the value of the indexed component of the specified array
@@ -309,7 +309,7 @@ public static double getDouble(@android.annotation.NonNull java.lang.Object arra
  * the length of the specified array
  */
 
-public static void set(@android.annotation.NonNull java.lang.Object array, int index, @android.annotation.Nullable java.lang.Object value) throws java.lang.ArrayIndexOutOfBoundsException, java.lang.IllegalArgumentException { throw new RuntimeException("Stub!"); }
+public static void set(@androidx.annotation.RecentlyNonNull java.lang.Object array, int index, @androidx.annotation.RecentlyNullable java.lang.Object value) throws java.lang.ArrayIndexOutOfBoundsException, java.lang.IllegalArgumentException { throw new RuntimeException("Stub!"); }
 
 /**
  * Sets the value of the indexed component of the specified array
@@ -329,7 +329,7 @@ public static void set(@android.annotation.NonNull java.lang.Object array, int i
  * @see java.lang.reflect.Array#set
  */
 
-public static void setBoolean(@android.annotation.NonNull java.lang.Object array, int index, boolean z) { throw new RuntimeException("Stub!"); }
+public static void setBoolean(@androidx.annotation.RecentlyNonNull java.lang.Object array, int index, boolean z) { throw new RuntimeException("Stub!"); }
 
 /**
  * Sets the value of the indexed component of the specified array
@@ -349,7 +349,7 @@ public static void setBoolean(@android.annotation.NonNull java.lang.Object array
  * @see java.lang.reflect.Array#set
  */
 
-public static void setByte(@android.annotation.NonNull java.lang.Object array, int index, byte b) throws java.lang.ArrayIndexOutOfBoundsException, java.lang.IllegalArgumentException { throw new RuntimeException("Stub!"); }
+public static void setByte(@androidx.annotation.RecentlyNonNull java.lang.Object array, int index, byte b) throws java.lang.ArrayIndexOutOfBoundsException, java.lang.IllegalArgumentException { throw new RuntimeException("Stub!"); }
 
 /**
  * Sets the value of the indexed component of the specified array
@@ -369,7 +369,7 @@ public static void setByte(@android.annotation.NonNull java.lang.Object array, i
  * @see java.lang.reflect.Array#set
  */
 
-public static void setChar(@android.annotation.NonNull java.lang.Object array, int index, char c) throws java.lang.ArrayIndexOutOfBoundsException, java.lang.IllegalArgumentException { throw new RuntimeException("Stub!"); }
+public static void setChar(@androidx.annotation.RecentlyNonNull java.lang.Object array, int index, char c) throws java.lang.ArrayIndexOutOfBoundsException, java.lang.IllegalArgumentException { throw new RuntimeException("Stub!"); }
 
 /**
  * Sets the value of the indexed component of the specified array
@@ -389,7 +389,7 @@ public static void setChar(@android.annotation.NonNull java.lang.Object array, i
  * @see java.lang.reflect.Array#set
  */
 
-public static void setShort(@android.annotation.NonNull java.lang.Object array, int index, short s) throws java.lang.ArrayIndexOutOfBoundsException, java.lang.IllegalArgumentException { throw new RuntimeException("Stub!"); }
+public static void setShort(@androidx.annotation.RecentlyNonNull java.lang.Object array, int index, short s) throws java.lang.ArrayIndexOutOfBoundsException, java.lang.IllegalArgumentException { throw new RuntimeException("Stub!"); }
 
 /**
  * Sets the value of the indexed component of the specified array
@@ -409,7 +409,7 @@ public static void setShort(@android.annotation.NonNull java.lang.Object array, 
  * @see java.lang.reflect.Array#set
  */
 
-public static void setInt(@android.annotation.NonNull java.lang.Object array, int index, int i) throws java.lang.ArrayIndexOutOfBoundsException, java.lang.IllegalArgumentException { throw new RuntimeException("Stub!"); }
+public static void setInt(@androidx.annotation.RecentlyNonNull java.lang.Object array, int index, int i) throws java.lang.ArrayIndexOutOfBoundsException, java.lang.IllegalArgumentException { throw new RuntimeException("Stub!"); }
 
 /**
  * Sets the value of the indexed component of the specified array
@@ -429,7 +429,7 @@ public static void setInt(@android.annotation.NonNull java.lang.Object array, in
  * @see java.lang.reflect.Array#set
  */
 
-public static void setLong(@android.annotation.NonNull java.lang.Object array, int index, long l) throws java.lang.ArrayIndexOutOfBoundsException, java.lang.IllegalArgumentException { throw new RuntimeException("Stub!"); }
+public static void setLong(@androidx.annotation.RecentlyNonNull java.lang.Object array, int index, long l) throws java.lang.ArrayIndexOutOfBoundsException, java.lang.IllegalArgumentException { throw new RuntimeException("Stub!"); }
 
 /**
  * Sets the value of the indexed component of the specified array
@@ -449,7 +449,7 @@ public static void setLong(@android.annotation.NonNull java.lang.Object array, i
  * @see java.lang.reflect.Array#set
  */
 
-public static void setFloat(@android.annotation.NonNull java.lang.Object array, int index, float f) throws java.lang.ArrayIndexOutOfBoundsException, java.lang.IllegalArgumentException { throw new RuntimeException("Stub!"); }
+public static void setFloat(@androidx.annotation.RecentlyNonNull java.lang.Object array, int index, float f) throws java.lang.ArrayIndexOutOfBoundsException, java.lang.IllegalArgumentException { throw new RuntimeException("Stub!"); }
 
 /**
  * Sets the value of the indexed component of the specified array
@@ -469,6 +469,6 @@ public static void setFloat(@android.annotation.NonNull java.lang.Object array, 
  * @see java.lang.reflect.Array#set
  */
 
-public static void setDouble(@android.annotation.NonNull java.lang.Object array, int index, double d) throws java.lang.ArrayIndexOutOfBoundsException, java.lang.IllegalArgumentException { throw new RuntimeException("Stub!"); }
+public static void setDouble(@androidx.annotation.RecentlyNonNull java.lang.Object array, int index, double d) throws java.lang.ArrayIndexOutOfBoundsException, java.lang.IllegalArgumentException { throw new RuntimeException("Stub!"); }
 }
 

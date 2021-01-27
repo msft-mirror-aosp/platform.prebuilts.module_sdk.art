@@ -178,8 +178,8 @@ protected DateFormat() { throw new RuntimeException("Stub!"); }
  * @see java.text.Format
  */
 
-@android.annotation.NonNull
-public final java.lang.StringBuffer format(@android.annotation.NonNull java.lang.Object obj, @android.annotation.NonNull java.lang.StringBuffer toAppendTo, @android.annotation.NonNull java.text.FieldPosition fieldPosition) { throw new RuntimeException("Stub!"); }
+@androidx.annotation.RecentlyNonNull
+public final java.lang.StringBuffer format(@androidx.annotation.RecentlyNonNull java.lang.Object obj, @androidx.annotation.RecentlyNonNull java.lang.StringBuffer toAppendTo, @androidx.annotation.RecentlyNonNull java.text.FieldPosition fieldPosition) { throw new RuntimeException("Stub!"); }
 
 /**
  * Formats a Date into a date/time string.
@@ -204,8 +204,8 @@ public final java.lang.StringBuffer format(@android.annotation.NonNull java.lang
  * @return the string buffer passed in as toAppendTo, with formatted text appended.
  */
 
-@android.annotation.NonNull
-public abstract java.lang.StringBuffer format(@android.annotation.NonNull java.util.Date date, @android.annotation.NonNull java.lang.StringBuffer toAppendTo, @android.annotation.NonNull java.text.FieldPosition fieldPosition);
+@androidx.annotation.RecentlyNonNull
+public abstract java.lang.StringBuffer format(@androidx.annotation.RecentlyNonNull java.util.Date date, @androidx.annotation.RecentlyNonNull java.lang.StringBuffer toAppendTo, @androidx.annotation.RecentlyNonNull java.text.FieldPosition fieldPosition);
 
 /**
  * Formats a Date into a date/time string.
@@ -213,8 +213,8 @@ public abstract java.lang.StringBuffer format(@android.annotation.NonNull java.u
  * @return the formatted time string.
  */
 
-@android.annotation.NonNull
-public final java.lang.String format(@android.annotation.NonNull java.util.Date date) { throw new RuntimeException("Stub!"); }
+@androidx.annotation.RecentlyNonNull
+public final java.lang.String format(@androidx.annotation.RecentlyNonNull java.util.Date date) { throw new RuntimeException("Stub!"); }
 
 /**
  * Parses text from the beginning of the given string to produce a date.
@@ -229,8 +229,8 @@ public final java.lang.String format(@android.annotation.NonNull java.util.Date 
  *            cannot be parsed.
  */
 
-@android.annotation.Nullable
-public java.util.Date parse(@android.annotation.NonNull java.lang.String source) throws java.text.ParseException { throw new RuntimeException("Stub!"); }
+@androidx.annotation.RecentlyNullable
+public java.util.Date parse(@androidx.annotation.RecentlyNonNull java.lang.String source) throws java.text.ParseException { throw new RuntimeException("Stub!"); }
 
 /**
  * Parse a date/time string according to the given parse position.  For
@@ -259,8 +259,8 @@ public java.util.Date parse(@android.annotation.NonNull java.lang.String source)
  * @return      A {@code Date}, or {@code null} if the input could not be parsed
  */
 
-@android.annotation.Nullable
-public abstract java.util.Date parse(@android.annotation.NonNull java.lang.String source, @android.annotation.NonNull java.text.ParsePosition pos);
+@androidx.annotation.RecentlyNullable
+public abstract java.util.Date parse(@androidx.annotation.RecentlyNonNull java.lang.String source, @androidx.annotation.RecentlyNonNull java.text.ParsePosition pos);
 
 /**
  * Parses text from a string to produce a <code>Date</code>.
@@ -287,8 +287,8 @@ public abstract java.util.Date parse(@android.annotation.NonNull java.lang.Strin
  * @exception java.lang.NullPointerException if <code>pos</code> is null.
  */
 
-@android.annotation.Nullable
-public java.lang.Object parseObject(@android.annotation.NonNull java.lang.String source, @android.annotation.NonNull java.text.ParsePosition pos) { throw new RuntimeException("Stub!"); }
+@androidx.annotation.RecentlyNullable
+public java.lang.Object parseObject(@androidx.annotation.RecentlyNonNull java.lang.String source, @androidx.annotation.RecentlyNonNull java.text.ParsePosition pos) { throw new RuntimeException("Stub!"); }
 
 /**
  * Gets the time formatter with the default formatting style
@@ -301,7 +301,7 @@ public java.lang.Object parseObject(@android.annotation.NonNull java.lang.String
  * @return a time formatter.
  */
 
-@android.annotation.NonNull
+@androidx.annotation.RecentlyNonNull
 public static final java.text.DateFormat getTimeInstance() { throw new RuntimeException("Stub!"); }
 
 /**
@@ -317,7 +317,7 @@ public static final java.text.DateFormat getTimeInstance() { throw new RuntimeEx
  * @return a time formatter.
  */
 
-@android.annotation.NonNull
+@androidx.annotation.RecentlyNonNull
 public static final java.text.DateFormat getTimeInstance(int style) { throw new RuntimeException("Stub!"); }
 
 /**
@@ -329,8 +329,8 @@ public static final java.text.DateFormat getTimeInstance(int style) { throw new 
  * @return a time formatter.
  */
 
-@android.annotation.NonNull
-public static final java.text.DateFormat getTimeInstance(int style, @android.annotation.NonNull java.util.Locale aLocale) { throw new RuntimeException("Stub!"); }
+@androidx.annotation.RecentlyNonNull
+public static final java.text.DateFormat getTimeInstance(int style, @androidx.annotation.RecentlyNonNull java.util.Locale aLocale) { throw new RuntimeException("Stub!"); }
 
 /**
  * Gets the date formatter with the default formatting style
@@ -343,7 +343,7 @@ public static final java.text.DateFormat getTimeInstance(int style, @android.ann
  * @return a date formatter.
  */
 
-@android.annotation.NonNull
+@androidx.annotation.RecentlyNonNull
 public static final java.text.DateFormat getDateInstance() { throw new RuntimeException("Stub!"); }
 
 /**
@@ -359,7 +359,7 @@ public static final java.text.DateFormat getDateInstance() { throw new RuntimeEx
  * @return a date formatter.
  */
 
-@android.annotation.NonNull
+@androidx.annotation.RecentlyNonNull
 public static final java.text.DateFormat getDateInstance(int style) { throw new RuntimeException("Stub!"); }
 
 /**
@@ -371,8 +371,8 @@ public static final java.text.DateFormat getDateInstance(int style) { throw new 
  * @return a date formatter.
  */
 
-@android.annotation.NonNull
-public static final java.text.DateFormat getDateInstance(int style, @android.annotation.NonNull java.util.Locale aLocale) { throw new RuntimeException("Stub!"); }
+@androidx.annotation.RecentlyNonNull
+public static final java.text.DateFormat getDateInstance(int style, @androidx.annotation.RecentlyNonNull java.util.Locale aLocale) { throw new RuntimeException("Stub!"); }
 
 /**
  * Gets the date/time formatter with the default formatting style
@@ -385,7 +385,7 @@ public static final java.text.DateFormat getDateInstance(int style, @android.ann
  * @return a date/time formatter.
  */
 
-@android.annotation.NonNull
+@androidx.annotation.RecentlyNonNull
 public static final java.text.DateFormat getDateTimeInstance() { throw new RuntimeException("Stub!"); }
 
 /**
@@ -403,7 +403,7 @@ public static final java.text.DateFormat getDateTimeInstance() { throw new Runti
  * @return a date/time formatter.
  */
 
-@android.annotation.NonNull
+@androidx.annotation.RecentlyNonNull
 public static final java.text.DateFormat getDateTimeInstance(int dateStyle, int timeStyle) { throw new RuntimeException("Stub!"); }
 
 /**
@@ -415,8 +415,8 @@ public static final java.text.DateFormat getDateTimeInstance(int dateStyle, int 
  * @return a date/time formatter.
  */
 
-@android.annotation.NonNull
-public static final java.text.DateFormat getDateTimeInstance(int dateStyle, int timeStyle, @android.annotation.NonNull java.util.Locale aLocale) { throw new RuntimeException("Stub!"); }
+@androidx.annotation.RecentlyNonNull
+public static final java.text.DateFormat getDateTimeInstance(int dateStyle, int timeStyle, @androidx.annotation.RecentlyNonNull java.util.Locale aLocale) { throw new RuntimeException("Stub!"); }
 
 /**
  * Get a default date/time formatter that uses the SHORT style for both the
@@ -425,7 +425,7 @@ public static final java.text.DateFormat getDateTimeInstance(int dateStyle, int 
  * @return a date/time formatter
  */
 
-@android.annotation.NonNull
+@androidx.annotation.RecentlyNonNull
 public static final java.text.DateFormat getInstance() { throw new RuntimeException("Stub!"); }
 
 /**
@@ -437,7 +437,7 @@ public static final java.text.DateFormat getInstance() { throw new RuntimeExcept
  *         <code>DateFormat</code> instances are available.
  */
 
-@android.annotation.NonNull
+@androidx.annotation.RecentlyNonNull
 public static java.util.Locale[] getAvailableLocales() { throw new RuntimeException("Stub!"); }
 
 /**
@@ -451,7 +451,7 @@ public static java.util.Locale[] getAvailableLocales() { throw new RuntimeExcept
  * @param newCalendar the new {@code Calendar} to be used by the date format
  */
 
-public void setCalendar(@android.annotation.NonNull java.util.Calendar newCalendar) { throw new RuntimeException("Stub!"); }
+public void setCalendar(@androidx.annotation.RecentlyNonNull java.util.Calendar newCalendar) { throw new RuntimeException("Stub!"); }
 
 /**
  * Gets the calendar associated with this date/time formatter.
@@ -459,7 +459,7 @@ public void setCalendar(@android.annotation.NonNull java.util.Calendar newCalend
  * @return the calendar associated with this date/time formatter.
  */
 
-@android.annotation.NonNull
+@androidx.annotation.RecentlyNonNull
 public java.util.Calendar getCalendar() { throw new RuntimeException("Stub!"); }
 
 /**
@@ -467,7 +467,7 @@ public java.util.Calendar getCalendar() { throw new RuntimeException("Stub!"); }
  * @param newNumberFormat the given new NumberFormat.
  */
 
-public void setNumberFormat(@android.annotation.NonNull java.text.NumberFormat newNumberFormat) { throw new RuntimeException("Stub!"); }
+public void setNumberFormat(@androidx.annotation.RecentlyNonNull java.text.NumberFormat newNumberFormat) { throw new RuntimeException("Stub!"); }
 
 /**
  * Gets the number formatter which this date/time formatter uses to
@@ -475,7 +475,7 @@ public void setNumberFormat(@android.annotation.NonNull java.text.NumberFormat n
  * @return the number formatter which this date/time formatter uses.
  */
 
-@android.annotation.NonNull
+@androidx.annotation.RecentlyNonNull
 public java.text.NumberFormat getNumberFormat() { throw new RuntimeException("Stub!"); }
 
 /**
@@ -494,7 +494,7 @@ public java.text.NumberFormat getNumberFormat() { throw new RuntimeException("St
  * @param zone the given new time zone.
  */
 
-public void setTimeZone(@android.annotation.NonNull java.util.TimeZone zone) { throw new RuntimeException("Stub!"); }
+public void setTimeZone(@androidx.annotation.RecentlyNonNull java.util.TimeZone zone) { throw new RuntimeException("Stub!"); }
 
 /**
  * Gets the time zone.
@@ -506,7 +506,7 @@ public void setTimeZone(@android.annotation.NonNull java.util.TimeZone zone) { t
  * @return the time zone associated with the calendar of DateFormat.
  */
 
-@android.annotation.NonNull
+@androidx.annotation.RecentlyNonNull
 public java.util.TimeZone getTimeZone() { throw new RuntimeException("Stub!"); }
 
 /**
@@ -553,13 +553,13 @@ public int hashCode() { throw new RuntimeException("Stub!"); }
  * Overrides equals
  */
 
-public boolean equals(@android.annotation.Nullable java.lang.Object obj) { throw new RuntimeException("Stub!"); }
+public boolean equals(@androidx.annotation.RecentlyNullable java.lang.Object obj) { throw new RuntimeException("Stub!"); }
 
 /**
  * Overrides Cloneable
  */
 
-@android.annotation.NonNull
+@androidx.annotation.RecentlyNonNull
 public java.lang.Object clone() { throw new RuntimeException("Stub!"); }
 
 /**
@@ -737,7 +737,7 @@ public static final int YEAR_FIELD = 1; // 0x1
  * @serial
  */
 
-@android.annotation.NonNull protected java.util.Calendar calendar;
+@androidx.annotation.RecentlyNonNull protected java.util.Calendar calendar;
 
 /**
  * The number formatter that <code>DateFormat</code> uses to format numbers
@@ -746,7 +746,7 @@ public static final int YEAR_FIELD = 1; // 0x1
  * @serial
  */
 
-@android.annotation.NonNull protected java.text.NumberFormat numberFormat;
+@androidx.annotation.RecentlyNonNull protected java.text.NumberFormat numberFormat;
 /**
  * Defines constants that are used as attribute keys in the
  * <code>AttributedCharacterIterator</code> returned
@@ -774,7 +774,7 @@ public static class Field extends java.text.Format.Field {
  *        that don't correspond to legal <code>Calendar</code> values
  */
 
-protected Field(@android.annotation.NonNull java.lang.String name, int calendarField) { super(null); throw new RuntimeException("Stub!"); }
+protected Field(@androidx.annotation.RecentlyNonNull java.lang.String name, int calendarField) { super(null); throw new RuntimeException("Stub!"); }
 
 /**
  * Returns the <code>Field</code> constant that corresponds to
@@ -789,7 +789,7 @@ protected Field(@android.annotation.NonNull java.lang.String name, int calendarF
  * @see java.util.Calendar
  */
 
-@android.annotation.NonNull
+@androidx.annotation.RecentlyNonNull
 public static java.text.DateFormat.Field ofCalendarField(int calendarField) { throw new RuntimeException("Stub!"); }
 
 /**
@@ -813,7 +813,7 @@ public int getCalendarField() { throw new RuntimeException("Stub!"); }
  * @return resolved DateFormat.Field constant
  */
 
-@android.annotation.NonNull
+@androidx.annotation.RecentlyNonNull
 protected java.lang.Object readResolve() throws java.io.InvalidObjectException { throw new RuntimeException("Stub!"); }
 
 /**
@@ -821,42 +821,42 @@ protected java.lang.Object readResolve() throws java.io.InvalidObjectException {
  * (e.g. "a.m." or "p.m.") field.
  */
 
-@android.annotation.NonNull public static final java.text.DateFormat.Field AM_PM;
+@androidx.annotation.RecentlyNonNull public static final java.text.DateFormat.Field AM_PM;
 static { AM_PM = null; }
 
 /**
  * Constant identifying the day of month field.
  */
 
-@android.annotation.NonNull public static final java.text.DateFormat.Field DAY_OF_MONTH;
+@androidx.annotation.RecentlyNonNull public static final java.text.DateFormat.Field DAY_OF_MONTH;
 static { DAY_OF_MONTH = null; }
 
 /**
  * Constant identifying the day of week field.
  */
 
-@android.annotation.NonNull public static final java.text.DateFormat.Field DAY_OF_WEEK;
+@androidx.annotation.RecentlyNonNull public static final java.text.DateFormat.Field DAY_OF_WEEK;
 static { DAY_OF_WEEK = null; }
 
 /**
  * Constant identifying the day of week field.
  */
 
-@android.annotation.NonNull public static final java.text.DateFormat.Field DAY_OF_WEEK_IN_MONTH;
+@androidx.annotation.RecentlyNonNull public static final java.text.DateFormat.Field DAY_OF_WEEK_IN_MONTH;
 static { DAY_OF_WEEK_IN_MONTH = null; }
 
 /**
  * Constant identifying the day of year field.
  */
 
-@android.annotation.NonNull public static final java.text.DateFormat.Field DAY_OF_YEAR;
+@androidx.annotation.RecentlyNonNull public static final java.text.DateFormat.Field DAY_OF_YEAR;
 static { DAY_OF_YEAR = null; }
 
 /**
  * Constant identifying the era field.
  */
 
-@android.annotation.NonNull public static final java.text.DateFormat.Field ERA;
+@androidx.annotation.RecentlyNonNull public static final java.text.DateFormat.Field ERA;
 static { ERA = null; }
 
 /**
@@ -864,7 +864,7 @@ static { ERA = null; }
  * 0 to 11.
  */
 
-@android.annotation.NonNull public static final java.text.DateFormat.Field HOUR0;
+@androidx.annotation.RecentlyNonNull public static final java.text.DateFormat.Field HOUR0;
 static { HOUR0 = null; }
 
 /**
@@ -872,7 +872,7 @@ static { HOUR0 = null; }
  * 1 to 12.
  */
 
-@android.annotation.NonNull public static final java.text.DateFormat.Field HOUR1;
+@androidx.annotation.RecentlyNonNull public static final java.text.DateFormat.Field HOUR1;
 static { HOUR1 = null; }
 
 /**
@@ -880,7 +880,7 @@ static { HOUR1 = null; }
  * are 0 to 23.
  */
 
-@android.annotation.NonNull public static final java.text.DateFormat.Field HOUR_OF_DAY0;
+@androidx.annotation.RecentlyNonNull public static final java.text.DateFormat.Field HOUR_OF_DAY0;
 static { HOUR_OF_DAY0 = null; }
 
 /**
@@ -888,63 +888,63 @@ static { HOUR_OF_DAY0 = null; }
  * are 1 to 24.
  */
 
-@android.annotation.NonNull public static final java.text.DateFormat.Field HOUR_OF_DAY1;
+@androidx.annotation.RecentlyNonNull public static final java.text.DateFormat.Field HOUR_OF_DAY1;
 static { HOUR_OF_DAY1 = null; }
 
 /**
  * Constant identifying the millisecond field.
  */
 
-@android.annotation.NonNull public static final java.text.DateFormat.Field MILLISECOND;
+@androidx.annotation.RecentlyNonNull public static final java.text.DateFormat.Field MILLISECOND;
 static { MILLISECOND = null; }
 
 /**
  * Constant identifying the minute field.
  */
 
-@android.annotation.NonNull public static final java.text.DateFormat.Field MINUTE;
+@androidx.annotation.RecentlyNonNull public static final java.text.DateFormat.Field MINUTE;
 static { MINUTE = null; }
 
 /**
  * Constant identifying the month field.
  */
 
-@android.annotation.NonNull public static final java.text.DateFormat.Field MONTH;
+@androidx.annotation.RecentlyNonNull public static final java.text.DateFormat.Field MONTH;
 static { MONTH = null; }
 
 /**
  * Constant identifying the second field.
  */
 
-@android.annotation.NonNull public static final java.text.DateFormat.Field SECOND;
+@androidx.annotation.RecentlyNonNull public static final java.text.DateFormat.Field SECOND;
 static { SECOND = null; }
 
 /**
  * Constant identifying the time zone field.
  */
 
-@android.annotation.NonNull public static final java.text.DateFormat.Field TIME_ZONE;
+@androidx.annotation.RecentlyNonNull public static final java.text.DateFormat.Field TIME_ZONE;
 static { TIME_ZONE = null; }
 
 /**
  * Constant identifying the week of month field.
  */
 
-@android.annotation.NonNull public static final java.text.DateFormat.Field WEEK_OF_MONTH;
+@androidx.annotation.RecentlyNonNull public static final java.text.DateFormat.Field WEEK_OF_MONTH;
 static { WEEK_OF_MONTH = null; }
 
 /**
  * Constant identifying the week of year field.
  */
 
-@android.annotation.NonNull public static final java.text.DateFormat.Field WEEK_OF_YEAR;
+@androidx.annotation.RecentlyNonNull public static final java.text.DateFormat.Field WEEK_OF_YEAR;
 static { WEEK_OF_YEAR = null; }
 
 /**
  * Constant identifying the year field.
  */
 
-@android.annotation.NonNull public static final java.text.DateFormat.Field YEAR;
+@androidx.annotation.RecentlyNonNull public static final java.text.DateFormat.Field YEAR;
 static { YEAR = null; }
 }
 

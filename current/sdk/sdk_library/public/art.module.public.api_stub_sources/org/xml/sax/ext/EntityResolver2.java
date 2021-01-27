@@ -15,12 +15,12 @@ import org.xml.sax.SAXException;
 /**
  * Extended interface for mapping external entity references to input
  * sources, or providing a missing external subset.  The
- * {@link org.xml.sax.XMLReader#setEntityResolver XMLReader#setEntityResolver} method
+ * {@link org.xml.sax.XMLReader#setEntityResolver XMLReader.setEntityResolver()} method
  * is used to provide implementations of this interface to parsers.
  * When a parser uses the methods in this interface, the
- * {@link org.xml.sax.ext.EntityResolver2#resolveEntity EntityResolver2#resolveEntity}
+ * {@link org.xml.sax.ext.EntityResolver2#resolveEntity EntityResolver2.resolveEntity()}
  * method (in this interface) is used <em>instead of</em> the older (SAX 1.0)
- * {@link org.xml.sax.EntityResolver#resolveEntity EntityResolver#resolveEntity} method.
+ * {@link org.xml.sax.EntityResolver#resolveEntity EntityResolver.resolveEntity()} method.
  *
  * <blockquote>
  * <em>This module, both source code and documentation, is in the
@@ -69,7 +69,7 @@ public interface EntityResolver2 extends org.xml.sax.EntityResolver {
  * available for validation, entity processing, and attribute processing
  * (normalization, defaulting, and reporting types including ID).
  * This augmentation is reported
- * through the {@link org.xml.sax.ext.LexicalHandler#startDTD LexicalHandler#startDTD} method as if
+ * through the {@link org.xml.sax.ext.LexicalHandler#startDTD startDTD()} method as if
  * the document text had originally included the external subset;
  * this callback is made before any internal subset data or errors
  * are reported.</p>

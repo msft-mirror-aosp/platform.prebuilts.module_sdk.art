@@ -98,7 +98,7 @@ public synchronized int read() throws java.io.IOException { throw new RuntimeExc
  * starting at the given offset.
  *
  * <p> This method implements the general contract of the corresponding
- * <code>{@link java.io.InputStream#read(byte[],int,int) InputStream#read(byte[], int, int)}</code> method of
+ * <code>{@link java.io.InputStream#read(byte[],int,int) read}</code> method of
  * the <code>{@link java.io.InputStream InputStream}</code> class.  As an additional
  * convenience, it attempts to read as many bytes as possible by repeatedly
  * invoking the <code>read</code> method of the underlying stream.  This

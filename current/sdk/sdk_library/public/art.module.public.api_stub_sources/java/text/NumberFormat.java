@@ -210,8 +210,8 @@ protected NumberFormat() { throw new RuntimeException("Stub!"); }
  * @see              java.text.FieldPosition
  */
 
-@android.annotation.NonNull
-public java.lang.StringBuffer format(@android.annotation.NonNull java.lang.Object number, @android.annotation.NonNull java.lang.StringBuffer toAppendTo, @android.annotation.NonNull java.text.FieldPosition pos) { throw new RuntimeException("Stub!"); }
+@androidx.annotation.RecentlyNonNull
+public java.lang.StringBuffer format(@androidx.annotation.RecentlyNonNull java.lang.Object number, @androidx.annotation.RecentlyNonNull java.lang.StringBuffer toAppendTo, @androidx.annotation.RecentlyNonNull java.text.FieldPosition pos) { throw new RuntimeException("Stub!"); }
 
 /**
  * Parses text from a string to produce a <code>Number</code>.
@@ -238,8 +238,8 @@ public java.lang.StringBuffer format(@android.annotation.NonNull java.lang.Objec
  * @exception java.lang.NullPointerException if <code>pos</code> is null.
  */
 
-@android.annotation.Nullable
-public final java.lang.Object parseObject(@android.annotation.NonNull java.lang.String source, @android.annotation.NonNull java.text.ParsePosition pos) { throw new RuntimeException("Stub!"); }
+@androidx.annotation.RecentlyNullable
+public final java.lang.Object parseObject(@androidx.annotation.RecentlyNonNull java.lang.String source, @androidx.annotation.RecentlyNonNull java.text.ParsePosition pos) { throw new RuntimeException("Stub!"); }
 
 /**
  * Specialization of format.
@@ -251,7 +251,7 @@ public final java.lang.Object parseObject(@android.annotation.NonNull java.lang.
  * @see java.text.Format#format
  */
 
-@android.annotation.NonNull
+@androidx.annotation.RecentlyNonNull
 public final java.lang.String format(double number) { throw new RuntimeException("Stub!"); }
 
 /**
@@ -264,7 +264,7 @@ public final java.lang.String format(double number) { throw new RuntimeException
  * @see java.text.Format#format
  */
 
-@android.annotation.NonNull
+@androidx.annotation.RecentlyNonNull
 public final java.lang.String format(long number) { throw new RuntimeException("Stub!"); }
 
 /**
@@ -280,8 +280,8 @@ public final java.lang.String format(long number) { throw new RuntimeException("
  * @see java.text.Format#format
  */
 
-@android.annotation.NonNull
-public abstract java.lang.StringBuffer format(double number, @android.annotation.NonNull java.lang.StringBuffer toAppendTo, @android.annotation.NonNull java.text.FieldPosition pos);
+@androidx.annotation.RecentlyNonNull
+public abstract java.lang.StringBuffer format(double number, @androidx.annotation.RecentlyNonNull java.lang.StringBuffer toAppendTo, @androidx.annotation.RecentlyNonNull java.text.FieldPosition pos);
 
 /**
  * Specialization of format.
@@ -296,8 +296,8 @@ public abstract java.lang.StringBuffer format(double number, @android.annotation
  * @see java.text.Format#format
  */
 
-@android.annotation.NonNull
-public abstract java.lang.StringBuffer format(long number, @android.annotation.NonNull java.lang.StringBuffer toAppendTo, @android.annotation.NonNull java.text.FieldPosition pos);
+@androidx.annotation.RecentlyNonNull
+public abstract java.lang.StringBuffer format(long number, @androidx.annotation.RecentlyNonNull java.lang.StringBuffer toAppendTo, @androidx.annotation.RecentlyNonNull java.text.FieldPosition pos);
 
 /**
  * Returns a Long if possible (e.g., within the range [Long.MIN_VALUE,
@@ -315,8 +315,8 @@ public abstract java.lang.StringBuffer format(long number, @android.annotation.N
  * @see java.text.Format#parseObject
  */
 
-@android.annotation.Nullable
-public abstract java.lang.Number parse(@android.annotation.NonNull java.lang.String source, @android.annotation.NonNull java.text.ParsePosition parsePosition);
+@androidx.annotation.RecentlyNullable
+public abstract java.lang.Number parse(@androidx.annotation.RecentlyNonNull java.lang.String source, @androidx.annotation.RecentlyNonNull java.text.ParsePosition parsePosition);
 
 /**
  * Parses text from the beginning of the given string to produce a number.
@@ -331,8 +331,8 @@ public abstract java.lang.Number parse(@android.annotation.NonNull java.lang.Str
  *            cannot be parsed.
  */
 
-@android.annotation.Nullable
-public java.lang.Number parse(@android.annotation.NonNull java.lang.String source) throws java.text.ParseException { throw new RuntimeException("Stub!"); }
+@androidx.annotation.RecentlyNullable
+public java.lang.Number parse(@androidx.annotation.RecentlyNonNull java.lang.String source) throws java.text.ParseException { throw new RuntimeException("Stub!"); }
 
 /**
  * Returns true if this format will parse numbers as integers only.
@@ -368,7 +368,7 @@ public void setParseIntegerOnly(boolean value) { throw new RuntimeException("Stu
  * formatting
  */
 
-@android.annotation.NonNull
+@androidx.annotation.RecentlyNonNull
 public static final java.text.NumberFormat getInstance() { throw new RuntimeException("Stub!"); }
 
 /**
@@ -381,8 +381,8 @@ public static final java.text.NumberFormat getInstance() { throw new RuntimeExce
  * formatting
  */
 
-@android.annotation.NonNull
-public static java.text.NumberFormat getInstance(@android.annotation.NonNull java.util.Locale inLocale) { throw new RuntimeException("Stub!"); }
+@androidx.annotation.RecentlyNonNull
+public static java.text.NumberFormat getInstance(@androidx.annotation.RecentlyNonNull java.util.Locale inLocale) { throw new RuntimeException("Stub!"); }
 
 /**
  * Returns a general-purpose number format for the current default
@@ -397,7 +397,7 @@ public static java.text.NumberFormat getInstance(@android.annotation.NonNull jav
  * @see java.util.Locale.Category#FORMAT
  */
 
-@android.annotation.NonNull
+@androidx.annotation.RecentlyNonNull
 public static final java.text.NumberFormat getNumberInstance() { throw new RuntimeException("Stub!"); }
 
 /**
@@ -408,8 +408,8 @@ public static final java.text.NumberFormat getNumberInstance() { throw new Runti
  * formatting
  */
 
-@android.annotation.NonNull
-public static java.text.NumberFormat getNumberInstance(@android.annotation.NonNull java.util.Locale inLocale) { throw new RuntimeException("Stub!"); }
+@androidx.annotation.RecentlyNonNull
+public static java.text.NumberFormat getNumberInstance(@androidx.annotation.RecentlyNonNull java.util.Locale inLocale) { throw new RuntimeException("Stub!"); }
 
 /**
  * Returns an integer number format for the current default
@@ -430,7 +430,7 @@ public static java.text.NumberFormat getNumberInstance(@android.annotation.NonNu
  * @since 1.4
  */
 
-@android.annotation.NonNull
+@androidx.annotation.RecentlyNonNull
 public static final java.text.NumberFormat getIntegerInstance() { throw new RuntimeException("Stub!"); }
 
 /**
@@ -447,8 +447,8 @@ public static final java.text.NumberFormat getIntegerInstance() { throw new Runt
  * @since 1.4
  */
 
-@android.annotation.NonNull
-public static java.text.NumberFormat getIntegerInstance(@android.annotation.NonNull java.util.Locale inLocale) { throw new RuntimeException("Stub!"); }
+@androidx.annotation.RecentlyNonNull
+public static java.text.NumberFormat getIntegerInstance(@androidx.annotation.RecentlyNonNull java.util.Locale inLocale) { throw new RuntimeException("Stub!"); }
 
 /**
  * Returns a currency format for the current default
@@ -462,7 +462,7 @@ public static java.text.NumberFormat getIntegerInstance(@android.annotation.NonN
  * @see java.util.Locale.Category#FORMAT
  */
 
-@android.annotation.NonNull
+@androidx.annotation.RecentlyNonNull
 public static final java.text.NumberFormat getCurrencyInstance() { throw new RuntimeException("Stub!"); }
 
 /**
@@ -472,8 +472,8 @@ public static final java.text.NumberFormat getCurrencyInstance() { throw new Run
  * @return the {@code NumberFormat} instance for currency formatting
  */
 
-@android.annotation.NonNull
-public static java.text.NumberFormat getCurrencyInstance(@android.annotation.NonNull java.util.Locale inLocale) { throw new RuntimeException("Stub!"); }
+@androidx.annotation.RecentlyNonNull
+public static java.text.NumberFormat getCurrencyInstance(@androidx.annotation.RecentlyNonNull java.util.Locale inLocale) { throw new RuntimeException("Stub!"); }
 
 /**
  * Returns a percentage format for the current default
@@ -487,7 +487,7 @@ public static java.text.NumberFormat getCurrencyInstance(@android.annotation.Non
  * @see java.util.Locale.Category#FORMAT
  */
 
-@android.annotation.NonNull
+@androidx.annotation.RecentlyNonNull
 public static final java.text.NumberFormat getPercentInstance() { throw new RuntimeException("Stub!"); }
 
 /**
@@ -497,8 +497,8 @@ public static final java.text.NumberFormat getPercentInstance() { throw new Runt
  * @return the {@code NumberFormat} instance for percentage formatting
  */
 
-@android.annotation.NonNull
-public static java.text.NumberFormat getPercentInstance(@android.annotation.NonNull java.util.Locale inLocale) { throw new RuntimeException("Stub!"); }
+@androidx.annotation.RecentlyNonNull
+public static java.text.NumberFormat getPercentInstance(@androidx.annotation.RecentlyNonNull java.util.Locale inLocale) { throw new RuntimeException("Stub!"); }
 
 /**
  * Returns an array of all locales for which the
@@ -509,7 +509,7 @@ public static java.text.NumberFormat getPercentInstance(@android.annotation.NonN
  *         <code>NumberFormat</code> instances are available.
  */
 
-@android.annotation.NonNull
+@androidx.annotation.RecentlyNonNull
 public static java.util.Locale[] getAvailableLocales() { throw new RuntimeException("Stub!"); }
 
 /**
@@ -522,13 +522,13 @@ public int hashCode() { throw new RuntimeException("Stub!"); }
  * Overrides equals.
  */
 
-public boolean equals(@android.annotation.Nullable java.lang.Object obj) { throw new RuntimeException("Stub!"); }
+public boolean equals(@androidx.annotation.RecentlyNullable java.lang.Object obj) { throw new RuntimeException("Stub!"); }
 
 /**
  * Overrides Cloneable.
  */
 
-@android.annotation.NonNull
+@androidx.annotation.RecentlyNonNull
 public java.lang.Object clone() { throw new RuntimeException("Stub!"); }
 
 /**
@@ -670,7 +670,7 @@ public void setMinimumFractionDigits(int newValue) { throw new RuntimeException(
  * @since 1.4
  */
 
-@android.annotation.Nullable
+@androidx.annotation.RecentlyNullable
 public java.util.Currency getCurrency() { throw new RuntimeException("Stub!"); }
 
 /**
@@ -688,7 +688,7 @@ public java.util.Currency getCurrency() { throw new RuntimeException("Stub!"); }
  * @since 1.4
  */
 
-public void setCurrency(@android.annotation.NonNull java.util.Currency currency) { throw new RuntimeException("Stub!"); }
+public void setCurrency(@androidx.annotation.RecentlyNonNull java.util.Currency currency) { throw new RuntimeException("Stub!"); }
 
 /**
  * Gets the {@link java.math.RoundingMode} used in this NumberFormat.
@@ -704,7 +704,7 @@ public void setCurrency(@android.annotation.NonNull java.util.Currency currency)
  * @since 1.6
  */
 
-@android.annotation.NonNull
+@androidx.annotation.RecentlyNonNull
 public java.math.RoundingMode getRoundingMode() { throw new RuntimeException("Stub!"); }
 
 /**
@@ -722,7 +722,7 @@ public java.math.RoundingMode getRoundingMode() { throw new RuntimeException("St
  * @since 1.6
  */
 
-public void setRoundingMode(@android.annotation.Nullable java.math.RoundingMode roundingMode) { throw new RuntimeException("Stub!"); }
+public void setRoundingMode(@androidx.annotation.RecentlyNullable java.math.RoundingMode roundingMode) { throw new RuntimeException("Stub!"); }
 
 /**
  * Field constant used to construct a FieldPosition object. Signifies that
@@ -758,7 +758,7 @@ public static class Field extends java.text.Format.Field {
  * @param name Name of the attribute
  */
 
-protected Field(@android.annotation.NonNull java.lang.String name) { super(null); throw new RuntimeException("Stub!"); }
+protected Field(@androidx.annotation.RecentlyNonNull java.lang.String name) { super(null); throw new RuntimeException("Stub!"); }
 
 /**
  * Resolves instances being deserialized to the predefined constants.
@@ -767,84 +767,84 @@ protected Field(@android.annotation.NonNull java.lang.String name) { super(null)
  * @return resolved NumberFormat.Field constant
  */
 
-@android.annotation.NonNull
+@androidx.annotation.RecentlyNonNull
 protected java.lang.Object readResolve() throws java.io.InvalidObjectException { throw new RuntimeException("Stub!"); }
 
 /**
  * Constant identifying the currency field.
  */
 
-@android.annotation.NonNull public static final java.text.NumberFormat.Field CURRENCY;
+@androidx.annotation.RecentlyNonNull public static final java.text.NumberFormat.Field CURRENCY;
 static { CURRENCY = null; }
 
 /**
  * Constant identifying the decimal separator field.
  */
 
-@android.annotation.NonNull public static final java.text.NumberFormat.Field DECIMAL_SEPARATOR;
+@androidx.annotation.RecentlyNonNull public static final java.text.NumberFormat.Field DECIMAL_SEPARATOR;
 static { DECIMAL_SEPARATOR = null; }
 
 /**
  * Constant identifying the exponent field.
  */
 
-@android.annotation.NonNull public static final java.text.NumberFormat.Field EXPONENT;
+@androidx.annotation.RecentlyNonNull public static final java.text.NumberFormat.Field EXPONENT;
 static { EXPONENT = null; }
 
 /**
  * Constant identifying the exponent sign field.
  */
 
-@android.annotation.NonNull public static final java.text.NumberFormat.Field EXPONENT_SIGN;
+@androidx.annotation.RecentlyNonNull public static final java.text.NumberFormat.Field EXPONENT_SIGN;
 static { EXPONENT_SIGN = null; }
 
 /**
  * Constant identifying the exponent symbol field.
  */
 
-@android.annotation.NonNull public static final java.text.NumberFormat.Field EXPONENT_SYMBOL;
+@androidx.annotation.RecentlyNonNull public static final java.text.NumberFormat.Field EXPONENT_SYMBOL;
 static { EXPONENT_SYMBOL = null; }
 
 /**
  * Constant identifying the fraction field.
  */
 
-@android.annotation.NonNull public static final java.text.NumberFormat.Field FRACTION;
+@androidx.annotation.RecentlyNonNull public static final java.text.NumberFormat.Field FRACTION;
 static { FRACTION = null; }
 
 /**
  * Constant identifying the grouping separator field.
  */
 
-@android.annotation.NonNull public static final java.text.NumberFormat.Field GROUPING_SEPARATOR;
+@androidx.annotation.RecentlyNonNull public static final java.text.NumberFormat.Field GROUPING_SEPARATOR;
 static { GROUPING_SEPARATOR = null; }
 
 /**
  * Constant identifying the integer field.
  */
 
-@android.annotation.NonNull public static final java.text.NumberFormat.Field INTEGER;
+@androidx.annotation.RecentlyNonNull public static final java.text.NumberFormat.Field INTEGER;
 static { INTEGER = null; }
 
 /**
  * Constant identifying the percent field.
  */
 
-@android.annotation.NonNull public static final java.text.NumberFormat.Field PERCENT;
+@androidx.annotation.RecentlyNonNull public static final java.text.NumberFormat.Field PERCENT;
 static { PERCENT = null; }
 
 /**
  * Constant identifying the permille field.
  */
 
-@android.annotation.NonNull public static final java.text.NumberFormat.Field PERMILLE;
+@androidx.annotation.RecentlyNonNull public static final java.text.NumberFormat.Field PERMILLE;
 static { PERMILLE = null; }
 
 /**
  * Constant identifying the sign field.
  */
 
-@android.annotation.NonNull public static final java.text.NumberFormat.Field SIGN;
+@androidx.annotation.RecentlyNonNull public static final java.text.NumberFormat.Field SIGN;
 static { SIGN = null; }
 }
 

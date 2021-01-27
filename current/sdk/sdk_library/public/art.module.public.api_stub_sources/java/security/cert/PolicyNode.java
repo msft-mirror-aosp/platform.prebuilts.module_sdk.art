@@ -46,7 +46,7 @@ import java.util.Set;
  * the valid policy tree is available for more sophisticated applications,
  * especially those that process policy qualifiers.
  *
- * <p>{@link java.security.cert.PKIXCertPathValidatorResult#getPolicyTree() PKIXCertPathValidatorResult#getPolicyTree()} returns the root node of the
+ * <p>{@link java.security.cert.PKIXCertPathValidatorResult#getPolicyTree()  PKIXCertPathValidatorResult.getPolicyTree} returns the root node of the
  * valid policy tree. The tree can be traversed using the
  * {@link #getChildren getChildren} and {@link #getParent getParent} methods.
  * Data about a particular node can be retrieved using other methods of

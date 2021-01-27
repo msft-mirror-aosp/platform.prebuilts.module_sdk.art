@@ -32,8 +32,8 @@ import java.util.Set;
  * Interface for an X.509 extension.
  *
  * <p>The extensions defined for X.509 v3
- * {@link java.security.cert.X509Certificate X509Certificate} and v2
- * {@link java.security.cert.X509CRL X509CRL} (Certificate Revocation
+ * {@link java.security.cert.X509Certificate Certificates} and v2
+ * {@link java.security.cert.X509CRL CRLs} (Certificate Revocation
  * Lists) provide methods
  * for associating additional attributes with users or public keys,
  * for managing the certification hierarchy, and for managing CRL

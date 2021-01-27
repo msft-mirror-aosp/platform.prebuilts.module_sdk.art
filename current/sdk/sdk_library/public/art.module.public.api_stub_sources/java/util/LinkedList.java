@@ -46,7 +46,7 @@ package java.util;
  * encapsulates the list.
  *
  * If no such object exists, the list should be "wrapped" using the
- * {@link java.util.Collections#synchronizedList Collections#synchronizedList}
+ * {@link java.util.Collections#synchronizedList Collections.synchronizedList}
  * method.  This is best done at creation time, to prevent accidental
  * unsynchronized access to the list:<pre>
  *   List list = Collections.synchronizedList(new LinkedList(...));</pre>
@@ -97,7 +97,7 @@ public LinkedList() { throw new RuntimeException("Stub!"); }
  * @throws java.lang.NullPointerException if the specified collection is null
  */
 
-public LinkedList(@android.annotation.NonNull java.util.Collection<? extends E> c) { throw new RuntimeException("Stub!"); }
+public LinkedList(@androidx.annotation.RecentlyNonNull java.util.Collection<? extends E> c) { throw new RuntimeException("Stub!"); }
 
 /**
  * Returns the first element in this list.
@@ -163,7 +163,7 @@ public void addLast(E e) { throw new RuntimeException("Stub!"); }
  * @return {@code true} if this list contains the specified element
  */
 
-public boolean contains(@android.annotation.Nullable java.lang.Object o) { throw new RuntimeException("Stub!"); }
+public boolean contains(@androidx.annotation.RecentlyNullable java.lang.Object o) { throw new RuntimeException("Stub!"); }
 
 /**
  * Returns the number of elements in this list.
@@ -198,7 +198,7 @@ public boolean add(E e) { throw new RuntimeException("Stub!"); }
  * @return {@code true} if this list contained the specified element
  */
 
-public boolean remove(@android.annotation.Nullable java.lang.Object o) { throw new RuntimeException("Stub!"); }
+public boolean remove(@androidx.annotation.RecentlyNullable java.lang.Object o) { throw new RuntimeException("Stub!"); }
 
 /**
  * Appends all of the elements in the specified collection to the end of
@@ -213,7 +213,7 @@ public boolean remove(@android.annotation.Nullable java.lang.Object o) { throw n
  * @throws java.lang.NullPointerException if the specified collection is null
  */
 
-public boolean addAll(@android.annotation.NonNull java.util.Collection<? extends E> c) { throw new RuntimeException("Stub!"); }
+public boolean addAll(@androidx.annotation.RecentlyNonNull java.util.Collection<? extends E> c) { throw new RuntimeException("Stub!"); }
 
 /**
  * Inserts all of the elements in the specified collection into this
@@ -231,7 +231,7 @@ public boolean addAll(@android.annotation.NonNull java.util.Collection<? extends
  * @throws java.lang.NullPointerException if the specified collection is null
  */
 
-public boolean addAll(int index, @android.annotation.NonNull java.util.Collection<? extends E> c) { throw new RuntimeException("Stub!"); }
+public boolean addAll(int index, @androidx.annotation.RecentlyNonNull java.util.Collection<? extends E> c) { throw new RuntimeException("Stub!"); }
 
 /**
  * Removes all of the elements from this list.
@@ -298,7 +298,7 @@ public E remove(int index) { throw new RuntimeException("Stub!"); }
  *         this list, or -1 if this list does not contain the element
  */
 
-public int indexOf(@android.annotation.Nullable java.lang.Object o) { throw new RuntimeException("Stub!"); }
+public int indexOf(@androidx.annotation.RecentlyNullable java.lang.Object o) { throw new RuntimeException("Stub!"); }
 
 /**
  * Returns the index of the last occurrence of the specified element
@@ -312,7 +312,7 @@ public int indexOf(@android.annotation.Nullable java.lang.Object o) { throw new 
  *         this list, or -1 if this list does not contain the element
  */
 
-public int lastIndexOf(@android.annotation.Nullable java.lang.Object o) { throw new RuntimeException("Stub!"); }
+public int lastIndexOf(@androidx.annotation.RecentlyNullable java.lang.Object o) { throw new RuntimeException("Stub!"); }
 
 /**
  * Retrieves, but does not remove, the head (first element) of this list.
@@ -321,7 +321,7 @@ public int lastIndexOf(@android.annotation.Nullable java.lang.Object o) { throw 
  * @since 1.5
  */
 
-@android.annotation.Nullable
+@androidx.annotation.RecentlyNullable
 public E peek() { throw new RuntimeException("Stub!"); }
 
 /**
@@ -341,7 +341,7 @@ public E element() { throw new RuntimeException("Stub!"); }
  * @since 1.5
  */
 
-@android.annotation.Nullable
+@androidx.annotation.RecentlyNullable
 public E poll() { throw new RuntimeException("Stub!"); }
 
 /**
@@ -393,7 +393,7 @@ public boolean offerLast(E e) { throw new RuntimeException("Stub!"); }
  * @since 1.6
  */
 
-@android.annotation.Nullable
+@androidx.annotation.RecentlyNullable
 public E peekFirst() { throw new RuntimeException("Stub!"); }
 
 /**
@@ -405,7 +405,7 @@ public E peekFirst() { throw new RuntimeException("Stub!"); }
  * @since 1.6
  */
 
-@android.annotation.Nullable
+@androidx.annotation.RecentlyNullable
 public E peekLast() { throw new RuntimeException("Stub!"); }
 
 /**
@@ -417,7 +417,7 @@ public E peekLast() { throw new RuntimeException("Stub!"); }
  * @since 1.6
  */
 
-@android.annotation.Nullable
+@androidx.annotation.RecentlyNullable
 public E pollFirst() { throw new RuntimeException("Stub!"); }
 
 /**
@@ -429,7 +429,7 @@ public E pollFirst() { throw new RuntimeException("Stub!"); }
  * @since 1.6
  */
 
-@android.annotation.Nullable
+@androidx.annotation.RecentlyNullable
 public E pollLast() { throw new RuntimeException("Stub!"); }
 
 /**
@@ -468,7 +468,7 @@ public E pop() { throw new RuntimeException("Stub!"); }
  * @since 1.6
  */
 
-public boolean removeFirstOccurrence(@android.annotation.Nullable java.lang.Object o) { throw new RuntimeException("Stub!"); }
+public boolean removeFirstOccurrence(@androidx.annotation.RecentlyNullable java.lang.Object o) { throw new RuntimeException("Stub!"); }
 
 /**
  * Removes the last occurrence of the specified element in this
@@ -480,7 +480,7 @@ public boolean removeFirstOccurrence(@android.annotation.Nullable java.lang.Obje
  * @since 1.6
  */
 
-public boolean removeLastOccurrence(@android.annotation.Nullable java.lang.Object o) { throw new RuntimeException("Stub!"); }
+public boolean removeLastOccurrence(@androidx.annotation.RecentlyNullable java.lang.Object o) { throw new RuntimeException("Stub!"); }
 
 /**
  * Returns a list-iterator of the elements in this list (in proper
@@ -504,14 +504,14 @@ public boolean removeLastOccurrence(@android.annotation.Nullable java.lang.Objec
  * @see java.util.List#listIterator(int)
  */
 
-@android.annotation.NonNull
+@androidx.annotation.RecentlyNonNull
 public java.util.ListIterator<E> listIterator(int index) { throw new RuntimeException("Stub!"); }
 
 /**
  * @since 1.6
  */
 
-@android.annotation.NonNull
+@androidx.annotation.RecentlyNonNull
 public java.util.Iterator<E> descendingIterator() { throw new RuntimeException("Stub!"); }
 
 /**
@@ -521,7 +521,7 @@ public java.util.Iterator<E> descendingIterator() { throw new RuntimeException("
  * @return a shallow copy of this {@code LinkedList} instance
  */
 
-@android.annotation.NonNull
+@androidx.annotation.RecentlyNonNull
 public java.lang.Object clone() { throw new RuntimeException("Stub!"); }
 
 /**
@@ -539,7 +539,7 @@ public java.lang.Object clone() { throw new RuntimeException("Stub!"); }
  *         in proper sequence
  */
 
-@android.annotation.NonNull
+@androidx.annotation.RecentlyNonNull
 public java.lang.Object[] toArray() { throw new RuntimeException("Stub!"); }
 
 /**
@@ -581,8 +581,8 @@ public java.lang.Object[] toArray() { throw new RuntimeException("Stub!"); }
  * @throws java.lang.NullPointerException if the specified array is null
  */
 
-@android.annotation.NonNull
-public <T> T[] toArray(@android.annotation.NonNull T[] a) { throw new RuntimeException("Stub!"); }
+@androidx.annotation.RecentlyNonNull
+public <T> T[] toArray(@androidx.annotation.RecentlyNonNull T[] a) { throw new RuntimeException("Stub!"); }
 
 /**
  * Creates a <em><a href="Spliterator.html#binding">late-binding</a></em>
@@ -601,7 +601,7 @@ public <T> T[] toArray(@android.annotation.NonNull T[] a) { throw new RuntimeExc
  * @since 1.8
  */
 
-@android.annotation.NonNull
+@androidx.annotation.RecentlyNonNull
 public java.util.Spliterator<E> spliterator() { throw new RuntimeException("Stub!"); }
 }
 

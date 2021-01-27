@@ -36,17 +36,17 @@ import java.io.IOException;
  * when files are created or deleted.
  *
  * <p> A {@link java.nio.file.Watchable Watchable} object is registered with a watch service by invoking
- * its {@link java.nio.file.Watchable#register Watchable#register} method, returning a {@link java.nio.file.WatchKey WatchKey}
+ * its {@link java.nio.file.Watchable#register register} method, returning a {@link java.nio.file.WatchKey WatchKey}
  * to represent the registration. When an event for an object is detected the
  * key is <em>signalled</em>, and if not currently signalled, it is queued to
  * the watch service so that it can be retrieved by consumers that invoke the
  * {@link #poll() poll} or {@link #take() take} methods to retrieve keys
  * and process events. Once the events have been processed the consumer
- * invokes the key's {@link java.nio.file.WatchKey#reset WatchKey#reset} method to reset the key which
+ * invokes the key's {@link java.nio.file.WatchKey#reset reset} method to reset the key which
  * allows the key to be signalled and re-queued with further events.
  *
  * <p> Registration with a watch service is cancelled by invoking the key's
- * {@link java.nio.file.WatchKey#cancel WatchKey#cancel} method. A key that is queued at the time that
+ * {@link java.nio.file.WatchKey#cancel cancel} method. A key that is queued at the time that
  * it is cancelled remains in the queue until it is retrieved. Depending on the
  * object, a key may be cancelled automatically. For example, suppose a
  * directory is watched and the watch service detects that it has been deleted
@@ -66,7 +66,7 @@ import java.io.IOException;
  * <p> File systems may report events faster than they can be retrieved or
  * processed and an implementation may impose an unspecified limit on the number
  * of events that it may accumulate. Where an implementation <em>knowingly</em>
- * discards events then it arranges for the key's {@link java.nio.file.WatchKey#pollEvents WatchKey#pollEvents} method to return an element with an event type of {@link java.nio.file.StandardWatchEventKinds#OVERFLOW StandardWatchEventKinds#OVERFLOW}. This event can be used by the
+ * discards events then it arranges for the key's {@link java.nio.file.WatchKey#pollEvents  pollEvents} method to return an element with an event type of {@link java.nio.file.StandardWatchEventKinds#OVERFLOW OVERFLOW}. This event can be used by the
  * consumer as a trigger to re-examine the state of the object.
  *
  * <p> When an event is reported to indicate that a file in a watched directory
@@ -84,7 +84,7 @@ import java.io.IOException;
  * facility is not available. Consequently, many of the details on how events
  * are detected, their timeliness, and whether their ordering is preserved are
  * highly implementation specific. For example, when a file in a watched
- * directory is modified then it may result in a single {@link java.nio.file.StandardWatchEventKinds#ENTRY_MODIFY StandardWatchEventKinds#ENTRY_MODIFY} event in some
+ * directory is modified then it may result in a single {@link java.nio.file.StandardWatchEventKinds#ENTRY_MODIFY ENTRY_MODIFY} event in some
  * implementations but several events in other implementations. Short-lived
  * files (meaning files that are deleted very quickly after they are created)
  * may not be detected by primitive implementations that periodically poll the
@@ -109,7 +109,7 @@ public interface WatchService extends java.io.Closeable {
  * <p> If a thread is currently blocked in the {@link #take take} or {@link
  * #poll(long,java.util.concurrent.TimeUnit) poll} methods waiting for a key to be queued then
  * it immediately receives a {@link java.nio.file.ClosedWatchServiceException ClosedWatchServiceException}. Any
- * valid keys associated with this watch service are {@link java.nio.file.WatchKey#isValid WatchKey#isValid}.
+ * valid keys associated with this watch service are {@link java.nio.file.WatchKey#isValid  invalidated}.
  *
  * <p> After a watch service is closed, any further attempt to invoke
  * operations upon it will throw {@link java.nio.file.ClosedWatchServiceException ClosedWatchServiceException}.

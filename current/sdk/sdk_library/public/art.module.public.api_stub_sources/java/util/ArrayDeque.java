@@ -108,7 +108,7 @@ public ArrayDeque(int numElements) { throw new RuntimeException("Stub!"); }
  * @throws java.lang.NullPointerException if the specified collection is null
  */
 
-public ArrayDeque(@android.annotation.NonNull java.util.Collection<? extends E> c) { throw new RuntimeException("Stub!"); }
+public ArrayDeque(@androidx.annotation.RecentlyNonNull java.util.Collection<? extends E> c) { throw new RuntimeException("Stub!"); }
 
 /**
  * Inserts the specified element at the front of this deque.
@@ -162,10 +162,10 @@ public E removeFirst() { throw new RuntimeException("Stub!"); }
 
 public E removeLast() { throw new RuntimeException("Stub!"); }
 
-@android.annotation.Nullable
+@androidx.annotation.RecentlyNullable
 public E pollFirst() { throw new RuntimeException("Stub!"); }
 
-@android.annotation.Nullable
+@androidx.annotation.RecentlyNullable
 public E pollLast() { throw new RuntimeException("Stub!"); }
 
 /**
@@ -180,10 +180,10 @@ public E getFirst() { throw new RuntimeException("Stub!"); }
 
 public E getLast() { throw new RuntimeException("Stub!"); }
 
-@android.annotation.Nullable
+@androidx.annotation.RecentlyNullable
 public E peekFirst() { throw new RuntimeException("Stub!"); }
 
-@android.annotation.Nullable
+@androidx.annotation.RecentlyNullable
 public E peekLast() { throw new RuntimeException("Stub!"); }
 
 /**
@@ -199,7 +199,7 @@ public E peekLast() { throw new RuntimeException("Stub!"); }
  * @return {@code true} if the deque contained the specified element
  */
 
-public boolean removeFirstOccurrence(@android.annotation.Nullable java.lang.Object o) { throw new RuntimeException("Stub!"); }
+public boolean removeFirstOccurrence(@androidx.annotation.RecentlyNullable java.lang.Object o) { throw new RuntimeException("Stub!"); }
 
 /**
  * Removes the last occurrence of the specified element in this
@@ -214,7 +214,7 @@ public boolean removeFirstOccurrence(@android.annotation.Nullable java.lang.Obje
  * @return {@code true} if the deque contained the specified element
  */
 
-public boolean removeLastOccurrence(@android.annotation.Nullable java.lang.Object o) { throw new RuntimeException("Stub!"); }
+public boolean removeLastOccurrence(@androidx.annotation.RecentlyNullable java.lang.Object o) { throw new RuntimeException("Stub!"); }
 
 /**
  * Inserts the specified element at the end of this deque.
@@ -265,7 +265,7 @@ public E remove() { throw new RuntimeException("Stub!"); }
  *         {@code null} if this deque is empty
  */
 
-@android.annotation.Nullable
+@androidx.annotation.RecentlyNullable
 public E poll() { throw new RuntimeException("Stub!"); }
 
 /**
@@ -291,7 +291,7 @@ public E element() { throw new RuntimeException("Stub!"); }
  *         {@code null} if this deque is empty
  */
 
-@android.annotation.Nullable
+@androidx.annotation.RecentlyNullable
 public E peek() { throw new RuntimeException("Stub!"); }
 
 /**
@@ -344,10 +344,10 @@ public boolean isEmpty() { throw new RuntimeException("Stub!"); }
  * @return an iterator over the elements in this deque
  */
 
-@android.annotation.NonNull
+@androidx.annotation.RecentlyNonNull
 public java.util.Iterator<E> iterator() { throw new RuntimeException("Stub!"); }
 
-@android.annotation.NonNull
+@androidx.annotation.RecentlyNonNull
 public java.util.Iterator<E> descendingIterator() { throw new RuntimeException("Stub!"); }
 
 /**
@@ -359,7 +359,7 @@ public java.util.Iterator<E> descendingIterator() { throw new RuntimeException("
  * @return {@code true} if this deque contains the specified element
  */
 
-public boolean contains(@android.annotation.Nullable java.lang.Object o) { throw new RuntimeException("Stub!"); }
+public boolean contains(@androidx.annotation.RecentlyNullable java.lang.Object o) { throw new RuntimeException("Stub!"); }
 
 /**
  * Removes a single instance of the specified element from this deque.
@@ -375,7 +375,7 @@ public boolean contains(@android.annotation.Nullable java.lang.Object o) { throw
  * @return {@code true} if this deque contained the specified element
  */
 
-public boolean remove(@android.annotation.Nullable java.lang.Object o) { throw new RuntimeException("Stub!"); }
+public boolean remove(@androidx.annotation.RecentlyNullable java.lang.Object o) { throw new RuntimeException("Stub!"); }
 
 /**
  * Removes all of the elements from this deque.
@@ -398,7 +398,7 @@ public void clear() { throw new RuntimeException("Stub!"); }
  * @return an array containing all of the elements in this deque
  */
 
-@android.annotation.NonNull
+@androidx.annotation.RecentlyNonNull
 public java.lang.Object[] toArray() { throw new RuntimeException("Stub!"); }
 
 /**
@@ -438,8 +438,8 @@ public java.lang.Object[] toArray() { throw new RuntimeException("Stub!"); }
  * @throws java.lang.NullPointerException if the specified array is null
  */
 
-@android.annotation.NonNull
-public <T> T[] toArray(@android.annotation.NonNull T[] a) { throw new RuntimeException("Stub!"); }
+@androidx.annotation.RecentlyNonNull
+public <T> T[] toArray(@androidx.annotation.RecentlyNonNull T[] a) { throw new RuntimeException("Stub!"); }
 
 /**
  * Returns a copy of this deque.
@@ -447,7 +447,7 @@ public <T> T[] toArray(@android.annotation.NonNull T[] a) { throw new RuntimeExc
  * @return a copy of this deque
  */
 
-@android.annotation.NonNull
+@androidx.annotation.RecentlyNonNull
 public java.util.ArrayDeque<E> clone() { throw new RuntimeException("Stub!"); }
 
 /**
@@ -464,7 +464,7 @@ public java.util.ArrayDeque<E> clone() { throw new RuntimeException("Stub!"); }
  * @since 1.8
  */
 
-@android.annotation.NonNull
+@androidx.annotation.RecentlyNonNull
 public java.util.Spliterator<E> spliterator() { throw new RuntimeException("Stub!"); }
 }
 

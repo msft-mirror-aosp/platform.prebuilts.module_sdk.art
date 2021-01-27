@@ -39,8 +39,8 @@ package java.util.concurrent;
 
 /**
  * Interrelated interfaces and static methods for establishing
- * flow-controlled components in which {@link java.util.concurrent.Flow.Publisher Publisher}
- * produce items consumed by one or more {@link java.util.concurrent.Flow.Subscriber Subscriber}, each managed by a {@link java.util.concurrent.Flow.Subscription Subscription}.
+ * flow-controlled components in which {@link java.util.concurrent.Flow.Publisher Publishers}
+ * produce items consumed by one or more {@link java.util.concurrent.Flow.Subscriber  Subscribers}, each managed by a {@link java.util.concurrent.Flow.Subscription  Subscription}.
  *
  * <p>These interfaces correspond to the <a
  * href="http://www.reactive-streams.org/"> reactive-streams</a>

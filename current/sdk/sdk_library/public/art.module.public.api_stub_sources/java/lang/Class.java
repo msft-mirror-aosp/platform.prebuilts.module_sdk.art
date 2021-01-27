@@ -101,7 +101,7 @@ private Class() { throw new RuntimeException("Stub!"); }
  * @return a string representation of this class object.
  */
 
-@android.annotation.NonNull
+@androidx.annotation.RecentlyNonNull
 public java.lang.String toString() { throw new RuntimeException("Stub!"); }
 
 /**
@@ -131,7 +131,7 @@ public java.lang.String toString() { throw new RuntimeException("Stub!"); }
  * @since 1.8
  */
 
-@android.annotation.NonNull
+@androidx.annotation.RecentlyNonNull
 public java.lang.String toGenericString() { throw new RuntimeException("Stub!"); }
 
 /**
@@ -166,8 +166,8 @@ public java.lang.String toGenericString() { throw new RuntimeException("Stub!");
  * @exception java.lang.ClassNotFoundException if the class cannot be located
  */
 
-@android.annotation.NonNull
-public static java.lang.Class<?> forName(@android.annotation.NonNull java.lang.String className) throws java.lang.ClassNotFoundException { throw new RuntimeException("Stub!"); }
+@androidx.annotation.RecentlyNonNull
+public static java.lang.Class<?> forName(@androidx.annotation.RecentlyNonNull java.lang.String className) throws java.lang.ClassNotFoundException { throw new RuntimeException("Stub!"); }
 
 /**
  * Returns the {@code Class} object associated with the class or
@@ -231,8 +231,8 @@ public static java.lang.Class<?> forName(@android.annotation.NonNull java.lang.S
  * @since     1.2
  */
 
-@android.annotation.NonNull
-public static java.lang.Class<?> forName(@android.annotation.NonNull java.lang.String name, boolean initialize, @android.annotation.Nullable java.lang.ClassLoader loader) throws java.lang.ClassNotFoundException { throw new RuntimeException("Stub!"); }
+@androidx.annotation.RecentlyNonNull
+public static java.lang.Class<?> forName(@androidx.annotation.RecentlyNonNull java.lang.String name, boolean initialize, @androidx.annotation.RecentlyNullable java.lang.ClassLoader loader) throws java.lang.ClassNotFoundException { throw new RuntimeException("Stub!"); }
 
 /**
  * Creates a new instance of the class represented by this {@code Class}
@@ -265,11 +265,11 @@ public static java.lang.Class<?> forName(@android.annotation.NonNull java.lang.S
  *          If a security manager, <i>s</i>, is present and
  *          the caller's class loader is not the same as or an
  *          ancestor of the class loader for the current class and
- *          invocation of {@link java.lang.SecurityManager#checkPackageAccess SecurityManager#checkPackageAccess} denies access to the package
+ *          invocation of {@link java.lang.SecurityManager#checkPackageAccess           s.checkPackageAccess()} denies access to the package
  *          of this class.
  */
 
-@android.annotation.NonNull
+@androidx.annotation.RecentlyNonNull
 public native T newInstance() throws java.lang.IllegalAccessException, java.lang.InstantiationException;
 
 /**
@@ -303,7 +303,7 @@ public native T newInstance() throws java.lang.IllegalAccessException, java.lang
  * @since JDK1.1
  */
 
-public boolean isInstance(@android.annotation.Nullable java.lang.Object obj) { throw new RuntimeException("Stub!"); }
+public boolean isInstance(@androidx.annotation.RecentlyNullable java.lang.Object obj) { throw new RuntimeException("Stub!"); }
 
 /**
  * Determines if the class or interface represented by this
@@ -330,7 +330,7 @@ public boolean isInstance(@android.annotation.Nullable java.lang.Object obj) { t
  * @since JDK1.1
  */
 
-public boolean isAssignableFrom(@android.annotation.NonNull java.lang.Class<?> cls) { throw new RuntimeException("Stub!"); }
+public boolean isAssignableFrom(@androidx.annotation.RecentlyNonNull java.lang.Class<?> cls) { throw new RuntimeException("Stub!"); }
 
 /**
  * Determines if the specified {@code Class} object represents an
@@ -458,7 +458,7 @@ public boolean isSynthetic() { throw new RuntimeException("Stub!"); }
  *          represented by this object.
  */
 
-@android.annotation.NonNull
+@androidx.annotation.RecentlyNonNull
 public java.lang.String getName() { throw new RuntimeException("Stub!"); }
 
 /**
@@ -488,7 +488,7 @@ public java.lang.String getName() { throw new RuntimeException("Stub!"); }
  * @see java.lang.RuntimePermission
  */
 
-@android.annotation.Nullable
+@androidx.annotation.RecentlyNullable
 public java.lang.ClassLoader getClassLoader() { throw new RuntimeException("Stub!"); }
 
 /**
@@ -507,7 +507,7 @@ public java.lang.ClassLoader getClassLoader() { throw new RuntimeException("Stub
  * @since 1.5
  */
 
-@android.annotation.NonNull
+@androidx.annotation.RecentlyNonNull
 public synchronized java.lang.reflect.TypeVariable<java.lang.Class<T>>[] getTypeParameters() { throw new RuntimeException("Stub!"); }
 
 /**
@@ -522,7 +522,7 @@ public synchronized java.lang.reflect.TypeVariable<java.lang.Class<T>>[] getType
  * @return the superclass of the class represented by this object.
  */
 
-@android.annotation.Nullable
+@androidx.annotation.RecentlyNullable
 public java.lang.Class<? super T> getSuperclass() { throw new RuntimeException("Stub!"); }
 
 /**
@@ -555,7 +555,7 @@ public java.lang.Class<? super T> getSuperclass() { throw new RuntimeException("
  * @since 1.5
  */
 
-@android.annotation.Nullable
+@androidx.annotation.RecentlyNullable
 public java.lang.reflect.Type getGenericSuperclass() { throw new RuntimeException("Stub!"); }
 
 /**
@@ -574,8 +574,39 @@ public java.lang.reflect.Type getGenericSuperclass() { throw new RuntimeExceptio
  *         information is available from the archive or codebase.
  */
 
-@android.annotation.Nullable
+@androidx.annotation.RecentlyNullable
 public java.lang.Package getPackage() { throw new RuntimeException("Stub!"); }
+
+/**
+ * Returns the fully qualified package name.
+ *
+ * <p> If this class is a top level class, then this method returns the fully
+ * qualified name of the package that the class is a member of, or the
+ * empty string if the class is in an unnamed package.
+ *
+ * <p> If this class is a member class, then this method is equivalent to
+ * invoking {@code getPackageName()} on the {@linkplain #getEnclosingClass
+ * enclosing class}.
+ *
+ * <p> If this class is a {@linkplain #isLocalClass local class} or an {@linkplain
+ * #isAnonymousClass() anonymous class}, then this method is equivalent to
+ * invoking {@code getPackageName()} on the {@linkplain #getDeclaringClass
+ * declaring class} of the {@linkplain #getEnclosingMethod enclosing method} or
+ * {@linkplain #getEnclosingConstructor enclosing constructor}.
+ *
+ * <p> If this class represents an array type then this method returns the
+ * package name of the element type. If this class represents a primitive
+ * type or void then the package name "{@code java.lang}" is returned.
+ *
+ * @return the fully qualified package name
+ *
+ * @since 9
+ * @spec JPMS
+ * @jls 6.7  Fully Qualified Names
+ */
+
+@androidx.annotation.RecentlyNonNull
+public java.lang.String getPackageName() { throw new RuntimeException("Stub!"); }
 
 /**
  * Determines the interfaces implemented by the class or interface
@@ -622,7 +653,7 @@ public java.lang.Package getPackage() { throw new RuntimeException("Stub!"); }
  * @return an array of interfaces implemented by this class.
  */
 
-@android.annotation.NonNull
+@androidx.annotation.RecentlyNonNull
 public java.lang.Class<?>[] getInterfaces() { throw new RuntimeException("Stub!"); }
 
 /**
@@ -675,7 +706,7 @@ public java.lang.Class<?>[] getInterfaces() { throw new RuntimeException("Stub!"
  * @since 1.5
  */
 
-@android.annotation.NonNull
+@androidx.annotation.RecentlyNonNull
 public java.lang.reflect.Type[] getGenericInterfaces() { throw new RuntimeException("Stub!"); }
 
 /**
@@ -689,7 +720,7 @@ public java.lang.reflect.Type[] getGenericInterfaces() { throw new RuntimeExcept
  * @since JDK1.1
  */
 
-@android.annotation.Nullable
+@androidx.annotation.RecentlyNullable
 public java.lang.Class<?> getComponentType() { throw new RuntimeException("Stub!"); }
 
 /**
@@ -731,7 +762,7 @@ public int getModifiers() { throw new RuntimeException("Stub!"); }
  * @since   JDK1.1
  */
 
-@android.annotation.Nullable
+@androidx.annotation.RecentlyNullable
 public java.lang.Object[] getSigners() { throw new RuntimeException("Stub!"); }
 
 /**
@@ -750,7 +781,7 @@ public java.lang.Object[] getSigners() { throw new RuntimeException("Stub!"); }
  * @since 1.5
  */
 
-@android.annotation.Nullable
+@androidx.annotation.RecentlyNullable
 public java.lang.reflect.Method getEnclosingMethod() { throw new RuntimeException("Stub!"); }
 
 /**
@@ -768,7 +799,7 @@ public java.lang.reflect.Method getEnclosingMethod() { throw new RuntimeExceptio
  * @since 1.5
  */
 
-@android.annotation.Nullable
+@androidx.annotation.RecentlyNullable
 public java.lang.reflect.Constructor<?> getEnclosingConstructor() { throw new RuntimeException("Stub!"); }
 
 /**
@@ -783,7 +814,7 @@ public java.lang.reflect.Constructor<?> getEnclosingConstructor() { throw new Ru
  * @since JDK1.1
  */
 
-@android.annotation.Nullable
+@androidx.annotation.RecentlyNullable
 public native java.lang.Class<?> getDeclaringClass();
 
 /**
@@ -794,7 +825,7 @@ public native java.lang.Class<?> getDeclaringClass();
  * @since 1.5
  */
 
-@android.annotation.Nullable
+@androidx.annotation.RecentlyNullable
 public native java.lang.Class<?> getEnclosingClass();
 
 /**
@@ -810,7 +841,7 @@ public native java.lang.Class<?> getEnclosingClass();
  * @since 1.5
  */
 
-@android.annotation.NonNull
+@androidx.annotation.RecentlyNonNull
 public java.lang.String getSimpleName() { throw new RuntimeException("Stub!"); }
 
 /**
@@ -820,7 +851,7 @@ public java.lang.String getSimpleName() { throw new RuntimeException("Stub!"); }
  * @since 1.8
  */
 
-@android.annotation.NonNull
+@androidx.annotation.RecentlyNonNull
 public java.lang.String getTypeName() { throw new RuntimeException("Stub!"); }
 
 /**
@@ -834,7 +865,7 @@ public java.lang.String getTypeName() { throw new RuntimeException("Stub!"); }
  * @since 1.5
  */
 
-@android.annotation.Nullable
+@androidx.annotation.RecentlyNullable
 public java.lang.String getCanonicalName() { throw new RuntimeException("Stub!"); }
 
 /**
@@ -884,7 +915,7 @@ public boolean isMemberClass() { throw new RuntimeException("Stub!"); }
  * @since JDK1.1
  */
 
-@android.annotation.NonNull
+@androidx.annotation.RecentlyNonNull
 public java.lang.Class<?>[] getClasses() { throw new RuntimeException("Stub!"); }
 
 /**
@@ -915,7 +946,7 @@ public java.lang.Class<?>[] getClasses() { throw new RuntimeException("Stub!"); 
  *         If a security manager, <i>s</i>, is present and
  *         the caller's class loader is not the same as or an
  *         ancestor of the class loader for the current class and
- *         invocation of {@link java.lang.SecurityManager#checkPackageAccess SecurityManager#checkPackageAccess} denies access to the package
+ *         invocation of {@link java.lang.SecurityManager#checkPackageAccess          s.checkPackageAccess()} denies access to the package
  *         of this class.
  *
  * @since JDK1.1
@@ -923,7 +954,7 @@ public java.lang.Class<?>[] getClasses() { throw new RuntimeException("Stub!"); 
  * @jls 8.3 Field Declarations
  */
 
-@android.annotation.NonNull
+@androidx.annotation.RecentlyNonNull
 public java.lang.reflect.Field[] getFields() throws java.lang.SecurityException { throw new RuntimeException("Stub!"); }
 
 /**
@@ -969,7 +1000,7 @@ public java.lang.reflect.Field[] getFields() throws java.lang.SecurityException 
  *         If a security manager, <i>s</i>, is present and
  *         the caller's class loader is not the same as or an
  *         ancestor of the class loader for the current class and
- *         invocation of {@link java.lang.SecurityManager#checkPackageAccess SecurityManager#checkPackageAccess} denies access to the package
+ *         invocation of {@link java.lang.SecurityManager#checkPackageAccess          s.checkPackageAccess()} denies access to the package
  *         of this class.
  *
  * @jls 8.2 Class Members
@@ -977,7 +1008,7 @@ public java.lang.reflect.Field[] getFields() throws java.lang.SecurityException 
  * @since JDK1.1
  */
 
-@android.annotation.NonNull
+@androidx.annotation.RecentlyNonNull
 public java.lang.reflect.Method[] getMethods() throws java.lang.SecurityException { throw new RuntimeException("Stub!"); }
 
 /**
@@ -1003,13 +1034,13 @@ public java.lang.reflect.Method[] getMethods() throws java.lang.SecurityExceptio
  *         If a security manager, <i>s</i>, is present and
  *         the caller's class loader is not the same as or an
  *         ancestor of the class loader for the current class and
- *         invocation of {@link java.lang.SecurityManager#checkPackageAccess SecurityManager#checkPackageAccess} denies access to the package
+ *         invocation of {@link java.lang.SecurityManager#checkPackageAccess          s.checkPackageAccess()} denies access to the package
  *         of this class.
  *
  * @since JDK1.1
  */
 
-@android.annotation.NonNull
+@androidx.annotation.RecentlyNonNull
 public java.lang.reflect.Constructor<?>[] getConstructors() throws java.lang.SecurityException { throw new RuntimeException("Stub!"); }
 
 /**
@@ -1046,7 +1077,7 @@ public java.lang.reflect.Constructor<?>[] getConstructors() throws java.lang.Sec
  *         If a security manager, <i>s</i>, is present and
  *         the caller's class loader is not the same as or an
  *         ancestor of the class loader for the current class and
- *         invocation of {@link java.lang.SecurityManager#checkPackageAccess SecurityManager#checkPackageAccess} denies access to the package
+ *         invocation of {@link java.lang.SecurityManager#checkPackageAccess          s.checkPackageAccess()} denies access to the package
  *         of this class.
  *
  * @since JDK1.1
@@ -1054,8 +1085,8 @@ public java.lang.reflect.Constructor<?>[] getConstructors() throws java.lang.Sec
  * @jls 8.3 Field Declarations
  */
 
-@android.annotation.NonNull
-public java.lang.reflect.Field getField(@android.annotation.NonNull java.lang.String name) throws java.lang.NoSuchFieldException { throw new RuntimeException("Stub!"); }
+@androidx.annotation.RecentlyNonNull
+public java.lang.reflect.Field getField(@androidx.annotation.RecentlyNonNull java.lang.String name) throws java.lang.NoSuchFieldException { throw new RuntimeException("Stub!"); }
 
 /**
  * Returns a {@code Method} object that reflects the specified public
@@ -1120,7 +1151,7 @@ public java.lang.reflect.Field getField(@android.annotation.NonNull java.lang.St
  *         If a security manager, <i>s</i>, is present and
  *         the caller's class loader is not the same as or an
  *         ancestor of the class loader for the current class and
- *         invocation of {@link java.lang.SecurityManager#checkPackageAccess SecurityManager#checkPackageAccess} denies access to the package
+ *         invocation of {@link java.lang.SecurityManager#checkPackageAccess          s.checkPackageAccess()} denies access to the package
  *         of this class.
  *
  * @jls 8.2 Class Members
@@ -1128,8 +1159,8 @@ public java.lang.reflect.Field getField(@android.annotation.NonNull java.lang.St
  * @since JDK1.1
  */
 
-@android.annotation.NonNull
-public java.lang.reflect.Method getMethod(@android.annotation.NonNull java.lang.String name, @android.annotation.Nullable java.lang.Class<?>... parameterTypes) throws java.lang.NoSuchMethodException, java.lang.SecurityException { throw new RuntimeException("Stub!"); }
+@androidx.annotation.RecentlyNonNull
+public java.lang.reflect.Method getMethod(@androidx.annotation.RecentlyNonNull java.lang.String name, @androidx.annotation.RecentlyNullable java.lang.Class<?>... parameterTypes) throws java.lang.NoSuchMethodException, java.lang.SecurityException { throw new RuntimeException("Stub!"); }
 
 /**
  * Returns a {@code Constructor} object that reflects the specified
@@ -1154,14 +1185,14 @@ public java.lang.reflect.Method getMethod(@android.annotation.NonNull java.lang.
  *         If a security manager, <i>s</i>, is present and
  *         the caller's class loader is not the same as or an
  *         ancestor of the class loader for the current class and
- *         invocation of {@link java.lang.SecurityManager#checkPackageAccess SecurityManager#checkPackageAccess} denies access to the package
+ *         invocation of {@link java.lang.SecurityManager#checkPackageAccess          s.checkPackageAccess()} denies access to the package
  *         of this class.
  *
  * @since JDK1.1
  */
 
-@android.annotation.NonNull
-public java.lang.reflect.Constructor<T> getConstructor(@android.annotation.Nullable java.lang.Class<?>... parameterTypes) throws java.lang.NoSuchMethodException, java.lang.SecurityException { throw new RuntimeException("Stub!"); }
+@androidx.annotation.RecentlyNonNull
+public java.lang.reflect.Constructor<T> getConstructor(@androidx.annotation.RecentlyNullable java.lang.Class<?>... parameterTypes) throws java.lang.NoSuchMethodException, java.lang.SecurityException { throw new RuntimeException("Stub!"); }
 
 /**
  * Returns an array of {@code Class} objects reflecting all the
@@ -1183,13 +1214,13 @@ public java.lang.reflect.Constructor<T> getConstructor(@android.annotation.Nulla
  *
  *         <li> the caller's class loader is not the same as the
  *         class loader of this class and invocation of
- *         {@link java.lang.SecurityManager#checkPermission SecurityManager#checkPermission} method with
+ *         {@link java.lang.SecurityManager#checkPermission          s.checkPermission} method with
  *         {@code RuntimePermission("accessDeclaredMembers")}
  *         denies access to the declared classes within this class
  *
  *         <li> the caller's class loader is not the same as or an
  *         ancestor of the class loader for the current class and
- *         invocation of {@link java.lang.SecurityManager#checkPackageAccess SecurityManager#checkPackageAccess} denies access to the package
+ *         invocation of {@link java.lang.SecurityManager#checkPackageAccess          s.checkPackageAccess()} denies access to the package
  *         of this class
  *
  *         </ul>
@@ -1197,7 +1228,7 @@ public java.lang.reflect.Constructor<T> getConstructor(@android.annotation.Nulla
  * @since JDK1.1
  */
 
-@android.annotation.NonNull
+@androidx.annotation.RecentlyNonNull
 public native java.lang.Class<?>[] getDeclaredClasses();
 
 /**
@@ -1225,13 +1256,13 @@ public native java.lang.Class<?>[] getDeclaredClasses();
  *
  *          <li> the caller's class loader is not the same as the
  *          class loader of this class and invocation of
- *          {@link java.lang.SecurityManager#checkPermission SecurityManager#checkPermission} method with
+ *          {@link java.lang.SecurityManager#checkPermission           s.checkPermission} method with
  *          {@code RuntimePermission("accessDeclaredMembers")}
  *          denies access to the declared fields within this class
  *
  *          <li> the caller's class loader is not the same as or an
  *          ancestor of the class loader for the current class and
- *          invocation of {@link java.lang.SecurityManager#checkPackageAccess SecurityManager#checkPackageAccess} denies access to the package
+ *          invocation of {@link java.lang.SecurityManager#checkPackageAccess           s.checkPackageAccess()} denies access to the package
  *          of this class
  *
  *          </ul>
@@ -1241,7 +1272,7 @@ public native java.lang.Class<?>[] getDeclaredClasses();
  * @jls 8.3 Field Declarations
  */
 
-@android.annotation.NonNull
+@androidx.annotation.RecentlyNonNull
 public native java.lang.reflect.Field[] getDeclaredFields();
 
 /**
@@ -1279,13 +1310,13 @@ public native java.lang.reflect.Field[] getDeclaredFields();
  *
  *          <li> the caller's class loader is not the same as the
  *          class loader of this class and invocation of
- *          {@link java.lang.SecurityManager#checkPermission SecurityManager#checkPermission} method with
+ *          {@link java.lang.SecurityManager#checkPermission           s.checkPermission} method with
  *          {@code RuntimePermission("accessDeclaredMembers")}
  *          denies access to the declared methods within this class
  *
  *          <li> the caller's class loader is not the same as or an
  *          ancestor of the class loader for the current class and
- *          invocation of {@link java.lang.SecurityManager#checkPackageAccess SecurityManager#checkPackageAccess} denies access to the package
+ *          invocation of {@link java.lang.SecurityManager#checkPackageAccess           s.checkPackageAccess()} denies access to the package
  *          of this class
  *
  *          </ul>
@@ -1295,7 +1326,7 @@ public native java.lang.reflect.Field[] getDeclaredFields();
  * @since JDK1.1
  */
 
-@android.annotation.NonNull
+@androidx.annotation.RecentlyNonNull
 public java.lang.reflect.Method[] getDeclaredMethods() throws java.lang.SecurityException { throw new RuntimeException("Stub!"); }
 
 /**
@@ -1321,13 +1352,13 @@ public java.lang.reflect.Method[] getDeclaredMethods() throws java.lang.Security
  *
  *          <li> the caller's class loader is not the same as the
  *          class loader of this class and invocation of
- *          {@link java.lang.SecurityManager#checkPermission SecurityManager#checkPermission} method with
+ *          {@link java.lang.SecurityManager#checkPermission           s.checkPermission} method with
  *          {@code RuntimePermission("accessDeclaredMembers")}
  *          denies access to the declared constructors within this class
  *
  *          <li> the caller's class loader is not the same as or an
  *          ancestor of the class loader for the current class and
- *          invocation of {@link java.lang.SecurityManager#checkPackageAccess SecurityManager#checkPackageAccess} denies access to the package
+ *          invocation of {@link java.lang.SecurityManager#checkPackageAccess           s.checkPackageAccess()} denies access to the package
  *          of this class
  *
  *          </ul>
@@ -1335,7 +1366,7 @@ public java.lang.reflect.Method[] getDeclaredMethods() throws java.lang.Security
  * @since JDK1.1
  */
 
-@android.annotation.NonNull
+@androidx.annotation.RecentlyNonNull
 public java.lang.reflect.Constructor<?>[] getDeclaredConstructors() throws java.lang.SecurityException { throw new RuntimeException("Stub!"); }
 
 /**
@@ -1361,13 +1392,13 @@ public java.lang.reflect.Constructor<?>[] getDeclaredConstructors() throws java.
  *
  *          <li> the caller's class loader is not the same as the
  *          class loader of this class and invocation of
- *          {@link java.lang.SecurityManager#checkPermission SecurityManager#checkPermission} method with
+ *          {@link java.lang.SecurityManager#checkPermission           s.checkPermission} method with
  *          {@code RuntimePermission("accessDeclaredMembers")}
  *          denies access to the declared field
  *
  *          <li> the caller's class loader is not the same as or an
  *          ancestor of the class loader for the current class and
- *          invocation of {@link java.lang.SecurityManager#checkPackageAccess SecurityManager#checkPackageAccess} denies access to the package
+ *          invocation of {@link java.lang.SecurityManager#checkPackageAccess           s.checkPackageAccess()} denies access to the package
  *          of this class
  *
  *          </ul>
@@ -1377,8 +1408,8 @@ public java.lang.reflect.Constructor<?>[] getDeclaredConstructors() throws java.
  * @jls 8.3 Field Declarations
  */
 
-@android.annotation.NonNull
-public native java.lang.reflect.Field getDeclaredField(@android.annotation.NonNull java.lang.String name) throws java.lang.NoSuchFieldException;
+@androidx.annotation.RecentlyNonNull
+public native java.lang.reflect.Field getDeclaredField(@androidx.annotation.RecentlyNonNull java.lang.String name) throws java.lang.NoSuchFieldException;
 
 /**
  * Returns a {@code Method} object that reflects the specified
@@ -1411,13 +1442,13 @@ public native java.lang.reflect.Field getDeclaredField(@android.annotation.NonNu
  *
  *          <li> the caller's class loader is not the same as the
  *          class loader of this class and invocation of
- *          {@link java.lang.SecurityManager#checkPermission SecurityManager#checkPermission} method with
+ *          {@link java.lang.SecurityManager#checkPermission           s.checkPermission} method with
  *          {@code RuntimePermission("accessDeclaredMembers")}
  *          denies access to the declared method
  *
  *          <li> the caller's class loader is not the same as or an
  *          ancestor of the class loader for the current class and
- *          invocation of {@link java.lang.SecurityManager#checkPackageAccess SecurityManager#checkPackageAccess} denies access to the package
+ *          invocation of {@link java.lang.SecurityManager#checkPackageAccess           s.checkPackageAccess()} denies access to the package
  *          of this class
  *
  *          </ul>
@@ -1427,8 +1458,8 @@ public native java.lang.reflect.Field getDeclaredField(@android.annotation.NonNu
  * @since JDK1.1
  */
 
-@android.annotation.NonNull
-public java.lang.reflect.Method getDeclaredMethod(@android.annotation.NonNull java.lang.String name, @android.annotation.Nullable java.lang.Class<?>... parameterTypes) throws java.lang.NoSuchMethodException, java.lang.SecurityException { throw new RuntimeException("Stub!"); }
+@androidx.annotation.RecentlyNonNull
+public java.lang.reflect.Method getDeclaredMethod(@androidx.annotation.RecentlyNonNull java.lang.String name, @androidx.annotation.RecentlyNullable java.lang.Class<?>... parameterTypes) throws java.lang.NoSuchMethodException, java.lang.SecurityException { throw new RuntimeException("Stub!"); }
 
 /**
  * Returns a {@code Constructor} object that reflects the specified
@@ -1453,13 +1484,13 @@ public java.lang.reflect.Method getDeclaredMethod(@android.annotation.NonNull ja
  *
  *          <li> the caller's class loader is not the same as the
  *          class loader of this class and invocation of
- *          {@link java.lang.SecurityManager#checkPermission SecurityManager#checkPermission} method with
+ *          {@link java.lang.SecurityManager#checkPermission           s.checkPermission} method with
  *          {@code RuntimePermission("accessDeclaredMembers")}
  *          denies access to the declared constructor
  *
  *          <li> the caller's class loader is not the same as or an
  *          ancestor of the class loader for the current class and
- *          invocation of {@link java.lang.SecurityManager#checkPackageAccess SecurityManager#checkPackageAccess} denies access to the package
+ *          invocation of {@link java.lang.SecurityManager#checkPackageAccess           s.checkPackageAccess()} denies access to the package
  *          of this class
  *
  *          </ul>
@@ -1467,15 +1498,15 @@ public java.lang.reflect.Method getDeclaredMethod(@android.annotation.NonNull ja
  * @since JDK1.1
  */
 
-@android.annotation.NonNull
-public java.lang.reflect.Constructor<T> getDeclaredConstructor(@android.annotation.Nullable java.lang.Class<?>... parameterTypes) throws java.lang.NoSuchMethodException, java.lang.SecurityException { throw new RuntimeException("Stub!"); }
+@androidx.annotation.RecentlyNonNull
+public java.lang.reflect.Constructor<T> getDeclaredConstructor(@androidx.annotation.RecentlyNullable java.lang.Class<?>... parameterTypes) throws java.lang.NoSuchMethodException, java.lang.SecurityException { throw new RuntimeException("Stub!"); }
 
 /**
  * Finds a resource with a given name.  The rules for searching resources
  * associated with a given class are implemented by the defining
- * {@linkplain java.lang.ClassLoader ClassLoader} of the class.  This method
+ * {@linkplain java.lang.ClassLoader class loader} of the class.  This method
  * delegates to this object's class loader.  If this object was loaded by
- * the bootstrap class loader, the method delegates to {@link java.lang.ClassLoader#getSystemResourceAsStream ClassLoader#getSystemResourceAsStream}.
+ * the bootstrap class loader, the method delegates to {@link java.lang.ClassLoader#getSystemResourceAsStream  }.
  *
  * <p> Before delegation, an absolute resource name is constructed from the
  * given resource name using this algorithm:
@@ -1505,15 +1536,15 @@ public java.lang.reflect.Constructor<T> getDeclaredConstructor(@android.annotati
  * @since  JDK1.1
  */
 
-@android.annotation.Nullable
-public java.io.InputStream getResourceAsStream(@android.annotation.NonNull java.lang.String name) { throw new RuntimeException("Stub!"); }
+@androidx.annotation.RecentlyNullable
+public java.io.InputStream getResourceAsStream(@androidx.annotation.RecentlyNonNull java.lang.String name) { throw new RuntimeException("Stub!"); }
 
 /**
  * Finds a resource with a given name.  The rules for searching resources
  * associated with a given class are implemented by the defining
- * {@linkplain java.lang.ClassLoader ClassLoader} of the class.  This method
+ * {@linkplain java.lang.ClassLoader class loader} of the class.  This method
  * delegates to this object's class loader.  If this object was loaded by
- * the bootstrap class loader, the method delegates to {@link java.lang.ClassLoader#getSystemResource ClassLoader#getSystemResource}.
+ * the bootstrap class loader, the method delegates to {@link java.lang.ClassLoader#getSystemResource  }.
  *
  * <p> Before delegation, an absolute resource name is constructed from the
  * given resource name using this algorithm:
@@ -1542,8 +1573,8 @@ public java.io.InputStream getResourceAsStream(@android.annotation.NonNull java.
  * @since  JDK1.1
  */
 
-@android.annotation.Nullable
-public java.net.URL getResource(@android.annotation.NonNull java.lang.String name) { throw new RuntimeException("Stub!"); }
+@androidx.annotation.RecentlyNullable
+public java.net.URL getResource(@androidx.annotation.RecentlyNonNull java.lang.String name) { throw new RuntimeException("Stub!"); }
 
 /**
  * Returns the {@code ProtectionDomain} of this class.  If there is a
@@ -1566,7 +1597,7 @@ public java.net.URL getResource(@android.annotation.NonNull java.lang.String nam
  * @since 1.2
  */
 
-@android.annotation.Nullable
+@androidx.annotation.RecentlyNullable
 public java.security.ProtectionDomain getProtectionDomain() { throw new RuntimeException("Stub!"); }
 
 /**
@@ -1618,7 +1649,7 @@ public boolean isEnum() { throw new RuntimeException("Stub!"); }
  * @since 1.5
  */
 
-@android.annotation.Nullable
+@androidx.annotation.RecentlyNullable
 public T[] getEnumConstants() { throw new RuntimeException("Stub!"); }
 
 /**
@@ -1634,8 +1665,8 @@ public T[] getEnumConstants() { throw new RuntimeException("Stub!"); }
  * @since 1.5
  */
 
-@android.annotation.Nullable
-public T cast(@android.annotation.Nullable java.lang.Object obj) { throw new RuntimeException("Stub!"); }
+@androidx.annotation.RecentlyNullable
+public T cast(@androidx.annotation.RecentlyNullable java.lang.Object obj) { throw new RuntimeException("Stub!"); }
 
 /**
  * Casts this {@code Class} object to represent a subclass of the class
@@ -1660,16 +1691,16 @@ public T cast(@android.annotation.Nullable java.lang.Object obj) { throw new Run
  * @since 1.5
  */
 
-@android.annotation.NonNull
-public <U> java.lang.Class<? extends U> asSubclass(@android.annotation.NonNull java.lang.Class<U> clazz) { throw new RuntimeException("Stub!"); }
+@androidx.annotation.RecentlyNonNull
+public <U> java.lang.Class<? extends U> asSubclass(@androidx.annotation.RecentlyNonNull java.lang.Class<U> clazz) { throw new RuntimeException("Stub!"); }
 
 /**
  * @throws java.lang.NullPointerException {@inheritDoc}
  * @since 1.5
  */
 
-@android.annotation.Nullable
-public <A extends java.lang.annotation.Annotation> A getAnnotation(@android.annotation.NonNull java.lang.Class<A> annotationClass) { throw new RuntimeException("Stub!"); }
+@androidx.annotation.RecentlyNullable
+public <A extends java.lang.annotation.Annotation> A getAnnotation(@androidx.annotation.RecentlyNonNull java.lang.Class<A> annotationClass) { throw new RuntimeException("Stub!"); }
 
 /**
  * {@inheritDoc}
@@ -1677,21 +1708,21 @@ public <A extends java.lang.annotation.Annotation> A getAnnotation(@android.anno
  * @since 1.5
  */
 
-public boolean isAnnotationPresent(@android.annotation.NonNull java.lang.Class<? extends java.lang.annotation.Annotation> annotationClass) { throw new RuntimeException("Stub!"); }
+public boolean isAnnotationPresent(@androidx.annotation.RecentlyNonNull java.lang.Class<? extends java.lang.annotation.Annotation> annotationClass) { throw new RuntimeException("Stub!"); }
 
 /**
  * @throws java.lang.NullPointerException {@inheritDoc}
  * @since 1.8
  */
 
-@android.annotation.NonNull
-public <A extends java.lang.annotation.Annotation> A[] getAnnotationsByType(@android.annotation.NonNull java.lang.Class<A> annotationClass) { throw new RuntimeException("Stub!"); }
+@androidx.annotation.RecentlyNonNull
+public <A extends java.lang.annotation.Annotation> A[] getAnnotationsByType(@androidx.annotation.RecentlyNonNull java.lang.Class<A> annotationClass) { throw new RuntimeException("Stub!"); }
 
 /**
  * @since 1.5
  */
 
-@android.annotation.NonNull
+@androidx.annotation.RecentlyNonNull
 public java.lang.annotation.Annotation[] getAnnotations() { throw new RuntimeException("Stub!"); }
 
 /**
@@ -1699,14 +1730,14 @@ public java.lang.annotation.Annotation[] getAnnotations() { throw new RuntimeExc
  * @since 1.8
  */
 
-@android.annotation.Nullable
-public native <A extends java.lang.annotation.Annotation> A getDeclaredAnnotation(@android.annotation.NonNull java.lang.Class<A> annotationClass);
+@androidx.annotation.RecentlyNullable
+public native <A extends java.lang.annotation.Annotation> A getDeclaredAnnotation(@androidx.annotation.RecentlyNonNull java.lang.Class<A> annotationClass);
 
 /**
  * @since 1.5
  */
 
-@android.annotation.NonNull
+@androidx.annotation.RecentlyNonNull
 public native java.lang.annotation.Annotation[] getDeclaredAnnotations();
 }
 

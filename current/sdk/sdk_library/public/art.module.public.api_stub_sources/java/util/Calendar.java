@@ -314,32 +314,32 @@ protected Calendar() { throw new RuntimeException("Stub!"); }
  * @param aLocale the locale for the week data
  */
 
-protected Calendar(@android.annotation.NonNull java.util.TimeZone zone, @android.annotation.NonNull java.util.Locale aLocale) { throw new RuntimeException("Stub!"); }
+protected Calendar(@androidx.annotation.RecentlyNonNull java.util.TimeZone zone, @androidx.annotation.RecentlyNonNull java.util.Locale aLocale) { throw new RuntimeException("Stub!"); }
 
 /**
  * Gets a calendar using the default time zone and locale. The
  * <code>Calendar</code> returned is based on the current time
  * in the default time zone with the default
- * {@link java.util.Locale.Category#FORMAT Locale.Category#FORMAT} locale.
+ * {@link java.util.Locale.Category#FORMAT FORMAT} locale.
  *
  * @return a Calendar.
  */
 
-@android.annotation.NonNull
+@androidx.annotation.RecentlyNonNull
 public static java.util.Calendar getInstance() { throw new RuntimeException("Stub!"); }
 
 /**
  * Gets a calendar using the specified time zone and default locale.
  * The <code>Calendar</code> returned is based on the current time
  * in the given time zone with the default
- * {@link java.util.Locale.Category#FORMAT Locale.Category#FORMAT} locale.
+ * {@link java.util.Locale.Category#FORMAT FORMAT} locale.
  *
  * @param zone the time zone to use
  * @return a Calendar.
  */
 
-@android.annotation.NonNull
-public static java.util.Calendar getInstance(@android.annotation.NonNull java.util.TimeZone zone) { throw new RuntimeException("Stub!"); }
+@androidx.annotation.RecentlyNonNull
+public static java.util.Calendar getInstance(@androidx.annotation.RecentlyNonNull java.util.TimeZone zone) { throw new RuntimeException("Stub!"); }
 
 /**
  * Gets a calendar using the default time zone and specified locale.
@@ -350,8 +350,8 @@ public static java.util.Calendar getInstance(@android.annotation.NonNull java.ut
  * @return a Calendar.
  */
 
-@android.annotation.NonNull
-public static java.util.Calendar getInstance(@android.annotation.NonNull java.util.Locale aLocale) { throw new RuntimeException("Stub!"); }
+@androidx.annotation.RecentlyNonNull
+public static java.util.Calendar getInstance(@androidx.annotation.RecentlyNonNull java.util.Locale aLocale) { throw new RuntimeException("Stub!"); }
 
 /**
  * Gets a calendar with the specified time zone and locale.
@@ -363,8 +363,8 @@ public static java.util.Calendar getInstance(@android.annotation.NonNull java.ut
  * @return a Calendar.
  */
 
-@android.annotation.NonNull
-public static java.util.Calendar getInstance(@android.annotation.NonNull java.util.TimeZone zone, @android.annotation.NonNull java.util.Locale aLocale) { throw new RuntimeException("Stub!"); }
+@androidx.annotation.RecentlyNonNull
+public static java.util.Calendar getInstance(@androidx.annotation.RecentlyNonNull java.util.TimeZone zone, @androidx.annotation.RecentlyNonNull java.util.Locale aLocale) { throw new RuntimeException("Stub!"); }
 
 /**
  * Returns an array of all locales for which the <code>getInstance</code>
@@ -376,7 +376,7 @@ public static java.util.Calendar getInstance(@android.annotation.NonNull java.ut
  *         <code>Calendar</code> instances are available.
  */
 
-@android.annotation.NonNull
+@androidx.annotation.RecentlyNonNull
 public static synchronized java.util.Locale[] getAvailableLocales() { throw new RuntimeException("Stub!"); }
 
 /**
@@ -413,7 +413,7 @@ protected abstract void computeFields();
  * @see #getTimeInMillis()
  */
 
-@android.annotation.NonNull
+@androidx.annotation.RecentlyNonNull
 public final java.util.Date getTime() { throw new RuntimeException("Stub!"); }
 
 /**
@@ -428,7 +428,7 @@ public final java.util.Date getTime() { throw new RuntimeException("Stub!"); }
  * @see #setTimeInMillis(long)
  */
 
-public final void setTime(@android.annotation.NonNull java.util.Date date) { throw new RuntimeException("Stub!"); }
+public final void setTime(@androidx.annotation.RecentlyNonNull java.util.Date date) { throw new RuntimeException("Stub!"); }
 
 /**
  * Returns this Calendar's time value in milliseconds.
@@ -613,7 +613,7 @@ public final boolean isSet(int field) { throw new RuntimeException("Stub!"); }
  * <code>field</code> value in the given <code>style</code> and
  * <code>locale</code>.  If no string representation is
  * applicable, <code>null</code> is returned. This method calls
- * {@link java.util.Calendar#get(int) Calendar#get(int)} to get the calendar
+ * {@link java.util.Calendar#get(int) get(field)} to get the calendar
  * <code>field</code> value if the string representation is
  * applicable to the given calendar <code>field</code>.
  *
@@ -653,8 +653,8 @@ public final boolean isSet(int field) { throw new RuntimeException("Stub!"); }
  * @since 1.6
  */
 
-@android.annotation.Nullable
-public java.lang.String getDisplayName(int field, int style, @android.annotation.NonNull java.util.Locale locale) { throw new RuntimeException("Stub!"); }
+@androidx.annotation.RecentlyNullable
+public java.lang.String getDisplayName(int field, int style, @androidx.annotation.RecentlyNonNull java.util.Locale locale) { throw new RuntimeException("Stub!"); }
 
 /**
  * Returns a {@code Map} containing all names of the calendar
@@ -705,8 +705,8 @@ public java.lang.String getDisplayName(int field, int style, @android.annotation
  * @since 1.6
  */
 
-@android.annotation.Nullable
-public java.util.Map<java.lang.String,java.lang.Integer> getDisplayNames(int field, int style, @android.annotation.NonNull java.util.Locale locale) { throw new RuntimeException("Stub!"); }
+@androidx.annotation.RecentlyNullable
+public java.util.Map<java.lang.String,java.lang.Integer> getDisplayNames(int field, int style, @androidx.annotation.RecentlyNonNull java.util.Locale locale) { throw new RuntimeException("Stub!"); }
 
 /**
  * Fills in any unset fields in the calendar fields. First, the {@link
@@ -734,7 +734,7 @@ protected void complete() { throw new RuntimeException("Stub!"); }
  * @see java.util.Locale#getUnicodeLocaleType(String)
  */
 
-@android.annotation.NonNull
+@androidx.annotation.RecentlyNonNull
 public static java.util.Set<java.lang.String> getAvailableCalendarTypes() { throw new RuntimeException("Stub!"); }
 
 /**
@@ -755,7 +755,7 @@ public static java.util.Set<java.lang.String> getAvailableCalendarTypes() { thro
  * @see java.util.Locale.Builder#setUnicodeLocaleKeyword(String, String)
  */
 
-@android.annotation.NonNull
+@androidx.annotation.RecentlyNonNull
 public java.lang.String getCalendarType() { throw new RuntimeException("Stub!"); }
 
 /**
@@ -781,7 +781,7 @@ public java.lang.String getCalendarType() { throw new RuntimeException("Stub!");
  * <code>false</code> otherwise.
  */
 
-public boolean equals(@android.annotation.Nullable java.lang.Object obj) { throw new RuntimeException("Stub!"); }
+public boolean equals(@androidx.annotation.RecentlyNullable java.lang.Object obj) { throw new RuntimeException("Stub!"); }
 
 /**
  * Returns a hash code for this calendar.
@@ -809,7 +809,7 @@ public int hashCode() { throw new RuntimeException("Stub!"); }
  * @see     #compareTo(Calendar)
  */
 
-public boolean before(@android.annotation.Nullable java.lang.Object when) { throw new RuntimeException("Stub!"); }
+public boolean before(@androidx.annotation.RecentlyNullable java.lang.Object when) { throw new RuntimeException("Stub!"); }
 
 /**
  * Returns whether this <code>Calendar</code> represents a time
@@ -828,7 +828,7 @@ public boolean before(@android.annotation.Nullable java.lang.Object when) { thro
  * @see     #compareTo(Calendar)
  */
 
-public boolean after(@android.annotation.Nullable java.lang.Object when) { throw new RuntimeException("Stub!"); }
+public boolean after(@androidx.annotation.RecentlyNullable java.lang.Object when) { throw new RuntimeException("Stub!"); }
 
 /**
  * Compares the time values (millisecond offsets from the <a
@@ -850,7 +850,7 @@ public boolean after(@android.annotation.Nullable java.lang.Object when) { throw
  * @since   1.5
  */
 
-public int compareTo(@android.annotation.NonNull java.util.Calendar anotherCalendar) { throw new RuntimeException("Stub!"); }
+public int compareTo(@androidx.annotation.RecentlyNonNull java.util.Calendar anotherCalendar) { throw new RuntimeException("Stub!"); }
 
 /**
  * Adds or subtracts the specified amount of time to the given calendar field,
@@ -917,7 +917,7 @@ public void roll(int field, int amount) { throw new RuntimeException("Stub!"); }
  * @param value the given time zone.
  */
 
-public void setTimeZone(@android.annotation.NonNull java.util.TimeZone value) { throw new RuntimeException("Stub!"); }
+public void setTimeZone(@androidx.annotation.RecentlyNonNull java.util.TimeZone value) { throw new RuntimeException("Stub!"); }
 
 /**
  * Gets the time zone.
@@ -925,7 +925,7 @@ public void setTimeZone(@android.annotation.NonNull java.util.TimeZone value) { 
  * @return the time zone object associated with this calendar.
  */
 
-@android.annotation.NonNull
+@androidx.annotation.RecentlyNonNull
 public java.util.TimeZone getTimeZone() { throw new RuntimeException("Stub!"); }
 
 /**
@@ -1224,7 +1224,7 @@ public int getActualMaximum(int field) { throw new RuntimeException("Stub!"); }
  * @return a copy of this object.
  */
 
-@android.annotation.NonNull
+@androidx.annotation.RecentlyNonNull
 public java.lang.Object clone() { throw new RuntimeException("Stub!"); }
 
 /**
@@ -1236,7 +1236,7 @@ public java.lang.Object clone() { throw new RuntimeException("Stub!"); }
  * @return  a string representation of this calendar.
  */
 
-@android.annotation.NonNull
+@androidx.annotation.RecentlyNonNull
 public java.lang.String toString() { throw new RuntimeException("Stub!"); }
 
 /**
@@ -1249,7 +1249,7 @@ public java.lang.String toString() { throw new RuntimeException("Stub!"); }
  * @since 1.8
  */
 
-@android.annotation.NonNull
+@androidx.annotation.RecentlyNonNull
 public final java.time.Instant toInstant() { throw new RuntimeException("Stub!"); }
 
 /**
@@ -1775,7 +1775,7 @@ protected boolean areFieldsSet;
  * @serial
  */
 
-@android.annotation.NonNull protected int[] fields;
+@androidx.annotation.RecentlyNonNull protected int[] fields;
 
 /**
  * The flags which tell if a specified calendar field for the calendar is set.
@@ -1786,7 +1786,7 @@ protected boolean areFieldsSet;
  * @serial
  */
 
-@android.annotation.NonNull protected boolean[] isSet;
+@androidx.annotation.RecentlyNonNull protected boolean[] isSet;
 
 /**
  * True if then the value of <code>time</code> is valid.
@@ -1812,7 +1812,7 @@ protected long time;
  * <p>There are two ways to set a {@code Calendar} to a date-time value. One
  * is to set the instant parameter to a millisecond offset from the <a
  * href="Calendar.html#Epoch">Epoch</a>. The other is to set individual
- * field parameters, such as {@link java.util.Calendar#YEAR Calendar#YEAR}, to their desired
+ * field parameters, such as {@link java.util.Calendar#YEAR YEAR}, to their desired
  * values. These two ways can't be mixed. Trying to set both the instant and
  * individual fields will cause an {@link java.lang.IllegalStateException IllegalStateException} to be
  * thrown. However, it is permitted to override previous values of the
@@ -1820,7 +1820,7 @@ protected long time;
  *
  * <p>If no enough field parameters are given for determining date and/or
  * time, calendar specific default values are used when building a
- * {@code Calendar}. For example, if the {@link java.util.Calendar#YEAR Calendar#YEAR} value
+ * {@code Calendar}. For example, if the {@link java.util.Calendar#YEAR YEAR} value
  * isn't given for the Gregorian calendar, 1970 will be used. If there are
  * any conflicts among field parameters, the <a
  * href="Calendar.html#resolution"> resolution rules</a> are applied.
@@ -1844,7 +1844,7 @@ protected long time;
  *   Calendar cal = new Calendar.Builder().setCalendarType("iso8601")
  *                        .setWeekDate(2013, 1, MONDAY).build();</pre>
  * <p>The following code produces a Japanese {@code Calendar} with date
- * 1989-01-08 (Gregorian), assuming that the default {@link java.util.Calendar#ERA Calendar#ERA}
+ * 1989-01-08 (Gregorian), assuming that the default {@link java.util.Calendar#ERA ERA}
  * is <em>Heisei</em> that started on that day.
  * <pre>
  *   Calendar cal = new Calendar.Builder().setCalendarType("japanese")
@@ -1878,7 +1878,7 @@ public Builder() { throw new RuntimeException("Stub!"); }
  * @see java.util.Calendar#time
  */
 
-@android.annotation.NonNull
+@androidx.annotation.RecentlyNonNull
 public java.util.Calendar.Builder setInstant(long instant) { throw new RuntimeException("Stub!"); }
 
 /**
@@ -1897,13 +1897,13 @@ public java.util.Calendar.Builder setInstant(long instant) { throw new RuntimeEx
  * @see java.util.Calendar#time
  */
 
-@android.annotation.NonNull
-public java.util.Calendar.Builder setInstant(@android.annotation.NonNull java.util.Date instant) { throw new RuntimeException("Stub!"); }
+@androidx.annotation.RecentlyNonNull
+public java.util.Calendar.Builder setInstant(@androidx.annotation.RecentlyNonNull java.util.Date instant) { throw new RuntimeException("Stub!"); }
 
 /**
  * Sets the {@code field} parameter to the given {@code value}.
  * {@code field} is an index to the {@link java.util.Calendar#fields Calendar#fields}, such as
- * {@link java.util.Calendar#DAY_OF_MONTH Calendar#DAY_OF_MONTH}. Field value validation is
+ * {@link java.util.Calendar#DAY_OF_MONTH DAY_OF_MONTH}. Field value validation is
  * not performed in this method. Any out of range values are either
  * normalized in lenient mode or detected as an invalid value in
  * non-lenient mode when building a {@code Calendar}.
@@ -1918,7 +1918,7 @@ public java.util.Calendar.Builder setInstant(@android.annotation.NonNull java.ut
  * @see java.util.Calendar#set(int, int)
  */
 
-@android.annotation.NonNull
+@androidx.annotation.RecentlyNonNull
 public java.util.Calendar.Builder set(int field, int value) { throw new RuntimeException("Stub!"); }
 
 /**
@@ -1946,8 +1946,8 @@ public java.util.Calendar.Builder set(int field, int value) { throw new RuntimeE
  *             {@link java.lang.Integer#MAX_VALUE Integer#MAX_VALUE}) times.
  */
 
-@android.annotation.NonNull
-public java.util.Calendar.Builder setFields(@android.annotation.NonNull int... fieldValuePairs) { throw new RuntimeException("Stub!"); }
+@androidx.annotation.RecentlyNonNull
+public java.util.Calendar.Builder setFields(@androidx.annotation.RecentlyNonNull int... fieldValuePairs) { throw new RuntimeException("Stub!"); }
 
 /**
  * Sets the date field parameters to the values given by {@code year},
@@ -1958,14 +1958,14 @@ public java.util.Calendar.Builder setFields(@android.annotation.NonNull int... f
  *             Calendar.MONTH, month,
  *             Calendar.DAY_OF_MONTH, dayOfMonth);</pre>
  *
- * @param year       the {@link java.util.Calendar#YEAR Calendar#YEAR} value
- * @param month      the {@link java.util.Calendar#MONTH Calendar#MONTH} value
+ * @param year       the {@link java.util.Calendar#YEAR YEAR} value
+ * @param month      the {@link java.util.Calendar#MONTH MONTH} value
  *                   (the month numbering is <em>0-based</em>).
- * @param dayOfMonth the {@link java.util.Calendar#DAY_OF_MONTH Calendar#DAY_OF_MONTH} value
+ * @param dayOfMonth the {@link java.util.Calendar#DAY_OF_MONTH DAY_OF_MONTH} value
  * @return this {@code Calendar.Builder}
  */
 
-@android.annotation.NonNull
+@androidx.annotation.RecentlyNonNull
 public java.util.Calendar.Builder setDate(int year, int month, int dayOfMonth) { throw new RuntimeException("Stub!"); }
 
 /**
@@ -1975,14 +1975,14 @@ public java.util.Calendar.Builder setDate(int year, int month, int dayOfMonth) {
  * <pre>
  *   setTimeOfDay(hourOfDay, minute, second, 0);</pre>
  *
- * @param hourOfDay the {@link java.util.Calendar#HOUR_OF_DAY Calendar#HOUR_OF_DAY} value
+ * @param hourOfDay the {@link java.util.Calendar#HOUR_OF_DAY HOUR_OF_DAY} value
  *                  (24-hour clock)
- * @param minute    the {@link java.util.Calendar#MINUTE Calendar#MINUTE} value
- * @param second    the {@link java.util.Calendar#SECOND Calendar#SECOND} value
+ * @param minute    the {@link java.util.Calendar#MINUTE MINUTE} value
+ * @param second    the {@link java.util.Calendar#SECOND SECOND} value
  * @return this {@code Calendar.Builder}
  */
 
-@android.annotation.NonNull
+@androidx.annotation.RecentlyNonNull
 public java.util.Calendar.Builder setTimeOfDay(int hourOfDay, int minute, int second) { throw new RuntimeException("Stub!"); }
 
 /**
@@ -1995,15 +1995,15 @@ public java.util.Calendar.Builder setTimeOfDay(int hourOfDay, int minute, int se
  *             Calendar.SECOND, second,
  *             Calendar.MILLISECOND, millis);</pre>
  *
- * @param hourOfDay the {@link java.util.Calendar#HOUR_OF_DAY Calendar#HOUR_OF_DAY} value
+ * @param hourOfDay the {@link java.util.Calendar#HOUR_OF_DAY HOUR_OF_DAY} value
  *                  (24-hour clock)
- * @param minute    the {@link java.util.Calendar#MINUTE Calendar#MINUTE} value
- * @param second    the {@link java.util.Calendar#SECOND Calendar#SECOND} value
- * @param millis    the {@link java.util.Calendar#MILLISECOND Calendar#MILLISECOND} value
+ * @param minute    the {@link java.util.Calendar#MINUTE MINUTE} value
+ * @param second    the {@link java.util.Calendar#SECOND SECOND} value
+ * @param millis    the {@link java.util.Calendar#MILLISECOND MILLISECOND} value
  * @return this {@code Calendar.Builder}
  */
 
-@android.annotation.NonNull
+@androidx.annotation.RecentlyNonNull
 public java.util.Calendar.Builder setTimeOfDay(int hourOfDay, int minute, int second, int millis) { throw new RuntimeException("Stub!"); }
 
 /**
@@ -2016,20 +2016,20 @@ public java.util.Calendar.Builder setTimeOfDay(int hourOfDay, int minute, int se
  * @param weekYear   the week year
  * @param weekOfYear the week number based on {@code weekYear}
  * @param dayOfWeek  the day of week value: one of the constants
- *     for the {@link java.util.Calendar#DAY_OF_WEEK Calendar#DAY_OF_WEEK} field:
- *     {@link java.util.Calendar#SUNDAY Calendar#SUNDAY}, ..., {@link java.util.Calendar#SATURDAY Calendar#SATURDAY}.
+ *     for the {@link java.util.Calendar#DAY_OF_WEEK DAY_OF_WEEK} field:
+ *     {@link java.util.Calendar#SUNDAY SUNDAY}, ..., {@link java.util.Calendar#SATURDAY SATURDAY}.
  * @return this {@code Calendar.Builder}
  * @see java.util.Calendar#setWeekDate(int, int, int)
  * @see java.util.Calendar#isWeekDateSupported()
  */
 
-@android.annotation.NonNull
+@androidx.annotation.RecentlyNonNull
 public java.util.Calendar.Builder setWeekDate(int weekYear, int weekOfYear, int dayOfWeek) { throw new RuntimeException("Stub!"); }
 
 /**
  * Sets the time zone parameter to the given {@code zone}. If no time
  * zone parameter is given to this {@code Caledar.Builder}, the
- * {@linkplain java.util.TimeZone#getDefault() TimeZone#getDefault()} will be used in the {@link #build() build}
+ * {@linkplain java.util.TimeZone#getDefault()  <code>TimeZone</code>} will be used in the {@link #build() build}
  * method.
  *
  * @param zone the {@link java.util.TimeZone TimeZone}
@@ -2038,8 +2038,8 @@ public java.util.Calendar.Builder setWeekDate(int weekYear, int weekOfYear, int 
  * @see java.util.Calendar#setTimeZone(TimeZone)
  */
 
-@android.annotation.NonNull
-public java.util.Calendar.Builder setTimeZone(@android.annotation.NonNull java.util.TimeZone zone) { throw new RuntimeException("Stub!"); }
+@androidx.annotation.RecentlyNonNull
+public java.util.Calendar.Builder setTimeZone(@androidx.annotation.RecentlyNonNull java.util.TimeZone zone) { throw new RuntimeException("Stub!"); }
 
 /**
  * Sets the lenient mode parameter to the value given by {@code lenient}.
@@ -2052,7 +2052,7 @@ public java.util.Calendar.Builder setTimeZone(@android.annotation.NonNull java.u
  * @see java.util.Calendar#setLenient(boolean)
  */
 
-@android.annotation.NonNull
+@androidx.annotation.RecentlyNonNull
 public java.util.Calendar.Builder setLenient(boolean lenient) { throw new RuntimeException("Stub!"); }
 
 /**
@@ -2062,7 +2062,7 @@ public java.util.Calendar.Builder setLenient(boolean lenient) { throw new Runtim
  * {@linkplain #setLocale(java.util.Locale) locale}.
  *
  * <p>In addition to the available calendar types returned by the
- * {@link java.util.Calendar#getAvailableCalendarTypes() Calendar#getAvailableCalendarTypes()}
+ * {@link java.util.Calendar#getAvailableCalendarTypes() Calendar.getAvailableCalendarTypes}
  * method, {@code "gregorian"} and {@code "iso8601"} as aliases of
  * {@code "gregory"} can be used with this method.
  *
@@ -2075,12 +2075,12 @@ public java.util.Calendar.Builder setLenient(boolean lenient) { throw new Runtim
  * @see java.util.Calendar#getAvailableCalendarTypes()
  */
 
-@android.annotation.NonNull
-public java.util.Calendar.Builder setCalendarType(@android.annotation.NonNull java.lang.String type) { throw new RuntimeException("Stub!"); }
+@androidx.annotation.RecentlyNonNull
+public java.util.Calendar.Builder setCalendarType(@androidx.annotation.RecentlyNonNull java.lang.String type) { throw new RuntimeException("Stub!"); }
 
 /**
  * Sets the locale parameter to the given {@code locale}. If no locale
- * is given to this {@code Calendar.Builder}, the {@linkplain java.util.Locale#getDefault(java.util.Locale.Category) Locale#getDefault(Locale.Category)}
+ * is given to this {@code Calendar.Builder}, the {@linkplain java.util.Locale#getDefault(java.util.Locale.Category) default <code>Locale</code>}
  * for {@link java.util.Locale.Category#FORMAT Locale.Category#FORMAT} will be used.
  *
  * <p>If no calendar type is explicitly given by a call to the
@@ -2098,8 +2098,8 @@ public java.util.Calendar.Builder setCalendarType(@android.annotation.NonNull ja
  * @see java.util.Calendar#getInstance(Locale)
  */
 
-@android.annotation.NonNull
-public java.util.Calendar.Builder setLocale(@android.annotation.NonNull java.util.Locale locale) { throw new RuntimeException("Stub!"); }
+@androidx.annotation.RecentlyNonNull
+public java.util.Calendar.Builder setLocale(@androidx.annotation.RecentlyNonNull java.util.Locale locale) { throw new RuntimeException("Stub!"); }
 
 /**
  * Sets the week definition parameters to the values given by
@@ -2120,7 +2120,7 @@ public java.util.Calendar.Builder setLocale(@android.annotation.NonNull java.uti
  * @see java.util.Calendar#getMinimalDaysInFirstWeek()
  */
 
-@android.annotation.NonNull
+@androidx.annotation.RecentlyNonNull
 public java.util.Calendar.Builder setWeekDefinition(int firstDayOfWeek, int minimalDaysInFirstWeek) { throw new RuntimeException("Stub!"); }
 
 /**
@@ -2131,13 +2131,13 @@ public java.util.Calendar.Builder setWeekDefinition(int firstDayOfWeek, int mini
  * calendar type is given, the locale's default calendar is created.
  *
  * <p>If the calendar type is {@code "iso8601"}, the
- * {@linkplain java.util.GregorianCalendar#setGregorianChange(java.util.Date) GregorianCalendar#setGregorianChange(Date)}
+ * {@linkplain java.util.GregorianCalendar#setGregorianChange(java.util.Date) Gregorian change date}
  * of a {@link java.util.GregorianCalendar GregorianCalendar} is set to {@code Date(Long.MIN_VALUE)}
  * to be the <em>proleptic</em> Gregorian calendar. Its week definition
  * parameters are also set to be <a
  * href="GregorianCalendar.html#iso8601_compatible_setting">compatible
  * with the ISO 8601 standard</a>. Note that the
- * {@link java.util.GregorianCalendar#getCalendarType() GregorianCalendar#getCalendarType()} method of
+ * {@link java.util.GregorianCalendar#getCalendarType() getCalendarType} method of
  * a {@code GregorianCalendar} created with {@code "iso8601"} returns
  * {@code "gregory"}.
  *
@@ -2158,7 +2158,7 @@ public java.util.Calendar.Builder setWeekDefinition(int firstDayOfWeek, int mini
  * @see java.util.TimeZone#getDefault()
  */
 
-@android.annotation.NonNull
+@androidx.annotation.RecentlyNonNull
 public java.util.Calendar build() { throw new RuntimeException("Stub!"); }
 }
 

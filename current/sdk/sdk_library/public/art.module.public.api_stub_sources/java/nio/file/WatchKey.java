@@ -29,7 +29,7 @@ package java.nio.file;
 import java.util.List;
 
 /**
- * A token representing the registration of a {@link java.nio.file.Watchable Watchable} object
+ * A token representing the registration of a {@link java.nio.file.Watchable watchable} object
  * with a {@link java.nio.file.WatchService WatchService}.
  *
  * <p> A watch key is created when a watchable object is registered with a watch
@@ -39,12 +39,12 @@ import java.util.List;
  *     method, or</li>
  *   <li> Cancelled implicitly, because the object is no longer accessible,
  *     or </li>
- *   <li> By {@link java.nio.file.WatchService#close WatchService#close} the watch service. </li>
+ *   <li> By {@link java.nio.file.WatchService#close closing} the watch service. </li>
  * </ol>
  *
  * <p> A watch key has a state. When initially created the key is said to be
  * <em>ready</em>. When an event is detected then the key is <em>signalled</em>
- * and queued so that it can be retrieved by invoking the watch service's {@link java.nio.file.WatchService#poll() WatchService#poll()} or {@link java.nio.file.WatchService#take() WatchService#take()} methods. Once
+ * and queued so that it can be retrieved by invoking the watch service's {@link java.nio.file.WatchService#poll() poll} or {@link java.nio.file.WatchService#take() take} methods. Once
  * signalled, a key remains in this state until its {@link #reset reset} method
  * is invoked to return the key to the ready state. Events detected while the
  * key is in the signalled state are queued but do not cause the key to be

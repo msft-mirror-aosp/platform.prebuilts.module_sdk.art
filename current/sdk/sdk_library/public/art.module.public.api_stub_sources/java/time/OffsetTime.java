@@ -100,7 +100,7 @@ private OffsetTime() { throw new RuntimeException("Stub!"); }
 /**
  * Obtains the current time from the system clock in the default time-zone.
  * <p>
- * This will query the {@link java.time.Clock#systemDefaultZone() Clock#systemDefaultZone()} in the default
+ * This will query the {@link java.time.Clock#systemDefaultZone() system clock} in the default
  * time-zone to obtain the current time.
  * The offset will be calculated from the time-zone in the clock.
  * <p>
@@ -115,7 +115,7 @@ public static java.time.OffsetTime now() { throw new RuntimeException("Stub!"); 
 /**
  * Obtains the current time from the system clock in the specified time-zone.
  * <p>
- * This will query the {@link java.time.Clock#system(java.time.ZoneId) Clock#system(ZoneId)} to obtain the current time.
+ * This will query the {@link java.time.Clock#system(java.time.ZoneId) system clock} to obtain the current time.
  * Specifying the time-zone avoids dependence on the default time-zone.
  * The offset will be calculated from the specified time-zone.
  * <p>
@@ -135,7 +135,7 @@ public static java.time.OffsetTime now(java.time.ZoneId zone) { throw new Runtim
  * The offset will be calculated from the time-zone in the clock.
  * <p>
  * Using this method allows the use of an alternate clock for testing.
- * The alternate clock may be introduced using {@link java.time.Clock Clock}.
+ * The alternate clock may be introduced using {@link java.time.Clock dependency injection}.
  *
  * @param clock  the clock to use, not null
  * @return the current time, not null
@@ -619,13 +619,13 @@ public java.time.OffsetTime withNano(int nanoOfSecond) { throw new RuntimeExcept
  * <p>
  * Truncation returns a copy of the original time with fields
  * smaller than the specified unit set to zero.
- * For example, truncating with the {@link java.time.temporal.ChronoUnit#MINUTES ChronoUnit#MINUTES} unit
+ * For example, truncating with the {@link java.time.temporal.ChronoUnit#MINUTES minutes} unit
  * will set the second-of-minute and nano-of-second field to zero.
  * <p>
- * The unit must have a {@linkplain java.time.temporal.TemporalUnit#getDuration() TemporalUnit#getDuration()}
+ * The unit must have a {@linkplain java.time.temporal.TemporalUnit#getDuration() duration}
  * that divides into the length of a standard day without remainder.
  * This includes all supplied time units on {@link java.time.temporal.ChronoUnit ChronoUnit} and
- * {@link java.time.temporal.ChronoUnit#DAYS ChronoUnit#DAYS}. Other units throw an exception.
+ * {@link java.time.temporal.ChronoUnit#DAYS DAYS}. Other units throw an exception.
  * <p>
  * The offset does not affect the calculation and will be the same in the result.
  * <p>

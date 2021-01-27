@@ -113,7 +113,7 @@ public java.nio.file.attribute.DosFileAttributes readAttributes() throws java.io
  *          if an I/O error occurs
  * @throws  java.lang.SecurityException
  *          In the case of the default, and a security manager is installed,
- *          its  {@link java.lang.SecurityManager#checkWrite(java.lang.String) SecurityManager#checkWrite(String)} method
+ *          its  {@link java.lang.SecurityManager#checkWrite(java.lang.String) checkWrite} method
  *          is invoked to check write access to the file
  */
 
@@ -134,7 +134,7 @@ public void setReadOnly(boolean value) throws java.io.IOException;
  *          if an I/O error occurs
  * @throws  java.lang.SecurityException
  *          In the case of the default, and a security manager is installed,
- *          its  {@link java.lang.SecurityManager#checkWrite(java.lang.String) SecurityManager#checkWrite(String)} method
+ *          its  {@link java.lang.SecurityManager#checkWrite(java.lang.String) checkWrite} method
  *          is invoked to check write access to the file
  */
 
@@ -155,7 +155,7 @@ public void setHidden(boolean value) throws java.io.IOException;
  *          if an I/O error occurs
  * @throws  java.lang.SecurityException
  *          In the case of the default, and a security manager is installed,
- *          its  {@link java.lang.SecurityManager#checkWrite(java.lang.String) SecurityManager#checkWrite(String)} method
+ *          its  {@link java.lang.SecurityManager#checkWrite(java.lang.String) checkWrite} method
  *          is invoked to check write access to the file
  */
 
@@ -176,7 +176,7 @@ public void setSystem(boolean value) throws java.io.IOException;
  *          if an I/O error occurs
  * @throws  java.lang.SecurityException
  *          In the case of the default, and a security manager is installed,
- *          its  {@link java.lang.SecurityManager#checkWrite(java.lang.String) SecurityManager#checkWrite(String)} method
+ *          its  {@link java.lang.SecurityManager#checkWrite(java.lang.String) checkWrite} method
  *          is invoked to check write access to the file
  */
 

@@ -65,7 +65,7 @@ public abstract class Enum<E extends java.lang.Enum<E>> implements java.lang.Com
  *         an ordinal of zero).
  */
 
-protected Enum(@android.annotation.NonNull java.lang.String name, int ordinal) { throw new RuntimeException("Stub!"); }
+protected Enum(@androidx.annotation.RecentlyNonNull java.lang.String name, int ordinal) { throw new RuntimeException("Stub!"); }
 
 /**
  * Returns the name of this enum constant, exactly as declared in its
@@ -80,7 +80,7 @@ protected Enum(@android.annotation.NonNull java.lang.String name, int ordinal) {
  * @return the name of this enum constant
  */
 
-@android.annotation.NonNull
+@androidx.annotation.RecentlyNonNull
 public final java.lang.String name() { throw new RuntimeException("Stub!"); }
 
 /**
@@ -106,7 +106,7 @@ public final int ordinal() { throw new RuntimeException("Stub!"); }
  * @return the name of this enum constant
  */
 
-@android.annotation.NonNull
+@androidx.annotation.RecentlyNonNull
 public java.lang.String toString() { throw new RuntimeException("Stub!"); }
 
 /**
@@ -118,7 +118,7 @@ public java.lang.String toString() { throw new RuntimeException("Stub!"); }
  *          enum constant.
  */
 
-public final boolean equals(@android.annotation.Nullable java.lang.Object other) { throw new RuntimeException("Stub!"); }
+public final boolean equals(@androidx.annotation.RecentlyNullable java.lang.Object other) { throw new RuntimeException("Stub!"); }
 
 /**
  * Returns a hash code for this enum constant.
@@ -136,7 +136,7 @@ public final int hashCode() { throw new RuntimeException("Stub!"); }
  * @return (never returns)
  */
 
-@android.annotation.NonNull
+@androidx.annotation.RecentlyNonNull
 protected final java.lang.Object clone() throws java.lang.CloneNotSupportedException { throw new RuntimeException("Stub!"); }
 
 /**
@@ -164,7 +164,7 @@ public final int compareTo(E o) { throw new RuntimeException("Stub!"); }
  *     enum type
  */
 
-@android.annotation.NonNull
+@androidx.annotation.RecentlyNonNull
 public final java.lang.Class<E> getDeclaringClass() { throw new RuntimeException("Stub!"); }
 
 /**
@@ -195,8 +195,8 @@ public final java.lang.Class<E> getDeclaringClass() { throw new RuntimeException
  * @since 1.5
  */
 
-@android.annotation.NonNull
-public static <T extends java.lang.Enum<T>> T valueOf(@android.annotation.NonNull java.lang.Class<T> enumType, @android.annotation.NonNull java.lang.String name) { throw new RuntimeException("Stub!"); }
+@androidx.annotation.RecentlyNonNull
+public static <T extends java.lang.Enum<T>> T valueOf(@androidx.annotation.RecentlyNonNull java.lang.Class<T> enumType, @androidx.annotation.RecentlyNonNull java.lang.String name) { throw new RuntimeException("Stub!"); }
 
 /**
  * enum classes cannot have finalize methods.

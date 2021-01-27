@@ -71,7 +71,7 @@ private System() { throw new RuntimeException("Stub!"); }
  * @since   JDK1.1
  */
 
-public static void setIn(@android.annotation.Nullable java.io.InputStream in) { throw new RuntimeException("Stub!"); }
+public static void setIn(@androidx.annotation.RecentlyNullable java.io.InputStream in) { throw new RuntimeException("Stub!"); }
 
 /**
  * Reassigns the "standard" output stream.
@@ -93,7 +93,7 @@ public static void setIn(@android.annotation.Nullable java.io.InputStream in) { 
  * @since   JDK1.1
  */
 
-public static void setOut(@android.annotation.Nullable java.io.PrintStream out) { throw new RuntimeException("Stub!"); }
+public static void setOut(@androidx.annotation.RecentlyNullable java.io.PrintStream out) { throw new RuntimeException("Stub!"); }
 
 /**
  * Reassigns the "standard" error output stream.
@@ -115,7 +115,7 @@ public static void setOut(@android.annotation.Nullable java.io.PrintStream out) 
  * @since   JDK1.1
  */
 
-public static void setErr(@android.annotation.Nullable java.io.PrintStream err) { throw new RuntimeException("Stub!"); }
+public static void setErr(@androidx.annotation.RecentlyNullable java.io.PrintStream err) { throw new RuntimeException("Stub!"); }
 
 /**
  * Returns the unique {@link java.io.Console Console} object associated
@@ -126,7 +126,7 @@ public static void setErr(@android.annotation.Nullable java.io.PrintStream err) 
  * @since   1.6
  */
 
-@android.annotation.Nullable
+@androidx.annotation.RecentlyNullable
 public static java.io.Console console() { throw new RuntimeException("Stub!"); }
 
 /**
@@ -155,7 +155,7 @@ public static java.io.Console console() { throw new RuntimeException("Stub!"); }
  * @since 1.5
  */
 
-@android.annotation.Nullable
+@androidx.annotation.RecentlyNullable
 public static java.nio.channels.Channel inheritedChannel() throws java.io.IOException { throw new RuntimeException("Stub!"); }
 
 /**
@@ -170,7 +170,7 @@ public static java.nio.channels.Channel inheritedChannel() throws java.io.IOExce
  * @throws java.lang.SecurityException always, unless {@code sm == null}
  */
 
-public static void setSecurityManager(@android.annotation.Nullable java.lang.SecurityManager s) { throw new RuntimeException("Stub!"); }
+public static void setSecurityManager(@androidx.annotation.RecentlyNullable java.lang.SecurityManager s) { throw new RuntimeException("Stub!"); }
 
 /**
  * Always returns {@code null} in Android
@@ -178,7 +178,7 @@ public static void setSecurityManager(@android.annotation.Nullable java.lang.Sec
  * @return  {@code null} in Android
  */
 
-@android.annotation.Nullable
+@androidx.annotation.RecentlyNullable
 public static java.lang.SecurityManager getSecurityManager() { throw new RuntimeException("Stub!"); }
 
 /**
@@ -340,7 +340,7 @@ public static native long nanoTime();
  *               <code>dest</code> is <code>null</code>.
  */
 
-public static native void arraycopy(@android.annotation.NonNull java.lang.Object src, int srcPos, @android.annotation.NonNull java.lang.Object dest, int destPos, int length);
+public static native void arraycopy(@androidx.annotation.RecentlyNonNull java.lang.Object src, int srcPos, @androidx.annotation.RecentlyNonNull java.lang.Object dest, int destPos, int length);
 
 /**
  * Returns the same hash code for the given object as
@@ -354,7 +354,7 @@ public static native void arraycopy(@android.annotation.NonNull java.lang.Object
  * @since   JDK1.1
  */
 
-public static int identityHashCode(@android.annotation.Nullable java.lang.Object x) { throw new RuntimeException("Stub!"); }
+public static int identityHashCode(@androidx.annotation.RecentlyNullable java.lang.Object x) { throw new RuntimeException("Stub!"); }
 
 /**
  * Determines the current system properties.
@@ -418,7 +418,7 @@ public static int identityHashCode(@android.annotation.Nullable java.lang.Object
  * @see        java.util.Properties
  */
 
-@android.annotation.NonNull
+@androidx.annotation.RecentlyNonNull
 public static java.util.Properties getProperties() { throw new RuntimeException("Stub!"); }
 
 /**
@@ -433,7 +433,7 @@ public static java.util.Properties getProperties() { throw new RuntimeException(
  * @since 1.7
  */
 
-@android.annotation.NonNull
+@androidx.annotation.RecentlyNonNull
 public static java.lang.String lineSeparator() { throw new RuntimeException("Stub!"); }
 
 /**
@@ -442,7 +442,7 @@ public static java.lang.String lineSeparator() { throw new RuntimeException("Stu
  * be modified. See {@link #getProperty} for a list of such properties.
  */
 
-public static void setProperties(@android.annotation.Nullable java.util.Properties props) { throw new RuntimeException("Stub!"); }
+public static void setProperties(@androidx.annotation.RecentlyNullable java.util.Properties props) { throw new RuntimeException("Stub!"); }
 
 /**
  * Gets the system property indicated by the specified key.
@@ -471,8 +471,8 @@ public static void setProperties(@android.annotation.Nullable java.util.Properti
  * @see        java.lang.System#getProperties()
  */
 
-@android.annotation.Nullable
-public static java.lang.String getProperty(@android.annotation.NonNull java.lang.String key) { throw new RuntimeException("Stub!"); }
+@androidx.annotation.RecentlyNullable
+public static java.lang.String getProperty(@androidx.annotation.RecentlyNonNull java.lang.String key) { throw new RuntimeException("Stub!"); }
 
 /**
  * Gets the system property indicated by the specified key.
@@ -501,8 +501,8 @@ public static java.lang.String getProperty(@android.annotation.NonNull java.lang
  * @see        java.lang.System#getProperties()
  */
 
-@android.annotation.Nullable
-public static java.lang.String getProperty(@android.annotation.NonNull java.lang.String key, @android.annotation.Nullable java.lang.String def) { throw new RuntimeException("Stub!"); }
+@androidx.annotation.RecentlyNullable
+public static java.lang.String getProperty(@androidx.annotation.RecentlyNonNull java.lang.String key, @androidx.annotation.RecentlyNullable java.lang.String def) { throw new RuntimeException("Stub!"); }
 
 /**
  * Sets the system property indicated by the specified key.
@@ -534,8 +534,8 @@ public static java.lang.String getProperty(@android.annotation.NonNull java.lang
  * @since      1.2
  */
 
-@android.annotation.Nullable
-public static java.lang.String setProperty(@android.annotation.NonNull java.lang.String key, @android.annotation.Nullable java.lang.String value) { throw new RuntimeException("Stub!"); }
+@androidx.annotation.RecentlyNullable
+public static java.lang.String setProperty(@androidx.annotation.RecentlyNonNull java.lang.String key, @androidx.annotation.RecentlyNullable java.lang.String value) { throw new RuntimeException("Stub!"); }
 
 /**
  * Removes the system property indicated by the specified key.
@@ -565,8 +565,8 @@ public static java.lang.String setProperty(@android.annotation.NonNull java.lang
  * @since 1.5
  */
 
-@android.annotation.Nullable
-public static java.lang.String clearProperty(@android.annotation.NonNull java.lang.String key) { throw new RuntimeException("Stub!"); }
+@androidx.annotation.RecentlyNullable
+public static java.lang.String clearProperty(@androidx.annotation.RecentlyNonNull java.lang.String key) { throw new RuntimeException("Stub!"); }
 
 /**
  * Gets the value of the specified environment variable. An
@@ -574,7 +574,7 @@ public static java.lang.String clearProperty(@android.annotation.NonNull java.la
  * value.
  *
  * <p>If a security manager exists, its
- * {@link java.lang.SecurityManager#checkPermission SecurityManager#checkPermission}
+ * {@link java.lang.SecurityManager#checkPermission checkPermission}
  * method is called with a
  * <code>{@link java.lang.RuntimePermission RuntimePermission}("getenv."+name)</code>
  * permission.  This may result in a {@link java.lang.SecurityException SecurityException}
@@ -608,15 +608,15 @@ public static java.lang.String clearProperty(@android.annotation.NonNull java.la
  * @throws java.lang.NullPointerException if <code>name</code> is <code>null</code>
  * @throws java.lang.SecurityException
  *         if a security manager exists and its
- *         {@link java.lang.SecurityManager#checkPermission SecurityManager#checkPermission}
+ *         {@link java.lang.SecurityManager#checkPermission checkPermission}
  *         method doesn't allow access to the environment variable
  *         <code>name</code>
  * @see    #getenv()
  * @see    java.lang.ProcessBuilder#environment()
  */
 
-@android.annotation.Nullable
-public static java.lang.String getenv(@android.annotation.NonNull java.lang.String name) { throw new RuntimeException("Stub!"); }
+@androidx.annotation.RecentlyNullable
+public static java.lang.String getenv(@androidx.annotation.RecentlyNonNull java.lang.String name) { throw new RuntimeException("Stub!"); }
 
 /**
  * Returns an unmodifiable string map view of the current system environment.
@@ -639,7 +639,7 @@ public static java.lang.String getenv(@android.annotation.NonNull java.lang.Stri
  * <p>The returned map is typically case-sensitive on all platforms.
  *
  * <p>If a security manager exists, its
- * {@link java.lang.SecurityManager#checkPermission SecurityManager#checkPermission}
+ * {@link java.lang.SecurityManager#checkPermission checkPermission}
  * method is called with a
  * <code>{@link java.lang.RuntimePermission RuntimePermission}("getenv.*")</code>
  * permission.  This may result in a {@link java.lang.SecurityException SecurityException} being
@@ -652,14 +652,14 @@ public static java.lang.String getenv(@android.annotation.NonNull java.lang.Stri
  * @return the environment as a map of variable names to values
  * @throws java.lang.SecurityException
  *         if a security manager exists and its
- *         {@link java.lang.SecurityManager#checkPermission SecurityManager#checkPermission}
+ *         {@link java.lang.SecurityManager#checkPermission checkPermission}
  *         method doesn't allow access to the process environment
  * @see    #getenv(String)
  * @see    java.lang.ProcessBuilder#environment()
  * @since  1.5
  */
 
-@android.annotation.NonNull
+@androidx.annotation.RecentlyNonNull
 public static java.util.Map<java.lang.String,java.lang.String> getenv() { throw new RuntimeException("Stub!"); }
 
 /**
@@ -793,7 +793,7 @@ public static void runFinalizersOnExit(boolean value) { throw new RuntimeExcepti
  * @see        java.lang.SecurityManager#checkLink(java.lang.String)
  */
 
-public static void load(@android.annotation.NonNull java.lang.String filename) { throw new RuntimeException("Stub!"); }
+public static void load(@androidx.annotation.RecentlyNonNull java.lang.String filename) { throw new RuntimeException("Stub!"); }
 
 /**
  * Loads the native library specified by the <code>libname</code>
@@ -827,7 +827,7 @@ public static void load(@android.annotation.NonNull java.lang.String filename) {
  * @see        java.lang.SecurityManager#checkLink(java.lang.String)
  */
 
-public static void loadLibrary(@android.annotation.NonNull java.lang.String libname) { throw new RuntimeException("Stub!"); }
+public static void loadLibrary(@androidx.annotation.RecentlyNonNull java.lang.String libname) { throw new RuntimeException("Stub!"); }
 
 /**
  * Maps a library name into a platform-specific string representing
@@ -842,8 +842,8 @@ public static void loadLibrary(@android.annotation.NonNull java.lang.String libn
  * @since      1.2
  */
 
-@android.annotation.NonNull
-public static native java.lang.String mapLibraryName(@android.annotation.NonNull java.lang.String libname);
+@androidx.annotation.RecentlyNonNull
+public static native java.lang.String mapLibraryName(@androidx.annotation.RecentlyNonNull java.lang.String libname);
 
 /**
  * The "standard" error output stream. This stream is already

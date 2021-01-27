@@ -49,7 +49,7 @@ package java.math;
  * {@link java.math.MathContext MathContext} object with the proper settings
  * ({@code precision} set to {@code 1}, and the
  * {@code roundingMode} set to the rounding mode in question), and
- * calling {@link java.math.BigDecimal#round BigDecimal#round} on this number with the
+ * calling {@link java.math.BigDecimal#round round} on this number with the
  * proper {@code MathContext}.  A summary table showing the results
  * of these rounding operations for all rounding modes appears below.
  *

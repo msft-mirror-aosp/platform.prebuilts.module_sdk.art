@@ -46,7 +46,7 @@ package java.util.concurrent;
  * and termination methods surrounding the main task processing loop.
  * If you do create such a subclass, you will also need to supply a
  * custom {@link java.util.concurrent.ForkJoinPool.ForkJoinWorkerThreadFactory ForkJoinPool.ForkJoinWorkerThreadFactory} to
- * {@linkplain java.util.concurrent.ForkJoinPool#ForkJoinPool ForkJoinPool#ForkJoinPool} in a {@code ForkJoinPool}.
+ * {@linkplain java.util.concurrent.ForkJoinPool#ForkJoinPool use it} in a {@code ForkJoinPool}.
  *
  * @since 1.7
  * @author Doug Lea

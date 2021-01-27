@@ -197,11 +197,11 @@ public javax.xml.xpath.XPathExpression compile(java.lang.String expression) thro
  * variable, function and <code>QName</code> resolution and return type conversion.</p>
  *
  * <p>If <code>returnType</code> is not one of the types defined in {@link javax.xml.xpath.XPathConstants XPathConstants} (
- * {@link javax.xml.xpath.XPathConstants#NUMBER XPathConstants#NUMBER},
- * {@link javax.xml.xpath.XPathConstants#STRING XPathConstants#STRING},
- * {@link javax.xml.xpath.XPathConstants#BOOLEAN XPathConstants#BOOLEAN},
- * {@link javax.xml.xpath.XPathConstants#NODE XPathConstants#NODE} or
- * {@link javax.xml.xpath.XPathConstants#NODESET XPathConstants#NODESET})
+ * {@link javax.xml.xpath.XPathConstants#NUMBER NUMBER},
+ * {@link javax.xml.xpath.XPathConstants#STRING STRING},
+ * {@link javax.xml.xpath.XPathConstants#BOOLEAN BOOLEAN},
+ * {@link javax.xml.xpath.XPathConstants#NODE NODE} or
+ * {@link javax.xml.xpath.XPathConstants#NODESET NODESET})
  * then an <code>IllegalArgumentException</code> is thrown.</p>
  *
  * <p>If a <code>null</code> value is provided for

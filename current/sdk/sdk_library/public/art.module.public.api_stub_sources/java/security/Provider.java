@@ -454,7 +454,7 @@ public java.lang.String getProperty(java.lang.String key) { throw new RuntimeExc
  * {@link #putService putService()} and one added via {@link #put put()},
  * the service added via {@link #putService putService()} is returned.
  *
- * @param type the type of {@link java.security.Provider.Service Service} requested
+ * @param type the type of {@link java.security.Provider.Service service} requested
  * (for example, {@code MessageDigest})
  * @param algorithm the case insensitive algorithm name (or alternate
  * alias) of the service requested (for example, {@code SHA-1})

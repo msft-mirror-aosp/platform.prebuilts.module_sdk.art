@@ -71,7 +71,7 @@ import java.time.format.ResolverStyle;
  * It is expressed as a decimal number of whole days where days start at midday.
  * This class represents variations on Julian Days that count whole days from midnight.
  * <p>
- * The fields are implemented relative to {@link java.time.temporal.ChronoField#EPOCH_DAY ChronoField#EPOCH_DAY}.
+ * The fields are implemented relative to {@link java.time.temporal.ChronoField#EPOCH_DAY EPOCH_DAY}.
  * The fields are supported, and can be queried and set if {@code EPOCH_DAY} is available.
  * The fields work with all chronologies.
  *
@@ -103,9 +103,9 @@ private JulianFields() { throw new RuntimeException("Stub!"); }
  * An {@link java.time.temporal.UnsupportedTemporalTypeException UnsupportedTemporalTypeException} is thrown for any other type of object.
  * <p>
  * In the resolving phase of parsing, a date can be created from a Julian Day field.
- * In {@linkplain java.time.format.ResolverStyle#STRICT ResolverStyle#STRICT} and {@linkplain java.time.format.ResolverStyle#SMART ResolverStyle#SMART}
+ * In {@linkplain java.time.format.ResolverStyle#STRICT strict mode} and {@linkplain java.time.format.ResolverStyle#SMART smart mode}
  * the Julian Day value is validated against the range of valid values.
- * In {@linkplain java.time.format.ResolverStyle#LENIENT ResolverStyle#LENIENT} no validation occurs.
+ * In {@linkplain java.time.format.ResolverStyle#LENIENT lenient mode} no validation occurs.
  *
  * <h3>Astronomical and Scientific Notes</h3>
  * The standard astronomical definition uses a fraction to indicate the time-of-day,
@@ -153,9 +153,9 @@ static { JULIAN_DAY = null; }
  * This implementation is an integer version of MJD with the decimal part rounded to floor.
  * <p>
  * In the resolving phase of parsing, a date can be created from a Modified Julian Day field.
- * In {@linkplain java.time.format.ResolverStyle#STRICT ResolverStyle#STRICT} and {@linkplain java.time.format.ResolverStyle#SMART ResolverStyle#SMART}
+ * In {@linkplain java.time.format.ResolverStyle#STRICT strict mode} and {@linkplain java.time.format.ResolverStyle#SMART smart mode}
  * the Modified Julian Day value is validated against the range of valid values.
- * In {@linkplain java.time.format.ResolverStyle#LENIENT ResolverStyle#LENIENT} no validation occurs.
+ * In {@linkplain java.time.format.ResolverStyle#LENIENT lenient mode} no validation occurs.
  *
  * <h3>Astronomical and Scientific Notes</h3>
  * <pre>
@@ -191,9 +191,9 @@ static { MODIFIED_JULIAN_DAY = null; }
  * An {@link java.time.temporal.UnsupportedTemporalTypeException UnsupportedTemporalTypeException} is thrown for any other type of object.
  * <p>
  * In the resolving phase of parsing, a date can be created from a Rata Die field.
- * In {@linkplain java.time.format.ResolverStyle#STRICT ResolverStyle#STRICT} and {@linkplain java.time.format.ResolverStyle#SMART ResolverStyle#SMART}
+ * In {@linkplain java.time.format.ResolverStyle#STRICT strict mode} and {@linkplain java.time.format.ResolverStyle#SMART smart mode}
  * the Rata Die value is validated against the range of valid values.
- * In {@linkplain java.time.format.ResolverStyle#LENIENT ResolverStyle#LENIENT} no validation occurs.
+ * In {@linkplain java.time.format.ResolverStyle#LENIENT lenient mode} no validation occurs.
  */
 
 public static final java.time.temporal.TemporalField RATA_DIE;

@@ -127,7 +127,7 @@ public static <T> java.util.stream.Collector<T,?,java.util.List<T>> toList() { t
  * control over the returned {@code Set} is required, use
  * {@link #toCollection(java.util.function.Supplier)}.
  *
- * <p>This is an {@link java.util.stream.Collector.Characteristics#UNORDERED Collector.Characteristics#UNORDERED}
+ * <p>This is an {@link java.util.stream.Collector.Characteristics#UNORDERED unordered}
  * Collector.
  *
  * @param <T> the type of the input elements
@@ -592,8 +592,8 @@ public static <T, K, D, A, M extends java.util.Map<K, D>> java.util.stream.Colle
  * operation on input elements of type {@code T}, grouping elements
  * according to a classification function.
  *
- * <p>This is a {@link java.util.stream.Collector.Characteristics#CONCURRENT Collector.Characteristics#CONCURRENT} and
- * {@link java.util.stream.Collector.Characteristics#UNORDERED Collector.Characteristics#UNORDERED} Collector.
+ * <p>This is a {@link java.util.stream.Collector.Characteristics#CONCURRENT concurrent} and
+ * {@link java.util.stream.Collector.Characteristics#UNORDERED unordered} Collector.
  *
  * <p>The classification function maps elements to some key type {@code K}.
  * The collector produces a {@code ConcurrentMap<K, List<T>>} whose keys are the
@@ -630,8 +630,8 @@ public static <T, K> java.util.stream.Collector<T,?,java.util.concurrent.Concurr
  * operation on the values associated with a given key using the specified
  * downstream {@code Collector}.
  *
- * <p>This is a {@link java.util.stream.Collector.Characteristics#CONCURRENT Collector.Characteristics#CONCURRENT} and
- * {@link java.util.stream.Collector.Characteristics#UNORDERED Collector.Characteristics#UNORDERED} Collector.
+ * <p>This is a {@link java.util.stream.Collector.Characteristics#CONCURRENT concurrent} and
+ * {@link java.util.stream.Collector.Characteristics#UNORDERED unordered} Collector.
  *
  * <p>The classification function maps elements to some key type {@code K}.
  * The downstream collector operates on elements of type {@code T} and
@@ -669,8 +669,8 @@ public static <T, K, A, D> java.util.stream.Collector<T,?,java.util.concurrent.C
  * downstream {@code Collector}.  The {@code ConcurrentMap} produced by the
  * Collector is created with the supplied factory function.
  *
- * <p>This is a {@link java.util.stream.Collector.Characteristics#CONCURRENT Collector.Characteristics#CONCURRENT} and
- * {@link java.util.stream.Collector.Characteristics#UNORDERED Collector.Characteristics#UNORDERED} Collector.
+ * <p>This is a {@link java.util.stream.Collector.Characteristics#CONCURRENT concurrent} and
+ * {@link java.util.stream.Collector.Characteristics#UNORDERED unordered} Collector.
  *
  * <p>The classification function maps elements to some key type {@code K}.
  * The downstream collector operates on elements of type {@code T} and
@@ -927,8 +927,8 @@ public static <T, K, U, M extends java.util.Map<K, U>> java.util.stream.Collecto
  *                                                   Functions.identity());
  * }</pre>
  *
- * <p>This is a {@link java.util.stream.Collector.Characteristics#CONCURRENT Collector.Characteristics#CONCURRENT} and
- * {@link java.util.stream.Collector.Characteristics#UNORDERED Collector.Characteristics#UNORDERED} Collector.
+ * <p>This is a {@link java.util.stream.Collector.Characteristics#CONCURRENT concurrent} and
+ * {@link java.util.stream.Collector.Characteristics#UNORDERED unordered} Collector.
  *
  * @param <T> the type of the input elements
  * @param <K> the output type of the key mapping function
@@ -972,8 +972,8 @@ public static <T, K, U> java.util.stream.Collector<T,?,java.util.concurrent.Conc
  *                                                 (s, a) -> s + ", " + a));
  * }</pre>
  *
- * <p>This is a {@link java.util.stream.Collector.Characteristics#CONCURRENT Collector.Characteristics#CONCURRENT} and
- * {@link java.util.stream.Collector.Characteristics#UNORDERED Collector.Characteristics#UNORDERED} Collector.
+ * <p>This is a {@link java.util.stream.Collector.Characteristics#CONCURRENT concurrent} and
+ * {@link java.util.stream.Collector.Characteristics#UNORDERED unordered} Collector.
  *
  * @param <T> the type of the input elements
  * @param <K> the output type of the key mapping function
@@ -1006,8 +1006,8 @@ public static <T, K, U> java.util.stream.Collector<T,?,java.util.concurrent.Conc
  * results are merged using the provided merging function.  The
  * {@code ConcurrentMap} is created by a provided supplier function.
  *
- * <p>This is a {@link java.util.stream.Collector.Characteristics#CONCURRENT Collector.Characteristics#CONCURRENT} and
- * {@link java.util.stream.Collector.Characteristics#UNORDERED Collector.Characteristics#UNORDERED} Collector.
+ * <p>This is a {@link java.util.stream.Collector.Characteristics#CONCURRENT concurrent} and
+ * {@link java.util.stream.Collector.Characteristics#UNORDERED unordered} Collector.
  *
  * @param <T> the type of the input elements
  * @param <K> the output type of the key mapping function

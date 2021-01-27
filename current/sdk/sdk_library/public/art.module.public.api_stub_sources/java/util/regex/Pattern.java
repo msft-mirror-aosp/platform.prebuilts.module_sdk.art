@@ -43,7 +43,7 @@ package java.util.regex;
  * <blockquote><pre>
  * Pattern p = Pattern.{@link #compile compile}("a*b");
  * Matcher m = p.{@link #matcher matcher}("aaaaab");
- * boolean b = m.{@link java.util.regex.Matcher#matches Matcher#matches}();</pre></blockquote>
+ * boolean b = m.{@link java.util.regex.Matcher#matches matches}();</pre></blockquote>
  *
  * <p> A {@link #matches matches} method is defined by this class as a
  * convenience for when a regular expression is used just once.  This method
@@ -726,7 +726,7 @@ package java.util.regex;
  *
  *    <li><p> Perl uses the <tt>g</tt> flag to request a match that resumes
  *    where the last match left off.  This functionality is provided implicitly
- *    by the {@link java.util.regex.Matcher Matcher} class: Repeated invocations of the {@link java.util.regex.Matcher#find Matcher#find} method will resume where the last match left off,
+ *    by the {@link java.util.regex.Matcher Matcher} class: Repeated invocations of the {@link java.util.regex.Matcher#find find} method will resume where the last match left off,
  *    unless the matcher is reset.  </p></li>
  *
  *    <li><p> In Perl, embedded flags at the top level of an expression affect
@@ -769,8 +769,8 @@ private Pattern() { throw new RuntimeException("Stub!"); }
  *          If the expression's syntax is invalid
  */
 
-@android.annotation.NonNull
-public static java.util.regex.Pattern compile(@android.annotation.NonNull java.lang.String regex) { throw new RuntimeException("Stub!"); }
+@androidx.annotation.RecentlyNonNull
+public static java.util.regex.Pattern compile(@androidx.annotation.RecentlyNonNull java.lang.String regex) { throw new RuntimeException("Stub!"); }
 
 /**
  * Compiles the given regular expression into a pattern with the given
@@ -795,8 +795,8 @@ public static java.util.regex.Pattern compile(@android.annotation.NonNull java.l
  *          If the expression's syntax is invalid
  */
 
-@android.annotation.NonNull
-public static java.util.regex.Pattern compile(@android.annotation.NonNull java.lang.String regex, int flags) { throw new RuntimeException("Stub!"); }
+@androidx.annotation.RecentlyNonNull
+public static java.util.regex.Pattern compile(@androidx.annotation.RecentlyNonNull java.lang.String regex, int flags) { throw new RuntimeException("Stub!"); }
 
 /**
  * Returns the regular expression from which this pattern was compiled.
@@ -804,7 +804,7 @@ public static java.util.regex.Pattern compile(@android.annotation.NonNull java.l
  * @return  The source of this pattern
  */
 
-@android.annotation.NonNull
+@androidx.annotation.RecentlyNonNull
 public java.lang.String pattern() { throw new RuntimeException("Stub!"); }
 
 /**
@@ -816,7 +816,7 @@ public java.lang.String pattern() { throw new RuntimeException("Stub!"); }
  * @since 1.5
  */
 
-@android.annotation.NonNull
+@androidx.annotation.RecentlyNonNull
 public java.lang.String toString() { throw new RuntimeException("Stub!"); }
 
 /**
@@ -828,8 +828,8 @@ public java.lang.String toString() { throw new RuntimeException("Stub!"); }
  * @return  A new matcher for this pattern
  */
 
-@android.annotation.NonNull
-public java.util.regex.Matcher matcher(@android.annotation.NonNull java.lang.CharSequence input) { throw new RuntimeException("Stub!"); }
+@androidx.annotation.RecentlyNonNull
+public java.util.regex.Matcher matcher(@androidx.annotation.RecentlyNonNull java.lang.CharSequence input) { throw new RuntimeException("Stub!"); }
 
 /**
  * Returns this pattern's match flags.
@@ -866,7 +866,7 @@ public int flags() { throw new RuntimeException("Stub!"); }
  *          If the expression's syntax is invalid
  */
 
-public static boolean matches(@android.annotation.NonNull java.lang.String regex, @android.annotation.NonNull java.lang.CharSequence input) { throw new RuntimeException("Stub!"); }
+public static boolean matches(@androidx.annotation.RecentlyNonNull java.lang.String regex, @androidx.annotation.RecentlyNonNull java.lang.CharSequence input) { throw new RuntimeException("Stub!"); }
 
 /**
  * Splits the given input sequence around matches of this pattern.
@@ -934,8 +934,8 @@ public static boolean matches(@android.annotation.NonNull java.lang.String regex
  *          around matches of this pattern
  */
 
-@android.annotation.NonNull
-public java.lang.String[] split(@android.annotation.NonNull java.lang.CharSequence input, int limit) { throw new RuntimeException("Stub!"); }
+@androidx.annotation.RecentlyNonNull
+public java.lang.String[] split(@androidx.annotation.RecentlyNonNull java.lang.CharSequence input, int limit) { throw new RuntimeException("Stub!"); }
 
 /**
  * Splits the given input sequence around matches of this pattern.
@@ -966,8 +966,8 @@ public java.lang.String[] split(@android.annotation.NonNull java.lang.CharSequen
  *          around matches of this pattern
  */
 
-@android.annotation.NonNull
-public java.lang.String[] split(@android.annotation.NonNull java.lang.CharSequence input) { throw new RuntimeException("Stub!"); }
+@androidx.annotation.RecentlyNonNull
+public java.lang.String[] split(@androidx.annotation.RecentlyNonNull java.lang.CharSequence input) { throw new RuntimeException("Stub!"); }
 
 /**
  * Returns a literal pattern <code>String</code> for the specified
@@ -984,8 +984,8 @@ public java.lang.String[] split(@android.annotation.NonNull java.lang.CharSequen
  * @since 1.5
  */
 
-@android.annotation.NonNull
-public static java.lang.String quote(@android.annotation.NonNull java.lang.String s) { throw new RuntimeException("Stub!"); }
+@androidx.annotation.RecentlyNonNull
+public static java.lang.String quote(@androidx.annotation.RecentlyNonNull java.lang.String s) { throw new RuntimeException("Stub!"); }
 
 /**
  * Creates a predicate which can be used to match a string.
@@ -994,7 +994,7 @@ public static java.lang.String quote(@android.annotation.NonNull java.lang.Strin
  * @since   1.8
  */
 
-@android.annotation.NonNull
+@androidx.annotation.RecentlyNonNull
 public java.util.function.Predicate<java.lang.String> asPredicate() { throw new RuntimeException("Stub!"); }
 
 /**
@@ -1030,8 +1030,8 @@ public java.util.function.Predicate<java.lang.String> asPredicate() { throw new 
  * @since   1.8
  */
 
-@android.annotation.NonNull
-public java.util.stream.Stream<java.lang.String> splitAsStream(@android.annotation.NonNull java.lang.CharSequence input) { throw new RuntimeException("Stub!"); }
+@androidx.annotation.RecentlyNonNull
+public java.util.stream.Stream<java.lang.String> splitAsStream(@androidx.annotation.RecentlyNonNull java.lang.CharSequence input) { throw new RuntimeException("Stub!"); }
 
 /**
  * Enables canonical equivalence.
