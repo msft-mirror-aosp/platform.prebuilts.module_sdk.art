@@ -170,7 +170,7 @@ public CountDownLatch(int count) { throw new RuntimeException("Stub!"); }
 
 /**
  * Causes the current thread to wait until the latch has counted down to
- * zero, unless the thread is {@linkplain java.lang.Thread#interrupt Thread#interrupt}.
+ * zero, unless the thread is {@linkplain java.lang.Thread#interrupt interrupted}.
  *
  * <p>If the current count is zero then this method returns immediately.
  *
@@ -180,14 +180,14 @@ public CountDownLatch(int count) { throw new RuntimeException("Stub!"); }
  * <ul>
  * <li>The count reaches zero due to invocations of the
  * {@link #countDown} method; or
- * <li>Some other thread {@linkplain java.lang.Thread#interrupt Thread#interrupt}
+ * <li>Some other thread {@linkplain java.lang.Thread#interrupt interrupts}
  * the current thread.
  * </ul>
  *
  * <p>If the current thread:
  * <ul>
  * <li>has its interrupted status set on entry to this method; or
- * <li>is {@linkplain java.lang.Thread#interrupt Thread#interrupt} while waiting,
+ * <li>is {@linkplain java.lang.Thread#interrupt interrupted} while waiting,
  * </ul>
  * then {@link java.lang.InterruptedException InterruptedException} is thrown and the current thread's
  * interrupted status is cleared.
@@ -200,7 +200,7 @@ public void await() throws java.lang.InterruptedException { throw new RuntimeExc
 
 /**
  * Causes the current thread to wait until the latch has counted down to
- * zero, unless the thread is {@linkplain java.lang.Thread#interrupt Thread#interrupt},
+ * zero, unless the thread is {@linkplain java.lang.Thread#interrupt interrupted},
  * or the specified waiting time elapses.
  *
  * <p>If the current count is zero then this method returns immediately
@@ -212,7 +212,7 @@ public void await() throws java.lang.InterruptedException { throw new RuntimeExc
  * <ul>
  * <li>The count reaches zero due to invocations of the
  * {@link #countDown} method; or
- * <li>Some other thread {@linkplain java.lang.Thread#interrupt Thread#interrupt}
+ * <li>Some other thread {@linkplain java.lang.Thread#interrupt interrupts}
  * the current thread; or
  * <li>The specified waiting time elapses.
  * </ul>
@@ -223,7 +223,7 @@ public void await() throws java.lang.InterruptedException { throw new RuntimeExc
  * <p>If the current thread:
  * <ul>
  * <li>has its interrupted status set on entry to this method; or
- * <li>is {@linkplain java.lang.Thread#interrupt Thread#interrupt} while waiting,
+ * <li>is {@linkplain java.lang.Thread#interrupt interrupted} while waiting,
  * </ul>
  * then {@link java.lang.InterruptedException InterruptedException} is thrown and the current thread's
  * interrupted status is cleared.

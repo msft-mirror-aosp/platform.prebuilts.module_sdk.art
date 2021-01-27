@@ -31,9 +31,9 @@ import java.time.Instant;
 /**
  * Represents the value of a file's time stamp attribute. For example, it may
  * represent the time that the file was last
- * {@link java.nio.file.attribute.BasicFileAttributes#lastModifiedTime() BasicFileAttributes#lastModifiedTime()},
- * {@link java.nio.file.attribute.BasicFileAttributes#lastAccessTime() BasicFileAttributes#lastAccessTime()},
- * or {@link java.nio.file.attribute.BasicFileAttributes#creationTime() BasicFileAttributes#creationTime()}.
+ * {@link java.nio.file.attribute.BasicFileAttributes#lastModifiedTime() modified},
+ * {@link java.nio.file.attribute.BasicFileAttributes#lastAccessTime() accessed},
+ * or {@link java.nio.file.attribute.BasicFileAttributes#creationTime() created}.
  *
  * <p> Instances of this class are immutable.
  *

@@ -80,7 +80,7 @@ public static java.lang.Runtime getRuntime() { throw new RuntimeException("Stub!
  * with the given status code if the status is nonzero; otherwise, it
  * blocks indefinitely.
  *
- * <p> The <tt>{@link java.lang.System#exit(int) System#exit(int)}</tt> method is the
+ * <p> The <tt>{@link java.lang.System#exit(int) System.exit}</tt> method is the
  * conventional and convenient means of invoking this method. <p>
  *
  * @param  status
@@ -88,7 +88,7 @@ public static java.lang.Runtime getRuntime() { throw new RuntimeException("Stub!
  *         indicates abnormal termination.
  *
  * @throws java.lang.SecurityException
- *         If a security manager is present and its <tt>{@link java.lang.SecurityManager#checkExit SecurityManager#checkExit}</tt> method does not permit
+ *         If a security manager is present and its <tt>{@link java.lang.SecurityManager#checkExit checkExit}</tt> method does not permit
  *         exiting with the specified status
  *
  * @see java.lang.SecurityException
@@ -111,7 +111,7 @@ public void exit(int status) { throw new RuntimeException("Stub!"); }
  *
  *   <li> The program <i>exits</i> normally, when the last non-daemon
  *   thread exits or when the <tt>{@link #exit exit}</tt> (equivalently,
- *   {@link java.lang.System#exit(int) System#exit(int)}) method is invoked, or
+ *   {@link java.lang.System#exit(int) System.exit}) method is invoked, or
  *
  *   <li> The virtual machine is <i>terminated</i> in response to a
  *   user interrupt, such as typing <tt>^C</tt>, or a system-wide event,
@@ -157,7 +157,7 @@ public void exit(int status) { throw new RuntimeException("Stub!"); }
  * hook.
  *
  * <p> Uncaught exceptions are handled in shutdown hooks just as in any
- * other thread, by invoking the <tt>{@link java.lang.ThreadGroup#uncaughtException ThreadGroup#uncaughtException}</tt> method of the thread's <tt>{@link java.lang.ThreadGroup ThreadGroup}</tt> object.  The default implementation of this method
+ * other thread, by invoking the <tt>{@link java.lang.ThreadGroup#uncaughtException  uncaughtException}</tt> method of the thread's <tt>{@link java.lang.ThreadGroup ThreadGroup}</tt> object.  The default implementation of this method
  * prints the exception's stack trace to <tt>{@link java.lang.System#err System#err}</tt> and
  * terminates the thread; it does not cause the virtual machine to exit or
  * halt.
@@ -232,11 +232,11 @@ public boolean removeShutdownHook(java.lang.Thread hook) { throw new RuntimeExce
  *
  * @param  status
  *         Termination status.  By convention, a nonzero status code
- *         indicates abnormal termination.  If the <tt>{@link java.lang.Runtime#exit Runtime#exit}</tt> (equivalently, <tt>{@link java.lang.System#exit(int) System#exit(int)}</tt>) method has already been invoked then this
+ *         indicates abnormal termination.  If the <tt>{@link java.lang.Runtime#exit          exit}</tt> (equivalently, <tt>{@link java.lang.System#exit(int)          System.exit}</tt>) method has already been invoked then this
  *         status code will override the status code passed to that method.
  *
  * @throws java.lang.SecurityException
- *         If a security manager is present and its <tt>{@link java.lang.SecurityManager#checkExit SecurityManager#checkExit}</tt> method does not permit
+ *         If a security manager is present and its <tt>{@link java.lang.SecurityManager#checkExit checkExit}</tt> method does not permit
  *         an exit with the specified status
  *
  * @see #exit
@@ -291,7 +291,7 @@ public static void runFinalizersOnExit(boolean value) { throw new RuntimeExcepti
  *
  * @throws  java.lang.SecurityException
  *          If a security manager exists and its
- *          {@link java.lang.SecurityManager#checkExec SecurityManager#checkExec}
+ *          {@link java.lang.SecurityManager#checkExec checkExec}
  *          method doesn't allow creation of the subprocess
  *
  * @throws  java.io.IOException
@@ -330,7 +330,7 @@ public java.lang.Process exec(java.lang.String command) throws java.io.IOExcepti
  *
  * @throws  java.lang.SecurityException
  *          If a security manager exists and its
- *          {@link java.lang.SecurityManager#checkExec SecurityManager#checkExec}
+ *          {@link java.lang.SecurityManager#checkExec checkExec}
  *          method doesn't allow creation of the subprocess
  *
  * @throws  java.io.IOException
@@ -383,7 +383,7 @@ public java.lang.Process exec(java.lang.String command, java.lang.String[] envp)
  *
  * @throws  java.lang.SecurityException
  *          If a security manager exists and its
- *          {@link java.lang.SecurityManager#checkExec SecurityManager#checkExec}
+ *          {@link java.lang.SecurityManager#checkExec checkExec}
  *          method doesn't allow creation of the subprocess
  *
  * @throws  java.io.IOException
@@ -417,7 +417,7 @@ public java.lang.Process exec(java.lang.String command, java.lang.String[] envp,
  *
  * @throws  java.lang.SecurityException
  *          If a security manager exists and its
- *          {@link java.lang.SecurityManager#checkExec SecurityManager#checkExec}
+ *          {@link java.lang.SecurityManager#checkExec checkExec}
  *          method doesn't allow creation of the subprocess
  *
  * @throws  java.io.IOException
@@ -458,7 +458,7 @@ public java.lang.Process exec(java.lang.String[] cmdarray) throws java.io.IOExce
  *
  * @throws  java.lang.SecurityException
  *          If a security manager exists and its
- *          {@link java.lang.SecurityManager#checkExec SecurityManager#checkExec}
+ *          {@link java.lang.SecurityManager#checkExec checkExec}
  *          method doesn't allow creation of the subprocess
  *
  * @throws  java.io.IOException
@@ -508,7 +508,7 @@ public java.lang.Process exec(java.lang.String[] cmdarray, java.lang.String[] en
  * current working directory of the current process.
  *
  * <p>If a security manager exists, its
- * {@link java.lang.SecurityManager#checkExec SecurityManager#checkExec}
+ * {@link java.lang.SecurityManager#checkExec checkExec}
  * method is invoked with the first component of the array
  * <code>cmdarray</code> as its argument. This may result in a
  * {@link java.lang.SecurityException SecurityException} being thrown.
@@ -543,7 +543,7 @@ public java.lang.Process exec(java.lang.String[] cmdarray, java.lang.String[] en
  *
  * @throws  java.lang.SecurityException
  *          If a security manager exists and its
- *          {@link java.lang.SecurityManager#checkExec SecurityManager#checkExec}
+ *          {@link java.lang.SecurityManager#checkExec checkExec}
  *          method doesn't allow creation of the subprocess
  *
  * @throws  java.io.IOException

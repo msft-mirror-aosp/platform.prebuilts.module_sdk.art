@@ -35,7 +35,7 @@ import java.io.IOException;
  * Control Lists (ACL) or file owner attributes.
  *
  * <p> ACLs are used to specify access rights to file system objects. An ACL is
- * an ordered list of {@link java.nio.file.attribute.AclEntry AclEntry}, each specifying a
+ * an ordered list of {@link java.nio.file.attribute.AclEntry access-control-entries}, each specifying a
  * {@link java.nio.file.attribute.UserPrincipal UserPrincipal} and the level of access for that user principal. This
  * file attribute view defines the {@link #getAcl() getAcl}, and {@link
  * #setAcl(java.util.List) setAcl} methods to read and write ACLs based on the ACL
@@ -49,8 +49,8 @@ import java.io.IOException;
  * <p> This class also extends {@code FileOwnerAttributeView} so as to define
  * methods to get and set the file owner.
  *
- * <p> When a file system provides access to a set of {@link java.nio.file.FileStore FileStore} that are not homogeneous then only some of the file systems may
- * support ACLs. The {@link java.nio.file.FileStore#supportsFileAttributeView FileStore#supportsFileAttributeView} method can be used to test if a file system
+ * <p> When a file system provides access to a set of {@link java.nio.file.FileStore  file-systems} that are not homogeneous then only some of the file systems may
+ * support ACLs. The {@link java.nio.file.FileStore#supportsFileAttributeView  supportsFileAttributeView} method can be used to test if a file system
  * supports ACLs.
  *
  * <h2>Interoperability</h2>
@@ -59,8 +59,8 @@ import java.io.IOException;
  * support the POSIX defined access permissions. The special user identities
  * are "{@code OWNER@}", "{@code GROUP@}", and "{@code EVERYONE@}". When both
  * the {@code AclFileAttributeView} and the {@link java.nio.file.attribute.PosixFileAttributeView PosixFileAttributeView}
- * are supported then these special user identities may be included in ACL {@link java.nio.file.attribute.AclEntry AclEntry} that are read or written. The file system's {@link java.nio.file.attribute.UserPrincipalLookupService UserPrincipalLookupService} may be used to obtain a {@link java.nio.file.attribute.UserPrincipal UserPrincipal}
- * to represent these special identities by invoking the {@link java.nio.file.attribute.UserPrincipalLookupService#lookupPrincipalByName UserPrincipalLookupService#lookupPrincipalByName}
+ * are supported then these special user identities may be included in ACL {@link java.nio.file.attribute.AclEntry entries} that are read or written. The file system's {@link java.nio.file.attribute.UserPrincipalLookupService UserPrincipalLookupService} may be used to obtain a {@link java.nio.file.attribute.UserPrincipal UserPrincipal}
+ * to represent these special identities by invoking the {@link java.nio.file.attribute.UserPrincipalLookupService#lookupPrincipalByName lookupPrincipalByName}
  * method.
  *
  * <p> <b>Usage Example:</b>
@@ -106,11 +106,11 @@ import java.io.IOException;
  * </table>
  * </blockquote>
  *
- * <p> The {@link java.nio.file.Files#getAttribute Files#getAttribute} method may be used to read
+ * <p> The {@link java.nio.file.Files#getAttribute getAttribute} method may be used to read
  * the ACL or owner attributes as if by invoking the {@link #getAcl getAcl} or
  * {@link #getOwner getOwner} methods.
  *
- * <p> The {@link java.nio.file.Files#setAttribute Files#setAttribute} method may be used to
+ * <p> The {@link java.nio.file.Files#setAttribute setAttribute} method may be used to
  * update the ACL or owner attributes as if by invoking the {@link #setAcl setAcl}
  * or {@link #setOwner setOwner} methods.
  *
@@ -118,7 +118,7 @@ import java.io.IOException;
  *
  * <p> Implementations supporting this attribute view may also support setting
  * the initial ACL when creating a file or directory. The initial ACL
- * may be provided to methods such as {@link java.nio.file.Files#createFile Files#createFile} or {@link java.nio.file.Files#createDirectory Files#createDirectory} as an {@link java.nio.file.attribute.FileAttribute FileAttribute} with {@link java.nio.file.attribute.FileAttribute#name FileAttribute#name} {@code "acl:acl"} and a {@link java.nio.file.attribute.FileAttribute#value FileAttribute#value} that is the list of {@code AclEntry} objects.
+ * may be provided to methods such as {@link java.nio.file.Files#createFile createFile} or {@link java.nio.file.Files#createDirectory createDirectory} as an {@link java.nio.file.attribute.FileAttribute FileAttribute} with {@link java.nio.file.attribute.FileAttribute#name name} {@code "acl:acl"} and a {@link java.nio.file.attribute.FileAttribute#value  value} that is the list of {@code AclEntry} objects.
  *
  * <p> Where an implementation supports an ACL model that differs from the NFSv4
  * defined ACL model then setting the initial ACL when creating the file must
@@ -151,7 +151,7 @@ public java.lang.String name();
  * existing ACL. The {@link #setAcl setAcl} method is used to update
  * the file's ACL attribute.
  *
- * @return  an ordered list of {@link java.nio.file.attribute.AclEntry AclEntry} representing the
+ * @return  an ordered list of {@link java.nio.file.attribute.AclEntry entries} representing the
  *          ACL
  *
  * @throws  java.io.IOException
@@ -159,7 +159,7 @@ public java.lang.String name();
  * @throws  java.lang.SecurityException
  *          In the case of the default provider, a security manager is
  *          installed, and it denies {@link java.lang.RuntimePermission RuntimePermission}<tt>("accessUserInformation")</tt>
- *          or its {@link java.lang.SecurityManager#checkRead(java.lang.String) SecurityManager#checkRead(String)} method
+ *          or its {@link java.lang.SecurityManager#checkRead(java.lang.String) checkRead} method
  *          denies read access to the file.
  */
 
@@ -174,16 +174,16 @@ public java.util.List<java.nio.file.attribute.AclEntry> getAcl() throws java.io.
  * method should reject (by throwing {@link java.io.IOException IOException}) any
  * attempt to write an ACL that would appear to make the file more secure
  * than would be the case if the ACL were updated. Where an implementation
- * does not support a mapping of {@link java.nio.file.attribute.AclEntryType#AUDIT AclEntryType#AUDIT} or {@link java.nio.file.attribute.AclEntryType#ALARM AclEntryType#ALARM} entries, then this method ignores these entries when
+ * does not support a mapping of {@link java.nio.file.attribute.AclEntryType#AUDIT AclEntryType#AUDIT} or {@link java.nio.file.attribute.AclEntryType#ALARM  } entries, then this method ignores these entries when
  * writing the ACL.
  *
- * <p> If an ACL entry contains a {@link java.nio.file.attribute.AclEntry#principal AclEntry#principal}
+ * <p> If an ACL entry contains a {@link java.nio.file.attribute.AclEntry#principal user-principal}
  * that is not associated with the same provider as this attribute view then
  * {@link java.nio.file.ProviderMismatchException ProviderMismatchException} is thrown. Additional validation, if
  * any, is implementation dependent.
  *
  * <p> If the file system supports other security related file attributes
- * (such as a file {@link java.nio.file.attribute.PosixFileAttributes#permissions PosixFileAttributes#permissions} for example), the updating the access control list
+ * (such as a file {@link java.nio.file.attribute.PosixFileAttributes#permissions  access-permissions} for example), the updating the access control list
  * may also cause these security related attributes to be updated.
  *
  * @param   acl
@@ -194,7 +194,7 @@ public java.util.List<java.nio.file.attribute.AclEntry> getAcl() throws java.io.
  * @throws  java.lang.SecurityException
  *          In the case of the default provider, a security manager is
  *          installed, it denies {@link java.lang.RuntimePermission RuntimePermission}<tt>("accessUserInformation")</tt>
- *          or its {@link java.lang.SecurityManager#checkWrite(java.lang.String) SecurityManager#checkWrite(String)}
+ *          or its {@link java.lang.SecurityManager#checkWrite(java.lang.String) checkWrite}
  *          method denies write access to the file.
  */
 

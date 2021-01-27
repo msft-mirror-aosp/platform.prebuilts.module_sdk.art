@@ -83,8 +83,8 @@ import java.nio.charset.CoderMalfunctionError;
  * <a name="cae"></a>
  *
  * <p> How an encoding error is handled depends upon the action requested for
- * that type of error, which is described by an instance of the {@link java.nio.charset.CodingErrorAction CodingErrorAction} class.  The possible error actions are to {@linkplain java.nio.charset.CodingErrorAction#IGNORE CodingErrorAction#IGNORE} the erroneous input, {@linkplain java.nio.charset.CodingErrorAction#REPORT CodingErrorAction#REPORT} the error to the invoker via
- * the returned {@link java.nio.charset.CoderResult CoderResult} object, or {@linkplain java.nio.charset.CodingErrorAction#REPLACE CodingErrorAction#REPLACE} the erroneous input with the current value of the
+ * that type of error, which is described by an instance of the {@link java.nio.charset.CodingErrorAction CodingErrorAction} class.  The possible error actions are to {@linkplain java.nio.charset.CodingErrorAction#IGNORE ignore} the erroneous input, {@linkplain java.nio.charset.CodingErrorAction#REPORT report} the error to the invoker via
+ * the returned {@link java.nio.charset.CoderResult CoderResult} object, or {@linkplain java.nio.charset.CodingErrorAction#REPLACE  replace} the erroneous input with the current value of the
  * replacement byte array.  The replacement
  *
  
@@ -99,7 +99,7 @@ import java.nio.charset.CoderMalfunctionError;
  * replaceWith} method.
  *
  * <p> The default action for malformed-input and unmappable-character errors
- * is to {@linkplain java.nio.charset.CodingErrorAction#REPORT CodingErrorAction#REPORT} them.  The
+ * is to {@linkplain java.nio.charset.CodingErrorAction#REPORT report} them.  The
  * malformed-input error action may be changed via the {@link
  * #onMalformedInput(java.nio.charset.CodingErrorAction) onMalformedInput} method; the
  * unmappable-character action may be changed via the {@link
@@ -354,8 +354,8 @@ public final float maxBytesPerChar() { throw new RuntimeException("Stub!"); }
  * writing the results to the given output buffer.
  *
  * <p> The buffers are read from, and written to, starting at their current
- * positions.  At most {@link java.nio.Buffer#remaining Buffer#remaining} characters
- * will be read and at most {@link java.nio.Buffer#remaining Buffer#remaining}
+ * positions.  At most {@link java.nio.Buffer#remaining in.remaining()} characters
+ * will be read and at most {@link java.nio.Buffer#remaining out.remaining()}
  * bytes will be written.  The buffers' positions will be advanced to
  * reflect the characters read and the bytes written, but their marks and
  * limits will not be modified.
@@ -375,25 +375,25 @@ public final float maxBytesPerChar() { throw new RuntimeException("Stub!"); }
  *   <li><p> {@link java.nio.charset.CoderResult#OVERFLOW CoderResult#OVERFLOW} indicates that there is
  *   insufficient space in the output buffer to encode any more characters.
  *   This method should be invoked again with an output buffer that has
- *   more {@linkplain java.nio.Buffer#remaining Buffer#remaining} bytes. This is
+ *   more {@linkplain java.nio.Buffer#remaining remaining} bytes. This is
  *   typically done by draining any encoded bytes from the output
  *   buffer.  </p></li>
  *
- *   <li><p> A {@linkplain java.nio.charset.CoderResult#malformedForLength CoderResult#malformedForLength} result indicates that a malformed-input
+ *   <li><p> A {@linkplain java.nio.charset.CoderResult#malformedForLength    malformed-input} result indicates that a malformed-input
  *   error has been detected.  The malformed characters begin at the input
  *   buffer's (possibly incremented) position; the number of malformed
- *   characters may be determined by invoking the result object's {@link java.nio.charset.CoderResult#length() CoderResult#length()} method.  This case applies only if the
+ *   characters may be determined by invoking the result object's {@link java.nio.charset.CoderResult#length() length} method.  This case applies only if the
  *   {@linkplain #onMalformedInput malformed action} of this encoder
  *   is {@link java.nio.charset.CodingErrorAction#REPORT CodingErrorAction#REPORT}; otherwise the malformed input
  *   will be ignored or replaced, as requested.  </p></li>
  *
- *   <li><p> An {@linkplain java.nio.charset.CoderResult#unmappableForLength CoderResult#unmappableForLength} result indicates that an
+ *   <li><p> An {@linkplain java.nio.charset.CoderResult#unmappableForLength    unmappable-character} result indicates that an
  *   unmappable-character error has been detected.  The characters that
  *   encode the unmappable character begin at the input buffer's (possibly
  *   incremented) position; the number of such characters may be determined
- *   by invoking the result object's {@link java.nio.charset.CoderResult#length() CoderResult#length()}
+ *   by invoking the result object's {@link java.nio.charset.CoderResult#length() length}
  *   method.  This case applies only if the {@linkplain #onUnmappableCharacter
- *   unmappable action} of this encoder is {@link java.nio.charset.CodingErrorAction#REPORT CodingErrorAction#REPORT}; otherwise the unmappable character will be
+ *   unmappable action} of this encoder is {@link java.nio.charset.CodingErrorAction#REPORT    }; otherwise the unmappable character will be
  *   ignored or replaced, as requested.  </p></li>
  *
  * </ul>
@@ -454,11 +454,11 @@ public final java.nio.charset.CoderResult encode(java.nio.CharBuffer in, java.ni
  * been read.
  *
  * <p> Any additional output is written to the output buffer beginning at
- * its current position.  At most {@link java.nio.Buffer#remaining Buffer#remaining}
+ * its current position.  At most {@link java.nio.Buffer#remaining out.remaining()}
  * bytes will be written.  The buffer's position will be advanced
  * appropriately, but its mark and limit will not be modified.
  *
- * <p> If this method completes successfully then it returns {@link java.nio.charset.CoderResult#UNDERFLOW CoderResult#UNDERFLOW}.  If there is insufficient room in the output
+ * <p> If this method completes successfully then it returns {@link java.nio.charset.CoderResult#UNDERFLOW  }.  If there is insufficient room in the output
  * buffer then it returns {@link java.nio.charset.CoderResult#OVERFLOW CoderResult#OVERFLOW}.  If this happens
  * then this method must be invoked again, with an output buffer that has
  * more room, in order to complete the current <a href="#steps">encoding
@@ -536,8 +536,8 @@ protected void implReset() { throw new RuntimeException("Stub!"); }
  * interpretation and error recovery.
  *
  * <p> The buffers are read from, and written to, starting at their current
- * positions.  At most {@link java.nio.Buffer#remaining Buffer#remaining} characters
- * will be read, and at most {@link java.nio.Buffer#remaining Buffer#remaining}
+ * positions.  At most {@link java.nio.Buffer#remaining in.remaining()} characters
+ * will be read, and at most {@link java.nio.Buffer#remaining out.remaining()}
  * bytes will be written.  The buffers' positions will be advanced to
  * reflect the characters read and the bytes written, but their marks and
  * limits will not be modified.
@@ -592,7 +592,7 @@ protected abstract java.nio.charset.CoderResult encodeLoop(java.nio.CharBuffer i
  * @throws  java.nio.charset.UnmappableCharacterException
  *          If the character sequence starting at the input buffer's current
  *          position cannot be mapped to an equivalent byte sequence and
- *          the current unmappable-character action is {@link java.nio.charset.CodingErrorAction#REPORT CodingErrorAction#REPORT}
+ *          the current unmappable-character action is {@link java.nio.charset.CodingErrorAction#REPORT           }
  */
 
 public final java.nio.ByteBuffer encode(java.nio.CharBuffer in) throws java.nio.charset.CharacterCodingException { throw new RuntimeException("Stub!"); }

@@ -36,7 +36,7 @@ package java.util.logging;
  * The {@code javax.management.ObjectName ObjectName} that uniquely identifies
  * the management interface for logging within the {@code MBeanServer} is:
  * <pre>
- *    {@link java.util.logging.LogManager#LOGGING_MXBEAN_NAME LogManager#LOGGING_MXBEAN_NAME}
+ *    {@link java.util.logging.LogManager#LOGGING_MXBEAN_NAME java.util.logging:type=Logging}
  * </pre>
  * <p>
  *
@@ -67,7 +67,7 @@ public java.util.List<java.lang.String> getLoggerNames();
  * This method first finds the logger of the given name and
  * then returns the name of the log level by calling:
  * <blockquote>
- *   {@link java.util.logging.Logger#getLevel Logger#getLevel}.{@link java.util.logging.Level#getName Level#getName};
+ *   {@link java.util.logging.Logger#getLevel Logger.getLevel()}.{@link java.util.logging.Level#getName getName()};
  * </blockquote>
  *
  * <p>

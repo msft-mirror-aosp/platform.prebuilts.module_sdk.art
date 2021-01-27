@@ -98,8 +98,8 @@ public org.json.JSONStringer endObject() throws org.json.JSONException { throw n
  * Encodes {@code value}.
  *
  * @param value a {@link org.json.JSONObject JSONObject}, {@link org.json.JSONArray JSONArray}, String, Boolean,
- *     Integer, Long, Double or null. May not be {@link java.lang.Double#isNaN() Double#isNaN()}
- *     or {@link java.lang.Double#isInfinite() Double#isInfinite()}.
+ *     Integer, Long, Double or null. May not be {@link java.lang.Double#isNaN() NaNs}
+ *     or {@link java.lang.Double#isInfinite() infinities}.
  * @return this stringer.
  */
 
@@ -116,8 +116,8 @@ public org.json.JSONStringer value(boolean value) throws org.json.JSONException 
 /**
  * Encodes {@code value} to this stringer.
  *
- * @param value a finite value. May not be {@link java.lang.Double#isNaN() Double#isNaN()} or
- *     {@link java.lang.Double#isInfinite() Double#isInfinite()}.
+ * @param value a finite value. May not be {@link java.lang.Double#isNaN() NaNs} or
+ *     {@link java.lang.Double#isInfinite() infinities}.
  * @return this stringer.
  */
 

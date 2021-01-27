@@ -187,7 +187,7 @@ public java.util.Iterator<E> iterator();
  * the iteration are undefined.
  *
  * <p>The returned set has an ordering equivalent to
- * {@link java.util.Collections#reverseOrder(java.util.Comparator) Collections#reverseOrder(Comparator)}{@code (comparator())}.
+ * {@link java.util.Collections#reverseOrder(java.util.Comparator) Collections.reverseOrder}{@code (comparator())}.
  * The expression {@code s.descendingSet().descendingSet()} returns a
  * view of {@code s} essentially equivalent to {@code s}.
  *

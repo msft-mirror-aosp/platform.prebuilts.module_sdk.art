@@ -78,7 +78,7 @@ public Float(double value) { throw new RuntimeException("Stub!"); }
  * @see        java.lang.Float#valueOf(java.lang.String)
  */
 
-public Float(@android.annotation.NonNull java.lang.String s) throws java.lang.NumberFormatException { throw new RuntimeException("Stub!"); }
+public Float(@androidx.annotation.RecentlyNonNull java.lang.String s) throws java.lang.NumberFormatException { throw new RuntimeException("Stub!"); }
 
 /**
  * Returns a string representation of the {@code float}
@@ -147,7 +147,7 @@ public Float(@android.annotation.NonNull java.lang.String s) throws java.lang.Nu
  * @return a string representation of the argument.
  */
 
-@android.annotation.NonNull
+@androidx.annotation.RecentlyNonNull
 public static java.lang.String toString(float f) { throw new RuntimeException("Stub!"); }
 
 /**
@@ -185,7 +185,7 @@ public static java.lang.String toString(float f) { throw new RuntimeException("S
  * are zero, in which case a single zero is used. Next, the
  * exponent is represented by {@code "p"} followed
  * by a decimal string of the unbiased exponent as if produced by
- * a call to {@link java.lang.Integer#toString(int) Integer#toString(int)} on the
+ * a call to {@link java.lang.Integer#toString(int) Integer.toString} on the
  * exponent value.
  *
  * <li>If <i>m</i> is a {@code float} value with a subnormal
@@ -225,7 +225,7 @@ public static java.lang.String toString(float f) { throw new RuntimeException("S
  * @author Joseph D. Darcy
  */
 
-@android.annotation.NonNull
+@androidx.annotation.RecentlyNonNull
 public static java.lang.String toHexString(float f) { throw new RuntimeException("Stub!"); }
 
 /**
@@ -237,7 +237,7 @@ public static java.lang.String toHexString(float f) { throw new RuntimeException
  * {@code NullPointerException} is thrown.
  *
  * <p>Leading and trailing whitespace characters in {@code s}
- * are ignored.  Whitespace is removed as if by the {@link java.lang.String#trim String#trim} method; that is, both ASCII space and control
+ * are ignored.  Whitespace is removed as if by the {@link java.lang.String#trim  } method; that is, both ASCII space and control
  * characters are removed. The rest of {@code s} should
  * constitute a <i>FloatValue</i> as described by the lexical
  * syntax rules:
@@ -301,7 +301,7 @@ public static java.lang.String toHexString(float f) { throw new RuntimeException
  * Note that the round-to-nearest rule also implies overflow and
  * underflow behaviour; if the exact value of {@code s} is large
  * enough in magnitude (greater than or equal to ({@link
- * #MAX_VALUE} + {@link java.lang.Math#ulp(float) Math#ulp(float)}/2),
+ * #MAX_VALUE} + {@link java.lang.Math#ulp(float) ulp(MAX_VALUE)}/2),
  * rounding to {@code float} will result in an infinity and if the
  * exact value of {@code s} is small enough in magnitude (less
  * than or equal to {@link #MIN_VALUE}/2), rounding to float will
@@ -334,7 +334,7 @@ public static java.lang.String toHexString(float f) { throw new RuntimeException
  *
  * <p>To avoid calling this method on an invalid string and having
  * a {@code NumberFormatException} be thrown, the documentation
- * for {@link java.lang.Double#valueOf Double#valueOf} lists a regular
+ * for {@link java.lang.Double#valueOf Double.valueOf} lists a regular
  * expression which can be used to screen the input.
  *
  * @param   s   the string to be parsed.
@@ -344,8 +344,8 @@ public static java.lang.String toHexString(float f) { throw new RuntimeException
  *          parsable number.
  */
 
-@android.annotation.NonNull
-public static java.lang.Float valueOf(@android.annotation.NonNull java.lang.String s) throws java.lang.NumberFormatException { throw new RuntimeException("Stub!"); }
+@androidx.annotation.RecentlyNonNull
+public static java.lang.Float valueOf(@androidx.annotation.RecentlyNonNull java.lang.String s) throws java.lang.NumberFormatException { throw new RuntimeException("Stub!"); }
 
 /**
  * Returns a {@code Float} instance representing the specified
@@ -361,7 +361,7 @@ public static java.lang.Float valueOf(@android.annotation.NonNull java.lang.Stri
  * @since  1.5
  */
 
-@android.annotation.NonNull
+@androidx.annotation.RecentlyNonNull
 public static java.lang.Float valueOf(float f) { throw new RuntimeException("Stub!"); }
 
 /**
@@ -379,7 +379,7 @@ public static java.lang.Float valueOf(float f) { throw new RuntimeException("Stu
  * @since 1.2
  */
 
-public static float parseFloat(@android.annotation.NonNull java.lang.String s) throws java.lang.NumberFormatException { throw new RuntimeException("Stub!"); }
+public static float parseFloat(@androidx.annotation.RecentlyNonNull java.lang.String s) throws java.lang.NumberFormatException { throw new RuntimeException("Stub!"); }
 
 /**
  * Returns {@code true} if the specified number is a
@@ -447,7 +447,7 @@ public boolean isInfinite() { throw new RuntimeException("Stub!"); }
  * @see java.lang.Float#toString(float)
  */
 
-@android.annotation.NonNull
+@androidx.annotation.RecentlyNonNull
 public java.lang.String toString() { throw new RuntimeException("Stub!"); }
 
 /**
@@ -577,7 +577,7 @@ public static int hashCode(float value) { throw new RuntimeException("Stub!"); }
  * @see java.lang.Float#floatToIntBits(float)
  */
 
-public boolean equals(@android.annotation.Nullable java.lang.Object obj) { throw new RuntimeException("Stub!"); }
+public boolean equals(@androidx.annotation.RecentlyNullable java.lang.Object obj) { throw new RuntimeException("Stub!"); }
 
 /**
  * Returns a representation of the specified floating-point value
@@ -746,7 +746,7 @@ public static native float intBitsToFloat(int bits);
  * @see java.lang.Comparable#compareTo(Object)
  */
 
-public int compareTo(@android.annotation.NonNull java.lang.Float anotherFloat) { throw new RuntimeException("Stub!"); }
+public int compareTo(@androidx.annotation.RecentlyNonNull java.lang.Float anotherFloat) { throw new RuntimeException("Stub!"); }
 
 /**
  * Compares the two specified {@code float} values. The sign
@@ -784,7 +784,7 @@ public static float sum(float a, float b) { throw new RuntimeException("Stub!");
 
 /**
  * Returns the greater of two {@code float} values
- * as if by calling {@link java.lang.Math#max(float,float) Math#max(float, float)}.
+ * as if by calling {@link java.lang.Math#max(float,float) Math.max}.
  *
  * @param a the first operand
  * @param b the second operand
@@ -797,7 +797,7 @@ public static float max(float a, float b) { throw new RuntimeException("Stub!");
 
 /**
  * Returns the smaller of two {@code float} values
- * as if by calling {@link java.lang.Math#min(float,float) Math#min(float, float)}.
+ * as if by calling {@link java.lang.Math#min(float,float) Math.min}.
  *
  * @param a the first operand
  * @param b the second operand

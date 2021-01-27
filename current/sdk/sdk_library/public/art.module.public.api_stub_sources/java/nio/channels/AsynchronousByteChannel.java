@@ -103,7 +103,7 @@ public interface AsynchronousByteChannel extends java.nio.channels.AsynchronousC
  *          If the channel does not allow more than one read to be outstanding
  *          and a previous read has not completed
  * @throws  java.nio.channels.ShutdownChannelGroupException
- *          If the channel is associated with a {@link java.nio.channels.AsynchronousChannelGroup AsynchronousChannelGroup} that has terminated
+ *          If the channel is associated with a {@link java.nio.channels.AsynchronousChannelGroup           group} that has terminated
  */
 
 public <A> void read(java.nio.ByteBuffer dst, A attachment, java.nio.channels.CompletionHandler<java.lang.Integer,? super A> handler);
@@ -117,7 +117,7 @@ public <A> void read(java.nio.ByteBuffer dst, A attachment, java.nio.channels.Co
  * #read(java.nio.ByteBuffer,java.lang.Object,java.nio.channels.CompletionHandler)
  * read(ByteBuffer,Object,CompletionHandler)} method except that instead
  * of specifying a completion handler, this method returns a {@code Future}
- * representing the pending result. The {@code Future}'s {@link java.util.concurrent.Future#get() Future#get()} method returns the number of bytes read or {@code -1} if no bytes
+ * representing the pending result. The {@code Future}'s {@link java.util.concurrent.Future#get()  get} method returns the number of bytes read or {@code -1} if no bytes
  * could be read because the channel has reached end-of-stream.
  *
  * @param   dst
@@ -180,7 +180,7 @@ public java.util.concurrent.Future<java.lang.Integer> read(java.nio.ByteBuffer d
  *          If the channel does not allow more than one write to be outstanding
  *          and a previous write has not completed
  * @throws  java.nio.channels.ShutdownChannelGroupException
- *          If the channel is associated with a {@link java.nio.channels.AsynchronousChannelGroup AsynchronousChannelGroup} that has terminated
+ *          If the channel is associated with a {@link java.nio.channels.AsynchronousChannelGroup           group} that has terminated
  */
 
 public <A> void write(java.nio.ByteBuffer src, A attachment, java.nio.channels.CompletionHandler<java.lang.Integer,? super A> handler);
@@ -194,7 +194,7 @@ public <A> void write(java.nio.ByteBuffer src, A attachment, java.nio.channels.C
  * #write(java.nio.ByteBuffer,java.lang.Object,java.nio.channels.CompletionHandler)
  * write(ByteBuffer,Object,CompletionHandler)} method except that instead
  * of specifying a completion handler, this method returns a {@code Future}
- * representing the pending result. The {@code Future}'s {@link java.util.concurrent.Future#get() Future#get()} method returns the number of bytes written.
+ * representing the pending result. The {@code Future}'s {@link java.util.concurrent.Future#get()  get} method returns the number of bytes written.
  *
  * @param   src
  *          The buffer from which bytes are to be retrieved

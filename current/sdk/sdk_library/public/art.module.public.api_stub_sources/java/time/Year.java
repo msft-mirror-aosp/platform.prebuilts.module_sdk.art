@@ -112,7 +112,7 @@ private Year() { throw new RuntimeException("Stub!"); }
 /**
  * Obtains the current year from the system clock in the default time-zone.
  * <p>
- * This will query the {@link java.time.Clock#systemDefaultZone() Clock#systemDefaultZone()} in the default
+ * This will query the {@link java.time.Clock#systemDefaultZone() system clock} in the default
  * time-zone to obtain the current year.
  * <p>
  * Using this method will prevent the ability to use an alternate clock for testing
@@ -126,7 +126,7 @@ public static java.time.Year now() { throw new RuntimeException("Stub!"); }
 /**
  * Obtains the current year from the system clock in the specified time-zone.
  * <p>
- * This will query the {@link java.time.Clock#system(java.time.ZoneId) Clock#system(ZoneId)} to obtain the current year.
+ * This will query the {@link java.time.Clock#system(java.time.ZoneId) system clock} to obtain the current year.
  * Specifying the time-zone avoids dependence on the default time-zone.
  * <p>
  * Using this method will prevent the ability to use an alternate clock for testing
@@ -143,7 +143,7 @@ public static java.time.Year now(java.time.ZoneId zone) { throw new RuntimeExcep
  * <p>
  * This will query the specified clock to obtain the current year.
  * Using this method allows the use of an alternate clock for testing.
- * The alternate clock may be introduced using {@link java.time.Clock Clock}.
+ * The alternate clock may be introduced using {@link java.time.Clock dependency injection}.
  *
  * @param clock  the clock to use, not null
  * @return the current year, not null
@@ -175,7 +175,7 @@ public static java.time.Year of(int isoYear) { throw new RuntimeException("Stub!
  * A {@code TemporalAccessor} represents an arbitrary set of date and time information,
  * which this factory converts to an instance of {@code Year}.
  * <p>
- * The conversion extracts the {@link java.time.temporal.ChronoField#YEAR ChronoField#YEAR} field.
+ * The conversion extracts the {@link java.time.temporal.ChronoField#YEAR year} field.
  * The extraction is only permitted if the temporal object has an ISO
  * chronology, or can be converted to a {@code LocalDate}.
  * <p>

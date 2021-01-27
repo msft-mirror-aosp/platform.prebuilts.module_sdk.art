@@ -40,7 +40,7 @@ package java.lang;
  * @author  Nakul Saraiya
  * @author  Joseph D. Darcy
  * @see     java.lang.Number
- * @since   JDK1.1
+ * @since   1.1
  */
 
 @SuppressWarnings({"unchecked", "deprecation", "all"})
@@ -52,8 +52,14 @@ public final class Short extends java.lang.Number implements java.lang.Comparabl
  *
  * @param value     the value to be represented by the
  *                  {@code Short}.
+ *
+ * @deprecated
+ * It is rarely appropriate to use this constructor. The static factory
+ * {@link #valueOf(short)} is generally a better choice, as it is
+ * likely to yield significantly better space and time performance.
  */
 
+@Deprecated
 public Short(short value) { throw new RuntimeException("Stub!"); }
 
 /**
@@ -67,9 +73,15 @@ public Short(short value) { throw new RuntimeException("Stub!"); }
  *          {@code Short}
  * @throws  java.lang.NumberFormatException If the {@code String}
  *          does not contain a parsable {@code short}.
- * @see     java.lang.Short#parseShort(java.lang.String, int)
+ *
+ * @deprecated
+ * It is rarely appropriate to use this constructor.
+ * Use {@link #parseShort(java.lang.String)} to convert a string to a
+ * {@code short} primitive, or use {@link #valueOf(java.lang.String)}
+ * to convert a string to a {@code Short} object.
  */
 
+@Deprecated
 public Short(java.lang.String s) throws java.lang.NumberFormatException { throw new RuntimeException("Stub!"); }
 
 /**
@@ -388,6 +400,21 @@ public int compareTo(java.lang.Short anotherShort) { throw new RuntimeException(
  */
 
 public static int compare(short x, short y) { throw new RuntimeException("Stub!"); }
+
+/**
+ * Compares two {@code short} values numerically treating the values
+ * as unsigned.
+ *
+ * @param  x the first {@code short} to compare
+ * @param  y the second {@code short} to compare
+ * @return the value {@code 0} if {@code x == y}; a value less
+ *         than {@code 0} if {@code x < y} as unsigned values; and
+ *         a value greater than {@code 0} if {@code x > y} as
+ *         unsigned values
+ * @since 9
+ */
+
+public static int compareUnsigned(short x, short y) { throw new RuntimeException("Stub!"); }
 
 /**
  * Returns the value obtained by reversing the order of the bytes in the

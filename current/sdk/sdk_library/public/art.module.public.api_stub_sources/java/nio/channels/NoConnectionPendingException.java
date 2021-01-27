@@ -32,8 +32,8 @@ package java.nio.channels;
 
 
 /**
- * Unchecked exception thrown when the {@link java.nio.channels.SocketChannel#finishConnect SocketChannel#finishConnect} method of a {@link java.nio.channels.SocketChannel SocketChannel} is invoked without first
- * successfully invoking its {@link java.nio.channels.SocketChannel#connect SocketChannel#connect} method.
+ * Unchecked exception thrown when the {@link java.nio.channels.SocketChannel#finishConnect  finishConnect} method of a {@link java.nio.channels.SocketChannel SocketChannel} is invoked without first
+ * successfully invoking its {@link java.nio.channels.SocketChannel#connect connect} method.
  *
  * @since 1.4
  */

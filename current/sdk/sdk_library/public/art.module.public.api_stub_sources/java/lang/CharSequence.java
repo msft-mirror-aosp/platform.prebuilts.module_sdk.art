@@ -103,7 +103,7 @@ public char charAt(int index);
  *          or if <tt>start</tt> is greater than <tt>end</tt>
  */
 
-@android.annotation.NonNull
+@androidx.annotation.RecentlyNonNull
 public java.lang.CharSequence subSequence(int start, int end);
 
 /**
@@ -114,7 +114,7 @@ public java.lang.CharSequence subSequence(int start, int end);
  * @return  a string consisting of exactly this sequence of characters
  */
 
-@android.annotation.NonNull
+@androidx.annotation.RecentlyNonNull
 public java.lang.String toString();
 
 /**
@@ -130,12 +130,12 @@ public java.lang.String toString();
  * @since 1.8
  */
 
-@android.annotation.NonNull
+@androidx.annotation.RecentlyNonNull
 public default java.util.stream.IntStream chars() { throw new RuntimeException("Stub!"); }
 
 /**
  * Returns a stream of code point values from this sequence.  Any surrogate
- * pairs encountered in the sequence are combined as if by {@linkplain java.lang.Character#toCodePoint Character#toCodePoint} and the result is passed
+ * pairs encountered in the sequence are combined as if by {@linkplain java.lang.Character#toCodePoint Character.toCodePoint} and the result is passed
  * to the stream. Any other code units, including ordinary BMP characters,
  * unpaired surrogates, and undefined code units, are zero-extended to
  * {@code int} values which are then passed to the stream.
@@ -147,7 +147,7 @@ public default java.util.stream.IntStream chars() { throw new RuntimeException("
  * @since 1.8
  */
 
-@android.annotation.NonNull
+@androidx.annotation.RecentlyNonNull
 public default java.util.stream.IntStream codePoints() { throw new RuntimeException("Stub!"); }
 }
 

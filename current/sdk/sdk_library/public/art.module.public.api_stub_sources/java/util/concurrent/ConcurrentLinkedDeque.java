@@ -44,7 +44,7 @@ import java.util.Collection;
 import java.util.Spliterator;
 
 /**
- * An unbounded concurrent {@linkplain java.util.Deque Deque} based on linked nodes.
+ * An unbounded concurrent {@linkplain java.util.Deque deque} based on linked nodes.
  * Concurrent insertion, removal, and access operations execute safely
  * across multiple threads.
  * A {@code ConcurrentLinkedDeque} is an appropriate choice when

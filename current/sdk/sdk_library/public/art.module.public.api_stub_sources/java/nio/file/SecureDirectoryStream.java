@@ -42,7 +42,7 @@ import java.io.IOException;
  *
  * <p> A {@code SecureDirectoryStream} requires corresponding support from the
  * underlying operating system. Where an implementation supports this features
- * then the {@code DirectoryStream} returned by the {@link java.nio.file.Files#newDirectoryStream Files#newDirectoryStream} method will be a {@code SecureDirectoryStream} and must
+ * then the {@code DirectoryStream} returned by the {@link java.nio.file.Files#newDirectoryStream  newDirectoryStream} method will be a {@code SecureDirectoryStream} and must
  * be cast to that type in order to invoke the methods defined by this interface.
  *
  * <p> In the case of the default {@link java.nio.file.spi.FileSystemProvider
@@ -61,10 +61,10 @@ public interface SecureDirectoryStream<T> extends java.nio.file.DirectoryStream<
  * Opens the directory identified by the given path, returning a {@code
  * SecureDirectoryStream} to iterate over the entries in the directory.
  *
- * <p> This method works in exactly the manner specified by the {@link java.nio.file.Files#newDirectoryStream(java.nio.file.Path) Files#newDirectoryStream(Path)} method for the case that
- * the {@code path} parameter is an {@link java.nio.file.Path#isAbsolute Path#isAbsolute} path.
+ * <p> This method works in exactly the manner specified by the {@link java.nio.file.Files#newDirectoryStream(java.nio.file.Path) newDirectoryStream} method for the case that
+ * the {@code path} parameter is an {@link java.nio.file.Path#isAbsolute absolute} path.
  * When the parameter is a relative path then the directory to open is
- * relative to this open directory. The {@link java.nio.file.LinkOption#NOFOLLOW_LINKS LinkOption#NOFOLLOW_LINKS} option may be used to
+ * relative to this open directory. The {@link java.nio.file.LinkOption#NOFOLLOW_LINKS NOFOLLOW_LINKS} option may be used to
  * ensure that this method fails if the file is a symbolic link.
  *
  * <p> The new directory stream, once created, is not dependent upon the
@@ -87,7 +87,7 @@ public interface SecureDirectoryStream<T> extends java.nio.file.DirectoryStream<
  *          if an I/O error occurs
  * @throws  java.lang.SecurityException
  *          In the case of the default provider, and a security manager is
- *          installed, the {@link java.lang.SecurityManager#checkRead(java.lang.String) SecurityManager#checkRead(String)}
+ *          installed, the {@link java.lang.SecurityManager#checkRead(java.lang.String) checkRead}
  *          method is invoked to check read access to the directory.
  */
 
@@ -97,11 +97,11 @@ public java.nio.file.SecureDirectoryStream<T> newDirectoryStream(T path, java.ni
  * Opens or creates a file in this directory, returning a seekable byte
  * channel to access the file.
  *
- * <p> This method works in exactly the manner specified by the {@link java.nio.file.Files#newByteChannel Files#newByteChannel} method for the
- * case that the {@code path} parameter is an {@link java.nio.file.Path#isAbsolute Path#isAbsolute}
+ * <p> This method works in exactly the manner specified by the {@link java.nio.file.Files#newByteChannel Files.newByteChannel} method for the
+ * case that the {@code path} parameter is an {@link java.nio.file.Path#isAbsolute absolute}
  * path. When the parameter is a relative path then the file to open or
  * create is relative to this open directory. In addition to the options
- * defined by the {@code Files.newByteChannel} method, the {@link java.nio.file.LinkOption#NOFOLLOW_LINKS LinkOption#NOFOLLOW_LINKS} option may be used to
+ * defined by the {@code Files.newByteChannel} method, the {@link java.nio.file.LinkOption#NOFOLLOW_LINKS NOFOLLOW_LINKS} option may be used to
  * ensure that this method fails if the file is a symbolic link.
  *
  * <p> The channel, once created, is not dependent upon the directory stream
@@ -126,15 +126,15 @@ public java.nio.file.SecureDirectoryStream<T> newDirectoryStream(T path, java.ni
  *          if an unsupported open option is specified or the array contains
  *          attributes that cannot be set atomically when creating the file
  * @throws  java.nio.file.FileAlreadyExistsException
- *          if a file of that name already exists and the {@link java.nio.file.StandardOpenOption#CREATE_NEW StandardOpenOption#CREATE_NEW} option is specified
+ *          if a file of that name already exists and the {@link java.nio.file.StandardOpenOption#CREATE_NEW CREATE_NEW} option is specified
  *          <i>(optional specific exception)</i>
  * @throws  java.io.IOException
  *          if an I/O error occurs
  * @throws  java.lang.SecurityException
  *          In the case of the default provider, and a security manager is
- *          installed, the {@link java.lang.SecurityManager#checkRead(java.lang.String) SecurityManager#checkRead(String)}
+ *          installed, the {@link java.lang.SecurityManager#checkRead(java.lang.String) checkRead}
  *          method is invoked to check read access to the path if the file
- *          is opened for reading. The {@link java.lang.SecurityManager#checkWrite(java.lang.String) SecurityManager#checkWrite(String)} method is invoked to check write access to the path
+ *          is opened for reading. The {@link java.lang.SecurityManager#checkWrite(java.lang.String)           checkWrite} method is invoked to check write access to the path
  *          if the file is opened for writing.
  */
 
@@ -143,7 +143,7 @@ public java.nio.channels.SeekableByteChannel newByteChannel(T path, java.util.Se
 /**
  * Deletes a file.
  *
- * <p> Unlike the {@link java.nio.file.Files#delete Files#delete} method, this method does
+ * <p> Unlike the {@link java.nio.file.Files#delete delete()} method, this method does
  * not first examine the file to determine if the file is a directory.
  * Whether a directory is deleted by this method is system dependent and
  * therefore not specified. If the file is a symbolic link, then the link
@@ -162,7 +162,7 @@ public java.nio.channels.SeekableByteChannel newByteChannel(T path, java.util.Se
  *          if an I/O error occurs
  * @throws  java.lang.SecurityException
  *          In the case of the default provider, and a security manager is
- *          installed, the {@link java.lang.SecurityManager#checkDelete(java.lang.String) SecurityManager#checkDelete(String)}
+ *          installed, the {@link java.lang.SecurityManager#checkDelete(java.lang.String) checkDelete}
  *          method is invoked to check delete access to the file
  */
 
@@ -171,7 +171,7 @@ public void deleteFile(T path) throws java.io.IOException;
 /**
  * Deletes a directory.
  *
- * <p> Unlike the {@link java.nio.file.Files#delete Files#delete} method, this method
+ * <p> Unlike the {@link java.nio.file.Files#delete delete()} method, this method
  * does not first examine the file to determine if the file is a directory.
  * Whether non-directories are deleted by this method is system dependent and
  * therefore not specified. When the parameter is a relative path then the
@@ -191,7 +191,7 @@ public void deleteFile(T path) throws java.io.IOException;
  *          if an I/O error occurs
  * @throws  java.lang.SecurityException
  *          In the case of the default provider, and a security manager is
- *          installed, the {@link java.lang.SecurityManager#checkDelete(java.lang.String) SecurityManager#checkDelete(String)}
+ *          installed, the {@link java.lang.SecurityManager#checkDelete(java.lang.String) checkDelete}
  *          method is invoked to check delete access to the directory
  */
 
@@ -200,10 +200,10 @@ public void deleteDirectory(T path) throws java.io.IOException;
 /**
  * Move a file from this directory to another directory.
  *
- * <p> This method works in a similar manner to {@link java.nio.file.Files#move Files#move}
- * method when the {@link java.nio.file.StandardCopyOption#ATOMIC_MOVE StandardCopyOption#ATOMIC_MOVE} option
+ * <p> This method works in a similar manner to {@link java.nio.file.Files#move move}
+ * method when the {@link java.nio.file.StandardCopyOption#ATOMIC_MOVE ATOMIC_MOVE} option
  * is specified. That is, this method moves a file as an atomic file system
- * operation. If the {@code srcpath} parameter is an {@link java.nio.file.Path#isAbsolute Path#isAbsolute} path then it locates the source file. If the parameter is a
+ * operation. If the {@code srcpath} parameter is an {@link java.nio.file.Path#isAbsolute  absolute} path then it locates the source file. If the parameter is a
  * relative path then it is located relative to this open directory. If
  * the {@code targetpath} parameter is absolute then it locates the target
  * file (the {@code targetdir} parameter is ignored). If the parameter is
@@ -230,7 +230,7 @@ public void deleteDirectory(T path) throws java.io.IOException;
  *          if an I/O error occurs
  * @throws  java.lang.SecurityException
  *          In the case of the default provider, and a security manager is
- *          installed, the {@link java.lang.SecurityManager#checkWrite(java.lang.String) SecurityManager#checkWrite(String)}
+ *          installed, the {@link java.lang.SecurityManager#checkWrite(java.lang.String) checkWrite}
  *          method is invoked to check write access to both the source and
  *          target file.
  */

@@ -175,7 +175,7 @@ public java.lang.String getAlgorithm() { throw new RuntimeException("Stub!"); }
  * Provider that supports the specified algorithm is returned.
  *
  * <p> Note that the list of registered providers may be retrieved via
- * the {@link java.security.Security#getProviders() Security#getProviders()} method.
+ * the {@link java.security.Security#getProviders() Security.getProviders()} method.
  *
  * @param algorithm the standard string name of the algorithm.
  * See the KeyPairGenerator section in the <a href=
@@ -204,7 +204,7 @@ public static java.security.KeyPairGenerator getInstance(java.lang.String algori
  * in the security provider list.
  *
  * <p> Note that the list of registered providers may be retrieved via
- * the {@link java.security.Security#getProviders() Security#getProviders()} method.
+ * the {@link java.security.Security#getProviders() Security.getProviders()} method.
  *
  * @param algorithm the standard string name of the algorithm.
  * See the KeyPairGenerator section in the <a href=
@@ -319,9 +319,7 @@ public void initialize(int keysize, java.security.SecureRandom random) { throw n
  * <p>This concrete method has been added to this previously-defined
  * abstract class.
  * This method calls the KeyPairGeneratorSpi
- * {@link java.security.KeyPairGeneratorSpi#initialize(java.security.spec.AlgorithmParameterSpec,java.security.SecureRandom) KeyPairGeneratorSpi#initialize(
- * java.security.spec.AlgorithmParameterSpec,
- * java.security.SecureRandom)} method,
+ * {@link java.security.KeyPairGeneratorSpi#initialize(java.security.spec.AlgorithmParameterSpec,java.security.SecureRandom) initialize} method,
  * passing it {@code params} and a source of randomness (obtained
  * from the highest-priority installed provider or system-provided if none
  * of the installed providers supply one).
@@ -344,9 +342,7 @@ public void initialize(java.security.spec.AlgorithmParameterSpec params) throws 
  *
  * <p>This concrete method has been added to this previously-defined
  * abstract class.
- * This method calls the KeyPairGeneratorSpi {@link java.security.KeyPairGeneratorSpi#initialize(java.security.spec.AlgorithmParameterSpec,java.security.SecureRandom) KeyPairGeneratorSpi#initialize(
- * java.security.spec.AlgorithmParameterSpec,
- * java.security.SecureRandom)} method,
+ * This method calls the KeyPairGeneratorSpi {@link java.security.KeyPairGeneratorSpi#initialize(java.security.spec.AlgorithmParameterSpec,java.security.SecureRandom) initialize} method,
  * passing it {@code params} and {@code random}.
  * That {@code initialize}
  * method always throws an

@@ -140,15 +140,15 @@ public <V> java.util.concurrent.ScheduledFuture<V> schedule(java.util.concurrent
  * <p>The sequence of task executions continues indefinitely until
  * one of the following exceptional completions occur:
  * <ul>
- * <li>The task is {@linkplain java.util.concurrent.Future#cancel Future#cancel}
+ * <li>The task is {@linkplain java.util.concurrent.Future#cancel explicitly cancelled}
  * via the returned future.
  * <li>The executor terminates, also resulting in task cancellation.
  * <li>An execution of the task throws an exception.  In this case
- * calling {@link java.util.concurrent.Future#get() Future#get()} on the returned future will
+ * calling {@link java.util.concurrent.Future#get() get} on the returned future will
  * throw {@link java.util.concurrent.ExecutionException ExecutionException}.
  * </ul>
  * Subsequent executions are suppressed.  Subsequent calls to
- * {@link java.util.concurrent.Future#isDone Future#isDone} on the returned future will
+ * {@link java.util.concurrent.Future#isDone isDone()} on the returned future will
  * return {@code true}.
  *
  * <p>If any execution of this task takes longer than its period, then
@@ -160,7 +160,7 @@ public <V> java.util.concurrent.ScheduledFuture<V> schedule(java.util.concurrent
  * @param period the period between successive executions
  * @param unit the time unit of the initialDelay and period parameters
  * @return a ScheduledFuture representing pending completion of
- *         the series of repeated tasks.  The future's {@link java.util.concurrent.Future#get() Future#get()} method will never return normally,
+ *         the series of repeated tasks.  The future's {@link java.util.concurrent.Future#get() get()} method will never return normally,
  *         and will throw an exception upon task cancellation or
  *         abnormal termination of a task execution.
  * @throws java.util.concurrent.RejectedExecutionException if the task cannot be
@@ -180,15 +180,15 @@ public java.util.concurrent.ScheduledFuture<?> scheduleAtFixedRate(java.lang.Run
  * <p>The sequence of task executions continues indefinitely until
  * one of the following exceptional completions occur:
  * <ul>
- * <li>The task is {@linkplain java.util.concurrent.Future#cancel Future#cancel}
+ * <li>The task is {@linkplain java.util.concurrent.Future#cancel explicitly cancelled}
  * via the returned future.
  * <li>The executor terminates, also resulting in task cancellation.
  * <li>An execution of the task throws an exception.  In this case
- * calling {@link java.util.concurrent.Future#get() Future#get()} on the returned future will
+ * calling {@link java.util.concurrent.Future#get() get} on the returned future will
  * throw {@link java.util.concurrent.ExecutionException ExecutionException}.
  * </ul>
  * Subsequent executions are suppressed.  Subsequent calls to
- * {@link java.util.concurrent.Future#isDone Future#isDone} on the returned future will
+ * {@link java.util.concurrent.Future#isDone isDone()} on the returned future will
  * return {@code true}.
  *
  * @param command the task to execute
@@ -197,7 +197,7 @@ public java.util.concurrent.ScheduledFuture<?> scheduleAtFixedRate(java.lang.Run
  * execution and the commencement of the next
  * @param unit the time unit of the initialDelay and delay parameters
  * @return a ScheduledFuture representing pending completion of
- *         the series of repeated tasks.  The future's {@link java.util.concurrent.Future#get() Future#get()} method will never return normally,
+ *         the series of repeated tasks.  The future's {@link java.util.concurrent.Future#get() get()} method will never return normally,
  *         and will throw an exception upon task cancellation or
  *         abnormal termination of a task execution.
  * @throws java.util.concurrent.RejectedExecutionException if the task cannot be

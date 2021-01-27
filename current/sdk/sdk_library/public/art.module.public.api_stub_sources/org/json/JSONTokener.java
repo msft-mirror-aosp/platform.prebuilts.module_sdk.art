@@ -150,7 +150,7 @@ public char nextClean() throws org.json.JSONException { throw new RuntimeExcepti
 public java.lang.String next(int length) throws org.json.JSONException { throw new RuntimeException("Stub!"); }
 
 /**
- * Returns the {@link java.lang.String#trim String#trim} string holding the characters up
+ * Returns the {@link java.lang.String#trim trimmed} string holding the characters up
  * to but not including the first of:
  * <ul>
  *   <li>any character in {@code excluded}

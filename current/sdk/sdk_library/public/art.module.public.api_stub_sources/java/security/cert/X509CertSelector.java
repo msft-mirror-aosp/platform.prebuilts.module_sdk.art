@@ -45,7 +45,7 @@ import java.io.IOException;
  * {@link #setIssuer setIssuer} or
  * {@link #setKeyUsage setKeyUsage}, for instance) and then the
  * {@code X509CertSelector} is passed to
- * {@link java.security.cert.CertStore#getCertificates CertStore#getCertificates} or some similar
+ * {@link java.security.cert.CertStore#getCertificates CertStore.getCertificates} or some similar
  * method.
  * <p>
  * Several criteria can be enabled (by calling {@link #setIssuer setIssuer}
@@ -449,7 +449,7 @@ public void setSubjectPublicKey(byte[] key) throws java.io.IOException { throw n
  *
  * @param keyUsage a boolean array in the same format as the boolean
  *                 array returned by
- * {@link java.security.cert.X509Certificate#getKeyUsage() X509Certificate#getKeyUsage()}.
+ * {@link java.security.cert.X509Certificate#getKeyUsage() X509Certificate.getKeyUsage()}.
  *                 Or {@code null}.
  * @see #getKeyUsage
  */
@@ -1073,7 +1073,7 @@ public java.security.PublicKey getSubjectPublicKey() { throw new RuntimeExceptio
  *
  * @return a boolean array in the same format as the boolean
  *                 array returned by
- * {@link java.security.cert.X509Certificate#getKeyUsage() X509Certificate#getKeyUsage()}.
+ * {@link java.security.cert.X509Certificate#getKeyUsage() X509Certificate.getKeyUsage()}.
  *                 Or {@code null}.
  * @see #setKeyUsage
  */

@@ -38,7 +38,7 @@ package org.xml.sax;
  * {@link #fatalError fatalError}.  In other words, a SAX driver class
  * may throw an exception after reporting any fatalError.
  * Also parsers may throw appropriate exceptions for non-XML errors.
- * For example, {@link org.xml.sax.XMLReader#parse XMLReader#parse} would throw
+ * For example, {@link org.xml.sax.XMLReader#parse XMLReader.parse()} would throw
  * an IOException for errors accessing entities or the document.</p>
  *
  * @since SAX 1.0

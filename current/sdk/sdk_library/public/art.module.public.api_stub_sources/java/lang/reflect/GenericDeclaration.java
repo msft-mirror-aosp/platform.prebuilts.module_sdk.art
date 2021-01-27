@@ -51,7 +51,7 @@ public interface GenericDeclaration extends java.lang.reflect.AnnotatedElement {
  *     <cite>The Java&trade; Virtual Machine Specification</cite>
  */
 
-@android.annotation.NonNull
+@androidx.annotation.RecentlyNonNull
 public java.lang.reflect.TypeVariable<?>[] getTypeParameters();
 }
 

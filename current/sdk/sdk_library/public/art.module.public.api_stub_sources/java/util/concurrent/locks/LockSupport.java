@@ -167,7 +167,7 @@ public static void unpark(java.lang.Thread thread) { throw new RuntimeException(
  * <li>Some other thread invokes {@link #unpark unpark} with the
  * current thread as the target; or
  *
- * <li>Some other thread {@linkplain java.lang.Thread#interrupt Thread#interrupt}
+ * <li>Some other thread {@linkplain java.lang.Thread#interrupt interrupts}
  * the current thread; or
  *
  * <li>The call spuriously (that is, for no reason) returns.
@@ -198,7 +198,7 @@ public static void park(java.lang.Object blocker) { throw new RuntimeException("
  * <li>Some other thread invokes {@link #unpark unpark} with the
  * current thread as the target; or
  *
- * <li>Some other thread {@linkplain java.lang.Thread#interrupt Thread#interrupt}
+ * <li>Some other thread {@linkplain java.lang.Thread#interrupt interrupts}
  * the current thread; or
  *
  * <li>The specified waiting time elapses; or
@@ -233,7 +233,7 @@ public static void parkNanos(java.lang.Object blocker, long nanos) { throw new R
  * <li>Some other thread invokes {@link #unpark unpark} with the
  * current thread as the target; or
  *
- * <li>Some other thread {@linkplain java.lang.Thread#interrupt Thread#interrupt} the
+ * <li>Some other thread {@linkplain java.lang.Thread#interrupt interrupts} the
  * current thread; or
  *
  * <li>The specified deadline passes; or
@@ -285,7 +285,7 @@ public static java.lang.Object getBlocker(java.lang.Thread t) { throw new Runtim
  * <li>Some other thread invokes {@link #unpark unpark} with the
  * current thread as the target; or
  *
- * <li>Some other thread {@linkplain java.lang.Thread#interrupt Thread#interrupt}
+ * <li>Some other thread {@linkplain java.lang.Thread#interrupt interrupts}
  * the current thread; or
  *
  * <li>The call spuriously (that is, for no reason) returns.
@@ -312,7 +312,7 @@ public static void park() { throw new RuntimeException("Stub!"); }
  * <li>Some other thread invokes {@link #unpark unpark} with the
  * current thread as the target; or
  *
- * <li>Some other thread {@linkplain java.lang.Thread#interrupt Thread#interrupt}
+ * <li>Some other thread {@linkplain java.lang.Thread#interrupt interrupts}
  * the current thread; or
  *
  * <li>The specified waiting time elapses; or
@@ -344,7 +344,7 @@ public static void parkNanos(long nanos) { throw new RuntimeException("Stub!"); 
  * <li>Some other thread invokes {@link #unpark unpark} with the
  * current thread as the target; or
  *
- * <li>Some other thread {@linkplain java.lang.Thread#interrupt Thread#interrupt}
+ * <li>Some other thread {@linkplain java.lang.Thread#interrupt interrupts}
  * the current thread; or
  *
  * <li>The specified deadline passes; or

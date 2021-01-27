@@ -108,7 +108,7 @@ private LocalTime() { throw new RuntimeException("Stub!"); }
 /**
  * Obtains the current time from the system clock in the default time-zone.
  * <p>
- * This will query the {@link java.time.Clock#systemDefaultZone() Clock#systemDefaultZone()} in the default
+ * This will query the {@link java.time.Clock#systemDefaultZone() system clock} in the default
  * time-zone to obtain the current time.
  * <p>
  * Using this method will prevent the ability to use an alternate clock for testing
@@ -122,7 +122,7 @@ public static java.time.LocalTime now() { throw new RuntimeException("Stub!"); }
 /**
  * Obtains the current time from the system clock in the specified time-zone.
  * <p>
- * This will query the {@link java.time.Clock#system(java.time.ZoneId) Clock#system(ZoneId)} to obtain the current time.
+ * This will query the {@link java.time.Clock#system(java.time.ZoneId) system clock} to obtain the current time.
  * Specifying the time-zone avoids dependence on the default time-zone.
  * <p>
  * Using this method will prevent the ability to use an alternate clock for testing
@@ -139,7 +139,7 @@ public static java.time.LocalTime now(java.time.ZoneId zone) { throw new Runtime
  * <p>
  * This will query the specified clock to obtain the current time.
  * Using this method allows the use of an alternate clock for testing.
- * The alternate clock may be introduced using {@link java.time.Clock Clock}.
+ * The alternate clock may be introduced using {@link java.time.Clock dependency injection}.
  *
  * @param clock  the clock to use, not null
  * @return the current time, not null
@@ -192,6 +192,22 @@ public static java.time.LocalTime of(int hour, int minute, int second) { throw n
 public static java.time.LocalTime of(int hour, int minute, int second, int nanoOfSecond) { throw new RuntimeException("Stub!"); }
 
 /**
+ * Obtains an instance of {@code LocalTime} from an {@code Instant} and zone ID.
+ * <p>
+ * This creates a local time based on the specified instant.
+ * First, the offset from UTC/Greenwich is obtained using the zone ID and instant,
+ * which is simple as there is only one valid offset for each instant.
+ * Then, the instant and offset are used to calculate the local time.
+ *
+ * @param instant  the instant to create the time from, not null
+ * @param zone  the time-zone, which may be an offset, not null
+ * @return the local time, not null
+ * @since 9
+ */
+
+public static java.time.LocalTime ofInstant(java.time.Instant instant, java.time.ZoneId zone) { throw new RuntimeException("Stub!"); }
+
+/**
  * Obtains an instance of {@code LocalTime} from a second-of-day value.
  * <p>
  * This returns a {@code LocalTime} with the specified second-of-day.
@@ -224,7 +240,7 @@ public static java.time.LocalTime ofNanoOfDay(long nanoOfDay) { throw new Runtim
  * which this factory converts to an instance of {@code LocalTime}.
  * <p>
  * The conversion uses the {@link java.time.temporal.TemporalQueries#localTime() TemporalQueries#localTime()} query, which relies
- * on extracting the {@link java.time.temporal.ChronoField#NANO_OF_DAY ChronoField#NANO_OF_DAY} field.
+ * on extracting the {@link java.time.temporal.ChronoField#NANO_OF_DAY NANO_OF_DAY} field.
  * <p>
  * This method matches the signature of the functional interface {@link java.time.temporal.TemporalQuery TemporalQuery}
  * allowing it to be used as a query via method reference, {@code LocalTime::from}.
@@ -370,7 +386,7 @@ public java.time.temporal.ValueRange range(java.time.temporal.TemporalField fiel
  * If the field is a {@link java.time.temporal.ChronoField ChronoField} then the query is implemented here.
  * The {@link #isSupported(java.time.temporal.TemporalField) supported fields} will return valid
  * values based on this time, except {@code NANO_OF_DAY} and {@code MICRO_OF_DAY}
- * which are too large to fit in an {@code int} and throw a {@code DateTimeException}.
+ * which are too large to fit in an {@code int} and throw an {@code UnsupportedTemporalTypeException}.
  * All other {@code ChronoField} instances will throw an {@code UnsupportedTemporalTypeException}.
  * <p>
  * If the field is not a {@code ChronoField}, then the result of this method
@@ -609,13 +625,13 @@ public java.time.LocalTime withNano(int nanoOfSecond) { throw new RuntimeExcepti
  * <p>
  * Truncation returns a copy of the original time with fields
  * smaller than the specified unit set to zero.
- * For example, truncating with the {@link java.time.temporal.ChronoUnit#MINUTES ChronoUnit#MINUTES} unit
+ * For example, truncating with the {@link java.time.temporal.ChronoUnit#MINUTES minutes} unit
  * will set the second-of-minute and nano-of-second field to zero.
  * <p>
- * The unit must have a {@linkplain java.time.temporal.TemporalUnit#getDuration() TemporalUnit#getDuration()}
+ * The unit must have a {@linkplain java.time.temporal.TemporalUnit#getDuration() duration}
  * that divides into the length of a standard day without remainder.
  * This includes all supplied time units on {@link java.time.temporal.ChronoUnit ChronoUnit} and
- * {@link java.time.temporal.ChronoUnit#DAYS ChronoUnit#DAYS}. Other units throw an exception.
+ * {@link java.time.temporal.ChronoUnit#DAYS DAYS}. Other units throw an exception.
  * <p>
  * This instance is immutable and unaffected by this method call.
  *
@@ -1013,6 +1029,24 @@ public int toSecondOfDay() { throw new RuntimeException("Stub!"); }
  */
 
 public long toNanoOfDay() { throw new RuntimeException("Stub!"); }
+
+/**
+ * Converts this {@code LocalTime} to the number of seconds since the epoch
+ * of 1970-01-01T00:00:00Z.
+ * <p>
+ * This combines this local time with the specified date and
+ * offset to calculate the epoch-second value, which is the
+ * number of elapsed seconds from 1970-01-01T00:00:00Z.
+ * Instants on the time-line after the epoch are positive, earlier
+ * are negative.
+ *
+ * @param date the local date, not null
+ * @param offset the zone offset, not null
+ * @return the number of seconds since the epoch of 1970-01-01T00:00:00Z, may be negative
+ * @since 9
+ */
+
+public long toEpochSecond(java.time.LocalDate date, java.time.ZoneOffset offset) { throw new RuntimeException("Stub!"); }
 
 /**
  * Compares this time to another time.

@@ -15,7 +15,7 @@ import org.xml.sax.SAXException;
  * This class extends the SAX2 base handler class to support the
  * SAX2 {@link org.xml.sax.ext.LexicalHandler LexicalHandler}, {@link org.xml.sax.ext.DeclHandler DeclHandler}, and
  * {@link org.xml.sax.ext.EntityResolver2 EntityResolver2} extensions.  Except for overriding the
- * original SAX1 {@link org.xml.sax.helpers.DefaultHandler#resolveEntity DefaultHandler#resolveEntity}
+ * original SAX1 {@link org.xml.sax.helpers.DefaultHandler#resolveEntity resolveEntity()}
  * method the added handler methods just return.  Subclassers may
  * override everything on a method-by-method basis.
  *
@@ -90,7 +90,7 @@ public org.xml.sax.InputSource getExternalSubset(java.lang.String name, java.lan
  * Tells the parser to resolve the systemId against the baseURI
  * and read the entity text from that resulting absolute URI.
  * Note that because the older
- * {@link org.xml.sax.helpers.DefaultHandler#resolveEntity DefaultHandler#resolveEntity},
+ * {@link org.xml.sax.helpers.DefaultHandler#resolveEntity DefaultHandler.resolveEntity()},
  * method is overridden to call this one, this method may sometimes
  * be invoked with null <em>name</em> and <em>baseURI</em>, and
  * with the <em>systemId</em> already absolutized.
@@ -125,7 +125,7 @@ public org.xml.sax.InputSource resolveEntity(java.lang.String name, java.lang.St
 
 /**
  * Invokes
- * {@link org.xml.sax.ext.EntityResolver2#resolveEntity EntityResolver2#resolveEntity}
+ * {@link org.xml.sax.ext.EntityResolver2#resolveEntity EntityResolver2.resolveEntity()}
  * with null entity name and base URI.
  * You only need to override that method to use this class.
  *

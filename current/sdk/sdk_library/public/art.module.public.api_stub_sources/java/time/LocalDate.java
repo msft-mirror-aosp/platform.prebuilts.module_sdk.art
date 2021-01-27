@@ -113,7 +113,7 @@ private LocalDate() { throw new RuntimeException("Stub!"); }
 /**
  * Obtains the current date from the system clock in the default time-zone.
  * <p>
- * This will query the {@link java.time.Clock#systemDefaultZone() Clock#systemDefaultZone()} in the default
+ * This will query the {@link java.time.Clock#systemDefaultZone() system clock} in the default
  * time-zone to obtain the current date.
  * <p>
  * Using this method will prevent the ability to use an alternate clock for testing
@@ -127,7 +127,7 @@ public static java.time.LocalDate now() { throw new RuntimeException("Stub!"); }
 /**
  * Obtains the current date from the system clock in the specified time-zone.
  * <p>
- * This will query the {@link java.time.Clock#system(java.time.ZoneId) Clock#system(ZoneId)} to obtain the current date.
+ * This will query the {@link java.time.Clock#system(java.time.ZoneId) system clock} to obtain the current date.
  * Specifying the time-zone avoids dependence on the default time-zone.
  * <p>
  * Using this method will prevent the ability to use an alternate clock for testing
@@ -144,7 +144,7 @@ public static java.time.LocalDate now(java.time.ZoneId zone) { throw new Runtime
  * <p>
  * This will query the specified clock to obtain the current date - today.
  * Using this method allows the use of an alternate clock for testing.
- * The alternate clock may be introduced using {@link java.time.Clock Clock}.
+ * The alternate clock may be introduced using {@link java.time.Clock dependency injection}.
  *
  * @param clock  the clock to use, not null
  * @return the current date, not null
@@ -203,7 +203,7 @@ public static java.time.LocalDate ofYearDay(int year, int dayOfYear) { throw new
  * Obtains an instance of {@code LocalDate} from the epoch day count.
  * <p>
  * This returns a {@code LocalDate} with the specified epoch-day.
- * The {@link java.time.temporal.ChronoField#EPOCH_DAY ChronoField#EPOCH_DAY} is a simple incrementing count
+ * The {@link java.time.temporal.ChronoField#EPOCH_DAY EPOCH_DAY} is a simple incrementing count
  * of days where day 0 is 1970-01-01. Negative numbers represent earlier days.
  *
  * @param epochDay  the Epoch Day to convert, based on the epoch 1970-01-01
@@ -221,7 +221,7 @@ public static java.time.LocalDate ofEpochDay(long epochDay) { throw new RuntimeE
  * which this factory converts to an instance of {@code LocalDate}.
  * <p>
  * The conversion uses the {@link java.time.temporal.TemporalQueries#localDate() TemporalQueries#localDate()} query, which relies
- * on extracting the {@link java.time.temporal.ChronoField#EPOCH_DAY ChronoField#EPOCH_DAY} field.
+ * on extracting the {@link java.time.temporal.ChronoField#EPOCH_DAY EPOCH_DAY} field.
  * <p>
  * This method matches the signature of the functional interface {@link java.time.temporal.TemporalQuery TemporalQuery}
  * allowing it to be used as a query via method reference, {@code LocalDate::from}.
@@ -477,7 +477,7 @@ public int getMonthValue() { throw new RuntimeException("Stub!"); }
  * This method returns the enum {@link java.time.Month Month} for the month.
  * This avoids confusion as to what {@code int} values mean.
  * If you need access to the primitive {@code int} value then the enum
- * provides the {@link java.time.Month#getValue() Month#getValue()}.
+ * provides the {@link java.time.Month#getValue() int value}.
  *
  * @return the month-of-year, not null
  * @see #getMonthValue()
@@ -511,7 +511,7 @@ public int getDayOfYear() { throw new RuntimeException("Stub!"); }
  * This method returns the enum {@link java.time.DayOfWeek DayOfWeek} for the day-of-week.
  * This avoids confusion as to what {@code int} values mean.
  * If you need access to the primitive {@code int} value then the enum
- * provides the {@link java.time.DayOfWeek#getValue() DayOfWeek#getValue()}.
+ * provides the {@link java.time.DayOfWeek#getValue() int value}.
  * <p>
  * Additional information can be obtained from the {@code DayOfWeek}.
  * This includes textual names of the values.

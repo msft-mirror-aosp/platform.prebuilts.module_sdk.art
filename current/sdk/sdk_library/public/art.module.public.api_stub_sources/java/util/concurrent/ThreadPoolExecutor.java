@@ -55,9 +55,9 @@ import java.util.concurrent.locks.ReentrantLock;
  * <p>To be useful across a wide range of contexts, this class
  * provides many adjustable parameters and extensibility
  * hooks. However, programmers are urged to use the more convenient
- * {@link java.util.concurrent.Executors Executors} factory methods {@link java.util.concurrent.Executors#newCachedThreadPool Executors#newCachedThreadPool} (unbounded thread pool, with
+ * {@link java.util.concurrent.Executors Executors} factory methods {@link java.util.concurrent.Executors#newCachedThreadPool  } (unbounded thread pool, with
  * automatic thread reclamation), {@link java.util.concurrent.Executors#newFixedThreadPool Executors#newFixedThreadPool}
- * (fixed size thread pool) and {@link java.util.concurrent.Executors#newSingleThreadExecutor Executors#newSingleThreadExecutor} (single background thread), that
+ * (fixed size thread pool) and {@link java.util.concurrent.Executors#newSingleThreadExecutor  } (single background thread), that
  * preconfigure settings for the most common usage
  * scenarios. Otherwise, use the following guide when manually
  * configuring and tuning this class:
@@ -122,7 +122,7 @@ import java.util.concurrent.locks.ReentrantLock;
  * This provides a means of reducing resource consumption when the
  * pool is not being actively used. If the pool becomes more active
  * later, new threads will be constructed. This parameter can also be
- * changed dynamically using method {@link #setKeepAliveTime(long,java.util.concurrent.TimeUnit)}.  Using a value of {@code Long.MAX_VALUE} {@link java.util.concurrent.TimeUnit#NANOSECONDS TimeUnit#NANOSECONDS} effectively disables idle threads from ever
+ * changed dynamically using method {@link #setKeepAliveTime(long,java.util.concurrent.TimeUnit)}.  Using a value of {@code Long.MAX_VALUE} {@link java.util.concurrent.TimeUnit#NANOSECONDS  } effectively disables idle threads from ever
  * terminating prior to shut down. By default, the keep-alive policy
  * applies only when there are more than corePoolSize threads, but
  * method {@link #allowCoreThreadTimeOut(boolean)} can be used to
@@ -202,7 +202,7 @@ import java.util.concurrent.locks.ReentrantLock;
  * <em>rejected</em> when the Executor has been shut down, and also when
  * the Executor uses finite bounds for both maximum threads and work queue
  * capacity, and is saturated.  In either case, the {@code execute} method
- * invokes the {@link java.util.concurrent.RejectedExecutionHandler#rejectedExecution(java.lang.Runnable,java.util.concurrent.ThreadPoolExecutor) RejectedExecutionHandler#rejectedExecution(Runnable, ThreadPoolExecutor)}
+ * invokes the {@link java.util.concurrent.RejectedExecutionHandler#rejectedExecution(java.lang.Runnable,java.util.concurrent.ThreadPoolExecutor)  }
  * method of its {@link java.util.concurrent.RejectedExecutionHandler RejectedExecutionHandler}.  Four predefined handler
  * policies are provided:
  *

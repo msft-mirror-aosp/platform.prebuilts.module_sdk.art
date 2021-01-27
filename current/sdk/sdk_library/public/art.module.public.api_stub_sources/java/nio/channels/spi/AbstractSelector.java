@@ -52,7 +52,7 @@ import java.nio.channels.Selector;
  * <p> This class also defines methods for maintaining a selector's
  * cancelled-key set and for removing a key from its channel's key set, and
  * declares the abstract {@link #register register} method that is invoked by a
- * selectable channel's {@link java.nio.channels.spi.AbstractSelectableChannel#register AbstractSelectableChannel#register}
+ * selectable channel's {@link java.nio.channels.spi.AbstractSelectableChannel#register register}
  * method in order to perform the actual work of registering a channel.  </p>
  *
  *
@@ -129,7 +129,7 @@ protected final java.util.Set<java.nio.channels.SelectionKey> cancelledKeys() { 
 /**
  * Registers the given channel with this selector.
  *
- * <p> This method is invoked by a channel's {@link java.nio.channels.spi.AbstractSelectableChannel#register AbstractSelectableChannel#register} method in order to perform
+ * <p> This method is invoked by a channel's {@link java.nio.channels.spi.AbstractSelectableChannel#register register} method in order to perform
  * the actual work of registering the channel with this selector.  </p>
  *
  * @param  ch
@@ -167,7 +167,7 @@ protected final void deregister(java.nio.channels.spi.AbstractSelectionKey key) 
  * shown <a href="#be">above</a>, in order to implement interruption for
  * this selector.
  *
- * <p> Invoking this method arranges for the selector's {@link java.nio.channels.Selector#wakeup Selector#wakeup} method to be invoked if a thread's {@link java.lang.Thread#interrupt Thread#interrupt} method is invoked while the thread is
+ * <p> Invoking this method arranges for the selector's {@link java.nio.channels.Selector#wakeup wakeup} method to be invoked if a thread's {@link java.lang.Thread#interrupt interrupt} method is invoked while the thread is
  * blocked in an I/O operation upon the selector.  </p>
  */
 
