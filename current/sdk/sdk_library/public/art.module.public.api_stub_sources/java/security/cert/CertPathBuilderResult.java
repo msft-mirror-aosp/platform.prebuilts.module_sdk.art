@@ -29,7 +29,7 @@ package java.security.cert;
 
 /**
  * A specification of the result of a certification path builder algorithm.
- * All results returned by the {@link java.security.cert.CertPathBuilder#build CertPathBuilder#build} method must implement this interface.
+ * All results returned by the {@link java.security.cert.CertPathBuilder#build  CertPathBuilder.build} method must implement this interface.
  * <p>
  * At a minimum, a {@code CertPathBuilderResult} contains the
  * {@code CertPath} built by the {@code CertPathBuilder} instance.

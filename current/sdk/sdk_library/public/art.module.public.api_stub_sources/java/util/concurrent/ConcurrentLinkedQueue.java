@@ -42,7 +42,7 @@ import java.util.Collection;
 import java.util.Spliterator;
 
 /**
- * An unbounded thread-safe {@linkplain java.util.Queue Queue} based on linked nodes.
+ * An unbounded thread-safe {@linkplain java.util.Queue queue} based on linked nodes.
  * This queue orders elements FIFO (first-in-first-out).
  * The <em>head</em> of the queue is that element that has been on the
  * queue the longest time.

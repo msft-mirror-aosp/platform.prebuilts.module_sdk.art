@@ -29,7 +29,7 @@ package java.nio.file.attribute;
 
 /**
  * Defines the permissions for use with the permissions component of an ACL
- * {@link java.nio.file.attribute.AclEntry AclEntry}.
+ * {@link java.nio.file.attribute.AclEntry entry}.
  *
  * @since 1.7
  */

@@ -60,7 +60,7 @@ package java.lang.reflect;
  * Each proxy instance has an associated <i>invocation handler</i>
  * object, which implements the interface {@link java.lang.reflect.InvocationHandler InvocationHandler}.
  * A method invocation on a proxy instance through one of its proxy
- * interfaces will be dispatched to the {@link java.lang.reflect.InvocationHandler#invoke InvocationHandler#invoke} method of the instance's invocation handler, passing the proxy
+ * interfaces will be dispatched to the {@link java.lang.reflect.InvocationHandler#invoke  invoke} method of the instance's invocation handler, passing the proxy
  * instance, a {@code java.lang.reflect.Method} object identifying
  * the method that was invoked, and an array of type {@code Object}
  * containing the arguments.  The invocation handler processes the
@@ -103,7 +103,7 @@ package java.lang.reflect;
  * methods in those interfaces, and invoking {@code getMethod} will
  * find methods in the proxy interfaces as would be expected.
  *
- * <li>The {@link java.lang.reflect.Proxy#isProxyClass Proxy#isProxyClass} method will
+ * <li>The {@link java.lang.reflect.Proxy#isProxyClass Proxy.isProxyClass} method will
  * return true if it is passed a proxy class-- a class returned by
  * {@code Proxy.getProxyClass} or the class of an object returned by
  * {@code Proxy.newProxyInstance}-- and false otherwise.
@@ -119,8 +119,8 @@ package java.lang.reflect;
  * an implementation of the interface {@link java.lang.reflect.InvocationHandler InvocationHandler}, to set
  * the invocation handler for a proxy instance.  Rather than having to use
  * the reflection API to access the public constructor, a proxy instance
- * can be also be created by calling the {@link java.lang.reflect.Proxy#newProxyInstance Proxy#newProxyInstance} method, which combines the actions of calling
- * {@link java.lang.reflect.Proxy#getProxyClass Proxy#getProxyClass} with invoking the
+ * can be also be created by calling the {@link java.lang.reflect.Proxy#newProxyInstance  Proxy.newProxyInstance} method, which combines the actions of calling
+ * {@link java.lang.reflect.Proxy#getProxyClass Proxy.getProxyClass} with invoking the
  * constructor with an invocation handler.
  * </ul>
  *
@@ -141,12 +141,12 @@ package java.lang.reflect;
  *
  * <li>Each proxy instance has an associated invocation handler, the one
  * that was passed to its constructor.  The static
- * {@link java.lang.reflect.Proxy#getInvocationHandler Proxy#getInvocationHandler} method
+ * {@link java.lang.reflect.Proxy#getInvocationHandler Proxy.getInvocationHandler} method
  * will return the invocation handler associated with the proxy instance
  * passed as its argument.
  *
  * <li>An interface method invocation on a proxy instance will be
- * encoded and dispatched to the invocation handler's {@link java.lang.reflect.InvocationHandler#invoke InvocationHandler#invoke} method as described in the
+ * encoded and dispatched to the invocation handler's {@link java.lang.reflect.InvocationHandler#invoke invoke} method as described in the
  * documentation for that method.
  *
  * <li>An invocation of the {@code hashCode},
@@ -224,7 +224,7 @@ public class Proxy implements java.io.Serializable {
  *         is {@code null}.
  */
 
-protected Proxy(@android.annotation.NonNull java.lang.reflect.InvocationHandler h) { throw new RuntimeException("Stub!"); }
+protected Proxy(@androidx.annotation.RecentlyNonNull java.lang.reflect.InvocationHandler h) { throw new RuntimeException("Stub!"); }
 
 /**
  * Returns the {@code java.lang.Class} object for a proxy class
@@ -303,20 +303,20 @@ protected Proxy(@android.annotation.NonNull java.lang.reflect.InvocationHandler 
  *          <ul>
  *             <li> the given {@code loader} is {@code null} and
  *             the caller's class loader is not {@code null} and the
- *             invocation of {@link java.lang.SecurityManager#checkPermission SecurityManager#checkPermission} with
+ *             invocation of {@link java.lang.SecurityManager#checkPermission              s.checkPermission} with
  *             {@code RuntimePermission("getClassLoader")} permission
  *             denies access.</li>
  *             <li> for each proxy interface, {@code intf},
  *             the caller's class loader is not the same as or an
  *             ancestor of the class loader for {@code intf} and
- *             invocation of {@link java.lang.SecurityManager#checkPackageAccess SecurityManager#checkPackageAccess} denies access to {@code intf}.</li>
+ *             invocation of {@link java.lang.SecurityManager#checkPackageAccess              s.checkPackageAccess()} denies access to {@code intf}.</li>
  *          </ul>
  * @throws  java.lang.NullPointerException if the {@code interfaces} array
  *          argument or any of its elements are {@code null}
  */
 
-@android.annotation.NonNull
-public static java.lang.Class<?> getProxyClass(@android.annotation.Nullable java.lang.ClassLoader loader, @android.annotation.NonNull java.lang.Class<?>... interfaces) throws java.lang.IllegalArgumentException { throw new RuntimeException("Stub!"); }
+@androidx.annotation.RecentlyNonNull
+public static java.lang.Class<?> getProxyClass(@androidx.annotation.RecentlyNullable java.lang.ClassLoader loader, @androidx.annotation.RecentlyNonNull java.lang.Class<?>... interfaces) throws java.lang.IllegalArgumentException { throw new RuntimeException("Stub!"); }
 
 /**
  * Returns an instance of a proxy class for the specified interfaces
@@ -342,17 +342,17 @@ public static java.lang.Class<?> getProxyClass(@android.annotation.Nullable java
  *          <ul>
  *          <li> the given {@code loader} is {@code null} and
  *               the caller's class loader is not {@code null} and the
- *               invocation of {@link java.lang.SecurityManager#checkPermission SecurityManager#checkPermission} with
+ *               invocation of {@link java.lang.SecurityManager#checkPermission                s.checkPermission} with
  *               {@code RuntimePermission("getClassLoader")} permission
  *               denies access;</li>
  *          <li> for each proxy interface, {@code intf},
  *               the caller's class loader is not the same as or an
  *               ancestor of the class loader for {@code intf} and
- *               invocation of {@link java.lang.SecurityManager#checkPackageAccess SecurityManager#checkPackageAccess} denies access to {@code intf};</li>
+ *               invocation of {@link java.lang.SecurityManager#checkPackageAccess                s.checkPackageAccess()} denies access to {@code intf};</li>
  *          <li> any of the given proxy interfaces is non-public and the
- *               caller class is not in the same {@linkplain java.lang.Package Package}
+ *               caller class is not in the same {@linkplain java.lang.Package runtime package}
  *               as the non-public interface and the invocation of
- *               {@link java.lang.SecurityManager#checkPermission SecurityManager#checkPermission} with
+ *               {@link java.lang.SecurityManager#checkPermission s.checkPermission} with
  *               {@code ReflectPermission("newProxyInPackage.{package name}")}
  *               permission denies access.</li>
  *          </ul>
@@ -362,8 +362,8 @@ public static java.lang.Class<?> getProxyClass(@android.annotation.Nullable java
  *          {@code null}
  */
 
-@android.annotation.NonNull
-public static java.lang.Object newProxyInstance(@android.annotation.Nullable java.lang.ClassLoader loader, @android.annotation.NonNull java.lang.Class<?>[] interfaces, @android.annotation.NonNull java.lang.reflect.InvocationHandler h) throws java.lang.IllegalArgumentException { throw new RuntimeException("Stub!"); }
+@androidx.annotation.RecentlyNonNull
+public static java.lang.Object newProxyInstance(@androidx.annotation.RecentlyNullable java.lang.ClassLoader loader, @androidx.annotation.RecentlyNonNull java.lang.Class<?>[] interfaces, @androidx.annotation.RecentlyNonNull java.lang.reflect.InvocationHandler h) throws java.lang.IllegalArgumentException { throw new RuntimeException("Stub!"); }
 
 /**
  * Returns true if and only if the specified class was dynamically
@@ -380,7 +380,7 @@ public static java.lang.Object newProxyInstance(@android.annotation.Nullable jav
  * @throws  java.lang.NullPointerException if {@code cl} is {@code null}
  */
 
-public static boolean isProxyClass(@android.annotation.NonNull java.lang.Class<?> cl) { throw new RuntimeException("Stub!"); }
+public static boolean isProxyClass(@androidx.annotation.RecentlyNonNull java.lang.Class<?> cl) { throw new RuntimeException("Stub!"); }
 
 /**
  * Returns the invocation handler for the specified proxy instance.
@@ -392,12 +392,12 @@ public static boolean isProxyClass(@android.annotation.NonNull java.lang.Class<?
  * @throws  java.lang.SecurityException if a security manager, <em>s</em>, is present
  *          and the caller's class loader is not the same as or an
  *          ancestor of the class loader for the invocation handler
- *          and invocation of {@link java.lang.SecurityManager#checkPackageAccess SecurityManager#checkPackageAccess} denies access to the invocation
+ *          and invocation of {@link java.lang.SecurityManager#checkPackageAccess           s.checkPackageAccess()} denies access to the invocation
  *          handler's class.
  */
 
-@android.annotation.NonNull
-public static java.lang.reflect.InvocationHandler getInvocationHandler(@android.annotation.NonNull java.lang.Object proxy) throws java.lang.IllegalArgumentException { throw new RuntimeException("Stub!"); }
+@androidx.annotation.RecentlyNonNull
+public static java.lang.reflect.InvocationHandler getInvocationHandler(@androidx.annotation.RecentlyNonNull java.lang.Object proxy) throws java.lang.IllegalArgumentException { throw new RuntimeException("Stub!"); }
 
 /**
  * the invocation handler for this proxy instance.

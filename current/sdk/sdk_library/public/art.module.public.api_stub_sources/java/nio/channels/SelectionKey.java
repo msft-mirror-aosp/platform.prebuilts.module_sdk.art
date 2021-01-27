@@ -72,7 +72,7 @@ package java.nio.channels;
  *
  * <p> This class defines all known operation-set bits, but precisely which
  * bits are supported by a given channel depends upon the type of the channel.
- * Each subclass of {@link java.nio.channels.SelectableChannel SelectableChannel} defines an {@link java.nio.channels.SelectableChannel#validOps() SelectableChannel#validOps()} method which returns a set
+ * Each subclass of {@link java.nio.channels.SelectableChannel SelectableChannel} defines an {@link java.nio.channels.SelectableChannel#validOps() validOps()} method which returns a set
  * identifying just those operations that are supported by the channel.  An
  * attempt to set or test an operation-set bit that is not supported by a key's
  * channel will result in an appropriate run-time exception.

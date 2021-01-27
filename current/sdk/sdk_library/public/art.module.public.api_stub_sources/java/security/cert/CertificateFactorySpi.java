@@ -209,7 +209,7 @@ public java.util.Iterator<java.lang.String> engineGetCertPathEncodings() { throw
  * <p>In the case of a certificate factory for X.509 certificates,
  * {@code inStream} may contain a single DER-encoded certificate
  * in the formats described for
- * {@link java.security.cert.CertificateFactory#generateCertificate(java.io.InputStream) CertificateFactory#generateCertificate(java.io.InputStream)}.
+ * {@link java.security.cert.CertificateFactory#generateCertificate(java.io.InputStream)  generateCertificate}.
  * In addition, {@code inStream} may contain a PKCS#7 certificate
  * chain. This is a PKCS#7 <i>SignedData</i> object, with the only
  * significant field being <i>certificates</i>. In particular, the

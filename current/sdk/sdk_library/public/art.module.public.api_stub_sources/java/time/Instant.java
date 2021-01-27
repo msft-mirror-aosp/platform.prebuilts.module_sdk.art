@@ -187,7 +187,7 @@ private Instant() { throw new RuntimeException("Stub!"); }
 /**
  * Obtains the current instant from the system clock.
  * <p>
- * This will query the {@link java.time.Clock#systemUTC() Clock#systemUTC()} to
+ * This will query the {@link java.time.Clock#systemUTC() system UTC clock} to
  * obtain the current instant.
  * <p>
  * Using this method will prevent the ability to use an alternate time-source for
@@ -204,7 +204,7 @@ public static java.time.Instant now() { throw new RuntimeException("Stub!"); }
  * This will query the specified clock to obtain the current time.
  * <p>
  * Using this method allows the use of an alternate clock for testing.
- * The alternate clock may be introduced using {@link java.time.Clock Clock}.
+ * The alternate clock may be introduced using {@link java.time.Clock dependency injection}.
  *
  * @param clock  the clock to use, not null
  * @return the current instant, not null
@@ -268,8 +268,8 @@ public static java.time.Instant ofEpochMilli(long epochMilli) { throw new Runtim
  * A {@code TemporalAccessor} represents an arbitrary set of date and time information,
  * which this factory converts to an instance of {@code Instant}.
  * <p>
- * The conversion extracts the {@link java.time.temporal.ChronoField#INSTANT_SECONDS ChronoField#INSTANT_SECONDS}
- * and {@link java.time.temporal.ChronoField#NANO_OF_SECOND ChronoField#NANO_OF_SECOND} fields.
+ * The conversion extracts the {@link java.time.temporal.ChronoField#INSTANT_SECONDS INSTANT_SECONDS}
+ * and {@link java.time.temporal.ChronoField#NANO_OF_SECOND NANO_OF_SECOND} fields.
  * <p>
  * This method matches the signature of the functional interface {@link java.time.temporal.TemporalQuery TemporalQuery}
  * allowing it to be used as a query via method reference, {@code Instant::from}.
@@ -537,13 +537,13 @@ public java.time.Instant with(java.time.temporal.TemporalField field, long newVa
  * smaller than the specified unit set to zero.
  * The fields are calculated on the basis of using a UTC offset as seen
  * in {@code toString}.
- * For example, truncating with the {@link java.time.temporal.ChronoUnit#MINUTES ChronoUnit#MINUTES} unit will
+ * For example, truncating with the {@link java.time.temporal.ChronoUnit#MINUTES MINUTES} unit will
  * round down to the nearest minute, setting the seconds and nanoseconds to zero.
  * <p>
- * The unit must have a {@linkplain java.time.temporal.TemporalUnit#getDuration() TemporalUnit#getDuration()}
+ * The unit must have a {@linkplain java.time.temporal.TemporalUnit#getDuration() duration}
  * that divides into the length of a standard day without remainder.
  * This includes all supplied time units on {@link java.time.temporal.ChronoUnit ChronoUnit} and
- * {@link java.time.temporal.ChronoUnit#DAYS ChronoUnit#DAYS}. Other units throw an exception.
+ * {@link java.time.temporal.ChronoUnit#DAYS DAYS}. Other units throw an exception.
  * <p>
  * This instance is immutable and unaffected by this method call.
  *
@@ -866,7 +866,7 @@ public long until(java.time.temporal.Temporal endExclusive, java.time.temporal.T
  * instant is too large to fit into an offset date-time.
  * <p>
  * This method is equivalent to
- * {@link java.time.OffsetDateTime#ofInstant(java.time.Instant,java.time.ZoneId) OffsetDateTime#ofInstant(Instant, ZoneId)}.
+ * {@link java.time.OffsetDateTime#ofInstant(java.time.Instant,java.time.ZoneId) OffsetDateTime.ofInstant(this, offset)}.
  *
  * @param offset  the offset to combine with, not null
  * @return the offset date-time formed from this instant and the specified offset, not null
@@ -883,7 +883,7 @@ public java.time.OffsetDateTime atOffset(java.time.ZoneOffset offset) { throw ne
  * large to fit into a zoned date-time.
  * <p>
  * This method is equivalent to
- * {@link java.time.ZonedDateTime#ofInstant(java.time.Instant,java.time.ZoneId) ZonedDateTime#ofInstant(Instant, ZoneId)}.
+ * {@link java.time.ZonedDateTime#ofInstant(java.time.Instant,java.time.ZoneId) ZonedDateTime.ofInstant(this, zone)}.
  *
  * @param zone  the zone to combine with, not null
  * @return the zoned date-time formed from this instant and the specified zone, not null

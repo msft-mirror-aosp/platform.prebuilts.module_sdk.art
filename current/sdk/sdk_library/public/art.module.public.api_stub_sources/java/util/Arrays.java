@@ -80,7 +80,7 @@ private Arrays() { throw new RuntimeException("Stub!"); }
  * @param a the array to be sorted
  */
 
-public static void sort(@android.annotation.NonNull int[] a) { throw new RuntimeException("Stub!"); }
+public static void sort(@androidx.annotation.RecentlyNonNull int[] a) { throw new RuntimeException("Stub!"); }
 
 /**
  * Sorts the specified range of the array into ascending order. The range
@@ -103,7 +103,7 @@ public static void sort(@android.annotation.NonNull int[] a) { throw new Runtime
  *     if {@code fromIndex < 0} or {@code toIndex > a.length}
  */
 
-public static void sort(@android.annotation.NonNull int[] a, int fromIndex, int toIndex) { throw new RuntimeException("Stub!"); }
+public static void sort(@androidx.annotation.RecentlyNonNull int[] a, int fromIndex, int toIndex) { throw new RuntimeException("Stub!"); }
 
 /**
  * Sorts the specified array into ascending numerical order.
@@ -117,7 +117,7 @@ public static void sort(@android.annotation.NonNull int[] a, int fromIndex, int 
  * @param a the array to be sorted
  */
 
-public static void sort(@android.annotation.NonNull long[] a) { throw new RuntimeException("Stub!"); }
+public static void sort(@androidx.annotation.RecentlyNonNull long[] a) { throw new RuntimeException("Stub!"); }
 
 /**
  * Sorts the specified range of the array into ascending order. The range
@@ -140,7 +140,7 @@ public static void sort(@android.annotation.NonNull long[] a) { throw new Runtim
  *     if {@code fromIndex < 0} or {@code toIndex > a.length}
  */
 
-public static void sort(@android.annotation.NonNull long[] a, int fromIndex, int toIndex) { throw new RuntimeException("Stub!"); }
+public static void sort(@androidx.annotation.RecentlyNonNull long[] a, int fromIndex, int toIndex) { throw new RuntimeException("Stub!"); }
 
 /**
  * Sorts the specified array into ascending numerical order.
@@ -154,7 +154,7 @@ public static void sort(@android.annotation.NonNull long[] a, int fromIndex, int
  * @param a the array to be sorted
  */
 
-public static void sort(@android.annotation.NonNull short[] a) { throw new RuntimeException("Stub!"); }
+public static void sort(@androidx.annotation.RecentlyNonNull short[] a) { throw new RuntimeException("Stub!"); }
 
 /**
  * Sorts the specified range of the array into ascending order. The range
@@ -177,7 +177,7 @@ public static void sort(@android.annotation.NonNull short[] a) { throw new Runti
  *     if {@code fromIndex < 0} or {@code toIndex > a.length}
  */
 
-public static void sort(@android.annotation.NonNull short[] a, int fromIndex, int toIndex) { throw new RuntimeException("Stub!"); }
+public static void sort(@androidx.annotation.RecentlyNonNull short[] a, int fromIndex, int toIndex) { throw new RuntimeException("Stub!"); }
 
 /**
  * Sorts the specified array into ascending numerical order.
@@ -191,7 +191,7 @@ public static void sort(@android.annotation.NonNull short[] a, int fromIndex, in
  * @param a the array to be sorted
  */
 
-public static void sort(@android.annotation.NonNull char[] a) { throw new RuntimeException("Stub!"); }
+public static void sort(@androidx.annotation.RecentlyNonNull char[] a) { throw new RuntimeException("Stub!"); }
 
 /**
  * Sorts the specified range of the array into ascending order. The range
@@ -214,7 +214,7 @@ public static void sort(@android.annotation.NonNull char[] a) { throw new Runtim
  *     if {@code fromIndex < 0} or {@code toIndex > a.length}
  */
 
-public static void sort(@android.annotation.NonNull char[] a, int fromIndex, int toIndex) { throw new RuntimeException("Stub!"); }
+public static void sort(@androidx.annotation.RecentlyNonNull char[] a, int fromIndex, int toIndex) { throw new RuntimeException("Stub!"); }
 
 /**
  * Sorts the specified array into ascending numerical order.
@@ -228,7 +228,7 @@ public static void sort(@android.annotation.NonNull char[] a, int fromIndex, int
  * @param a the array to be sorted
  */
 
-public static void sort(@android.annotation.NonNull byte[] a) { throw new RuntimeException("Stub!"); }
+public static void sort(@androidx.annotation.RecentlyNonNull byte[] a) { throw new RuntimeException("Stub!"); }
 
 /**
  * Sorts the specified range of the array into ascending order. The range
@@ -251,7 +251,7 @@ public static void sort(@android.annotation.NonNull byte[] a) { throw new Runtim
  *     if {@code fromIndex < 0} or {@code toIndex > a.length}
  */
 
-public static void sort(@android.annotation.NonNull byte[] a, int fromIndex, int toIndex) { throw new RuntimeException("Stub!"); }
+public static void sort(@androidx.annotation.RecentlyNonNull byte[] a, int fromIndex, int toIndex) { throw new RuntimeException("Stub!"); }
 
 /**
  * Sorts the specified array into ascending numerical order.
@@ -273,7 +273,7 @@ public static void sort(@android.annotation.NonNull byte[] a, int fromIndex, int
  * @param a the array to be sorted
  */
 
-public static void sort(@android.annotation.NonNull float[] a) { throw new RuntimeException("Stub!"); }
+public static void sort(@androidx.annotation.RecentlyNonNull float[] a) { throw new RuntimeException("Stub!"); }
 
 /**
  * Sorts the specified range of the array into ascending order. The range
@@ -304,7 +304,7 @@ public static void sort(@android.annotation.NonNull float[] a) { throw new Runti
  *     if {@code fromIndex < 0} or {@code toIndex > a.length}
  */
 
-public static void sort(@android.annotation.NonNull float[] a, int fromIndex, int toIndex) { throw new RuntimeException("Stub!"); }
+public static void sort(@androidx.annotation.RecentlyNonNull float[] a, int fromIndex, int toIndex) { throw new RuntimeException("Stub!"); }
 
 /**
  * Sorts the specified array into ascending numerical order.
@@ -326,7 +326,7 @@ public static void sort(@android.annotation.NonNull float[] a, int fromIndex, in
  * @param a the array to be sorted
  */
 
-public static void sort(@android.annotation.NonNull double[] a) { throw new RuntimeException("Stub!"); }
+public static void sort(@androidx.annotation.RecentlyNonNull double[] a) { throw new RuntimeException("Stub!"); }
 
 /**
  * Sorts the specified range of the array into ascending order. The range
@@ -357,7 +357,7 @@ public static void sort(@android.annotation.NonNull double[] a) { throw new Runt
  *     if {@code fromIndex < 0} or {@code toIndex > a.length}
  */
 
-public static void sort(@android.annotation.NonNull double[] a, int fromIndex, int toIndex) { throw new RuntimeException("Stub!"); }
+public static void sort(@androidx.annotation.RecentlyNonNull double[] a, int fromIndex, int toIndex) { throw new RuntimeException("Stub!"); }
 
 /**
  * Sorts the specified array into ascending numerical order.
@@ -365,11 +365,11 @@ public static void sort(@android.annotation.NonNull double[] a, int fromIndex, i
  * @implNote The sorting algorithm is a parallel sort-merge that breaks the
  * array into sub-arrays that are themselves sorted and then merged. When
  * the sub-array length reaches a minimum granularity, the sub-array is
- * sorted using the appropriate {@link java.util.Arrays#sort(byte[]) Arrays#sort(byte[])}
+ * sorted using the appropriate {@link java.util.Arrays#sort(byte[]) Arrays.sort}
  * method. If the length of the specified array is less than the minimum
- * granularity, then it is sorted using the appropriate {@link java.util.Arrays#sort(byte[]) Arrays#sort(byte[])} method. The algorithm requires a
+ * granularity, then it is sorted using the appropriate {@link java.util.Arrays#sort(byte[]) Arrays.sort} method. The algorithm requires a
  * working space no greater than the size of the original array. The
- * {@link java.util.concurrent.ForkJoinPool#commonPool() ForkJoinPool#commonPool()} is used to
+ * {@link java.util.concurrent.ForkJoinPool#commonPool() ForkJoin common pool} is used to
  * execute any parallel tasks.
  *
  * @param a the array to be sorted
@@ -377,7 +377,7 @@ public static void sort(@android.annotation.NonNull double[] a, int fromIndex, i
  * @since 1.8
  */
 
-public static void parallelSort(@android.annotation.NonNull byte[] a) { throw new RuntimeException("Stub!"); }
+public static void parallelSort(@androidx.annotation.RecentlyNonNull byte[] a) { throw new RuntimeException("Stub!"); }
 
 /**
  * Sorts the specified range of the array into ascending numerical order.
@@ -388,11 +388,11 @@ public static void parallelSort(@android.annotation.NonNull byte[] a) { throw ne
  * @implNote The sorting algorithm is a parallel sort-merge that breaks the
  * array into sub-arrays that are themselves sorted and then merged. When
  * the sub-array length reaches a minimum granularity, the sub-array is
- * sorted using the appropriate {@link java.util.Arrays#sort(byte[]) Arrays#sort(byte[])}
+ * sorted using the appropriate {@link java.util.Arrays#sort(byte[]) Arrays.sort}
  * method. If the length of the specified array is less than the minimum
- * granularity, then it is sorted using the appropriate {@link java.util.Arrays#sort(byte[]) Arrays#sort(byte[])} method. The algorithm requires a working
+ * granularity, then it is sorted using the appropriate {@link java.util.Arrays#sort(byte[]) Arrays.sort} method. The algorithm requires a working
  * space no greater than the size of the specified range of the original
- * array. The {@link java.util.concurrent.ForkJoinPool#commonPool() ForkJoinPool#commonPool()} is
+ * array. The {@link java.util.concurrent.ForkJoinPool#commonPool() ForkJoin common pool} is
  * used to execute any parallel tasks.
  *
  * @param a the array to be sorted
@@ -406,7 +406,7 @@ public static void parallelSort(@android.annotation.NonNull byte[] a) { throw ne
  * @since 1.8
  */
 
-public static void parallelSort(@android.annotation.NonNull byte[] a, int fromIndex, int toIndex) { throw new RuntimeException("Stub!"); }
+public static void parallelSort(@androidx.annotation.RecentlyNonNull byte[] a, int fromIndex, int toIndex) { throw new RuntimeException("Stub!"); }
 
 /**
  * Sorts the specified array into ascending numerical order.
@@ -414,11 +414,11 @@ public static void parallelSort(@android.annotation.NonNull byte[] a, int fromIn
  * @implNote The sorting algorithm is a parallel sort-merge that breaks the
  * array into sub-arrays that are themselves sorted and then merged. When
  * the sub-array length reaches a minimum granularity, the sub-array is
- * sorted using the appropriate {@link java.util.Arrays#sort(char[]) Arrays#sort(char[])}
+ * sorted using the appropriate {@link java.util.Arrays#sort(char[]) Arrays.sort}
  * method. If the length of the specified array is less than the minimum
- * granularity, then it is sorted using the appropriate {@link java.util.Arrays#sort(char[]) Arrays#sort(char[])} method. The algorithm requires a
+ * granularity, then it is sorted using the appropriate {@link java.util.Arrays#sort(char[]) Arrays.sort} method. The algorithm requires a
  * working space no greater than the size of the original array. The
- * {@link java.util.concurrent.ForkJoinPool#commonPool() ForkJoinPool#commonPool()} is used to
+ * {@link java.util.concurrent.ForkJoinPool#commonPool() ForkJoin common pool} is used to
  * execute any parallel tasks.
  *
  * @param a the array to be sorted
@@ -426,7 +426,7 @@ public static void parallelSort(@android.annotation.NonNull byte[] a, int fromIn
  * @since 1.8
  */
 
-public static void parallelSort(@android.annotation.NonNull char[] a) { throw new RuntimeException("Stub!"); }
+public static void parallelSort(@androidx.annotation.RecentlyNonNull char[] a) { throw new RuntimeException("Stub!"); }
 
 /**
  * Sorts the specified range of the array into ascending numerical order.
@@ -437,11 +437,11 @@ public static void parallelSort(@android.annotation.NonNull char[] a) { throw ne
  @implNote The sorting algorithm is a parallel sort-merge that breaks the
  * array into sub-arrays that are themselves sorted and then merged. When
  * the sub-array length reaches a minimum granularity, the sub-array is
- * sorted using the appropriate {@link java.util.Arrays#sort(char[]) Arrays#sort(char[])}
+ * sorted using the appropriate {@link java.util.Arrays#sort(char[]) Arrays.sort}
  * method. If the length of the specified array is less than the minimum
- * granularity, then it is sorted using the appropriate {@link java.util.Arrays#sort(char[]) Arrays#sort(char[])} method. The algorithm requires a working
+ * granularity, then it is sorted using the appropriate {@link java.util.Arrays#sort(char[]) Arrays.sort} method. The algorithm requires a working
  * space no greater than the size of the specified range of the original
- * array. The {@link java.util.concurrent.ForkJoinPool#commonPool() ForkJoinPool#commonPool()} is
+ * array. The {@link java.util.concurrent.ForkJoinPool#commonPool() ForkJoin common pool} is
  * used to execute any parallel tasks.
  *
  * @param a the array to be sorted
@@ -455,7 +455,7 @@ public static void parallelSort(@android.annotation.NonNull char[] a) { throw ne
  * @since 1.8
  */
 
-public static void parallelSort(@android.annotation.NonNull char[] a, int fromIndex, int toIndex) { throw new RuntimeException("Stub!"); }
+public static void parallelSort(@androidx.annotation.RecentlyNonNull char[] a, int fromIndex, int toIndex) { throw new RuntimeException("Stub!"); }
 
 /**
  * Sorts the specified array into ascending numerical order.
@@ -463,11 +463,11 @@ public static void parallelSort(@android.annotation.NonNull char[] a, int fromIn
  * @implNote The sorting algorithm is a parallel sort-merge that breaks the
  * array into sub-arrays that are themselves sorted and then merged. When
  * the sub-array length reaches a minimum granularity, the sub-array is
- * sorted using the appropriate {@link java.util.Arrays#sort(short[]) Arrays#sort(short[])}
+ * sorted using the appropriate {@link java.util.Arrays#sort(short[]) Arrays.sort}
  * method. If the length of the specified array is less than the minimum
- * granularity, then it is sorted using the appropriate {@link java.util.Arrays#sort(short[]) Arrays#sort(short[])} method. The algorithm requires a
+ * granularity, then it is sorted using the appropriate {@link java.util.Arrays#sort(short[]) Arrays.sort} method. The algorithm requires a
  * working space no greater than the size of the original array. The
- * {@link java.util.concurrent.ForkJoinPool#commonPool() ForkJoinPool#commonPool()} is used to
+ * {@link java.util.concurrent.ForkJoinPool#commonPool() ForkJoin common pool} is used to
  * execute any parallel tasks.
  *
  * @param a the array to be sorted
@@ -475,7 +475,7 @@ public static void parallelSort(@android.annotation.NonNull char[] a, int fromIn
  * @since 1.8
  */
 
-public static void parallelSort(@android.annotation.NonNull short[] a) { throw new RuntimeException("Stub!"); }
+public static void parallelSort(@androidx.annotation.RecentlyNonNull short[] a) { throw new RuntimeException("Stub!"); }
 
 /**
  * Sorts the specified range of the array into ascending numerical order.
@@ -486,11 +486,11 @@ public static void parallelSort(@android.annotation.NonNull short[] a) { throw n
  * @implNote The sorting algorithm is a parallel sort-merge that breaks the
  * array into sub-arrays that are themselves sorted and then merged. When
  * the sub-array length reaches a minimum granularity, the sub-array is
- * sorted using the appropriate {@link java.util.Arrays#sort(short[]) Arrays#sort(short[])}
+ * sorted using the appropriate {@link java.util.Arrays#sort(short[]) Arrays.sort}
  * method. If the length of the specified array is less than the minimum
- * granularity, then it is sorted using the appropriate {@link java.util.Arrays#sort(short[]) Arrays#sort(short[])} method. The algorithm requires a working
+ * granularity, then it is sorted using the appropriate {@link java.util.Arrays#sort(short[]) Arrays.sort} method. The algorithm requires a working
  * space no greater than the size of the specified range of the original
- * array. The {@link java.util.concurrent.ForkJoinPool#commonPool() ForkJoinPool#commonPool()} is
+ * array. The {@link java.util.concurrent.ForkJoinPool#commonPool() ForkJoin common pool} is
  * used to execute any parallel tasks.
  *
  * @param a the array to be sorted
@@ -504,7 +504,7 @@ public static void parallelSort(@android.annotation.NonNull short[] a) { throw n
  * @since 1.8
  */
 
-public static void parallelSort(@android.annotation.NonNull short[] a, int fromIndex, int toIndex) { throw new RuntimeException("Stub!"); }
+public static void parallelSort(@androidx.annotation.RecentlyNonNull short[] a, int fromIndex, int toIndex) { throw new RuntimeException("Stub!"); }
 
 /**
  * Sorts the specified array into ascending numerical order.
@@ -512,11 +512,11 @@ public static void parallelSort(@android.annotation.NonNull short[] a, int fromI
  * @implNote The sorting algorithm is a parallel sort-merge that breaks the
  * array into sub-arrays that are themselves sorted and then merged. When
  * the sub-array length reaches a minimum granularity, the sub-array is
- * sorted using the appropriate {@link java.util.Arrays#sort(int[]) Arrays#sort(int[])}
+ * sorted using the appropriate {@link java.util.Arrays#sort(int[]) Arrays.sort}
  * method. If the length of the specified array is less than the minimum
- * granularity, then it is sorted using the appropriate {@link java.util.Arrays#sort(int[]) Arrays#sort(int[])} method. The algorithm requires a
+ * granularity, then it is sorted using the appropriate {@link java.util.Arrays#sort(int[]) Arrays.sort} method. The algorithm requires a
  * working space no greater than the size of the original array. The
- * {@link java.util.concurrent.ForkJoinPool#commonPool() ForkJoinPool#commonPool()} is used to
+ * {@link java.util.concurrent.ForkJoinPool#commonPool() ForkJoin common pool} is used to
  * execute any parallel tasks.
  *
  * @param a the array to be sorted
@@ -524,7 +524,7 @@ public static void parallelSort(@android.annotation.NonNull short[] a, int fromI
  * @since 1.8
  */
 
-public static void parallelSort(@android.annotation.NonNull int[] a) { throw new RuntimeException("Stub!"); }
+public static void parallelSort(@androidx.annotation.RecentlyNonNull int[] a) { throw new RuntimeException("Stub!"); }
 
 /**
  * Sorts the specified range of the array into ascending numerical order.
@@ -535,11 +535,11 @@ public static void parallelSort(@android.annotation.NonNull int[] a) { throw new
  * @implNote The sorting algorithm is a parallel sort-merge that breaks the
  * array into sub-arrays that are themselves sorted and then merged. When
  * the sub-array length reaches a minimum granularity, the sub-array is
- * sorted using the appropriate {@link java.util.Arrays#sort(int[]) Arrays#sort(int[])}
+ * sorted using the appropriate {@link java.util.Arrays#sort(int[]) Arrays.sort}
  * method. If the length of the specified array is less than the minimum
- * granularity, then it is sorted using the appropriate {@link java.util.Arrays#sort(int[]) Arrays#sort(int[])} method. The algorithm requires a working
+ * granularity, then it is sorted using the appropriate {@link java.util.Arrays#sort(int[]) Arrays.sort} method. The algorithm requires a working
  * space no greater than the size of the specified range of the original
- * array. The {@link java.util.concurrent.ForkJoinPool#commonPool() ForkJoinPool#commonPool()} is
+ * array. The {@link java.util.concurrent.ForkJoinPool#commonPool() ForkJoin common pool} is
  * used to execute any parallel tasks.
  *
  * @param a the array to be sorted
@@ -553,7 +553,7 @@ public static void parallelSort(@android.annotation.NonNull int[] a) { throw new
  * @since 1.8
  */
 
-public static void parallelSort(@android.annotation.NonNull int[] a, int fromIndex, int toIndex) { throw new RuntimeException("Stub!"); }
+public static void parallelSort(@androidx.annotation.RecentlyNonNull int[] a, int fromIndex, int toIndex) { throw new RuntimeException("Stub!"); }
 
 /**
  * Sorts the specified array into ascending numerical order.
@@ -561,11 +561,11 @@ public static void parallelSort(@android.annotation.NonNull int[] a, int fromInd
  * @implNote The sorting algorithm is a parallel sort-merge that breaks the
  * array into sub-arrays that are themselves sorted and then merged. When
  * the sub-array length reaches a minimum granularity, the sub-array is
- * sorted using the appropriate {@link java.util.Arrays#sort(long[]) Arrays#sort(long[])}
+ * sorted using the appropriate {@link java.util.Arrays#sort(long[]) Arrays.sort}
  * method. If the length of the specified array is less than the minimum
- * granularity, then it is sorted using the appropriate {@link java.util.Arrays#sort(long[]) Arrays#sort(long[])} method. The algorithm requires a
+ * granularity, then it is sorted using the appropriate {@link java.util.Arrays#sort(long[]) Arrays.sort} method. The algorithm requires a
  * working space no greater than the size of the original array. The
- * {@link java.util.concurrent.ForkJoinPool#commonPool() ForkJoinPool#commonPool()} is used to
+ * {@link java.util.concurrent.ForkJoinPool#commonPool() ForkJoin common pool} is used to
  * execute any parallel tasks.
  *
  * @param a the array to be sorted
@@ -573,7 +573,7 @@ public static void parallelSort(@android.annotation.NonNull int[] a, int fromInd
  * @since 1.8
  */
 
-public static void parallelSort(@android.annotation.NonNull long[] a) { throw new RuntimeException("Stub!"); }
+public static void parallelSort(@androidx.annotation.RecentlyNonNull long[] a) { throw new RuntimeException("Stub!"); }
 
 /**
  * Sorts the specified range of the array into ascending numerical order.
@@ -584,11 +584,11 @@ public static void parallelSort(@android.annotation.NonNull long[] a) { throw ne
  * @implNote The sorting algorithm is a parallel sort-merge that breaks the
  * array into sub-arrays that are themselves sorted and then merged. When
  * the sub-array length reaches a minimum granularity, the sub-array is
- * sorted using the appropriate {@link java.util.Arrays#sort(long[]) Arrays#sort(long[])}
+ * sorted using the appropriate {@link java.util.Arrays#sort(long[]) Arrays.sort}
  * method. If the length of the specified array is less than the minimum
- * granularity, then it is sorted using the appropriate {@link java.util.Arrays#sort(long[]) Arrays#sort(long[])} method. The algorithm requires a working
+ * granularity, then it is sorted using the appropriate {@link java.util.Arrays#sort(long[]) Arrays.sort} method. The algorithm requires a working
  * space no greater than the size of the specified range of the original
- * array. The {@link java.util.concurrent.ForkJoinPool#commonPool() ForkJoinPool#commonPool()} is
+ * array. The {@link java.util.concurrent.ForkJoinPool#commonPool() ForkJoin common pool} is
  * used to execute any parallel tasks.
  *
  * @param a the array to be sorted
@@ -602,7 +602,7 @@ public static void parallelSort(@android.annotation.NonNull long[] a) { throw ne
  * @since 1.8
  */
 
-public static void parallelSort(@android.annotation.NonNull long[] a, int fromIndex, int toIndex) { throw new RuntimeException("Stub!"); }
+public static void parallelSort(@androidx.annotation.RecentlyNonNull long[] a, int fromIndex, int toIndex) { throw new RuntimeException("Stub!"); }
 
 /**
  * Sorts the specified array into ascending numerical order.
@@ -618,11 +618,11 @@ public static void parallelSort(@android.annotation.NonNull long[] a, int fromIn
  * @implNote The sorting algorithm is a parallel sort-merge that breaks the
  * array into sub-arrays that are themselves sorted and then merged. When
  * the sub-array length reaches a minimum granularity, the sub-array is
- * sorted using the appropriate {@link java.util.Arrays#sort(float[]) Arrays#sort(float[])}
+ * sorted using the appropriate {@link java.util.Arrays#sort(float[]) Arrays.sort}
  * method. If the length of the specified array is less than the minimum
- * granularity, then it is sorted using the appropriate {@link java.util.Arrays#sort(float[]) Arrays#sort(float[])} method. The algorithm requires a
+ * granularity, then it is sorted using the appropriate {@link java.util.Arrays#sort(float[]) Arrays.sort} method. The algorithm requires a
  * working space no greater than the size of the original array. The
- * {@link java.util.concurrent.ForkJoinPool#commonPool() ForkJoinPool#commonPool()} is used to
+ * {@link java.util.concurrent.ForkJoinPool#commonPool() ForkJoin common pool} is used to
  * execute any parallel tasks.
  *
  * @param a the array to be sorted
@@ -630,7 +630,7 @@ public static void parallelSort(@android.annotation.NonNull long[] a, int fromIn
  * @since 1.8
  */
 
-public static void parallelSort(@android.annotation.NonNull float[] a) { throw new RuntimeException("Stub!"); }
+public static void parallelSort(@androidx.annotation.RecentlyNonNull float[] a) { throw new RuntimeException("Stub!"); }
 
 /**
  * Sorts the specified range of the array into ascending numerical order.
@@ -649,11 +649,11 @@ public static void parallelSort(@android.annotation.NonNull float[] a) { throw n
  * @implNote The sorting algorithm is a parallel sort-merge that breaks the
  * array into sub-arrays that are themselves sorted and then merged. When
  * the sub-array length reaches a minimum granularity, the sub-array is
- * sorted using the appropriate {@link java.util.Arrays#sort(float[]) Arrays#sort(float[])}
+ * sorted using the appropriate {@link java.util.Arrays#sort(float[]) Arrays.sort}
  * method. If the length of the specified array is less than the minimum
- * granularity, then it is sorted using the appropriate {@link java.util.Arrays#sort(float[]) Arrays#sort(float[])} method. The algorithm requires a working
+ * granularity, then it is sorted using the appropriate {@link java.util.Arrays#sort(float[]) Arrays.sort} method. The algorithm requires a working
  * space no greater than the size of the specified range of the original
- * array. The {@link java.util.concurrent.ForkJoinPool#commonPool() ForkJoinPool#commonPool()} is
+ * array. The {@link java.util.concurrent.ForkJoinPool#commonPool() ForkJoin common pool} is
  * used to execute any parallel tasks.
  *
  * @param a the array to be sorted
@@ -667,7 +667,7 @@ public static void parallelSort(@android.annotation.NonNull float[] a) { throw n
  * @since 1.8
  */
 
-public static void parallelSort(@android.annotation.NonNull float[] a, int fromIndex, int toIndex) { throw new RuntimeException("Stub!"); }
+public static void parallelSort(@androidx.annotation.RecentlyNonNull float[] a, int fromIndex, int toIndex) { throw new RuntimeException("Stub!"); }
 
 /**
  * Sorts the specified array into ascending numerical order.
@@ -683,11 +683,11 @@ public static void parallelSort(@android.annotation.NonNull float[] a, int fromI
  * @implNote The sorting algorithm is a parallel sort-merge that breaks the
  * array into sub-arrays that are themselves sorted and then merged. When
  * the sub-array length reaches a minimum granularity, the sub-array is
- * sorted using the appropriate {@link java.util.Arrays#sort(double[]) Arrays#sort(double[])}
+ * sorted using the appropriate {@link java.util.Arrays#sort(double[]) Arrays.sort}
  * method. If the length of the specified array is less than the minimum
- * granularity, then it is sorted using the appropriate {@link java.util.Arrays#sort(double[]) Arrays#sort(double[])} method. The algorithm requires a
+ * granularity, then it is sorted using the appropriate {@link java.util.Arrays#sort(double[]) Arrays.sort} method. The algorithm requires a
  * working space no greater than the size of the original array. The
- * {@link java.util.concurrent.ForkJoinPool#commonPool() ForkJoinPool#commonPool()} is used to
+ * {@link java.util.concurrent.ForkJoinPool#commonPool() ForkJoin common pool} is used to
  * execute any parallel tasks.
  *
  * @param a the array to be sorted
@@ -695,7 +695,7 @@ public static void parallelSort(@android.annotation.NonNull float[] a, int fromI
  * @since 1.8
  */
 
-public static void parallelSort(@android.annotation.NonNull double[] a) { throw new RuntimeException("Stub!"); }
+public static void parallelSort(@androidx.annotation.RecentlyNonNull double[] a) { throw new RuntimeException("Stub!"); }
 
 /**
  * Sorts the specified range of the array into ascending numerical order.
@@ -714,11 +714,11 @@ public static void parallelSort(@android.annotation.NonNull double[] a) { throw 
  * @implNote The sorting algorithm is a parallel sort-merge that breaks the
  * array into sub-arrays that are themselves sorted and then merged. When
  * the sub-array length reaches a minimum granularity, the sub-array is
- * sorted using the appropriate {@link java.util.Arrays#sort(double[]) Arrays#sort(double[])}
+ * sorted using the appropriate {@link java.util.Arrays#sort(double[]) Arrays.sort}
  * method. If the length of the specified array is less than the minimum
- * granularity, then it is sorted using the appropriate {@link java.util.Arrays#sort(double[]) Arrays#sort(double[])} method. The algorithm requires a working
+ * granularity, then it is sorted using the appropriate {@link java.util.Arrays#sort(double[]) Arrays.sort} method. The algorithm requires a working
  * space no greater than the size of the specified range of the original
- * array. The {@link java.util.concurrent.ForkJoinPool#commonPool() ForkJoinPool#commonPool()} is
+ * array. The {@link java.util.concurrent.ForkJoinPool#commonPool() ForkJoin common pool} is
  * used to execute any parallel tasks.
  *
  * @param a the array to be sorted
@@ -732,11 +732,11 @@ public static void parallelSort(@android.annotation.NonNull double[] a) { throw 
  * @since 1.8
  */
 
-public static void parallelSort(@android.annotation.NonNull double[] a, int fromIndex, int toIndex) { throw new RuntimeException("Stub!"); }
+public static void parallelSort(@androidx.annotation.RecentlyNonNull double[] a, int fromIndex, int toIndex) { throw new RuntimeException("Stub!"); }
 
 /**
  * Sorts the specified array of objects into ascending order, according
- * to the {@linkplain java.lang.Comparable Comparable} of its elements.
+ * to the {@linkplain java.lang.Comparable natural ordering} of its elements.
  * All elements in the array must implement the {@link java.lang.Comparable Comparable}
  * interface.  Furthermore, all elements in the array must be
  * <i>mutually comparable</i> (that is, {@code e1.compareTo(e2)} must
@@ -749,11 +749,11 @@ public static void parallelSort(@android.annotation.NonNull double[] a, int from
  * @implNote The sorting algorithm is a parallel sort-merge that breaks the
  * array into sub-arrays that are themselves sorted and then merged. When
  * the sub-array length reaches a minimum granularity, the sub-array is
- * sorted using the appropriate {@link java.util.Arrays#sort(java.lang.Object[]) Arrays#sort(Object[])}
+ * sorted using the appropriate {@link java.util.Arrays#sort(java.lang.Object[]) Arrays.sort}
  * method. If the length of the specified array is less than the minimum
- * granularity, then it is sorted using the appropriate {@link java.util.Arrays#sort(java.lang.Object[]) Arrays#sort(Object[])} method. The algorithm requires a
+ * granularity, then it is sorted using the appropriate {@link java.util.Arrays#sort(java.lang.Object[]) Arrays.sort} method. The algorithm requires a
  * working space no greater than the size of the original array. The
- * {@link java.util.concurrent.ForkJoinPool#commonPool() ForkJoinPool#commonPool()} is used to
+ * {@link java.util.concurrent.ForkJoinPool#commonPool() ForkJoin common pool} is used to
  * execute any parallel tasks.
  *
  * @param <T> the class of the objects to be sorted
@@ -768,12 +768,12 @@ public static void parallelSort(@android.annotation.NonNull double[] a, int from
  * @since 1.8
  */
 
-public static <T extends java.lang.Comparable<? super T>> void parallelSort(@android.annotation.NonNull T[] a) { throw new RuntimeException("Stub!"); }
+public static <T extends java.lang.Comparable<? super T>> void parallelSort(@androidx.annotation.RecentlyNonNull T[] a) { throw new RuntimeException("Stub!"); }
 
 /**
  * Sorts the specified range of the specified array of objects into
  * ascending order, according to the
- * {@linkplain java.lang.Comparable Comparable} of its
+ * {@linkplain java.lang.Comparable natural ordering} of its
  * elements.  The range to be sorted extends from index
  * {@code fromIndex}, inclusive, to index {@code toIndex}, exclusive.
  * (If {@code fromIndex==toIndex}, the range to be sorted is empty.)  All
@@ -789,11 +789,11 @@ public static <T extends java.lang.Comparable<? super T>> void parallelSort(@and
  * @implNote The sorting algorithm is a parallel sort-merge that breaks the
  * array into sub-arrays that are themselves sorted and then merged. When
  * the sub-array length reaches a minimum granularity, the sub-array is
- * sorted using the appropriate {@link java.util.Arrays#sort(java.lang.Object[]) Arrays#sort(Object[])}
+ * sorted using the appropriate {@link java.util.Arrays#sort(java.lang.Object[]) Arrays.sort}
  * method. If the length of the specified array is less than the minimum
- * granularity, then it is sorted using the appropriate {@link java.util.Arrays#sort(java.lang.Object[]) Arrays#sort(Object[])} method. The algorithm requires a working
+ * granularity, then it is sorted using the appropriate {@link java.util.Arrays#sort(java.lang.Object[]) Arrays.sort} method. The algorithm requires a working
  * space no greater than the size of the specified range of the original
- * array. The {@link java.util.concurrent.ForkJoinPool#commonPool() ForkJoinPool#commonPool()} is
+ * array. The {@link java.util.concurrent.ForkJoinPool#commonPool() ForkJoin common pool} is
  * used to execute any parallel tasks.
  *
  * @param <T> the class of the objects to be sorted
@@ -813,7 +813,7 @@ public static <T extends java.lang.Comparable<? super T>> void parallelSort(@and
  * @since 1.8
  */
 
-public static <T extends java.lang.Comparable<? super T>> void parallelSort(@android.annotation.NonNull T[] a, int fromIndex, int toIndex) { throw new RuntimeException("Stub!"); }
+public static <T extends java.lang.Comparable<? super T>> void parallelSort(@androidx.annotation.RecentlyNonNull T[] a, int fromIndex, int toIndex) { throw new RuntimeException("Stub!"); }
 
 /**
  * Sorts the specified array of objects according to the order induced by
@@ -828,18 +828,18 @@ public static <T extends java.lang.Comparable<? super T>> void parallelSort(@and
  * @implNote The sorting algorithm is a parallel sort-merge that breaks the
  * array into sub-arrays that are themselves sorted and then merged. When
  * the sub-array length reaches a minimum granularity, the sub-array is
- * sorted using the appropriate {@link java.util.Arrays#sort(java.lang.Object[]) Arrays#sort(Object[])}
+ * sorted using the appropriate {@link java.util.Arrays#sort(java.lang.Object[]) Arrays.sort}
  * method. If the length of the specified array is less than the minimum
- * granularity, then it is sorted using the appropriate {@link java.util.Arrays#sort(java.lang.Object[]) Arrays#sort(Object[])} method. The algorithm requires a
+ * granularity, then it is sorted using the appropriate {@link java.util.Arrays#sort(java.lang.Object[]) Arrays.sort} method. The algorithm requires a
  * working space no greater than the size of the original array. The
- * {@link java.util.concurrent.ForkJoinPool#commonPool() ForkJoinPool#commonPool()} is used to
+ * {@link java.util.concurrent.ForkJoinPool#commonPool() ForkJoin common pool} is used to
  * execute any parallel tasks.
  *
  * @param <T> the class of the objects to be sorted
  * @param a the array to be sorted
  * @param cmp the comparator to determine the order of the array.  A
  *        {@code null} value indicates that the elements'
- *        {@linkplain java.lang.Comparable Comparable} should be used.
+ *        {@linkplain java.lang.Comparable natural ordering} should be used.
  * @throws java.lang.ClassCastException if the array contains elements that are
  *         not <i>mutually comparable</i> using the specified comparator
  * @throws java.lang.IllegalArgumentException (optional) if the comparator is
@@ -848,7 +848,7 @@ public static <T extends java.lang.Comparable<? super T>> void parallelSort(@and
  * @since 1.8
  */
 
-public static <T> void parallelSort(@android.annotation.NonNull T[] a, @android.annotation.Nullable java.util.Comparator<? super T> cmp) { throw new RuntimeException("Stub!"); }
+public static <T> void parallelSort(@androidx.annotation.RecentlyNonNull T[] a, @androidx.annotation.RecentlyNullable java.util.Comparator<? super T> cmp) { throw new RuntimeException("Stub!"); }
 
 /**
  * Sorts the specified range of the specified array of objects according
@@ -866,11 +866,11 @@ public static <T> void parallelSort(@android.annotation.NonNull T[] a, @android.
  * @implNote The sorting algorithm is a parallel sort-merge that breaks the
  * array into sub-arrays that are themselves sorted and then merged. When
  * the sub-array length reaches a minimum granularity, the sub-array is
- * sorted using the appropriate {@link java.util.Arrays#sort(java.lang.Object[]) Arrays#sort(Object[])}
+ * sorted using the appropriate {@link java.util.Arrays#sort(java.lang.Object[]) Arrays.sort}
  * method. If the length of the specified array is less than the minimum
- * granularity, then it is sorted using the appropriate {@link java.util.Arrays#sort(java.lang.Object[]) Arrays#sort(Object[])} method. The algorithm requires a working
+ * granularity, then it is sorted using the appropriate {@link java.util.Arrays#sort(java.lang.Object[]) Arrays.sort} method. The algorithm requires a working
  * space no greater than the size of the specified range of the original
- * array. The {@link java.util.concurrent.ForkJoinPool#commonPool() ForkJoinPool#commonPool()} is
+ * array. The {@link java.util.concurrent.ForkJoinPool#commonPool() ForkJoin common pool} is
  * used to execute any parallel tasks.
  *
  * @param <T> the class of the objects to be sorted
@@ -880,7 +880,7 @@ public static <T> void parallelSort(@android.annotation.NonNull T[] a, @android.
  * @param toIndex the index of the last element (exclusive) to be sorted
  * @param cmp the comparator to determine the order of the array.  A
  *        {@code null} value indicates that the elements'
- *        {@linkplain java.lang.Comparable Comparable} should be used.
+ *        {@linkplain java.lang.Comparable natural ordering} should be used.
  * @throws java.lang.IllegalArgumentException if {@code fromIndex > toIndex} or
  *         (optional) if the natural ordering of the array elements is
  *         found to violate the {@link java.lang.Comparable Comparable} contract
@@ -893,11 +893,11 @@ public static <T> void parallelSort(@android.annotation.NonNull T[] a, @android.
  * @since 1.8
  */
 
-public static <T> void parallelSort(@android.annotation.NonNull T[] a, int fromIndex, int toIndex, @android.annotation.Nullable java.util.Comparator<? super T> cmp) { throw new RuntimeException("Stub!"); }
+public static <T> void parallelSort(@androidx.annotation.RecentlyNonNull T[] a, int fromIndex, int toIndex, @androidx.annotation.RecentlyNullable java.util.Comparator<? super T> cmp) { throw new RuntimeException("Stub!"); }
 
 /**
  * Sorts the specified array of objects into ascending order, according
- * to the {@linkplain java.lang.Comparable Comparable} of its elements.
+ * to the {@linkplain java.lang.Comparable natural ordering} of its elements.
  * All elements in the array must implement the {@link java.lang.Comparable Comparable}
  * interface.  Furthermore, all elements in the array must be
  * <i>mutually comparable</i> (that is, {@code e1.compareTo(e2)} must
@@ -938,12 +938,12 @@ public static <T> void parallelSort(@android.annotation.NonNull T[] a, int fromI
  *         {@link java.lang.Comparable Comparable} contract
  */
 
-public static void sort(@android.annotation.NonNull java.lang.Object[] a) { throw new RuntimeException("Stub!"); }
+public static void sort(@androidx.annotation.RecentlyNonNull java.lang.Object[] a) { throw new RuntimeException("Stub!"); }
 
 /**
  * Sorts the specified range of the specified array of objects into
  * ascending order, according to the
- * {@linkplain java.lang.Comparable Comparable} of its
+ * {@linkplain java.lang.Comparable natural ordering} of its
  * elements.  The range to be sorted extends from index
  * {@code fromIndex}, inclusive, to index {@code toIndex}, exclusive.
  * (If {@code fromIndex==toIndex}, the range to be sorted is empty.)  All
@@ -993,7 +993,7 @@ public static void sort(@android.annotation.NonNull java.lang.Object[] a) { thro
  *         integers).
  */
 
-public static void sort(@android.annotation.NonNull java.lang.Object[] a, int fromIndex, int toIndex) { throw new RuntimeException("Stub!"); }
+public static void sort(@androidx.annotation.RecentlyNonNull java.lang.Object[] a, int fromIndex, int toIndex) { throw new RuntimeException("Stub!"); }
 
 /**
  * Sorts the specified array of objects according to the order induced by
@@ -1032,14 +1032,14 @@ public static void sort(@android.annotation.NonNull java.lang.Object[] a, int fr
  * @param a the array to be sorted
  * @param c the comparator to determine the order of the array.  A
  *        {@code null} value indicates that the elements'
- *        {@linkplain java.lang.Comparable Comparable} should be used.
+ *        {@linkplain java.lang.Comparable natural ordering} should be used.
  * @throws java.lang.ClassCastException if the array contains elements that are
  *         not <i>mutually comparable</i> using the specified comparator
  * @throws java.lang.IllegalArgumentException (optional) if the comparator is
  *         found to violate the {@link java.util.Comparator Comparator} contract
  */
 
-public static <T> void sort(@android.annotation.NonNull T[] a, @android.annotation.Nullable java.util.Comparator<? super T> c) { throw new RuntimeException("Stub!"); }
+public static <T> void sort(@androidx.annotation.RecentlyNonNull T[] a, @androidx.annotation.RecentlyNullable java.util.Comparator<? super T> c) { throw new RuntimeException("Stub!"); }
 
 /**
  * Sorts the specified range of the specified array of objects according
@@ -1084,7 +1084,7 @@ public static <T> void sort(@android.annotation.NonNull T[] a, @android.annotati
  * @param toIndex the index of the last element (exclusive) to be sorted
  * @param c the comparator to determine the order of the array.  A
  *        {@code null} value indicates that the elements'
- *        {@linkplain java.lang.Comparable Comparable} should be used.
+ *        {@linkplain java.lang.Comparable natural ordering} should be used.
  * @throws java.lang.ClassCastException if the array contains elements that are not
  *         <i>mutually comparable</i> using the specified comparator.
  * @throws java.lang.IllegalArgumentException if {@code fromIndex > toIndex} or
@@ -1094,7 +1094,7 @@ public static <T> void sort(@android.annotation.NonNull T[] a, @android.annotati
  *         {@code toIndex > a.length}
  */
 
-public static <T> void sort(@android.annotation.NonNull T[] a, int fromIndex, int toIndex, @android.annotation.Nullable java.util.Comparator<? super T> c) { throw new RuntimeException("Stub!"); }
+public static <T> void sort(@androidx.annotation.RecentlyNonNull T[] a, int fromIndex, int toIndex, @androidx.annotation.RecentlyNullable java.util.Comparator<? super T> c) { throw new RuntimeException("Stub!"); }
 
 /**
  * Cumulates, in parallel, each element of the given array in place,
@@ -1112,7 +1112,7 @@ public static <T> void sort(@android.annotation.NonNull T[] a, int fromIndex, in
  * @since 1.8
  */
 
-public static <T> void parallelPrefix(@android.annotation.NonNull T[] array, @android.annotation.NonNull java.util.function.BinaryOperator<T> op) { throw new RuntimeException("Stub!"); }
+public static <T> void parallelPrefix(@androidx.annotation.RecentlyNonNull T[] array, @androidx.annotation.RecentlyNonNull java.util.function.BinaryOperator<T> op) { throw new RuntimeException("Stub!"); }
 
 /**
  * Performs {@link #parallelPrefix(java.lang.Object[],java.util.function.BinaryOperator)}
@@ -1131,7 +1131,7 @@ public static <T> void parallelPrefix(@android.annotation.NonNull T[] array, @an
  * @since 1.8
  */
 
-public static <T> void parallelPrefix(@android.annotation.NonNull T[] array, int fromIndex, int toIndex, @android.annotation.NonNull java.util.function.BinaryOperator<T> op) { throw new RuntimeException("Stub!"); }
+public static <T> void parallelPrefix(@androidx.annotation.RecentlyNonNull T[] array, int fromIndex, int toIndex, @androidx.annotation.RecentlyNonNull java.util.function.BinaryOperator<T> op) { throw new RuntimeException("Stub!"); }
 
 /**
  * Cumulates, in parallel, each element of the given array in place,
@@ -1148,7 +1148,7 @@ public static <T> void parallelPrefix(@android.annotation.NonNull T[] array, int
  * @since 1.8
  */
 
-public static void parallelPrefix(@android.annotation.NonNull long[] array, @android.annotation.NonNull java.util.function.LongBinaryOperator op) { throw new RuntimeException("Stub!"); }
+public static void parallelPrefix(@androidx.annotation.RecentlyNonNull long[] array, @androidx.annotation.RecentlyNonNull java.util.function.LongBinaryOperator op) { throw new RuntimeException("Stub!"); }
 
 /**
  * Performs {@link #parallelPrefix(long[],java.util.function.LongBinaryOperator)}
@@ -1166,7 +1166,7 @@ public static void parallelPrefix(@android.annotation.NonNull long[] array, @and
  * @since 1.8
  */
 
-public static void parallelPrefix(@android.annotation.NonNull long[] array, int fromIndex, int toIndex, @android.annotation.NonNull java.util.function.LongBinaryOperator op) { throw new RuntimeException("Stub!"); }
+public static void parallelPrefix(@androidx.annotation.RecentlyNonNull long[] array, int fromIndex, int toIndex, @androidx.annotation.RecentlyNonNull java.util.function.LongBinaryOperator op) { throw new RuntimeException("Stub!"); }
 
 /**
  * Cumulates, in parallel, each element of the given array in place,
@@ -1186,7 +1186,7 @@ public static void parallelPrefix(@android.annotation.NonNull long[] array, int 
  * @since 1.8
  */
 
-public static void parallelPrefix(@android.annotation.NonNull double[] array, @android.annotation.NonNull java.util.function.DoubleBinaryOperator op) { throw new RuntimeException("Stub!"); }
+public static void parallelPrefix(@androidx.annotation.RecentlyNonNull double[] array, @androidx.annotation.RecentlyNonNull java.util.function.DoubleBinaryOperator op) { throw new RuntimeException("Stub!"); }
 
 /**
  * Performs {@link #parallelPrefix(double[],java.util.function.DoubleBinaryOperator)}
@@ -1204,7 +1204,7 @@ public static void parallelPrefix(@android.annotation.NonNull double[] array, @a
  * @since 1.8
  */
 
-public static void parallelPrefix(@android.annotation.NonNull double[] array, int fromIndex, int toIndex, @android.annotation.NonNull java.util.function.DoubleBinaryOperator op) { throw new RuntimeException("Stub!"); }
+public static void parallelPrefix(@androidx.annotation.RecentlyNonNull double[] array, int fromIndex, int toIndex, @androidx.annotation.RecentlyNonNull java.util.function.DoubleBinaryOperator op) { throw new RuntimeException("Stub!"); }
 
 /**
  * Cumulates, in parallel, each element of the given array in place,
@@ -1221,7 +1221,7 @@ public static void parallelPrefix(@android.annotation.NonNull double[] array, in
  * @since 1.8
  */
 
-public static void parallelPrefix(@android.annotation.NonNull int[] array, @android.annotation.NonNull java.util.function.IntBinaryOperator op) { throw new RuntimeException("Stub!"); }
+public static void parallelPrefix(@androidx.annotation.RecentlyNonNull int[] array, @androidx.annotation.RecentlyNonNull java.util.function.IntBinaryOperator op) { throw new RuntimeException("Stub!"); }
 
 /**
  * Performs {@link #parallelPrefix(int[],java.util.function.IntBinaryOperator)}
@@ -1239,7 +1239,7 @@ public static void parallelPrefix(@android.annotation.NonNull int[] array, @andr
  * @since 1.8
  */
 
-public static void parallelPrefix(@android.annotation.NonNull int[] array, int fromIndex, int toIndex, @android.annotation.NonNull java.util.function.IntBinaryOperator op) { throw new RuntimeException("Stub!"); }
+public static void parallelPrefix(@androidx.annotation.RecentlyNonNull int[] array, int fromIndex, int toIndex, @androidx.annotation.RecentlyNonNull java.util.function.IntBinaryOperator op) { throw new RuntimeException("Stub!"); }
 
 /**
  * Searches the specified array of longs for the specified value using the
@@ -1261,7 +1261,7 @@ public static void parallelPrefix(@android.annotation.NonNull int[] array, int f
  *         and only if the key is found.
  */
 
-public static int binarySearch(@android.annotation.NonNull long[] a, long key) { throw new RuntimeException("Stub!"); }
+public static int binarySearch(@androidx.annotation.RecentlyNonNull long[] a, long key) { throw new RuntimeException("Stub!"); }
 
 /**
  * Searches a range of
@@ -1296,7 +1296,7 @@ public static int binarySearch(@android.annotation.NonNull long[] a, long key) {
  * @since 1.6
  */
 
-public static int binarySearch(@android.annotation.NonNull long[] a, int fromIndex, int toIndex, long key) { throw new RuntimeException("Stub!"); }
+public static int binarySearch(@androidx.annotation.RecentlyNonNull long[] a, int fromIndex, int toIndex, long key) { throw new RuntimeException("Stub!"); }
 
 /**
  * Searches the specified array of ints for the specified value using the
@@ -1318,7 +1318,7 @@ public static int binarySearch(@android.annotation.NonNull long[] a, int fromInd
  *         and only if the key is found.
  */
 
-public static int binarySearch(@android.annotation.NonNull int[] a, int key) { throw new RuntimeException("Stub!"); }
+public static int binarySearch(@androidx.annotation.RecentlyNonNull int[] a, int key) { throw new RuntimeException("Stub!"); }
 
 /**
  * Searches a range of
@@ -1353,7 +1353,7 @@ public static int binarySearch(@android.annotation.NonNull int[] a, int key) { t
  * @since 1.6
  */
 
-public static int binarySearch(@android.annotation.NonNull int[] a, int fromIndex, int toIndex, int key) { throw new RuntimeException("Stub!"); }
+public static int binarySearch(@androidx.annotation.RecentlyNonNull int[] a, int fromIndex, int toIndex, int key) { throw new RuntimeException("Stub!"); }
 
 /**
  * Searches the specified array of shorts for the specified value using
@@ -1375,7 +1375,7 @@ public static int binarySearch(@android.annotation.NonNull int[] a, int fromInde
  *         and only if the key is found.
  */
 
-public static int binarySearch(@android.annotation.NonNull short[] a, short key) { throw new RuntimeException("Stub!"); }
+public static int binarySearch(@androidx.annotation.RecentlyNonNull short[] a, short key) { throw new RuntimeException("Stub!"); }
 
 /**
  * Searches a range of
@@ -1410,7 +1410,7 @@ public static int binarySearch(@android.annotation.NonNull short[] a, short key)
  * @since 1.6
  */
 
-public static int binarySearch(@android.annotation.NonNull short[] a, int fromIndex, int toIndex, short key) { throw new RuntimeException("Stub!"); }
+public static int binarySearch(@androidx.annotation.RecentlyNonNull short[] a, int fromIndex, int toIndex, short key) { throw new RuntimeException("Stub!"); }
 
 /**
  * Searches the specified array of chars for the specified value using the
@@ -1432,7 +1432,7 @@ public static int binarySearch(@android.annotation.NonNull short[] a, int fromIn
  *         and only if the key is found.
  */
 
-public static int binarySearch(@android.annotation.NonNull char[] a, char key) { throw new RuntimeException("Stub!"); }
+public static int binarySearch(@androidx.annotation.RecentlyNonNull char[] a, char key) { throw new RuntimeException("Stub!"); }
 
 /**
  * Searches a range of
@@ -1467,7 +1467,7 @@ public static int binarySearch(@android.annotation.NonNull char[] a, char key) {
  * @since 1.6
  */
 
-public static int binarySearch(@android.annotation.NonNull char[] a, int fromIndex, int toIndex, char key) { throw new RuntimeException("Stub!"); }
+public static int binarySearch(@androidx.annotation.RecentlyNonNull char[] a, int fromIndex, int toIndex, char key) { throw new RuntimeException("Stub!"); }
 
 /**
  * Searches the specified array of bytes for the specified value using the
@@ -1489,7 +1489,7 @@ public static int binarySearch(@android.annotation.NonNull char[] a, int fromInd
  *         and only if the key is found.
  */
 
-public static int binarySearch(@android.annotation.NonNull byte[] a, byte key) { throw new RuntimeException("Stub!"); }
+public static int binarySearch(@androidx.annotation.RecentlyNonNull byte[] a, byte key) { throw new RuntimeException("Stub!"); }
 
 /**
  * Searches a range of
@@ -1524,7 +1524,7 @@ public static int binarySearch(@android.annotation.NonNull byte[] a, byte key) {
  * @since 1.6
  */
 
-public static int binarySearch(@android.annotation.NonNull byte[] a, int fromIndex, int toIndex, byte key) { throw new RuntimeException("Stub!"); }
+public static int binarySearch(@androidx.annotation.RecentlyNonNull byte[] a, int fromIndex, int toIndex, byte key) { throw new RuntimeException("Stub!"); }
 
 /**
  * Searches the specified array of doubles for the specified value using
@@ -1547,7 +1547,7 @@ public static int binarySearch(@android.annotation.NonNull byte[] a, int fromInd
  *         and only if the key is found.
  */
 
-public static int binarySearch(@android.annotation.NonNull double[] a, double key) { throw new RuntimeException("Stub!"); }
+public static int binarySearch(@androidx.annotation.RecentlyNonNull double[] a, double key) { throw new RuntimeException("Stub!"); }
 
 /**
  * Searches a range of
@@ -1583,7 +1583,7 @@ public static int binarySearch(@android.annotation.NonNull double[] a, double ke
  * @since 1.6
  */
 
-public static int binarySearch(@android.annotation.NonNull double[] a, int fromIndex, int toIndex, double key) { throw new RuntimeException("Stub!"); }
+public static int binarySearch(@androidx.annotation.RecentlyNonNull double[] a, int fromIndex, int toIndex, double key) { throw new RuntimeException("Stub!"); }
 
 /**
  * Searches the specified array of floats for the specified value using
@@ -1606,7 +1606,7 @@ public static int binarySearch(@android.annotation.NonNull double[] a, int fromI
  *         and only if the key is found.
  */
 
-public static int binarySearch(@android.annotation.NonNull float[] a, float key) { throw new RuntimeException("Stub!"); }
+public static int binarySearch(@androidx.annotation.RecentlyNonNull float[] a, float key) { throw new RuntimeException("Stub!"); }
 
 /**
  * Searches a range of
@@ -1642,13 +1642,13 @@ public static int binarySearch(@android.annotation.NonNull float[] a, float key)
  * @since 1.6
  */
 
-public static int binarySearch(@android.annotation.NonNull float[] a, int fromIndex, int toIndex, float key) { throw new RuntimeException("Stub!"); }
+public static int binarySearch(@androidx.annotation.RecentlyNonNull float[] a, int fromIndex, int toIndex, float key) { throw new RuntimeException("Stub!"); }
 
 /**
  * Searches the specified array for the specified object using the binary
  * search algorithm. The array must be sorted into ascending order
  * according to the
- * {@linkplain java.lang.Comparable Comparable}
+ * {@linkplain java.lang.Comparable natural ordering}
  * of its elements (as by the
  * {@link #sort(java.lang.Object[])} method) prior to making this call.
  * If it is not sorted, the results are undefined.
@@ -1673,7 +1673,7 @@ public static int binarySearch(@android.annotation.NonNull float[] a, int fromIn
  *         elements of the array.
  */
 
-public static int binarySearch(@android.annotation.NonNull java.lang.Object[] a, @android.annotation.NonNull java.lang.Object key) { throw new RuntimeException("Stub!"); }
+public static int binarySearch(@androidx.annotation.RecentlyNonNull java.lang.Object[] a, @androidx.annotation.RecentlyNonNull java.lang.Object key) { throw new RuntimeException("Stub!"); }
 
 /**
  * Searches a range of
@@ -1681,7 +1681,7 @@ public static int binarySearch(@android.annotation.NonNull java.lang.Object[] a,
  * search algorithm.
  * The range must be sorted into ascending order
  * according to the
- * {@linkplain java.lang.Comparable Comparable}
+ * {@linkplain java.lang.Comparable natural ordering}
  * of its elements (as by the
  * {@link #sort(java.lang.Object[],int,int)} method) prior to making this
  * call.  If it is not sorted, the results are undefined.
@@ -1716,7 +1716,7 @@ public static int binarySearch(@android.annotation.NonNull java.lang.Object[] a,
  * @since 1.6
  */
 
-public static int binarySearch(@android.annotation.NonNull java.lang.Object[] a, int fromIndex, int toIndex, @android.annotation.NonNull java.lang.Object key) { throw new RuntimeException("Stub!"); }
+public static int binarySearch(@androidx.annotation.RecentlyNonNull java.lang.Object[] a, int fromIndex, int toIndex, @androidx.annotation.RecentlyNonNull java.lang.Object key) { throw new RuntimeException("Stub!"); }
 
 /**
  * Searches the specified array for the specified object using the binary
@@ -1734,7 +1734,7 @@ public static int binarySearch(@android.annotation.NonNull java.lang.Object[] a,
  * @param key the value to be searched for
  * @param c the comparator by which the array is ordered.  A
  *        <tt>null</tt> value indicates that the elements'
- *        {@linkplain java.lang.Comparable Comparable} should be used.
+ *        {@linkplain java.lang.Comparable natural ordering} should be used.
  * @return index of the search key, if it is contained in the array;
  *         otherwise, <tt>(-(<i>insertion point</i>) - 1)</tt>.  The
  *         <i>insertion point</i> is defined as the point at which the
@@ -1749,7 +1749,7 @@ public static int binarySearch(@android.annotation.NonNull java.lang.Object[] a,
  *         elements of the array using this comparator.
  */
 
-public static <T> int binarySearch(@android.annotation.NonNull T[] a, T key, @android.annotation.Nullable java.util.Comparator<? super T> c) { throw new RuntimeException("Stub!"); }
+public static <T> int binarySearch(@androidx.annotation.RecentlyNonNull T[] a, T key, @androidx.annotation.RecentlyNullable java.util.Comparator<? super T> c) { throw new RuntimeException("Stub!"); }
 
 /**
  * Searches a range of
@@ -1772,7 +1772,7 @@ public static <T> int binarySearch(@android.annotation.NonNull T[] a, T key, @an
  * @param key the value to be searched for
  * @param c the comparator by which the array is ordered.  A
  *        <tt>null</tt> value indicates that the elements'
- *        {@linkplain java.lang.Comparable Comparable} should be used.
+ *        {@linkplain java.lang.Comparable natural ordering} should be used.
  * @return index of the search key, if it is contained in the array
  *         within the specified range;
  *         otherwise, <tt>(-(<i>insertion point</i>) - 1)</tt>.  The
@@ -1794,7 +1794,7 @@ public static <T> int binarySearch(@android.annotation.NonNull T[] a, T key, @an
  * @since 1.6
  */
 
-public static <T> int binarySearch(@android.annotation.NonNull T[] a, int fromIndex, int toIndex, T key, @android.annotation.Nullable java.util.Comparator<? super T> c) { throw new RuntimeException("Stub!"); }
+public static <T> int binarySearch(@androidx.annotation.RecentlyNonNull T[] a, int fromIndex, int toIndex, T key, @androidx.annotation.RecentlyNullable java.util.Comparator<? super T> c) { throw new RuntimeException("Stub!"); }
 
 /**
  * Returns <tt>true</tt> if the two specified arrays of longs are
@@ -1809,7 +1809,7 @@ public static <T> int binarySearch(@android.annotation.NonNull T[] a, int fromIn
  * @return <tt>true</tt> if the two arrays are equal
  */
 
-public static boolean equals(@android.annotation.Nullable long[] a, @android.annotation.Nullable long[] a2) { throw new RuntimeException("Stub!"); }
+public static boolean equals(@androidx.annotation.RecentlyNullable long[] a, @androidx.annotation.RecentlyNullable long[] a2) { throw new RuntimeException("Stub!"); }
 
 /**
  * Returns <tt>true</tt> if the two specified arrays of ints are
@@ -1824,7 +1824,7 @@ public static boolean equals(@android.annotation.Nullable long[] a, @android.ann
  * @return <tt>true</tt> if the two arrays are equal
  */
 
-public static boolean equals(@android.annotation.Nullable int[] a, @android.annotation.Nullable int[] a2) { throw new RuntimeException("Stub!"); }
+public static boolean equals(@androidx.annotation.RecentlyNullable int[] a, @androidx.annotation.RecentlyNullable int[] a2) { throw new RuntimeException("Stub!"); }
 
 /**
  * Returns <tt>true</tt> if the two specified arrays of shorts are
@@ -1839,7 +1839,7 @@ public static boolean equals(@android.annotation.Nullable int[] a, @android.anno
  * @return <tt>true</tt> if the two arrays are equal
  */
 
-public static boolean equals(@android.annotation.Nullable short[] a, @android.annotation.Nullable short[] a2) { throw new RuntimeException("Stub!"); }
+public static boolean equals(@androidx.annotation.RecentlyNullable short[] a, @androidx.annotation.RecentlyNullable short[] a2) { throw new RuntimeException("Stub!"); }
 
 /**
  * Returns <tt>true</tt> if the two specified arrays of chars are
@@ -1854,7 +1854,7 @@ public static boolean equals(@android.annotation.Nullable short[] a, @android.an
  * @return <tt>true</tt> if the two arrays are equal
  */
 
-public static boolean equals(@android.annotation.Nullable char[] a, @android.annotation.Nullable char[] a2) { throw new RuntimeException("Stub!"); }
+public static boolean equals(@androidx.annotation.RecentlyNullable char[] a, @androidx.annotation.RecentlyNullable char[] a2) { throw new RuntimeException("Stub!"); }
 
 /**
  * Returns <tt>true</tt> if the two specified arrays of bytes are
@@ -1869,7 +1869,7 @@ public static boolean equals(@android.annotation.Nullable char[] a, @android.ann
  * @return <tt>true</tt> if the two arrays are equal
  */
 
-public static boolean equals(@android.annotation.Nullable byte[] a, @android.annotation.Nullable byte[] a2) { throw new RuntimeException("Stub!"); }
+public static boolean equals(@androidx.annotation.RecentlyNullable byte[] a, @androidx.annotation.RecentlyNullable byte[] a2) { throw new RuntimeException("Stub!"); }
 
 /**
  * Returns <tt>true</tt> if the two specified arrays of booleans are
@@ -1884,7 +1884,7 @@ public static boolean equals(@android.annotation.Nullable byte[] a, @android.ann
  * @return <tt>true</tt> if the two arrays are equal
  */
 
-public static boolean equals(@android.annotation.Nullable boolean[] a, @android.annotation.Nullable boolean[] a2) { throw new RuntimeException("Stub!"); }
+public static boolean equals(@androidx.annotation.RecentlyNullable boolean[] a, @androidx.annotation.RecentlyNullable boolean[] a2) { throw new RuntimeException("Stub!"); }
 
 /**
  * Returns <tt>true</tt> if the two specified arrays of doubles are
@@ -1905,7 +1905,7 @@ public static boolean equals(@android.annotation.Nullable boolean[] a, @android.
  * @see java.lang.Double#equals(Object)
  */
 
-public static boolean equals(@android.annotation.Nullable double[] a, @android.annotation.Nullable double[] a2) { throw new RuntimeException("Stub!"); }
+public static boolean equals(@androidx.annotation.RecentlyNullable double[] a, @androidx.annotation.RecentlyNullable double[] a2) { throw new RuntimeException("Stub!"); }
 
 /**
  * Returns <tt>true</tt> if the two specified arrays of floats are
@@ -1926,7 +1926,7 @@ public static boolean equals(@android.annotation.Nullable double[] a, @android.a
  * @see java.lang.Float#equals(Object)
  */
 
-public static boolean equals(@android.annotation.Nullable float[] a, @android.annotation.Nullable float[] a2) { throw new RuntimeException("Stub!"); }
+public static boolean equals(@androidx.annotation.RecentlyNullable float[] a, @androidx.annotation.RecentlyNullable float[] a2) { throw new RuntimeException("Stub!"); }
 
 /**
  * Returns <tt>true</tt> if the two specified arrays of Objects are
@@ -1943,7 +1943,7 @@ public static boolean equals(@android.annotation.Nullable float[] a, @android.an
  * @return <tt>true</tt> if the two arrays are equal
  */
 
-public static boolean equals(@android.annotation.Nullable java.lang.Object[] a, @android.annotation.Nullable java.lang.Object[] a2) { throw new RuntimeException("Stub!"); }
+public static boolean equals(@androidx.annotation.RecentlyNullable java.lang.Object[] a, @androidx.annotation.RecentlyNullable java.lang.Object[] a2) { throw new RuntimeException("Stub!"); }
 
 /**
  * Assigns the specified long value to each element of the specified array
@@ -1953,7 +1953,7 @@ public static boolean equals(@android.annotation.Nullable java.lang.Object[] a, 
  * @param val the value to be stored in all elements of the array
  */
 
-public static void fill(@android.annotation.NonNull long[] a, long val) { throw new RuntimeException("Stub!"); }
+public static void fill(@androidx.annotation.RecentlyNonNull long[] a, long val) { throw new RuntimeException("Stub!"); }
 
 /**
  * Assigns the specified long value to each element of the specified
@@ -1973,7 +1973,7 @@ public static void fill(@android.annotation.NonNull long[] a, long val) { throw 
  *         <tt>toIndex &gt; a.length</tt>
  */
 
-public static void fill(@android.annotation.NonNull long[] a, int fromIndex, int toIndex, long val) { throw new RuntimeException("Stub!"); }
+public static void fill(@androidx.annotation.RecentlyNonNull long[] a, int fromIndex, int toIndex, long val) { throw new RuntimeException("Stub!"); }
 
 /**
  * Assigns the specified int value to each element of the specified array
@@ -1983,7 +1983,7 @@ public static void fill(@android.annotation.NonNull long[] a, int fromIndex, int
  * @param val the value to be stored in all elements of the array
  */
 
-public static void fill(@android.annotation.NonNull int[] a, int val) { throw new RuntimeException("Stub!"); }
+public static void fill(@androidx.annotation.RecentlyNonNull int[] a, int val) { throw new RuntimeException("Stub!"); }
 
 /**
  * Assigns the specified int value to each element of the specified
@@ -2003,7 +2003,7 @@ public static void fill(@android.annotation.NonNull int[] a, int val) { throw ne
  *         <tt>toIndex &gt; a.length</tt>
  */
 
-public static void fill(@android.annotation.NonNull int[] a, int fromIndex, int toIndex, int val) { throw new RuntimeException("Stub!"); }
+public static void fill(@androidx.annotation.RecentlyNonNull int[] a, int fromIndex, int toIndex, int val) { throw new RuntimeException("Stub!"); }
 
 /**
  * Assigns the specified short value to each element of the specified array
@@ -2013,7 +2013,7 @@ public static void fill(@android.annotation.NonNull int[] a, int fromIndex, int 
  * @param val the value to be stored in all elements of the array
  */
 
-public static void fill(@android.annotation.NonNull short[] a, short val) { throw new RuntimeException("Stub!"); }
+public static void fill(@androidx.annotation.RecentlyNonNull short[] a, short val) { throw new RuntimeException("Stub!"); }
 
 /**
  * Assigns the specified short value to each element of the specified
@@ -2033,7 +2033,7 @@ public static void fill(@android.annotation.NonNull short[] a, short val) { thro
  *         <tt>toIndex &gt; a.length</tt>
  */
 
-public static void fill(@android.annotation.NonNull short[] a, int fromIndex, int toIndex, short val) { throw new RuntimeException("Stub!"); }
+public static void fill(@androidx.annotation.RecentlyNonNull short[] a, int fromIndex, int toIndex, short val) { throw new RuntimeException("Stub!"); }
 
 /**
  * Assigns the specified char value to each element of the specified array
@@ -2043,7 +2043,7 @@ public static void fill(@android.annotation.NonNull short[] a, int fromIndex, in
  * @param val the value to be stored in all elements of the array
  */
 
-public static void fill(@android.annotation.NonNull char[] a, char val) { throw new RuntimeException("Stub!"); }
+public static void fill(@androidx.annotation.RecentlyNonNull char[] a, char val) { throw new RuntimeException("Stub!"); }
 
 /**
  * Assigns the specified char value to each element of the specified
@@ -2063,7 +2063,7 @@ public static void fill(@android.annotation.NonNull char[] a, char val) { throw 
  *         <tt>toIndex &gt; a.length</tt>
  */
 
-public static void fill(@android.annotation.NonNull char[] a, int fromIndex, int toIndex, char val) { throw new RuntimeException("Stub!"); }
+public static void fill(@androidx.annotation.RecentlyNonNull char[] a, int fromIndex, int toIndex, char val) { throw new RuntimeException("Stub!"); }
 
 /**
  * Assigns the specified byte value to each element of the specified array
@@ -2073,7 +2073,7 @@ public static void fill(@android.annotation.NonNull char[] a, int fromIndex, int
  * @param val the value to be stored in all elements of the array
  */
 
-public static void fill(@android.annotation.NonNull byte[] a, byte val) { throw new RuntimeException("Stub!"); }
+public static void fill(@androidx.annotation.RecentlyNonNull byte[] a, byte val) { throw new RuntimeException("Stub!"); }
 
 /**
  * Assigns the specified byte value to each element of the specified
@@ -2093,7 +2093,7 @@ public static void fill(@android.annotation.NonNull byte[] a, byte val) { throw 
  *         <tt>toIndex &gt; a.length</tt>
  */
 
-public static void fill(@android.annotation.NonNull byte[] a, int fromIndex, int toIndex, byte val) { throw new RuntimeException("Stub!"); }
+public static void fill(@androidx.annotation.RecentlyNonNull byte[] a, int fromIndex, int toIndex, byte val) { throw new RuntimeException("Stub!"); }
 
 /**
  * Assigns the specified boolean value to each element of the specified
@@ -2103,7 +2103,7 @@ public static void fill(@android.annotation.NonNull byte[] a, int fromIndex, int
  * @param val the value to be stored in all elements of the array
  */
 
-public static void fill(@android.annotation.NonNull boolean[] a, boolean val) { throw new RuntimeException("Stub!"); }
+public static void fill(@androidx.annotation.RecentlyNonNull boolean[] a, boolean val) { throw new RuntimeException("Stub!"); }
 
 /**
  * Assigns the specified boolean value to each element of the specified
@@ -2123,7 +2123,7 @@ public static void fill(@android.annotation.NonNull boolean[] a, boolean val) { 
  *         <tt>toIndex &gt; a.length</tt>
  */
 
-public static void fill(@android.annotation.NonNull boolean[] a, int fromIndex, int toIndex, boolean val) { throw new RuntimeException("Stub!"); }
+public static void fill(@androidx.annotation.RecentlyNonNull boolean[] a, int fromIndex, int toIndex, boolean val) { throw new RuntimeException("Stub!"); }
 
 /**
  * Assigns the specified double value to each element of the specified
@@ -2133,7 +2133,7 @@ public static void fill(@android.annotation.NonNull boolean[] a, int fromIndex, 
  * @param val the value to be stored in all elements of the array
  */
 
-public static void fill(@android.annotation.NonNull double[] a, double val) { throw new RuntimeException("Stub!"); }
+public static void fill(@androidx.annotation.RecentlyNonNull double[] a, double val) { throw new RuntimeException("Stub!"); }
 
 /**
  * Assigns the specified double value to each element of the specified
@@ -2153,7 +2153,7 @@ public static void fill(@android.annotation.NonNull double[] a, double val) { th
  *         <tt>toIndex &gt; a.length</tt>
  */
 
-public static void fill(@android.annotation.NonNull double[] a, int fromIndex, int toIndex, double val) { throw new RuntimeException("Stub!"); }
+public static void fill(@androidx.annotation.RecentlyNonNull double[] a, int fromIndex, int toIndex, double val) { throw new RuntimeException("Stub!"); }
 
 /**
  * Assigns the specified float value to each element of the specified array
@@ -2163,7 +2163,7 @@ public static void fill(@android.annotation.NonNull double[] a, int fromIndex, i
  * @param val the value to be stored in all elements of the array
  */
 
-public static void fill(@android.annotation.NonNull float[] a, float val) { throw new RuntimeException("Stub!"); }
+public static void fill(@androidx.annotation.RecentlyNonNull float[] a, float val) { throw new RuntimeException("Stub!"); }
 
 /**
  * Assigns the specified float value to each element of the specified
@@ -2183,7 +2183,7 @@ public static void fill(@android.annotation.NonNull float[] a, float val) { thro
  *         <tt>toIndex &gt; a.length</tt>
  */
 
-public static void fill(@android.annotation.NonNull float[] a, int fromIndex, int toIndex, float val) { throw new RuntimeException("Stub!"); }
+public static void fill(@androidx.annotation.RecentlyNonNull float[] a, int fromIndex, int toIndex, float val) { throw new RuntimeException("Stub!"); }
 
 /**
  * Assigns the specified Object reference to each element of the specified
@@ -2195,7 +2195,7 @@ public static void fill(@android.annotation.NonNull float[] a, int fromIndex, in
  *         runtime type that can be stored in the specified array
  */
 
-public static void fill(@android.annotation.NonNull java.lang.Object[] a, @android.annotation.Nullable java.lang.Object val) { throw new RuntimeException("Stub!"); }
+public static void fill(@androidx.annotation.RecentlyNonNull java.lang.Object[] a, @androidx.annotation.RecentlyNullable java.lang.Object val) { throw new RuntimeException("Stub!"); }
 
 /**
  * Assigns the specified Object reference to each element of the specified
@@ -2217,7 +2217,7 @@ public static void fill(@android.annotation.NonNull java.lang.Object[] a, @andro
  *         runtime type that can be stored in the specified array
  */
 
-public static void fill(@android.annotation.NonNull java.lang.Object[] a, int fromIndex, int toIndex, @android.annotation.Nullable java.lang.Object val) { throw new RuntimeException("Stub!"); }
+public static void fill(@androidx.annotation.RecentlyNonNull java.lang.Object[] a, int fromIndex, int toIndex, @androidx.annotation.RecentlyNullable java.lang.Object val) { throw new RuntimeException("Stub!"); }
 
 /**
  * Copies the specified array, truncating or padding with nulls (if necessary)
@@ -2239,8 +2239,8 @@ public static void fill(@android.annotation.NonNull java.lang.Object[] a, int fr
  * @since 1.6
  */
 
-@android.annotation.NonNull
-public static <T> T[] copyOf(@android.annotation.NonNull T[] original, int newLength) { throw new RuntimeException("Stub!"); }
+@androidx.annotation.RecentlyNonNull
+public static <T> T[] copyOf(@androidx.annotation.RecentlyNonNull T[] original, int newLength) { throw new RuntimeException("Stub!"); }
 
 /**
  * Copies the specified array, truncating or padding with nulls (if necessary)
@@ -2267,8 +2267,8 @@ public static <T> T[] copyOf(@android.annotation.NonNull T[] original, int newLe
  * @since 1.6
  */
 
-@android.annotation.NonNull
-public static <T, U> T[] copyOf(@android.annotation.NonNull U[] original, int newLength, @android.annotation.NonNull java.lang.Class<? extends T[]> newType) { throw new RuntimeException("Stub!"); }
+@androidx.annotation.RecentlyNonNull
+public static <T, U> T[] copyOf(@androidx.annotation.RecentlyNonNull U[] original, int newLength, @androidx.annotation.RecentlyNonNull java.lang.Class<? extends T[]> newType) { throw new RuntimeException("Stub!"); }
 
 /**
  * Copies the specified array, truncating or padding with zeros (if necessary)
@@ -2288,8 +2288,8 @@ public static <T, U> T[] copyOf(@android.annotation.NonNull U[] original, int ne
  * @since 1.6
  */
 
-@android.annotation.NonNull
-public static byte[] copyOf(@android.annotation.NonNull byte[] original, int newLength) { throw new RuntimeException("Stub!"); }
+@androidx.annotation.RecentlyNonNull
+public static byte[] copyOf(@androidx.annotation.RecentlyNonNull byte[] original, int newLength) { throw new RuntimeException("Stub!"); }
 
 /**
  * Copies the specified array, truncating or padding with zeros (if necessary)
@@ -2309,8 +2309,8 @@ public static byte[] copyOf(@android.annotation.NonNull byte[] original, int new
  * @since 1.6
  */
 
-@android.annotation.NonNull
-public static short[] copyOf(@android.annotation.NonNull short[] original, int newLength) { throw new RuntimeException("Stub!"); }
+@androidx.annotation.RecentlyNonNull
+public static short[] copyOf(@androidx.annotation.RecentlyNonNull short[] original, int newLength) { throw new RuntimeException("Stub!"); }
 
 /**
  * Copies the specified array, truncating or padding with zeros (if necessary)
@@ -2330,8 +2330,8 @@ public static short[] copyOf(@android.annotation.NonNull short[] original, int n
  * @since 1.6
  */
 
-@android.annotation.NonNull
-public static int[] copyOf(@android.annotation.NonNull int[] original, int newLength) { throw new RuntimeException("Stub!"); }
+@androidx.annotation.RecentlyNonNull
+public static int[] copyOf(@androidx.annotation.RecentlyNonNull int[] original, int newLength) { throw new RuntimeException("Stub!"); }
 
 /**
  * Copies the specified array, truncating or padding with zeros (if necessary)
@@ -2351,8 +2351,8 @@ public static int[] copyOf(@android.annotation.NonNull int[] original, int newLe
  * @since 1.6
  */
 
-@android.annotation.NonNull
-public static long[] copyOf(@android.annotation.NonNull long[] original, int newLength) { throw new RuntimeException("Stub!"); }
+@androidx.annotation.RecentlyNonNull
+public static long[] copyOf(@androidx.annotation.RecentlyNonNull long[] original, int newLength) { throw new RuntimeException("Stub!"); }
 
 /**
  * Copies the specified array, truncating or padding with null characters (if necessary)
@@ -2372,8 +2372,8 @@ public static long[] copyOf(@android.annotation.NonNull long[] original, int new
  * @since 1.6
  */
 
-@android.annotation.NonNull
-public static char[] copyOf(@android.annotation.NonNull char[] original, int newLength) { throw new RuntimeException("Stub!"); }
+@androidx.annotation.RecentlyNonNull
+public static char[] copyOf(@androidx.annotation.RecentlyNonNull char[] original, int newLength) { throw new RuntimeException("Stub!"); }
 
 /**
  * Copies the specified array, truncating or padding with zeros (if necessary)
@@ -2393,8 +2393,8 @@ public static char[] copyOf(@android.annotation.NonNull char[] original, int new
  * @since 1.6
  */
 
-@android.annotation.NonNull
-public static float[] copyOf(@android.annotation.NonNull float[] original, int newLength) { throw new RuntimeException("Stub!"); }
+@androidx.annotation.RecentlyNonNull
+public static float[] copyOf(@androidx.annotation.RecentlyNonNull float[] original, int newLength) { throw new RuntimeException("Stub!"); }
 
 /**
  * Copies the specified array, truncating or padding with zeros (if necessary)
@@ -2414,8 +2414,8 @@ public static float[] copyOf(@android.annotation.NonNull float[] original, int n
  * @since 1.6
  */
 
-@android.annotation.NonNull
-public static double[] copyOf(@android.annotation.NonNull double[] original, int newLength) { throw new RuntimeException("Stub!"); }
+@androidx.annotation.RecentlyNonNull
+public static double[] copyOf(@androidx.annotation.RecentlyNonNull double[] original, int newLength) { throw new RuntimeException("Stub!"); }
 
 /**
  * Copies the specified array, truncating or padding with <tt>false</tt> (if necessary)
@@ -2435,8 +2435,8 @@ public static double[] copyOf(@android.annotation.NonNull double[] original, int
  * @since 1.6
  */
 
-@android.annotation.NonNull
-public static boolean[] copyOf(@android.annotation.NonNull boolean[] original, int newLength) { throw new RuntimeException("Stub!"); }
+@androidx.annotation.RecentlyNonNull
+public static boolean[] copyOf(@androidx.annotation.RecentlyNonNull boolean[] original, int newLength) { throw new RuntimeException("Stub!"); }
 
 /**
  * Copies the specified range of the specified array into a new array.
@@ -2468,8 +2468,8 @@ public static boolean[] copyOf(@android.annotation.NonNull boolean[] original, i
  * @since 1.6
  */
 
-@android.annotation.NonNull
-public static <T> T[] copyOfRange(@android.annotation.NonNull T[] original, int from, int to) { throw new RuntimeException("Stub!"); }
+@androidx.annotation.RecentlyNonNull
+public static <T> T[] copyOfRange(@androidx.annotation.RecentlyNonNull T[] original, int from, int to) { throw new RuntimeException("Stub!"); }
 
 /**
  * Copies the specified range of the specified array into a new array.
@@ -2505,8 +2505,8 @@ public static <T> T[] copyOfRange(@android.annotation.NonNull T[] original, int 
  * @since 1.6
  */
 
-@android.annotation.NonNull
-public static <T, U> T[] copyOfRange(@android.annotation.NonNull U[] original, int from, int to, @android.annotation.NonNull java.lang.Class<? extends T[]> newType) { throw new RuntimeException("Stub!"); }
+@androidx.annotation.RecentlyNonNull
+public static <T, U> T[] copyOfRange(@androidx.annotation.RecentlyNonNull U[] original, int from, int to, @androidx.annotation.RecentlyNonNull java.lang.Class<? extends T[]> newType) { throw new RuntimeException("Stub!"); }
 
 /**
  * Copies the specified range of the specified array into a new array.
@@ -2535,8 +2535,8 @@ public static <T, U> T[] copyOfRange(@android.annotation.NonNull U[] original, i
  * @since 1.6
  */
 
-@android.annotation.NonNull
-public static byte[] copyOfRange(@android.annotation.NonNull byte[] original, int from, int to) { throw new RuntimeException("Stub!"); }
+@androidx.annotation.RecentlyNonNull
+public static byte[] copyOfRange(@androidx.annotation.RecentlyNonNull byte[] original, int from, int to) { throw new RuntimeException("Stub!"); }
 
 /**
  * Copies the specified range of the specified array into a new array.
@@ -2565,8 +2565,8 @@ public static byte[] copyOfRange(@android.annotation.NonNull byte[] original, in
  * @since 1.6
  */
 
-@android.annotation.NonNull
-public static short[] copyOfRange(@android.annotation.NonNull short[] original, int from, int to) { throw new RuntimeException("Stub!"); }
+@androidx.annotation.RecentlyNonNull
+public static short[] copyOfRange(@androidx.annotation.RecentlyNonNull short[] original, int from, int to) { throw new RuntimeException("Stub!"); }
 
 /**
  * Copies the specified range of the specified array into a new array.
@@ -2595,8 +2595,8 @@ public static short[] copyOfRange(@android.annotation.NonNull short[] original, 
  * @since 1.6
  */
 
-@android.annotation.NonNull
-public static int[] copyOfRange(@android.annotation.NonNull int[] original, int from, int to) { throw new RuntimeException("Stub!"); }
+@androidx.annotation.RecentlyNonNull
+public static int[] copyOfRange(@androidx.annotation.RecentlyNonNull int[] original, int from, int to) { throw new RuntimeException("Stub!"); }
 
 /**
  * Copies the specified range of the specified array into a new array.
@@ -2625,8 +2625,8 @@ public static int[] copyOfRange(@android.annotation.NonNull int[] original, int 
  * @since 1.6
  */
 
-@android.annotation.NonNull
-public static long[] copyOfRange(@android.annotation.NonNull long[] original, int from, int to) { throw new RuntimeException("Stub!"); }
+@androidx.annotation.RecentlyNonNull
+public static long[] copyOfRange(@androidx.annotation.RecentlyNonNull long[] original, int from, int to) { throw new RuntimeException("Stub!"); }
 
 /**
  * Copies the specified range of the specified array into a new array.
@@ -2655,8 +2655,8 @@ public static long[] copyOfRange(@android.annotation.NonNull long[] original, in
  * @since 1.6
  */
 
-@android.annotation.NonNull
-public static char[] copyOfRange(@android.annotation.NonNull char[] original, int from, int to) { throw new RuntimeException("Stub!"); }
+@androidx.annotation.RecentlyNonNull
+public static char[] copyOfRange(@androidx.annotation.RecentlyNonNull char[] original, int from, int to) { throw new RuntimeException("Stub!"); }
 
 /**
  * Copies the specified range of the specified array into a new array.
@@ -2685,8 +2685,8 @@ public static char[] copyOfRange(@android.annotation.NonNull char[] original, in
  * @since 1.6
  */
 
-@android.annotation.NonNull
-public static float[] copyOfRange(@android.annotation.NonNull float[] original, int from, int to) { throw new RuntimeException("Stub!"); }
+@androidx.annotation.RecentlyNonNull
+public static float[] copyOfRange(@androidx.annotation.RecentlyNonNull float[] original, int from, int to) { throw new RuntimeException("Stub!"); }
 
 /**
  * Copies the specified range of the specified array into a new array.
@@ -2715,8 +2715,8 @@ public static float[] copyOfRange(@android.annotation.NonNull float[] original, 
  * @since 1.6
  */
 
-@android.annotation.NonNull
-public static double[] copyOfRange(@android.annotation.NonNull double[] original, int from, int to) { throw new RuntimeException("Stub!"); }
+@androidx.annotation.RecentlyNonNull
+public static double[] copyOfRange(@androidx.annotation.RecentlyNonNull double[] original, int from, int to) { throw new RuntimeException("Stub!"); }
 
 /**
  * Copies the specified range of the specified array into a new array.
@@ -2745,8 +2745,8 @@ public static double[] copyOfRange(@android.annotation.NonNull double[] original
  * @since 1.6
  */
 
-@android.annotation.NonNull
-public static boolean[] copyOfRange(@android.annotation.NonNull boolean[] original, int from, int to) { throw new RuntimeException("Stub!"); }
+@androidx.annotation.RecentlyNonNull
+public static boolean[] copyOfRange(@androidx.annotation.RecentlyNonNull boolean[] original, int from, int to) { throw new RuntimeException("Stub!"); }
 
 /**
  * Returns a fixed-size list backed by the specified array.  (Changes to
@@ -2766,9 +2766,9 @@ public static boolean[] copyOfRange(@android.annotation.NonNull boolean[] origin
  * @return a list view of the specified array
  */
 
-@android.annotation.NonNull
+@androidx.annotation.RecentlyNonNull
 @java.lang.SafeVarargs
-public static <T> java.util.List<T> asList(@android.annotation.NonNull T... a) { throw new RuntimeException("Stub!"); }
+public static <T> java.util.List<T> asList(@androidx.annotation.RecentlyNonNull T... a) { throw new RuntimeException("Stub!"); }
 
 /**
  * Returns a hash code based on the contents of the specified array.
@@ -2777,7 +2777,7 @@ public static <T> java.util.List<T> asList(@android.annotation.NonNull T... a) {
  * <tt>Arrays.hashCode(a) == Arrays.hashCode(b)</tt>.
  *
  * <p>The value returned by this method is the same value that would be
- * obtained by invoking the {@link java.util.List#hashCode() List#hashCode()}
+ * obtained by invoking the {@link java.util.List#hashCode() <tt>hashCode</tt>}
  * method on a {@link java.util.List List} containing a sequence of {@link java.lang.Long Long}
  * instances representing the elements of <tt>a</tt> in the same order.
  * If <tt>a</tt> is <tt>null</tt>, this method returns 0.
@@ -2787,7 +2787,7 @@ public static <T> java.util.List<T> asList(@android.annotation.NonNull T... a) {
  * @since 1.5
  */
 
-public static int hashCode(@android.annotation.Nullable long[] a) { throw new RuntimeException("Stub!"); }
+public static int hashCode(@androidx.annotation.RecentlyNullable long[] a) { throw new RuntimeException("Stub!"); }
 
 /**
  * Returns a hash code based on the contents of the specified array.
@@ -2796,7 +2796,7 @@ public static int hashCode(@android.annotation.Nullable long[] a) { throw new Ru
  * <tt>Arrays.hashCode(a) == Arrays.hashCode(b)</tt>.
  *
  * <p>The value returned by this method is the same value that would be
- * obtained by invoking the {@link java.util.List#hashCode() List#hashCode()}
+ * obtained by invoking the {@link java.util.List#hashCode() <tt>hashCode</tt>}
  * method on a {@link java.util.List List} containing a sequence of {@link java.lang.Integer Integer}
  * instances representing the elements of <tt>a</tt> in the same order.
  * If <tt>a</tt> is <tt>null</tt>, this method returns 0.
@@ -2806,7 +2806,7 @@ public static int hashCode(@android.annotation.Nullable long[] a) { throw new Ru
  * @since 1.5
  */
 
-public static int hashCode(@android.annotation.Nullable int[] a) { throw new RuntimeException("Stub!"); }
+public static int hashCode(@androidx.annotation.RecentlyNullable int[] a) { throw new RuntimeException("Stub!"); }
 
 /**
  * Returns a hash code based on the contents of the specified array.
@@ -2815,7 +2815,7 @@ public static int hashCode(@android.annotation.Nullable int[] a) { throw new Run
  * <tt>Arrays.hashCode(a) == Arrays.hashCode(b)</tt>.
  *
  * <p>The value returned by this method is the same value that would be
- * obtained by invoking the {@link java.util.List#hashCode() List#hashCode()}
+ * obtained by invoking the {@link java.util.List#hashCode() <tt>hashCode</tt>}
  * method on a {@link java.util.List List} containing a sequence of {@link java.lang.Short Short}
  * instances representing the elements of <tt>a</tt> in the same order.
  * If <tt>a</tt> is <tt>null</tt>, this method returns 0.
@@ -2825,7 +2825,7 @@ public static int hashCode(@android.annotation.Nullable int[] a) { throw new Run
  * @since 1.5
  */
 
-public static int hashCode(@android.annotation.Nullable short[] a) { throw new RuntimeException("Stub!"); }
+public static int hashCode(@androidx.annotation.RecentlyNullable short[] a) { throw new RuntimeException("Stub!"); }
 
 /**
  * Returns a hash code based on the contents of the specified array.
@@ -2834,7 +2834,7 @@ public static int hashCode(@android.annotation.Nullable short[] a) { throw new R
  * <tt>Arrays.hashCode(a) == Arrays.hashCode(b)</tt>.
  *
  * <p>The value returned by this method is the same value that would be
- * obtained by invoking the {@link java.util.List#hashCode() List#hashCode()}
+ * obtained by invoking the {@link java.util.List#hashCode() <tt>hashCode</tt>}
  * method on a {@link java.util.List List} containing a sequence of {@link java.lang.Character Character}
  * instances representing the elements of <tt>a</tt> in the same order.
  * If <tt>a</tt> is <tt>null</tt>, this method returns 0.
@@ -2844,7 +2844,7 @@ public static int hashCode(@android.annotation.Nullable short[] a) { throw new R
  * @since 1.5
  */
 
-public static int hashCode(@android.annotation.Nullable char[] a) { throw new RuntimeException("Stub!"); }
+public static int hashCode(@androidx.annotation.RecentlyNullable char[] a) { throw new RuntimeException("Stub!"); }
 
 /**
  * Returns a hash code based on the contents of the specified array.
@@ -2853,7 +2853,7 @@ public static int hashCode(@android.annotation.Nullable char[] a) { throw new Ru
  * <tt>Arrays.hashCode(a) == Arrays.hashCode(b)</tt>.
  *
  * <p>The value returned by this method is the same value that would be
- * obtained by invoking the {@link java.util.List#hashCode() List#hashCode()}
+ * obtained by invoking the {@link java.util.List#hashCode() <tt>hashCode</tt>}
  * method on a {@link java.util.List List} containing a sequence of {@link java.lang.Byte Byte}
  * instances representing the elements of <tt>a</tt> in the same order.
  * If <tt>a</tt> is <tt>null</tt>, this method returns 0.
@@ -2863,7 +2863,7 @@ public static int hashCode(@android.annotation.Nullable char[] a) { throw new Ru
  * @since 1.5
  */
 
-public static int hashCode(@android.annotation.Nullable byte[] a) { throw new RuntimeException("Stub!"); }
+public static int hashCode(@androidx.annotation.RecentlyNullable byte[] a) { throw new RuntimeException("Stub!"); }
 
 /**
  * Returns a hash code based on the contents of the specified array.
@@ -2872,7 +2872,7 @@ public static int hashCode(@android.annotation.Nullable byte[] a) { throw new Ru
  * <tt>Arrays.hashCode(a) == Arrays.hashCode(b)</tt>.
  *
  * <p>The value returned by this method is the same value that would be
- * obtained by invoking the {@link java.util.List#hashCode() List#hashCode()}
+ * obtained by invoking the {@link java.util.List#hashCode() <tt>hashCode</tt>}
  * method on a {@link java.util.List List} containing a sequence of {@link java.lang.Boolean Boolean}
  * instances representing the elements of <tt>a</tt> in the same order.
  * If <tt>a</tt> is <tt>null</tt>, this method returns 0.
@@ -2882,7 +2882,7 @@ public static int hashCode(@android.annotation.Nullable byte[] a) { throw new Ru
  * @since 1.5
  */
 
-public static int hashCode(@android.annotation.Nullable boolean[] a) { throw new RuntimeException("Stub!"); }
+public static int hashCode(@androidx.annotation.RecentlyNullable boolean[] a) { throw new RuntimeException("Stub!"); }
 
 /**
  * Returns a hash code based on the contents of the specified array.
@@ -2891,7 +2891,7 @@ public static int hashCode(@android.annotation.Nullable boolean[] a) { throw new
  * <tt>Arrays.hashCode(a) == Arrays.hashCode(b)</tt>.
  *
  * <p>The value returned by this method is the same value that would be
- * obtained by invoking the {@link java.util.List#hashCode() List#hashCode()}
+ * obtained by invoking the {@link java.util.List#hashCode() <tt>hashCode</tt>}
  * method on a {@link java.util.List List} containing a sequence of {@link java.lang.Float Float}
  * instances representing the elements of <tt>a</tt> in the same order.
  * If <tt>a</tt> is <tt>null</tt>, this method returns 0.
@@ -2901,7 +2901,7 @@ public static int hashCode(@android.annotation.Nullable boolean[] a) { throw new
  * @since 1.5
  */
 
-public static int hashCode(@android.annotation.Nullable float[] a) { throw new RuntimeException("Stub!"); }
+public static int hashCode(@androidx.annotation.RecentlyNullable float[] a) { throw new RuntimeException("Stub!"); }
 
 /**
  * Returns a hash code based on the contents of the specified array.
@@ -2910,7 +2910,7 @@ public static int hashCode(@android.annotation.Nullable float[] a) { throw new R
  * <tt>Arrays.hashCode(a) == Arrays.hashCode(b)</tt>.
  *
  * <p>The value returned by this method is the same value that would be
- * obtained by invoking the {@link java.util.List#hashCode() List#hashCode()}
+ * obtained by invoking the {@link java.util.List#hashCode() <tt>hashCode</tt>}
  * method on a {@link java.util.List List} containing a sequence of {@link java.lang.Double Double}
  * instances representing the elements of <tt>a</tt> in the same order.
  * If <tt>a</tt> is <tt>null</tt>, this method returns 0.
@@ -2920,7 +2920,7 @@ public static int hashCode(@android.annotation.Nullable float[] a) { throw new R
  * @since 1.5
  */
 
-public static int hashCode(@android.annotation.Nullable double[] a) { throw new RuntimeException("Stub!"); }
+public static int hashCode(@androidx.annotation.RecentlyNullable double[] a) { throw new RuntimeException("Stub!"); }
 
 /**
  * Returns a hash code based on the contents of the specified array.  If
@@ -2944,7 +2944,7 @@ public static int hashCode(@android.annotation.Nullable double[] a) { throw new 
  * @since 1.5
  */
 
-public static int hashCode(@android.annotation.Nullable java.lang.Object[] a) { throw new RuntimeException("Stub!"); }
+public static int hashCode(@androidx.annotation.RecentlyNullable java.lang.Object[] a) { throw new RuntimeException("Stub!"); }
 
 /**
  * Returns a hash code based on the "deep contents" of the specified
@@ -2976,7 +2976,7 @@ public static int hashCode(@android.annotation.Nullable java.lang.Object[] a) { 
  * @since 1.5
  */
 
-public static int deepHashCode(@android.annotation.Nullable java.lang.Object[] a) { throw new RuntimeException("Stub!"); }
+public static int deepHashCode(@androidx.annotation.RecentlyNullable java.lang.Object[] a) { throw new RuntimeException("Stub!"); }
 
 /**
  * Returns <tt>true</tt> if the two specified arrays are <i>deeply
@@ -3014,7 +3014,7 @@ public static int deepHashCode(@android.annotation.Nullable java.lang.Object[] a
  * @since 1.5
  */
 
-public static boolean deepEquals(@android.annotation.Nullable java.lang.Object[] a1, @android.annotation.Nullable java.lang.Object[] a2) { throw new RuntimeException("Stub!"); }
+public static boolean deepEquals(@androidx.annotation.RecentlyNullable java.lang.Object[] a1, @androidx.annotation.RecentlyNullable java.lang.Object[] a2) { throw new RuntimeException("Stub!"); }
 
 /**
  * Returns a string representation of the contents of the specified array.
@@ -3030,8 +3030,8 @@ public static boolean deepEquals(@android.annotation.Nullable java.lang.Object[]
  * @since 1.5
  */
 
-@android.annotation.NonNull
-public static java.lang.String toString(@android.annotation.Nullable long[] a) { throw new RuntimeException("Stub!"); }
+@androidx.annotation.RecentlyNonNull
+public static java.lang.String toString(@androidx.annotation.RecentlyNullable long[] a) { throw new RuntimeException("Stub!"); }
 
 /**
  * Returns a string representation of the contents of the specified array.
@@ -3047,8 +3047,8 @@ public static java.lang.String toString(@android.annotation.Nullable long[] a) {
  * @since 1.5
  */
 
-@android.annotation.NonNull
-public static java.lang.String toString(@android.annotation.Nullable int[] a) { throw new RuntimeException("Stub!"); }
+@androidx.annotation.RecentlyNonNull
+public static java.lang.String toString(@androidx.annotation.RecentlyNullable int[] a) { throw new RuntimeException("Stub!"); }
 
 /**
  * Returns a string representation of the contents of the specified array.
@@ -3064,8 +3064,8 @@ public static java.lang.String toString(@android.annotation.Nullable int[] a) { 
  * @since 1.5
  */
 
-@android.annotation.NonNull
-public static java.lang.String toString(@android.annotation.Nullable short[] a) { throw new RuntimeException("Stub!"); }
+@androidx.annotation.RecentlyNonNull
+public static java.lang.String toString(@androidx.annotation.RecentlyNullable short[] a) { throw new RuntimeException("Stub!"); }
 
 /**
  * Returns a string representation of the contents of the specified array.
@@ -3081,8 +3081,8 @@ public static java.lang.String toString(@android.annotation.Nullable short[] a) 
  * @since 1.5
  */
 
-@android.annotation.NonNull
-public static java.lang.String toString(@android.annotation.Nullable char[] a) { throw new RuntimeException("Stub!"); }
+@androidx.annotation.RecentlyNonNull
+public static java.lang.String toString(@androidx.annotation.RecentlyNullable char[] a) { throw new RuntimeException("Stub!"); }
 
 /**
  * Returns a string representation of the contents of the specified array.
@@ -3098,8 +3098,8 @@ public static java.lang.String toString(@android.annotation.Nullable char[] a) {
  * @since 1.5
  */
 
-@android.annotation.NonNull
-public static java.lang.String toString(@android.annotation.Nullable byte[] a) { throw new RuntimeException("Stub!"); }
+@androidx.annotation.RecentlyNonNull
+public static java.lang.String toString(@androidx.annotation.RecentlyNullable byte[] a) { throw new RuntimeException("Stub!"); }
 
 /**
  * Returns a string representation of the contents of the specified array.
@@ -3115,8 +3115,8 @@ public static java.lang.String toString(@android.annotation.Nullable byte[] a) {
  * @since 1.5
  */
 
-@android.annotation.NonNull
-public static java.lang.String toString(@android.annotation.Nullable boolean[] a) { throw new RuntimeException("Stub!"); }
+@androidx.annotation.RecentlyNonNull
+public static java.lang.String toString(@androidx.annotation.RecentlyNullable boolean[] a) { throw new RuntimeException("Stub!"); }
 
 /**
  * Returns a string representation of the contents of the specified array.
@@ -3132,8 +3132,8 @@ public static java.lang.String toString(@android.annotation.Nullable boolean[] a
  * @since 1.5
  */
 
-@android.annotation.NonNull
-public static java.lang.String toString(@android.annotation.Nullable float[] a) { throw new RuntimeException("Stub!"); }
+@androidx.annotation.RecentlyNonNull
+public static java.lang.String toString(@androidx.annotation.RecentlyNullable float[] a) { throw new RuntimeException("Stub!"); }
 
 /**
  * Returns a string representation of the contents of the specified array.
@@ -3149,8 +3149,8 @@ public static java.lang.String toString(@android.annotation.Nullable float[] a) 
  * @since 1.5
  */
 
-@android.annotation.NonNull
-public static java.lang.String toString(@android.annotation.Nullable double[] a) { throw new RuntimeException("Stub!"); }
+@androidx.annotation.RecentlyNonNull
+public static java.lang.String toString(@androidx.annotation.RecentlyNullable double[] a) { throw new RuntimeException("Stub!"); }
 
 /**
  * Returns a string representation of the contents of the specified array.
@@ -3169,8 +3169,8 @@ public static java.lang.String toString(@android.annotation.Nullable double[] a)
  * @since 1.5
  */
 
-@android.annotation.NonNull
-public static java.lang.String toString(@android.annotation.Nullable java.lang.Object[] a) { throw new RuntimeException("Stub!"); }
+@androidx.annotation.RecentlyNonNull
+public static java.lang.String toString(@androidx.annotation.RecentlyNullable java.lang.Object[] a) { throw new RuntimeException("Stub!"); }
 
 /**
  * Returns a string representation of the "deep contents" of the specified
@@ -3206,8 +3206,8 @@ public static java.lang.String toString(@android.annotation.Nullable java.lang.O
  * @since 1.5
  */
 
-@android.annotation.NonNull
-public static java.lang.String deepToString(@android.annotation.Nullable java.lang.Object[] a) { throw new RuntimeException("Stub!"); }
+@androidx.annotation.RecentlyNonNull
+public static java.lang.String deepToString(@androidx.annotation.RecentlyNullable java.lang.Object[] a) { throw new RuntimeException("Stub!"); }
 
 /**
  * Set all elements of the specified array, using the provided
@@ -3224,7 +3224,7 @@ public static java.lang.String deepToString(@android.annotation.Nullable java.la
  * @since 1.8
  */
 
-public static <T> void setAll(@android.annotation.NonNull T[] array, @android.annotation.NonNull java.util.function.IntFunction<? extends T> generator) { throw new RuntimeException("Stub!"); }
+public static <T> void setAll(@androidx.annotation.RecentlyNonNull T[] array, @androidx.annotation.RecentlyNonNull java.util.function.IntFunction<? extends T> generator) { throw new RuntimeException("Stub!"); }
 
 /**
  * Set all elements of the specified array, in parallel, using the
@@ -3242,7 +3242,7 @@ public static <T> void setAll(@android.annotation.NonNull T[] array, @android.an
  * @since 1.8
  */
 
-public static <T> void parallelSetAll(@android.annotation.NonNull T[] array, @android.annotation.NonNull java.util.function.IntFunction<? extends T> generator) { throw new RuntimeException("Stub!"); }
+public static <T> void parallelSetAll(@androidx.annotation.RecentlyNonNull T[] array, @androidx.annotation.RecentlyNonNull java.util.function.IntFunction<? extends T> generator) { throw new RuntimeException("Stub!"); }
 
 /**
  * Set all elements of the specified array, using the provided
@@ -3258,7 +3258,7 @@ public static <T> void parallelSetAll(@android.annotation.NonNull T[] array, @an
  * @since 1.8
  */
 
-public static void setAll(@android.annotation.NonNull int[] array, @android.annotation.NonNull java.util.function.IntUnaryOperator generator) { throw new RuntimeException("Stub!"); }
+public static void setAll(@androidx.annotation.RecentlyNonNull int[] array, @androidx.annotation.RecentlyNonNull java.util.function.IntUnaryOperator generator) { throw new RuntimeException("Stub!"); }
 
 /**
  * Set all elements of the specified array, in parallel, using the
@@ -3275,7 +3275,7 @@ public static void setAll(@android.annotation.NonNull int[] array, @android.anno
  * @since 1.8
  */
 
-public static void parallelSetAll(@android.annotation.NonNull int[] array, @android.annotation.NonNull java.util.function.IntUnaryOperator generator) { throw new RuntimeException("Stub!"); }
+public static void parallelSetAll(@androidx.annotation.RecentlyNonNull int[] array, @androidx.annotation.RecentlyNonNull java.util.function.IntUnaryOperator generator) { throw new RuntimeException("Stub!"); }
 
 /**
  * Set all elements of the specified array, using the provided
@@ -3291,7 +3291,7 @@ public static void parallelSetAll(@android.annotation.NonNull int[] array, @andr
  * @since 1.8
  */
 
-public static void setAll(@android.annotation.NonNull long[] array, @android.annotation.NonNull java.util.function.IntToLongFunction generator) { throw new RuntimeException("Stub!"); }
+public static void setAll(@androidx.annotation.RecentlyNonNull long[] array, @androidx.annotation.RecentlyNonNull java.util.function.IntToLongFunction generator) { throw new RuntimeException("Stub!"); }
 
 /**
  * Set all elements of the specified array, in parallel, using the
@@ -3308,7 +3308,7 @@ public static void setAll(@android.annotation.NonNull long[] array, @android.ann
  * @since 1.8
  */
 
-public static void parallelSetAll(@android.annotation.NonNull long[] array, @android.annotation.NonNull java.util.function.IntToLongFunction generator) { throw new RuntimeException("Stub!"); }
+public static void parallelSetAll(@androidx.annotation.RecentlyNonNull long[] array, @androidx.annotation.RecentlyNonNull java.util.function.IntToLongFunction generator) { throw new RuntimeException("Stub!"); }
 
 /**
  * Set all elements of the specified array, using the provided
@@ -3324,7 +3324,7 @@ public static void parallelSetAll(@android.annotation.NonNull long[] array, @and
  * @since 1.8
  */
 
-public static void setAll(@android.annotation.NonNull double[] array, @android.annotation.NonNull java.util.function.IntToDoubleFunction generator) { throw new RuntimeException("Stub!"); }
+public static void setAll(@androidx.annotation.RecentlyNonNull double[] array, @androidx.annotation.RecentlyNonNull java.util.function.IntToDoubleFunction generator) { throw new RuntimeException("Stub!"); }
 
 /**
  * Set all elements of the specified array, in parallel, using the
@@ -3341,7 +3341,7 @@ public static void setAll(@android.annotation.NonNull double[] array, @android.a
  * @since 1.8
  */
 
-public static void parallelSetAll(@android.annotation.NonNull double[] array, @android.annotation.NonNull java.util.function.IntToDoubleFunction generator) { throw new RuntimeException("Stub!"); }
+public static void parallelSetAll(@androidx.annotation.RecentlyNonNull double[] array, @androidx.annotation.RecentlyNonNull java.util.function.IntToDoubleFunction generator) { throw new RuntimeException("Stub!"); }
 
 /**
  * Returns a {@link java.util.Spliterator Spliterator} covering all of the specified array.
@@ -3356,8 +3356,8 @@ public static void parallelSetAll(@android.annotation.NonNull double[] array, @a
  * @since 1.8
  */
 
-@android.annotation.NonNull
-public static <T> java.util.Spliterator<T> spliterator(@android.annotation.NonNull T[] array) { throw new RuntimeException("Stub!"); }
+@androidx.annotation.RecentlyNonNull
+public static <T> java.util.Spliterator<T> spliterator(@androidx.annotation.RecentlyNonNull T[] array) { throw new RuntimeException("Stub!"); }
 
 /**
  * Returns a {@link java.util.Spliterator Spliterator} covering the specified range of the
@@ -3379,8 +3379,8 @@ public static <T> java.util.Spliterator<T> spliterator(@android.annotation.NonNu
  * @since 1.8
  */
 
-@android.annotation.NonNull
-public static <T> java.util.Spliterator<T> spliterator(@android.annotation.NonNull T[] array, int startInclusive, int endExclusive) { throw new RuntimeException("Stub!"); }
+@androidx.annotation.RecentlyNonNull
+public static <T> java.util.Spliterator<T> spliterator(@androidx.annotation.RecentlyNonNull T[] array, int startInclusive, int endExclusive) { throw new RuntimeException("Stub!"); }
 
 /**
  * Returns a {@link java.util.Spliterator.OfInt Spliterator.OfInt} covering all of the specified array.
@@ -3394,8 +3394,8 @@ public static <T> java.util.Spliterator<T> spliterator(@android.annotation.NonNu
  * @since 1.8
  */
 
-@android.annotation.NonNull
-public static java.util.Spliterator.OfInt spliterator(@android.annotation.NonNull int[] array) { throw new RuntimeException("Stub!"); }
+@androidx.annotation.RecentlyNonNull
+public static java.util.Spliterator.OfInt spliterator(@androidx.annotation.RecentlyNonNull int[] array) { throw new RuntimeException("Stub!"); }
 
 /**
  * Returns a {@link java.util.Spliterator.OfInt Spliterator.OfInt} covering the specified range of the
@@ -3416,8 +3416,8 @@ public static java.util.Spliterator.OfInt spliterator(@android.annotation.NonNul
  * @since 1.8
  */
 
-@android.annotation.NonNull
-public static java.util.Spliterator.OfInt spliterator(@android.annotation.NonNull int[] array, int startInclusive, int endExclusive) { throw new RuntimeException("Stub!"); }
+@androidx.annotation.RecentlyNonNull
+public static java.util.Spliterator.OfInt spliterator(@androidx.annotation.RecentlyNonNull int[] array, int startInclusive, int endExclusive) { throw new RuntimeException("Stub!"); }
 
 /**
  * Returns a {@link java.util.Spliterator.OfLong Spliterator.OfLong} covering all of the specified array.
@@ -3431,8 +3431,8 @@ public static java.util.Spliterator.OfInt spliterator(@android.annotation.NonNul
  * @since 1.8
  */
 
-@android.annotation.NonNull
-public static java.util.Spliterator.OfLong spliterator(@android.annotation.NonNull long[] array) { throw new RuntimeException("Stub!"); }
+@androidx.annotation.RecentlyNonNull
+public static java.util.Spliterator.OfLong spliterator(@androidx.annotation.RecentlyNonNull long[] array) { throw new RuntimeException("Stub!"); }
 
 /**
  * Returns a {@link java.util.Spliterator.OfLong Spliterator.OfLong} covering the specified range of the
@@ -3453,8 +3453,8 @@ public static java.util.Spliterator.OfLong spliterator(@android.annotation.NonNu
  * @since 1.8
  */
 
-@android.annotation.NonNull
-public static java.util.Spliterator.OfLong spliterator(@android.annotation.NonNull long[] array, int startInclusive, int endExclusive) { throw new RuntimeException("Stub!"); }
+@androidx.annotation.RecentlyNonNull
+public static java.util.Spliterator.OfLong spliterator(@androidx.annotation.RecentlyNonNull long[] array, int startInclusive, int endExclusive) { throw new RuntimeException("Stub!"); }
 
 /**
  * Returns a {@link java.util.Spliterator.OfDouble Spliterator.OfDouble} covering all of the specified
@@ -3469,8 +3469,8 @@ public static java.util.Spliterator.OfLong spliterator(@android.annotation.NonNu
  * @since 1.8
  */
 
-@android.annotation.NonNull
-public static java.util.Spliterator.OfDouble spliterator(@android.annotation.NonNull double[] array) { throw new RuntimeException("Stub!"); }
+@androidx.annotation.RecentlyNonNull
+public static java.util.Spliterator.OfDouble spliterator(@androidx.annotation.RecentlyNonNull double[] array) { throw new RuntimeException("Stub!"); }
 
 /**
  * Returns a {@link java.util.Spliterator.OfDouble Spliterator.OfDouble} covering the specified range of
@@ -3491,8 +3491,8 @@ public static java.util.Spliterator.OfDouble spliterator(@android.annotation.Non
  * @since 1.8
  */
 
-@android.annotation.NonNull
-public static java.util.Spliterator.OfDouble spliterator(@android.annotation.NonNull double[] array, int startInclusive, int endExclusive) { throw new RuntimeException("Stub!"); }
+@androidx.annotation.RecentlyNonNull
+public static java.util.Spliterator.OfDouble spliterator(@androidx.annotation.RecentlyNonNull double[] array, int startInclusive, int endExclusive) { throw new RuntimeException("Stub!"); }
 
 /**
  * Returns a sequential {@link java.util.stream.Stream Stream} with the specified array as its
@@ -3504,8 +3504,8 @@ public static java.util.Spliterator.OfDouble spliterator(@android.annotation.Non
  * @since 1.8
  */
 
-@android.annotation.NonNull
-public static <T> java.util.stream.Stream<T> stream(@android.annotation.NonNull T[] array) { throw new RuntimeException("Stub!"); }
+@androidx.annotation.RecentlyNonNull
+public static <T> java.util.stream.Stream<T> stream(@androidx.annotation.RecentlyNonNull T[] array) { throw new RuntimeException("Stub!"); }
 
 /**
  * Returns a sequential {@link java.util.stream.Stream Stream} with the specified range of the
@@ -3523,8 +3523,8 @@ public static <T> java.util.stream.Stream<T> stream(@android.annotation.NonNull 
  * @since 1.8
  */
 
-@android.annotation.NonNull
-public static <T> java.util.stream.Stream<T> stream(@android.annotation.NonNull T[] array, int startInclusive, int endExclusive) { throw new RuntimeException("Stub!"); }
+@androidx.annotation.RecentlyNonNull
+public static <T> java.util.stream.Stream<T> stream(@androidx.annotation.RecentlyNonNull T[] array, int startInclusive, int endExclusive) { throw new RuntimeException("Stub!"); }
 
 /**
  * Returns a sequential {@link java.util.stream.IntStream IntStream} with the specified array as its
@@ -3535,8 +3535,8 @@ public static <T> java.util.stream.Stream<T> stream(@android.annotation.NonNull 
  * @since 1.8
  */
 
-@android.annotation.NonNull
-public static java.util.stream.IntStream stream(@android.annotation.NonNull int[] array) { throw new RuntimeException("Stub!"); }
+@androidx.annotation.RecentlyNonNull
+public static java.util.stream.IntStream stream(@androidx.annotation.RecentlyNonNull int[] array) { throw new RuntimeException("Stub!"); }
 
 /**
  * Returns a sequential {@link java.util.stream.IntStream IntStream} with the specified range of the
@@ -3553,8 +3553,8 @@ public static java.util.stream.IntStream stream(@android.annotation.NonNull int[
  * @since 1.8
  */
 
-@android.annotation.NonNull
-public static java.util.stream.IntStream stream(@android.annotation.NonNull int[] array, int startInclusive, int endExclusive) { throw new RuntimeException("Stub!"); }
+@androidx.annotation.RecentlyNonNull
+public static java.util.stream.IntStream stream(@androidx.annotation.RecentlyNonNull int[] array, int startInclusive, int endExclusive) { throw new RuntimeException("Stub!"); }
 
 /**
  * Returns a sequential {@link java.util.stream.LongStream LongStream} with the specified array as its
@@ -3565,8 +3565,8 @@ public static java.util.stream.IntStream stream(@android.annotation.NonNull int[
  * @since 1.8
  */
 
-@android.annotation.NonNull
-public static java.util.stream.LongStream stream(@android.annotation.NonNull long[] array) { throw new RuntimeException("Stub!"); }
+@androidx.annotation.RecentlyNonNull
+public static java.util.stream.LongStream stream(@androidx.annotation.RecentlyNonNull long[] array) { throw new RuntimeException("Stub!"); }
 
 /**
  * Returns a sequential {@link java.util.stream.LongStream LongStream} with the specified range of the
@@ -3583,8 +3583,8 @@ public static java.util.stream.LongStream stream(@android.annotation.NonNull lon
  * @since 1.8
  */
 
-@android.annotation.NonNull
-public static java.util.stream.LongStream stream(@android.annotation.NonNull long[] array, int startInclusive, int endExclusive) { throw new RuntimeException("Stub!"); }
+@androidx.annotation.RecentlyNonNull
+public static java.util.stream.LongStream stream(@androidx.annotation.RecentlyNonNull long[] array, int startInclusive, int endExclusive) { throw new RuntimeException("Stub!"); }
 
 /**
  * Returns a sequential {@link java.util.stream.DoubleStream DoubleStream} with the specified array as its
@@ -3595,8 +3595,8 @@ public static java.util.stream.LongStream stream(@android.annotation.NonNull lon
  * @since 1.8
  */
 
-@android.annotation.NonNull
-public static java.util.stream.DoubleStream stream(@android.annotation.NonNull double[] array) { throw new RuntimeException("Stub!"); }
+@androidx.annotation.RecentlyNonNull
+public static java.util.stream.DoubleStream stream(@androidx.annotation.RecentlyNonNull double[] array) { throw new RuntimeException("Stub!"); }
 
 /**
  * Returns a sequential {@link java.util.stream.DoubleStream DoubleStream} with the specified range of the
@@ -3613,7 +3613,7 @@ public static java.util.stream.DoubleStream stream(@android.annotation.NonNull d
  * @since 1.8
  */
 
-@android.annotation.NonNull
-public static java.util.stream.DoubleStream stream(@android.annotation.NonNull double[] array, int startInclusive, int endExclusive) { throw new RuntimeException("Stub!"); }
+@androidx.annotation.RecentlyNonNull
+public static java.util.stream.DoubleStream stream(@androidx.annotation.RecentlyNonNull double[] array, int startInclusive, int endExclusive) { throw new RuntimeException("Stub!"); }
 }
 

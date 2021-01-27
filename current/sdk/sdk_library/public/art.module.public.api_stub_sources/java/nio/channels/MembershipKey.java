@@ -88,7 +88,7 @@ public abstract boolean isValid();
  * <p> After membership is dropped it may still be possible to receive
  * datagrams sent to the group. This can arise when datagrams are waiting to
  * be received in the socket's receive buffer. After membership is dropped
- * then the channel may {@link java.nio.channels.MulticastChannel#join MulticastChannel#join} the group again
+ * then the channel may {@link java.nio.channels.MulticastChannel#join join} the group again
  * in which case a new membership key is returned.
  *
  * <p> Upon return, this membership object will be {@link #isValid() invalid}.

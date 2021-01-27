@@ -39,7 +39,7 @@ import java.util.EnumSet;
  * <p>
  * Instances of <code>NumericShaper</code> are typically applied
  * as attributes to text with the
- * {@link java.awt.font.TextAttribute#NUMERIC_SHAPING TextAttribute#NUMERIC_SHAPING} attribute
+ * {@link java.awt.font.TextAttribute#NUMERIC_SHAPING NUMERIC_SHAPING} attribute
  * of the <code>TextAttribute</code> class.
  * For example, this code snippet causes a <code>TextLayout</code> to
  * shape European digits to Arabic in an Arabic context:<br>
@@ -110,9 +110,9 @@ import java.util.EnumSet;
  *    </tr>
  *    <tr>
  *       <td rowspan="2">Arabic</td>
- *       <td>{@link java.awt.font.NumericShaper#ARABIC NumericShaper#ARABIC}<br>
- *           {@link java.awt.font.NumericShaper#EASTERN_ARABIC NumericShaper#EASTERN_ARABIC}</td>
- *       <td>{@link java.awt.font.NumericShaper#EASTERN_ARABIC NumericShaper#EASTERN_ARABIC}</td>
+ *       <td>{@link java.awt.font.NumericShaper#ARABIC NumericShaper.ARABIC}<br>
+ *           {@link java.awt.font.NumericShaper#EASTERN_ARABIC NumericShaper.EASTERN_ARABIC}</td>
+ *       <td>{@link java.awt.font.NumericShaper#EASTERN_ARABIC NumericShaper.EASTERN_ARABIC}</td>
  *    </tr>
  *    <tr>
  *       <td>{@link java.awt.font.NumericShaper.Range#ARABIC NumericShaper.Range#ARABIC}<br>
@@ -450,7 +450,7 @@ public static final int THAI = 4096; // 0x1000
 public static final int TIBETAN = 16384; // 0x4000
 /**
  * A {@code NumericShaper.Range} represents a Unicode range of a
- * script having its own decimal digits. For example, the {@link java.awt.font.NumericShaper.Range#THAI NumericShaper.Range#THAI} range has the Thai digits, THAI DIGIT
+ * script having its own decimal digits. For example, the {@link java.awt.font.NumericShaper.Range#THAI  } range has the Thai digits, THAI DIGIT
  * ZERO (U+0E50) to THAI DIGIT NINE (U+0E59).
  *
  * <p>The <code>Range</code> enum replaces the traditional bit

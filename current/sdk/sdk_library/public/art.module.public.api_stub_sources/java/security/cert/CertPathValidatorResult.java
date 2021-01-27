@@ -32,7 +32,7 @@ package java.security.cert;
  * <p>
  * The purpose of this interface is to group (and provide type safety
  * for) all certification path validator results. All results returned
- * by the {@link java.security.cert.CertPathValidator#validate CertPathValidator#validate}
+ * by the {@link java.security.cert.CertPathValidator#validate CertPathValidator.validate}
  * method must implement this interface.
  *
  * @see java.security.cert.CertPathValidator

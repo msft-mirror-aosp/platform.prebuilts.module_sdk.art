@@ -324,7 +324,7 @@ public java.lang.String getDisplayName(boolean daylightTime, int style, java.uti
  *
  * <p>If the amount of saving time at any given time stamp is
  * required, construct a {@link java.util.Calendar Calendar} with this {@code
- * TimeZone} and the time stamp, and call {@link java.util.Calendar#get(int) Calendar#get(int)}{@code (}{@link java.util.Calendar#DST_OFFSET Calendar#DST_OFFSET}{@code )}.
+ * TimeZone} and the time stamp, and call {@link java.util.Calendar#get(int)  Calendar.get}{@code (}{@link java.util.Calendar#DST_OFFSET Calendar#DST_OFFSET}{@code )}.
  *
  * @return the amount of saving time in milliseconds
  * @since 1.4

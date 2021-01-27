@@ -255,7 +255,7 @@ public static java.time.temporal.TemporalQuery<java.time.ZoneId> zone() { throw 
  * object for the offset. The query will return null if the temporal
  * object cannot supply an offset.
  * <p>
- * The query implementation examines the {@link java.time.temporal.ChronoField#OFFSET_SECONDS ChronoField#OFFSET_SECONDS}
+ * The query implementation examines the {@link java.time.temporal.ChronoField#OFFSET_SECONDS OFFSET_SECONDS}
  * field and uses it to create a {@code ZoneOffset}.
  * <p>
  * The method {@link java.time.ZoneOffset#from(TemporalAccessor)} can be used as a
@@ -277,7 +277,7 @@ public static java.time.temporal.TemporalQuery<java.time.ZoneOffset> offset() { 
  * object for the local date. The query will return null if the temporal
  * object cannot supply a local date.
  * <p>
- * The query implementation examines the {@link java.time.temporal.ChronoField#EPOCH_DAY ChronoField#EPOCH_DAY}
+ * The query implementation examines the {@link java.time.temporal.ChronoField#EPOCH_DAY EPOCH_DAY}
  * field and uses it to create a {@code LocalDate}.
  * <p>
  * The method {@link java.time.ZoneOffset#from(java.time.temporal.TemporalAccessor) ZoneOffset#from(TemporalAccessor)} can be used as a
@@ -299,7 +299,7 @@ public static java.time.temporal.TemporalQuery<java.time.LocalDate> localDate() 
  * object for the local time. The query will return null if the temporal
  * object cannot supply a local time.
  * <p>
- * The query implementation examines the {@link java.time.temporal.ChronoField#NANO_OF_DAY ChronoField#NANO_OF_DAY}
+ * The query implementation examines the {@link java.time.temporal.ChronoField#NANO_OF_DAY NANO_OF_DAY}
  * field and uses it to create a {@code LocalTime}.
  * <p>
  * The method {@link java.time.ZoneOffset#from(java.time.temporal.TemporalAccessor) ZoneOffset#from(TemporalAccessor)} can be used as a

@@ -72,8 +72,8 @@ public interface Appendable {
  *          If an I/O error occurs
  */
 
-@android.annotation.NonNull
-public java.lang.Appendable append(@android.annotation.Nullable java.lang.CharSequence csq) throws java.io.IOException;
+@androidx.annotation.RecentlyNonNull
+public java.lang.Appendable append(@androidx.annotation.RecentlyNullable java.lang.CharSequence csq) throws java.io.IOException;
 
 /**
  * Appends a subsequence of the specified character sequence to this
@@ -110,8 +110,8 @@ public java.lang.Appendable append(@android.annotation.Nullable java.lang.CharSe
  *          If an I/O error occurs
  */
 
-@android.annotation.NonNull
-public java.lang.Appendable append(@android.annotation.Nullable java.lang.CharSequence csq, int start, int end) throws java.io.IOException;
+@androidx.annotation.RecentlyNonNull
+public java.lang.Appendable append(@androidx.annotation.RecentlyNullable java.lang.CharSequence csq, int start, int end) throws java.io.IOException;
 
 /**
  * Appends the specified character to this <tt>Appendable</tt>.
@@ -125,7 +125,7 @@ public java.lang.Appendable append(@android.annotation.Nullable java.lang.CharSe
  *          If an I/O error occurs
  */
 
-@android.annotation.NonNull
+@androidx.annotation.RecentlyNonNull
 public java.lang.Appendable append(char c) throws java.io.IOException;
 }
 

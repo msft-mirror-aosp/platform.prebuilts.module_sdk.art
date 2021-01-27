@@ -259,7 +259,7 @@ protected Signature(java.lang.String algorithm) { throw new RuntimeException("St
  * Provider that supports the specified algorithm is returned.
  *
  * <p> Note that the list of registered providers may be retrieved via
- * the {@link java.security.Security#getProviders() Security#getProviders()} method.
+ * the {@link java.security.Security#getProviders() Security.getProviders()} method.
  *
  * @param algorithm the standard name of the algorithm requested.
  * See the Signature section in the <a href=
@@ -288,7 +288,7 @@ public static java.security.Signature getInstance(java.lang.String algorithm) th
  * in the security provider list.
  *
  * <p> Note that the list of registered providers may be retrieved via
- * the {@link java.security.Security#getProviders() Security#getProviders()} method.
+ * the {@link java.security.Security#getProviders() Security.getProviders()} method.
  *
  * @param algorithm the name of the algorithm requested.
  * See the Signature section in the <a href=

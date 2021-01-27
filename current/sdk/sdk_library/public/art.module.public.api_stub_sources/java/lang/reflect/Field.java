@@ -58,14 +58,14 @@ private Field() { throw new RuntimeException("Stub!"); }
  * that declares the field represented by this {@code Field} object.
  */
 
-@android.annotation.NonNull
+@androidx.annotation.RecentlyNonNull
 public java.lang.Class<?> getDeclaringClass() { throw new RuntimeException("Stub!"); }
 
 /**
  * Returns the name of the field represented by this {@code Field} object.
  */
 
-@android.annotation.NonNull
+@androidx.annotation.RecentlyNonNull
 public java.lang.String getName() { throw new RuntimeException("Stub!"); }
 
 /**
@@ -109,7 +109,7 @@ public boolean isSynthetic() { throw new RuntimeException("Stub!"); }
  * type of the field represented by this object
  */
 
-@android.annotation.NonNull
+@androidx.annotation.RecentlyNonNull
 public java.lang.Class<?> getType() { throw new RuntimeException("Stub!"); }
 
 /**
@@ -137,7 +137,7 @@ public java.lang.Class<?> getType() { throw new RuntimeException("Stub!"); }
  * @since 1.5
  */
 
-@android.annotation.NonNull
+@androidx.annotation.RecentlyNonNull
 public java.lang.reflect.Type getGenericType() { throw new RuntimeException("Stub!"); }
 
 /**
@@ -147,7 +147,7 @@ public java.lang.reflect.Type getGenericType() { throw new RuntimeException("Stu
  * and type.
  */
 
-public boolean equals(@android.annotation.Nullable java.lang.Object obj) { throw new RuntimeException("Stub!"); }
+public boolean equals(@androidx.annotation.RecentlyNullable java.lang.Object obj) { throw new RuntimeException("Stub!"); }
 
 /**
  * Returns a hashcode for this {@code Field}.  This is computed as the
@@ -179,7 +179,7 @@ public int hashCode() { throw new RuntimeException("Stub!"); }
  * @jls 8.3.1 Field Modifiers
  */
 
-@android.annotation.NonNull
+@androidx.annotation.RecentlyNonNull
 public java.lang.String toString() { throw new RuntimeException("Stub!"); }
 
 /**
@@ -203,7 +203,7 @@ public java.lang.String toString() { throw new RuntimeException("Stub!"); }
  * @jls 8.3.1 Field Modifiers
  */
 
-@android.annotation.NonNull
+@androidx.annotation.RecentlyNonNull
 public java.lang.String toGenericString() { throw new RuntimeException("Stub!"); }
 
 /**
@@ -254,8 +254,8 @@ public java.lang.String toGenericString() { throw new RuntimeException("Stub!");
  *              by this method fails.
  */
 
-@android.annotation.Nullable
-public native java.lang.Object get(@android.annotation.Nullable java.lang.Object obj) throws java.lang.IllegalAccessException, java.lang.IllegalArgumentException;
+@androidx.annotation.RecentlyNullable
+public native java.lang.Object get(@androidx.annotation.RecentlyNullable java.lang.Object obj) throws java.lang.IllegalAccessException, java.lang.IllegalArgumentException;
 
 /**
  * Gets the value of a static or instance {@code boolean} field.
@@ -280,7 +280,7 @@ public native java.lang.Object get(@android.annotation.Nullable java.lang.Object
  * @see       java.lang.reflect.Field#get
  */
 
-public native boolean getBoolean(@android.annotation.Nullable java.lang.Object obj) throws java.lang.IllegalAccessException, java.lang.IllegalArgumentException;
+public native boolean getBoolean(@androidx.annotation.RecentlyNullable java.lang.Object obj) throws java.lang.IllegalAccessException, java.lang.IllegalArgumentException;
 
 /**
  * Gets the value of a static or instance {@code byte} field.
@@ -305,7 +305,7 @@ public native boolean getBoolean(@android.annotation.Nullable java.lang.Object o
  * @see       java.lang.reflect.Field#get
  */
 
-public native byte getByte(@android.annotation.Nullable java.lang.Object obj) throws java.lang.IllegalAccessException, java.lang.IllegalArgumentException;
+public native byte getByte(@androidx.annotation.RecentlyNullable java.lang.Object obj) throws java.lang.IllegalAccessException, java.lang.IllegalArgumentException;
 
 /**
  * Gets the value of a static or instance field of type
@@ -332,7 +332,7 @@ public native byte getByte(@android.annotation.Nullable java.lang.Object obj) th
  * @see java.lang.reflect.Field#get
  */
 
-public native char getChar(@android.annotation.Nullable java.lang.Object obj) throws java.lang.IllegalAccessException, java.lang.IllegalArgumentException;
+public native char getChar(@androidx.annotation.RecentlyNullable java.lang.Object obj) throws java.lang.IllegalAccessException, java.lang.IllegalArgumentException;
 
 /**
  * Gets the value of a static or instance field of type
@@ -359,7 +359,7 @@ public native char getChar(@android.annotation.Nullable java.lang.Object obj) th
  * @see       java.lang.reflect.Field#get
  */
 
-public native short getShort(@android.annotation.Nullable java.lang.Object obj) throws java.lang.IllegalAccessException, java.lang.IllegalArgumentException;
+public native short getShort(@androidx.annotation.RecentlyNullable java.lang.Object obj) throws java.lang.IllegalAccessException, java.lang.IllegalArgumentException;
 
 /**
  * Gets the value of a static or instance field of type
@@ -386,7 +386,7 @@ public native short getShort(@android.annotation.Nullable java.lang.Object obj) 
  * @see       java.lang.reflect.Field#get
  */
 
-public native int getInt(@android.annotation.Nullable java.lang.Object obj) throws java.lang.IllegalAccessException, java.lang.IllegalArgumentException;
+public native int getInt(@androidx.annotation.RecentlyNullable java.lang.Object obj) throws java.lang.IllegalAccessException, java.lang.IllegalArgumentException;
 
 /**
  * Gets the value of a static or instance field of type
@@ -413,7 +413,7 @@ public native int getInt(@android.annotation.Nullable java.lang.Object obj) thro
  * @see       java.lang.reflect.Field#get
  */
 
-public native long getLong(@android.annotation.Nullable java.lang.Object obj) throws java.lang.IllegalAccessException, java.lang.IllegalArgumentException;
+public native long getLong(@androidx.annotation.RecentlyNullable java.lang.Object obj) throws java.lang.IllegalAccessException, java.lang.IllegalArgumentException;
 
 /**
  * Gets the value of a static or instance field of type
@@ -440,7 +440,7 @@ public native long getLong(@android.annotation.Nullable java.lang.Object obj) th
  * @see java.lang.reflect.Field#get
  */
 
-public native float getFloat(@android.annotation.Nullable java.lang.Object obj) throws java.lang.IllegalAccessException, java.lang.IllegalArgumentException;
+public native float getFloat(@androidx.annotation.RecentlyNullable java.lang.Object obj) throws java.lang.IllegalAccessException, java.lang.IllegalArgumentException;
 
 /**
  * Gets the value of a static or instance field of type
@@ -467,7 +467,7 @@ public native float getFloat(@android.annotation.Nullable java.lang.Object obj) 
  * @see       java.lang.reflect.Field#get
  */
 
-public native double getDouble(@android.annotation.Nullable java.lang.Object obj) throws java.lang.IllegalAccessException, java.lang.IllegalArgumentException;
+public native double getDouble(@androidx.annotation.RecentlyNullable java.lang.Object obj) throws java.lang.IllegalAccessException, java.lang.IllegalArgumentException;
 
 /**
  * Sets the field represented by this {@code Field} object on the
@@ -536,7 +536,7 @@ public native double getDouble(@android.annotation.Nullable java.lang.Object obj
  *              by this method fails.
  */
 
-public native void set(@android.annotation.Nullable java.lang.Object obj, @android.annotation.Nullable java.lang.Object value) throws java.lang.IllegalAccessException, java.lang.IllegalArgumentException;
+public native void set(@androidx.annotation.RecentlyNullable java.lang.Object obj, @androidx.annotation.RecentlyNullable java.lang.Object value) throws java.lang.IllegalAccessException, java.lang.IllegalArgumentException;
 
 /**
  * Sets the value of a field as a {@code boolean} on the specified object.
@@ -563,7 +563,7 @@ public native void set(@android.annotation.Nullable java.lang.Object obj, @andro
  * @see       java.lang.reflect.Field#set
  */
 
-public native void setBoolean(@android.annotation.Nullable java.lang.Object obj, boolean z) throws java.lang.IllegalAccessException, java.lang.IllegalArgumentException;
+public native void setBoolean(@androidx.annotation.RecentlyNullable java.lang.Object obj, boolean z) throws java.lang.IllegalAccessException, java.lang.IllegalArgumentException;
 
 /**
  * Sets the value of a field as a {@code byte} on the specified object.
@@ -590,7 +590,7 @@ public native void setBoolean(@android.annotation.Nullable java.lang.Object obj,
  * @see       java.lang.reflect.Field#set
  */
 
-public native void setByte(@android.annotation.Nullable java.lang.Object obj, byte b) throws java.lang.IllegalAccessException, java.lang.IllegalArgumentException;
+public native void setByte(@androidx.annotation.RecentlyNullable java.lang.Object obj, byte b) throws java.lang.IllegalAccessException, java.lang.IllegalArgumentException;
 
 /**
  * Sets the value of a field as a {@code char} on the specified object.
@@ -617,7 +617,7 @@ public native void setByte(@android.annotation.Nullable java.lang.Object obj, by
  * @see       java.lang.reflect.Field#set
  */
 
-public native void setChar(@android.annotation.Nullable java.lang.Object obj, char c) throws java.lang.IllegalAccessException, java.lang.IllegalArgumentException;
+public native void setChar(@androidx.annotation.RecentlyNullable java.lang.Object obj, char c) throws java.lang.IllegalAccessException, java.lang.IllegalArgumentException;
 
 /**
  * Sets the value of a field as a {@code short} on the specified object.
@@ -644,7 +644,7 @@ public native void setChar(@android.annotation.Nullable java.lang.Object obj, ch
  * @see       java.lang.reflect.Field#set
  */
 
-public native void setShort(@android.annotation.Nullable java.lang.Object obj, short s) throws java.lang.IllegalAccessException, java.lang.IllegalArgumentException;
+public native void setShort(@androidx.annotation.RecentlyNullable java.lang.Object obj, short s) throws java.lang.IllegalAccessException, java.lang.IllegalArgumentException;
 
 /**
  * Sets the value of a field as an {@code int} on the specified object.
@@ -671,7 +671,7 @@ public native void setShort(@android.annotation.Nullable java.lang.Object obj, s
  * @see       java.lang.reflect.Field#set
  */
 
-public native void setInt(@android.annotation.Nullable java.lang.Object obj, int i) throws java.lang.IllegalAccessException, java.lang.IllegalArgumentException;
+public native void setInt(@androidx.annotation.RecentlyNullable java.lang.Object obj, int i) throws java.lang.IllegalAccessException, java.lang.IllegalArgumentException;
 
 /**
  * Sets the value of a field as a {@code long} on the specified object.
@@ -698,7 +698,7 @@ public native void setInt(@android.annotation.Nullable java.lang.Object obj, int
  * @see       java.lang.reflect.Field#set
  */
 
-public native void setLong(@android.annotation.Nullable java.lang.Object obj, long l) throws java.lang.IllegalAccessException, java.lang.IllegalArgumentException;
+public native void setLong(@androidx.annotation.RecentlyNullable java.lang.Object obj, long l) throws java.lang.IllegalAccessException, java.lang.IllegalArgumentException;
 
 /**
  * Sets the value of a field as a {@code float} on the specified object.
@@ -725,7 +725,7 @@ public native void setLong(@android.annotation.Nullable java.lang.Object obj, lo
  * @see       java.lang.reflect.Field#set
  */
 
-public native void setFloat(@android.annotation.Nullable java.lang.Object obj, float f) throws java.lang.IllegalAccessException, java.lang.IllegalArgumentException;
+public native void setFloat(@androidx.annotation.RecentlyNullable java.lang.Object obj, float f) throws java.lang.IllegalAccessException, java.lang.IllegalArgumentException;
 
 /**
  * Sets the value of a field as a {@code double} on the specified object.
@@ -752,15 +752,15 @@ public native void setFloat(@android.annotation.Nullable java.lang.Object obj, f
  * @see       java.lang.reflect.Field#set
  */
 
-public native void setDouble(@android.annotation.Nullable java.lang.Object obj, double d) throws java.lang.IllegalAccessException, java.lang.IllegalArgumentException;
+public native void setDouble(@androidx.annotation.RecentlyNullable java.lang.Object obj, double d) throws java.lang.IllegalAccessException, java.lang.IllegalArgumentException;
 
 /**
  * @throws java.lang.NullPointerException {@inheritDoc}
  * @since 1.5
  */
 
-@android.annotation.Nullable
-public <T extends java.lang.annotation.Annotation> T getAnnotation(@android.annotation.NonNull java.lang.Class<T> annotationClass) { throw new RuntimeException("Stub!"); }
+@androidx.annotation.RecentlyNullable
+public <T extends java.lang.annotation.Annotation> T getAnnotation(@androidx.annotation.RecentlyNonNull java.lang.Class<T> annotationClass) { throw new RuntimeException("Stub!"); }
 
 /**
  * {@inheritDoc}
@@ -768,9 +768,9 @@ public <T extends java.lang.annotation.Annotation> T getAnnotation(@android.anno
  * @since 1.8
  */
 
-public <T extends java.lang.annotation.Annotation> T[] getAnnotationsByType(@android.annotation.NonNull java.lang.Class<T> annotationClass) { throw new RuntimeException("Stub!"); }
+public <T extends java.lang.annotation.Annotation> T[] getAnnotationsByType(@androidx.annotation.RecentlyNonNull java.lang.Class<T> annotationClass) { throw new RuntimeException("Stub!"); }
 
-public boolean isAnnotationPresent(@android.annotation.NonNull java.lang.Class<? extends java.lang.annotation.Annotation> annotationType) { throw new RuntimeException("Stub!"); }
+public boolean isAnnotationPresent(@androidx.annotation.RecentlyNonNull java.lang.Class<? extends java.lang.annotation.Annotation> annotationType) { throw new RuntimeException("Stub!"); }
 
 /**
  * {@inheritDoc}

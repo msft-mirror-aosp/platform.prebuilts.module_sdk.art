@@ -57,7 +57,7 @@ private Channels() { throw new RuntimeException("Stub!"); }
  * <p> The <tt>read</tt> methods of the resulting stream will throw an
  * {@link java.nio.channels.IllegalBlockingModeException IllegalBlockingModeException} if invoked while the underlying
  * channel is in non-blocking mode.  The stream will not be buffered, and
- * it will not support the {@link java.io.InputStream#mark InputStream#mark} or {@link java.io.InputStream#reset InputStream#reset} methods.  The stream will be safe for access by
+ * it will not support the {@link java.io.InputStream#mark mark} or {@link java.io.InputStream#reset reset} methods.  The stream will be safe for access by
  * multiple concurrent threads.  Closing the stream will in turn cause the
  * channel to be closed.  </p>
  *
@@ -89,7 +89,7 @@ public static java.io.OutputStream newOutputStream(java.nio.channels.WritableByt
 /**
  * Constructs a stream that reads bytes from the given channel.
  *
- * <p> The stream will not be buffered, and it will not support the {@link java.io.InputStream#mark InputStream#mark} or {@link java.io.InputStream#reset InputStream#reset} methods.  The
+ * <p> The stream will not be buffered, and it will not support the {@link java.io.InputStream#mark mark} or {@link java.io.InputStream#reset reset} methods.  The
  * stream will be safe for access by multiple concurrent threads.  Closing
  * the stream will in turn cause the channel to be closed.  </p>
  *
@@ -160,7 +160,7 @@ public static java.nio.channels.WritableByteChannel newChannel(java.io.OutputStr
  * channel; if the channel is in non-blocking mode when bytes are to be
  * read then an {@link java.nio.channels.IllegalBlockingModeException IllegalBlockingModeException} will be thrown.  The
  * resulting stream will not otherwise be buffered, and it will not support
- * the {@link java.io.Reader#mark Reader#mark} or {@link java.io.Reader#reset Reader#reset} methods.
+ * the {@link java.io.Reader#mark mark} or {@link java.io.Reader#reset reset} methods.
  * Closing the stream will in turn cause the channel to be closed.  </p>
  *
  * @param  ch

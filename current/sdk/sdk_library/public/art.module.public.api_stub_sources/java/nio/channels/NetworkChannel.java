@@ -35,7 +35,7 @@ import java.io.IOException;
  *
  * <p> A channel that implements this interface is a channel to a network
  * socket. The {@link #bind(java.net.SocketAddress) bind} method is used to bind the
- * socket to a local {@link java.net.SocketAddress SocketAddress}, the {@link #getLocalAddress()
+ * socket to a local {@link java.net.SocketAddress address}, the {@link #getLocalAddress()
  * getLocalAddress} method returns the address that the socket is bound to, and
  * the {@link #setOption(java.net.SocketOption,java.lang.Object) setOption} and {@link
  * #getOption(java.net.SocketOption) getOption} methods are used to set and query socket

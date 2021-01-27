@@ -88,7 +88,7 @@ import java.util.stream.StreamSupport;
  * iterator to examine the collection.
  *
  * <p>Many methods in Collections Framework interfaces are defined in
- * terms of the {@link java.lang.Object#equals(java.lang.Object) Object#equals(Object)} method.  For example,
+ * terms of the {@link java.lang.Object#equals(java.lang.Object) equals} method.  For example,
  * the specification for the {@link #contains(java.lang.Object) contains(Object o)}
  * method says: "returns <tt>true</tt> if and only if this collection
  * contains at least one element <tt>e</tt> such that
@@ -179,7 +179,7 @@ public boolean isEmpty();
  *         (<a href="#optional-restrictions">optional</a>)
  */
 
-public boolean contains(@android.annotation.Nullable java.lang.Object o);
+public boolean contains(@androidx.annotation.RecentlyNullable java.lang.Object o);
 
 /**
  * Returns an iterator over the elements in this collection.  There are no
@@ -190,7 +190,7 @@ public boolean contains(@android.annotation.Nullable java.lang.Object o);
  * @return an <tt>Iterator</tt> over the elements in this collection
  */
 
-@android.annotation.NonNull
+@androidx.annotation.RecentlyNonNull
 public java.util.Iterator<E> iterator();
 
 /**
@@ -210,7 +210,7 @@ public java.util.Iterator<E> iterator();
  * @return an array containing all of the elements in this collection
  */
 
-@android.annotation.NonNull
+@androidx.annotation.RecentlyNonNull
 public java.lang.Object[] toArray();
 
 /**
@@ -257,8 +257,8 @@ public java.lang.Object[] toArray();
  * @throws java.lang.NullPointerException if the specified array is null
  */
 
-@android.annotation.NonNull
-public <T> T[] toArray(@android.annotation.NonNull T[] a);
+@androidx.annotation.RecentlyNonNull
+public <T> T[] toArray(@androidx.annotation.RecentlyNonNull T[] a);
 
 /**
  * Ensures that this collection contains the specified element (optional
@@ -317,7 +317,7 @@ public boolean add(E e);
  *         is not supported by this collection
  */
 
-public boolean remove(@android.annotation.Nullable java.lang.Object o);
+public boolean remove(@androidx.annotation.RecentlyNullable java.lang.Object o);
 
 /**
  * Returns <tt>true</tt> if this collection contains all of the elements
@@ -338,7 +338,7 @@ public boolean remove(@android.annotation.Nullable java.lang.Object o);
  * @see    #contains(Object)
  */
 
-public boolean containsAll(@android.annotation.NonNull java.util.Collection<?> c);
+public boolean containsAll(@androidx.annotation.RecentlyNonNull java.util.Collection<?> c);
 
 /**
  * Adds all of the elements in the specified collection to this collection
@@ -365,7 +365,7 @@ public boolean containsAll(@android.annotation.NonNull java.util.Collection<?> c
  * @see #add(Object)
  */
 
-public boolean addAll(@android.annotation.NonNull java.util.Collection<? extends E> c);
+public boolean addAll(@androidx.annotation.RecentlyNonNull java.util.Collection<? extends E> c);
 
 /**
  * Removes all of this collection's elements that are also contained in the
@@ -391,7 +391,7 @@ public boolean addAll(@android.annotation.NonNull java.util.Collection<? extends
  * @see #contains(Object)
  */
 
-public boolean removeAll(@android.annotation.NonNull java.util.Collection<?> c);
+public boolean removeAll(@androidx.annotation.RecentlyNonNull java.util.Collection<?> c);
 
 /**
  * Removes all of the elements of this collection that satisfy the given
@@ -416,7 +416,7 @@ public boolean removeAll(@android.annotation.NonNull java.util.Collection<?> c);
  * @since 1.8
  */
 
-public default boolean removeIf(@android.annotation.NonNull java.util.function.Predicate<? super E> filter) { throw new RuntimeException("Stub!"); }
+public default boolean removeIf(@androidx.annotation.RecentlyNonNull java.util.function.Predicate<? super E> filter) { throw new RuntimeException("Stub!"); }
 
 /**
  * Retains only the elements in this collection that are contained in the
@@ -441,7 +441,7 @@ public default boolean removeIf(@android.annotation.NonNull java.util.function.P
  * @see #contains(Object)
  */
 
-public boolean retainAll(@android.annotation.NonNull java.util.Collection<?> c);
+public boolean retainAll(@androidx.annotation.RecentlyNonNull java.util.Collection<?> c);
 
 /**
  * Removes all of the elements from this collection (optional operation).
@@ -487,7 +487,7 @@ public void clear();
  * @see List#equals(Object)
  */
 
-public boolean equals(@android.annotation.Nullable java.lang.Object o);
+public boolean equals(@androidx.annotation.RecentlyNullable java.lang.Object o);
 
 /**
  * Returns the hash code value for this collection.  While the
@@ -558,7 +558,7 @@ public int hashCode();
  * @since 1.8
  */
 
-@android.annotation.NonNull
+@androidx.annotation.RecentlyNonNull
 public default java.util.Spliterator<E> spliterator() { throw new RuntimeException("Stub!"); }
 
 /**
@@ -577,7 +577,7 @@ public default java.util.Spliterator<E> spliterator() { throw new RuntimeExcepti
  * @since 1.8
  */
 
-@android.annotation.NonNull
+@androidx.annotation.RecentlyNonNull
 public default java.util.stream.Stream<E> stream() { throw new RuntimeException("Stub!"); }
 
 /**
@@ -598,7 +598,7 @@ public default java.util.stream.Stream<E> stream() { throw new RuntimeException(
  * @since 1.8
  */
 
-@android.annotation.NonNull
+@androidx.annotation.RecentlyNonNull
 public default java.util.stream.Stream<E> parallelStream() { throw new RuntimeException("Stub!"); }
 }
 

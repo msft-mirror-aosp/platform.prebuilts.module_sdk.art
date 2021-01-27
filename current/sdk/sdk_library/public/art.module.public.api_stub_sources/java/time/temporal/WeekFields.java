@@ -76,15 +76,15 @@ import java.time.format.ResolverStyle;
  * WeekFields provides five fields,
  * {@link #dayOfWeek()}, {@link #weekOfMonth()}, {@link #weekOfYear()},
  * {@link #weekOfWeekBasedYear()}, and {@link #weekBasedYear()}
- * that provide access to the values from any {@linkplain java.time.temporal.Temporal Temporal}.
+ * that provide access to the values from any {@linkplain java.time.temporal.Temporal temporal object}.
  * <p>
  * The computations for day-of-week, week-of-month, and week-of-year are based
- * on the  {@linkplain java.time.temporal.ChronoField#YEAR ChronoField#YEAR},
- * {@linkplain java.time.temporal.ChronoField#MONTH_OF_YEAR ChronoField#MONTH_OF_YEAR},
- * {@linkplain java.time.temporal.ChronoField#DAY_OF_MONTH ChronoField#DAY_OF_MONTH}, and
- * {@linkplain java.time.temporal.ChronoField#DAY_OF_WEEK ChronoField#DAY_OF_WEEK} which are based on the
- * {@linkplain java.time.temporal.ChronoField#EPOCH_DAY ChronoField#EPOCH_DAY} and the chronology.
- * The values may not be aligned with the {@linkplain java.time.temporal.ChronoField#YEAR_OF_ERA ChronoField#YEAR_OF_ERA}
+ * on the  {@linkplain java.time.temporal.ChronoField#YEAR proleptic-year},
+ * {@linkplain java.time.temporal.ChronoField#MONTH_OF_YEAR month-of-year},
+ * {@linkplain java.time.temporal.ChronoField#DAY_OF_MONTH day-of-month}, and
+ * {@linkplain java.time.temporal.ChronoField#DAY_OF_WEEK ISO day-of-week} which are based on the
+ * {@linkplain java.time.temporal.ChronoField#EPOCH_DAY epoch-day} and the chronology.
+ * The values may not be aligned with the {@linkplain java.time.temporal.ChronoField#YEAR_OF_ERA year-of-Era}
  * depending on the Chronology.
  * <p>A week is defined by:
  * <ul>
@@ -260,16 +260,16 @@ public java.time.temporal.TemporalField dayOfWeek() { throw new RuntimeException
  * In the resolving phase of parsing, a date can be created from a year,
  * week-of-month, month-of-year and day-of-week.
  * <p>
- * In {@linkplain java.time.format.ResolverStyle#STRICT ResolverStyle#STRICT}, all four fields are
+ * In {@linkplain java.time.format.ResolverStyle#STRICT strict mode}, all four fields are
  * validated against their range of valid values. The week-of-month field
  * is validated to ensure that the resulting month is the month requested.
  * <p>
- * In {@linkplain java.time.format.ResolverStyle#SMART ResolverStyle#SMART}, all four fields are
+ * In {@linkplain java.time.format.ResolverStyle#SMART smart mode}, all four fields are
  * validated against their range of valid values. The week-of-month field
  * is validated from 0 to 6, meaning that the resulting date can be in a
  * different month to that specified.
  * <p>
- * In {@linkplain java.time.format.ResolverStyle#LENIENT ResolverStyle#LENIENT}, the year and day-of-week
+ * In {@linkplain java.time.format.ResolverStyle#LENIENT lenient mode}, the year and day-of-week
  * are validated against the range of valid values. The resulting date is calculated
  * equivalent to the following four stage approach.
  * First, create a date on the first day of the first week of January in the requested year.
@@ -305,16 +305,16 @@ public java.time.temporal.TemporalField weekOfMonth() { throw new RuntimeExcepti
  * In the resolving phase of parsing, a date can be created from a year,
  * week-of-year and day-of-week.
  * <p>
- * In {@linkplain java.time.format.ResolverStyle#STRICT ResolverStyle#STRICT}, all three fields are
+ * In {@linkplain java.time.format.ResolverStyle#STRICT strict mode}, all three fields are
  * validated against their range of valid values. The week-of-year field
  * is validated to ensure that the resulting year is the year requested.
  * <p>
- * In {@linkplain java.time.format.ResolverStyle#SMART ResolverStyle#SMART}, all three fields are
+ * In {@linkplain java.time.format.ResolverStyle#SMART smart mode}, all three fields are
  * validated against their range of valid values. The week-of-year field
  * is validated from 0 to 54, meaning that the resulting date can be in a
  * different year to that specified.
  * <p>
- * In {@linkplain java.time.format.ResolverStyle#LENIENT ResolverStyle#LENIENT}, the year and day-of-week
+ * In {@linkplain java.time.format.ResolverStyle#LENIENT lenient mode}, the year and day-of-week
  * are validated against the range of valid values. The resulting date is calculated
  * equivalent to the following three stage approach.
  * First, create a date on the first day of the first week in the requested year.
@@ -353,17 +353,17 @@ public java.time.temporal.TemporalField weekOfYear() { throw new RuntimeExceptio
  * In the resolving phase of parsing, a date can be created from a week-based-year,
  * week-of-year and day-of-week.
  * <p>
- * In {@linkplain java.time.format.ResolverStyle#STRICT ResolverStyle#STRICT}, all three fields are
+ * In {@linkplain java.time.format.ResolverStyle#STRICT strict mode}, all three fields are
  * validated against their range of valid values. The week-of-year field
  * is validated to ensure that the resulting week-based-year is the
  * week-based-year requested.
  * <p>
- * In {@linkplain java.time.format.ResolverStyle#SMART ResolverStyle#SMART}, all three fields are
+ * In {@linkplain java.time.format.ResolverStyle#SMART smart mode}, all three fields are
  * validated against their range of valid values. The week-of-week-based-year field
  * is validated from 1 to 53, meaning that the resulting date can be in the
  * following week-based-year to that specified.
  * <p>
- * In {@linkplain java.time.format.ResolverStyle#LENIENT ResolverStyle#LENIENT}, the year and day-of-week
+ * In {@linkplain java.time.format.ResolverStyle#LENIENT lenient mode}, the year and day-of-week
  * are validated against the range of valid values. The resulting date is calculated
  * equivalent to the following three stage approach.
  * First, create a date on the first day of the first week in the requested week-based-year.
@@ -394,17 +394,17 @@ public java.time.temporal.TemporalField weekOfWeekBasedYear() { throw new Runtim
  * In the resolving phase of parsing, a date can be created from a week-based-year,
  * week-of-year and day-of-week.
  * <p>
- * In {@linkplain java.time.format.ResolverStyle#STRICT ResolverStyle#STRICT}, all three fields are
+ * In {@linkplain java.time.format.ResolverStyle#STRICT strict mode}, all three fields are
  * validated against their range of valid values. The week-of-year field
  * is validated to ensure that the resulting week-based-year is the
  * week-based-year requested.
  * <p>
- * In {@linkplain java.time.format.ResolverStyle#SMART ResolverStyle#SMART}, all three fields are
+ * In {@linkplain java.time.format.ResolverStyle#SMART smart mode}, all three fields are
  * validated against their range of valid values. The week-of-week-based-year field
  * is validated from 1 to 53, meaning that the resulting date can be in the
  * following week-based-year to that specified.
  * <p>
- * In {@linkplain java.time.format.ResolverStyle#LENIENT ResolverStyle#LENIENT}, the year and day-of-week
+ * In {@linkplain java.time.format.ResolverStyle#LENIENT lenient mode}, the year and day-of-week
  * are validated against the range of valid values. The resulting date is calculated
  * equivalent to the following three stage approach.
  * First, create a date on the first day of the first week in the requested week-based-year.

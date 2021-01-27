@@ -29,7 +29,7 @@ package java.nio.file;
 
 /**
  * Unchecked exception thrown when an attempt is made to update an object
- * associated with a {@link java.nio.file.FileSystem#isReadOnly() FileSystem#isReadOnly()} {@code FileSystem}.
+ * associated with a {@link java.nio.file.FileSystem#isReadOnly() read-only} {@code FileSystem}.
  */
 
 @SuppressWarnings({"unchecked", "deprecation", "all"})

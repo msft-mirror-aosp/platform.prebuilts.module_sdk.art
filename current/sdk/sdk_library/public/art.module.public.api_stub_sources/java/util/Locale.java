@@ -331,7 +331,7 @@ package java.util;
  * the language suitable for displaying to the user. Interestingly,
  * the <code>getDisplayXXX</code> methods are themselves locale-sensitive
  * and have two versions: one that uses the default
- * {@link java.util.Locale.Category#DISPLAY Locale.Category#DISPLAY} locale and one
+ * {@link java.util.Locale.Category#DISPLAY DISPLAY} locale and one
  * that uses the locale specified as an argument.
  *
  * <p>The Java Platform provides a number of classes that perform locale-sensitive
@@ -350,7 +350,7 @@ package java.util;
  * </blockquote>
  * Each of these methods has two variants; one with an explicit locale
  * and one without; the latter uses the default
- * {@link java.util.Locale.Category#FORMAT Locale.Category#FORMAT} locale:
+ * {@link java.util.Locale.Category#FORMAT FORMAT} locale:
  * <blockquote>
  * <pre>
  *     NumberFormat.getInstance(myLocale)
@@ -581,7 +581,7 @@ public final class Locale implements java.lang.Cloneable, java.io.Serializable {
  * @exception java.lang.NullPointerException thrown if any argument is null.
  */
 
-public Locale(@android.annotation.NonNull java.lang.String language, @android.annotation.NonNull java.lang.String country, @android.annotation.NonNull java.lang.String variant) { throw new RuntimeException("Stub!"); }
+public Locale(@androidx.annotation.RecentlyNonNull java.lang.String language, @androidx.annotation.RecentlyNonNull java.lang.String country, @androidx.annotation.RecentlyNonNull java.lang.String variant) { throw new RuntimeException("Stub!"); }
 
 /**
  * Construct a locale from language and country.
@@ -606,7 +606,7 @@ public Locale(@android.annotation.NonNull java.lang.String language, @android.an
  * @exception java.lang.NullPointerException thrown if either argument is null.
  */
 
-public Locale(@android.annotation.NonNull java.lang.String language, @android.annotation.NonNull java.lang.String country) { throw new RuntimeException("Stub!"); }
+public Locale(@androidx.annotation.RecentlyNonNull java.lang.String language, @androidx.annotation.RecentlyNonNull java.lang.String country) { throw new RuntimeException("Stub!"); }
 
 /**
  * Construct a locale from a language code.
@@ -629,7 +629,7 @@ public Locale(@android.annotation.NonNull java.lang.String language, @android.an
  * @since 1.4
  */
 
-public Locale(@android.annotation.NonNull java.lang.String language) { throw new RuntimeException("Stub!"); }
+public Locale(@androidx.annotation.RecentlyNonNull java.lang.String language) { throw new RuntimeException("Stub!"); }
 
 /**
  * Gets the current value of the default locale for this instance
@@ -644,7 +644,7 @@ public Locale(@android.annotation.NonNull java.lang.String language) { throw new
  * @return the default locale for this instance of the Java Virtual Machine
  */
 
-@android.annotation.NonNull
+@androidx.annotation.RecentlyNonNull
 public static java.util.Locale getDefault() { throw new RuntimeException("Stub!"); }
 
 /**
@@ -664,8 +664,8 @@ public static java.util.Locale getDefault() { throw new RuntimeException("Stub!"
  * @since 1.7
  */
 
-@android.annotation.NonNull
-public static java.util.Locale getDefault(@android.annotation.NonNull java.util.Locale.Category category) { throw new RuntimeException("Stub!"); }
+@androidx.annotation.RecentlyNonNull
+public static java.util.Locale getDefault(@androidx.annotation.RecentlyNonNull java.util.Locale.Category category) { throw new RuntimeException("Stub!"); }
 
 /**
  * Sets the default locale for this instance of the Java Virtual Machine.
@@ -696,7 +696,7 @@ public static java.util.Locale getDefault(@android.annotation.NonNull java.util.
  * @see java.util.PropertyPermission
  */
 
-public static synchronized void setDefault(@android.annotation.NonNull java.util.Locale newLocale) { throw new RuntimeException("Stub!"); }
+public static synchronized void setDefault(@androidx.annotation.RecentlyNonNull java.util.Locale newLocale) { throw new RuntimeException("Stub!"); }
 
 /**
  * Sets the default locale for the specified Category for this instance
@@ -727,7 +727,7 @@ public static synchronized void setDefault(@android.annotation.NonNull java.util
  * @since 1.7
  */
 
-public static synchronized void setDefault(@android.annotation.NonNull java.util.Locale.Category category, @android.annotation.NonNull java.util.Locale newLocale) { throw new RuntimeException("Stub!"); }
+public static synchronized void setDefault(@androidx.annotation.RecentlyNonNull java.util.Locale.Category category, @androidx.annotation.RecentlyNonNull java.util.Locale newLocale) { throw new RuntimeException("Stub!"); }
 
 /**
  * Returns an array of all installed locales.
@@ -735,7 +735,7 @@ public static synchronized void setDefault(@android.annotation.NonNull java.util
  * @return An array of installed locales.
  */
 
-@android.annotation.NonNull
+@androidx.annotation.RecentlyNonNull
 public static java.util.Locale[] getAvailableLocales() { throw new RuntimeException("Stub!"); }
 
 /**
@@ -750,7 +750,7 @@ public static java.util.Locale[] getAvailableLocales() { throw new RuntimeExcept
  * @return An array of ISO 3166 two-letter country codes.
  */
 
-@android.annotation.NonNull
+@androidx.annotation.RecentlyNonNull
 public static java.lang.String[] getISOCountries() { throw new RuntimeException("Stub!"); }
 
 /**
@@ -770,7 +770,7 @@ public static java.lang.String[] getISOCountries() { throw new RuntimeException(
  * @return Am array of ISO 639 two-letter language codes.
  */
 
-@android.annotation.NonNull
+@androidx.annotation.RecentlyNonNull
 public static java.lang.String[] getISOLanguages() { throw new RuntimeException("Stub!"); }
 
 /**
@@ -793,7 +793,7 @@ public static java.lang.String[] getISOLanguages() { throw new RuntimeException(
  * @see #getDisplayLanguage
  */
 
-@android.annotation.NonNull
+@androidx.annotation.RecentlyNonNull
 public java.lang.String getLanguage() { throw new RuntimeException("Stub!"); }
 
 /**
@@ -807,7 +807,7 @@ public java.lang.String getLanguage() { throw new RuntimeException("Stub!"); }
  * @since 1.7
  */
 
-@android.annotation.NonNull
+@androidx.annotation.RecentlyNonNull
 public java.lang.String getScript() { throw new RuntimeException("Stub!"); }
 
 /**
@@ -819,7 +819,7 @@ public java.lang.String getScript() { throw new RuntimeException("Stub!"); }
  * @see #getDisplayCountry
  */
 
-@android.annotation.NonNull
+@androidx.annotation.RecentlyNonNull
 public java.lang.String getCountry() { throw new RuntimeException("Stub!"); }
 
 /**
@@ -829,7 +829,7 @@ public java.lang.String getCountry() { throw new RuntimeException("Stub!"); }
  * @see #getDisplayVariant
  */
 
-@android.annotation.NonNull
+@androidx.annotation.RecentlyNonNull
 public java.lang.String getVariant() { throw new RuntimeException("Stub!"); }
 
 /**
@@ -852,7 +852,7 @@ public boolean hasExtensions() { throw new RuntimeException("Stub!"); }
  * @since 1.8
  */
 
-@android.annotation.NonNull
+@androidx.annotation.RecentlyNonNull
 public java.util.Locale stripExtensions() { throw new RuntimeException("Stub!"); }
 
 /**
@@ -871,7 +871,7 @@ public java.util.Locale stripExtensions() { throw new RuntimeException("Stub!");
  * @since 1.7
  */
 
-@android.annotation.Nullable
+@androidx.annotation.RecentlyNullable
 public java.lang.String getExtension(char key) { throw new RuntimeException("Stub!"); }
 
 /**
@@ -884,7 +884,7 @@ public java.lang.String getExtension(char key) { throw new RuntimeException("Stu
  * @since 1.7
  */
 
-@android.annotation.NonNull
+@androidx.annotation.RecentlyNonNull
 public java.util.Set<java.lang.Character> getExtensionKeys() { throw new RuntimeException("Stub!"); }
 
 /**
@@ -896,7 +896,7 @@ public java.util.Set<java.lang.Character> getExtensionKeys() { throw new Runtime
  * @since 1.7
  */
 
-@android.annotation.NonNull
+@androidx.annotation.RecentlyNonNull
 public java.util.Set<java.lang.String> getUnicodeLocaleAttributes() { throw new RuntimeException("Stub!"); }
 
 /**
@@ -914,8 +914,8 @@ public java.util.Set<java.lang.String> getUnicodeLocaleAttributes() { throw new 
  * @since 1.7
  */
 
-@android.annotation.Nullable
-public java.lang.String getUnicodeLocaleType(@android.annotation.NonNull java.lang.String key) { throw new RuntimeException("Stub!"); }
+@androidx.annotation.RecentlyNullable
+public java.lang.String getUnicodeLocaleType(@androidx.annotation.RecentlyNonNull java.lang.String key) { throw new RuntimeException("Stub!"); }
 
 /**
  * Returns the set of Unicode locale keys defined by this locale, or the empty set if
@@ -926,7 +926,7 @@ public java.lang.String getUnicodeLocaleType(@android.annotation.NonNull java.la
  * @since 1.7
  */
 
-@android.annotation.NonNull
+@androidx.annotation.RecentlyNonNull
 public java.util.Set<java.lang.String> getUnicodeLocaleKeys() { throw new RuntimeException("Stub!"); }
 
 /**
@@ -972,7 +972,7 @@ public java.util.Set<java.lang.String> getUnicodeLocaleKeys() { throw new Runtim
  * @see #toLanguageTag
  */
 
-@android.annotation.NonNull
+@androidx.annotation.RecentlyNonNull
 public java.lang.String toString() { throw new RuntimeException("Stub!"); }
 
 /**
@@ -1043,7 +1043,7 @@ public java.lang.String toString() { throw new RuntimeException("Stub!"); }
  * @since 1.7
  */
 
-@android.annotation.NonNull
+@androidx.annotation.RecentlyNonNull
 public java.lang.String toLanguageTag() { throw new RuntimeException("Stub!"); }
 
 /**
@@ -1167,8 +1167,8 @@ public java.lang.String toLanguageTag() { throw new RuntimeException("Stub!"); }
  * @since 1.7
  */
 
-@android.annotation.NonNull
-public static java.util.Locale forLanguageTag(@android.annotation.NonNull java.lang.String languageTag) { throw new RuntimeException("Stub!"); }
+@androidx.annotation.RecentlyNonNull
+public static java.util.Locale forLanguageTag(@androidx.annotation.RecentlyNonNull java.lang.String languageTag) { throw new RuntimeException("Stub!"); }
 
 /**
  * Returns a three-letter abbreviation of this locale's language.
@@ -1185,7 +1185,7 @@ public static java.util.Locale forLanguageTag(@android.annotation.NonNull java.l
  * three-letter language abbreviation is not available for this locale.
  */
 
-@android.annotation.NonNull
+@androidx.annotation.RecentlyNonNull
 public java.lang.String getISO3Language() throws java.util.MissingResourceException { throw new RuntimeException("Stub!"); }
 
 /**
@@ -1202,21 +1202,21 @@ public java.lang.String getISO3Language() throws java.util.MissingResourceExcept
  * three-letter country abbreviation is not available for this locale.
  */
 
-@android.annotation.NonNull
+@androidx.annotation.RecentlyNonNull
 public java.lang.String getISO3Country() throws java.util.MissingResourceException { throw new RuntimeException("Stub!"); }
 
 /**
  * Returns a name for the locale's language that is appropriate for display to the
  * user.
  * If possible, the name returned will be localized for the default
- * {@link java.util.Locale.Category#DISPLAY Locale.Category#DISPLAY} locale.
+ * {@link java.util.Locale.Category#DISPLAY DISPLAY} locale.
  * For example, if the locale is fr_FR and the default
- * {@link java.util.Locale.Category#DISPLAY Locale.Category#DISPLAY} locale
+ * {@link java.util.Locale.Category#DISPLAY DISPLAY} locale
  * is en_US, getDisplayLanguage() will return "French"; if the locale is en_US and
- * the default {@link java.util.Locale.Category#DISPLAY Locale.Category#DISPLAY} locale is fr_FR,
+ * the default {@link java.util.Locale.Category#DISPLAY DISPLAY} locale is fr_FR,
  * getDisplayLanguage() will return "anglais".
  * If the name returned cannot be localized for the default
- * {@link java.util.Locale.Category#DISPLAY Locale.Category#DISPLAY} locale,
+ * {@link java.util.Locale.Category#DISPLAY DISPLAY} locale,
  * (say, we don't have a Japanese name for Croatian),
  * this function falls back on the English name, and uses the ISO code as a last-resort
  * value.  If the locale doesn't specify a language, this function returns the empty string.
@@ -1224,7 +1224,7 @@ public java.lang.String getISO3Country() throws java.util.MissingResourceExcepti
  * @return The name of the display language.
  */
 
-@android.annotation.NonNull
+@androidx.annotation.RecentlyNonNull
 public java.lang.String getDisplayLanguage() { throw new RuntimeException("Stub!"); }
 
 /**
@@ -1232,21 +1232,21 @@ public java.lang.String getDisplayLanguage() { throw new RuntimeException("Stub!
  * If the language name is unknown, the language code is returned.
  */
 
-@android.annotation.NonNull
-public java.lang.String getDisplayLanguage(@android.annotation.NonNull java.util.Locale locale) { throw new RuntimeException("Stub!"); }
+@androidx.annotation.RecentlyNonNull
+public java.lang.String getDisplayLanguage(@androidx.annotation.RecentlyNonNull java.util.Locale locale) { throw new RuntimeException("Stub!"); }
 
 /**
  * Returns a name for the the locale's script that is appropriate for display to
  * the user. If possible, the name will be localized for the default
- * {@link java.util.Locale.Category#DISPLAY Locale.Category#DISPLAY} locale.  Returns
+ * {@link java.util.Locale.Category#DISPLAY DISPLAY} locale.  Returns
  * the empty string if this locale doesn't specify a script code.
  *
  * @return the display name of the script code for the current default
- *     {@link java.util.Locale.Category#DISPLAY Locale.Category#DISPLAY} locale
+ *     {@link java.util.Locale.Category#DISPLAY DISPLAY} locale
  * @since 1.7
  */
 
-@android.annotation.NonNull
+@androidx.annotation.RecentlyNonNull
 public java.lang.String getDisplayScript() { throw new RuntimeException("Stub!"); }
 
 /**
@@ -1257,26 +1257,26 @@ public java.lang.String getDisplayScript() { throw new RuntimeException("Stub!")
  *
  * @param inLocale The locale for which to retrieve the display script.
  * @return the display name of the script code for the current default
- * {@link java.util.Locale.Category#DISPLAY Locale.Category#DISPLAY} locale
+ * {@link java.util.Locale.Category#DISPLAY DISPLAY} locale
  * @throws java.lang.NullPointerException if <code>inLocale</code> is <code>null</code>
  * @since 1.7
  */
 
-@android.annotation.NonNull
-public java.lang.String getDisplayScript(@android.annotation.NonNull java.util.Locale inLocale) { throw new RuntimeException("Stub!"); }
+@androidx.annotation.RecentlyNonNull
+public java.lang.String getDisplayScript(@androidx.annotation.RecentlyNonNull java.util.Locale inLocale) { throw new RuntimeException("Stub!"); }
 
 /**
  * Returns a name for the locale's country that is appropriate for display to the
  * user.
  * If possible, the name returned will be localized for the default
- * {@link java.util.Locale.Category#DISPLAY Locale.Category#DISPLAY} locale.
+ * {@link java.util.Locale.Category#DISPLAY DISPLAY} locale.
  * For example, if the locale is fr_FR and the default
- * {@link java.util.Locale.Category#DISPLAY Locale.Category#DISPLAY} locale
+ * {@link java.util.Locale.Category#DISPLAY DISPLAY} locale
  * is en_US, getDisplayCountry() will return "France"; if the locale is en_US and
- * the default {@link java.util.Locale.Category#DISPLAY Locale.Category#DISPLAY} locale is fr_FR,
+ * the default {@link java.util.Locale.Category#DISPLAY DISPLAY} locale is fr_FR,
  * getDisplayCountry() will return "Etats-Unis".
  * If the name returned cannot be localized for the default
- * {@link java.util.Locale.Category#DISPLAY Locale.Category#DISPLAY} locale,
+ * {@link java.util.Locale.Category#DISPLAY DISPLAY} locale,
  * (say, we don't have a Japanese name for Croatia),
  * this function falls back on the English name, and uses the ISO code as a last-resort
  * value.  If the locale doesn't specify a country, this function returns the empty string.
@@ -1284,7 +1284,7 @@ public java.lang.String getDisplayScript(@android.annotation.NonNull java.util.L
  * @return The name of the country appropriate to the locale.
  */
 
-@android.annotation.NonNull
+@androidx.annotation.RecentlyNonNull
 public java.lang.String getDisplayCountry() { throw new RuntimeException("Stub!"); }
 
 /**
@@ -1293,19 +1293,19 @@ public java.lang.String getDisplayCountry() { throw new RuntimeException("Stub!"
  * country.
  */
 
-@android.annotation.NonNull
-public java.lang.String getDisplayCountry(@android.annotation.NonNull java.util.Locale locale) { throw new RuntimeException("Stub!"); }
+@androidx.annotation.RecentlyNonNull
+public java.lang.String getDisplayCountry(@androidx.annotation.RecentlyNonNull java.util.Locale locale) { throw new RuntimeException("Stub!"); }
 
 /**
  * Returns a name for the locale's variant code that is appropriate for display to the
  * user.  If possible, the name will be localized for the default
- * {@link java.util.Locale.Category#DISPLAY Locale.Category#DISPLAY} locale.  If the locale
+ * {@link java.util.Locale.Category#DISPLAY DISPLAY} locale.  If the locale
  * doesn't specify a variant code, this function returns the empty string.
  *
  * @return The name of the display variant code appropriate to the locale.
  */
 
-@android.annotation.NonNull
+@androidx.annotation.RecentlyNonNull
 public java.lang.String getDisplayVariant() { throw new RuntimeException("Stub!"); }
 
 /**
@@ -1318,8 +1318,8 @@ public java.lang.String getDisplayVariant() { throw new RuntimeException("Stub!"
  * @exception java.lang.NullPointerException if <code>inLocale</code> is <code>null</code>
  */
 
-@android.annotation.NonNull
-public java.lang.String getDisplayVariant(@android.annotation.NonNull java.util.Locale inLocale) { throw new RuntimeException("Stub!"); }
+@androidx.annotation.RecentlyNonNull
+public java.lang.String getDisplayVariant(@androidx.annotation.RecentlyNonNull java.util.Locale inLocale) { throw new RuntimeException("Stub!"); }
 
 /**
  * Returns a name for the locale that is appropriate for display to the
@@ -1341,7 +1341,7 @@ public java.lang.String getDisplayVariant(@android.annotation.NonNull java.util.
  * @return The name of the locale appropriate to display.
  */
 
-@android.annotation.NonNull
+@androidx.annotation.RecentlyNonNull
 public java.lang.String getDisplayName() { throw new RuntimeException("Stub!"); }
 
 /**
@@ -1361,14 +1361,14 @@ public java.lang.String getDisplayName() { throw new RuntimeException("Stub!"); 
  * </ul>
  */
 
-@android.annotation.NonNull
-public java.lang.String getDisplayName(@android.annotation.NonNull java.util.Locale locale) { throw new RuntimeException("Stub!"); }
+@androidx.annotation.RecentlyNonNull
+public java.lang.String getDisplayName(@androidx.annotation.RecentlyNonNull java.util.Locale locale) { throw new RuntimeException("Stub!"); }
 
 /**
  * Overrides Cloneable.
  */
 
-@android.annotation.NonNull
+@androidx.annotation.RecentlyNonNull
 public java.lang.Object clone() { throw new RuntimeException("Stub!"); }
 
 /**
@@ -1387,7 +1387,7 @@ public int hashCode() { throw new RuntimeException("Stub!"); }
  * @return true if this Locale is equal to the specified object.
  */
 
-public boolean equals(@android.annotation.Nullable java.lang.Object obj) { throw new RuntimeException("Stub!"); }
+public boolean equals(@androidx.annotation.RecentlyNullable java.lang.Object obj) { throw new RuntimeException("Stub!"); }
 
 /**
  * Returns a list of matching {@code Locale} instances using the filtering
@@ -1409,8 +1409,8 @@ public boolean equals(@android.annotation.Nullable java.lang.Object obj) { throw
  * @since 1.8
  */
 
-@android.annotation.NonNull
-public static java.util.List<java.util.Locale> filter(@android.annotation.NonNull java.util.List<java.util.Locale.LanguageRange> priorityList, @android.annotation.NonNull java.util.Collection<java.util.Locale> locales, @android.annotation.NonNull java.util.Locale.FilteringMode mode) { throw new RuntimeException("Stub!"); }
+@androidx.annotation.RecentlyNonNull
+public static java.util.List<java.util.Locale> filter(@androidx.annotation.RecentlyNonNull java.util.List<java.util.Locale.LanguageRange> priorityList, @androidx.annotation.RecentlyNonNull java.util.Collection<java.util.Locale> locales, @androidx.annotation.RecentlyNonNull java.util.Locale.FilteringMode mode) { throw new RuntimeException("Stub!"); }
 
 /**
  * Returns a list of matching {@code Locale} instances using the filtering
@@ -1430,8 +1430,8 @@ public static java.util.List<java.util.Locale> filter(@android.annotation.NonNul
  * @since 1.8
  */
 
-@android.annotation.NonNull
-public static java.util.List<java.util.Locale> filter(@android.annotation.NonNull java.util.List<java.util.Locale.LanguageRange> priorityList, @android.annotation.NonNull java.util.Collection<java.util.Locale> locales) { throw new RuntimeException("Stub!"); }
+@androidx.annotation.RecentlyNonNull
+public static java.util.List<java.util.Locale> filter(@androidx.annotation.RecentlyNonNull java.util.List<java.util.Locale.LanguageRange> priorityList, @androidx.annotation.RecentlyNonNull java.util.Collection<java.util.Locale> locales) { throw new RuntimeException("Stub!"); }
 
 /**
  * Returns a list of matching languages tags using the basic filtering
@@ -1453,8 +1453,8 @@ public static java.util.List<java.util.Locale> filter(@android.annotation.NonNul
  * @since 1.8
  */
 
-@android.annotation.NonNull
-public static java.util.List<java.lang.String> filterTags(@android.annotation.NonNull java.util.List<java.util.Locale.LanguageRange> priorityList, @android.annotation.NonNull java.util.Collection<java.lang.String> tags, @android.annotation.NonNull java.util.Locale.FilteringMode mode) { throw new RuntimeException("Stub!"); }
+@androidx.annotation.RecentlyNonNull
+public static java.util.List<java.lang.String> filterTags(@androidx.annotation.RecentlyNonNull java.util.List<java.util.Locale.LanguageRange> priorityList, @androidx.annotation.RecentlyNonNull java.util.Collection<java.lang.String> tags, @androidx.annotation.RecentlyNonNull java.util.Locale.FilteringMode mode) { throw new RuntimeException("Stub!"); }
 
 /**
  * Returns a list of matching languages tags using the basic filtering
@@ -1474,8 +1474,8 @@ public static java.util.List<java.lang.String> filterTags(@android.annotation.No
  * @since 1.8
  */
 
-@android.annotation.NonNull
-public static java.util.List<java.lang.String> filterTags(@android.annotation.NonNull java.util.List<java.util.Locale.LanguageRange> priorityList, @android.annotation.NonNull java.util.Collection<java.lang.String> tags) { throw new RuntimeException("Stub!"); }
+@androidx.annotation.RecentlyNonNull
+public static java.util.List<java.lang.String> filterTags(@androidx.annotation.RecentlyNonNull java.util.List<java.util.Locale.LanguageRange> priorityList, @androidx.annotation.RecentlyNonNull java.util.Collection<java.lang.String> tags) { throw new RuntimeException("Stub!"); }
 
 /**
  * Returns a {@code Locale} instance for the best-matching language
@@ -1492,8 +1492,8 @@ public static java.util.List<java.lang.String> filterTags(@android.annotation.No
  * @since 1.8
  */
 
-@android.annotation.Nullable
-public static java.util.Locale lookup(@android.annotation.NonNull java.util.List<java.util.Locale.LanguageRange> priorityList, @android.annotation.NonNull java.util.Collection<java.util.Locale> locales) { throw new RuntimeException("Stub!"); }
+@androidx.annotation.RecentlyNullable
+public static java.util.Locale lookup(@androidx.annotation.RecentlyNonNull java.util.List<java.util.Locale.LanguageRange> priorityList, @androidx.annotation.RecentlyNonNull java.util.Collection<java.util.Locale> locales) { throw new RuntimeException("Stub!"); }
 
 /**
  * Returns the best-matching language tag using the lookup mechanism
@@ -1510,103 +1510,103 @@ public static java.util.Locale lookup(@android.annotation.NonNull java.util.List
  * @since 1.8
  */
 
-@android.annotation.Nullable
-public static java.lang.String lookupTag(@android.annotation.NonNull java.util.List<java.util.Locale.LanguageRange> priorityList, @android.annotation.NonNull java.util.Collection<java.lang.String> tags) { throw new RuntimeException("Stub!"); }
+@androidx.annotation.RecentlyNullable
+public static java.lang.String lookupTag(@androidx.annotation.RecentlyNonNull java.util.List<java.util.Locale.LanguageRange> priorityList, @androidx.annotation.RecentlyNonNull java.util.Collection<java.lang.String> tags) { throw new RuntimeException("Stub!"); }
 
 /** Useful constant for country.
  */
 
-@android.annotation.NonNull public static final java.util.Locale CANADA;
+@androidx.annotation.RecentlyNonNull public static final java.util.Locale CANADA;
 static { CANADA = null; }
 
 /** Useful constant for country.
  */
 
-@android.annotation.NonNull public static final java.util.Locale CANADA_FRENCH;
+@androidx.annotation.RecentlyNonNull public static final java.util.Locale CANADA_FRENCH;
 static { CANADA_FRENCH = null; }
 
 /** Useful constant for country.
  */
 
-@android.annotation.NonNull public static final java.util.Locale CHINA;
+@androidx.annotation.RecentlyNonNull public static final java.util.Locale CHINA;
 static { CHINA = null; }
 
 /** Useful constant for language.
  */
 
-@android.annotation.NonNull public static final java.util.Locale CHINESE;
+@androidx.annotation.RecentlyNonNull public static final java.util.Locale CHINESE;
 static { CHINESE = null; }
 
 /** Useful constant for language.
  */
 
-@android.annotation.NonNull public static final java.util.Locale ENGLISH;
+@androidx.annotation.RecentlyNonNull public static final java.util.Locale ENGLISH;
 static { ENGLISH = null; }
 
 /** Useful constant for country.
  */
 
-@android.annotation.NonNull public static final java.util.Locale FRANCE;
+@androidx.annotation.RecentlyNonNull public static final java.util.Locale FRANCE;
 static { FRANCE = null; }
 
 /** Useful constant for language.
  */
 
-@android.annotation.NonNull public static final java.util.Locale FRENCH;
+@androidx.annotation.RecentlyNonNull public static final java.util.Locale FRENCH;
 static { FRENCH = null; }
 
 /** Useful constant for language.
  */
 
-@android.annotation.NonNull public static final java.util.Locale GERMAN;
+@androidx.annotation.RecentlyNonNull public static final java.util.Locale GERMAN;
 static { GERMAN = null; }
 
 /** Useful constant for country.
  */
 
-@android.annotation.NonNull public static final java.util.Locale GERMANY;
+@androidx.annotation.RecentlyNonNull public static final java.util.Locale GERMANY;
 static { GERMANY = null; }
 
 /** Useful constant for language.
  */
 
-@android.annotation.NonNull public static final java.util.Locale ITALIAN;
+@androidx.annotation.RecentlyNonNull public static final java.util.Locale ITALIAN;
 static { ITALIAN = null; }
 
 /** Useful constant for country.
  */
 
-@android.annotation.NonNull public static final java.util.Locale ITALY;
+@androidx.annotation.RecentlyNonNull public static final java.util.Locale ITALY;
 static { ITALY = null; }
 
 /** Useful constant for country.
  */
 
-@android.annotation.NonNull public static final java.util.Locale JAPAN;
+@androidx.annotation.RecentlyNonNull public static final java.util.Locale JAPAN;
 static { JAPAN = null; }
 
 /** Useful constant for language.
  */
 
-@android.annotation.NonNull public static final java.util.Locale JAPANESE;
+@androidx.annotation.RecentlyNonNull public static final java.util.Locale JAPANESE;
 static { JAPANESE = null; }
 
 /** Useful constant for country.
  */
 
-@android.annotation.NonNull public static final java.util.Locale KOREA;
+@androidx.annotation.RecentlyNonNull public static final java.util.Locale KOREA;
 static { KOREA = null; }
 
 /** Useful constant for language.
  */
 
-@android.annotation.NonNull public static final java.util.Locale KOREAN;
+@androidx.annotation.RecentlyNonNull public static final java.util.Locale KOREAN;
 static { KOREAN = null; }
 
 /** Useful constant for country.
  */
 
-@android.annotation.NonNull public static final java.util.Locale PRC;
+@androidx.annotation.RecentlyNonNull public static final java.util.Locale PRC;
 static { PRC = null; }
 
 /**
@@ -1628,31 +1628,31 @@ public static final char PRIVATE_USE_EXTENSION = 120; // 0x0078 'x'
  * @since 1.6
  */
 
-@android.annotation.NonNull public static final java.util.Locale ROOT;
+@androidx.annotation.RecentlyNonNull public static final java.util.Locale ROOT;
 static { ROOT = null; }
 
 /** Useful constant for language.
  */
 
-@android.annotation.NonNull public static final java.util.Locale SIMPLIFIED_CHINESE;
+@androidx.annotation.RecentlyNonNull public static final java.util.Locale SIMPLIFIED_CHINESE;
 static { SIMPLIFIED_CHINESE = null; }
 
 /** Useful constant for country.
  */
 
-@android.annotation.NonNull public static final java.util.Locale TAIWAN;
+@androidx.annotation.RecentlyNonNull public static final java.util.Locale TAIWAN;
 static { TAIWAN = null; }
 
 /** Useful constant for language.
  */
 
-@android.annotation.NonNull public static final java.util.Locale TRADITIONAL_CHINESE;
+@androidx.annotation.RecentlyNonNull public static final java.util.Locale TRADITIONAL_CHINESE;
 static { TRADITIONAL_CHINESE = null; }
 
 /** Useful constant for country.
  */
 
-@android.annotation.NonNull public static final java.util.Locale UK;
+@androidx.annotation.RecentlyNonNull public static final java.util.Locale UK;
 static { UK = null; }
 
 /**
@@ -1668,7 +1668,7 @@ public static final char UNICODE_LOCALE_EXTENSION = 117; // 0x0075 'u'
 /** Useful constant for country.
  */
 
-@android.annotation.NonNull public static final java.util.Locale US;
+@androidx.annotation.RecentlyNonNull public static final java.util.Locale US;
 static { US = null; }
 /**
  * <code>Builder</code> is used to build instances of <code>Locale</code>
@@ -1736,14 +1736,14 @@ public Builder() { throw new RuntimeException("Stub!"); }
  * @throws java.lang.NullPointerException if <code>locale</code> is null.
  */
 
-@android.annotation.NonNull
-public java.util.Locale.Builder setLocale(@android.annotation.NonNull java.util.Locale locale) { throw new RuntimeException("Stub!"); }
+@androidx.annotation.RecentlyNonNull
+public java.util.Locale.Builder setLocale(@androidx.annotation.RecentlyNonNull java.util.Locale locale) { throw new RuntimeException("Stub!"); }
 
 /**
  * Resets the Builder to match the provided IETF BCP 47
  * language tag.  Discards the existing state.  Null and the
  * empty string cause the builder to be reset, like {@link
- * #clear}.  Grandfathered tags (see {@link java.util.Locale#forLanguageTag Locale#forLanguageTag}) are converted to their canonical
+ * #clear}.  Grandfathered tags (see {@link java.util.Locale#forLanguageTag  }) are converted to their canonical
  * form before being processed.  Otherwise, the language tag
  * must be well-formed (see {@link java.util.Locale Locale}) or an exception is
  * thrown (unlike <code>Locale.forLanguageTag</code>, which
@@ -1756,8 +1756,8 @@ public java.util.Locale.Builder setLocale(@android.annotation.NonNull java.util.
  * @see java.util.Locale#forLanguageTag(String)
  */
 
-@android.annotation.NonNull
-public java.util.Locale.Builder setLanguageTag(@android.annotation.NonNull java.lang.String languageTag) { throw new RuntimeException("Stub!"); }
+@androidx.annotation.RecentlyNonNull
+public java.util.Locale.Builder setLanguageTag(@androidx.annotation.RecentlyNonNull java.lang.String languageTag) { throw new RuntimeException("Stub!"); }
 
 /**
  * Sets the language.  If <code>language</code> is the empty string or
@@ -1773,8 +1773,8 @@ public java.util.Locale.Builder setLanguageTag(@android.annotation.NonNull java.
  * @throws java.util.IllformedLocaleException if <code>language</code> is ill-formed
  */
 
-@android.annotation.NonNull
-public java.util.Locale.Builder setLanguage(@android.annotation.Nullable java.lang.String language) { throw new RuntimeException("Stub!"); }
+@androidx.annotation.RecentlyNonNull
+public java.util.Locale.Builder setLanguage(@androidx.annotation.RecentlyNullable java.lang.String language) { throw new RuntimeException("Stub!"); }
 
 /**
  * Sets the script. If <code>script</code> is null or the empty string,
@@ -1789,8 +1789,8 @@ public java.util.Locale.Builder setLanguage(@android.annotation.Nullable java.la
  * @throws java.util.IllformedLocaleException if <code>script</code> is ill-formed
  */
 
-@android.annotation.NonNull
-public java.util.Locale.Builder setScript(@android.annotation.Nullable java.lang.String script) { throw new RuntimeException("Stub!"); }
+@androidx.annotation.RecentlyNonNull
+public java.util.Locale.Builder setScript(@androidx.annotation.RecentlyNullable java.lang.String script) { throw new RuntimeException("Stub!"); }
 
 /**
  * Sets the region.  If region is null or the empty string, the region
@@ -1809,8 +1809,8 @@ public java.util.Locale.Builder setScript(@android.annotation.Nullable java.lang
  * @throws java.util.IllformedLocaleException if <code>region</code> is ill-formed
  */
 
-@android.annotation.NonNull
-public java.util.Locale.Builder setRegion(@android.annotation.Nullable java.lang.String region) { throw new RuntimeException("Stub!"); }
+@androidx.annotation.RecentlyNonNull
+public java.util.Locale.Builder setRegion(@androidx.annotation.RecentlyNullable java.lang.String region) { throw new RuntimeException("Stub!"); }
 
 /**
  * Sets the variant.  If variant is null or the empty string, the
@@ -1831,8 +1831,8 @@ public java.util.Locale.Builder setRegion(@android.annotation.Nullable java.lang
  * @throws java.util.IllformedLocaleException if <code>variant</code> is ill-formed
  */
 
-@android.annotation.NonNull
-public java.util.Locale.Builder setVariant(@android.annotation.Nullable java.lang.String variant) { throw new RuntimeException("Stub!"); }
+@androidx.annotation.RecentlyNonNull
+public java.util.Locale.Builder setVariant(@androidx.annotation.RecentlyNullable java.lang.String variant) { throw new RuntimeException("Stub!"); }
 
 /**
  * Sets the extension for the given key. If the value is null or the
@@ -1840,11 +1840,11 @@ public java.util.Locale.Builder setVariant(@android.annotation.Nullable java.lan
  * must be <a href="./Locale.html#def_extensions">well-formed</a> or an exception
  * is thrown.
  *
- * <p><b>Note:</b> The key {@link java.util.Locale#UNICODE_LOCALE_EXTENSION Locale#UNICODE_LOCALE_EXTENSION} ('u') is used for the Unicode locale extension.
+ * <p><b>Note:</b> The key {@link java.util.Locale#UNICODE_LOCALE_EXTENSION  UNICODE_LOCALE_EXTENSION} ('u') is used for the Unicode locale extension.
  * Setting a value for this key replaces any existing Unicode locale key/type
  * pairs with those defined in the extension.
  *
- * <p><b>Note:</b> The key {@link java.util.Locale#PRIVATE_USE_EXTENSION Locale#PRIVATE_USE_EXTENSION} ('x') is used for the private use code. To be
+ * <p><b>Note:</b> The key {@link java.util.Locale#PRIVATE_USE_EXTENSION  PRIVATE_USE_EXTENSION} ('x') is used for the private use code. To be
  * well-formed, the value for this key needs only to have subtags of one to
  * eight alphanumeric characters, not two to eight as in the general case.
  *
@@ -1856,8 +1856,8 @@ public java.util.Locale.Builder setVariant(@android.annotation.Nullable java.lan
  * @see #setUnicodeLocaleKeyword(String, String)
  */
 
-@android.annotation.NonNull
-public java.util.Locale.Builder setExtension(char key, @android.annotation.Nullable java.lang.String value) { throw new RuntimeException("Stub!"); }
+@androidx.annotation.RecentlyNonNull
+public java.util.Locale.Builder setExtension(char key, @androidx.annotation.RecentlyNullable java.lang.String value) { throw new RuntimeException("Stub!"); }
 
 /**
  * Sets the Unicode locale keyword type for the given key.  If the type
@@ -1881,8 +1881,8 @@ public java.util.Locale.Builder setExtension(char key, @android.annotation.Nulla
  * @see #setExtension(char, String)
  */
 
-@android.annotation.NonNull
-public java.util.Locale.Builder setUnicodeLocaleKeyword(@android.annotation.NonNull java.lang.String key, @android.annotation.Nullable java.lang.String type) { throw new RuntimeException("Stub!"); }
+@androidx.annotation.RecentlyNonNull
+public java.util.Locale.Builder setUnicodeLocaleKeyword(@androidx.annotation.RecentlyNonNull java.lang.String key, @androidx.annotation.RecentlyNullable java.lang.String type) { throw new RuntimeException("Stub!"); }
 
 /**
  * Adds a unicode locale attribute, if not already present, otherwise
@@ -1897,8 +1897,8 @@ public java.util.Locale.Builder setUnicodeLocaleKeyword(@android.annotation.NonN
  * @see #setExtension(char, String)
  */
 
-@android.annotation.NonNull
-public java.util.Locale.Builder addUnicodeLocaleAttribute(@android.annotation.NonNull java.lang.String attribute) { throw new RuntimeException("Stub!"); }
+@androidx.annotation.RecentlyNonNull
+public java.util.Locale.Builder addUnicodeLocaleAttribute(@androidx.annotation.RecentlyNonNull java.lang.String attribute) { throw new RuntimeException("Stub!"); }
 
 /**
  * Removes a unicode locale attribute, if present, otherwise has no
@@ -1915,8 +1915,8 @@ public java.util.Locale.Builder addUnicodeLocaleAttribute(@android.annotation.No
  * @see #setExtension(char, String)
  */
 
-@android.annotation.NonNull
-public java.util.Locale.Builder removeUnicodeLocaleAttribute(@android.annotation.NonNull java.lang.String attribute) { throw new RuntimeException("Stub!"); }
+@androidx.annotation.RecentlyNonNull
+public java.util.Locale.Builder removeUnicodeLocaleAttribute(@androidx.annotation.RecentlyNonNull java.lang.String attribute) { throw new RuntimeException("Stub!"); }
 
 /**
  * Resets the builder to its initial, empty state.
@@ -1924,7 +1924,7 @@ public java.util.Locale.Builder removeUnicodeLocaleAttribute(@android.annotation
  * @return This builder.
  */
 
-@android.annotation.NonNull
+@androidx.annotation.RecentlyNonNull
 public java.util.Locale.Builder clear() { throw new RuntimeException("Stub!"); }
 
 /**
@@ -1935,7 +1935,7 @@ public java.util.Locale.Builder clear() { throw new RuntimeException("Stub!"); }
  * @see #setExtension(char, String)
  */
 
-@android.annotation.NonNull
+@androidx.annotation.RecentlyNonNull
 public java.util.Locale.Builder clearExtensions() { throw new RuntimeException("Stub!"); }
 
 /**
@@ -1949,7 +1949,7 @@ public java.util.Locale.Builder clearExtensions() { throw new RuntimeException("
  * @return A Locale.
  */
 
-@android.annotation.NonNull
+@androidx.annotation.RecentlyNonNull
 public java.util.Locale build() { throw new RuntimeException("Stub!"); }
 }
 
@@ -2007,7 +2007,7 @@ FORMAT;
  * </tr>
  * <tr>
  * <td valign=top>
- * {@link java.util.Locale.FilteringMode#AUTOSELECT_FILTERING FilteringMode#AUTOSELECT_FILTERING}
+ * {@link java.util.Locale.FilteringMode#AUTOSELECT_FILTERING AUTOSELECT_FILTERING}
  * </td>
  * <td valign=top>
  * Performs <em>basic</em> filtering and returns {@code "de-DE"} and
@@ -2021,7 +2021,7 @@ FORMAT;
  * </tr>
  * <tr>
  * <td valign=top>
- * {@link java.util.Locale.FilteringMode#EXTENDED_FILTERING FilteringMode#EXTENDED_FILTERING}
+ * {@link java.util.Locale.FilteringMode#EXTENDED_FILTERING EXTENDED_FILTERING}
  * </td>
  * <td valign=top>
  * Performs <em>extended</em> filtering and returns {@code "de-DE"},
@@ -2032,7 +2032,7 @@ FORMAT;
  * </tr>
  * <tr>
  * <td valign=top>
- * {@link java.util.Locale.FilteringMode#IGNORE_EXTENDED_RANGES FilteringMode#IGNORE_EXTENDED_RANGES}
+ * {@link java.util.Locale.FilteringMode#IGNORE_EXTENDED_RANGES IGNORE_EXTENDED_RANGES}
  * </td>
  * <td valign=top>
  * Performs <em>basic</em> filtering and returns {@code "de-DE"} and
@@ -2045,7 +2045,7 @@ FORMAT;
  * </tr>
  * <tr>
  * <td valign=top>
- * {@link java.util.Locale.FilteringMode#MAP_EXTENDED_RANGES FilteringMode#MAP_EXTENDED_RANGES}
+ * {@link java.util.Locale.FilteringMode#MAP_EXTENDED_RANGES MAP_EXTENDED_RANGES}
  * </td>
  * <td valign=top>Same as above.</td>
  * <td valign=top>
@@ -2056,7 +2056,7 @@ FORMAT;
  * </tr>
  * <tr>
  * <td valign=top>
- * {@link java.util.Locale.FilteringMode#REJECT_EXTENDED_RANGES FilteringMode#REJECT_EXTENDED_RANGES}
+ * {@link java.util.Locale.FilteringMode#REJECT_EXTENDED_RANGES REJECT_EXTENDED_RANGES}
  * </td>
  * <td valign=top>Same as above.</td>
  * <td valign=top>
@@ -2163,7 +2163,7 @@ public static final class LanguageRange {
  *     {@code null}
  */
 
-public LanguageRange(@android.annotation.NonNull java.lang.String range) { throw new RuntimeException("Stub!"); }
+public LanguageRange(@androidx.annotation.RecentlyNonNull java.lang.String range) { throw new RuntimeException("Stub!"); }
 
 /**
  * Constructs a {@code LanguageRange} using the given {@code range} and
@@ -2179,7 +2179,7 @@ public LanguageRange(@android.annotation.NonNull java.lang.String range) { throw
  *     than {@code MIN_WEIGHT} or greater than {@code MAX_WEIGHT}
  */
 
-public LanguageRange(@android.annotation.NonNull java.lang.String range, double weight) { throw new RuntimeException("Stub!"); }
+public LanguageRange(@androidx.annotation.RecentlyNonNull java.lang.String range, double weight) { throw new RuntimeException("Stub!"); }
 
 /**
  * Returns the language range of this {@code LanguageRange}.
@@ -2187,7 +2187,7 @@ public LanguageRange(@android.annotation.NonNull java.lang.String range, double 
  * @return the language range.
  */
 
-@android.annotation.NonNull
+@androidx.annotation.RecentlyNonNull
 public java.lang.String getRange() { throw new RuntimeException("Stub!"); }
 
 /**
@@ -2264,8 +2264,8 @@ public double getWeight() { throw new RuntimeException("Stub!"); }
  *     found in the given {@code ranges} is ill-formed
  */
 
-@android.annotation.NonNull
-public static java.util.List<java.util.Locale.LanguageRange> parse(@android.annotation.NonNull java.lang.String ranges) { throw new RuntimeException("Stub!"); }
+@androidx.annotation.RecentlyNonNull
+public static java.util.List<java.util.Locale.LanguageRange> parse(@androidx.annotation.RecentlyNonNull java.lang.String ranges) { throw new RuntimeException("Stub!"); }
 
 /**
  * Parses the given {@code ranges} to generate a Language Priority
@@ -2287,8 +2287,8 @@ public static java.util.List<java.util.Locale.LanguageRange> parse(@android.anno
  * @see #mapEquivalents
  */
 
-@android.annotation.NonNull
-public static java.util.List<java.util.Locale.LanguageRange> parse(@android.annotation.NonNull java.lang.String ranges, @android.annotation.NonNull java.util.Map<java.lang.String,java.util.List<java.lang.String>> map) { throw new RuntimeException("Stub!"); }
+@androidx.annotation.RecentlyNonNull
+public static java.util.List<java.util.Locale.LanguageRange> parse(@androidx.annotation.RecentlyNonNull java.lang.String ranges, @androidx.annotation.RecentlyNonNull java.util.Map<java.lang.String,java.util.List<java.lang.String>> map) { throw new RuntimeException("Stub!"); }
 
 /**
  * Generates a new customized Language Priority List using the given
@@ -2338,8 +2338,8 @@ public static java.util.List<java.util.Locale.LanguageRange> parse(@android.anno
  * @see #parse(String, Map)
  */
 
-@android.annotation.NonNull
-public static java.util.List<java.util.Locale.LanguageRange> mapEquivalents(@android.annotation.NonNull java.util.List<java.util.Locale.LanguageRange> priorityList, @android.annotation.NonNull java.util.Map<java.lang.String,java.util.List<java.lang.String>> map) { throw new RuntimeException("Stub!"); }
+@androidx.annotation.RecentlyNonNull
+public static java.util.List<java.util.Locale.LanguageRange> mapEquivalents(@androidx.annotation.RecentlyNonNull java.util.List<java.util.Locale.LanguageRange> priorityList, @androidx.annotation.RecentlyNonNull java.util.Map<java.lang.String,java.util.List<java.lang.String>> map) { throw new RuntimeException("Stub!"); }
 
 /**
  * Returns a hash code value for the object.
@@ -2361,7 +2361,7 @@ public int hashCode() { throw new RuntimeException("Stub!"); }
  *     otherwise.
  */
 
-public boolean equals(@android.annotation.Nullable java.lang.Object obj) { throw new RuntimeException("Stub!"); }
+public boolean equals(@androidx.annotation.RecentlyNullable java.lang.Object obj) { throw new RuntimeException("Stub!"); }
 
 /**
  * A constant holding the maximum value of weight, 1.0, which indicates

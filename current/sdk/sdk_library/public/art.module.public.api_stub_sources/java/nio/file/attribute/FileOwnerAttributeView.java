@@ -60,7 +60,7 @@ public java.lang.String name();
 /**
  * Read the file owner.
  *
- * <p> It it implementation specific if the file owner can be a {@link java.nio.file.attribute.GroupPrincipal GroupPrincipal}.
+ * <p> It it implementation specific if the file owner can be a {@link java.nio.file.attribute.GroupPrincipal group}.
  *
  * @return  the file owner
  *
@@ -69,7 +69,7 @@ public java.lang.String name();
  * @throws  java.lang.SecurityException
  *          In the case of the default provider, a security manager is
  *          installed, and it denies {@link java.lang.RuntimePermission RuntimePermission}<tt>("accessUserInformation")</tt> or its
- *          {@link java.lang.SecurityManager#checkRead(java.lang.String) SecurityManager#checkRead(String)} method
+ *          {@link java.lang.SecurityManager#checkRead(java.lang.String) checkRead} method
  *          denies read access to the file.
  */
 
@@ -78,7 +78,7 @@ public java.nio.file.attribute.UserPrincipal getOwner() throws java.io.IOExcepti
 /**
  * Updates the file owner.
  *
- * <p> It it implementation specific if the file owner can be a {@link java.nio.file.attribute.GroupPrincipal GroupPrincipal}. To ensure consistent and correct behavior
+ * <p> It it implementation specific if the file owner can be a {@link java.nio.file.attribute.GroupPrincipal group}. To ensure consistent and correct behavior
  * across platforms it is recommended that this method should only be used
  * to set the file owner to a user principal that is not a group.
  *
@@ -92,7 +92,7 @@ public java.nio.file.attribute.UserPrincipal getOwner() throws java.io.IOExcepti
  * @throws  java.lang.SecurityException
  *          In the case of the default provider, a security manager is
  *          installed, and it denies {@link java.lang.RuntimePermission RuntimePermission}<tt>("accessUserInformation")</tt> or its
- *          {@link java.lang.SecurityManager#checkWrite(java.lang.String) SecurityManager#checkWrite(String)} method
+ *          {@link java.lang.SecurityManager#checkWrite(java.lang.String) checkWrite} method
  *          denies write access to the file.
  */
 

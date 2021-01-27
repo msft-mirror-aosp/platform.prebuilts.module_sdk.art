@@ -181,7 +181,7 @@ public static java.nio.channels.DatagramChannel open(java.net.ProtocolFamily fam
  * operations.
  *
  * <p> Datagram channels support reading and writing, so this method
- * returns <tt>(</tt>{@link java.nio.channels.SelectionKey#OP_READ SelectionKey#OP_READ} <tt>|</tt>&nbsp;{@link java.nio.channels.SelectionKey#OP_WRITE SelectionKey#OP_WRITE}<tt>)</tt>.  </p>
+ * returns <tt>(</tt>{@link java.nio.channels.SelectionKey#OP_READ SelectionKey#OP_READ} <tt>|</tt>&nbsp;{@link java.nio.channels.SelectionKey#OP_WRITE  }<tt>)</tt>.  </p>
  *
  * @return  The valid-operation set
  */
@@ -194,7 +194,7 @@ public final int validOps() { throw new RuntimeException("Stub!"); }
  * @throws  java.nio.channels.ClosedChannelException              {@inheritDoc}
  * @throws  java.io.IOException                         {@inheritDoc}
  * @throws  java.lang.SecurityException
- *          If a security manager has been installed and its {@link java.lang.SecurityManager#checkListen SecurityManager#checkListen} method denies the
+ *          If a security manager has been installed and its {@link java.lang.SecurityManager#checkListen checkListen} method denies the
  *          operation
  *
  * @since 1.7
@@ -335,7 +335,7 @@ public abstract java.net.SocketAddress getRemoteAddress() throws java.io.IOExcep
  * <tt>null</tt>.
  *
  * <p> The datagram is transferred into the given byte buffer starting at
- * its current position, as if by a regular {@link java.nio.channels.ReadableByteChannel#read(java.nio.ByteBuffer) ReadableByteChannel#read(java.nio.ByteBuffer)} operation.  If there
+ * its current position, as if by a regular {@link java.nio.channels.ReadableByteChannel#read(java.nio.ByteBuffer) read} operation.  If there
  * are fewer bytes remaining in the buffer than are required to hold the
  * datagram then the remainder of the datagram is silently discarded.
  *
@@ -398,7 +398,7 @@ public abstract java.net.SocketAddress receive(java.nio.ByteBuffer dst) throws j
  * address.
  *
  * <p> The datagram is transferred from the byte buffer as if by a regular
- * {@link java.nio.channels.WritableByteChannel#write(java.nio.ByteBuffer) WritableByteChannel#write(java.nio.ByteBuffer)} operation.
+ * {@link java.nio.channels.WritableByteChannel#write(java.nio.ByteBuffer) write} operation.
  *
  * <p> This method performs exactly the same security checks as the {@link
  * java.net.DatagramSocket#send send} method of the {@link

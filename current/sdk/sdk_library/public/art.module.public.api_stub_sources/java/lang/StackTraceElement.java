@@ -29,7 +29,7 @@ package java.lang;
 import java.util.Objects;
 
 /**
- * An element in a stack trace, as returned by {@link java.lang.Throwable#getStackTrace() Throwable#getStackTrace()}.  Each element represents a single stack frame.
+ * An element in a stack trace, as returned by {@link java.lang.Throwable#getStackTrace()  }.  Each element represents a single stack frame.
  * All stack frames except for the one at the top of the stack represent
  * a method invocation.  The frame at the top of the stack represents the
  * execution point at which the stack trace was generated.  Typically,

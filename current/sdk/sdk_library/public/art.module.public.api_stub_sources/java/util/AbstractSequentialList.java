@@ -185,7 +185,7 @@ public E remove(int index) { throw new RuntimeException("Stub!"); }
  * @throws java.lang.IndexOutOfBoundsException     {@inheritDoc}
  */
 
-public boolean addAll(int index, @android.annotation.NonNull java.util.Collection<? extends E> c) { throw new RuntimeException("Stub!"); }
+public boolean addAll(int index, @androidx.annotation.RecentlyNonNull java.util.Collection<? extends E> c) { throw new RuntimeException("Stub!"); }
 
 /**
  * Returns an iterator over the elements in this list (in proper
@@ -196,7 +196,7 @@ public boolean addAll(int index, @android.annotation.NonNull java.util.Collectio
  * @return an iterator over the elements in this list (in proper sequence)
  */
 
-@android.annotation.NonNull
+@androidx.annotation.RecentlyNonNull
 public java.util.Iterator<E> iterator() { throw new RuntimeException("Stub!"); }
 
 /**
@@ -210,7 +210,7 @@ public java.util.Iterator<E> iterator() { throw new RuntimeException("Stub!"); }
  * @throws java.lang.IndexOutOfBoundsException {@inheritDoc}
  */
 
-@android.annotation.NonNull
+@androidx.annotation.RecentlyNonNull
 public abstract java.util.ListIterator<E> listIterator(int index);
 }
 

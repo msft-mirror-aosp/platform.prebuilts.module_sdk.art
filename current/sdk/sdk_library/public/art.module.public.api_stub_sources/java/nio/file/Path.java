@@ -453,7 +453,7 @@ public java.nio.file.Path resolveSibling(java.lang.String other);
  *
  * <p> When symbolic links are supported, then whether the resulting path,
  * when resolved against this path, yields a path that can be used to locate
- * the {@link java.nio.file.Files#isSameFile Files#isSameFile} file as {@code other} is implementation
+ * the {@link java.nio.file.Files#isSameFile same} file as {@code other} is implementation
  * dependent. For example, if this path is  {@code "/a/b"} and the given
  * path is {@code "/a/x"} then the resulting relative path may be {@code
  * "../x"}. If {@code "b"} is a symbolic link then is implementation
@@ -475,12 +475,12 @@ public java.nio.file.Path relativize(java.nio.file.Path other);
 /**
  * Returns a URI to represent this path.
  *
- * <p> This method constructs an absolute {@link java.net.URI URI} with a {@link java.net.URI#getScheme() URI#getScheme()} equal to the URI scheme that identifies the
+ * <p> This method constructs an absolute {@link java.net.URI URI} with a {@link java.net.URI#getScheme() scheme} equal to the URI scheme that identifies the
  * provider. The exact form of the scheme specific part is highly provider
  * dependent.
  *
  * <p> In the case of the default provider, the URI is hierarchical with
- * a {@link java.net.URI#getPath() URI#getPath()} component that is absolute. The query and
+ * a {@link java.net.URI#getPath() path} component that is absolute. The query and
  * fragment components are undefined. Whether the authority component is
  * defined or not is implementation dependent. There is no guarantee that
  * the {@code URI} may be used to construct a {@link java.io.File java.io.File}.
@@ -494,7 +494,7 @@ public java.nio.file.Path relativize(java.nio.file.Path other);
  * to the {@link java.io.File} class. For a given {@code Path} <i>p</i> it
  * is guaranteed that
  * <blockquote><tt>
- * {@link java.nio.file.Paths#get(java.net.URI) Paths#get(URI)}(</tt><i>p</i><tt>.toUri()).equals(</tt><i>p</i>
+ * {@link java.nio.file.Paths#get(java.net.URI) Paths.get}(</tt><i>p</i><tt>.toUri()).equals(</tt><i>p</i>
  * <tt>.{@link #toAbsolutePath() toAbsolutePath}())</tt>
  * </blockquote>
  * so long as the original {@code Path}, the {@code URI}, and the new {@code
@@ -529,7 +529,7 @@ public java.net.URI toUri();
  * Returns a {@code Path} object representing the absolute path of this
  * path.
  *
- * <p> If this path is already {@link java.nio.file.Path#isAbsolute Path#isAbsolute} then this
+ * <p> If this path is already {@link java.nio.file.Path#isAbsolute absolute} then this
  * method simply returns this path. Otherwise, this method resolves the path
  * in an implementation dependent manner, typically by resolving the path
  * against a file system default directory. Depending on the implementation,
@@ -542,7 +542,7 @@ public java.net.URI toUri();
  * @throws  java.lang.SecurityException
  *          In the case of the default provider, a security manager
  *          is installed, and this path is not absolute, then the security
- *          manager's {@link java.lang.SecurityManager#checkPropertyAccess(java.lang.String) SecurityManager#checkPropertyAccess(String)} method is invoked to check access to the
+ *          manager's {@link java.lang.SecurityManager#checkPropertyAccess(java.lang.String)           checkPropertyAccess} method is invoked to check access to the
  *          system property {@code user.dir}
  */
 
@@ -553,7 +553,7 @@ public java.nio.file.Path toAbsolutePath();
  *
  * <p> The precise definition of this method is implementation dependent but
  * in general it derives from this path, an {@link #isAbsolute absolute}
- * path that locates the {@link java.nio.file.Files#isSameFile Files#isSameFile} file as this path, but
+ * path that locates the {@link java.nio.file.Files#isSameFile same} file as this path, but
  * with name elements that represent the actual name of the directories
  * and the file. For example, where filename comparisons on a file system
  * are case insensitive then the name elements represent the names in their
@@ -565,7 +565,7 @@ public java.nio.file.Path toAbsolutePath();
  *
  * <p> The {@code options} array may be used to indicate how symbolic links
  * are handled. By default, symbolic links are resolved to their final
- * target. If the option {@link java.nio.file.LinkOption#NOFOLLOW_LINKS LinkOption#NOFOLLOW_LINKS} is
+ * target. If the option {@link java.nio.file.LinkOption#NOFOLLOW_LINKS NOFOLLOW_LINKS} is
  * present then this method does not resolve symbolic links.
  *
  * Some implementations allow special names such as "{@code ..}" to refer to
@@ -586,9 +586,9 @@ public java.nio.file.Path toAbsolutePath();
  *          if the file does not exist or an I/O error occurs
  * @throws  java.lang.SecurityException
  *          In the case of the default provider, and a security manager
- *          is installed, its {@link java.lang.SecurityManager#checkRead(java.lang.String) SecurityManager#checkRead(String)}
+ *          is installed, its {@link java.lang.SecurityManager#checkRead(java.lang.String) checkRead}
  *          method is invoked to check read access to the file, and where
- *          this path is not absolute, its {@link java.lang.SecurityManager#checkPropertyAccess(java.lang.String) SecurityManager#checkPropertyAccess(String)} method is invoked to check access to the
+ *          this path is not absolute, its {@link java.lang.SecurityManager#checkPropertyAccess(java.lang.String)           checkPropertyAccess} method is invoked to check access to the
  *          system property {@code user.dir}
  */
 
@@ -600,7 +600,7 @@ public java.nio.file.Path toRealPath(java.nio.file.LinkOption... options) throws
  * equivalent to returning a {@code File} object constructed with the
  * {@code String} representation of this path.
  *
- * <p> If this path was created by invoking the {@code File} {@link java.io.File#toPath File#toPath} method then there is no guarantee that the {@code
+ * <p> If this path was created by invoking the {@code File} {@link java.io.File#toPath toPath} method then there is no guarantee that the {@code
  * File} object returned by this method is {@link #equals equal} to the
  * original {@code File}.
  *
@@ -620,15 +620,15 @@ public java.io.File toFile();
  * directory can be watched. The {@code events} parameter is the events to
  * register and may contain the following events:
  * <ul>
- *   <li>{@link java.nio.file.StandardWatchEventKinds#ENTRY_CREATE StandardWatchEventKinds#ENTRY_CREATE} -
+ *   <li>{@link java.nio.file.StandardWatchEventKinds#ENTRY_CREATE ENTRY_CREATE} -
  *       entry created or moved into the directory</li>
- *   <li>{@link java.nio.file.StandardWatchEventKinds#ENTRY_DELETE StandardWatchEventKinds#ENTRY_DELETE} -
+ *   <li>{@link java.nio.file.StandardWatchEventKinds#ENTRY_DELETE ENTRY_DELETE} -
  *        entry deleted or moved out of the directory</li>
- *   <li>{@link java.nio.file.StandardWatchEventKinds#ENTRY_MODIFY StandardWatchEventKinds#ENTRY_MODIFY} -
+ *   <li>{@link java.nio.file.StandardWatchEventKinds#ENTRY_MODIFY ENTRY_MODIFY} -
  *        entry in directory was modified</li>
  * </ul>
  *
- * <p> The {@link java.nio.file.WatchEvent#context WatchEvent#context} for these events is the
+ * <p> The {@link java.nio.file.WatchEvent#context context} for these events is the
  * relative path between the directory located by this path, and the path
  * that locates the directory entry that is created, deleted, or modified.
  *
@@ -667,7 +667,7 @@ public java.io.File toFile();
  *          if an I/O error occurs
  * @throws  java.lang.SecurityException
  *          In the case of the default provider, and a security manager is
- *          installed, the {@link java.lang.SecurityManager#checkRead(java.lang.String) SecurityManager#checkRead(String)}
+ *          installed, the {@link java.lang.SecurityManager#checkRead(java.lang.String) checkRead}
  *          method is invoked to check read access to the file.
  */
 
@@ -712,7 +712,7 @@ public java.nio.file.WatchKey register(java.nio.file.WatchService watcher, java.
  *          If an I/O error occurs
  * @throws  java.lang.SecurityException
  *          In the case of the default provider, and a security manager is
- *          installed, the {@link java.lang.SecurityManager#checkRead(java.lang.String) SecurityManager#checkRead(String)}
+ *          installed, the {@link java.lang.SecurityManager#checkRead(java.lang.String) checkRead}
  *          method is invoked to check read access to the file.
  */
 
@@ -764,7 +764,7 @@ public int compareTo(java.nio.file.Path other);
  * implementation. In some cases the paths are compared without regard
  * to case, and others are case sensitive. This method does not access the
  * file system and the file is not required to exist. Where required, the
- * {@link java.nio.file.Files#isSameFile Files#isSameFile} method may be used to check if two
+ * {@link java.nio.file.Files#isSameFile isSameFile} method may be used to check if two
  * paths locate the same file.
  *
  * <p> This method satisfies the general contract of the {@link
@@ -783,7 +783,7 @@ public boolean equals(java.lang.Object other);
  * Computes a hash code for this path.
  *
  * <p> The hash code is based upon the components of the path, and
- * satisfies the general contract of the {@link java.lang.Object#hashCode Object#hashCode} method.
+ * satisfies the general contract of the {@link java.lang.Object#hashCode  Object.hashCode} method.
  *
  * @return  the hash-code value for this path
  */
@@ -794,10 +794,10 @@ public int hashCode();
  * Returns the string representation of this path.
  *
  * <p> If this path was created by converting a path string using the
- * {@link java.nio.file.FileSystem#getPath FileSystem#getPath} method then the path string returned
+ * {@link java.nio.file.FileSystem#getPath getPath} method then the path string returned
  * by this method may differ from the original String used to create the path.
  *
- * <p> The returned path string uses the default name {@link java.nio.file.FileSystem#getSeparator FileSystem#getSeparator} to separate names in the path.
+ * <p> The returned path string uses the default name {@link java.nio.file.FileSystem#getSeparator separator} to separate names in the path.
  *
  * @return  the string representation of this path
  */

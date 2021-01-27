@@ -936,7 +936,7 @@ public abstract java.nio.CharBuffer subSequence(int start, int end);
  *
  * <p> Depending on the specification of <tt>toString</tt> for the
  * character sequence <tt>csq</tt>, the entire sequence may not be
- * appended.  For instance, invoking the {@link java.nio.CharBuffer#toString() CharBuffer#toString()} method of a character buffer will return a subsequence whose
+ * appended.  For instance, invoking the {@link java.nio.CharBuffer#toString()  toString} method of a character buffer will return a subsequence whose
  * content depends upon the buffer's position and limit.
  *
  * @param  csq
@@ -1022,7 +1022,7 @@ public java.nio.CharBuffer append(char c) { throw new RuntimeException("Stub!");
  * Retrieves this buffer's byte order.
  *
  * <p> The byte order of a char buffer created by allocation or by
- * wrapping an existing <tt>char</tt> array is the {@link java.nio.ByteOrder#nativeOrder ByteOrder#nativeOrder} of the underlying
+ * wrapping an existing <tt>char</tt> array is the {@link java.nio.ByteOrder#nativeOrder native order} of the underlying
  * hardware.  The byte order of a char buffer created as a <a
  * href="ByteBuffer.html#views">view</a> of a byte buffer is that of the
  * byte buffer at the moment that the view is created.  </p>

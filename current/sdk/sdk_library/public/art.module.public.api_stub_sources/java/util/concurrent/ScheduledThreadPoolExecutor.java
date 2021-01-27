@@ -75,8 +75,8 @@ package java.util.concurrent;
  * without threads to handle tasks once they become eligible to run.
  *
  * <p><b>Extension notes:</b> This class overrides the
- * {@link java.util.concurrent.ThreadPoolExecutor#execute(java.lang.Runnable) ThreadPoolExecutor#execute(Runnable)} and
- * {@link java.util.concurrent.AbstractExecutorService#submit(java.lang.Runnable) AbstractExecutorService#submit(Runnable)}
+ * {@link java.util.concurrent.ThreadPoolExecutor#execute(java.lang.Runnable) execute} and
+ * {@link java.util.concurrent.AbstractExecutorService#submit(java.lang.Runnable) submit}
  * methods to generate internal {@link java.util.concurrent.ScheduledFuture ScheduledFuture} objects to
  * control per-task delays and scheduling.  To preserve
  * functionality, any further overrides of these methods in
@@ -241,7 +241,7 @@ public java.util.concurrent.ScheduledFuture<?> scheduleWithFixedDelay(java.lang.
  * {@link java.util.concurrent.ScheduledFuture ScheduledFuture}, not the {@code command} itself.
  *
  * <p>A consequence of the use of {@code ScheduledFuture} objects is
- * that {@link java.util.concurrent.ThreadPoolExecutor#afterExecute ThreadPoolExecutor#afterExecute} is always
+ * that {@link java.util.concurrent.ThreadPoolExecutor#afterExecute afterExecute} is always
  * called with a null second {@code Throwable} argument, even if the
  * {@code command} terminated abruptly.  Instead, the {@code Throwable}
  * thrown by such a task can be obtained via {@link java.util.concurrent.Future#get Future#get}.

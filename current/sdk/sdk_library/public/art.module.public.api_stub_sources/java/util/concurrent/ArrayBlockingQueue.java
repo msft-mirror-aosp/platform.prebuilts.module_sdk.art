@@ -41,7 +41,7 @@ import java.util.Collection;
 import java.util.Spliterator;
 
 /**
- * A bounded {@linkplain java.util.concurrent.BlockingQueue BlockingQueue} backed by an
+ * A bounded {@linkplain java.util.concurrent.BlockingQueue blocking queue} backed by an
  * array.  This queue orders elements FIFO (first-in-first-out).  The
  * <em>head</em> of the queue is that element that has been on the
  * queue the longest time.  The <em>tail</em> of the queue is that

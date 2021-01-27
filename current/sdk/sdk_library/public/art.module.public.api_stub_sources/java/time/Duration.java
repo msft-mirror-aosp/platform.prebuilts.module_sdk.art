@@ -1,5 +1,5 @@
 /*
- * Copyright (c) 2012, 2015, Oracle and/or its affiliates. All rights reserved.
+ * Copyright (c) 2012, 2018, Oracle and/or its affiliates. All rights reserved.
  * DO NOT ALTER OR REMOVE COPYRIGHT NOTICES OR THIS FILE HEADER.
  *
  * This code is free software; you can redistribute it and/or modify it
@@ -75,7 +75,7 @@ import java.time.temporal.Temporal;
  * <p>
  * This class models a quantity or amount of time in terms of seconds and nanoseconds.
  * It can be accessed using other duration-based units, such as minutes and hours.
- * In addition, the {@link java.time.temporal.ChronoUnit#DAYS ChronoUnit#DAYS} unit can be used and is treated as
+ * In addition, the {@link java.time.temporal.ChronoUnit#DAYS DAYS} unit can be used and is treated as
  * exactly equal to 24 hours, thus ignoring daylight savings effects.
  * See {@link java.time.Period Period} for the date-based equivalent to this class.
  * <p>
@@ -166,7 +166,7 @@ public static java.time.Duration ofSeconds(long seconds) { throw new RuntimeExce
  * This method allows an arbitrary number of nanoseconds to be passed in.
  * The factory will alter the values of the second and nanosecond in order
  * to ensure that the stored nanosecond is in the range 0 to 999,999,999.
- * For example, the following will result in the exactly the same duration:
+ * For example, the following will result in exactly the same duration:
  * <pre>
  *  Duration.ofSeconds(3, 1);
  *  Duration.ofSeconds(4, -999_999_999);
@@ -212,7 +212,7 @@ public static java.time.Duration ofNanos(long nanos) { throw new RuntimeExceptio
  *  Duration.of(465, HOURS);
  * </pre>
  * Only a subset of units are accepted by this method.
- * The unit must either have an {@linkplain java.time.temporal.TemporalUnit#isDurationEstimated() TemporalUnit#isDurationEstimated()} or
+ * The unit must either have an {@linkplain java.time.temporal.TemporalUnit#isDurationEstimated() exact duration} or
  * be {@link java.time.temporal.ChronoUnit#DAYS ChronoUnit#DAYS} which is treated as 24 hours. Other units throw an exception.
  *
  * @param amount  the amount of the duration, measured in terms of the unit, positive or negative
@@ -232,10 +232,10 @@ public static java.time.Duration of(long amount, java.time.temporal.TemporalUnit
  * date-based or time-based, which this factory extracts to a duration.
  * <p>
  * The conversion loops around the set of units from the amount and uses
- * the {@linkplain java.time.temporal.TemporalUnit#getDuration() TemporalUnit#getDuration()} of the unit to
+ * the {@linkplain java.time.temporal.TemporalUnit#getDuration() duration} of the unit to
  * calculate the total {@code Duration}.
  * Only a subset of units are accepted by this method. The unit must either
- * have an {@linkplain java.time.temporal.TemporalUnit#isDurationEstimated() TemporalUnit#isDurationEstimated()}
+ * have an {@linkplain java.time.temporal.TemporalUnit#isDurationEstimated() exact duration}
  * or be {@link java.time.temporal.ChronoUnit#DAYS ChronoUnit#DAYS} which is treated as 24 hours.
  * If any other units are found then an exception is thrown.
  *
@@ -302,9 +302,9 @@ public static java.time.Duration parse(java.lang.CharSequence text) { throw new 
  * of the first object. For example, if the first argument is a {@code LocalTime}
  * then the second argument is converted to a {@code LocalTime}.
  * <p>
- * The specified temporal objects must support the {@link java.time.temporal.ChronoUnit#SECONDS ChronoUnit#SECONDS} unit.
- * For full accuracy, either the {@link java.time.temporal.ChronoUnit#NANOS ChronoUnit#NANOS} unit or the
- * {@link java.time.temporal.ChronoField#NANO_OF_SECOND ChronoField#NANO_OF_SECOND} field should be supported.
+ * The specified temporal objects must support the {@link java.time.temporal.ChronoUnit#SECONDS SECONDS} unit.
+ * For full accuracy, either the {@link java.time.temporal.ChronoUnit#NANOS NANOS} unit or the
+ * {@link java.time.temporal.ChronoField#NANO_OF_SECOND NANO_OF_SECOND} field should be supported.
  * <p>
  * The result of this method can be a negative period if the end is before the start.
  * To guarantee to obtain a positive duration call {@link #abs()} on the result.
@@ -322,7 +322,7 @@ public static java.time.Duration between(java.time.temporal.Temporal startInclus
  * Gets the value of the requested unit.
  * <p>
  * This returns a value for each of the two supported units,
- * {@link java.time.temporal.ChronoUnit#SECONDS ChronoUnit#SECONDS} and {@link java.time.temporal.ChronoUnit#NANOS ChronoUnit#NANOS}.
+ * {@link java.time.temporal.ChronoUnit#SECONDS SECONDS} and {@link java.time.temporal.ChronoUnit#NANOS NANOS}.
  * All other units throw an exception.
  *
  * @param unit the {@code TemporalUnit} for which to return the value
@@ -336,8 +336,8 @@ public long get(java.time.temporal.TemporalUnit unit) { throw new RuntimeExcepti
 /**
  * Gets the set of units supported by this duration.
  * <p>
- * The supported units are {@link java.time.temporal.ChronoUnit#SECONDS ChronoUnit#SECONDS},
- * and {@link java.time.temporal.ChronoUnit#NANOS ChronoUnit#NANOS}.
+ * The supported units are {@link java.time.temporal.ChronoUnit#SECONDS SECONDS},
+ * and {@link java.time.temporal.ChronoUnit#NANOS NANOS}.
  * They are returned in the order seconds, nanos.
  * <p>
  * This set can be used in conjunction with {@link #get(java.time.temporal.TemporalUnit)}
@@ -452,7 +452,7 @@ public java.time.Duration plus(java.time.Duration duration) { throw new RuntimeE
  * <p>
  * The duration amount is measured in terms of the specified unit.
  * Only a subset of units are accepted by this method.
- * The unit must either have an {@linkplain java.time.temporal.TemporalUnit#isDurationEstimated() TemporalUnit#isDurationEstimated()} or
+ * The unit must either have an {@linkplain java.time.temporal.TemporalUnit#isDurationEstimated() exact duration} or
  * be {@link java.time.temporal.ChronoUnit#DAYS ChronoUnit#DAYS} which is treated as 24 hours. Other units throw an exception.
  * <p>
  * This instance is immutable and unaffected by this method call.
@@ -558,7 +558,7 @@ public java.time.Duration minus(java.time.Duration duration) { throw new Runtime
  * <p>
  * The duration amount is measured in terms of the specified unit.
  * Only a subset of units are accepted by this method.
- * The unit must either have an {@linkplain java.time.temporal.TemporalUnit#isDurationEstimated() TemporalUnit#isDurationEstimated()} or
+ * The unit must either have an {@linkplain java.time.temporal.TemporalUnit#isDurationEstimated() exact duration} or
  * be {@link java.time.temporal.ChronoUnit#DAYS ChronoUnit#DAYS} which is treated as 24 hours. Other units throw an exception.
  * <p>
  * This instance is immutable and unaffected by this method call.
@@ -673,6 +673,20 @@ public java.time.Duration multipliedBy(long multiplicand) { throw new RuntimeExc
  */
 
 public java.time.Duration dividedBy(long divisor) { throw new RuntimeException("Stub!"); }
+
+/**
+ * Returns number of whole times a specified Duration occurs within this Duration.
+ * <p>
+ * This instance is immutable and unaffected by this method call.
+ *
+ * @param divisor the value to divide the duration by, positive or negative, not null
+ * @return number of whole times, rounded toward zero, a specified
+ *         {@code Duration} occurs within this Duration, may be negative
+ * @throws java.lang.ArithmeticException if the divisor is zero, or if numeric overflow occurs
+ * @since 9
+ */
+
+public long dividedBy(java.time.Duration divisor) { throw new RuntimeException("Stub!"); }
 
 /**
  * Returns a copy of this duration with the length negated.
@@ -797,6 +811,19 @@ public long toHours() { throw new RuntimeException("Stub!"); }
 public long toMinutes() { throw new RuntimeException("Stub!"); }
 
 /**
+ * Gets the number of seconds in this duration.
+ * <p>
+ * This returns the total number of whole seconds in the duration.
+ * <p>
+ * This instance is immutable and unaffected by this method call.
+ *
+ * @return the whole seconds part of the length of the duration, positive or negative
+ * @since 9
+ */
+
+public long toSeconds() { throw new RuntimeException("Stub!"); }
+
+/**
  * Converts this duration to the total length in milliseconds.
  * <p>
  * If this duration is too large to fit in a {@code long} milliseconds, then an
@@ -825,12 +852,131 @@ public long toMillis() { throw new RuntimeException("Stub!"); }
 public long toNanos() { throw new RuntimeException("Stub!"); }
 
 /**
+ * Extracts the number of days in the duration.
+ * <p>
+ * This returns the total number of days in the duration by dividing the
+ * number of seconds by 86400.
+ * This is based on the standard definition of a day as 24 hours.
+ * <p>
+ * This instance is immutable and unaffected by this method call.
+ *
+ * @return the number of days in the duration, may be negative
+ * @since 9
+ */
+
+public long toDaysPart() { throw new RuntimeException("Stub!"); }
+
+/**
+ * Extracts the number of hours part in the duration.
+ * <p>
+ * This returns the number of remaining hours when dividing {@link #toHours}
+ * by hours in a day.
+ * This is based on the standard definition of a day as 24 hours.
+ * <p>
+ * This instance is immutable and unaffected by this method call.
+ *
+ * @return the number of hours part in the duration, may be negative
+ * @since 9
+ */
+
+public int toHoursPart() { throw new RuntimeException("Stub!"); }
+
+/**
+ * Extracts the number of minutes part in the duration.
+ * <p>
+ * This returns the number of remaining minutes when dividing {@link #toMinutes}
+ * by minutes in an hour.
+ * This is based on the standard definition of an hour as 60 minutes.
+ * <p>
+ * This instance is immutable and unaffected by this method call.
+ *
+ * @return the number of minutes parts in the duration, may be negative
+ * @since 9
+ */
+
+public int toMinutesPart() { throw new RuntimeException("Stub!"); }
+
+/**
+ * Extracts the number of seconds part in the duration.
+ * <p>
+ * This returns the remaining seconds when dividing {@link #toSeconds}
+ * by seconds in a minute.
+ * This is based on the standard definition of a minute as 60 seconds.
+ * <p>
+ * This instance is immutable and unaffected by this method call.
+ *
+ * @return the number of seconds parts in the duration, may be negative
+ * @since 9
+ */
+
+public int toSecondsPart() { throw new RuntimeException("Stub!"); }
+
+/**
+ * Extracts the number of milliseconds part of the duration.
+ * <p>
+ * This returns the milliseconds part by dividing the number of nanoseconds by 1,000,000.
+ * The length of the duration is stored using two fields - seconds and nanoseconds.
+ * The nanoseconds part is a value from 0 to 999,999,999 that is an adjustment to
+ * the length in seconds.
+ * The total duration is defined by calling {@link #getNano()} and {@link #getSeconds()}.
+ * <p>
+ * This instance is immutable and unaffected by this method call.
+ *
+ * @return the number of milliseconds part of the duration.
+ * @since 9
+ */
+
+public int toMillisPart() { throw new RuntimeException("Stub!"); }
+
+/**
+ * Get the nanoseconds part within seconds of the duration.
+ * <p>
+ * The length of the duration is stored using two fields - seconds and nanoseconds.
+ * The nanoseconds part is a value from 0 to 999,999,999 that is an adjustment to
+ * the length in seconds.
+ * The total duration is defined by calling {@link #getNano()} and {@link #getSeconds()}.
+ * <p>
+ * This instance is immutable and unaffected by this method call.
+ *
+ * @return the nanoseconds within the second part of the length of the duration, from 0 to 999,999,999
+ * @since 9
+ */
+
+public int toNanosPart() { throw new RuntimeException("Stub!"); }
+
+/**
+ * Returns a copy of this {@code Duration} truncated to the specified unit.
+ * <p>
+ * Truncating the duration returns a copy of the original with conceptual fields
+ * smaller than the specified unit set to zero.
+ * For example, truncating with the {@link java.time.temporal.ChronoUnit#MINUTES MINUTES} unit will
+ * round down towards zero to the nearest minute, setting the seconds and
+ * nanoseconds to zero.
+ * <p>
+ * The unit must have a {@linkplain java.time.temporal.TemporalUnit#getDuration() duration}
+ * that divides into the length of a standard day without remainder.
+ * This includes all
+ * {@linkplain java.time.temporal.ChronoUnit#isTimeBased() }}
+ * and {@link java.time.temporal.ChronoUnit#DAYS DAYS}. Other ChronoUnits throw an exception.
+ * <p>
+ * This instance is immutable and unaffected by this method call.
+ *
+ * @param unit the unit to truncate to, not null
+ * @return a {@code Duration} based on this duration with the time truncated, not null
+ * @throws java.time.DateTimeException if the unit is invalid for truncation
+ * @throws java.time.temporal.UnsupportedTemporalTypeException if the unit is not supported
+ * @since 9
+ */
+
+public java.time.Duration truncatedTo(java.time.temporal.TemporalUnit unit) { throw new RuntimeException("Stub!"); }
+
+/**
  * Compares this duration to the specified {@code Duration}.
  * <p>
  * The comparison is based on the total length of the durations.
  * It is "consistent with equals", as defined by {@link java.lang.Comparable Comparable}.
  *
- * @param otherDuration  the other duration to compare to, not null
+ * @param otherDuration the other duration to compare to, not null
  * @return the comparator value, negative if less, positive if greater
  */
 
@@ -841,7 +987,7 @@ public int compareTo(java.time.Duration otherDuration) { throw new RuntimeExcept
  * <p>
  * The comparison is based on the total length of the durations.
  *
- * @param otherDuration  the other duration, null returns false
+ * @param otherDuration the other duration, null returns false
  * @return true if the other duration is equal to this one
  */
 
@@ -861,7 +1007,7 @@ public int hashCode() { throw new RuntimeException("Stub!"); }
  * <p>
  * The format of the returned string will be {@code PTnHnMnS}, where n is
  * the relevant hours, minutes or seconds part of the duration.
- * Any fractional seconds are placed after a decimal point i the seconds section.
+ * Any fractional seconds are placed after a decimal point in the seconds section.
  * If a section has a zero value, it is omitted.
  * The hours, minutes and seconds will all have the same sign.
  * <p>
