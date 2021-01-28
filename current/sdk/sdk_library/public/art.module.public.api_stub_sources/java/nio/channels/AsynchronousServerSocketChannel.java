@@ -207,7 +207,7 @@ public final java.nio.channels.AsynchronousServerSocketChannel bind(java.net.Soc
  * @throws  java.nio.channels.UnsupportedAddressTypeException
  *          If the type of the given address is not supported
  * @throws  java.lang.SecurityException
- *          If a security manager has been installed and its {@link java.lang.SecurityManager#checkListen SecurityManager#checkListen} method denies the operation
+ *          If a security manager has been installed and its {@link java.lang.SecurityManager#checkListen checkListen} method denies the operation
  * @throws  java.nio.channels.ClosedChannelException
  *          If the channel is closed
  * @throws  java.io.IOException
@@ -234,7 +234,7 @@ public abstract <T> java.nio.channels.AsynchronousServerSocketChannel setOption(
  * the {@link java.nio.channels.AsynchronousSocketChannel AsynchronousSocketChannel} to the new connection.
  *
  * <p> When a new connection is accepted then the resulting {@code
- * AsynchronousSocketChannel} will be bound to the same {@link java.nio.channels.AsynchronousChannelGroup AsynchronousChannelGroup} as this channel. If the group is {@link java.nio.channels.AsynchronousChannelGroup#isShutdown AsynchronousChannelGroup#isShutdown} and a connection is accepted,
+ * AsynchronousSocketChannel} will be bound to the same {@link java.nio.channels.AsynchronousChannelGroup AsynchronousChannelGroup} as this channel. If the group is {@link java.nio.channels.AsynchronousChannelGroup#isShutdown shutdown} and a connection is accepted,
  * then the connection is closed, and the operation completes with an {@code
  * IOException} and cause {@link java.nio.channels.ShutdownChannelGroupException ShutdownChannelGroupException}.
  *
@@ -245,7 +245,7 @@ public abstract <T> java.nio.channels.AsynchronousServerSocketChannel setOption(
  *
  * <p> If a security manager has been installed then it verifies that the
  * address and port number of the connection's remote endpoint are permitted
- * by the security manager's {@link java.lang.SecurityManager#checkAccept SecurityManager#checkAccept}
+ * by the security manager's {@link java.lang.SecurityManager#checkAccept checkAccept}
  * method. The permission check is performed with privileges that are restricted
  * by the calling context of this method. If the permission check fails then
  * the connection is closed and the operation completes with a {@link java.lang.SecurityException SecurityException}.
@@ -275,7 +275,7 @@ public abstract <A> void accept(A attachment, java.nio.channels.CompletionHandle
  * the same manner as the {@link #accept(java.lang.Object,java.nio.channels.CompletionHandler)} method
  * except that instead of specifying a completion handler, this method
  * returns a {@code Future} representing the pending result. The {@code
- * Future}'s {@link java.util.concurrent.Future#get() Future#get()} method returns the {@link java.nio.channels.AsynchronousSocketChannel AsynchronousSocketChannel} to the new connection on successful completion.
+ * Future}'s {@link java.util.concurrent.Future#get() get} method returns the {@link java.nio.channels.AsynchronousSocketChannel AsynchronousSocketChannel} to the new connection on successful completion.
  *
  * @return  a {@code Future} object representing the pending result
  *

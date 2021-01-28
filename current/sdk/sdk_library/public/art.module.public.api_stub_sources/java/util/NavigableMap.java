@@ -110,7 +110,7 @@ public interface NavigableMap<K, V> extends java.util.SortedMap<K,V> {
  *         and this map does not permit null keys
  */
 
-@android.annotation.Nullable
+@androidx.annotation.RecentlyNullable
 public java.util.Map.Entry<K,V> lowerEntry(K key);
 
 /**
@@ -126,7 +126,7 @@ public java.util.Map.Entry<K,V> lowerEntry(K key);
  *         and this map does not permit null keys
  */
 
-@android.annotation.Nullable
+@androidx.annotation.RecentlyNullable
 public K lowerKey(K key);
 
 /**
@@ -143,7 +143,7 @@ public K lowerKey(K key);
  *         and this map does not permit null keys
  */
 
-@android.annotation.Nullable
+@androidx.annotation.RecentlyNullable
 public java.util.Map.Entry<K,V> floorEntry(K key);
 
 /**
@@ -159,7 +159,7 @@ public java.util.Map.Entry<K,V> floorEntry(K key);
  *         and this map does not permit null keys
  */
 
-@android.annotation.Nullable
+@androidx.annotation.RecentlyNullable
 public K floorKey(K key);
 
 /**
@@ -176,7 +176,7 @@ public K floorKey(K key);
  *         and this map does not permit null keys
  */
 
-@android.annotation.Nullable
+@androidx.annotation.RecentlyNullable
 public java.util.Map.Entry<K,V> ceilingEntry(K key);
 
 /**
@@ -192,7 +192,7 @@ public java.util.Map.Entry<K,V> ceilingEntry(K key);
  *         and this map does not permit null keys
  */
 
-@android.annotation.Nullable
+@androidx.annotation.RecentlyNullable
 public K ceilingKey(K key);
 
 /**
@@ -209,7 +209,7 @@ public K ceilingKey(K key);
  *         and this map does not permit null keys
  */
 
-@android.annotation.Nullable
+@androidx.annotation.RecentlyNullable
 public java.util.Map.Entry<K,V> higherEntry(K key);
 
 /**
@@ -225,7 +225,7 @@ public java.util.Map.Entry<K,V> higherEntry(K key);
  *         and this map does not permit null keys
  */
 
-@android.annotation.Nullable
+@androidx.annotation.RecentlyNullable
 public K higherKey(K key);
 
 /**
@@ -236,7 +236,7 @@ public K higherKey(K key);
  *         or {@code null} if this map is empty
  */
 
-@android.annotation.Nullable
+@androidx.annotation.RecentlyNullable
 public java.util.Map.Entry<K,V> firstEntry();
 
 /**
@@ -247,7 +247,7 @@ public java.util.Map.Entry<K,V> firstEntry();
  *         or {@code null} if this map is empty
  */
 
-@android.annotation.Nullable
+@androidx.annotation.RecentlyNullable
 public java.util.Map.Entry<K,V> lastEntry();
 
 /**
@@ -258,7 +258,7 @@ public java.util.Map.Entry<K,V> lastEntry();
  *         or {@code null} if this map is empty
  */
 
-@android.annotation.Nullable
+@androidx.annotation.RecentlyNullable
 public java.util.Map.Entry<K,V> pollFirstEntry();
 
 /**
@@ -269,7 +269,7 @@ public java.util.Map.Entry<K,V> pollFirstEntry();
  *         or {@code null} if this map is empty
  */
 
-@android.annotation.Nullable
+@androidx.annotation.RecentlyNullable
 public java.util.Map.Entry<K,V> pollLastEntry();
 
 /**
@@ -281,14 +281,14 @@ public java.util.Map.Entry<K,V> pollLastEntry();
  * operation), the results of the iteration are undefined.
  *
  * <p>The returned map has an ordering equivalent to
- * {@link java.util.Collections#reverseOrder(java.util.Comparator) Collections#reverseOrder(Comparator)}{@code (comparator())}.
+ * {@link java.util.Collections#reverseOrder(java.util.Comparator) Collections.reverseOrder}{@code (comparator())}.
  * The expression {@code m.descendingMap().descendingMap()} returns a
  * view of {@code m} essentially equivalent to {@code m}.
  *
  * @return a reverse order view of this map
  */
 
-@android.annotation.NonNull
+@androidx.annotation.RecentlyNonNull
 public java.util.NavigableMap<K,V> descendingMap();
 
 /**
@@ -306,7 +306,7 @@ public java.util.NavigableMap<K,V> descendingMap();
  * @return a navigable set view of the keys in this map
  */
 
-@android.annotation.NonNull
+@androidx.annotation.RecentlyNonNull
 public java.util.NavigableSet<K> navigableKeySet();
 
 /**
@@ -324,7 +324,7 @@ public java.util.NavigableSet<K> navigableKeySet();
  * @return a reverse order navigable set view of the keys in this map
  */
 
-@android.annotation.NonNull
+@androidx.annotation.RecentlyNonNull
 public java.util.NavigableSet<K> descendingKeySet();
 
 /**
@@ -362,7 +362,7 @@ public java.util.NavigableSet<K> descendingKeySet();
  *         outside the bounds of the range
  */
 
-@android.annotation.NonNull
+@androidx.annotation.RecentlyNonNull
 public java.util.NavigableMap<K,V> subMap(K fromKey, boolean fromInclusive, K toKey, boolean toInclusive);
 
 /**
@@ -393,7 +393,7 @@ public java.util.NavigableMap<K,V> subMap(K fromKey, boolean fromInclusive, K to
  *         bounds of the range
  */
 
-@android.annotation.NonNull
+@androidx.annotation.RecentlyNonNull
 public java.util.NavigableMap<K,V> headMap(K toKey, boolean inclusive);
 
 /**
@@ -424,7 +424,7 @@ public java.util.NavigableMap<K,V> headMap(K toKey, boolean inclusive);
  *         bounds of the range
  */
 
-@android.annotation.NonNull
+@androidx.annotation.RecentlyNonNull
 public java.util.NavigableMap<K,V> tailMap(K fromKey, boolean inclusive);
 
 /**
@@ -437,7 +437,7 @@ public java.util.NavigableMap<K,V> tailMap(K fromKey, boolean inclusive);
  * @throws java.lang.IllegalArgumentException {@inheritDoc}
  */
 
-@android.annotation.NonNull
+@androidx.annotation.RecentlyNonNull
 public java.util.SortedMap<K,V> subMap(K fromKey, K toKey);
 
 /**
@@ -450,7 +450,7 @@ public java.util.SortedMap<K,V> subMap(K fromKey, K toKey);
  * @throws java.lang.IllegalArgumentException {@inheritDoc}
  */
 
-@android.annotation.NonNull
+@androidx.annotation.RecentlyNonNull
 public java.util.SortedMap<K,V> headMap(K toKey);
 
 /**
@@ -463,7 +463,7 @@ public java.util.SortedMap<K,V> headMap(K toKey);
  * @throws java.lang.IllegalArgumentException {@inheritDoc}
  */
 
-@android.annotation.NonNull
+@androidx.annotation.RecentlyNonNull
 public java.util.SortedMap<K,V> tailMap(K fromKey);
 }
 

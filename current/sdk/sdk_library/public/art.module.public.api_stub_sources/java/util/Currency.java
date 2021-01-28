@@ -105,7 +105,7 @@ public java.lang.String getCurrencyCode() { throw new RuntimeException("Stub!");
 
 /**
  * Gets the symbol of this currency for the default
- * {@link java.util.Locale.Category#DISPLAY Locale.Category#DISPLAY} locale.
+ * {@link java.util.Locale.Category#DISPLAY DISPLAY} locale.
  * For example, for the US Dollar, the symbol is "$" if the default
  * locale is the US, while for other locales it may be "US$". If no
  * symbol can be determined, the ISO 4217 currency code is returned.
@@ -115,7 +115,7 @@ public java.lang.String getCurrencyCode() { throw new RuntimeException("Stub!");
  *     getSymbol(Locale.getDefault(Locale.Category.DISPLAY))}.
  *
  * @return the symbol of this currency for the default
- *     {@link java.util.Locale.Category#DISPLAY Locale.Category#DISPLAY} locale
+ *     {@link java.util.Locale.Category#DISPLAY DISPLAY} locale
  */
 
 public java.lang.String getSymbol() { throw new RuntimeException("Stub!"); }
@@ -157,7 +157,7 @@ public int getNumericCode() { throw new RuntimeException("Stub!"); }
 
 /**
  * Gets the name that is suitable for displaying this currency for
- * the default {@link java.util.Locale.Category#DISPLAY Locale.Category#DISPLAY} locale.
+ * the default {@link java.util.Locale.Category#DISPLAY DISPLAY} locale.
  * If there is no suitable display name found
  * for the default locale, the ISO 4217 currency code is returned.
  * <p>
@@ -166,7 +166,7 @@ public int getNumericCode() { throw new RuntimeException("Stub!"); }
  *     getDisplayName(Locale.getDefault(Locale.Category.DISPLAY))}.
  *
  * @return the display name of this currency for the default
- *     {@link java.util.Locale.Category#DISPLAY Locale.Category#DISPLAY} locale
+ *     {@link java.util.Locale.Category#DISPLAY DISPLAY} locale
  * @since 1.7
  */
 

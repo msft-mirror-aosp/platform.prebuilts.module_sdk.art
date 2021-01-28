@@ -120,17 +120,17 @@ package java.util;
 public interface Formattable {
 
 /**
- * Formats the object using the provided {@link java.util.Formatter Formatter}.
+ * Formats the object using the provided {@link java.util.Formatter formatter}.
  *
  * @param  formatter
- *         The {@link java.util.Formatter Formatter}.  Implementing classes may call
- *         {@link java.util.Formatter#out() Formatter#out()} or {@link java.util.Formatter#locale() Formatter#locale()} to obtain the {@link java.lang.Appendable Appendable} or {@link java.util.Locale Locale} used by this
+ *         The {@link java.util.Formatter formatter}.  Implementing classes may call
+ *         {@link java.util.Formatter#out() formatter.out()} or {@link java.util.Formatter#locale() formatter.locale()} to obtain the {@link java.lang.Appendable Appendable} or {@link java.util.Locale Locale} used by this
  *         <tt>formatter</tt> respectively.
  *
  * @param  flags
  *         The flags modify the output format.  The value is interpreted as
  *         a bitmask.  Any combination of the following flags may be set:
- *         {@link java.util.FormattableFlags#LEFT_JUSTIFY FormattableFlags#LEFT_JUSTIFY}, {@link java.util.FormattableFlags#UPPERCASE FormattableFlags#UPPERCASE}, and {@link java.util.FormattableFlags#ALTERNATE FormattableFlags#ALTERNATE}.  If no flags are set, the default
+ *         {@link java.util.FormattableFlags#LEFT_JUSTIFY FormattableFlags#LEFT_JUSTIFY}, {@link java.util.FormattableFlags#UPPERCASE          }, and {@link java.util.FormattableFlags#ALTERNATE          }.  If no flags are set, the default
  *         formatting of the implementing class will apply.
  *
  * @param  width

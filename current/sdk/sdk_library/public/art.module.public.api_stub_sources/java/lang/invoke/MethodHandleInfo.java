@@ -33,7 +33,7 @@ import java.lang.invoke.MethodHandles.Lookup;
 /**
  * A symbolic reference obtained by cracking a direct method handle
  * into its consitutent symbolic parts.
- * To crack a direct method handle, call {@link java.lang.invoke.MethodHandles.Lookup#revealDirect Lookup#revealDirect}.
+ * To crack a direct method handle, call {@link java.lang.invoke.MethodHandles.Lookup#revealDirect Lookup.revealDirect}.
  * <h1><a name="directmh"></a>Direct Method Handles</h1>
  * A <em>direct method handle</em> represents a method, constructor, or field without
  * any intervening argument bindings or other transformations.
@@ -44,16 +44,16 @@ import java.lang.invoke.MethodHandles.Lookup;
  * <li>By executing an {@code ldc} instruction on a {@code CONSTANT_MethodHandle} constant.
  *     (See the Java Virtual Machine Specification, sections 4.4.8 and 5.4.3.)
  * <li>By calling one of the <a href="MethodHandles.Lookup.html#lookups">Lookup Factory Methods</a>,
- *     such as {@link java.lang.invoke.MethodHandles.Lookup#findVirtual Lookup#findVirtual},
+ *     such as {@link java.lang.invoke.MethodHandles.Lookup#findVirtual Lookup.findVirtual},
  *     to resolve a symbolic reference into a method handle.
  *     A symbolic reference consists of a class, name string, and type.
- * <li>By calling the factory method {@link java.lang.invoke.MethodHandles.Lookup#unreflect Lookup#unreflect}
- *     or {@link java.lang.invoke.MethodHandles.Lookup#unreflectSpecial Lookup#unreflectSpecial}
+ * <li>By calling the factory method {@link java.lang.invoke.MethodHandles.Lookup#unreflect Lookup.unreflect}
+ *     or {@link java.lang.invoke.MethodHandles.Lookup#unreflectSpecial Lookup.unreflectSpecial}
  *     to convert a {@link java.lang.reflect.Method Method} into a method handle.
- * <li>By calling the factory method {@link java.lang.invoke.MethodHandles.Lookup#unreflectConstructor Lookup#unreflectConstructor}
+ * <li>By calling the factory method {@link java.lang.invoke.MethodHandles.Lookup#unreflectConstructor Lookup.unreflectConstructor}
  *     to convert a {@link java.lang.reflect.Constructor Constructor} into a method handle.
- * <li>By calling the factory method {@link java.lang.invoke.MethodHandles.Lookup#unreflectGetter Lookup#unreflectGetter}
- *     or {@link java.lang.invoke.MethodHandles.Lookup#unreflectSetter Lookup#unreflectSetter}
+ * <li>By calling the factory method {@link java.lang.invoke.MethodHandles.Lookup#unreflectGetter Lookup.unreflectGetter}
+ *     or {@link java.lang.invoke.MethodHandles.Lookup#unreflectSetter Lookup.unreflectSetter}
  *     to convert a {@link java.lang.reflect.Field Field} into a method handle.
  * </ul>
  *

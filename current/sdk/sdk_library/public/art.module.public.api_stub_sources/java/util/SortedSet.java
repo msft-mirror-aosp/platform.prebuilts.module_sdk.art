@@ -29,7 +29,7 @@ package java.util;
 
 /**
  * A {@link java.util.Set Set} that further provides a <i>total ordering</i> on its elements.
- * The elements are ordered using their {@linkplain java.lang.Comparable Comparable}, or by a {@link java.util.Comparator Comparator} typically provided at sorted
+ * The elements are ordered using their {@linkplain java.lang.Comparable  ordering}, or by a {@link java.util.Comparator Comparator} typically provided at sorted
  * set creation time.  The set's iterator will traverse the set in
  * ascending element order. Several additional operations are provided
  * to take advantage of the ordering.  (This interface is the set
@@ -111,7 +111,7 @@ public interface SortedSet<E> extends java.util.Set<E> {
 
 /**
  * Returns the comparator used to order the elements in this set,
- * or <tt>null</tt> if this set uses the {@linkplain java.lang.Comparable Comparable} of its elements.
+ * or <tt>null</tt> if this set uses the {@linkplain java.lang.Comparable  natural ordering} of its elements.
  *
  * @return the comparator used to order the elements in this set,
  *         or <tt>null</tt> if this set uses the natural ordering

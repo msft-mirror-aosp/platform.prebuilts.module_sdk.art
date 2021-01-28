@@ -115,7 +115,7 @@ private LocalDateTime() { throw new RuntimeException("Stub!"); }
 /**
  * Obtains the current date-time from the system clock in the default time-zone.
  * <p>
- * This will query the {@link java.time.Clock#systemDefaultZone() Clock#systemDefaultZone()} in the default
+ * This will query the {@link java.time.Clock#systemDefaultZone() system clock} in the default
  * time-zone to obtain the current date-time.
  * <p>
  * Using this method will prevent the ability to use an alternate clock for testing
@@ -129,7 +129,7 @@ public static java.time.LocalDateTime now() { throw new RuntimeException("Stub!"
 /**
  * Obtains the current date-time from the system clock in the specified time-zone.
  * <p>
- * This will query the {@link java.time.Clock#system(java.time.ZoneId) Clock#system(ZoneId)} to obtain the current date-time.
+ * This will query the {@link java.time.Clock#system(java.time.ZoneId) system clock} to obtain the current date-time.
  * Specifying the time-zone avoids dependence on the default time-zone.
  * <p>
  * Using this method will prevent the ability to use an alternate clock for testing
@@ -146,7 +146,7 @@ public static java.time.LocalDateTime now(java.time.ZoneId zone) { throw new Run
  * <p>
  * This will query the specified clock to obtain the current date-time.
  * Using this method allows the use of an alternate clock for testing.
- * The alternate clock may be introduced using {@link java.time.Clock Clock}.
+ * The alternate clock may be introduced using {@link java.time.Clock dependency injection}.
  *
  * @param clock  the clock to use, not null
  * @return the current date-time, not null
@@ -314,7 +314,7 @@ public static java.time.LocalDateTime ofInstant(java.time.Instant instant, java.
  * Obtains an instance of {@code LocalDateTime} using seconds from the
  * epoch of 1970-01-01T00:00:00Z.
  * <p>
- * This allows the {@link java.time.temporal.ChronoField#INSTANT_SECONDS ChronoField#INSTANT_SECONDS} field
+ * This allows the {@link java.time.temporal.ChronoField#INSTANT_SECONDS epoch-second} field
  * to be converted to a local date-time. This is primarily intended for
  * low-level conversions rather than general application usage.
  *
@@ -594,7 +594,7 @@ public int getMonthValue() { throw new RuntimeException("Stub!"); }
  * This method returns the enum {@link java.time.Month Month} for the month.
  * This avoids confusion as to what {@code int} values mean.
  * If you need access to the primitive {@code int} value then the enum
- * provides the {@link java.time.Month#getValue() Month#getValue()}.
+ * provides the {@link java.time.Month#getValue() int value}.
  *
  * @return the month-of-year, not null
  * @see #getMonthValue()
@@ -628,7 +628,7 @@ public int getDayOfYear() { throw new RuntimeException("Stub!"); }
  * This method returns the enum {@link java.time.DayOfWeek DayOfWeek} for the day-of-week.
  * This avoids confusion as to what {@code int} values mean.
  * If you need access to the primitive {@code int} value then the enum
- * provides the {@link java.time.DayOfWeek#getValue() DayOfWeek#getValue()}.
+ * provides the {@link java.time.DayOfWeek#getValue() int value}.
  * <p>
  * Additional information can be obtained from the {@code DayOfWeek}.
  * This includes textual names of the values.
@@ -744,8 +744,8 @@ public java.time.LocalDateTime with(java.time.temporal.TemporalAdjuster adjuster
  * <p>
  * If the field is a {@link java.time.temporal.ChronoField ChronoField} then the adjustment is implemented here.
  * The {@link #isSupported(java.time.temporal.TemporalField) supported fields} will behave as per
- * the matching method on {@link java.time.LocalDate#with(java.time.temporal.TemporalField,long) LocalDate#with(TemporalField, long)}
- * or {@link java.time.LocalTime#with(java.time.temporal.TemporalField,long) LocalTime#with(TemporalField, long)}.
+ * the matching method on {@link java.time.LocalDate#with(java.time.temporal.TemporalField,long) LocalDate}
+ * or {@link java.time.LocalTime#with(java.time.temporal.TemporalField,long) LocalTime}.
  * All other {@code ChronoField} instances will throw an {@code UnsupportedTemporalTypeException}.
  * <p>
  * If the field is not a {@code ChronoField}, then the result of this method
@@ -879,13 +879,13 @@ public java.time.LocalDateTime withNano(int nanoOfSecond) { throw new RuntimeExc
  * <p>
  * Truncation returns a copy of the original date-time with fields
  * smaller than the specified unit set to zero.
- * For example, truncating with the {@link java.time.temporal.ChronoUnit#MINUTES ChronoUnit#MINUTES} unit
+ * For example, truncating with the {@link java.time.temporal.ChronoUnit#MINUTES minutes} unit
  * will set the second-of-minute and nano-of-second field to zero.
  * <p>
- * The unit must have a {@linkplain java.time.temporal.TemporalUnit#getDuration() TemporalUnit#getDuration()}
+ * The unit must have a {@linkplain java.time.temporal.TemporalUnit#getDuration() duration}
  * that divides into the length of a standard day without remainder.
  * This includes all supplied time units on {@link java.time.temporal.ChronoUnit ChronoUnit} and
- * {@link java.time.temporal.ChronoUnit#DAYS ChronoUnit#DAYS}. Other units throw an exception.
+ * {@link java.time.temporal.ChronoUnit#DAYS DAYS}. Other units throw an exception.
  * <p>
  * This instance is immutable and unaffected by this method call.
  *
@@ -1389,7 +1389,7 @@ public java.time.OffsetDateTime atOffset(java.time.ZoneOffset offset) { throw ne
  * <p>
  * The local date-time is resolved to a single instant on the time-line.
  * This is achieved by finding a valid offset from UTC/Greenwich for the local
- * date-time as defined by the {@link java.time.zone.ZoneRules ZoneRules} of the zone ID.
+ * date-time as defined by the {@link java.time.zone.ZoneRules rules} of the zone ID.
  *<p>
  * In most cases, there is only one valid offset for a local date-time.
  * In the case of an overlap, where clocks are set back, there are two valid offsets.

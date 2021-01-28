@@ -72,7 +72,7 @@ package java.util;
  * secure.  Consider instead using {@link java.security.SecureRandom}
  * in security-sensitive applications. Additionally,
  * default-constructed instances do not use a cryptographically random
- * seed unless the {@linkplain java.lang.System#getProperty System#getProperty}
+ * seed unless the {@linkplain java.lang.System#getProperty system property}
  * {@code java.util.secureRandomSeed} is set to {@code true}.
  *
  * @author  Guy Steele

@@ -50,7 +50,7 @@ public interface Iterable<T> {
  * @return an Iterator.
  */
 
-@android.annotation.NonNull
+@androidx.annotation.RecentlyNonNull
 public java.util.Iterator<T> iterator();
 
 /**
@@ -73,7 +73,7 @@ public java.util.Iterator<T> iterator();
  * @since 1.8
  */
 
-public default void forEach(@android.annotation.NonNull java.util.function.Consumer<? super T> action) { throw new RuntimeException("Stub!"); }
+public default void forEach(@androidx.annotation.RecentlyNonNull java.util.function.Consumer<? super T> action) { throw new RuntimeException("Stub!"); }
 
 /**
  * Creates a {@link java.util.Spliterator Spliterator} over the elements described by this
@@ -97,7 +97,7 @@ public default void forEach(@android.annotation.NonNull java.util.function.Consu
  * @since 1.8
  */
 
-@android.annotation.NonNull
+@androidx.annotation.RecentlyNonNull
 public default java.util.Spliterator<T> spliterator() { throw new RuntimeException("Stub!"); }
 }
 

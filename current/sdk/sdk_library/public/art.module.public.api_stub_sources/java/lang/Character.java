@@ -150,7 +150,7 @@ public Character(char value) { throw new RuntimeException("Stub!"); }
  * @since  1.5
  */
 
-@android.annotation.NonNull
+@androidx.annotation.RecentlyNonNull
 public static java.lang.Character valueOf(char c) { throw new RuntimeException("Stub!"); }
 
 /**
@@ -193,7 +193,7 @@ public static int hashCode(char value) { throw new RuntimeException("Stub!"); }
  *          {@code false} otherwise.
  */
 
-public boolean equals(@android.annotation.Nullable java.lang.Object obj) { throw new RuntimeException("Stub!"); }
+public boolean equals(@androidx.annotation.RecentlyNullable java.lang.Object obj) { throw new RuntimeException("Stub!"); }
 
 /**
  * Returns a {@code String} object representing this
@@ -205,7 +205,7 @@ public boolean equals(@android.annotation.Nullable java.lang.Object obj) { throw
  * @return  a string representation of this object.
  */
 
-@android.annotation.NonNull
+@androidx.annotation.RecentlyNonNull
 public java.lang.String toString() { throw new RuntimeException("Stub!"); }
 
 /**
@@ -218,7 +218,7 @@ public java.lang.String toString() { throw new RuntimeException("Stub!"); }
  * @since 1.4
  */
 
-@android.annotation.NonNull
+@androidx.annotation.RecentlyNonNull
 public static java.lang.String toString(char c) { throw new RuntimeException("Stub!"); }
 
 /**
@@ -406,11 +406,11 @@ public static int toCodePoint(char high, char low) { throw new RuntimeException(
  * @exception java.lang.NullPointerException if {@code seq} is null.
  * @exception java.lang.IndexOutOfBoundsException if the value
  * {@code index} is negative or not less than
- * {@link java.lang.CharSequence#length() CharSequence#length()}.
+ * {@link java.lang.CharSequence#length() seq.length()}.
  * @since  1.5
  */
 
-public static int codePointAt(@android.annotation.NonNull java.lang.CharSequence seq, int index) { throw new RuntimeException("Stub!"); }
+public static int codePointAt(@androidx.annotation.RecentlyNonNull java.lang.CharSequence seq, int index) { throw new RuntimeException("Stub!"); }
 
 /**
  * Returns the code point at the given index of the
@@ -481,11 +481,11 @@ public static int codePointAt(char[] a, int index, int limit) { throw new Runtim
  * @return the Unicode code point value before the given index.
  * @exception java.lang.NullPointerException if {@code seq} is null.
  * @exception java.lang.IndexOutOfBoundsException if the {@code index}
- * argument is less than 1 or greater than {@link java.lang.CharSequence#length() CharSequence#length()}.
+ * argument is less than 1 or greater than {@link java.lang.CharSequence#length() seq.length()}.
  * @since  1.5
  */
 
-public static int codePointBefore(@android.annotation.NonNull java.lang.CharSequence seq, int index) { throw new RuntimeException("Stub!"); }
+public static int codePointBefore(@androidx.annotation.RecentlyNonNull java.lang.CharSequence seq, int index) { throw new RuntimeException("Stub!"); }
 
 /**
  * Returns the code point preceding the given index of the
@@ -672,7 +672,7 @@ public static char[] toChars(int codePoint) { throw new RuntimeException("Stub!"
  * @since  1.5
  */
 
-public static int codePointCount(@android.annotation.NonNull java.lang.CharSequence seq, int beginIndex, int endIndex) { throw new RuntimeException("Stub!"); }
+public static int codePointCount(@androidx.annotation.RecentlyNonNull java.lang.CharSequence seq, int beginIndex, int endIndex) { throw new RuntimeException("Stub!"); }
 
 /**
  * Returns the number of Unicode code points in a subarray of the
@@ -719,7 +719,7 @@ public static int codePointCount(char[] a, int offset, int count) { throw new Ru
  * @since 1.5
  */
 
-public static int offsetByCodePoints(@android.annotation.NonNull java.lang.CharSequence seq, int index, int codePointOffset) { throw new RuntimeException("Stub!"); }
+public static int offsetByCodePoints(@androidx.annotation.RecentlyNonNull java.lang.CharSequence seq, int index, int codePointOffset) { throw new RuntimeException("Stub!"); }
 
 /**
  * Returns the index within the given {@code char} subarray
@@ -796,7 +796,7 @@ public static boolean isLowerCase(char ch) { throw new RuntimeException("Stub!")
  * lowercase character.
  * <p>
  * A character is lowercase if its general category type, provided
- * by {@link java.lang.Character#getType Character#getType}, is
+ * by {@link java.lang.Character#getType getType(codePoint)}, is
  * {@code LOWERCASE_LETTER}, or it has contributory property
  * Other_Lowercase as defined by the Unicode Standard.
  * <p>
@@ -860,7 +860,7 @@ public static boolean isUpperCase(char ch) { throw new RuntimeException("Stub!")
  * Determines if the specified character (Unicode code point) is an uppercase character.
  * <p>
  * A character is uppercase if its general category type, provided by
- * {@link java.lang.Character#getType(int) Character#getType(int)}, is {@code UPPERCASE_LETTER},
+ * {@link java.lang.Character#getType(int) getType(codePoint)}, is {@code UPPERCASE_LETTER},
  * or it has contributory property Other_Uppercase as defined by the Unicode Standard.
  * <p>
  * The following are examples of uppercase characters:
@@ -929,7 +929,7 @@ public static boolean isTitleCase(char ch) { throw new RuntimeException("Stub!")
  * Determines if the specified character (Unicode code point) is a titlecase character.
  * <p>
  * A character is a titlecase character if its general
- * category type, provided by {@link java.lang.Character#getType(int) Character#getType(int)},
+ * category type, provided by {@link java.lang.Character#getType(int) getType(codePoint)},
  * is {@code TITLECASE_LETTER}.
  * <p>
  * Some characters look like pairs of Latin letters. For example, there
@@ -1002,7 +1002,7 @@ public static boolean isDigit(char ch) { throw new RuntimeException("Stub!"); }
  * Determines if the specified character (Unicode code point) is a digit.
  * <p>
  * A character is a digit if its general category type, provided
- * by {@link java.lang.Character#getType(int) Character#getType(int)}, is
+ * by {@link java.lang.Character#getType(int) getType(codePoint)}, is
  * {@code DECIMAL_DIGIT_NUMBER}.
  * <p>
  * Some Unicode character ranges that contain digits:
@@ -1124,7 +1124,7 @@ public static boolean isLetter(char ch) { throw new RuntimeException("Stub!"); }
  * Determines if the specified character (Unicode code point) is a letter.
  * <p>
  * A character is considered to be a letter if its general
- * category type, provided by {@link java.lang.Character#getType(int) Character#getType(int)},
+ * category type, provided by {@link java.lang.Character#getType(int) getType(codePoint)},
  * is any of the following:
  * <ul>
  * <li> {@code UPPERCASE_LETTER}
@@ -1267,7 +1267,7 @@ public static boolean isJavaLetterOrDigit(char ch) { throw new RuntimeException(
  * Determines if the specified character (Unicode code point) is an alphabet.
  * <p>
  * A character is considered to be alphabetic if its general category type,
- * provided by {@link java.lang.Character#getType(int) Character#getType(int)}, is any of
+ * provided by {@link java.lang.Character#getType(int) getType(codePoint)}, is any of
  * the following:
  * <ul>
  * <li> <code>UPPERCASE_LETTER</code>
@@ -2372,7 +2372,7 @@ public static boolean isMirrored(int codePoint) { throw new RuntimeException("St
  * @since   1.2
  */
 
-public int compareTo(@android.annotation.NonNull java.lang.Character anotherCharacter) { throw new RuntimeException("Stub!"); }
+public int compareTo(@androidx.annotation.RecentlyNonNull java.lang.Character anotherCharacter) { throw new RuntimeException("Stub!"); }
 
 /**
  * Compares two {@code char} values numerically.
@@ -2432,7 +2432,7 @@ public static char reverseBytes(char ch) { throw new RuntimeException("Stub!"); 
  * @since 1.7
  */
 
-@android.annotation.Nullable
+@androidx.annotation.RecentlyNullable
 public static java.lang.String getName(int codePoint) { throw new RuntimeException("Stub!"); }
 
 /**
@@ -2977,7 +2977,7 @@ public static class Subset {
  * @exception java.lang.NullPointerException if name is {@code null}
  */
 
-protected Subset(@android.annotation.NonNull java.lang.String name) { throw new RuntimeException("Stub!"); }
+protected Subset(@androidx.annotation.RecentlyNonNull java.lang.String name) { throw new RuntimeException("Stub!"); }
 
 /**
  * Compares two {@code Subset} objects for equality.
@@ -2987,7 +2987,7 @@ protected Subset(@android.annotation.NonNull java.lang.String name) { throw new 
  * guarantee holds for all subclasses.
  */
 
-public final boolean equals(@android.annotation.Nullable java.lang.Object obj) { throw new RuntimeException("Stub!"); }
+public final boolean equals(@androidx.annotation.RecentlyNullable java.lang.Object obj) { throw new RuntimeException("Stub!"); }
 
 /**
  * Returns the standard hash code as defined by the
@@ -3003,7 +3003,7 @@ public final int hashCode() { throw new RuntimeException("Stub!"); }
  * Returns the name of this subset.
  */
 
-@android.annotation.NonNull
+@androidx.annotation.RecentlyNonNull
 public final java.lang.String toString() { throw new RuntimeException("Stub!"); }
 }
 
@@ -3038,7 +3038,7 @@ private UnicodeBlock() { super(null); throw new RuntimeException("Stub!"); }
  *          Unicode block
  */
 
-@android.annotation.Nullable
+@androidx.annotation.RecentlyNullable
 public static java.lang.Character.UnicodeBlock of(char c) { throw new RuntimeException("Stub!"); }
 
 /**
@@ -3058,7 +3058,7 @@ public static java.lang.Character.UnicodeBlock of(char c) { throw new RuntimeExc
  * @since   1.5
  */
 
-@android.annotation.Nullable
+@androidx.annotation.RecentlyNullable
 public static java.lang.Character.UnicodeBlock of(int codePoint) { throw new RuntimeException("Stub!"); }
 
 /**
@@ -3098,8 +3098,8 @@ public static java.lang.Character.UnicodeBlock of(int codePoint) { throw new Run
  * @since 1.5
  */
 
-@android.annotation.NonNull
-public static java.lang.Character.UnicodeBlock forName(@android.annotation.NonNull java.lang.String blockName) { throw new RuntimeException("Stub!"); }
+@androidx.annotation.RecentlyNonNull
+public static java.lang.Character.UnicodeBlock forName(@androidx.annotation.RecentlyNonNull java.lang.String blockName) { throw new RuntimeException("Stub!"); }
 
 /**
  * Constant for the "Aegean Numbers" Unicode character block.
@@ -4919,11 +4919,11 @@ static { YI_SYLLABLES = null; }
  * defined in the <a href="http://www.unicode.org/reports/tr24/">
  * <i>Unicode Standard Annex #24: Script Names</i></a>. Every Unicode
  * character is assigned to a single Unicode script, either a specific
- * script, such as {@link java.lang.Character.UnicodeScript#LATIN Character.UnicodeScript#LATIN}, or
+ * script, such as {@link java.lang.Character.UnicodeScript#LATIN Latin}, or
  * one of the following three special values,
- * {@link java.lang.Character.UnicodeScript#INHERITED Character.UnicodeScript#INHERITED},
- * {@link java.lang.Character.UnicodeScript#COMMON Character.UnicodeScript#COMMON} or
- * {@link java.lang.Character.UnicodeScript#UNKNOWN Character.UnicodeScript#UNKNOWN}.
+ * {@link java.lang.Character.UnicodeScript#INHERITED Inherited},
+ * {@link java.lang.Character.UnicodeScript#COMMON Common} or
+ * {@link java.lang.Character.UnicodeScript#UNKNOWN Unknown}.
  *
  * @since 1.7
  */
@@ -5460,7 +5460,7 @@ UNKNOWN;
  *
  */
 
-@android.annotation.NonNull
+@androidx.annotation.RecentlyNonNull
 public static java.lang.Character.UnicodeScript of(int codePoint) { throw new RuntimeException("Stub!"); }
 
 /**
@@ -5485,8 +5485,8 @@ public static java.lang.Character.UnicodeScript of(int codePoint) { throw new Ru
  * @throws java.lang.NullPointerException if {@code scriptName} is null
  */
 
-@android.annotation.NonNull
-public static java.lang.Character.UnicodeScript forName(@android.annotation.NonNull java.lang.String scriptName) { throw new RuntimeException("Stub!"); }
+@androidx.annotation.RecentlyNonNull
+public static java.lang.Character.UnicodeScript forName(@androidx.annotation.RecentlyNonNull java.lang.String scriptName) { throw new RuntimeException("Stub!"); }
 }
 
 }

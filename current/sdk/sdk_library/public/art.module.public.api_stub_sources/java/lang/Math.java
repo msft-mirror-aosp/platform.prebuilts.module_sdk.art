@@ -1,6 +1,6 @@
 /*
  * Copyright (C) 2014 The Android Open Source Project
- * Copyright (c) 1994, 2013, Oracle and/or its affiliates. All rights reserved.
+ * Copyright (c) 1994, 2017, Oracle and/or its affiliates. All rights reserved.
  * DO NOT ALTER OR REMOVE COPYRIGHT NOTICES OR THIS FILE HEADER.
  *
  * This code is free software; you can redistribute it and/or modify it
@@ -93,13 +93,13 @@ import java.util.Random;
  * {@code subtractExact}, {@code multiplyExact}, and {@code toIntExact}
  * throw an {@code ArithmeticException} when the results overflow.
  * For other arithmetic operations such as divide, absolute value,
- * increment, decrement, and negation overflow occurs only with
+ * increment by one, decrement by one, and negation, overflow occurs only with
  * a specific minimum or maximum value and should be checked against
  * the minimum or maximum as appropriate.
  *
  * @author  unascribed
  * @author  Joseph D. Darcy
- * @since   JDK1.0
+ * @since   1.0
  */
 
 @SuppressWarnings({"unchecked", "deprecation", "all"})
@@ -745,6 +745,19 @@ public static long subtractExact(long x, long y) { throw new RuntimeException("S
 public static int multiplyExact(int x, int y) { throw new RuntimeException("Stub!"); }
 
 /**
+ * Returns the product of the arguments, throwing an exception if the result
+ * overflows a {@code long}.
+ *
+ * @param x the first value
+ * @param y the second value
+ * @return the result
+ * @throws java.lang.ArithmeticException if the result overflows a long
+ * @since 9
+ */
+
+public static long multiplyExact(long x, int y) { throw new RuntimeException("Stub!"); }
+
+/**
  * Returns the product of the arguments,
  * throwing an exception if the result overflows a {@code long}.
  *
@@ -842,17 +855,40 @@ public static long negateExact(long a) { throw new RuntimeException("Stub!"); }
 public static int toIntExact(long value) { throw new RuntimeException("Stub!"); }
 
 /**
+ * Returns the exact mathematical product of the arguments.
+ *
+ * @param x the first value
+ * @param y the second value
+ * @return the result
+ * @since 9
+ */
+
+public static long multiplyFull(int x, int y) { throw new RuntimeException("Stub!"); }
+
+/**
+ * Returns as a {@code long} the most significant 64 bits of the 128-bit
+ * product of two 64-bit factors.
+ *
+ * @param x the first value
+ * @param y the second value
+ * @return the result
+ * @since 9
+ */
+
+public static long multiplyHigh(long x, long y) { throw new RuntimeException("Stub!"); }
+
+/**
  * Returns the largest (closest to positive infinity)
  * {@code int} value that is less than or equal to the algebraic quotient.
  * There is one special case, if the dividend is the
- * {@linkplain java.lang.Integer#MIN_VALUE Integer#MIN_VALUE} and the divisor is {@code -1},
+ * {@linkplain java.lang.Integer#MIN_VALUE Integer.MIN_VALUE} and the divisor is {@code -1},
  * then integer overflow occurs and
- * the result is equal to the {@code Integer.MIN_VALUE}.
+ * the result is equal to {@code Integer.MIN_VALUE}.
  * <p>
  * Normal integer division operates under the round to zero rounding mode
  * (truncation).  This operation instead acts under the round toward
  * negative infinity (floor) rounding mode.
- * The floor rounding mode gives different results than truncation
+ * The floor rounding mode gives different results from truncation
  * when the exact result is negative.
  * <ul>
  *   <li>If the signs of the arguments are the same, the results of
@@ -883,14 +919,42 @@ public static int floorDiv(int x, int y) { throw new RuntimeException("Stub!"); 
  * Returns the largest (closest to positive infinity)
  * {@code long} value that is less than or equal to the algebraic quotient.
  * There is one special case, if the dividend is the
- * {@linkplain java.lang.Long#MIN_VALUE Long#MIN_VALUE} and the divisor is {@code -1},
+ * {@linkplain java.lang.Long#MIN_VALUE Long.MIN_VALUE} and the divisor is {@code -1},
  * then integer overflow occurs and
- * the result is equal to the {@code Long.MIN_VALUE}.
+ * the result is equal to {@code Long.MIN_VALUE}.
  * <p>
  * Normal integer division operates under the round to zero rounding mode
  * (truncation).  This operation instead acts under the round toward
  * negative infinity (floor) rounding mode.
- * The floor rounding mode gives different results than truncation
+ * The floor rounding mode gives different results from truncation
+ * when the exact result is negative.
+ * <p>
+ * For examples, see {@link #floorDiv(int,int)}.
+ *
+ * @param x the dividend
+ * @param y the divisor
+ * @return the largest (closest to positive infinity)
+ * {@code int} value that is less than or equal to the algebraic quotient.
+ * @throws java.lang.ArithmeticException if the divisor {@code y} is zero
+ * @see #floorMod(long, int)
+ * @see #floor(double)
+ * @since 9
+ */
+
+public static long floorDiv(long x, int y) { throw new RuntimeException("Stub!"); }
+
+/**
+ * Returns the largest (closest to positive infinity)
+ * {@code long} value that is less than or equal to the algebraic quotient.
+ * There is one special case, if the dividend is the
+ * {@linkplain java.lang.Long#MIN_VALUE Long.MIN_VALUE} and the divisor is {@code -1},
+ * then integer overflow occurs and
+ * the result is equal to {@code Long.MIN_VALUE}.
+ * <p>
+ * Normal integer division operates under the round to zero rounding mode
+ * (truncation).  This operation instead acts under the round toward
+ * negative infinity (floor) rounding mode.
+ * The floor rounding mode gives different results from truncation
  * when the exact result is negative.
  * <p>
  * For examples, see {@link #floorDiv(int,int)}.
@@ -953,6 +1017,31 @@ public static long floorDiv(long x, long y) { throw new RuntimeException("Stub!"
  */
 
 public static int floorMod(int x, int y) { throw new RuntimeException("Stub!"); }
+
+/**
+ * Returns the floor modulus of the {@code long} and {@code int} arguments.
+ * <p>
+ * The floor modulus is {@code x - (floorDiv(x, y) * y)},
+ * has the same sign as the divisor {@code y}, and
+ * is in the range of {@code -abs(y) < r < +abs(y)}.
+ *
+ * <p>
+ * The relationship between {@code floorDiv} and {@code floorMod} is such that:
+ * <ul>
+ *   <li>{@code floorDiv(x, y) * y + floorMod(x, y) == x}
+ * </ul>
+ * <p>
+ * For examples, see {@link #floorMod(int,int)}.
+ *
+ * @param x the dividend
+ * @param y the divisor
+ * @return the floor modulus {@code x - (floorDiv(x, y) * y)}
+ * @throws java.lang.ArithmeticException if the divisor {@code y} is zero
+ * @see #floorDiv(long, int)
+ * @since 9
+ */
+
+public static int floorMod(long x, int y) { throw new RuntimeException("Stub!"); }
 
 /**
  * Returns the floor modulus of the {@code long} arguments.
@@ -1263,7 +1352,7 @@ public static float signum(float f) { throw new RuntimeException("Stub!"); }
  * Returns the hyperbolic sine of a {@code double} value.
  * The hyperbolic sine of <i>x</i> is defined to be
  * (<i>e<sup>x</sup>&nbsp;-&nbsp;e<sup>-x</sup></i>)/2
- * where <i>e</i> is {@linkplain java.lang.Math#E Math#E}.
+ * where <i>e</i> is {@linkplain java.lang.Math#E Euler's number}.
  *
  * <p>Special cases:
  * <ul>
@@ -1291,7 +1380,7 @@ public static native double sinh(double x);
  * Returns the hyperbolic cosine of a {@code double} value.
  * The hyperbolic cosine of <i>x</i> is defined to be
  * (<i>e<sup>x</sup>&nbsp;+&nbsp;e<sup>-x</sup></i>)/2
- * where <i>e</i> is {@linkplain java.lang.Math#E Math#E}.
+ * where <i>e</i> is {@linkplain java.lang.Math#E Euler's number}.
  *
  * <p>Special cases:
  * <ul>
@@ -1318,7 +1407,7 @@ public static native double cosh(double x);
  * Returns the hyperbolic tangent of a {@code double} value.
  * The hyperbolic tangent of <i>x</i> is defined to be
  * (<i>e<sup>x</sup>&nbsp;-&nbsp;e<sup>-x</sup></i>)/(<i>e<sup>x</sup>&nbsp;+&nbsp;e<sup>-x</sup></i>),
- * in other words, {@linkplain java.lang.Math#sinh Math#sinh}/{@linkplain java.lang.Math#cosh Math#cosh}.  Note
+ * in other words, {@linkplain java.lang.Math#sinh  sinh(<i>x</i>)}/{@linkplain java.lang.Math#cosh cosh(<i>x</i>)}.  Note
  * that the absolute value of the exact tanh is always less than
  * 1.
  *
@@ -1455,7 +1544,7 @@ public static native double log1p(double x);
 
 /**
  * Returns the first floating-point argument with the sign of the
- * second floating-point argument.  Note that unlike the {@link java.lang.StrictMath#copySign(double,double) StrictMath#copySign(double, double)}
+ * second floating-point argument.  Note that unlike the {@link java.lang.StrictMath#copySign(double,double) StrictMath.copySign}
  * method, this method does not require NaN {@code sign}
  * arguments to be treated as positive values; implementations are
  * permitted to treat some NaN arguments as positive and other NaN
@@ -1472,7 +1561,7 @@ public static double copySign(double magnitude, double sign) { throw new Runtime
 
 /**
  * Returns the first floating-point argument with the sign of the
- * second floating-point argument.  Note that unlike the {@link java.lang.StrictMath#copySign(float,float) StrictMath#copySign(float, float)}
+ * second floating-point argument.  Note that unlike the {@link java.lang.StrictMath#copySign(float,float) StrictMath.copySign}
  * method, this method does not require NaN {@code sign}
  * arguments to be treated as positive values; implementations are
  * permitted to treat some NaN arguments as positive and other NaN
@@ -1724,7 +1813,7 @@ public static float nextDown(float f) { throw new RuntimeException("Stub!"); }
  * by a single correctly rounded floating-point multiply to a
  * member of the double value set.  See the Java
  * Language Specification for a discussion of floating-point
- * value sets.  If the exponent of the result is between {@link java.lang.Double#MIN_EXPONENT Double#MIN_EXPONENT} and {@link java.lang.Double#MAX_EXPONENT Double#MAX_EXPONENT}, the
+ * value sets.  If the exponent of the result is between {@link java.lang.Double#MIN_EXPONENT  } and {@link java.lang.Double#MAX_EXPONENT Double#MAX_EXPONENT}, the
  * answer is calculated exactly.  If the exponent of the result
  * would be larger than {@code Double.MAX_EXPONENT}, an
  * infinity is returned.  Note that if the result is subnormal,
@@ -1756,7 +1845,7 @@ public static double scalb(double d, int scaleFactor) { throw new RuntimeExcepti
  * by a single correctly rounded floating-point multiply to a
  * member of the float value set.  See the Java
  * Language Specification for a discussion of floating-point
- * value sets.  If the exponent of the result is between {@link java.lang.Float#MIN_EXPONENT Float#MIN_EXPONENT} and {@link java.lang.Float#MAX_EXPONENT Float#MAX_EXPONENT}, the
+ * value sets.  If the exponent of the result is between {@link java.lang.Float#MIN_EXPONENT  } and {@link java.lang.Float#MAX_EXPONENT Float#MAX_EXPONENT}, the
  * answer is calculated exactly.  If the exponent of the result
  * would be larger than {@code Float.MAX_EXPONENT}, an
  * infinity is returned.  Note that if the result is subnormal,

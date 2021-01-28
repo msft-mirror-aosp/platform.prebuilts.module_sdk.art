@@ -184,7 +184,7 @@ public static java.nio.channels.SocketChannel open(java.net.SocketAddress remote
  *
  * <p> Socket channels support connecting, reading, and writing, so this
  * method returns <tt>(</tt>{@link java.nio.channels.SelectionKey#OP_CONNECT SelectionKey#OP_CONNECT}
- * <tt>|</tt>&nbsp;{@link java.nio.channels.SelectionKey#OP_READ SelectionKey#OP_READ} <tt>|</tt>&nbsp;{@link java.nio.channels.SelectionKey#OP_WRITE SelectionKey#OP_WRITE}<tt>)</tt>.  </p>
+ * <tt>|</tt>&nbsp;{@link java.nio.channels.SelectionKey#OP_READ SelectionKey#OP_READ} <tt>|</tt>&nbsp;{@link java.nio.channels.SelectionKey#OP_WRITE  }<tt>)</tt>.  </p>
  *
  * @return  The valid-operation set
  */
@@ -201,7 +201,7 @@ public final int validOps() { throw new RuntimeException("Stub!"); }
  * @throws  java.io.IOException                         {@inheritDoc}
  * @throws  java.lang.SecurityException
  *          If a security manager has been installed and its
- *          {@link java.lang.SecurityManager#checkListen SecurityManager#checkListen} method denies
+ *          {@link java.lang.SecurityManager#checkListen checkListen} method denies
  *          the operation
  *
  * @since 1.7

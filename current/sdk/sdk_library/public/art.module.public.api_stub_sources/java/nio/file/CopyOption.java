@@ -30,8 +30,8 @@ package java.nio.file;
 /**
  * An object that configures how to copy or move a file.
  *
- * <p> Objects of this type may be used with the {@link java.nio.file.Files#copy(java.nio.file.Path,java.nio.file.Path,java.nio.file.CopyOption[]) Files#copy(Path,Path,CopyOption[])},
- * {@link java.nio.file.Files#copy(java.io.InputStream,java.nio.file.Path,java.nio.file.CopyOption[]) Files#copy(java.io.InputStream,Path,CopyOption[])} and {@link java.nio.file.Files#move Files#move} methods to configure how a file is
+ * <p> Objects of this type may be used with the {@link java.nio.file.Files#copy(java.nio.file.Path,java.nio.file.Path,java.nio.file.CopyOption[]) Files.copy(Path,Path,CopyOption...)},
+ * {@link java.nio.file.Files#copy(java.io.InputStream,java.nio.file.Path,java.nio.file.CopyOption[])  Files.copy(InputStream,Path,CopyOption...)} and {@link java.nio.file.Files#move  Files.move(Path,Path,CopyOption...)} methods to configure how a file is
  * copied or moved.
  *
  * <p> The {@link java.nio.file.StandardCopyOption StandardCopyOption} enumeration type defines the

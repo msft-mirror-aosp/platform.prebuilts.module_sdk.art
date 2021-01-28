@@ -33,8 +33,7 @@ package java.lang;
  * available by the garbage collector.
  *
  * {@code OutOfMemoryError} objects may be constructed by the virtual
- * machine as if {@linkplain java.lang.Throwable#Throwable(java.lang.String,java.lang.Throwable,boolean,boolean) Throwable#Throwable(String, Throwable,
- * boolean, boolean)}.
+ * machine as if {@linkplain java.lang.Throwable#Throwable(java.lang.String,java.lang.Throwable,boolean,boolean)  writable}.
  *
  * @author  unascribed
  * @since   JDK1.0

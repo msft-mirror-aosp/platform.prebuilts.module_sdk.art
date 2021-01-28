@@ -69,11 +69,11 @@ import java.io.IOException;
  * <p> All three sets are empty in a newly-created selector.
  *
  * <p> A key is added to a selector's key set as a side effect of registering a
- * channel via the channel's {@link java.nio.channels.SelectableChannel#register(java.nio.channels.Selector,int) SelectableChannel#register(Selector,int)} method.  Cancelled keys are removed from the key set during
+ * channel via the channel's {@link java.nio.channels.SelectableChannel#register(java.nio.channels.Selector,int)  register} method.  Cancelled keys are removed from the key set during
  * selection operations.  The key set itself is not directly modifiable.
  *
  * <p> A key is added to its selector's cancelled-key set when it is cancelled,
- * whether by closing its channel or by invoking its {@link java.nio.channels.SelectionKey#cancel SelectionKey#cancel} method.  Cancelling a key will cause its channel to be deregistered
+ * whether by closing its channel or by invoking its {@link java.nio.channels.SelectionKey#cancel  cancel} method.  Cancelling a key will cause its channel to be deregistered
  * during the next selection operation, at which time the key will removed from
  * all of the selector's key sets.
  *

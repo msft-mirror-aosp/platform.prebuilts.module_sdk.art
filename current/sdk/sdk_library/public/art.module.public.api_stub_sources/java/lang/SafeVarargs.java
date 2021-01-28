@@ -37,7 +37,7 @@ import java.lang.annotation.*;
  * unchecked warnings about parameterized array creation at call
  * sites.
  *
- * <p> In addition to the usage restrictions imposed by its {@link java.lang.annotation.Target Target} meta-annotation, compilers are required to implement
+ * <p> In addition to the usage restrictions imposed by its {@link java.lang.annotation.Target @Target} meta-annotation, compilers are required to implement
  * additional usage restrictions on this annotation type; it is a
  * compile-time error if a method or constructor declaration is
  * annotated with a {@code @SafeVarargs} annotation, and either:

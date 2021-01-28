@@ -45,12 +45,12 @@ import java.util.Queue;
 import java.util.Spliterator;
 
 /**
- * An unbounded {@linkplain java.util.concurrent.BlockingQueue BlockingQueue} that uses
+ * An unbounded {@linkplain java.util.concurrent.BlockingQueue blocking queue} that uses
  * the same ordering rules as class {@link java.util.PriorityQueue PriorityQueue} and supplies
  * blocking retrieval operations.  While this queue is logically
  * unbounded, attempted additions may fail due to resource exhaustion
  * (causing {@code OutOfMemoryError}). This class does not permit
- * {@code null} elements.  A priority queue relying on {@linkplain java.lang.Comparable Comparable} also does not permit insertion of
+ * {@code null} elements.  A priority queue relying on {@linkplain java.lang.Comparable natural ordering} also does not permit insertion of
  * non-comparable objects (doing so results in
  * {@code ClassCastException}).
  *
@@ -101,7 +101,7 @@ public class PriorityBlockingQueue<E> extends java.util.AbstractQueue<E> impleme
 /**
  * Creates a {@code PriorityBlockingQueue} with the default
  * initial capacity (11) that orders its elements according to
- * their {@linkplain java.lang.Comparable Comparable}.
+ * their {@linkplain java.lang.Comparable natural ordering}.
  */
 
 public PriorityBlockingQueue() { throw new RuntimeException("Stub!"); }
@@ -109,7 +109,7 @@ public PriorityBlockingQueue() { throw new RuntimeException("Stub!"); }
 /**
  * Creates a {@code PriorityBlockingQueue} with the specified
  * initial capacity that orders its elements according to their
- * {@linkplain java.lang.Comparable Comparable}.
+ * {@linkplain java.lang.Comparable natural ordering}.
  *
  * @param initialCapacity the initial capacity for this priority queue
  * @throws java.lang.IllegalArgumentException if {@code initialCapacity} is less
@@ -125,7 +125,7 @@ public PriorityBlockingQueue(int initialCapacity) { throw new RuntimeException("
  *
  * @param initialCapacity the initial capacity for this priority queue
  * @param  comparator the comparator that will be used to order this
- *         priority queue.  If {@code null}, the {@linkplain java.lang.Comparable Comparable} of the elements will be used.
+ *         priority queue.  If {@code null}, the {@linkplain java.lang.Comparable          natural ordering} of the elements will be used.
  * @throws java.lang.IllegalArgumentException if {@code initialCapacity} is less
  *         than 1
  */
@@ -138,7 +138,7 @@ public PriorityBlockingQueue(int initialCapacity, java.util.Comparator<? super E
  * {@link java.util.SortedSet SortedSet} or a {@link java.util.PriorityQueue PriorityQueue}, this
  * priority queue will be ordered according to the same ordering.
  * Otherwise, this priority queue will be ordered according to the
- * {@linkplain java.lang.Comparable Comparable} of its elements.
+ * {@linkplain java.lang.Comparable natural ordering} of its elements.
  *
  * @param  c the collection whose elements are to be placed
  *         into this priority queue
@@ -200,7 +200,7 @@ public void put(E e) { throw new RuntimeException("Stub!"); }
  * @param timeout This parameter is ignored as the method never blocks
  * @param unit This parameter is ignored as the method never blocks
  * @return {@code true} (as specified by
- *  {@link java.util.concurrent.BlockingQueue#offer(java.lang.Object,long,java.util.concurrent.TimeUnit) BlockingQueue#offer(Object,long,TimeUnit)})
+ *  {@link java.util.concurrent.BlockingQueue#offer(java.lang.Object,long,java.util.concurrent.TimeUnit) BlockingQueue.offer})
  * @throws java.lang.ClassCastException if the specified element cannot be compared
  *         with elements currently in the priority queue according to the
  *         priority queue's ordering
@@ -219,7 +219,7 @@ public E peek() { throw new RuntimeException("Stub!"); }
 
 /**
  * Returns the comparator used to order the elements in this queue,
- * or {@code null} if this queue uses the {@linkplain java.lang.Comparable Comparable} of its elements.
+ * or {@code null} if this queue uses the {@linkplain java.lang.Comparable  natural ordering} of its elements.
  *
  * @return the comparator used to order the elements in this queue,
  *         or {@code null} if this queue uses the natural

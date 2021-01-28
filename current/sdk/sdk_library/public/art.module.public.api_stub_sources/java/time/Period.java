@@ -91,8 +91,8 @@ import java.time.temporal.Temporal;
  * By contrast, the {@code Duration} will add exactly 24 hours, resulting in a
  * {@code ZonedDateTime} at 19:00 the following day (assuming a one hour DST gap).
  * <p>
- * The supported units of a period are {@link java.time.temporal.ChronoUnit#YEARS ChronoUnit#YEARS},
- * {@link java.time.temporal.ChronoUnit#MONTHS ChronoUnit#MONTHS} and {@link java.time.temporal.ChronoUnit#DAYS ChronoUnit#DAYS}.
+ * The supported units of a period are {@link java.time.temporal.ChronoUnit#YEARS YEARS},
+ * {@link java.time.temporal.ChronoUnit#MONTHS MONTHS} and {@link java.time.temporal.ChronoUnit#DAYS DAYS}.
  * All three fields are always present, but may be set to zero.
  * <p>
  * The ISO-8601 calendar system is the modern civil calendar system used today
@@ -183,8 +183,8 @@ public static java.time.Period of(int years, int months, int days) { throw new R
  * date-based or time-based, which this factory extracts to a {@code Period}.
  * <p>
  * The conversion loops around the set of units from the amount and uses
- * the {@link java.time.temporal.ChronoUnit#YEARS ChronoUnit#YEARS}, {@link java.time.temporal.ChronoUnit#MONTHS ChronoUnit#MONTHS}
- * and {@link java.time.temporal.ChronoUnit#DAYS ChronoUnit#DAYS} units to create a period.
+ * the {@link java.time.temporal.ChronoUnit#YEARS YEARS}, {@link java.time.temporal.ChronoUnit#MONTHS MONTHS}
+ * and {@link java.time.temporal.ChronoUnit#DAYS DAYS} units to create a period.
  * If any other units are found then an exception is thrown.
  * <p>
  * If the amount is a {@code ChronoPeriod} then it must use the ISO chronology.
@@ -265,8 +265,8 @@ public static java.time.Period between(java.time.LocalDate startDateInclusive, j
  * Gets the value of the requested unit.
  * <p>
  * This returns a value for each of the three supported units,
- * {@link java.time.temporal.ChronoUnit#YEARS ChronoUnit#YEARS}, {@link java.time.temporal.ChronoUnit#MONTHS ChronoUnit#MONTHS} and
- * {@link java.time.temporal.ChronoUnit#DAYS ChronoUnit#DAYS}.
+ * {@link java.time.temporal.ChronoUnit#YEARS YEARS}, {@link java.time.temporal.ChronoUnit#MONTHS MONTHS} and
+ * {@link java.time.temporal.ChronoUnit#DAYS DAYS}.
  * All other units throw an exception.
  *
  * @param unit the {@code TemporalUnit} for which to return the value
@@ -280,8 +280,8 @@ public long get(java.time.temporal.TemporalUnit unit) { throw new RuntimeExcepti
 /**
  * Gets the set of units supported by this period.
  * <p>
- * The supported units are {@link java.time.temporal.ChronoUnit#YEARS ChronoUnit#YEARS},
- * {@link java.time.temporal.ChronoUnit#MONTHS ChronoUnit#MONTHS} and {@link java.time.temporal.ChronoUnit#DAYS ChronoUnit#DAYS}.
+ * The supported units are {@link java.time.temporal.ChronoUnit#YEARS YEARS},
+ * {@link java.time.temporal.ChronoUnit#MONTHS MONTHS} and {@link java.time.temporal.ChronoUnit#DAYS DAYS}.
  * They are returned in the order years, months, days.
  * <p>
  * This set can be used in conjunction with {@link #get(java.time.temporal.TemporalUnit)}

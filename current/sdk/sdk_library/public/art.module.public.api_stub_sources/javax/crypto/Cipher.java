@@ -265,7 +265,7 @@ protected Cipher(javax.crypto.CipherSpi cipherSpi, java.security.Provider provid
  * Provider that supports the specified algorithm is returned.
  *
  * <p> Note that the list of registered providers may be retrieved via
- * the {@link java.security.Security#getProviders() Security#getProviders()} method.
+ * the {@link java.security.Security#getProviders() Security.getProviders()} method.
  *
  * @param transformation the name of the transformation, e.g.,
  * <i>DES/CBC/PKCS5Padding</i>.
@@ -299,7 +299,7 @@ public static final javax.crypto.Cipher getInstance(java.lang.String transformat
  * in the security provider list.
  *
  * <p> Note that the list of registered providers may be retrieved via
- * the {@link java.security.Security#getProviders() Security#getProviders()} method.
+ * the {@link java.security.Security#getProviders() Security.getProviders()} method.
  *
  * @param transformation the name of the transformation,
  * e.g., <i>DES/CBC/PKCS5Padding</i>.

@@ -149,7 +149,7 @@ protected Clock() { throw new RuntimeException("Stub!"); }
  * This may use {@link java.lang.System#currentTimeMillis() System#currentTimeMillis()}, or a higher resolution
  * clock if one is available.
  * <p>
- * Conversion from instant to date or time uses the {@linkplain java.time.ZoneOffset#UTC ZoneOffset#UTC}.
+ * Conversion from instant to date or time uses the {@linkplain java.time.ZoneOffset#UTC UTC time-zone}.
  * <p>
  * The returned implementation is immutable, thread-safe and {@code Serializable}.
  * It is equivalent to {@code system(ZoneOffset.UTC)}.

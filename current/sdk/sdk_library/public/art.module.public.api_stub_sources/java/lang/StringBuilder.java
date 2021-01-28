@@ -105,7 +105,7 @@ public StringBuilder(int capacity) { throw new RuntimeException("Stub!"); }
  * @param   str   the initial contents of the buffer.
  */
 
-public StringBuilder(@android.annotation.NonNull java.lang.String str) { throw new RuntimeException("Stub!"); }
+public StringBuilder(@androidx.annotation.RecentlyNonNull java.lang.String str) { throw new RuntimeException("Stub!"); }
 
 /**
  * Constructs a string builder that contains the same characters
@@ -116,13 +116,13 @@ public StringBuilder(@android.annotation.NonNull java.lang.String str) { throw n
  * @param      seq   the sequence to copy.
  */
 
-public StringBuilder(@android.annotation.NonNull java.lang.CharSequence seq) { throw new RuntimeException("Stub!"); }
+public StringBuilder(@androidx.annotation.RecentlyNonNull java.lang.CharSequence seq) { throw new RuntimeException("Stub!"); }
 
-@android.annotation.NonNull
-public java.lang.StringBuilder append(@android.annotation.Nullable java.lang.Object obj) { throw new RuntimeException("Stub!"); }
+@androidx.annotation.RecentlyNonNull
+public java.lang.StringBuilder append(@androidx.annotation.RecentlyNullable java.lang.Object obj) { throw new RuntimeException("Stub!"); }
 
-@android.annotation.NonNull
-public java.lang.StringBuilder append(@android.annotation.Nullable java.lang.String str) { throw new RuntimeException("Stub!"); }
+@androidx.annotation.RecentlyNonNull
+public java.lang.StringBuilder append(@androidx.annotation.RecentlyNullable java.lang.String str) { throw new RuntimeException("Stub!"); }
 
 /**
  * Appends the specified {@code StringBuffer} to this sequence.
@@ -144,171 +144,171 @@ public java.lang.StringBuilder append(@android.annotation.Nullable java.lang.Str
  * @return  a reference to this object.
  */
 
-@android.annotation.NonNull
-public java.lang.StringBuilder append(@android.annotation.Nullable java.lang.StringBuffer sb) { throw new RuntimeException("Stub!"); }
+@androidx.annotation.RecentlyNonNull
+public java.lang.StringBuilder append(@androidx.annotation.RecentlyNullable java.lang.StringBuffer sb) { throw new RuntimeException("Stub!"); }
 
-@android.annotation.NonNull
-public java.lang.StringBuilder append(@android.annotation.Nullable java.lang.CharSequence s) { throw new RuntimeException("Stub!"); }
+@androidx.annotation.RecentlyNonNull
+public java.lang.StringBuilder append(@androidx.annotation.RecentlyNullable java.lang.CharSequence s) { throw new RuntimeException("Stub!"); }
 
 /**
  * @throws     java.lang.IndexOutOfBoundsException {@inheritDoc}
  */
 
-@android.annotation.NonNull
-public java.lang.StringBuilder append(@android.annotation.Nullable java.lang.CharSequence s, int start, int end) { throw new RuntimeException("Stub!"); }
+@androidx.annotation.RecentlyNonNull
+public java.lang.StringBuilder append(@androidx.annotation.RecentlyNullable java.lang.CharSequence s, int start, int end) { throw new RuntimeException("Stub!"); }
 
-@android.annotation.NonNull
+@androidx.annotation.RecentlyNonNull
 public java.lang.StringBuilder append(char[] str) { throw new RuntimeException("Stub!"); }
 
 /**
  * @throws java.lang.IndexOutOfBoundsException {@inheritDoc}
  */
 
-@android.annotation.NonNull
+@androidx.annotation.RecentlyNonNull
 public java.lang.StringBuilder append(char[] str, int offset, int len) { throw new RuntimeException("Stub!"); }
 
-@android.annotation.NonNull
+@androidx.annotation.RecentlyNonNull
 public java.lang.StringBuilder append(boolean b) { throw new RuntimeException("Stub!"); }
 
-@android.annotation.NonNull
+@androidx.annotation.RecentlyNonNull
 public java.lang.StringBuilder append(char c) { throw new RuntimeException("Stub!"); }
 
-@android.annotation.NonNull
+@androidx.annotation.RecentlyNonNull
 public java.lang.StringBuilder append(int i) { throw new RuntimeException("Stub!"); }
 
-@android.annotation.NonNull
+@androidx.annotation.RecentlyNonNull
 public java.lang.StringBuilder append(long lng) { throw new RuntimeException("Stub!"); }
 
-@android.annotation.NonNull
+@androidx.annotation.RecentlyNonNull
 public java.lang.StringBuilder append(float f) { throw new RuntimeException("Stub!"); }
 
-@android.annotation.NonNull
+@androidx.annotation.RecentlyNonNull
 public java.lang.StringBuilder append(double d) { throw new RuntimeException("Stub!"); }
 
 /**
  * @since 1.5
  */
 
-@android.annotation.NonNull
+@androidx.annotation.RecentlyNonNull
 public java.lang.StringBuilder appendCodePoint(int codePoint) { throw new RuntimeException("Stub!"); }
 
 /**
  * @throws java.lang.StringIndexOutOfBoundsException {@inheritDoc}
  */
 
-@android.annotation.NonNull
+@androidx.annotation.RecentlyNonNull
 public java.lang.StringBuilder delete(int start, int end) { throw new RuntimeException("Stub!"); }
 
 /**
  * @throws java.lang.StringIndexOutOfBoundsException {@inheritDoc}
  */
 
-@android.annotation.NonNull
+@androidx.annotation.RecentlyNonNull
 public java.lang.StringBuilder deleteCharAt(int index) { throw new RuntimeException("Stub!"); }
 
 /**
  * @throws java.lang.StringIndexOutOfBoundsException {@inheritDoc}
  */
 
-@android.annotation.NonNull
-public java.lang.StringBuilder replace(int start, int end, @android.annotation.NonNull java.lang.String str) { throw new RuntimeException("Stub!"); }
+@androidx.annotation.RecentlyNonNull
+public java.lang.StringBuilder replace(int start, int end, @androidx.annotation.RecentlyNonNull java.lang.String str) { throw new RuntimeException("Stub!"); }
 
 /**
  * @throws java.lang.StringIndexOutOfBoundsException {@inheritDoc}
  */
 
-@android.annotation.NonNull
+@androidx.annotation.RecentlyNonNull
 public java.lang.StringBuilder insert(int index, char[] str, int offset, int len) { throw new RuntimeException("Stub!"); }
 
 /**
  * @throws java.lang.StringIndexOutOfBoundsException {@inheritDoc}
  */
 
-@android.annotation.NonNull
-public java.lang.StringBuilder insert(int offset, @android.annotation.Nullable java.lang.Object obj) { throw new RuntimeException("Stub!"); }
+@androidx.annotation.RecentlyNonNull
+public java.lang.StringBuilder insert(int offset, @androidx.annotation.RecentlyNullable java.lang.Object obj) { throw new RuntimeException("Stub!"); }
 
 /**
  * @throws java.lang.StringIndexOutOfBoundsException {@inheritDoc}
  */
 
-@android.annotation.NonNull
-public java.lang.StringBuilder insert(int offset, @android.annotation.Nullable java.lang.String str) { throw new RuntimeException("Stub!"); }
+@androidx.annotation.RecentlyNonNull
+public java.lang.StringBuilder insert(int offset, @androidx.annotation.RecentlyNullable java.lang.String str) { throw new RuntimeException("Stub!"); }
 
 /**
  * @throws java.lang.StringIndexOutOfBoundsException {@inheritDoc}
  */
 
-@android.annotation.NonNull
+@androidx.annotation.RecentlyNonNull
 public java.lang.StringBuilder insert(int offset, char[] str) { throw new RuntimeException("Stub!"); }
 
 /**
  * @throws java.lang.IndexOutOfBoundsException {@inheritDoc}
  */
 
-@android.annotation.NonNull
-public java.lang.StringBuilder insert(int dstOffset, @android.annotation.Nullable java.lang.CharSequence s) { throw new RuntimeException("Stub!"); }
+@androidx.annotation.RecentlyNonNull
+public java.lang.StringBuilder insert(int dstOffset, @androidx.annotation.RecentlyNullable java.lang.CharSequence s) { throw new RuntimeException("Stub!"); }
 
 /**
  * @throws java.lang.IndexOutOfBoundsException {@inheritDoc}
  */
 
-@android.annotation.NonNull
-public java.lang.StringBuilder insert(int dstOffset, @android.annotation.Nullable java.lang.CharSequence s, int start, int end) { throw new RuntimeException("Stub!"); }
+@androidx.annotation.RecentlyNonNull
+public java.lang.StringBuilder insert(int dstOffset, @androidx.annotation.RecentlyNullable java.lang.CharSequence s, int start, int end) { throw new RuntimeException("Stub!"); }
 
 /**
  * @throws java.lang.StringIndexOutOfBoundsException {@inheritDoc}
  */
 
-@android.annotation.NonNull
+@androidx.annotation.RecentlyNonNull
 public java.lang.StringBuilder insert(int offset, boolean b) { throw new RuntimeException("Stub!"); }
 
 /**
  * @throws java.lang.IndexOutOfBoundsException {@inheritDoc}
  */
 
-@android.annotation.NonNull
+@androidx.annotation.RecentlyNonNull
 public java.lang.StringBuilder insert(int offset, char c) { throw new RuntimeException("Stub!"); }
 
 /**
  * @throws java.lang.StringIndexOutOfBoundsException {@inheritDoc}
  */
 
-@android.annotation.NonNull
+@androidx.annotation.RecentlyNonNull
 public java.lang.StringBuilder insert(int offset, int i) { throw new RuntimeException("Stub!"); }
 
 /**
  * @throws java.lang.StringIndexOutOfBoundsException {@inheritDoc}
  */
 
-@android.annotation.NonNull
+@androidx.annotation.RecentlyNonNull
 public java.lang.StringBuilder insert(int offset, long l) { throw new RuntimeException("Stub!"); }
 
 /**
  * @throws java.lang.StringIndexOutOfBoundsException {@inheritDoc}
  */
 
-@android.annotation.NonNull
+@androidx.annotation.RecentlyNonNull
 public java.lang.StringBuilder insert(int offset, float f) { throw new RuntimeException("Stub!"); }
 
 /**
  * @throws java.lang.StringIndexOutOfBoundsException {@inheritDoc}
  */
 
-@android.annotation.NonNull
+@androidx.annotation.RecentlyNonNull
 public java.lang.StringBuilder insert(int offset, double d) { throw new RuntimeException("Stub!"); }
 
-public int indexOf(@android.annotation.NonNull java.lang.String str) { throw new RuntimeException("Stub!"); }
+public int indexOf(@androidx.annotation.RecentlyNonNull java.lang.String str) { throw new RuntimeException("Stub!"); }
 
-public int indexOf(@android.annotation.NonNull java.lang.String str, int fromIndex) { throw new RuntimeException("Stub!"); }
+public int indexOf(@androidx.annotation.RecentlyNonNull java.lang.String str, int fromIndex) { throw new RuntimeException("Stub!"); }
 
-public int lastIndexOf(@android.annotation.NonNull java.lang.String str) { throw new RuntimeException("Stub!"); }
+public int lastIndexOf(@androidx.annotation.RecentlyNonNull java.lang.String str) { throw new RuntimeException("Stub!"); }
 
-public int lastIndexOf(@android.annotation.NonNull java.lang.String str, int fromIndex) { throw new RuntimeException("Stub!"); }
+public int lastIndexOf(@androidx.annotation.RecentlyNonNull java.lang.String str, int fromIndex) { throw new RuntimeException("Stub!"); }
 
-@android.annotation.NonNull
+@androidx.annotation.RecentlyNonNull
 public java.lang.StringBuilder reverse() { throw new RuntimeException("Stub!"); }
 
-@android.annotation.NonNull
+@androidx.annotation.RecentlyNonNull
 public java.lang.String toString() { throw new RuntimeException("Stub!"); }
 
 /**
@@ -429,7 +429,7 @@ public void setCharAt(int index, char ch) { throw new RuntimeException("Stub!");
  * @spec JSR-51
  */
 
-@android.annotation.NonNull
+@androidx.annotation.RecentlyNonNull
 public java.lang.CharSequence subSequence(int start, int end) { throw new RuntimeException("Stub!"); }
 
 /**
@@ -444,7 +444,7 @@ public java.lang.CharSequence subSequence(int start, int end) { throw new Runtim
  *             less than zero, or greater than the length of this object.
  */
 
-@android.annotation.NonNull
+@androidx.annotation.RecentlyNonNull
 public java.lang.String substring(int start) { throw new RuntimeException("Stub!"); }
 
 /**
@@ -462,7 +462,7 @@ public java.lang.String substring(int start) { throw new RuntimeException("Stub!
  *             greater than {@code end}.
  */
 
-@android.annotation.NonNull
+@androidx.annotation.RecentlyNonNull
 public java.lang.String substring(int start, int end) { throw new RuntimeException("Stub!"); }
 
 /**

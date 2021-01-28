@@ -29,7 +29,7 @@ package java.util;
 
 /**
  * A {@link java.util.Map Map} that further provides a <em>total ordering</em> on its keys.
- * The map is ordered according to the {@linkplain java.lang.Comparable Comparable} of its keys, or by a {@link java.util.Comparator Comparator} typically
+ * The map is ordered according to the {@linkplain java.lang.Comparable  ordering} of its keys, or by a {@link java.util.Comparator Comparator} typically
  * provided at sorted map creation time.  This order is reflected when
  * iterating over the sorted map's collection views (returned by the
  * {@code entrySet}, {@code keySet} and {@code values} methods).
@@ -116,14 +116,14 @@ public interface SortedMap<K, V> extends java.util.Map<K,V> {
 
 /**
  * Returns the comparator used to order the keys in this map, or
- * {@code null} if this map uses the {@linkplain java.lang.Comparable Comparable} of its keys.
+ * {@code null} if this map uses the {@linkplain java.lang.Comparable  natural ordering} of its keys.
  *
  * @return the comparator used to order the keys in this map,
  *         or {@code null} if this map uses the natural ordering
  *         of its keys
  */
 
-@android.annotation.Nullable
+@androidx.annotation.RecentlyNullable
 public java.util.Comparator<? super K> comparator();
 
 /**
@@ -156,7 +156,7 @@ public java.util.Comparator<? super K> comparator();
  *         outside the bounds of the range
  */
 
-@android.annotation.NonNull
+@androidx.annotation.RecentlyNonNull
 public java.util.SortedMap<K,V> subMap(K fromKey, K toKey);
 
 /**
@@ -185,7 +185,7 @@ public java.util.SortedMap<K,V> subMap(K fromKey, K toKey);
  *         bounds of the range
  */
 
-@android.annotation.NonNull
+@androidx.annotation.RecentlyNonNull
 public java.util.SortedMap<K,V> headMap(K toKey);
 
 /**
@@ -214,7 +214,7 @@ public java.util.SortedMap<K,V> headMap(K toKey);
  *         bounds of the range
  */
 
-@android.annotation.NonNull
+@androidx.annotation.RecentlyNonNull
 public java.util.SortedMap<K,V> tailMap(K fromKey);
 
 /**
@@ -253,7 +253,7 @@ public K lastKey();
  *         ascending order
  */
 
-@android.annotation.NonNull
+@androidx.annotation.RecentlyNonNull
 public java.util.Set<K> keySet();
 
 /**
@@ -275,7 +275,7 @@ public java.util.Set<K> keySet();
  *         sorted in ascending key order
  */
 
-@android.annotation.NonNull
+@androidx.annotation.RecentlyNonNull
 public java.util.Collection<V> values();
 
 /**
@@ -297,7 +297,7 @@ public java.util.Collection<V> values();
  *         sorted in ascending key order
  */
 
-@android.annotation.NonNull
+@androidx.annotation.RecentlyNonNull
 public java.util.Set<java.util.Map.Entry<K,V>> entrySet();
 }
 

@@ -99,7 +99,7 @@ public interface PooledConnection {
  * The connection pool manager calls this method when an application has
  * called the method <code>DataSource.getConnection</code> and there are
  * no <code>PooledConnection</code> objects available. See the
- * {@link javax.sql.PooledConnection PooledConnection} for more information.
+ * {@link javax.sql.PooledConnection interface description} for more information.
  *
  * @return  a <code>Connection</code> object that is a handle to
  *          this <code>PooledConnection</code> object
@@ -116,7 +116,7 @@ public java.sql.Connection getConnection() throws java.sql.SQLException;
  * object represents.  An application never calls this method directly;
  * it is called by the connection pool module, or manager.
  * <P>
- * See the {@link javax.sql.PooledConnection PooledConnection} for more
+ * See the {@link javax.sql.PooledConnection interface description} for more
  * information.
  *
  * @exception java.sql.SQLException if a database access error occurs

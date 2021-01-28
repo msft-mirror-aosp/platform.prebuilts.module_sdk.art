@@ -494,7 +494,7 @@ public void lock() { throw new RuntimeException("Stub!"); }
 
 /**
  * Acquires the read lock unless the current thread is
- * {@linkplain java.lang.Thread#interrupt Thread#interrupt}.
+ * {@linkplain java.lang.Thread#interrupt interrupted}.
  *
  * <p>Acquires the read lock if the write lock is not held
  * by another thread and returns immediately.
@@ -507,7 +507,7 @@ public void lock() { throw new RuntimeException("Stub!"); }
  *
  * <li>The read lock is acquired by the current thread; or
  *
- * <li>Some other thread {@linkplain java.lang.Thread#interrupt Thread#interrupt}
+ * <li>Some other thread {@linkplain java.lang.Thread#interrupt interrupts}
  * the current thread.
  *
  * </ul>
@@ -518,7 +518,7 @@ public void lock() { throw new RuntimeException("Stub!"); }
  *
  * <li>has its interrupted status set on entry to this method; or
  *
- * <li>is {@linkplain java.lang.Thread#interrupt Thread#interrupt} while
+ * <li>is {@linkplain java.lang.Thread#interrupt interrupted} while
  * acquiring the read lock,
  *
  * </ul>
@@ -565,7 +565,7 @@ public boolean tryLock() { throw new RuntimeException("Stub!"); }
 /**
  * Acquires the read lock if the write lock is not held by
  * another thread within the given waiting time and the
- * current thread has not been {@linkplain java.lang.Thread#interrupt Thread#interrupt}.
+ * current thread has not been {@linkplain java.lang.Thread#interrupt  interrupted}.
  *
  * <p>Acquires the read lock if the write lock is not held by
  * another thread and returns immediately with the value
@@ -591,7 +591,7 @@ public boolean tryLock() { throw new RuntimeException("Stub!"); }
  *
  * <li>The read lock is acquired by the current thread; or
  *
- * <li>Some other thread {@linkplain java.lang.Thread#interrupt Thread#interrupt}
+ * <li>Some other thread {@linkplain java.lang.Thread#interrupt interrupts}
  * the current thread; or
  *
  * <li>The specified waiting time elapses.
@@ -607,7 +607,7 @@ public boolean tryLock() { throw new RuntimeException("Stub!"); }
  *
  * <li>has its interrupted status set on entry to this method; or
  *
- * <li>is {@linkplain java.lang.Thread#interrupt Thread#interrupt} while
+ * <li>is {@linkplain java.lang.Thread#interrupt interrupted} while
  * acquiring the read lock,
  *
  * </ul> then {@link java.lang.InterruptedException InterruptedException} is thrown and the
@@ -702,7 +702,7 @@ public void lock() { throw new RuntimeException("Stub!"); }
 
 /**
  * Acquires the write lock unless the current thread is
- * {@linkplain java.lang.Thread#interrupt Thread#interrupt}.
+ * {@linkplain java.lang.Thread#interrupt interrupted}.
  *
  * <p>Acquires the write lock if neither the read nor write lock
  * are held by another thread
@@ -721,7 +721,7 @@ public void lock() { throw new RuntimeException("Stub!"); }
  *
  * <li>The write lock is acquired by the current thread; or
  *
- * <li>Some other thread {@linkplain java.lang.Thread#interrupt Thread#interrupt}
+ * <li>Some other thread {@linkplain java.lang.Thread#interrupt interrupts}
  * the current thread.
  *
  * </ul>
@@ -736,7 +736,7 @@ public void lock() { throw new RuntimeException("Stub!"); }
  * <li>has its interrupted status set on entry to this method;
  * or
  *
- * <li>is {@linkplain java.lang.Thread#interrupt Thread#interrupt} while
+ * <li>is {@linkplain java.lang.Thread#interrupt interrupted} while
  * acquiring the write lock,
  *
  * </ul>
@@ -789,7 +789,7 @@ public boolean tryLock() { throw new RuntimeException("Stub!"); }
 /**
  * Acquires the write lock if it is not held by another thread
  * within the given waiting time and the current thread has
- * not been {@linkplain java.lang.Thread#interrupt Thread#interrupt}.
+ * not been {@linkplain java.lang.Thread#interrupt interrupted}.
  *
  * <p>Acquires the write lock if neither the read nor write lock
  * are held by another thread
@@ -820,7 +820,7 @@ public boolean tryLock() { throw new RuntimeException("Stub!"); }
  *
  * <li>The write lock is acquired by the current thread; or
  *
- * <li>Some other thread {@linkplain java.lang.Thread#interrupt Thread#interrupt}
+ * <li>Some other thread {@linkplain java.lang.Thread#interrupt interrupts}
  * the current thread; or
  *
  * <li>The specified waiting time elapses
@@ -837,7 +837,7 @@ public boolean tryLock() { throw new RuntimeException("Stub!"); }
  * <li>has its interrupted status set on entry to this method;
  * or
  *
- * <li>is {@linkplain java.lang.Thread#interrupt Thread#interrupt} while
+ * <li>is {@linkplain java.lang.Thread#interrupt interrupted} while
  * acquiring the write lock,
  *
  * </ul>
@@ -886,7 +886,7 @@ public void unlock() { throw new RuntimeException("Stub!"); }
  * Returns a {@link java.util.concurrent.locks.Condition Condition} instance for use with this
  * {@link java.util.concurrent.locks.Lock Lock} instance.
  * <p>The returned {@link java.util.concurrent.locks.Condition Condition} instance supports the same
- * usages as do the {@link java.lang.Object Object} monitor methods ({@link java.lang.Object#wait() Object#wait()}, {@link java.lang.Object#notify Object#notify}, and {@link java.lang.Object#notifyAll Object#notifyAll}) when used with the built-in
+ * usages as do the {@link java.lang.Object Object} monitor methods ({@link java.lang.Object#wait() wait}, {@link java.lang.Object#notify notify}, and {@link java.lang.Object#notifyAll notifyAll}) when used with the built-in
  * monitor lock.
  *
  * <ul>
@@ -899,12 +899,12 @@ public void unlock() { throw new RuntimeException("Stub!"); }
  * could unblock it will not be able to acquire the write
  * lock.)
  *
- * <li>When the condition {@linkplain java.util.concurrent.locks.Condition#await() Condition#await()}
+ * <li>When the condition {@linkplain java.util.concurrent.locks.Condition#await() waiting}
  * methods are called the write lock is released and, before
  * they return, the write lock is reacquired and the lock hold
  * count restored to what it was when the method was called.
  *
- * <li>If a thread is {@linkplain java.lang.Thread#interrupt Thread#interrupt} while
+ * <li>If a thread is {@linkplain java.lang.Thread#interrupt interrupted} while
  * waiting then the wait will terminate, an {@link java.lang.InterruptedException InterruptedException} will be thrown, and the thread's
  * interrupted status will be cleared.
  *
@@ -927,7 +927,7 @@ public java.util.concurrent.locks.Condition newCondition() { throw new RuntimeEx
  * Returns a string identifying this lock, as well as its lock
  * state.  The state, in brackets includes either the String
  * {@code "Unlocked"} or the String {@code "Locked by"}
- * followed by the {@linkplain java.lang.Thread#getName Thread#getName} of the owning thread.
+ * followed by the {@linkplain java.lang.Thread#getName name} of the owning thread.
  *
  * @return a string identifying this lock, as well as its lock state
  */
@@ -936,7 +936,7 @@ public java.lang.String toString() { throw new RuntimeException("Stub!"); }
 
 /**
  * Queries if this write lock is held by the current thread.
- * Identical in effect to {@link java.util.concurrent.locks.ReentrantReadWriteLock#isWriteLockedByCurrentThread ReentrantReadWriteLock#isWriteLockedByCurrentThread}.
+ * Identical in effect to {@link java.util.concurrent.locks.ReentrantReadWriteLock#isWriteLockedByCurrentThread  }.
  *
  * @return {@code true} if the current thread holds this lock and
  *         {@code false} otherwise

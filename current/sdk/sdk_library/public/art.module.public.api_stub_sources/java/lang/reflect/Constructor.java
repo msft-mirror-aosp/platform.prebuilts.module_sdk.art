@@ -58,7 +58,7 @@ private Constructor() { throw new RuntimeException("Stub!"); }
  * {@inheritDoc}
  */
 
-@android.annotation.NonNull
+@androidx.annotation.RecentlyNonNull
 public java.lang.Class<T> getDeclaringClass() { throw new RuntimeException("Stub!"); }
 
 /**
@@ -66,7 +66,7 @@ public java.lang.Class<T> getDeclaringClass() { throw new RuntimeException("Stub
  * the binary name of the constructor's declaring class.
  */
 
-@android.annotation.NonNull
+@androidx.annotation.RecentlyNonNull
 public java.lang.String getName() { throw new RuntimeException("Stub!"); }
 
 /**
@@ -87,7 +87,7 @@ public java.lang.reflect.TypeVariable<java.lang.reflect.Constructor<T>>[] getTyp
  * {@inheritDoc}
  */
 
-@android.annotation.NonNull
+@androidx.annotation.RecentlyNonNull
 public java.lang.Class<?>[] getParameterTypes() { throw new RuntimeException("Stub!"); }
 
 /**
@@ -130,7 +130,7 @@ public java.lang.reflect.Type[] getGenericExceptionTypes() { throw new RuntimeEx
  * same formal parameter types.
  */
 
-public boolean equals(@android.annotation.Nullable java.lang.Object obj) { throw new RuntimeException("Stub!"); }
+public boolean equals(@androidx.annotation.RecentlyNullable java.lang.Object obj) { throw new RuntimeException("Stub!"); }
 
 /**
  * Returns a hashcode for this {@code Constructor}. The hashcode is
@@ -159,7 +159,7 @@ public int hashCode() { throw new RuntimeException("Stub!"); }
  * @jls 8.8.3. Constructor Modifiers
  */
 
-@android.annotation.NonNull
+@androidx.annotation.RecentlyNonNull
 public java.lang.String toString() { throw new RuntimeException("Stub!"); }
 
 /**
@@ -197,7 +197,7 @@ public java.lang.String toString() { throw new RuntimeException("Stub!"); }
  * @jls 8.8.3. Constructor Modifiers
  */
 
-@android.annotation.NonNull
+@androidx.annotation.RecentlyNonNull
 public java.lang.String toGenericString() { throw new RuntimeException("Stub!"); }
 
 /**
@@ -249,7 +249,7 @@ public java.lang.String toGenericString() { throw new RuntimeException("Stub!");
  *              by this method fails.
  */
 
-@android.annotation.NonNull
+@androidx.annotation.RecentlyNonNull
 public T newInstance(java.lang.Object... initargs) throws java.lang.IllegalAccessException, java.lang.IllegalArgumentException, java.lang.InstantiationException, java.lang.reflect.InvocationTargetException { throw new RuntimeException("Stub!"); }
 
 /**
@@ -273,8 +273,8 @@ public boolean isSynthetic() { throw new RuntimeException("Stub!"); }
  * @since 1.5
  */
 
-@android.annotation.Nullable
-public <T extends java.lang.annotation.Annotation> T getAnnotation(@android.annotation.NonNull java.lang.Class<T> annotationClass) { throw new RuntimeException("Stub!"); }
+@androidx.annotation.RecentlyNullable
+public <T extends java.lang.annotation.Annotation> T getAnnotation(@androidx.annotation.RecentlyNonNull java.lang.Class<T> annotationClass) { throw new RuntimeException("Stub!"); }
 
 /**
  * {@inheritDoc}
