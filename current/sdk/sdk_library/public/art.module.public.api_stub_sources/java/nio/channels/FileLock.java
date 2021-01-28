@@ -32,9 +32,9 @@ import java.io.IOException;
  * A token representing a lock on a region of a file.
  *
  * <p> A file-lock object is created each time a lock is acquired on a file via
- * one of the {@link java.nio.channels.FileChannel#lock(long,long,boolean) FileChannel#lock(long,long,boolean)} or {@link java.nio.channels.FileChannel#tryLock(long,long,boolean) FileChannel#tryLock(long,long,boolean)} methods of the
- * {@link java.nio.channels.FileChannel FileChannel} class, or the {@link java.nio.channels.AsynchronousFileChannel#lock(long,long,boolean,java.lang.Object,java.nio.channels.CompletionHandler) AsynchronousFileChannel#lock(long,long,boolean,Object,CompletionHandler)}
- * or {@link java.nio.channels.AsynchronousFileChannel#tryLock(long,long,boolean) AsynchronousFileChannel#tryLock(long,long,boolean)}
+ * one of the {@link java.nio.channels.FileChannel#lock(long,long,boolean) lock} or {@link java.nio.channels.FileChannel#tryLock(long,long,boolean) tryLock} methods of the
+ * {@link java.nio.channels.FileChannel FileChannel} class, or the {@link java.nio.channels.AsynchronousFileChannel#lock(long,long,boolean,java.lang.Object,java.nio.channels.CompletionHandler) lock}
+ * or {@link java.nio.channels.AsynchronousFileChannel#tryLock(long,long,boolean) tryLock}
  * methods of the {@link java.nio.channels.AsynchronousFileChannel AsynchronousFileChannel} class.
  *
  * <p> A file-lock object is initially valid.  It remains valid until the lock

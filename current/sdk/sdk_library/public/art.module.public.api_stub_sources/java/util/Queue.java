@@ -58,18 +58,18 @@ package java.util;
  *  </tr>
  *  <tr>
  *    <td><b>Insert</b></td>
- *    <td>{@link java.util.Queue#add Queue#add}</td>
- *    <td>{@link java.util.Queue#offer Queue#offer}</td>
+ *    <td>{@link java.util.Queue#add add(e)}</td>
+ *    <td>{@link java.util.Queue#offer offer(e)}</td>
  *  </tr>
  *  <tr>
  *    <td><b>Remove</b></td>
- *    <td>{@link java.util.Queue#remove Queue#remove}</td>
- *    <td>{@link java.util.Queue#poll Queue#poll}</td>
+ *    <td>{@link java.util.Queue#remove remove()}</td>
+ *    <td>{@link java.util.Queue#poll poll()}</td>
  *  </tr>
  *  <tr>
  *    <td><b>Examine</b></td>
- *    <td>{@link java.util.Queue#element Queue#element}</td>
- *    <td>{@link java.util.Queue#peek Queue#peek}</td>
+ *    <td>{@link java.util.Queue#element element()}</td>
+ *    <td>{@link java.util.Queue#peek peek()}</td>
  *  </tr>
  * </table>
  *
@@ -192,7 +192,7 @@ public E remove();
  * @return the head of this queue, or {@code null} if this queue is empty
  */
 
-@android.annotation.Nullable
+@androidx.annotation.RecentlyNullable
 public E poll();
 
 /**
@@ -213,7 +213,7 @@ public E element();
  * @return the head of this queue, or {@code null} if this queue is empty
  */
 
-@android.annotation.Nullable
+@androidx.annotation.RecentlyNullable
 public E peek();
 }
 

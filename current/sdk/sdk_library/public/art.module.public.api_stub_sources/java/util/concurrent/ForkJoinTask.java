@@ -47,7 +47,7 @@ import java.io.Serializable;
  *
  * <p>A "main" {@code ForkJoinTask} begins execution when it is
  * explicitly submitted to a {@link java.util.concurrent.ForkJoinPool ForkJoinPool}, or, if not already
- * engaged in a ForkJoin computation, commenced in the {@link java.util.concurrent.ForkJoinPool#commonPool() ForkJoinPool#commonPool()} via {@link #fork}, {@link #invoke}, or
+ * engaged in a ForkJoin computation, commenced in the {@link java.util.concurrent.ForkJoinPool#commonPool()  } via {@link #fork}, {@link #invoke}, or
  * related methods.  Once started, it will usually in turn start other
  * subtasks.  As indicated by the name of this class, many programs
  * using {@code ForkJoinTask} employ only methods {@link #fork} and
@@ -90,7 +90,7 @@ import java.io.Serializable;
  * tasks that are never joined (for example, those subclassing {@link java.util.concurrent.CountedCompleter CountedCompleter}) often fall into this category.  (2) To minimize
  * resource impact, tasks should be small; ideally performing only the
  * (possibly) blocking action. (3) Unless the {@link java.util.concurrent.ForkJoinPool.ManagedBlocker ForkJoinPool.ManagedBlocker} API is used, or the number of possibly
- * blocked tasks is known to be less than the pool's {@link java.util.concurrent.ForkJoinPool#getParallelism ForkJoinPool#getParallelism} level, the pool cannot guarantee that
+ * blocked tasks is known to be less than the pool's {@link java.util.concurrent.ForkJoinPool#getParallelism  } level, the pool cannot guarantee that
  * enough threads will be available to ensure progress or good
  * performance.
  *
@@ -196,7 +196,7 @@ public ForkJoinTask() { throw new RuntimeException("Stub!"); }
 
 /**
  * Arranges to asynchronously execute this task in the pool the
- * current task is running in, if applicable, or using the {@link java.util.concurrent.ForkJoinPool#commonPool() ForkJoinPool#commonPool()} if not {@link #inForkJoinPool}.  While
+ * current task is running in, if applicable, or using the {@link java.util.concurrent.ForkJoinPool#commonPool()  } if not {@link #inForkJoinPool}.  While
  * it is not necessarily enforced, it is a usage error to fork a
  * task more than once unless it has completed and been
  * reinitialized.  Subsequent modifications to the state of this
@@ -451,7 +451,7 @@ public final void quietlyInvoke() { throw new RuntimeException("Stub!"); }
 
 /**
  * Possibly executes tasks until the pool hosting the current task
- * {@linkplain java.util.concurrent.ForkJoinPool#isQuiescent ForkJoinPool#isQuiescent}.  This
+ * {@linkplain java.util.concurrent.ForkJoinPool#isQuiescent is quiescent}.  This
  * method may be of use in designs in which many tasks are forked,
  * but none are explicitly joined, instead executing them until
  * all are processed.

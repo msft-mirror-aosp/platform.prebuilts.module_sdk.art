@@ -68,7 +68,7 @@ import java.time.temporal.TemporalField;
 /**
  * A date in the Japanese Imperial calendar system.
  * <p>
- * This date operates using the {@linkplain java.time.chrono.JapaneseChronology JapaneseChronology}.
+ * This date operates using the {@linkplain java.time.chrono.JapaneseChronology Japanese Imperial calendar}.
  * This calendar system is primarily used in Japan.
  * <p>
  * The Japanese Imperial calendar system is the same as the ISO calendar system
@@ -99,7 +99,7 @@ JapaneseDate() { throw new RuntimeException("Stub!"); }
 /**
  * Obtains the current {@code JapaneseDate} from the system clock in the default time-zone.
  * <p>
- * This will query the {@link java.time.Clock#systemDefaultZone() Clock#systemDefaultZone()} in the default
+ * This will query the {@link java.time.Clock#systemDefaultZone() system clock} in the default
  * time-zone to obtain the current date.
  * <p>
  * Using this method will prevent the ability to use an alternate clock for testing
@@ -113,7 +113,7 @@ public static java.time.chrono.JapaneseDate now() { throw new RuntimeException("
 /**
  * Obtains the current {@code JapaneseDate} from the system clock in the specified time-zone.
  * <p>
- * This will query the {@link java.time.Clock#system(java.time.ZoneId) Clock#system(ZoneId)} to obtain the current date.
+ * This will query the {@link java.time.Clock#system(java.time.ZoneId) system clock} to obtain the current date.
  * Specifying the time-zone avoids dependence on the default time-zone.
  * <p>
  * Using this method will prevent the ability to use an alternate clock for testing
@@ -130,7 +130,7 @@ public static java.time.chrono.JapaneseDate now(java.time.ZoneId zone) { throw n
  * <p>
  * This will query the specified clock to obtain the current date - today.
  * Using this method allows the use of an alternate clock for testing.
- * The alternate clock may be introduced using {@linkplain java.time.Clock Clock}.
+ * The alternate clock may be introduced using {@linkplain java.time.Clock dependency injection}.
  *
  * @param clock  the clock to use, not null
  * @return the current date, not null
@@ -195,7 +195,7 @@ public static java.time.chrono.JapaneseDate of(int prolepticYear, int month, int
  * A {@code TemporalAccessor} represents an arbitrary set of date and time information,
  * which this factory converts to an instance of {@code JapaneseDate}.
  * <p>
- * The conversion typically uses the {@link java.time.temporal.ChronoField#EPOCH_DAY ChronoField#EPOCH_DAY}
+ * The conversion typically uses the {@link java.time.temporal.ChronoField#EPOCH_DAY EPOCH_DAY}
  * field, which is standardized across calendar systems.
  * <p>
  * This method matches the signature of the functional interface {@link java.time.temporal.TemporalQuery TemporalQuery}

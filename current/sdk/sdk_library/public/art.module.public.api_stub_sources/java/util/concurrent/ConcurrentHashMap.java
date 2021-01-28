@@ -171,7 +171,7 @@ import java.util.Collection;
  * estimated to be less than the given threshold. Using a value of
  * {@code Long.MAX_VALUE} suppresses all parallelism.  Using a value
  * of {@code 1} results in maximal parallelism by partitioning into
- * enough subtasks to fully utilize the {@link java.util.concurrent.ForkJoinPool#commonPool() ForkJoinPool#commonPool()} that is used for all parallel
+ * enough subtasks to fully utilize the {@link java.util.concurrent.ForkJoinPool#commonPool()  } that is used for all parallel
  * computations. Normally, you would initially choose one of these
  * extreme values, and then measure performance of using in-between
  * values that trade off overhead versus throughput.
@@ -262,7 +262,7 @@ public ConcurrentHashMap(int initialCapacity) { throw new RuntimeException("Stub
  * @param m the map
  */
 
-public ConcurrentHashMap(@android.annotation.NonNull java.util.Map<? extends K,? extends V> m) { throw new RuntimeException("Stub!"); }
+public ConcurrentHashMap(@androidx.annotation.RecentlyNonNull java.util.Map<? extends K,? extends V> m) { throw new RuntimeException("Stub!"); }
 
 /**
  * Creates a new, empty map with an initial table size based on
@@ -327,8 +327,8 @@ public boolean isEmpty() { throw new RuntimeException("Stub!"); }
  * @throws java.lang.NullPointerException if the specified key is null
  */
 
-@android.annotation.Nullable
-public V get(@android.annotation.NonNull java.lang.Object key) { throw new RuntimeException("Stub!"); }
+@androidx.annotation.RecentlyNullable
+public V get(@androidx.annotation.RecentlyNonNull java.lang.Object key) { throw new RuntimeException("Stub!"); }
 
 /**
  * Tests if the specified object is a key in this table.
@@ -340,7 +340,7 @@ public V get(@android.annotation.NonNull java.lang.Object key) { throw new Runti
  * @throws java.lang.NullPointerException if the specified key is null
  */
 
-public boolean containsKey(@android.annotation.NonNull java.lang.Object key) { throw new RuntimeException("Stub!"); }
+public boolean containsKey(@androidx.annotation.RecentlyNonNull java.lang.Object key) { throw new RuntimeException("Stub!"); }
 
 /**
  * Returns {@code true} if this map maps one or more keys to the
@@ -353,7 +353,7 @@ public boolean containsKey(@android.annotation.NonNull java.lang.Object key) { t
  * @throws java.lang.NullPointerException if the specified value is null
  */
 
-public boolean containsValue(@android.annotation.NonNull java.lang.Object value) { throw new RuntimeException("Stub!"); }
+public boolean containsValue(@androidx.annotation.RecentlyNonNull java.lang.Object value) { throw new RuntimeException("Stub!"); }
 
 /**
  * Maps the specified key to the specified value in this table.
@@ -369,8 +369,8 @@ public boolean containsValue(@android.annotation.NonNull java.lang.Object value)
  * @throws java.lang.NullPointerException if the specified key or value is null
  */
 
-@android.annotation.Nullable
-public V put(@android.annotation.NonNull K key, @android.annotation.NonNull V value) { throw new RuntimeException("Stub!"); }
+@androidx.annotation.RecentlyNullable
+public V put(@androidx.annotation.RecentlyNonNull K key, @androidx.annotation.RecentlyNonNull V value) { throw new RuntimeException("Stub!"); }
 
 /**
  * Copies all of the mappings from the specified map to this one.
@@ -380,7 +380,7 @@ public V put(@android.annotation.NonNull K key, @android.annotation.NonNull V va
  * @param m mappings to be stored in this map
  */
 
-public void putAll(@android.annotation.NonNull java.util.Map<? extends K,? extends V> m) { throw new RuntimeException("Stub!"); }
+public void putAll(@androidx.annotation.RecentlyNonNull java.util.Map<? extends K,? extends V> m) { throw new RuntimeException("Stub!"); }
 
 /**
  * Removes the key (and its corresponding value) from this map.
@@ -392,8 +392,8 @@ public void putAll(@android.annotation.NonNull java.util.Map<? extends K,? exten
  * @throws java.lang.NullPointerException if the specified key is null
  */
 
-@android.annotation.Nullable
-public V remove(@android.annotation.NonNull java.lang.Object key) { throw new RuntimeException("Stub!"); }
+@androidx.annotation.RecentlyNullable
+public V remove(@androidx.annotation.RecentlyNonNull java.lang.Object key) { throw new RuntimeException("Stub!"); }
 
 /**
  * Removes all of the mappings from this map.
@@ -423,7 +423,7 @@ public void clear() { throw new RuntimeException("Stub!"); }
  * @return the set view
  */
 
-@android.annotation.NonNull
+@androidx.annotation.RecentlyNonNull
 public java.util.Set<K> keySet() { throw new RuntimeException("Stub!"); }
 
 /**
@@ -445,7 +445,7 @@ public java.util.Set<K> keySet() { throw new RuntimeException("Stub!"); }
  * @return the collection view
  */
 
-@android.annotation.NonNull
+@androidx.annotation.RecentlyNonNull
 public java.util.Collection<V> values() { throw new RuntimeException("Stub!"); }
 
 /**
@@ -466,7 +466,7 @@ public java.util.Collection<V> values() { throw new RuntimeException("Stub!"); }
  * @return the set view
  */
 
-@android.annotation.NonNull
+@androidx.annotation.RecentlyNonNull
 public java.util.Set<java.util.Map.Entry<K,V>> entrySet() { throw new RuntimeException("Stub!"); }
 
 /**
@@ -491,7 +491,7 @@ public int hashCode() { throw new RuntimeException("Stub!"); }
  * @return a string representation of this map
  */
 
-@android.annotation.NonNull
+@androidx.annotation.RecentlyNonNull
 public java.lang.String toString() { throw new RuntimeException("Stub!"); }
 
 /**
@@ -505,7 +505,7 @@ public java.lang.String toString() { throw new RuntimeException("Stub!"); }
  * @return {@code true} if the specified object is equal to this map
  */
 
-public boolean equals(@android.annotation.Nullable java.lang.Object o) { throw new RuntimeException("Stub!"); }
+public boolean equals(@androidx.annotation.RecentlyNullable java.lang.Object o) { throw new RuntimeException("Stub!"); }
 
 /**
  * {@inheritDoc}
@@ -515,8 +515,8 @@ public boolean equals(@android.annotation.Nullable java.lang.Object o) { throw n
  * @throws java.lang.NullPointerException if the specified key or value is null
  */
 
-@android.annotation.Nullable
-public V putIfAbsent(@android.annotation.NonNull K key, @android.annotation.NonNull V value) { throw new RuntimeException("Stub!"); }
+@androidx.annotation.RecentlyNullable
+public V putIfAbsent(@androidx.annotation.RecentlyNonNull K key, @androidx.annotation.RecentlyNonNull V value) { throw new RuntimeException("Stub!"); }
 
 /**
  * {@inheritDoc}
@@ -524,7 +524,7 @@ public V putIfAbsent(@android.annotation.NonNull K key, @android.annotation.NonN
  * @throws java.lang.NullPointerException if the specified key is null
  */
 
-public boolean remove(@android.annotation.NonNull java.lang.Object key, @android.annotation.Nullable java.lang.Object value) { throw new RuntimeException("Stub!"); }
+public boolean remove(@androidx.annotation.RecentlyNonNull java.lang.Object key, @androidx.annotation.RecentlyNullable java.lang.Object value) { throw new RuntimeException("Stub!"); }
 
 /**
  * {@inheritDoc}
@@ -532,7 +532,7 @@ public boolean remove(@android.annotation.NonNull java.lang.Object key, @android
  * @throws java.lang.NullPointerException if any of the arguments are null
  */
 
-public boolean replace(@android.annotation.NonNull K key, @android.annotation.NonNull V oldValue, @android.annotation.NonNull V newValue) { throw new RuntimeException("Stub!"); }
+public boolean replace(@androidx.annotation.RecentlyNonNull K key, @androidx.annotation.RecentlyNonNull V oldValue, @androidx.annotation.RecentlyNonNull V newValue) { throw new RuntimeException("Stub!"); }
 
 /**
  * {@inheritDoc}
@@ -542,8 +542,8 @@ public boolean replace(@android.annotation.NonNull K key, @android.annotation.No
  * @throws java.lang.NullPointerException if the specified key or value is null
  */
 
-@android.annotation.Nullable
-public V replace(@android.annotation.NonNull K key, @android.annotation.NonNull V value) { throw new RuntimeException("Stub!"); }
+@androidx.annotation.RecentlyNullable
+public V replace(@androidx.annotation.RecentlyNonNull K key, @androidx.annotation.RecentlyNonNull V value) { throw new RuntimeException("Stub!"); }
 
 /**
  * Returns the value to which the specified key is mapped, or the
@@ -557,12 +557,12 @@ public V replace(@android.annotation.NonNull K key, @android.annotation.NonNull 
  * @throws java.lang.NullPointerException if the specified key is null
  */
 
-@android.annotation.Nullable
-public V getOrDefault(@android.annotation.NonNull java.lang.Object key, @android.annotation.Nullable V defaultValue) { throw new RuntimeException("Stub!"); }
+@androidx.annotation.RecentlyNullable
+public V getOrDefault(@androidx.annotation.RecentlyNonNull java.lang.Object key, @androidx.annotation.RecentlyNullable V defaultValue) { throw new RuntimeException("Stub!"); }
 
-public void forEach(@android.annotation.NonNull java.util.function.BiConsumer<? super K,? super V> action) { throw new RuntimeException("Stub!"); }
+public void forEach(@androidx.annotation.RecentlyNonNull java.util.function.BiConsumer<? super K,? super V> action) { throw new RuntimeException("Stub!"); }
 
-public void replaceAll(@android.annotation.NonNull java.util.function.BiFunction<? super K,? super V,? extends V> function) { throw new RuntimeException("Stub!"); }
+public void replaceAll(@androidx.annotation.RecentlyNonNull java.util.function.BiFunction<? super K,? super V,? extends V> function) { throw new RuntimeException("Stub!"); }
 
 /**
  * If the specified key is not already associated with a value,
@@ -587,8 +587,8 @@ public void replaceAll(@android.annotation.NonNull java.util.function.BiFunction
  *         in which case the mapping is left unestablished
  */
 
-@android.annotation.Nullable
-public V computeIfAbsent(@android.annotation.NonNull K key, @android.annotation.NonNull java.util.function.Function<? super K,? extends V> mappingFunction) { throw new RuntimeException("Stub!"); }
+@androidx.annotation.RecentlyNullable
+public V computeIfAbsent(@androidx.annotation.RecentlyNonNull K key, @androidx.annotation.RecentlyNonNull java.util.function.Function<? super K,? extends V> mappingFunction) { throw new RuntimeException("Stub!"); }
 
 /**
  * If the value for the specified key is present, attempts to
@@ -611,8 +611,8 @@ public V computeIfAbsent(@android.annotation.NonNull K key, @android.annotation.
  *         in which case the mapping is unchanged
  */
 
-@android.annotation.Nullable
-public V computeIfPresent(@android.annotation.NonNull K key, @android.annotation.NonNull java.util.function.BiFunction<? super K,? super V,? extends V> remappingFunction) { throw new RuntimeException("Stub!"); }
+@androidx.annotation.RecentlyNullable
+public V computeIfPresent(@androidx.annotation.RecentlyNonNull K key, @androidx.annotation.RecentlyNonNull java.util.function.BiFunction<? super K,? super V,? extends V> remappingFunction) { throw new RuntimeException("Stub!"); }
 
 /**
  * Attempts to compute a mapping for the specified key and its
@@ -635,8 +635,8 @@ public V computeIfPresent(@android.annotation.NonNull K key, @android.annotation
  *         in which case the mapping is unchanged
  */
 
-@android.annotation.Nullable
-public V compute(@android.annotation.NonNull K key, @android.annotation.NonNull java.util.function.BiFunction<? super K,? super V,? extends V> remappingFunction) { throw new RuntimeException("Stub!"); }
+@androidx.annotation.RecentlyNullable
+public V compute(@androidx.annotation.RecentlyNonNull K key, @androidx.annotation.RecentlyNonNull java.util.function.BiFunction<? super K,? super V,? extends V> remappingFunction) { throw new RuntimeException("Stub!"); }
 
 /**
  * If the specified key is not already associated with a
@@ -659,8 +659,8 @@ public V compute(@android.annotation.NonNull K key, @android.annotation.NonNull 
  *         in which case the mapping is unchanged
  */
 
-@android.annotation.Nullable
-public V merge(@android.annotation.NonNull K key, @android.annotation.NonNull V value, @android.annotation.NonNull java.util.function.BiFunction<? super V,? super V,? extends V> remappingFunction) { throw new RuntimeException("Stub!"); }
+@androidx.annotation.RecentlyNullable
+public V merge(@androidx.annotation.RecentlyNonNull K key, @androidx.annotation.RecentlyNonNull V value, @androidx.annotation.RecentlyNonNull java.util.function.BiFunction<? super V,? super V,? extends V> remappingFunction) { throw new RuntimeException("Stub!"); }
 
 /**
  * Tests if some key maps into the specified value in this table.
@@ -679,7 +679,7 @@ public V merge(@android.annotation.NonNull K key, @android.annotation.NonNull V 
  * @throws java.lang.NullPointerException if the specified value is null
  */
 
-public boolean contains(@android.annotation.NonNull java.lang.Object value) { throw new RuntimeException("Stub!"); }
+public boolean contains(@androidx.annotation.RecentlyNonNull java.lang.Object value) { throw new RuntimeException("Stub!"); }
 
 /**
  * Returns an enumeration of the keys in this table.
@@ -688,7 +688,7 @@ public boolean contains(@android.annotation.NonNull java.lang.Object value) { th
  * @see #keySet()
  */
 
-@android.annotation.NonNull
+@androidx.annotation.RecentlyNonNull
 public java.util.Enumeration<K> keys() { throw new RuntimeException("Stub!"); }
 
 /**
@@ -698,7 +698,7 @@ public java.util.Enumeration<K> keys() { throw new RuntimeException("Stub!"); }
  * @see #values()
  */
 
-@android.annotation.NonNull
+@androidx.annotation.RecentlyNonNull
 public java.util.Enumeration<V> elements() { throw new RuntimeException("Stub!"); }
 
 /**
@@ -723,7 +723,7 @@ public long mappingCount() { throw new RuntimeException("Stub!"); }
  * @since 1.8
  */
 
-@android.annotation.NonNull
+@androidx.annotation.RecentlyNonNull
 public static <K> java.util.concurrent.ConcurrentHashMap.KeySetView<K,java.lang.Boolean> newKeySet() { throw new RuntimeException("Stub!"); }
 
 /**
@@ -739,12 +739,12 @@ public static <K> java.util.concurrent.ConcurrentHashMap.KeySetView<K,java.lang.
  * @since 1.8
  */
 
-@android.annotation.NonNull
+@androidx.annotation.RecentlyNonNull
 public static <K> java.util.concurrent.ConcurrentHashMap.KeySetView<K,java.lang.Boolean> newKeySet(int initialCapacity) { throw new RuntimeException("Stub!"); }
 
 /**
  * Returns a {@link java.util.Set Set} view of the keys in this map, using the
- * given common mapped value for any additions (i.e., {@link java.util.Collection#add Collection#add} and {@link java.util.Collection#addAll(java.util.Collection) Collection#addAll(Collection)}).
+ * given common mapped value for any additions (i.e., {@link java.util.Collection#add  } and {@link java.util.Collection#addAll(java.util.Collection) Collection#addAll(Collection)}).
  * This is of course only appropriate if it is acceptable to use
  * the same value for all additions from this view.
  *
@@ -753,8 +753,8 @@ public static <K> java.util.concurrent.ConcurrentHashMap.KeySetView<K,java.lang.
  * @throws java.lang.NullPointerException if the mappedValue is null
  */
 
-@android.annotation.NonNull
-public java.util.concurrent.ConcurrentHashMap.KeySetView<K,V> keySet(@android.annotation.NonNull V mappedValue) { throw new RuntimeException("Stub!"); }
+@androidx.annotation.RecentlyNonNull
+public java.util.concurrent.ConcurrentHashMap.KeySetView<K,V> keySet(@androidx.annotation.RecentlyNonNull V mappedValue) { throw new RuntimeException("Stub!"); }
 
 /**
  * Performs the given action for each (key, value).
@@ -765,7 +765,7 @@ public java.util.concurrent.ConcurrentHashMap.KeySetView<K,V> keySet(@android.an
  * @since 1.8
  */
 
-public void forEach(long parallelismThreshold, @android.annotation.NonNull java.util.function.BiConsumer<? super K,? super V> action) { throw new RuntimeException("Stub!"); }
+public void forEach(long parallelismThreshold, @androidx.annotation.RecentlyNonNull java.util.function.BiConsumer<? super K,? super V> action) { throw new RuntimeException("Stub!"); }
 
 /**
  * Performs the given action for each non-null transformation
@@ -781,7 +781,7 @@ public void forEach(long parallelismThreshold, @android.annotation.NonNull java.
  * @since 1.8
  */
 
-public <U> void forEach(long parallelismThreshold, @android.annotation.NonNull java.util.function.BiFunction<? super K,? super V,? extends U> transformer, @android.annotation.NonNull java.util.function.Consumer<? super U> action) { throw new RuntimeException("Stub!"); }
+public <U> void forEach(long parallelismThreshold, @androidx.annotation.RecentlyNonNull java.util.function.BiFunction<? super K,? super V,? extends U> transformer, @androidx.annotation.RecentlyNonNull java.util.function.Consumer<? super U> action) { throw new RuntimeException("Stub!"); }
 
 /**
  * Returns a non-null result from applying the given search
@@ -800,8 +800,8 @@ public <U> void forEach(long parallelismThreshold, @android.annotation.NonNull j
  * @since 1.8
  */
 
-@android.annotation.Nullable
-public <U> U search(long parallelismThreshold, @android.annotation.NonNull java.util.function.BiFunction<? super K,? super V,? extends U> searchFunction) { throw new RuntimeException("Stub!"); }
+@androidx.annotation.RecentlyNullable
+public <U> U search(long parallelismThreshold, @androidx.annotation.RecentlyNonNull java.util.function.BiFunction<? super K,? super V,? extends U> searchFunction) { throw new RuntimeException("Stub!"); }
 
 /**
  * Returns the result of accumulating the given transformation
@@ -820,8 +820,8 @@ public <U> U search(long parallelismThreshold, @android.annotation.NonNull java.
  * @since 1.8
  */
 
-@android.annotation.Nullable
-public <U> U reduce(long parallelismThreshold, @android.annotation.NonNull java.util.function.BiFunction<? super K,? super V,? extends U> transformer, @android.annotation.NonNull java.util.function.BiFunction<? super U,? super U,? extends U> reducer) { throw new RuntimeException("Stub!"); }
+@androidx.annotation.RecentlyNullable
+public <U> U reduce(long parallelismThreshold, @androidx.annotation.RecentlyNonNull java.util.function.BiFunction<? super K,? super V,? extends U> transformer, @androidx.annotation.RecentlyNonNull java.util.function.BiFunction<? super U,? super U,? extends U> reducer) { throw new RuntimeException("Stub!"); }
 
 /**
  * Returns the result of accumulating the given transformation
@@ -839,7 +839,7 @@ public <U> U reduce(long parallelismThreshold, @android.annotation.NonNull java.
  * @since 1.8
  */
 
-public double reduceToDouble(long parallelismThreshold, @android.annotation.NonNull java.util.function.ToDoubleBiFunction<? super K,? super V> transformer, double basis, @android.annotation.NonNull java.util.function.DoubleBinaryOperator reducer) { throw new RuntimeException("Stub!"); }
+public double reduceToDouble(long parallelismThreshold, @androidx.annotation.RecentlyNonNull java.util.function.ToDoubleBiFunction<? super K,? super V> transformer, double basis, @androidx.annotation.RecentlyNonNull java.util.function.DoubleBinaryOperator reducer) { throw new RuntimeException("Stub!"); }
 
 /**
  * Returns the result of accumulating the given transformation
@@ -857,7 +857,7 @@ public double reduceToDouble(long parallelismThreshold, @android.annotation.NonN
  * @since 1.8
  */
 
-public long reduceToLong(long parallelismThreshold, @android.annotation.NonNull java.util.function.ToLongBiFunction<? super K,? super V> transformer, long basis, @android.annotation.NonNull java.util.function.LongBinaryOperator reducer) { throw new RuntimeException("Stub!"); }
+public long reduceToLong(long parallelismThreshold, @androidx.annotation.RecentlyNonNull java.util.function.ToLongBiFunction<? super K,? super V> transformer, long basis, @androidx.annotation.RecentlyNonNull java.util.function.LongBinaryOperator reducer) { throw new RuntimeException("Stub!"); }
 
 /**
  * Returns the result of accumulating the given transformation
@@ -875,7 +875,7 @@ public long reduceToLong(long parallelismThreshold, @android.annotation.NonNull 
  * @since 1.8
  */
 
-public int reduceToInt(long parallelismThreshold, @android.annotation.NonNull java.util.function.ToIntBiFunction<? super K,? super V> transformer, int basis, @android.annotation.NonNull java.util.function.IntBinaryOperator reducer) { throw new RuntimeException("Stub!"); }
+public int reduceToInt(long parallelismThreshold, @androidx.annotation.RecentlyNonNull java.util.function.ToIntBiFunction<? super K,? super V> transformer, int basis, @androidx.annotation.RecentlyNonNull java.util.function.IntBinaryOperator reducer) { throw new RuntimeException("Stub!"); }
 
 /**
  * Performs the given action for each key.
@@ -886,7 +886,7 @@ public int reduceToInt(long parallelismThreshold, @android.annotation.NonNull ja
  * @since 1.8
  */
 
-public void forEachKey(long parallelismThreshold, @android.annotation.NonNull java.util.function.Consumer<? super K> action) { throw new RuntimeException("Stub!"); }
+public void forEachKey(long parallelismThreshold, @androidx.annotation.RecentlyNonNull java.util.function.Consumer<? super K> action) { throw new RuntimeException("Stub!"); }
 
 /**
  * Performs the given action for each non-null transformation
@@ -902,7 +902,7 @@ public void forEachKey(long parallelismThreshold, @android.annotation.NonNull ja
  * @since 1.8
  */
 
-public <U> void forEachKey(long parallelismThreshold, @android.annotation.NonNull java.util.function.Function<? super K,? extends U> transformer, @android.annotation.NonNull java.util.function.Consumer<? super U> action) { throw new RuntimeException("Stub!"); }
+public <U> void forEachKey(long parallelismThreshold, @androidx.annotation.RecentlyNonNull java.util.function.Function<? super K,? extends U> transformer, @androidx.annotation.RecentlyNonNull java.util.function.Consumer<? super U> action) { throw new RuntimeException("Stub!"); }
 
 /**
  * Returns a non-null result from applying the given search
@@ -921,8 +921,8 @@ public <U> void forEachKey(long parallelismThreshold, @android.annotation.NonNul
  * @since 1.8
  */
 
-@android.annotation.Nullable
-public <U> U searchKeys(long parallelismThreshold, @android.annotation.NonNull java.util.function.Function<? super K,? extends U> searchFunction) { throw new RuntimeException("Stub!"); }
+@androidx.annotation.RecentlyNullable
+public <U> U searchKeys(long parallelismThreshold, @androidx.annotation.RecentlyNonNull java.util.function.Function<? super K,? extends U> searchFunction) { throw new RuntimeException("Stub!"); }
 
 /**
  * Returns the result of accumulating all keys using the given
@@ -936,8 +936,8 @@ public <U> U searchKeys(long parallelismThreshold, @android.annotation.NonNull j
  * @since 1.8
  */
 
-@android.annotation.Nullable
-public K reduceKeys(long parallelismThreshold, @android.annotation.NonNull java.util.function.BiFunction<? super K,? super K,? extends K> reducer) { throw new RuntimeException("Stub!"); }
+@androidx.annotation.RecentlyNullable
+public K reduceKeys(long parallelismThreshold, @androidx.annotation.RecentlyNonNull java.util.function.BiFunction<? super K,? super K,? extends K> reducer) { throw new RuntimeException("Stub!"); }
 
 /**
  * Returns the result of accumulating the given transformation
@@ -956,8 +956,8 @@ public K reduceKeys(long parallelismThreshold, @android.annotation.NonNull java.
  * @since 1.8
  */
 
-@android.annotation.Nullable
-public <U> U reduceKeys(long parallelismThreshold, @android.annotation.NonNull java.util.function.Function<? super K,? extends U> transformer, @android.annotation.NonNull java.util.function.BiFunction<? super U,? super U,? extends U> reducer) { throw new RuntimeException("Stub!"); }
+@androidx.annotation.RecentlyNullable
+public <U> U reduceKeys(long parallelismThreshold, @androidx.annotation.RecentlyNonNull java.util.function.Function<? super K,? extends U> transformer, @androidx.annotation.RecentlyNonNull java.util.function.BiFunction<? super U,? super U,? extends U> reducer) { throw new RuntimeException("Stub!"); }
 
 /**
  * Returns the result of accumulating the given transformation
@@ -975,7 +975,7 @@ public <U> U reduceKeys(long parallelismThreshold, @android.annotation.NonNull j
  * @since 1.8
  */
 
-public double reduceKeysToDouble(long parallelismThreshold, @android.annotation.NonNull java.util.function.ToDoubleFunction<? super K> transformer, double basis, @android.annotation.NonNull java.util.function.DoubleBinaryOperator reducer) { throw new RuntimeException("Stub!"); }
+public double reduceKeysToDouble(long parallelismThreshold, @androidx.annotation.RecentlyNonNull java.util.function.ToDoubleFunction<? super K> transformer, double basis, @androidx.annotation.RecentlyNonNull java.util.function.DoubleBinaryOperator reducer) { throw new RuntimeException("Stub!"); }
 
 /**
  * Returns the result of accumulating the given transformation
@@ -993,7 +993,7 @@ public double reduceKeysToDouble(long parallelismThreshold, @android.annotation.
  * @since 1.8
  */
 
-public long reduceKeysToLong(long parallelismThreshold, @android.annotation.NonNull java.util.function.ToLongFunction<? super K> transformer, long basis, @android.annotation.NonNull java.util.function.LongBinaryOperator reducer) { throw new RuntimeException("Stub!"); }
+public long reduceKeysToLong(long parallelismThreshold, @androidx.annotation.RecentlyNonNull java.util.function.ToLongFunction<? super K> transformer, long basis, @androidx.annotation.RecentlyNonNull java.util.function.LongBinaryOperator reducer) { throw new RuntimeException("Stub!"); }
 
 /**
  * Returns the result of accumulating the given transformation
@@ -1011,7 +1011,7 @@ public long reduceKeysToLong(long parallelismThreshold, @android.annotation.NonN
  * @since 1.8
  */
 
-public int reduceKeysToInt(long parallelismThreshold, @android.annotation.NonNull java.util.function.ToIntFunction<? super K> transformer, int basis, @android.annotation.NonNull java.util.function.IntBinaryOperator reducer) { throw new RuntimeException("Stub!"); }
+public int reduceKeysToInt(long parallelismThreshold, @androidx.annotation.RecentlyNonNull java.util.function.ToIntFunction<? super K> transformer, int basis, @androidx.annotation.RecentlyNonNull java.util.function.IntBinaryOperator reducer) { throw new RuntimeException("Stub!"); }
 
 /**
  * Performs the given action for each value.
@@ -1022,7 +1022,7 @@ public int reduceKeysToInt(long parallelismThreshold, @android.annotation.NonNul
  * @since 1.8
  */
 
-public void forEachValue(long parallelismThreshold, @android.annotation.NonNull java.util.function.Consumer<? super V> action) { throw new RuntimeException("Stub!"); }
+public void forEachValue(long parallelismThreshold, @androidx.annotation.RecentlyNonNull java.util.function.Consumer<? super V> action) { throw new RuntimeException("Stub!"); }
 
 /**
  * Performs the given action for each non-null transformation
@@ -1038,7 +1038,7 @@ public void forEachValue(long parallelismThreshold, @android.annotation.NonNull 
  * @since 1.8
  */
 
-public <U> void forEachValue(long parallelismThreshold, @android.annotation.NonNull java.util.function.Function<? super V,? extends U> transformer, @android.annotation.NonNull java.util.function.Consumer<? super U> action) { throw new RuntimeException("Stub!"); }
+public <U> void forEachValue(long parallelismThreshold, @androidx.annotation.RecentlyNonNull java.util.function.Function<? super V,? extends U> transformer, @androidx.annotation.RecentlyNonNull java.util.function.Consumer<? super U> action) { throw new RuntimeException("Stub!"); }
 
 /**
  * Returns a non-null result from applying the given search
@@ -1057,8 +1057,8 @@ public <U> void forEachValue(long parallelismThreshold, @android.annotation.NonN
  * @since 1.8
  */
 
-@android.annotation.Nullable
-public <U> U searchValues(long parallelismThreshold, @android.annotation.NonNull java.util.function.Function<? super V,? extends U> searchFunction) { throw new RuntimeException("Stub!"); }
+@androidx.annotation.RecentlyNullable
+public <U> U searchValues(long parallelismThreshold, @androidx.annotation.RecentlyNonNull java.util.function.Function<? super V,? extends U> searchFunction) { throw new RuntimeException("Stub!"); }
 
 /**
  * Returns the result of accumulating all values using the
@@ -1071,8 +1071,8 @@ public <U> U searchValues(long parallelismThreshold, @android.annotation.NonNull
  * @since 1.8
  */
 
-@android.annotation.Nullable
-public V reduceValues(long parallelismThreshold, @android.annotation.NonNull java.util.function.BiFunction<? super V,? super V,? extends V> reducer) { throw new RuntimeException("Stub!"); }
+@androidx.annotation.RecentlyNullable
+public V reduceValues(long parallelismThreshold, @androidx.annotation.RecentlyNonNull java.util.function.BiFunction<? super V,? super V,? extends V> reducer) { throw new RuntimeException("Stub!"); }
 
 /**
  * Returns the result of accumulating the given transformation
@@ -1091,8 +1091,8 @@ public V reduceValues(long parallelismThreshold, @android.annotation.NonNull jav
  * @since 1.8
  */
 
-@android.annotation.Nullable
-public <U> U reduceValues(long parallelismThreshold, @android.annotation.NonNull java.util.function.Function<? super V,? extends U> transformer, @android.annotation.NonNull java.util.function.BiFunction<? super U,? super U,? extends U> reducer) { throw new RuntimeException("Stub!"); }
+@androidx.annotation.RecentlyNullable
+public <U> U reduceValues(long parallelismThreshold, @androidx.annotation.RecentlyNonNull java.util.function.Function<? super V,? extends U> transformer, @androidx.annotation.RecentlyNonNull java.util.function.BiFunction<? super U,? super U,? extends U> reducer) { throw new RuntimeException("Stub!"); }
 
 /**
  * Returns the result of accumulating the given transformation
@@ -1110,7 +1110,7 @@ public <U> U reduceValues(long parallelismThreshold, @android.annotation.NonNull
  * @since 1.8
  */
 
-public double reduceValuesToDouble(long parallelismThreshold, @android.annotation.NonNull java.util.function.ToDoubleFunction<? super V> transformer, double basis, @android.annotation.NonNull java.util.function.DoubleBinaryOperator reducer) { throw new RuntimeException("Stub!"); }
+public double reduceValuesToDouble(long parallelismThreshold, @androidx.annotation.RecentlyNonNull java.util.function.ToDoubleFunction<? super V> transformer, double basis, @androidx.annotation.RecentlyNonNull java.util.function.DoubleBinaryOperator reducer) { throw new RuntimeException("Stub!"); }
 
 /**
  * Returns the result of accumulating the given transformation
@@ -1128,7 +1128,7 @@ public double reduceValuesToDouble(long parallelismThreshold, @android.annotatio
  * @since 1.8
  */
 
-public long reduceValuesToLong(long parallelismThreshold, @android.annotation.NonNull java.util.function.ToLongFunction<? super V> transformer, long basis, @android.annotation.NonNull java.util.function.LongBinaryOperator reducer) { throw new RuntimeException("Stub!"); }
+public long reduceValuesToLong(long parallelismThreshold, @androidx.annotation.RecentlyNonNull java.util.function.ToLongFunction<? super V> transformer, long basis, @androidx.annotation.RecentlyNonNull java.util.function.LongBinaryOperator reducer) { throw new RuntimeException("Stub!"); }
 
 /**
  * Returns the result of accumulating the given transformation
@@ -1146,7 +1146,7 @@ public long reduceValuesToLong(long parallelismThreshold, @android.annotation.No
  * @since 1.8
  */
 
-public int reduceValuesToInt(long parallelismThreshold, @android.annotation.NonNull java.util.function.ToIntFunction<? super V> transformer, int basis, @android.annotation.NonNull java.util.function.IntBinaryOperator reducer) { throw new RuntimeException("Stub!"); }
+public int reduceValuesToInt(long parallelismThreshold, @androidx.annotation.RecentlyNonNull java.util.function.ToIntFunction<? super V> transformer, int basis, @androidx.annotation.RecentlyNonNull java.util.function.IntBinaryOperator reducer) { throw new RuntimeException("Stub!"); }
 
 /**
  * Performs the given action for each entry.
@@ -1157,7 +1157,7 @@ public int reduceValuesToInt(long parallelismThreshold, @android.annotation.NonN
  * @since 1.8
  */
 
-public void forEachEntry(long parallelismThreshold, @android.annotation.NonNull java.util.function.Consumer<? super java.util.Map.Entry<K,V>> action) { throw new RuntimeException("Stub!"); }
+public void forEachEntry(long parallelismThreshold, @androidx.annotation.RecentlyNonNull java.util.function.Consumer<? super java.util.Map.Entry<K,V>> action) { throw new RuntimeException("Stub!"); }
 
 /**
  * Performs the given action for each non-null transformation
@@ -1173,7 +1173,7 @@ public void forEachEntry(long parallelismThreshold, @android.annotation.NonNull 
  * @since 1.8
  */
 
-public <U> void forEachEntry(long parallelismThreshold, @android.annotation.NonNull java.util.function.Function<java.util.Map.Entry<K,V>,? extends U> transformer, @android.annotation.NonNull java.util.function.Consumer<? super U> action) { throw new RuntimeException("Stub!"); }
+public <U> void forEachEntry(long parallelismThreshold, @androidx.annotation.RecentlyNonNull java.util.function.Function<java.util.Map.Entry<K,V>,? extends U> transformer, @androidx.annotation.RecentlyNonNull java.util.function.Consumer<? super U> action) { throw new RuntimeException("Stub!"); }
 
 /**
  * Returns a non-null result from applying the given search
@@ -1192,8 +1192,8 @@ public <U> void forEachEntry(long parallelismThreshold, @android.annotation.NonN
  * @since 1.8
  */
 
-@android.annotation.Nullable
-public <U> U searchEntries(long parallelismThreshold, @android.annotation.NonNull java.util.function.Function<java.util.Map.Entry<K,V>,? extends U> searchFunction) { throw new RuntimeException("Stub!"); }
+@androidx.annotation.RecentlyNullable
+public <U> U searchEntries(long parallelismThreshold, @androidx.annotation.RecentlyNonNull java.util.function.Function<java.util.Map.Entry<K,V>,? extends U> searchFunction) { throw new RuntimeException("Stub!"); }
 
 /**
  * Returns the result of accumulating all entries using the
@@ -1206,8 +1206,8 @@ public <U> U searchEntries(long parallelismThreshold, @android.annotation.NonNul
  * @since 1.8
  */
 
-@android.annotation.Nullable
-public java.util.Map.Entry<K,V> reduceEntries(long parallelismThreshold, @android.annotation.NonNull java.util.function.BiFunction<java.util.Map.Entry<K,V>,java.util.Map.Entry<K,V>,? extends java.util.Map.Entry<K,V>> reducer) { throw new RuntimeException("Stub!"); }
+@androidx.annotation.RecentlyNullable
+public java.util.Map.Entry<K,V> reduceEntries(long parallelismThreshold, @androidx.annotation.RecentlyNonNull java.util.function.BiFunction<java.util.Map.Entry<K,V>,java.util.Map.Entry<K,V>,? extends java.util.Map.Entry<K,V>> reducer) { throw new RuntimeException("Stub!"); }
 
 /**
  * Returns the result of accumulating the given transformation
@@ -1226,8 +1226,8 @@ public java.util.Map.Entry<K,V> reduceEntries(long parallelismThreshold, @androi
  * @since 1.8
  */
 
-@android.annotation.Nullable
-public <U> U reduceEntries(long parallelismThreshold, @android.annotation.NonNull java.util.function.Function<java.util.Map.Entry<K,V>,? extends U> transformer, @android.annotation.NonNull java.util.function.BiFunction<? super U,? super U,? extends U> reducer) { throw new RuntimeException("Stub!"); }
+@androidx.annotation.RecentlyNullable
+public <U> U reduceEntries(long parallelismThreshold, @androidx.annotation.RecentlyNonNull java.util.function.Function<java.util.Map.Entry<K,V>,? extends U> transformer, @androidx.annotation.RecentlyNonNull java.util.function.BiFunction<? super U,? super U,? extends U> reducer) { throw new RuntimeException("Stub!"); }
 
 /**
  * Returns the result of accumulating the given transformation
@@ -1245,7 +1245,7 @@ public <U> U reduceEntries(long parallelismThreshold, @android.annotation.NonNul
  * @since 1.8
  */
 
-public double reduceEntriesToDouble(long parallelismThreshold, @android.annotation.NonNull java.util.function.ToDoubleFunction<java.util.Map.Entry<K,V>> transformer, double basis, @android.annotation.NonNull java.util.function.DoubleBinaryOperator reducer) { throw new RuntimeException("Stub!"); }
+public double reduceEntriesToDouble(long parallelismThreshold, @androidx.annotation.RecentlyNonNull java.util.function.ToDoubleFunction<java.util.Map.Entry<K,V>> transformer, double basis, @androidx.annotation.RecentlyNonNull java.util.function.DoubleBinaryOperator reducer) { throw new RuntimeException("Stub!"); }
 
 /**
  * Returns the result of accumulating the given transformation
@@ -1263,7 +1263,7 @@ public double reduceEntriesToDouble(long parallelismThreshold, @android.annotati
  * @since 1.8
  */
 
-public long reduceEntriesToLong(long parallelismThreshold, @android.annotation.NonNull java.util.function.ToLongFunction<java.util.Map.Entry<K,V>> transformer, long basis, @android.annotation.NonNull java.util.function.LongBinaryOperator reducer) { throw new RuntimeException("Stub!"); }
+public long reduceEntriesToLong(long parallelismThreshold, @androidx.annotation.RecentlyNonNull java.util.function.ToLongFunction<java.util.Map.Entry<K,V>> transformer, long basis, @androidx.annotation.RecentlyNonNull java.util.function.LongBinaryOperator reducer) { throw new RuntimeException("Stub!"); }
 
 /**
  * Returns the result of accumulating the given transformation
@@ -1281,7 +1281,7 @@ public long reduceEntriesToLong(long parallelismThreshold, @android.annotation.N
  * @since 1.8
  */
 
-public int reduceEntriesToInt(long parallelismThreshold, @android.annotation.NonNull java.util.function.ToIntFunction<java.util.Map.Entry<K,V>> transformer, int basis, @android.annotation.NonNull java.util.function.IntBinaryOperator reducer) { throw new RuntimeException("Stub!"); }
+public int reduceEntriesToInt(long parallelismThreshold, @androidx.annotation.RecentlyNonNull java.util.function.ToIntFunction<java.util.Map.Entry<K,V>> transformer, int basis, @androidx.annotation.RecentlyNonNull java.util.function.IntBinaryOperator reducer) { throw new RuntimeException("Stub!"); }
 /**
  * A view of a ConcurrentHashMap as a {@link java.util.Set Set} of keys, in
  * which additions may optionally be enabled by mapping to a
@@ -1306,7 +1306,7 @@ KeySetView() { throw new RuntimeException("Stub!"); }
  * if not supported
  */
 
-@android.annotation.Nullable
+@androidx.annotation.RecentlyNullable
 public V getMappedValue() { throw new RuntimeException("Stub!"); }
 
 /**
@@ -1314,7 +1314,7 @@ public V getMappedValue() { throw new RuntimeException("Stub!"); }
  * @throws java.lang.NullPointerException if the specified key is null
  */
 
-public boolean contains(@android.annotation.NonNull java.lang.Object o) { throw new RuntimeException("Stub!"); }
+public boolean contains(@androidx.annotation.RecentlyNonNull java.lang.Object o) { throw new RuntimeException("Stub!"); }
 
 /**
  * Removes the key from this map view, by removing the key (and its
@@ -1326,13 +1326,13 @@ public boolean contains(@android.annotation.NonNull java.lang.Object o) { throw 
  * @throws java.lang.NullPointerException if the specified key is null
  */
 
-public boolean remove(@android.annotation.NonNull java.lang.Object o) { throw new RuntimeException("Stub!"); }
+public boolean remove(@androidx.annotation.RecentlyNonNull java.lang.Object o) { throw new RuntimeException("Stub!"); }
 
 /**
  * @return an iterator over the keys of the backing map
  */
 
-@android.annotation.NonNull
+@androidx.annotation.RecentlyNonNull
 public java.util.Iterator<K> iterator() { throw new RuntimeException("Stub!"); }
 
 /**
@@ -1346,7 +1346,7 @@ public java.util.Iterator<K> iterator() { throw new RuntimeException("Stub!"); }
  * for additions was provided
  */
 
-public boolean add(@android.annotation.NonNull K e) { throw new RuntimeException("Stub!"); }
+public boolean add(@androidx.annotation.RecentlyNonNull K e) { throw new RuntimeException("Stub!"); }
 
 /**
  * Adds all of the elements in the specified collection to this set,
@@ -1360,22 +1360,22 @@ public boolean add(@android.annotation.NonNull K e) { throw new RuntimeException
  * for additions was provided
  */
 
-public boolean addAll(@android.annotation.NonNull java.util.Collection<? extends K> c) { throw new RuntimeException("Stub!"); }
+public boolean addAll(@androidx.annotation.RecentlyNonNull java.util.Collection<? extends K> c) { throw new RuntimeException("Stub!"); }
 
 public int hashCode() { throw new RuntimeException("Stub!"); }
 
-public boolean equals(@android.annotation.Nullable java.lang.Object o) { throw new RuntimeException("Stub!"); }
+public boolean equals(@androidx.annotation.RecentlyNullable java.lang.Object o) { throw new RuntimeException("Stub!"); }
 
-@android.annotation.NonNull
+@androidx.annotation.RecentlyNonNull
 public java.util.Spliterator<K> spliterator() { throw new RuntimeException("Stub!"); }
 
-public void forEach(@android.annotation.NonNull java.util.function.Consumer<? super K> action) { throw new RuntimeException("Stub!"); }
+public void forEach(@androidx.annotation.RecentlyNonNull java.util.function.Consumer<? super K> action) { throw new RuntimeException("Stub!"); }
 
-public final boolean removeAll(@android.annotation.NonNull java.util.Collection<?> c) { throw new RuntimeException("Stub!"); }
+public final boolean removeAll(@androidx.annotation.RecentlyNonNull java.util.Collection<?> c) { throw new RuntimeException("Stub!"); }
 
 public final int size() { throw new RuntimeException("Stub!"); }
 
-public final boolean containsAll(@android.annotation.NonNull java.util.Collection<?> c) { throw new RuntimeException("Stub!"); }
+public final boolean containsAll(@androidx.annotation.RecentlyNonNull java.util.Collection<?> c) { throw new RuntimeException("Stub!"); }
 
 /**
  * Removes all of the elements from this view, by removing all
@@ -1386,11 +1386,11 @@ public final void clear() { throw new RuntimeException("Stub!"); }
 
 public final boolean isEmpty() { throw new RuntimeException("Stub!"); }
 
-@android.annotation.NonNull
+@androidx.annotation.RecentlyNonNull
 public final java.lang.Object[] toArray() { throw new RuntimeException("Stub!"); }
 
-@android.annotation.NonNull
-public final <T> T[] toArray(@android.annotation.NonNull T[] a) { throw new RuntimeException("Stub!"); }
+@androidx.annotation.RecentlyNonNull
+public final <T> T[] toArray(@androidx.annotation.RecentlyNonNull T[] a) { throw new RuntimeException("Stub!"); }
 
 /**
  * Returns a string representation of this collection.
@@ -1404,7 +1404,7 @@ public final <T> T[] toArray(@android.annotation.NonNull T[] a) { throw new Runt
  * @return a string representation of this collection
  */
 
-@android.annotation.NonNull
+@androidx.annotation.RecentlyNonNull
 public final java.lang.String toString() { throw new RuntimeException("Stub!"); }
 
 /**
@@ -1413,10 +1413,10 @@ public final java.lang.String toString() { throw new RuntimeException("Stub!"); 
  * @return the map backing this view
  */
 
-@android.annotation.NonNull
+@androidx.annotation.RecentlyNonNull
 public java.util.concurrent.ConcurrentHashMap<K,V> getMap() { throw new RuntimeException("Stub!"); }
 
-public final boolean retainAll(@android.annotation.NonNull java.util.Collection<?> c) { throw new RuntimeException("Stub!"); }
+public final boolean retainAll(@androidx.annotation.RecentlyNonNull java.util.Collection<?> c) { throw new RuntimeException("Stub!"); }
 }
 
 }

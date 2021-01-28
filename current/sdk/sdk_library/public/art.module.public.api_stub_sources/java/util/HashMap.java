@@ -86,7 +86,7 @@ package java.util;
  * synchronizing on some object that naturally encapsulates the map.
  *
  * If no such object exists, the map should be "wrapped" using the
- * {@link java.util.Collections#synchronizedMap Collections#synchronizedMap}
+ * {@link java.util.Collections#synchronizedMap Collections.synchronizedMap}
  * method.  This is best done at creation time, to prevent accidental
  * unsynchronized access to the map:<pre>
  *   Map m = Collections.synchronizedMap(new HashMap(...));</pre>
@@ -169,7 +169,7 @@ public HashMap() { throw new RuntimeException("Stub!"); }
  * @throws  java.lang.NullPointerException if the specified map is null
  */
 
-public HashMap(@android.annotation.NonNull java.util.Map<? extends K,? extends V> m) { throw new RuntimeException("Stub!"); }
+public HashMap(@androidx.annotation.RecentlyNonNull java.util.Map<? extends K,? extends V> m) { throw new RuntimeException("Stub!"); }
 
 /**
  * Returns the number of key-value mappings in this map.
@@ -205,8 +205,8 @@ public boolean isEmpty() { throw new RuntimeException("Stub!"); }
  * @see #put(Object, Object)
  */
 
-@android.annotation.Nullable
-public V get(@android.annotation.Nullable java.lang.Object key) { throw new RuntimeException("Stub!"); }
+@androidx.annotation.RecentlyNullable
+public V get(@androidx.annotation.RecentlyNullable java.lang.Object key) { throw new RuntimeException("Stub!"); }
 
 /**
  * Returns <tt>true</tt> if this map contains a mapping for the
@@ -217,7 +217,7 @@ public V get(@android.annotation.Nullable java.lang.Object key) { throw new Runt
  * key.
  */
 
-public boolean containsKey(@android.annotation.Nullable java.lang.Object key) { throw new RuntimeException("Stub!"); }
+public boolean containsKey(@androidx.annotation.RecentlyNullable java.lang.Object key) { throw new RuntimeException("Stub!"); }
 
 /**
  * Associates the specified value with the specified key in this map.
@@ -232,7 +232,7 @@ public boolean containsKey(@android.annotation.Nullable java.lang.Object key) { 
  *         previously associated <tt>null</tt> with <tt>key</tt>.)
  */
 
-@android.annotation.Nullable
+@androidx.annotation.RecentlyNullable
 public V put(K key, V value) { throw new RuntimeException("Stub!"); }
 
 /**
@@ -244,7 +244,7 @@ public V put(K key, V value) { throw new RuntimeException("Stub!"); }
  * @throws java.lang.NullPointerException if the specified map is null
  */
 
-public void putAll(@android.annotation.NonNull java.util.Map<? extends K,? extends V> m) { throw new RuntimeException("Stub!"); }
+public void putAll(@androidx.annotation.RecentlyNonNull java.util.Map<? extends K,? extends V> m) { throw new RuntimeException("Stub!"); }
 
 /**
  * Removes the mapping for the specified key from this map if present.
@@ -256,8 +256,8 @@ public void putAll(@android.annotation.NonNull java.util.Map<? extends K,? exten
  *         previously associated <tt>null</tt> with <tt>key</tt>.)
  */
 
-@android.annotation.Nullable
-public V remove(@android.annotation.Nullable java.lang.Object key) { throw new RuntimeException("Stub!"); }
+@androidx.annotation.RecentlyNullable
+public V remove(@androidx.annotation.RecentlyNullable java.lang.Object key) { throw new RuntimeException("Stub!"); }
 
 /**
  * Removes all of the mappings from this map.
@@ -275,7 +275,7 @@ public void clear() { throw new RuntimeException("Stub!"); }
  *         specified value
  */
 
-public boolean containsValue(@android.annotation.Nullable java.lang.Object value) { throw new RuntimeException("Stub!"); }
+public boolean containsValue(@androidx.annotation.RecentlyNullable java.lang.Object value) { throw new RuntimeException("Stub!"); }
 
 /**
  * Returns a {@link java.util.Set Set} view of the keys contained in this map.
@@ -293,7 +293,7 @@ public boolean containsValue(@android.annotation.Nullable java.lang.Object value
  * @return a set view of the keys contained in this map
  */
 
-@android.annotation.NonNull
+@androidx.annotation.RecentlyNonNull
 public java.util.Set<K> keySet() { throw new RuntimeException("Stub!"); }
 
 /**
@@ -312,7 +312,7 @@ public java.util.Set<K> keySet() { throw new RuntimeException("Stub!"); }
  * @return a view of the values contained in this map
  */
 
-@android.annotation.NonNull
+@androidx.annotation.RecentlyNonNull
 public java.util.Collection<V> values() { throw new RuntimeException("Stub!"); }
 
 /**
@@ -332,37 +332,37 @@ public java.util.Collection<V> values() { throw new RuntimeException("Stub!"); }
  * @return a set view of the mappings contained in this map
  */
 
-@android.annotation.NonNull
+@androidx.annotation.RecentlyNonNull
 public java.util.Set<java.util.Map.Entry<K,V>> entrySet() { throw new RuntimeException("Stub!"); }
 
-@android.annotation.Nullable
-public V getOrDefault(@android.annotation.Nullable java.lang.Object key, @android.annotation.Nullable V defaultValue) { throw new RuntimeException("Stub!"); }
+@androidx.annotation.RecentlyNullable
+public V getOrDefault(@androidx.annotation.RecentlyNullable java.lang.Object key, @androidx.annotation.RecentlyNullable V defaultValue) { throw new RuntimeException("Stub!"); }
 
-@android.annotation.Nullable
+@androidx.annotation.RecentlyNullable
 public V putIfAbsent(K key, V value) { throw new RuntimeException("Stub!"); }
 
-public boolean remove(@android.annotation.Nullable java.lang.Object key, @android.annotation.Nullable java.lang.Object value) { throw new RuntimeException("Stub!"); }
+public boolean remove(@androidx.annotation.RecentlyNullable java.lang.Object key, @androidx.annotation.RecentlyNullable java.lang.Object value) { throw new RuntimeException("Stub!"); }
 
-public boolean replace(K key, @android.annotation.Nullable V oldValue, V newValue) { throw new RuntimeException("Stub!"); }
+public boolean replace(K key, @androidx.annotation.RecentlyNullable V oldValue, V newValue) { throw new RuntimeException("Stub!"); }
 
-@android.annotation.Nullable
+@androidx.annotation.RecentlyNullable
 public V replace(K key, V value) { throw new RuntimeException("Stub!"); }
 
-@android.annotation.Nullable
-public V computeIfAbsent(K key, @android.annotation.NonNull java.util.function.Function<? super K,? extends V> mappingFunction) { throw new RuntimeException("Stub!"); }
+@androidx.annotation.RecentlyNullable
+public V computeIfAbsent(K key, @androidx.annotation.RecentlyNonNull java.util.function.Function<? super K,? extends V> mappingFunction) { throw new RuntimeException("Stub!"); }
 
-@android.annotation.Nullable
-public V computeIfPresent(K key, @android.annotation.NonNull java.util.function.BiFunction<? super K,? super V,? extends V> remappingFunction) { throw new RuntimeException("Stub!"); }
+@androidx.annotation.RecentlyNullable
+public V computeIfPresent(K key, @androidx.annotation.RecentlyNonNull java.util.function.BiFunction<? super K,? super V,? extends V> remappingFunction) { throw new RuntimeException("Stub!"); }
 
-@android.annotation.Nullable
-public V compute(K key, @android.annotation.NonNull java.util.function.BiFunction<? super K,? super V,? extends V> remappingFunction) { throw new RuntimeException("Stub!"); }
+@androidx.annotation.RecentlyNullable
+public V compute(K key, @androidx.annotation.RecentlyNonNull java.util.function.BiFunction<? super K,? super V,? extends V> remappingFunction) { throw new RuntimeException("Stub!"); }
 
-@android.annotation.Nullable
-public V merge(K key, @android.annotation.NonNull V value, @android.annotation.NonNull java.util.function.BiFunction<? super V,? super V,? extends V> remappingFunction) { throw new RuntimeException("Stub!"); }
+@androidx.annotation.RecentlyNullable
+public V merge(K key, @androidx.annotation.RecentlyNonNull V value, @androidx.annotation.RecentlyNonNull java.util.function.BiFunction<? super V,? super V,? extends V> remappingFunction) { throw new RuntimeException("Stub!"); }
 
-public void forEach(@android.annotation.NonNull java.util.function.BiConsumer<? super K,? super V> action) { throw new RuntimeException("Stub!"); }
+public void forEach(@androidx.annotation.RecentlyNonNull java.util.function.BiConsumer<? super K,? super V> action) { throw new RuntimeException("Stub!"); }
 
-public void replaceAll(@android.annotation.NonNull java.util.function.BiFunction<? super K,? super V,? extends V> function) { throw new RuntimeException("Stub!"); }
+public void replaceAll(@androidx.annotation.RecentlyNonNull java.util.function.BiFunction<? super K,? super V,? extends V> function) { throw new RuntimeException("Stub!"); }
 
 /**
  * Returns a shallow copy of this <tt>HashMap</tt> instance: the keys and
@@ -371,7 +371,7 @@ public void replaceAll(@android.annotation.NonNull java.util.function.BiFunction
  * @return a shallow copy of this map
  */
 
-@android.annotation.NonNull
+@androidx.annotation.RecentlyNonNull
 public java.lang.Object clone() { throw new RuntimeException("Stub!"); }
 }
 

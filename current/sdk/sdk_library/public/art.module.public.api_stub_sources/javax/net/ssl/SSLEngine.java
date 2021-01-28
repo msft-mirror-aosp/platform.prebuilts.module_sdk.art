@@ -162,7 +162,7 @@ import java.util.List;
  *     closed, it is not reusable:  a new <code>SSLEngine</code> must
  *     be created.
  * </OL>
- * An <code>SSLEngine</code> is created by calling {@link javax.net.ssl.SSLContext#createSSLEngine() SSLContext#createSSLEngine()} from an initialized
+ * An <code>SSLEngine</code> is created by calling {@link javax.net.ssl.SSLContext#createSSLEngine()  } from an initialized
  * <code>SSLContext</code>.  Any configuration
  * parameters should be set before making the first call to
  * <code>wrap()</code>, <code>unwrap()</code>, or
@@ -190,14 +190,14 @@ import java.util.List;
  * packets only, and does not store application data internally between
  * calls to <code>wrap()/unwrap()</code>.  Thus input and output
  * <code>ByteBuffer</code>s must be sized appropriately to hold the
- * maximum record that can be produced.  Calls to {@link javax.net.ssl.SSLSession#getPacketBufferSize() SSLSession#getPacketBufferSize()} and {@link javax.net.ssl.SSLSession#getApplicationBufferSize() SSLSession#getApplicationBufferSize()} should be used to determine
+ * maximum record that can be produced.  Calls to {@link javax.net.ssl.SSLSession#getPacketBufferSize()  } and {@link javax.net.ssl.SSLSession#getApplicationBufferSize()  } should be used to determine
  * the appropriate buffer sizes.  The size of the outbound application
  * data buffer generally does not matter.  If buffer conditions do not
  * allow for the proper consumption/production of data, the application
  * must determine (via {@link javax.net.ssl.SSLEngineResult SSLEngineResult}) and correct the
  * problem, and then try the call again.
  * <P>
- * For example, <code>unwrap()</code> will return a {@link javax.net.ssl.SSLEngineResult.Status#BUFFER_OVERFLOW SSLEngineResult.Status#BUFFER_OVERFLOW} result if the engine
+ * For example, <code>unwrap()</code> will return a {@link javax.net.ssl.SSLEngineResult.Status#BUFFER_OVERFLOW  } result if the engine
  * determines that there is not enough destination buffer space available.
  * Applications should call {@link javax.net.ssl.SSLSession#getApplicationBufferSize() SSLSession#getApplicationBufferSize()}
  * and compare that value with the space available in the destination buffer,
@@ -1671,7 +1671,7 @@ public javax.net.ssl.SSLSession getHandshakeSession() { throw new RuntimeExcepti
  * this <code>SSLEngine</code> by sending the appropriate
  * session renegotiate handshake message.
  * <P>
- * Unlike the {@link javax.net.ssl.SSLSocket#startHandshake() SSLSocket#startHandshake()} method, this method does not block
+ * Unlike the {@link javax.net.ssl.SSLSocket#startHandshake()  SSLSocket#startHandshake()} method, this method does not block
  * until handshaking is completed.
  * <P>
  * To force a complete SSL/TLS session renegotiation, the current
@@ -1934,7 +1934,7 @@ public java.lang.String getHandshakeApplicationProtocol() { throw new RuntimeExc
  * Registers a callback function that selects an application protocol
  * value for a SSL/TLS handshake.
  * The function overrides any values supplied using
- * {@link javax.net.ssl.SSLParameters#setApplicationProtocols SSLParameters#setApplicationProtocols} and it supports the following
+ * {@link javax.net.ssl.SSLParameters#setApplicationProtocols  SSLParameters.setApplicationProtocols} and it supports the following
  * type parameters:
  * <blockquote>
  * <dl>

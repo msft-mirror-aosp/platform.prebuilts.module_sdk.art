@@ -415,7 +415,7 @@ public java.net.InetAddress getInetAddress() { throw new RuntimeException("Stub!
  * If there is a security manager set, its {@code checkConnect} method is
  * called with the local address and {@code -1} as its arguments to see
  * if the operation is allowed. If the operation is not allowed,
- * the {@link java.net.InetAddress#getLoopbackAddress InetAddress#getLoopbackAddress} address is returned.
+ * the {@link java.net.InetAddress#getLoopbackAddress loopback} address is returned.
  *
  * @return the local address to which the socket is bound,
  *         the loopback address if denied by the security manager, or
@@ -481,14 +481,14 @@ public java.net.SocketAddress getRemoteSocketAddress() { throw new RuntimeExcept
  * then this method will continue to return an {@code InetSocketAddress}
  * after the socket is closed. In that case the returned
  * {@code InetSocketAddress}'s address is the
- * {@link java.net.InetAddress#isAnyLocalAddress InetAddress#isAnyLocalAddress} address
+ * {@link java.net.InetAddress#isAnyLocalAddress wildcard} address
  * and its port is the local port that it was bound to.
  * <p>
  * If there is a security manager set, its {@code checkConnect} method is
  * called with the local address and {@code -1} as its arguments to see
  * if the operation is allowed. If the operation is not allowed,
  * a {@code SocketAddress} representing the
- * {@link java.net.InetAddress#getLoopbackAddress InetAddress#getLoopbackAddress} address and the local
+ * {@link java.net.InetAddress#getLoopbackAddress loopback} address and the local
  * port to which this socket is bound is returned.
  *
  * @return a {@code SocketAddress} representing the local endpoint of
@@ -595,7 +595,7 @@ public java.io.InputStream getInputStream() throws java.io.IOException { throw n
 public java.io.OutputStream getOutputStream() throws java.io.IOException { throw new RuntimeException("Stub!"); }
 
 /**
- * Enable/disable {@link java.net.SocketOptions#TCP_NODELAY SocketOptions#TCP_NODELAY}
+ * Enable/disable {@link java.net.SocketOptions#TCP_NODELAY TCP_NODELAY}
  * (disable/enable Nagle's algorithm).
  *
  * @param on {@code true} to enable TCP_NODELAY,
@@ -612,10 +612,10 @@ public java.io.OutputStream getOutputStream() throws java.io.IOException { throw
 public void setTcpNoDelay(boolean on) throws java.net.SocketException { throw new RuntimeException("Stub!"); }
 
 /**
- * Tests if {@link java.net.SocketOptions#TCP_NODELAY SocketOptions#TCP_NODELAY} is enabled.
+ * Tests if {@link java.net.SocketOptions#TCP_NODELAY TCP_NODELAY} is enabled.
  *
  * @return a {@code boolean} indicating whether or not
- *         {@link java.net.SocketOptions#TCP_NODELAY SocketOptions#TCP_NODELAY} is enabled.
+ *         {@link java.net.SocketOptions#TCP_NODELAY TCP_NODELAY} is enabled.
  * @exception java.net.SocketException if there is an error
  * in the underlying protocol, such as a TCP error.
  * @since   JDK1.1
@@ -625,7 +625,7 @@ public void setTcpNoDelay(boolean on) throws java.net.SocketException { throw ne
 public boolean getTcpNoDelay() throws java.net.SocketException { throw new RuntimeException("Stub!"); }
 
 /**
- * Enable/disable {@link java.net.SocketOptions#SO_LINGER SocketOptions#SO_LINGER} with the
+ * Enable/disable {@link java.net.SocketOptions#SO_LINGER SO_LINGER} with the
  * specified linger time in seconds. The maximum timeout value is platform
  * specific.
  *
@@ -643,13 +643,13 @@ public boolean getTcpNoDelay() throws java.net.SocketException { throw new Runti
 public void setSoLinger(boolean on, int linger) throws java.net.SocketException { throw new RuntimeException("Stub!"); }
 
 /**
- * Returns setting for {@link java.net.SocketOptions#SO_LINGER SocketOptions#SO_LINGER}.
+ * Returns setting for {@link java.net.SocketOptions#SO_LINGER SO_LINGER}.
  * -1 returns implies that the
  * option is disabled.
  *
  * The setting only affects socket close.
  *
- * @return the setting for {@link java.net.SocketOptions#SO_LINGER SocketOptions#SO_LINGER}.
+ * @return the setting for {@link java.net.SocketOptions#SO_LINGER SO_LINGER}.
  * @exception java.net.SocketException if there is an error
  * in the underlying protocol, such as a TCP error.
  * @since   JDK1.1
@@ -672,7 +672,7 @@ public int getSoLinger() throws java.net.SocketException { throw new RuntimeExce
 public void sendUrgentData(int data) throws java.io.IOException { throw new RuntimeException("Stub!"); }
 
 /**
- * Enable/disable {@link java.net.SocketOptions#SO_OOBINLINE SocketOptions#SO_OOBINLINE}
+ * Enable/disable {@link java.net.SocketOptions#SO_OOBINLINE SO_OOBINLINE}
  * (receipt of TCP urgent data)
  *
  * By default, this option is disabled and TCP urgent data received on a
@@ -686,7 +686,7 @@ public void sendUrgentData(int data) throws java.io.IOException { throw new Runt
  * data unless provided by a higher level protocol.
  *
  * @param on {@code true} to enable
- *           {@link java.net.SocketOptions#SO_OOBINLINE SocketOptions#SO_OOBINLINE},
+ *           {@link java.net.SocketOptions#SO_OOBINLINE SO_OOBINLINE},
  *           {@code false} to disable.
  *
  * @exception java.net.SocketException if there is an error
@@ -700,10 +700,10 @@ public void sendUrgentData(int data) throws java.io.IOException { throw new Runt
 public void setOOBInline(boolean on) throws java.net.SocketException { throw new RuntimeException("Stub!"); }
 
 /**
- * Tests if {@link java.net.SocketOptions#SO_OOBINLINE SocketOptions#SO_OOBINLINE} is enabled.
+ * Tests if {@link java.net.SocketOptions#SO_OOBINLINE SO_OOBINLINE} is enabled.
  *
  * @return a {@code boolean} indicating whether or not
- *         {@link java.net.SocketOptions#SO_OOBINLINE SocketOptions#SO_OOBINLINE}is enabled.
+ *         {@link java.net.SocketOptions#SO_OOBINLINE SO_OOBINLINE}is enabled.
  *
  * @exception java.net.SocketException if there is an error
  * in the underlying protocol, such as a TCP error.
@@ -714,7 +714,7 @@ public void setOOBInline(boolean on) throws java.net.SocketException { throw new
 public boolean getOOBInline() throws java.net.SocketException { throw new RuntimeException("Stub!"); }
 
 /**
- *  Enable/disable {@link java.net.SocketOptions#SO_TIMEOUT SocketOptions#SO_TIMEOUT}
+ *  Enable/disable {@link java.net.SocketOptions#SO_TIMEOUT SO_TIMEOUT}
  *  with the specified timeout, in milliseconds. With this option set
  *  to a non-zero timeout, a read() call on the InputStream associated with
  *  this Socket will block for only this amount of time.  If the timeout
@@ -734,10 +734,10 @@ public boolean getOOBInline() throws java.net.SocketException { throw new Runtim
 public synchronized void setSoTimeout(int timeout) throws java.net.SocketException { throw new RuntimeException("Stub!"); }
 
 /**
- * Returns setting for {@link java.net.SocketOptions#SO_TIMEOUT SocketOptions#SO_TIMEOUT}.
+ * Returns setting for {@link java.net.SocketOptions#SO_TIMEOUT SO_TIMEOUT}.
  * 0 returns implies that the option is disabled (i.e., timeout of infinity).
  *
- * @return the setting for {@link java.net.SocketOptions#SO_TIMEOUT SocketOptions#SO_TIMEOUT}
+ * @return the setting for {@link java.net.SocketOptions#SO_TIMEOUT SO_TIMEOUT}
  * @exception java.net.SocketException if there is an error
  * in the underlying protocol, such as a TCP error.
  *
@@ -748,13 +748,13 @@ public synchronized void setSoTimeout(int timeout) throws java.net.SocketExcepti
 public synchronized int getSoTimeout() throws java.net.SocketException { throw new RuntimeException("Stub!"); }
 
 /**
- * Sets the {@link java.net.SocketOptions#SO_SNDBUF SocketOptions#SO_SNDBUF} option to the
+ * Sets the {@link java.net.SocketOptions#SO_SNDBUF SO_SNDBUF} option to the
  * specified value for this {@code Socket}.
- * The {@link java.net.SocketOptions#SO_SNDBUF SocketOptions#SO_SNDBUF} option is used by the
+ * The {@link java.net.SocketOptions#SO_SNDBUF SO_SNDBUF} option is used by the
  * platform's networking code as a hint for the size to set the underlying
  * network I/O buffers.
  *
- * <p>Because {@link java.net.SocketOptions#SO_SNDBUF SocketOptions#SO_SNDBUF} is a hint,
+ * <p>Because {@link java.net.SocketOptions#SO_SNDBUF SO_SNDBUF} is a hint,
  * applications that want to verify what size the buffers were set to
  * should call {@link #getSendBufferSize()}.
  *
@@ -774,10 +774,10 @@ public synchronized int getSoTimeout() throws java.net.SocketException { throw n
 public synchronized void setSendBufferSize(int size) throws java.net.SocketException { throw new RuntimeException("Stub!"); }
 
 /**
- * Get value of the {@link java.net.SocketOptions#SO_SNDBUF SocketOptions#SO_SNDBUF} option
+ * Get value of the {@link java.net.SocketOptions#SO_SNDBUF SO_SNDBUF} option
  * for this {@code Socket}, that is the buffer size used by the platform
  * for output on this {@code Socket}.
- * @return the value of the {@link java.net.SocketOptions#SO_SNDBUF SocketOptions#SO_SNDBUF}
+ * @return the value of the {@link java.net.SocketOptions#SO_SNDBUF SO_SNDBUF}
  *         option for this {@code Socket}.
  *
  * @exception java.net.SocketException if there is an error
@@ -790,9 +790,9 @@ public synchronized void setSendBufferSize(int size) throws java.net.SocketExcep
 public synchronized int getSendBufferSize() throws java.net.SocketException { throw new RuntimeException("Stub!"); }
 
 /**
- * Sets the {@link java.net.SocketOptions#SO_RCVBUF SocketOptions#SO_RCVBUF} option to the
+ * Sets the {@link java.net.SocketOptions#SO_RCVBUF SO_RCVBUF} option to the
  * specified value for this {@code Socket}. The
- * {@link java.net.SocketOptions#SO_RCVBUF SocketOptions#SO_RCVBUF} option is
+ * {@link java.net.SocketOptions#SO_RCVBUF SO_RCVBUF} option is
  * used by the platform's networking code as a hint for the size to set
  * the underlying network I/O buffers.
  *
@@ -800,11 +800,11 @@ public synchronized int getSendBufferSize() throws java.net.SocketException { th
  * network I/O for high-volume connection, while decreasing it can
  * help reduce the backlog of incoming data.
  *
- * <p>Because {@link java.net.SocketOptions#SO_RCVBUF SocketOptions#SO_RCVBUF} is a hint,
+ * <p>Because {@link java.net.SocketOptions#SO_RCVBUF SO_RCVBUF} is a hint,
  * applications that want to verify what size the buffers were set to
  * should call {@link #getReceiveBufferSize()}.
  *
- * <p>The value of {@link java.net.SocketOptions#SO_RCVBUF SocketOptions#SO_RCVBUF} is also used
+ * <p>The value of {@link java.net.SocketOptions#SO_RCVBUF SO_RCVBUF} is also used
  * to set the TCP receive window that is advertized to the remote peer.
  * Generally, the window size can be modified at any time when a socket is
  * connected. However, if a receive window larger than 64K is required then
@@ -833,11 +833,11 @@ public synchronized int getSendBufferSize() throws java.net.SocketException { th
 public synchronized void setReceiveBufferSize(int size) throws java.net.SocketException { throw new RuntimeException("Stub!"); }
 
 /**
- * Gets the value of the {@link java.net.SocketOptions#SO_RCVBUF SocketOptions#SO_RCVBUF} option
+ * Gets the value of the {@link java.net.SocketOptions#SO_RCVBUF SO_RCVBUF} option
  * for this {@code Socket}, that is the buffer size used by the platform
  * for input on this {@code Socket}.
  *
- * @return the value of the {@link java.net.SocketOptions#SO_RCVBUF SocketOptions#SO_RCVBUF}
+ * @return the value of the {@link java.net.SocketOptions#SO_RCVBUF SO_RCVBUF}
  *         option for this {@code Socket}.
  * @exception java.net.SocketException if there is an error
  * in the underlying protocol, such as a TCP error.
@@ -848,7 +848,7 @@ public synchronized void setReceiveBufferSize(int size) throws java.net.SocketEx
 public synchronized int getReceiveBufferSize() throws java.net.SocketException { throw new RuntimeException("Stub!"); }
 
 /**
- * Enable/disable {@link java.net.SocketOptions#SO_KEEPALIVE SocketOptions#SO_KEEPALIVE}.
+ * Enable/disable {@link java.net.SocketOptions#SO_KEEPALIVE SO_KEEPALIVE}.
  *
  * @param on  whether or not to have socket keep alive turned on.
  * @exception java.net.SocketException if there is an error
@@ -860,10 +860,10 @@ public synchronized int getReceiveBufferSize() throws java.net.SocketException {
 public void setKeepAlive(boolean on) throws java.net.SocketException { throw new RuntimeException("Stub!"); }
 
 /**
- * Tests if {@link java.net.SocketOptions#SO_KEEPALIVE SocketOptions#SO_KEEPALIVE} is enabled.
+ * Tests if {@link java.net.SocketOptions#SO_KEEPALIVE SO_KEEPALIVE} is enabled.
  *
  * @return a {@code boolean} indicating whether or not
- *         {@link java.net.SocketOptions#SO_KEEPALIVE SocketOptions#SO_KEEPALIVE} is enabled.
+ *         {@link java.net.SocketOptions#SO_KEEPALIVE SO_KEEPALIVE} is enabled.
  * @exception java.net.SocketException if there is an error
  * in the underlying protocol, such as a TCP error.
  * @since   1.3
@@ -941,7 +941,7 @@ public void setTrafficClass(int tc) throws java.net.SocketException { throw new 
 public int getTrafficClass() throws java.net.SocketException { throw new RuntimeException("Stub!"); }
 
 /**
- * Enable/disable the {@link java.net.SocketOptions#SO_REUSEADDR SocketOptions#SO_REUSEADDR}
+ * Enable/disable the {@link java.net.SocketOptions#SO_REUSEADDR SO_REUSEADDR}
  * socket option.
  * <p>
  * When a TCP connection is closed the connection may remain
@@ -953,21 +953,21 @@ public int getTrafficClass() throws java.net.SocketException { throw new Runtime
  * {@code SocketAddress} if there is a connection in the
  * timeout state involving the socket address or port.
  * <p>
- * Enabling {@link java.net.SocketOptions#SO_REUSEADDR SocketOptions#SO_REUSEADDR}
+ * Enabling {@link java.net.SocketOptions#SO_REUSEADDR SO_REUSEADDR}
  * prior to binding the socket using {@link #bind(java.net.SocketAddress)} allows
  * the socket to be bound even though a previous connection is in a timeout
  * state.
  * <p>
  * When a {@code Socket} is created the initial setting
- * of {@link java.net.SocketOptions#SO_REUSEADDR SocketOptions#SO_REUSEADDR} is disabled.
+ * of {@link java.net.SocketOptions#SO_REUSEADDR SO_REUSEADDR} is disabled.
  * <p>
- * The behaviour when {@link java.net.SocketOptions#SO_REUSEADDR SocketOptions#SO_REUSEADDR} is
+ * The behaviour when {@link java.net.SocketOptions#SO_REUSEADDR SO_REUSEADDR} is
  * enabled or disabled after a socket is bound (See {@link #isBound()})
  * is not defined.
  *
  * @param on  whether to enable or disable the socket option
  * @exception java.net.SocketException if an error occurs enabling or
- *            disabling the {@link java.net.SocketOptions#SO_REUSEADDR SocketOptions#SO_REUSEADDR}
+ *            disabling the {@link java.net.SocketOptions#SO_REUSEADDR SO_REUSEADDR}
  *            socket option, or the socket is closed.
  * @since 1.4
  * @see #getReuseAddress()
@@ -979,10 +979,10 @@ public int getTrafficClass() throws java.net.SocketException { throw new Runtime
 public void setReuseAddress(boolean on) throws java.net.SocketException { throw new RuntimeException("Stub!"); }
 
 /**
- * Tests if {@link java.net.SocketOptions#SO_REUSEADDR SocketOptions#SO_REUSEADDR} is enabled.
+ * Tests if {@link java.net.SocketOptions#SO_REUSEADDR SO_REUSEADDR} is enabled.
  *
  * @return a {@code boolean} indicating whether or not
- *         {@link java.net.SocketOptions#SO_REUSEADDR SocketOptions#SO_REUSEADDR} is enabled.
+ *         {@link java.net.SocketOptions#SO_REUSEADDR SO_REUSEADDR} is enabled.
  * @exception java.net.SocketException if there is an error
  * in the underlying protocol, such as a TCP error.
  * @since   1.4

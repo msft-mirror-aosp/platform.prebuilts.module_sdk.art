@@ -35,7 +35,7 @@ import java.io.IOException;
  * Provides an interface to a file system and is the factory for objects to
  * access files and other objects in the file system.
  *
- * <p> The default file system, obtained by invoking the {@link java.nio.file.FileSystems#getDefault FileSystems#getDefault} method, provides access to the file system that is
+ * <p> The default file system, obtained by invoking the {@link java.nio.file.FileSystems#getDefault  FileSystems.getDefault} method, provides access to the file system that is
  * accessible to the Java virtual machine. The {@link java.nio.file.FileSystems FileSystems} class defines
  * methods to create file systems that provide access to other types of (custom)
  * file systems.
@@ -50,7 +50,7 @@ import java.io.IOException;
  *     to create a {@link java.nio.file.PathMatcher PathMatcher} that performs match operations on
  *     paths. </p></li>
  *   <li><p> The {@link #getFileStores getFileStores} method returns an iterator
- *     over the underlying {@link java.nio.file.FileStore FileStore}. </p></li>
+ *     over the underlying {@link java.nio.file.FileStore file-stores}. </p></li>
  *   <li><p> The {@link #getUserPrincipalLookupService getUserPrincipalLookupService}
  *     method returns the {@link java.nio.file.attribute.UserPrincipalLookupService UserPrincipalLookupService} to lookup users or
  *     groups by name. </p></li>
@@ -64,7 +64,7 @@ import java.io.IOException;
  * have several distinct file hierarchies, each with its own top-level root
  * directory. The {@link #getRootDirectories getRootDirectories} method may be
  * used to iterate over the root directories in the file system. A file system
- * is typically composed of one or more underlying {@link java.nio.file.FileStore FileStore}
+ * is typically composed of one or more underlying {@link java.nio.file.FileStore file-stores}
  * that provide the storage for the files. Theses file stores can also vary in
  * the features they support, and the file attributes or <em>meta-data</em> that
  * they associate with files.
@@ -72,7 +72,7 @@ import java.io.IOException;
  * <p> A file system is open upon creation and can be closed by invoking its
  * {@link #close() close} method. Once closed, any further attempt to access
  * objects in the file system cause {@link java.nio.file.ClosedFileSystemException ClosedFileSystemException} to be
- * thrown. File systems created by the default {@link java.nio.file.spi.FileSystemProvider FileSystemProvider}
+ * thrown. File systems created by the default {@link java.nio.file.spi.FileSystemProvider provider}
  * cannot be closed.
  *
  * <p> A {@code FileSystem} can provide read-only or read-write access to the
@@ -87,7 +87,7 @@ import java.io.IOException;
  * and therefore unspecified. In other words, if a thread is accessing an
  * object in a file system, and another thread invokes the {@code close} method
  * then it may require to block until the first operation is complete. Closing
- * a file system causes all open channels, watch services, and other {@link java.io.Closeable Closeable} objects associated with the file system to be closed.
+ * a file system causes all open channels, watch services, and other {@link java.io.Closeable closeable} objects associated with the file system to be closed.
  *
  * @since 1.7
  */
@@ -118,9 +118,9 @@ public abstract java.nio.file.spi.FileSystemProvider provider();
  * file system is already closed then invoking this method has no effect.
  *
  * <p> Closing a file system will close all open {@link
- * java.nio.channels.Channel channels}, {@link java.nio.file.DirectoryStream DirectoryStream},
- * {@link java.nio.file.WatchService WatchService}, and other closeable objects associated
- * with this file system. The {@link java.nio.file.FileSystems#getDefault FileSystems#getDefault} file
+ * java.nio.channels.Channel channels}, {@link java.nio.file.DirectoryStream directory-streams},
+ * {@link java.nio.file.WatchService watch-service}, and other closeable objects associated
+ * with this file system. The {@link java.nio.file.FileSystems#getDefault default} file
  * system cannot be closed.
  *
  * @throws  java.io.IOException
@@ -157,7 +157,7 @@ public abstract boolean isReadOnly();
  * <p> The name separator is used to separate names in a path string. An
  * implementation may support multiple name separators in which case this
  * method returns an implementation specific <em>default</em> name separator.
- * This separator is used when creating path strings by invoking the {@link java.nio.file.Path#toString() Path#toString()} method.
+ * This separator is used when creating path strings by invoking the {@link java.nio.file.Path#toString() toString()} method.
  *
  * <p> In the case of the default provider, this method returns the same
  * separator as {@link java.io.File#separator}.
@@ -182,7 +182,7 @@ public abstract java.lang.String getSeparator();
  *
  * <p> When a security manager is installed, it is invoked to check access
  * to the each root directory. If denied, the root directory is not returned
- * by the iterator. In the case of the default provider, the {@link java.lang.SecurityManager#checkRead(java.lang.String) SecurityManager#checkRead(String)} method is invoked to check read access
+ * by the iterator. In the case of the default provider, the {@link java.lang.SecurityManager#checkRead(java.lang.String)  } method is invoked to check read access
  * to each root directory. It is system dependent if the permission checks
  * are done when the iterator is obtained or during iteration.
  *
@@ -194,7 +194,7 @@ public abstract java.lang.Iterable<java.nio.file.Path> getRootDirectories();
 /**
  * Returns an object to iterate over the underlying file stores.
  *
- * <p> The elements of the returned iterator are the {@link java.nio.file.FileStore FileStore} for this file system. The order of the elements is
+ * <p> The elements of the returned iterator are the {@link java.nio.file.FileStore FileStores} for this file system. The order of the elements is
  * not defined and the file stores may change during the lifetime of the
  * Java virtual machine. When an I/O error occurs, perhaps because a file
  * store is not accessible, then it is not returned by the iterator.
@@ -225,13 +225,13 @@ public abstract java.lang.Iterable<java.nio.file.Path> getRootDirectories();
 public abstract java.lang.Iterable<java.nio.file.FileStore> getFileStores();
 
 /**
- * Returns the set of the {@link java.nio.file.attribute.FileAttributeView#name FileAttributeView#name} of the file
+ * Returns the set of the {@link java.nio.file.attribute.FileAttributeView#name names} of the file
  * attribute views supported by this {@code FileSystem}.
  *
  * <p> The {@link java.nio.file.attribute.BasicFileAttributeView BasicFileAttributeView} is required to be supported and
  * therefore the set contains at least one element, "basic".
  *
- * <p> The {@link java.nio.file.FileStore#supportsFileAttributeView(java.lang.String) FileStore#supportsFileAttributeView(String)} method may be used to test if an
+ * <p> The {@link java.nio.file.FileStore#supportsFileAttributeView(java.lang.String)  supportsFileAttributeView(String)} method may be used to test if an
  * underlying {@link java.nio.file.FileStore FileStore} supports the file attributes identified by a
  * file attribute view.
  *
@@ -277,7 +277,7 @@ public abstract java.util.Set<java.lang.String> supportedFileAttributeViews();
  *
  * <p> This method throws {@link java.nio.file.InvalidPathException InvalidPathException} when the path string
  * cannot be converted to a path. Where possible, and where applicable,
- * the exception is created with an {@link java.nio.file.InvalidPathException#getIndex InvalidPathException#getIndex} value indicating the first position in the {@code path} parameter
+ * the exception is created with an {@link java.nio.file.InvalidPathException#getIndex  index} value indicating the first position in the {@code path} parameter
  * that caused the path string to be rejected.
  *
  * @param   first
@@ -348,10 +348,10 @@ public abstract java.nio.file.Path getPath(java.lang.String first, java.lang.Str
  * <p> The following rules are used to interpret glob patterns:
  *
  * <ul>
- *   <li><p> The {@code *} character matches zero or more {@link java.lang.Character Character} of a {@link java.nio.file.Path#getName(int) Path#getName(int)} component without
+ *   <li><p> The {@code *} character matches zero or more {@link java.lang.Character    characters} of a {@link java.nio.file.Path#getName(int) name} component without
  *   crossing directory boundaries. </p></li>
  *
- *   <li><p> The {@code **} characters matches zero or more {@link java.lang.Character Character} crossing directory boundaries. </p></li>
+ *   <li><p> The {@code **} characters matches zero or more {@link java.lang.Character    characters} crossing directory boundaries. </p></li>
  *
  *   <li><p> The {@code ?} character matches exactly one character of a
  *   name component.</p></li>
@@ -389,9 +389,9 @@ public abstract java.nio.file.Path getPath(java.lang.String first, java.lang.Str
  *   </p></li>
  *
  *   <li><p> All other characters match themselves in an implementation
- *   dependent manner. This includes characters representing any {@link java.nio.file.FileSystem#getSeparator FileSystem#getSeparator}. </p></li>
+ *   dependent manner. This includes characters representing any {@link java.nio.file.FileSystem#getSeparator name-separators}. </p></li>
  *
- *   <li><p> The matching of {@link java.nio.file.Path#getRoot Path#getRoot} components is highly
+ *   <li><p> The matching of {@link java.nio.file.Path#getRoot root} components is highly
  *   implementation-dependent and is not specified. </p></li>
  *
  * </ul>

@@ -48,7 +48,7 @@ public interface Type {
  * @since 1.8
  */
 
-@android.annotation.NonNull
+@androidx.annotation.RecentlyNonNull
 public default java.lang.String getTypeName() { throw new RuntimeException("Stub!"); }
 }
 

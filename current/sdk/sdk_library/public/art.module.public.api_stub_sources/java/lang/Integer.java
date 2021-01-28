@@ -78,7 +78,7 @@ public Integer(int value) { throw new RuntimeException("Stub!"); }
  * @see        java.lang.Integer#parseInt(java.lang.String, int)
  */
 
-public Integer(@android.annotation.NonNull java.lang.String s) throws java.lang.NumberFormatException { throw new RuntimeException("Stub!"); }
+public Integer(@androidx.annotation.RecentlyNonNull java.lang.String s) throws java.lang.NumberFormatException { throw new RuntimeException("Stub!"); }
 
 /**
  * Returns a string representation of the first argument in the
@@ -125,7 +125,7 @@ public Integer(@android.annotation.NonNull java.lang.String s) throws java.lang.
  * @see     java.lang.Character#MIN_RADIX
  */
 
-@android.annotation.NonNull
+@androidx.annotation.RecentlyNonNull
 public static java.lang.String toString(int i, int radix) { throw new RuntimeException("Stub!"); }
 
 /**
@@ -155,7 +155,7 @@ public static java.lang.String toString(int i, int radix) { throw new RuntimeExc
  * @since 1.8
  */
 
-@android.annotation.NonNull
+@androidx.annotation.RecentlyNonNull
 public static java.lang.String toUnsignedString(int i, int radix) { throw new RuntimeException("Stub!"); }
 
 /**
@@ -169,7 +169,7 @@ public static java.lang.String toUnsignedString(int i, int radix) { throw new Ru
  * {@code 0}s.
  *
  * <p>The value of the argument can be recovered from the returned
- * string {@code s} by calling {@link java.lang.Integer#parseUnsignedInt(java.lang.String,int) Integer#parseUnsignedInt(String, int)}.
+ * string {@code s} by calling {@link java.lang.Integer#parseUnsignedInt(java.lang.String,int)  Integer.parseUnsignedInt(s, 16)}.
  *
  * <p>If the unsigned magnitude is zero, it is represented by a
  * single zero character {@code '0'} ({@code '\u005Cu0030'});
@@ -199,7 +199,7 @@ public static java.lang.String toUnsignedString(int i, int radix) { throw new Ru
  * @since   JDK1.0.2
  */
 
-@android.annotation.NonNull
+@androidx.annotation.RecentlyNonNull
 public static java.lang.String toHexString(int i) { throw new RuntimeException("Stub!"); }
 
 /**
@@ -212,7 +212,7 @@ public static java.lang.String toHexString(int i) { throw new RuntimeException("
  * in octal (base&nbsp;8) with no extra leading {@code 0}s.
  *
  * <p>The value of the argument can be recovered from the returned
- * string {@code s} by calling {@link java.lang.Integer#parseUnsignedInt(java.lang.String,int) Integer#parseUnsignedInt(String, int)}.
+ * string {@code s} by calling {@link java.lang.Integer#parseUnsignedInt(java.lang.String,int)  Integer.parseUnsignedInt(s, 8)}.
  *
  * <p>If the unsigned magnitude is zero, it is represented by a
  * single zero character {@code '0'} ({@code '\u005Cu0030'});
@@ -235,7 +235,7 @@ public static java.lang.String toHexString(int i) { throw new RuntimeException("
  * @since   JDK1.0.2
  */
 
-@android.annotation.NonNull
+@androidx.annotation.RecentlyNonNull
 public static java.lang.String toOctalString(int i) { throw new RuntimeException("Stub!"); }
 
 /**
@@ -248,7 +248,7 @@ public static java.lang.String toOctalString(int i) { throw new RuntimeException
  * in binary (base&nbsp;2) with no extra leading {@code 0}s.
  *
  * <p>The value of the argument can be recovered from the returned
- * string {@code s} by calling {@link java.lang.Integer#parseUnsignedInt(java.lang.String,int) Integer#parseUnsignedInt(String, int)}.
+ * string {@code s} by calling {@link java.lang.Integer#parseUnsignedInt(java.lang.String,int)  Integer.parseUnsignedInt(s, 2)}.
  *
  * <p>If the unsigned magnitude is zero, it is represented by a
  * single zero character {@code '0'} ({@code '\u005Cu0030'});
@@ -265,7 +265,7 @@ public static java.lang.String toOctalString(int i) { throw new RuntimeException
  * @since   JDK1.0.2
  */
 
-@android.annotation.NonNull
+@androidx.annotation.RecentlyNonNull
 public static java.lang.String toBinaryString(int i) { throw new RuntimeException("Stub!"); }
 
 /**
@@ -279,7 +279,7 @@ public static java.lang.String toBinaryString(int i) { throw new RuntimeExceptio
  * @return  a string representation of the argument in base&nbsp;10.
  */
 
-@android.annotation.NonNull
+@androidx.annotation.RecentlyNonNull
 public static java.lang.String toString(int i) { throw new RuntimeException("Stub!"); }
 
 /**
@@ -296,7 +296,7 @@ public static java.lang.String toString(int i) { throw new RuntimeException("Stu
  * @since 1.8
  */
 
-@android.annotation.NonNull
+@androidx.annotation.RecentlyNonNull
 public static java.lang.String toUnsignedString(int i) { throw new RuntimeException("Stub!"); }
 
 /**
@@ -355,7 +355,7 @@ public static java.lang.String toUnsignedString(int i) { throw new RuntimeExcept
  *             does not contain a parsable {@code int}.
  */
 
-public static int parseInt(@android.annotation.NonNull java.lang.String s, int radix) throws java.lang.NumberFormatException { throw new RuntimeException("Stub!"); }
+public static int parseInt(@androidx.annotation.RecentlyNonNull java.lang.String s, int radix) throws java.lang.NumberFormatException { throw new RuntimeException("Stub!"); }
 
 /**
  * Parses the string argument as a signed decimal integer. The
@@ -374,7 +374,7 @@ public static int parseInt(@android.annotation.NonNull java.lang.String s, int r
  *               parsable integer.
  */
 
-public static int parseInt(@android.annotation.NonNull java.lang.String s) throws java.lang.NumberFormatException { throw new RuntimeException("Stub!"); }
+public static int parseInt(@androidx.annotation.RecentlyNonNull java.lang.String s) throws java.lang.NumberFormatException { throw new RuntimeException("Stub!"); }
 
 /**
  * Parses the string argument as an unsigned integer in the radix
@@ -420,7 +420,7 @@ public static int parseInt(@android.annotation.NonNull java.lang.String s) throw
  * @since 1.8
  */
 
-public static int parseUnsignedInt(@android.annotation.NonNull java.lang.String s, int radix) throws java.lang.NumberFormatException { throw new RuntimeException("Stub!"); }
+public static int parseUnsignedInt(@androidx.annotation.RecentlyNonNull java.lang.String s, int radix) throws java.lang.NumberFormatException { throw new RuntimeException("Stub!"); }
 
 /**
  * Parses the string argument as an unsigned decimal integer. The
@@ -439,7 +439,7 @@ public static int parseUnsignedInt(@android.annotation.NonNull java.lang.String 
  * @since 1.8
  */
 
-public static int parseUnsignedInt(@android.annotation.NonNull java.lang.String s) throws java.lang.NumberFormatException { throw new RuntimeException("Stub!"); }
+public static int parseUnsignedInt(@androidx.annotation.RecentlyNonNull java.lang.String s) throws java.lang.NumberFormatException { throw new RuntimeException("Stub!"); }
 
 /**
  * Returns an {@code Integer} object holding the value
@@ -467,8 +467,8 @@ public static int parseUnsignedInt(@android.annotation.NonNull java.lang.String 
  *            does not contain a parsable {@code int}.
  */
 
-@android.annotation.NonNull
-public static java.lang.Integer valueOf(@android.annotation.NonNull java.lang.String s, int radix) throws java.lang.NumberFormatException { throw new RuntimeException("Stub!"); }
+@androidx.annotation.RecentlyNonNull
+public static java.lang.Integer valueOf(@androidx.annotation.RecentlyNonNull java.lang.String s, int radix) throws java.lang.NumberFormatException { throw new RuntimeException("Stub!"); }
 
 /**
  * Returns an {@code Integer} object holding the
@@ -493,8 +493,8 @@ public static java.lang.Integer valueOf(@android.annotation.NonNull java.lang.St
  *             as an integer.
  */
 
-@android.annotation.NonNull
-public static java.lang.Integer valueOf(@android.annotation.NonNull java.lang.String s) throws java.lang.NumberFormatException { throw new RuntimeException("Stub!"); }
+@androidx.annotation.RecentlyNonNull
+public static java.lang.Integer valueOf(@androidx.annotation.RecentlyNonNull java.lang.String s) throws java.lang.NumberFormatException { throw new RuntimeException("Stub!"); }
 
 /**
  * Returns an {@code Integer} instance representing the specified
@@ -512,7 +512,7 @@ public static java.lang.Integer valueOf(@android.annotation.NonNull java.lang.St
  * @since  1.5
  */
 
-@android.annotation.NonNull
+@androidx.annotation.RecentlyNonNull
 public static java.lang.Integer valueOf(int i) { throw new RuntimeException("Stub!"); }
 
 /**
@@ -574,7 +574,7 @@ public double doubleValue() { throw new RuntimeException("Stub!"); }
  *          base&nbsp;10.
  */
 
-@android.annotation.NonNull
+@androidx.annotation.RecentlyNonNull
 public java.lang.String toString() { throw new RuntimeException("Stub!"); }
 
 /**
@@ -610,7 +610,7 @@ public static int hashCode(int value) { throw new RuntimeException("Stub!"); }
  *          {@code false} otherwise.
  */
 
-public boolean equals(@android.annotation.Nullable java.lang.Object obj) { throw new RuntimeException("Stub!"); }
+public boolean equals(@androidx.annotation.RecentlyNullable java.lang.Object obj) { throw new RuntimeException("Stub!"); }
 
 /**
  * Determines the integer value of the system property with the
@@ -620,7 +620,7 @@ public boolean equals(@android.annotation.Nullable java.lang.Object obj) { throw
  * property.  System properties are accessible through the {@link
  * java.lang.System#getProperty(java.lang.String)} method. The
  * string value of this property is then interpreted as an integer
- * value using the grammar supported by {@link java.lang.Integer#decode Integer#decode} and
+ * value using the grammar supported by {@link java.lang.Integer#decode decode} and
  * an {@code Integer} object representing this value is returned.
  *
  * <p>If there is no property with the specified name, if the
@@ -638,13 +638,13 @@ public boolean equals(@android.annotation.Nullable java.lang.Object obj) { throw
  * @param   nm   property name.
  * @return  the {@code Integer} value of the property.
  * @throws  java.lang.SecurityException for the same reasons as
- *          {@link java.lang.System#getProperty(java.lang.String) System#getProperty(String)}
+ *          {@link java.lang.System#getProperty(java.lang.String) System.getProperty}
  * @see     java.lang.System#getProperty(java.lang.String)
  * @see     java.lang.System#getProperty(java.lang.String, java.lang.String)
  */
 
-@android.annotation.Nullable
-public static java.lang.Integer getInteger(@android.annotation.NonNull java.lang.String nm) { throw new RuntimeException("Stub!"); }
+@androidx.annotation.RecentlyNullable
+public static java.lang.Integer getInteger(@androidx.annotation.RecentlyNonNull java.lang.String nm) { throw new RuntimeException("Stub!"); }
 
 /**
  * Determines the integer value of the system property with the
@@ -654,7 +654,7 @@ public static java.lang.Integer getInteger(@android.annotation.NonNull java.lang
  * property.  System properties are accessible through the {@link
  * java.lang.System#getProperty(java.lang.String)} method. The
  * string value of this property is then interpreted as an integer
- * value using the grammar supported by {@link java.lang.Integer#decode Integer#decode} and
+ * value using the grammar supported by {@link java.lang.Integer#decode decode} and
  * an {@code Integer} object representing this value is returned.
  *
  * <p>The second argument is the default value. An {@code Integer} object
@@ -684,13 +684,13 @@ public static java.lang.Integer getInteger(@android.annotation.NonNull java.lang
  * @param   val   default value.
  * @return  the {@code Integer} value of the property.
  * @throws  java.lang.SecurityException for the same reasons as
- *          {@link java.lang.System#getProperty(java.lang.String) System#getProperty(String)}
+ *          {@link java.lang.System#getProperty(java.lang.String) System.getProperty}
  * @see     java.lang.System#getProperty(java.lang.String)
  * @see     java.lang.System#getProperty(java.lang.String, java.lang.String)
  */
 
-@android.annotation.Nullable
-public static java.lang.Integer getInteger(@android.annotation.NonNull java.lang.String nm, int val) { throw new RuntimeException("Stub!"); }
+@androidx.annotation.RecentlyNullable
+public static java.lang.Integer getInteger(@androidx.annotation.RecentlyNonNull java.lang.String nm, int val) { throw new RuntimeException("Stub!"); }
 
 /**
  * Returns the integer value of the system property with the
@@ -698,7 +698,7 @@ public static java.lang.Integer getInteger(@android.annotation.NonNull java.lang
  * system property.  System properties are accessible through the
  * {@link java.lang.System#getProperty(java.lang.String)} method.
  * The string value of this property is then interpreted as an
- * integer value, as per the {@link java.lang.Integer#decode Integer#decode} method,
+ * integer value, as per the {@link java.lang.Integer#decode decode} method,
  * and an {@code Integer} object representing this value is
  * returned; in summary:
  *
@@ -725,13 +725,13 @@ public static java.lang.Integer getInteger(@android.annotation.NonNull java.lang
  * @param   val   default value.
  * @return  the {@code Integer} value of the property.
  * @throws  java.lang.SecurityException for the same reasons as
- *          {@link java.lang.System#getProperty(java.lang.String) System#getProperty(String)}
+ *          {@link java.lang.System#getProperty(java.lang.String) System.getProperty}
  * @see     java.lang.System#getProperty(java.lang.String)
  * @see     java.lang.System#getProperty(java.lang.String, java.lang.String)
  */
 
-@android.annotation.Nullable
-public static java.lang.Integer getInteger(@android.annotation.NonNull java.lang.String nm, @android.annotation.Nullable java.lang.Integer val) { throw new RuntimeException("Stub!"); }
+@androidx.annotation.RecentlyNullable
+public static java.lang.Integer getInteger(@androidx.annotation.RecentlyNonNull java.lang.String nm, @androidx.annotation.RecentlyNullable java.lang.Integer val) { throw new RuntimeException("Stub!"); }
 
 /**
  * Decodes a {@code String} into an {@code Integer}.
@@ -776,8 +776,8 @@ public static java.lang.Integer getInteger(@android.annotation.NonNull java.lang
  * @see java.lang.Integer#parseInt(java.lang.String, int)
  */
 
-@android.annotation.NonNull
-public static java.lang.Integer decode(@android.annotation.NonNull java.lang.String nm) throws java.lang.NumberFormatException { throw new RuntimeException("Stub!"); }
+@androidx.annotation.RecentlyNonNull
+public static java.lang.Integer decode(@androidx.annotation.RecentlyNonNull java.lang.String nm) throws java.lang.NumberFormatException { throw new RuntimeException("Stub!"); }
 
 /**
  * Compares two {@code Integer} objects numerically.
@@ -793,7 +793,7 @@ public static java.lang.Integer decode(@android.annotation.NonNull java.lang.Str
  * @since   1.2
  */
 
-public int compareTo(@android.annotation.NonNull java.lang.Integer anotherInteger) { throw new RuntimeException("Stub!"); }
+public int compareTo(@androidx.annotation.RecentlyNonNull java.lang.Integer anotherInteger) { throw new RuntimeException("Stub!"); }
 
 /**
  * Compares two {@code int} values numerically.
@@ -1066,7 +1066,7 @@ public static int sum(int a, int b) { throw new RuntimeException("Stub!"); }
 
 /**
  * Returns the greater of two {@code int} values
- * as if by calling {@link java.lang.Math#max(int,int) Math#max(int, int)}.
+ * as if by calling {@link java.lang.Math#max(int,int) Math.max}.
  *
  * @param a the first operand
  * @param b the second operand
@@ -1079,7 +1079,7 @@ public static int max(int a, int b) { throw new RuntimeException("Stub!"); }
 
 /**
  * Returns the smaller of two {@code int} values
- * as if by calling {@link java.lang.Math#min(int,int) Math#min(int, int)}.
+ * as if by calling {@link java.lang.Math#min(int,int) Math.min}.
  *
  * @param a the first operand
  * @param b the second operand

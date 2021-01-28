@@ -47,7 +47,7 @@ import java.util.Spliterator;
 /**
  * A scalable concurrent {@link java.util.NavigableSet NavigableSet} implementation based on
  * a {@link java.util.concurrent.ConcurrentSkipListMap ConcurrentSkipListMap}.  The elements of the set are kept
- * sorted according to their {@linkplain java.lang.Comparable Comparable},
+ * sorted according to their {@linkplain java.lang.Comparable natural ordering},
  * or by a {@link java.util.Comparator Comparator} provided at set creation time, depending
  * on which constructor is used.
  *
@@ -91,7 +91,7 @@ public class ConcurrentSkipListSet<E> extends java.util.AbstractSet<E> implement
 
 /**
  * Constructs a new, empty set that orders its elements according to
- * their {@linkplain java.lang.Comparable Comparable}.
+ * their {@linkplain java.lang.Comparable natural ordering}.
  */
 
 public ConcurrentSkipListSet() { throw new RuntimeException("Stub!"); }
@@ -101,7 +101,7 @@ public ConcurrentSkipListSet() { throw new RuntimeException("Stub!"); }
  * the specified comparator.
  *
  * @param comparator the comparator that will be used to order this set.
- *        If {@code null}, the {@linkplain java.lang.Comparable Comparable} of the elements will be used.
+ *        If {@code null}, the {@linkplain java.lang.Comparable         ordering} of the elements will be used.
  */
 
 public ConcurrentSkipListSet(java.util.Comparator<? super E> comparator) { throw new RuntimeException("Stub!"); }
@@ -109,7 +109,7 @@ public ConcurrentSkipListSet(java.util.Comparator<? super E> comparator) { throw
 /**
  * Constructs a new set containing the elements in the specified
  * collection, that orders its elements according to their
- * {@linkplain java.lang.Comparable Comparable}.
+ * {@linkplain java.lang.Comparable natural ordering}.
  *
  * @param c The elements that will comprise the new set
  * @throws java.lang.ClassCastException if the elements in {@code c} are
@@ -370,7 +370,7 @@ public java.util.NavigableSet<E> tailSet(E fromElement) { throw new RuntimeExcep
  * reflected in the descending set, and vice-versa.
  *
  * <p>The returned set has an ordering equivalent to
- * {@link java.util.Collections#reverseOrder(java.util.Comparator) Collections#reverseOrder(Comparator)}{@code (comparator())}.
+ * {@link java.util.Collections#reverseOrder(java.util.Comparator) Collections.reverseOrder}{@code (comparator())}.
  * The expression {@code s.descendingSet().descendingSet()} returns a
  * view of {@code s} essentially equivalent to {@code s}.
  *

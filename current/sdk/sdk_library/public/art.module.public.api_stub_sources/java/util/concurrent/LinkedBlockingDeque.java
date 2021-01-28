@@ -42,7 +42,7 @@ import java.util.NoSuchElementException;
 import java.util.Spliterator;
 
 /**
- * An optionally-bounded {@linkplain java.util.concurrent.BlockingDeque BlockingDeque} based on
+ * An optionally-bounded {@linkplain java.util.concurrent.BlockingDeque blocking deque} based on
  * linked nodes.
  *
  * <p>The optional capacity bound constructor argument serves as a

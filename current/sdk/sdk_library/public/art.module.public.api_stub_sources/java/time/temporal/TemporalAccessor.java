@@ -70,7 +70,7 @@ import java.time.DateTimeException;
  * <p>
  * This is the base interface type for date, time and offset objects.
  * It is implemented by those classes that can provide information
- * as {@linkplain java.time.temporal.TemporalField TemporalField} or {@linkplain java.time.temporal.TemporalQuery TemporalQuery}.
+ * as {@linkplain java.time.temporal.TemporalField fields} or {@linkplain java.time.temporal.TemporalQuery queries}.
  * <p>
  * Most date and time information can be represented as a number.
  * These are modeled using {@code TemporalField} with the number held using

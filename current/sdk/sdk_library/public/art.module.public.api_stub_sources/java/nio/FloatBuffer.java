@@ -693,7 +693,7 @@ public int compareTo(java.nio.FloatBuffer that) { throw new RuntimeException("St
  * Retrieves this buffer's byte order.
  *
  * <p> The byte order of a float buffer created by allocation or by
- * wrapping an existing <tt>float</tt> array is the {@link java.nio.ByteOrder#nativeOrder ByteOrder#nativeOrder} of the underlying
+ * wrapping an existing <tt>float</tt> array is the {@link java.nio.ByteOrder#nativeOrder native order} of the underlying
  * hardware.  The byte order of a float buffer created as a <a
  * href="ByteBuffer.html#views">view</a> of a byte buffer is that of the
  * byte buffer at the moment that the view is created.  </p>

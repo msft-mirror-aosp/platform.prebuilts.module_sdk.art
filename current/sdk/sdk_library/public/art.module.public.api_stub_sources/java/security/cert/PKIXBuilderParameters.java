@@ -36,7 +36,7 @@ import java.security.InvalidParameterException;
  * Parameters used as input for the PKIX {@code CertPathBuilder}
  * algorithm.
  * <p>
- * A PKIX {@code CertPathBuilder} uses these parameters to {@link java.security.cert.CertPathBuilder#build CertPathBuilder#build} a {@code CertPath} which has been
+ * A PKIX {@code CertPathBuilder} uses these parameters to {@link java.security.cert.CertPathBuilder#build build} a {@code CertPath} which has been
  * validated according to the PKIX certification path validation algorithm.
  *
  * <p>To instantiate a {@code PKIXBuilderParameters} object, an

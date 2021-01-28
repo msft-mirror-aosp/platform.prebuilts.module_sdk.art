@@ -95,7 +95,7 @@ CREATE_NEW,
  * file is open. Consequently, security sensitive applications should take
  * care when using this option.
  *
- * <p> For security reasons, this option may imply the {@link java.nio.file.LinkOption#NOFOLLOW_LINKS LinkOption#NOFOLLOW_LINKS} option. In other words, if the option is present
+ * <p> For security reasons, this option may imply the {@link java.nio.file.LinkOption#NOFOLLOW_LINKS  } option. In other words, if the option is present
  * when opening an existing file that is a symbolic link then it may fail
  * (by throwing {@link java.io.IOException}).
  */

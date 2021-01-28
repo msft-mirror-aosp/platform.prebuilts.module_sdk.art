@@ -23,7 +23,7 @@ package org.json;
  * <ul>
  *   <li>Attempts to parse or construct malformed documents
  *   <li>Use of null as a name
- *   <li>Use of numeric types not available to JSON, such as {@link java.lang.Double#isNaN() Double#isNaN()} or {@link java.lang.Double#isInfinite() Double#isInfinite()}.
+ *   <li>Use of numeric types not available to JSON, such as {@link java.lang.Double#isNaN() NaNs} or {@link java.lang.Double#isInfinite() infinities}.
  *   <li>Lookups using an out of range index or nonexistent name
  *   <li>Type mismatches on lookups
  * </ul>

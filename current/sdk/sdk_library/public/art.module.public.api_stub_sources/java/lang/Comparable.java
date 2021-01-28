@@ -35,11 +35,11 @@ import java.util.*;
  * its <i>natural comparison method</i>.<p>
  *
  * Lists (and arrays) of objects that implement this interface can be sorted
- * automatically by {@link java.util.Collections#sort(java.util.List) Collections#sort(List)} (and
- * {@link java.util.Arrays#sort(java.lang.Object[]) Arrays#sort(Object[])}).  Objects that implement this
- * interface can be used as keys in a {@linkplain java.util.SortedMap SortedMap} or as
- * elements in a {@linkplain java.util.SortedSet SortedSet}, without the need to
- * specify a {@linkplain java.util.Comparator Comparator}.<p>
+ * automatically by {@link java.util.Collections#sort(java.util.List) Collections.sort} (and
+ * {@link java.util.Arrays#sort(java.lang.Object[]) Arrays.sort}).  Objects that implement this
+ * interface can be used as keys in a {@linkplain java.util.SortedMap sorted map} or as
+ * elements in a {@linkplain java.util.SortedSet sorted set}, without the need to
+ * specify a {@linkplain java.util.Comparator comparator}.<p>
  *
  * The natural ordering for a class <tt>C</tt> is said to be <i>consistent
  * with equals</i> if and only if <tt>e1.compareTo(e2) == 0</tt> has
@@ -82,7 +82,7 @@ import java.util.*;
  * natural ordering is a <i>total order</i> on <tt>C</tt>.  When we say that a
  * class's natural ordering is <i>consistent with equals</i>, we mean that the
  * quotient for the natural ordering is the equivalence relation defined by
- * the class's {@link java.lang.Object#equals(java.lang.Object) Object#equals(Object)} method:<pre>
+ * the class's {@link java.lang.Object#equals(java.lang.Object) equals(Object)} method:<pre>
  *     {(x, y) such that x.equals(y)}. </pre><p>
  *
  * This interface is a member of the

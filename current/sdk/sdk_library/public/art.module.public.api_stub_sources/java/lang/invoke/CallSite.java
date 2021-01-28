@@ -42,16 +42,16 @@ package java.lang.invoke;
  * concrete subclasses that may be either instantiated or subclassed.
  * <ul>
  * <li>If a mutable target is not required, an {@code invokedynamic} instruction
- * may be permanently bound by means of a {@linkplain java.lang.invoke.ConstantCallSite ConstantCallSite}.
+ * may be permanently bound by means of a {@linkplain java.lang.invoke.ConstantCallSite constant call site}.
  * <li>If a mutable target is required which has volatile variable semantics,
  * because updates to the target must be immediately and reliably witnessed by other threads,
- * a {@linkplain java.lang.invoke.VolatileCallSite VolatileCallSite} may be used.
+ * a {@linkplain java.lang.invoke.VolatileCallSite volatile call site} may be used.
  * <li>Otherwise, if a mutable target is required,
- * a {@linkplain java.lang.invoke.MutableCallSite MutableCallSite} may be used.
+ * a {@linkplain java.lang.invoke.MutableCallSite mutable call site} may be used.
  * </ul>
  * <p>
  * A non-constant call site may be <em>relinked</em> by changing its target.
- * The new target must have the same {@linkplain java.lang.invoke.MethodHandle#type() MethodHandle#type()}
+ * The new target must have the same {@linkplain java.lang.invoke.MethodHandle#type() type}
  * as the previous target.
  * Thus, though a call site can be relinked to a series of
  * successive targets, it cannot change its type.
@@ -119,7 +119,7 @@ public abstract java.lang.invoke.MethodHandle getTarget();
  * The immediate subclasses of {@code CallSite} document the
  * class-specific behaviors of this method.
  * <p>
- * The type of the new target must be {@linkplain java.lang.invoke.MethodType#equals MethodType#equals}
+ * The type of the new target must be {@linkplain java.lang.invoke.MethodType#equals equal to}
  * the type of the old target.
  *
  * @param newTarget the new target

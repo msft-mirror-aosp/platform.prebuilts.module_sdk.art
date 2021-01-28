@@ -28,7 +28,7 @@ package java.util;
 
 
 /**
- * FomattableFlags are passed to the {@link java.util.Formattable#formatTo Formattable#formatTo} method and modify the output format for {@linkplain java.util.Formattable Formattable}.  Implementations of {@link java.util.Formattable Formattable} are
+ * FomattableFlags are passed to the {@link java.util.Formattable#formatTo  Formattable.formatTo()} method and modify the output format for {@linkplain java.util.Formattable Formattables}.  Implementations of {@link java.util.Formattable Formattable} are
  * responsible for interpreting and validating any flags.
  *
  * @since  1.5
@@ -64,7 +64,7 @@ public static final int LEFT_JUSTIFY = 1; // 0x1
 /**
  * Converts the output to upper case according to the rules of the
  * {@linkplain java.util.Locale locale} given during creation of the
- * <tt>formatter</tt> argument of the {@link java.util.Formattable#formatTo Formattable#formatTo} method.  The output should be equivalent the following
+ * <tt>formatter</tt> argument of the {@link java.util.Formattable#formatTo  formatTo()} method.  The output should be equivalent the following
  * invocation of {@link java.lang.String#toUpperCase(java.util.Locale) String#toUpperCase(java.util.Locale)}
  *
  * <pre>

@@ -48,12 +48,12 @@ package java.util;
  * {@link #listIterator(int) listIterator} methods are <em>fail-fast</em></a>:
  * if the vector is structurally modified at any time after the iterator is
  * created, in any way except through the iterator's own
- * {@link java.util.ListIterator#remove() ListIterator#remove()} or
- * {@link java.util.ListIterator#add(java.lang.Object) ListIterator#add(Object)} methods, the iterator will throw a
+ * {@link java.util.ListIterator#remove() remove} or
+ * {@link java.util.ListIterator#add(java.lang.Object) add} methods, the iterator will throw a
  * {@link java.util.ConcurrentModificationException ConcurrentModificationException}.  Thus, in the face of
  * concurrent modification, the iterator fails quickly and cleanly, rather
  * than risking arbitrary, non-deterministic behavior at an undetermined
- * time in the future.  The {@link java.util.Enumeration Enumeration} returned by
+ * time in the future.  The {@link java.util.Enumeration Enumerations} returned by
  * the {@link #elements() elements} method are <em>not</em> fail-fast.
  *
  * <p>Note that the fail-fast behavior of an iterator cannot be guaranteed
@@ -124,7 +124,7 @@ public Vector() { throw new RuntimeException("Stub!"); }
  * @since   1.2
  */
 
-public Vector(@android.annotation.NonNull java.util.Collection<? extends E> c) { throw new RuntimeException("Stub!"); }
+public Vector(@androidx.annotation.RecentlyNonNull java.util.Collection<? extends E> c) { throw new RuntimeException("Stub!"); }
 
 /**
  * Copies the components of this vector into the specified array.
@@ -140,7 +140,7 @@ public Vector(@android.annotation.NonNull java.util.Collection<? extends E> c) {
  * @see #toArray(Object[])
  */
 
-public synchronized void copyInto(@android.annotation.NonNull java.lang.Object[] anArray) { throw new RuntimeException("Stub!"); }
+public synchronized void copyInto(@androidx.annotation.RecentlyNonNull java.lang.Object[] anArray) { throw new RuntimeException("Stub!"); }
 
 /**
  * Trims the capacity of this vector to be the vector's current
@@ -223,7 +223,7 @@ public synchronized boolean isEmpty() { throw new RuntimeException("Stub!"); }
  * @see     java.util.Iterator
  */
 
-@android.annotation.NonNull
+@androidx.annotation.RecentlyNonNull
 public java.util.Enumeration<E> elements() { throw new RuntimeException("Stub!"); }
 
 /**
@@ -236,7 +236,7 @@ public java.util.Enumeration<E> elements() { throw new RuntimeException("Stub!")
  * @return {@code true} if this vector contains the specified element
  */
 
-public boolean contains(@android.annotation.Nullable java.lang.Object o) { throw new RuntimeException("Stub!"); }
+public boolean contains(@androidx.annotation.RecentlyNullable java.lang.Object o) { throw new RuntimeException("Stub!"); }
 
 /**
  * Returns the index of the first occurrence of the specified element
@@ -250,7 +250,7 @@ public boolean contains(@android.annotation.Nullable java.lang.Object o) { throw
  *         this vector, or -1 if this vector does not contain the element
  */
 
-public int indexOf(@android.annotation.Nullable java.lang.Object o) { throw new RuntimeException("Stub!"); }
+public int indexOf(@androidx.annotation.RecentlyNullable java.lang.Object o) { throw new RuntimeException("Stub!"); }
 
 /**
  * Returns the index of the first occurrence of the specified element in
@@ -269,7 +269,7 @@ public int indexOf(@android.annotation.Nullable java.lang.Object o) { throw new 
  * @see     java.lang.Object#equals(Object)
  */
 
-public synchronized int indexOf(@android.annotation.Nullable java.lang.Object o, int index) { throw new RuntimeException("Stub!"); }
+public synchronized int indexOf(@androidx.annotation.RecentlyNullable java.lang.Object o, int index) { throw new RuntimeException("Stub!"); }
 
 /**
  * Returns the index of the last occurrence of the specified element
@@ -283,7 +283,7 @@ public synchronized int indexOf(@android.annotation.Nullable java.lang.Object o,
  *         this vector, or -1 if this vector does not contain the element
  */
 
-public synchronized int lastIndexOf(@android.annotation.Nullable java.lang.Object o) { throw new RuntimeException("Stub!"); }
+public synchronized int lastIndexOf(@androidx.annotation.RecentlyNullable java.lang.Object o) { throw new RuntimeException("Stub!"); }
 
 /**
  * Returns the index of the last occurrence of the specified element in
@@ -302,7 +302,7 @@ public synchronized int lastIndexOf(@android.annotation.Nullable java.lang.Objec
  *         than or equal to the current size of this vector
  */
 
-public synchronized int lastIndexOf(@android.annotation.Nullable java.lang.Object o, int index) { throw new RuntimeException("Stub!"); }
+public synchronized int lastIndexOf(@androidx.annotation.RecentlyNullable java.lang.Object o, int index) { throw new RuntimeException("Stub!"); }
 
 /**
  * Returns the component at the specified index.
@@ -439,7 +439,7 @@ public synchronized void addElement(E obj) { throw new RuntimeException("Stub!")
  *          vector; {@code false} otherwise.
  */
 
-public synchronized boolean removeElement(@android.annotation.Nullable java.lang.Object obj) { throw new RuntimeException("Stub!"); }
+public synchronized boolean removeElement(@androidx.annotation.RecentlyNullable java.lang.Object obj) { throw new RuntimeException("Stub!"); }
 
 /**
  * Removes all components from this vector and sets its size to zero.
@@ -458,7 +458,7 @@ public synchronized void removeAllElements() { throw new RuntimeException("Stub!
  * @return  a clone of this vector
  */
 
-@android.annotation.NonNull
+@androidx.annotation.RecentlyNonNull
 public synchronized java.lang.Object clone() { throw new RuntimeException("Stub!"); }
 
 /**
@@ -468,7 +468,7 @@ public synchronized java.lang.Object clone() { throw new RuntimeException("Stub!
  * @since 1.2
  */
 
-@android.annotation.NonNull
+@androidx.annotation.RecentlyNonNull
 public synchronized java.lang.Object[] toArray() { throw new RuntimeException("Stub!"); }
 
 /**
@@ -495,8 +495,8 @@ public synchronized java.lang.Object[] toArray() { throw new RuntimeException("S
  * @since 1.2
  */
 
-@android.annotation.NonNull
-public synchronized <T> T[] toArray(@android.annotation.NonNull T[] a) { throw new RuntimeException("Stub!"); }
+@androidx.annotation.RecentlyNonNull
+public synchronized <T> T[] toArray(@androidx.annotation.RecentlyNonNull T[] a) { throw new RuntimeException("Stub!"); }
 
 /**
  * Returns the element at the specified position in this Vector.
@@ -546,7 +546,7 @@ public synchronized boolean add(E e) { throw new RuntimeException("Stub!"); }
  * @since 1.2
  */
 
-public boolean remove(@android.annotation.Nullable java.lang.Object o) { throw new RuntimeException("Stub!"); }
+public boolean remove(@androidx.annotation.RecentlyNullable java.lang.Object o) { throw new RuntimeException("Stub!"); }
 
 /**
  * Inserts the specified element at the specified position in this Vector.
@@ -596,7 +596,7 @@ public void clear() { throw new RuntimeException("Stub!"); }
  * @throws java.lang.NullPointerException if the specified collection is null
  */
 
-public synchronized boolean containsAll(@android.annotation.NonNull java.util.Collection<?> c) { throw new RuntimeException("Stub!"); }
+public synchronized boolean containsAll(@androidx.annotation.RecentlyNonNull java.util.Collection<?> c) { throw new RuntimeException("Stub!"); }
 
 /**
  * Appends all of the elements in the specified Collection to the end of
@@ -612,7 +612,7 @@ public synchronized boolean containsAll(@android.annotation.NonNull java.util.Co
  * @since 1.2
  */
 
-public synchronized boolean addAll(@android.annotation.NonNull java.util.Collection<? extends E> c) { throw new RuntimeException("Stub!"); }
+public synchronized boolean addAll(@androidx.annotation.RecentlyNonNull java.util.Collection<? extends E> c) { throw new RuntimeException("Stub!"); }
 
 /**
  * Removes from this Vector all of its elements that are contained in the
@@ -632,7 +632,7 @@ public synchronized boolean addAll(@android.annotation.NonNull java.util.Collect
  * @since 1.2
  */
 
-public synchronized boolean removeAll(@android.annotation.NonNull java.util.Collection<?> c) { throw new RuntimeException("Stub!"); }
+public synchronized boolean removeAll(@androidx.annotation.RecentlyNonNull java.util.Collection<?> c) { throw new RuntimeException("Stub!"); }
 
 /**
  * Retains only the elements in this Vector that are contained in the
@@ -654,7 +654,7 @@ public synchronized boolean removeAll(@android.annotation.NonNull java.util.Coll
  * @since 1.2
  */
 
-public synchronized boolean retainAll(@android.annotation.NonNull java.util.Collection<?> c) { throw new RuntimeException("Stub!"); }
+public synchronized boolean retainAll(@androidx.annotation.RecentlyNonNull java.util.Collection<?> c) { throw new RuntimeException("Stub!"); }
 
 /**
  * Inserts all of the elements in the specified Collection into this
@@ -674,7 +674,7 @@ public synchronized boolean retainAll(@android.annotation.NonNull java.util.Coll
  * @since 1.2
  */
 
-public synchronized boolean addAll(int index, @android.annotation.NonNull java.util.Collection<? extends E> c) { throw new RuntimeException("Stub!"); }
+public synchronized boolean addAll(int index, @androidx.annotation.RecentlyNonNull java.util.Collection<? extends E> c) { throw new RuntimeException("Stub!"); }
 
 /**
  * Compares the specified Object with this Vector for equality.  Returns
@@ -689,7 +689,7 @@ public synchronized boolean addAll(int index, @android.annotation.NonNull java.u
  * @return true if the specified Object is equal to this Vector
  */
 
-public synchronized boolean equals(@android.annotation.Nullable java.lang.Object o) { throw new RuntimeException("Stub!"); }
+public synchronized boolean equals(@androidx.annotation.RecentlyNullable java.lang.Object o) { throw new RuntimeException("Stub!"); }
 
 /**
  * Returns the hash code value for this Vector.
@@ -702,7 +702,7 @@ public synchronized int hashCode() { throw new RuntimeException("Stub!"); }
  * the String representation of each element.
  */
 
-@android.annotation.NonNull
+@androidx.annotation.RecentlyNonNull
 public synchronized java.lang.String toString() { throw new RuntimeException("Stub!"); }
 
 /**
@@ -740,7 +740,7 @@ public synchronized java.lang.String toString() { throw new RuntimeException("St
  *         {@code (fromIndex > toIndex)}
  */
 
-@android.annotation.NonNull
+@androidx.annotation.RecentlyNonNull
 public synchronized java.util.List<E> subList(int fromIndex, int toIndex) { throw new RuntimeException("Stub!"); }
 
 /**
@@ -757,8 +757,8 @@ protected synchronized void removeRange(int fromIndex, int toIndex) { throw new 
  * Returns a list iterator over the elements in this list (in proper
  * sequence), starting at the specified position in the list.
  * The specified index indicates the first element that would be
- * returned by an initial call to {@link java.util.ListIterator#next ListIterator#next}.
- * An initial call to {@link java.util.ListIterator#previous ListIterator#previous} would
+ * returned by an initial call to {@link java.util.ListIterator#next next}.
+ * An initial call to {@link java.util.ListIterator#previous previous} would
  * return the element with the specified index minus one.
  *
  * <p>The returned list iterator is <a href="#fail-fast"><i>fail-fast</i></a>.
@@ -766,7 +766,7 @@ protected synchronized void removeRange(int fromIndex, int toIndex) { throw new 
  * @throws java.lang.IndexOutOfBoundsException {@inheritDoc}
  */
 
-@android.annotation.NonNull
+@androidx.annotation.RecentlyNonNull
 public synchronized java.util.ListIterator<E> listIterator(int index) { throw new RuntimeException("Stub!"); }
 
 /**
@@ -778,7 +778,7 @@ public synchronized java.util.ListIterator<E> listIterator(int index) { throw ne
  * @see #listIterator(int)
  */
 
-@android.annotation.NonNull
+@androidx.annotation.RecentlyNonNull
 public synchronized java.util.ListIterator<E> listIterator() { throw new RuntimeException("Stub!"); }
 
 /**
@@ -789,16 +789,16 @@ public synchronized java.util.ListIterator<E> listIterator() { throw new Runtime
  * @return an iterator over the elements in this list in proper sequence
  */
 
-@android.annotation.NonNull
+@androidx.annotation.RecentlyNonNull
 public synchronized java.util.Iterator<E> iterator() { throw new RuntimeException("Stub!"); }
 
-public synchronized void forEach(@android.annotation.NonNull java.util.function.Consumer<? super E> action) { throw new RuntimeException("Stub!"); }
+public synchronized void forEach(@androidx.annotation.RecentlyNonNull java.util.function.Consumer<? super E> action) { throw new RuntimeException("Stub!"); }
 
-public synchronized boolean removeIf(@android.annotation.NonNull java.util.function.Predicate<? super E> filter) { throw new RuntimeException("Stub!"); }
+public synchronized boolean removeIf(@androidx.annotation.RecentlyNonNull java.util.function.Predicate<? super E> filter) { throw new RuntimeException("Stub!"); }
 
-public synchronized void replaceAll(@android.annotation.NonNull java.util.function.UnaryOperator<E> operator) { throw new RuntimeException("Stub!"); }
+public synchronized void replaceAll(@androidx.annotation.RecentlyNonNull java.util.function.UnaryOperator<E> operator) { throw new RuntimeException("Stub!"); }
 
-public synchronized void sort(@android.annotation.Nullable java.util.Comparator<? super E> c) { throw new RuntimeException("Stub!"); }
+public synchronized void sort(@androidx.annotation.RecentlyNullable java.util.Comparator<? super E> c) { throw new RuntimeException("Stub!"); }
 
 /**
  * Creates a <em><a href="Spliterator.html#binding">late-binding</a></em>
@@ -814,7 +814,7 @@ public synchronized void sort(@android.annotation.Nullable java.util.Comparator<
  * @since 1.8
  */
 
-@android.annotation.NonNull
+@androidx.annotation.RecentlyNonNull
 public java.util.Spliterator<E> spliterator() { throw new RuntimeException("Stub!"); }
 
 /**
@@ -848,6 +848,6 @@ protected int elementCount;
  * @serial
  */
 
-@android.annotation.NonNull protected java.lang.Object[] elementData;
+@androidx.annotation.RecentlyNonNull protected java.lang.Object[] elementData;
 }
 

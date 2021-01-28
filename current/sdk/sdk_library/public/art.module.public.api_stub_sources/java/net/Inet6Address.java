@@ -172,7 +172,7 @@ public final class Inet6Address extends java.net.InetAddress {
 Inet6Address() { throw new RuntimeException("Stub!"); }
 
 /**
- * Create an Inet6Address in the exact manner of {@link java.net.InetAddress#getByAddress(java.lang.String,byte[]) InetAddress#getByAddress(String,byte[])} except that the IPv6 scope_id is
+ * Create an Inet6Address in the exact manner of {@link java.net.InetAddress#getByAddress(java.lang.String,byte[])  } except that the IPv6 scope_id is
  * set to the value corresponding to the given interface for the address
  * type specified in {@code addr}. The call will fail with an
  * UnknownHostException if the given interface does not have a numeric
@@ -194,7 +194,7 @@ Inet6Address() { throw new RuntimeException("Stub!"); }
 public static java.net.Inet6Address getByAddress(java.lang.String host, byte[] addr, java.net.NetworkInterface nif) throws java.net.UnknownHostException { throw new RuntimeException("Stub!"); }
 
 /**
- * Create an Inet6Address in the exact manner of {@link java.net.InetAddress#getByAddress(java.lang.String,byte[]) InetAddress#getByAddress(String,byte[])} except that the IPv6 scope_id is
+ * Create an Inet6Address in the exact manner of {@link java.net.InetAddress#getByAddress(java.lang.String,byte[])  } except that the IPv6 scope_id is
  * set to the given numeric value. The scope_id is not checked to determine
  * if it corresponds to any interface on the system.
  * See <a href="Inet6Address.html#scoped">here</a> for a description of IPv6

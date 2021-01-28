@@ -195,8 +195,7 @@ import java.net.URLConnection;
  * lifetime of cached resource bundle instances using time-to-live values,
  * or specify not to cache resource bundle instances. Refer to the
  * descriptions of the {@linkplain #getBundle(java.lang.String,java.util.Locale,java.lang.ClassLoader,java.util.ResourceBundle.Control) <code>getBundle</code> factory method}, {@link
- * #clearCache(java.lang.ClassLoader) clearCache}, {@link java.util.ResourceBundle.Control#getTimeToLive(java.lang.String,java.util.Locale) Control#getTimeToLive(String, Locale)}, and {@link java.util.ResourceBundle.Control#needsReload(java.lang.String,java.util.Locale,java.lang.String,java.lang.ClassLoader,java.util.ResourceBundle,long) Control#needsReload(String, Locale, String, ClassLoader, ResourceBundle,
- * long)} for details.
+ * #clearCache(java.lang.ClassLoader) clearCache}, {@link java.util.ResourceBundle.Control#getTimeToLive(java.lang.String,java.util.Locale)  ResourceBundle.Control.getTimeToLive}, and {@link java.util.ResourceBundle.Control#needsReload(java.lang.String,java.util.Locale,java.lang.String,java.lang.ClassLoader,java.util.ResourceBundle,long) ResourceBundle.Control.needsReload} for details.
  *
  * <h3>Example</h3>
  *
@@ -532,11 +531,11 @@ public static final java.util.ResourceBundle getBundle(java.lang.String baseName
  * <blockquote><b>Note:</b> For some <code>Locale</code>s, the list of
  * candidate bundle names contains extra names, or the order of bundle names
  * is slightly modified.  See the description of the default implementation
- * of {@link java.util.ResourceBundle.Control#getCandidateLocales(java.lang.String,java.util.Locale) Control#getCandidateLocales(String, Locale)} for details.</blockquote>
+ * of {@link java.util.ResourceBundle.Control#getCandidateLocales(java.lang.String,java.util.Locale)  getCandidateLocales} for details.</blockquote>
  *
  * <p><code>getBundle</code> then iterates over the candidate bundle names
  * to find the first one for which it can <em>instantiate</em> an actual
- * resource bundle. It uses the default controls' {@link java.util.ResourceBundle.Control#getFormats Control#getFormats} method, which generates two bundle names for each generated
+ * resource bundle. It uses the default controls' {@link java.util.ResourceBundle.Control#getFormats  getFormats} method, which generates two bundle names for each generated
  * name, the first a class name and the second a properties file name. For
  * each candidate bundle name, it attempts to create a resource bundle:
  *
@@ -561,7 +560,7 @@ public static final java.util.ResourceBundle getBundle(java.lang.String baseName
  *
  * <p>This continues until a result resource bundle is instantiated or the
  * list of candidate bundle names is exhausted.  If no matching resource
- * bundle is found, the default control's {@link java.util.ResourceBundle.Control#getFallbackLocale Control#getFallbackLocale} method is called, which returns the current default
+ * bundle is found, the default control's {@link java.util.ResourceBundle.Control#getFallbackLocale  getFallbackLocale} method is called, which returns the current default
  * locale.  A new sequence of candidate locale names is generated using this
  * locale and and searched again, as above.
  *
@@ -663,21 +662,19 @@ public static java.util.ResourceBundle getBundle(java.lang.String baseName, java
  * to the caller. Otherwise, this factory method proceeds with the
  * loading process below.</li>
  *
- * <li>The {@link java.util.ResourceBundle.Control#getFormats(java.lang.String) ResourceBundle.Control#getFormats(String)} method is called to get resource bundle formats
+ * <li>The {@link java.util.ResourceBundle.Control#getFormats(java.lang.String)  control.getFormats} method is called to get resource bundle formats
  * to produce bundle or resource names. The strings
  * <code>"java.class"</code> and <code>"java.properties"</code>
- * designate class-based and {@linkplain java.util.PropertyResourceBundle PropertyResourceBundle}-based resource bundles, respectively. Other strings
+ * designate class-based and {@linkplain java.util.PropertyResourceBundle  property}-based resource bundles, respectively. Other strings
  * starting with <code>"java."</code> are reserved for future extensions
  * and must not be used for application-defined formats. Other strings
  * designate application-defined formats.</li>
  *
- * <li>The {@link java.util.ResourceBundle.Control#getCandidateLocales(java.lang.String,java.util.Locale) ResourceBundle.Control#getCandidateLocales(String,
- * Locale)} method is called with the target
+ * <li>The {@link java.util.ResourceBundle.Control#getCandidateLocales(java.lang.String,java.util.Locale) control.getCandidateLocales} method is called with the target
  * locale to get a list of <em>candidate <code>Locale</code>s</em> for
  * which resource bundles are searched.</li>
  *
- * <li>The {@link java.util.ResourceBundle.Control#newBundle(java.lang.String,java.util.Locale,java.lang.String,java.lang.ClassLoader,boolean) ResourceBundle.Control#newBundle(String, Locale,
- * String, ClassLoader, boolean)} method is called to
+ * <li>The {@link java.util.ResourceBundle.Control#newBundle(java.lang.String,java.util.Locale,java.lang.String,java.lang.ClassLoader,boolean) control.newBundle} method is called to
  * instantiate a <code>ResourceBundle</code> for the base bundle name, a
  * candidate locale, and a format. (Refer to the note on the cache
  * lookup below.) This step is iterated over all combinations of the
@@ -742,8 +739,7 @@ public static java.util.ResourceBundle getBundle(java.lang.String baseName, java
  * proceed to Step 6. If a bundle has been found that is not a base
  * bundle, proceed to Step 7.</li>
  *
- * <li>The {@link java.util.ResourceBundle.Control#getFallbackLocale(java.lang.String,java.util.Locale) ResourceBundle.Control#getFallbackLocale(String,
- * Locale)} method is called to get a fallback
+ * <li>The {@link java.util.ResourceBundle.Control#getFallbackLocale(java.lang.String,java.util.Locale) control.getFallbackLocale} method is called to get a fallback
  * locale (alternative to the current target locale) to try further
  * finding a resource bundle. If the method returns a non-null locale,
  * it becomes the next target locale and the loading process starts over
@@ -760,10 +756,9 @@ public static java.util.ResourceBundle getBundle(java.lang.String baseName, java
  * </ol>
  *
  * <p>During the resource bundle loading process above, this factory
- * method looks up the cache before calling the {@link java.util.ResourceBundle.Control#newBundle(java.lang.String,java.util.Locale,java.lang.String,java.lang.ClassLoader,boolean) Control#newBundle(String, Locale, String, ClassLoader, boolean)} method.  If the time-to-live period of the
+ * method looks up the cache before calling the {@link java.util.ResourceBundle.Control#newBundle(java.lang.String,java.util.Locale,java.lang.String,java.lang.ClassLoader,boolean)  control.newBundle} method.  If the time-to-live period of the
  * resource bundle found in the cache has expired, the factory method
- * calls the {@link java.util.ResourceBundle.Control#needsReload(java.lang.String,java.util.Locale,java.lang.String,java.lang.ClassLoader,java.util.ResourceBundle,long) ResourceBundle.Control#needsReload(String, Locale,
- * String, ClassLoader, ResourceBundle, long)}
+ * calls the {@link java.util.ResourceBundle.Control#needsReload(java.lang.String,java.util.Locale,java.lang.String,java.lang.ClassLoader,java.util.ResourceBundle,long) control.needsReload}
  * method to determine whether the resource bundle needs to be reloaded.
  * If reloading is required, the factory method calls
  * <code>control.newBundle</code> to reload the resource bundle.  If
@@ -774,7 +769,7 @@ public static java.util.ResourceBundle getBundle(java.lang.String baseName, java
  * expiration control as specified by <code>control</code>.
  *
  * <p>All resource bundles loaded are cached by default. Refer to
- * {@link java.util.ResourceBundle.Control#getTimeToLive(java.lang.String,java.util.Locale) Control#getTimeToLive(String,Locale)} for details.
+ * {@link java.util.ResourceBundle.Control#getTimeToLive(java.lang.String,java.util.Locale)  control.getTimeToLive} for details.
  *
  * <p>The following is an example of the bundle loading process with the
  * default <code>ResourceBundle.Control</code> implementation.
@@ -803,7 +798,7 @@ public static java.util.ResourceBundle getBundle(java.lang.String baseName, java
  *
  * <p>At this point, <code>getBundle</code> finds
  * <code>foo/bar/Messages.properties</code>, which is put on hold
- * because it's the base bundle.  <code>getBundle</code> calls {@link java.util.ResourceBundle.Control#getFallbackLocale(java.lang.String,java.util.Locale) Control#getFallbackLocale(String, Locale)} which
+ * because it's the base bundle.  <code>getBundle</code> calls {@link java.util.ResourceBundle.Control#getFallbackLocale(java.lang.String,java.util.Locale)  control.getFallbackLocale("foo.bar.Messages", Locale.ITALY)} which
  * returns <code>Locale.FRENCH</code>. Next, <code>getBundle</code>
  * tries loading a bundle in the following sequence.
  *
@@ -949,8 +944,7 @@ protected java.util.Set<java.lang.String> handleKeySet() { throw new RuntimeExce
 protected java.util.ResourceBundle parent;
 /**
  * <code>ResourceBundle.Control</code> defines a set of callback methods
- * that are invoked by the {@link java.util.ResourceBundle#getBundle(java.lang.String,java.util.Locale,java.lang.ClassLoader,java.util.ResourceBundle.Control) ResourceBundle#getBundle(String,
- * Locale, ClassLoader, Control)} factory
+ * that are invoked by the {@link java.util.ResourceBundle#getBundle(java.lang.String,java.util.Locale,java.lang.ClassLoader,java.util.ResourceBundle.Control) ResourceBundle.getBundle} factory
  * methods during the bundle loading process. In other words, a
  * <code>ResourceBundle.Control</code> collaborates with the factory
  * methods for loading resource bundles. The default implementation of
@@ -973,7 +967,7 @@ protected java.util.ResourceBundle parent;
  * <code>ResourceBundle.Control</code> instances that implement common
  * variations of the default bundle loading process.
  *
- * <p>The formats returned by the {@link java.util.ResourceBundle.Control#getFormats(java.lang.String) Control#getFormats(String)} method and candidate locales returned by the {@link java.util.ResourceBundle.Control#getCandidateLocales(java.lang.String,java.util.Locale) ResourceBundle.Control#getCandidateLocales(String, Locale)} method must be consistent in all
+ * <p>The formats returned by the {@link java.util.ResourceBundle.Control#getFormats(java.lang.String)  getFormats} method and candidate locales returned by the {@link java.util.ResourceBundle.Control#getCandidateLocales(java.lang.String,java.util.Locale)  getCandidateLocales} method must be consistent in all
  * <code>ResourceBundle.getBundle</code> invocations for the same base
  * bundle. Otherwise, the <code>ResourceBundle.getBundle</code> methods
  * may return unintended bundles. For example, if only
@@ -1021,7 +1015,7 @@ protected java.util.ResourceBundle parent;
  * <p><b>Example 2</b>
  *
  * <p>The following is an example of loading XML-based bundles
- * using {@link java.util.Properties#loadFromXML(java.io.InputStream) Properties#loadFromXML(java.io.InputStream)}.
+ * using {@link java.util.Properties#loadFromXML(java.io.InputStream)  Properties.loadFromXML}.
  *
  * <pre>
  * ResourceBundle rb = ResourceBundle.getBundle("Messages",
@@ -1105,7 +1099,7 @@ protected Control() { throw new RuntimeException("Stub!"); }
  * Returns a <code>ResourceBundle.Control</code> in which the {@link
  * #getFormats(java.lang.String) getFormats} method returns the specified
  * <code>formats</code>. The <code>formats</code> must be equal to
- * one of {@link java.util.ResourceBundle.Control#FORMAT_PROPERTIES Control#FORMAT_PROPERTIES}, {@link java.util.ResourceBundle.Control#FORMAT_CLASS Control#FORMAT_CLASS} or {@link java.util.ResourceBundle.Control#FORMAT_DEFAULT Control#FORMAT_DEFAULT}. <code>ResourceBundle.Control</code>
+ * one of {@link java.util.ResourceBundle.Control#FORMAT_PROPERTIES Control#FORMAT_PROPERTIES}, {@link java.util.ResourceBundle.Control#FORMAT_CLASS  } or {@link java.util.ResourceBundle.Control#FORMAT_DEFAULT  }. <code>ResourceBundle.Control</code>
  * instances returned by this method are singletons and thread-safe.
  *
  * <p>Specifying {@link java.util.ResourceBundle.Control#FORMAT_DEFAULT Control#FORMAT_DEFAULT} is equivalent to
@@ -1128,9 +1122,9 @@ public static final java.util.ResourceBundle.Control getControl(java.util.List<j
 /**
  * Returns a <code>ResourceBundle.Control</code> in which the {@link
  * #getFormats(java.lang.String) getFormats} method returns the specified
- * <code>formats</code> and the {@link java.util.ResourceBundle.Control#getFallbackLocale(java.lang.String,java.util.Locale) Control#getFallbackLocale(String, Locale)}
+ * <code>formats</code> and the {@link java.util.ResourceBundle.Control#getFallbackLocale(java.lang.String,java.util.Locale) getFallbackLocale}
  * method returns <code>null</code>. The <code>formats</code> must
- * be equal to one of {@link java.util.ResourceBundle.Control#FORMAT_PROPERTIES Control#FORMAT_PROPERTIES}, {@link java.util.ResourceBundle.Control#FORMAT_CLASS Control#FORMAT_CLASS} or {@link java.util.ResourceBundle.Control#FORMAT_DEFAULT Control#FORMAT_DEFAULT}.
+ * be equal to one of {@link java.util.ResourceBundle.Control#FORMAT_PROPERTIES Control#FORMAT_PROPERTIES}, {@link java.util.ResourceBundle.Control#FORMAT_CLASS  } or {@link java.util.ResourceBundle.Control#FORMAT_DEFAULT Control#FORMAT_DEFAULT}.
  * <code>ResourceBundle.Control</code> instances returned by this
  * method are singletons and thread-safe.
  *
@@ -1156,7 +1150,7 @@ public static final java.util.ResourceBundle.Control getNoFallbackControl(java.u
  * order specified by the list. The list returned by this method
  * must have at least one <code>String</code>. The predefined
  * formats are <code>"java.class"</code> for class-based resource
- * bundles and <code>"java.properties"</code> for {@linkplain java.util.PropertyResourceBundle PropertyResourceBundle} ones. Strings starting
+ * bundles and <code>"java.properties"</code> for {@linkplain java.util.PropertyResourceBundle properties-based} ones. Strings starting
  * with <code>"java."</code> are reserved for future extensions and
  * must not be used by application-defined formats.
  *
@@ -1196,7 +1190,7 @@ public java.util.List<java.lang.String> getFormats(java.lang.String baseName) { 
  * chain</I>), if the corresponding resource bundles for the
  * candidate locales exist and their parents are not defined by
  * loaded resource bundles themselves.  The last element of the list
- * must be a {@linkplain java.util.Locale#ROOT Locale#ROOT} if it is desired to
+ * must be a {@linkplain java.util.Locale#ROOT root locale} if it is desired to
  * have the base bundle as the terminal of the parent chain.
  *
  * <p>If the given locale is equal to <code>Locale.ROOT</code> (the
@@ -1378,7 +1372,7 @@ public java.util.List<java.util.Locale> getCandidateLocales(java.lang.String bas
  * <p>The method returns <code>null</code> if no further fallback
  * search is desired.
  *
- * <p>The default implementation returns the {@linkplain java.util.Locale#getDefault() Locale#getDefault()} if the given
+ * <p>The default implementation returns the {@linkplain java.util.Locale#getDefault() default <code>Locale</code>} if the given
  * <code>locale</code> isn't the default one.  Otherwise,
  * <code>null</code> is returned.
  *
@@ -1429,18 +1423,18 @@ public java.util.Locale getFallbackLocale(java.lang.String baseName, java.util.L
  * <li>If <code>format</code> is <code>"java.class"</code>, the
  * {@link java.lang.Class Class} specified by the bundle name is loaded by calling
  * {@link java.lang.ClassLoader#loadClass(java.lang.String) ClassLoader#loadClass(String)}. Then, a
- * <code>ResourceBundle</code> is instantiated by calling {@link java.lang.Class#newInstance() Class#newInstance()}.  Note that the <code>reload</code> flag is
+ * <code>ResourceBundle</code> is instantiated by calling {@link java.lang.Class#newInstance()  }.  Note that the <code>reload</code> flag is
  * ignored for loading class-based resource bundles in this default
  * implementation.</li>
  *
  * <li>If <code>format</code> is <code>"java.properties"</code>,
  * {@link #toResourceName(java.lang.String,java.lang.String) toResourceName(bundlename,
  * "properties")} is called to get the resource name.
- * If <code>reload</code> is <code>true</code>, {@link java.lang.ClassLoader#getResource(java.lang.String) ClassLoader#getResource(String)} is called
+ * If <code>reload</code> is <code>true</code>, {@link java.lang.ClassLoader#getResource(java.lang.String) load.getResource} is called
  * to get a {@link java.net.URL URL} for creating a {@link java.net.URLConnection URLConnection}. This <code>URLConnection</code> is used to
- * {@linkplain java.net.URLConnection#setUseCaches(boolean) URLConnection#setUseCaches(boolean)} of the underlying resource loading layers,
- * and to {@linkplain java.net.URLConnection#getInputStream() URLConnection#getInputStream()}.
- * Otherwise, {@link java.lang.ClassLoader#getResourceAsStream(java.lang.String) ClassLoader#getResourceAsStream(String)} is called to get an {@link java.io.InputStream InputStream}. Then, a {@link java.util.PropertyResourceBundle PropertyResourceBundle} is constructed with the
+ * {@linkplain java.net.URLConnection#setUseCaches(boolean)  caches} of the underlying resource loading layers,
+ * and to {@linkplain java.net.URLConnection#getInputStream()  <code>InputStream</code>}.
+ * Otherwise, {@link java.lang.ClassLoader#getResourceAsStream(java.lang.String)  loader.getResourceAsStream} is called to get an {@link java.io.InputStream InputStream}. Then, a {@link java.util.PropertyResourceBundle PropertyResourceBundle} is constructed with the
  * <code>InputStream</code>.</li>
  *
  * <li>If <code>format</code> is neither <code>"java.class"</code>
@@ -1638,7 +1632,7 @@ public java.lang.String toBundleName(java.lang.String baseName, java.util.Locale
 
 /**
  * Converts the given <code>bundleName</code> to the form required
- * by the {@link java.lang.ClassLoader#getResource ClassLoader#getResource}
+ * by the {@link java.lang.ClassLoader#getResource ClassLoader.getResource}
  * method by replacing all occurrences of <code>'.'</code> in
  * <code>bundleName</code> with <code>'/'</code> and appending a
  * <code>'.'</code> and the given file <code>suffix</code>. For
@@ -1661,7 +1655,7 @@ public final java.lang.String toResourceName(java.lang.String bundleName, java.l
 
 /**
  * The class-only format <code>List</code> containing
- * <code>"java.class"</code>. This <code>List</code> is {@linkplain java.util.Collections#unmodifiableList(java.util.List) Collections#unmodifiableList(List)}.
+ * <code>"java.class"</code>. This <code>List</code> is {@linkplain java.util.Collections#unmodifiableList(java.util.List) unmodifiable}.
  *
  * @see #getFormats(String)
  */
@@ -1672,7 +1666,7 @@ static { FORMAT_CLASS = null; }
 /**
  * The default format <code>List</code>, which contains the strings
  * <code>"java.class"</code> and <code>"java.properties"</code>, in
- * this order. This <code>List</code> is {@linkplain java.util.Collections#unmodifiableList(java.util.List) Collections#unmodifiableList(List)}.
+ * this order. This <code>List</code> is {@linkplain java.util.Collections#unmodifiableList(java.util.List) unmodifiable}.
  *
  * @see #getFormats(String)
  */
@@ -1683,7 +1677,7 @@ static { FORMAT_DEFAULT = null; }
 /**
  * The properties-only format <code>List</code> containing
  * <code>"java.properties"</code>. This <code>List</code> is
- * {@linkplain java.util.Collections#unmodifiableList(java.util.List) Collections#unmodifiableList(List)}.
+ * {@linkplain java.util.Collections#unmodifiableList(java.util.List) unmodifiable}.
  *
  * @see #getFormats(String)
  */

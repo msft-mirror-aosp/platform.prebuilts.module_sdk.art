@@ -46,14 +46,14 @@ import java.util.*;
  *    </p></li>
  *
  *    <li><p> The {@link #permissions permissions} component is a set of
- *    {@link java.nio.file.attribute.AclEntryPermission AclEntryPermission}
+ *    {@link java.nio.file.attribute.AclEntryPermission permissions}
  *    </p></li>
  *
- *    <li><p> The {@link #flags flags} component is a set of {@link java.nio.file.attribute.AclEntryFlag AclEntryFlag} to indicate how entries are inherited and propagated </p></li>
+ *    <li><p> The {@link #flags flags} component is a set of {@link java.nio.file.attribute.AclEntryFlag     flags} to indicate how entries are inherited and propagated </p></li>
  * </ol>
  *
  * <p> ACL entries are created using an associated {@link java.nio.file.attribute.AclEntry.Builder Builder} object by
- * invoking its {@link java.nio.file.attribute.AclEntry.Builder#build Builder#build} method.
+ * invoking its {@link java.nio.file.attribute.AclEntry.Builder#build build} method.
  *
  * <p> ACL entries are immutable and are safe for use by multiple concurrent
  * threads.
@@ -145,7 +145,7 @@ public boolean equals(java.lang.Object ob) { throw new RuntimeException("Stub!")
 /**
  * Returns the hash-code value for this ACL entry.
  *
- * <p> This method satisfies the general contract of the {@link java.lang.Object#hashCode Object#hashCode} method.
+ * <p> This method satisfies the general contract of the {@link java.lang.Object#hashCode  } method.
  */
 
 public int hashCode() { throw new RuntimeException("Stub!"); }
@@ -160,7 +160,7 @@ public java.lang.String toString() { throw new RuntimeException("Stub!"); }
 /**
  * A builder of {@link java.nio.file.attribute.AclEntry AclEntry} objects.
  *
- * <p> A {@code Builder} object is obtained by invoking one of the {@link java.nio.file.attribute.AclEntry#newBuilder AclEntry#newBuilder} methods defined by the {@code AclEntry}
+ * <p> A {@code Builder} object is obtained by invoking one of the {@link java.nio.file.attribute.AclEntry#newBuilder newBuilder} methods defined by the {@code AclEntry}
  * class.
  *
  * <p> Builder objects are mutable and are not safe for use by multiple

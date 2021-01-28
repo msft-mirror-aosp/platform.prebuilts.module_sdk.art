@@ -159,7 +159,7 @@ public class File implements java.io.Serializable, java.lang.Comparable<java.io.
  *          If the <code>pathname</code> argument is <code>null</code>
  */
 
-public File(@android.annotation.NonNull java.lang.String pathname) { throw new RuntimeException("Stub!"); }
+public File(@androidx.annotation.RecentlyNonNull java.lang.String pathname) { throw new RuntimeException("Stub!"); }
 
 /**
  * Creates a new <code>File</code> instance from a parent pathname string
@@ -187,7 +187,7 @@ public File(@android.annotation.NonNull java.lang.String pathname) { throw new R
  *          If <code>child</code> is <code>null</code>
  */
 
-public File(@android.annotation.Nullable java.lang.String parent, @android.annotation.NonNull java.lang.String child) { throw new RuntimeException("Stub!"); }
+public File(@androidx.annotation.RecentlyNullable java.lang.String parent, @androidx.annotation.RecentlyNonNull java.lang.String child) { throw new RuntimeException("Stub!"); }
 
 /**
  * Creates a new <code>File</code> instance from a parent abstract
@@ -215,7 +215,7 @@ public File(@android.annotation.Nullable java.lang.String parent, @android.annot
  *          If <code>child</code> is <code>null</code>
  */
 
-public File(@android.annotation.Nullable java.io.File parent, @android.annotation.NonNull java.lang.String child) { throw new RuntimeException("Stub!"); }
+public File(@androidx.annotation.RecentlyNullable java.io.File parent, @androidx.annotation.RecentlyNonNull java.lang.String child) { throw new RuntimeException("Stub!"); }
 
 /**
  * Creates a new <tt>File</tt> instance by converting the given
@@ -254,7 +254,7 @@ public File(@android.annotation.Nullable java.io.File parent, @android.annotatio
  * @since 1.4
  */
 
-public File(@android.annotation.NonNull java.net.URI uri) { throw new RuntimeException("Stub!"); }
+public File(@androidx.annotation.RecentlyNonNull java.net.URI uri) { throw new RuntimeException("Stub!"); }
 
 /**
  * Returns the name of the file or directory denoted by this abstract
@@ -267,7 +267,7 @@ public File(@android.annotation.NonNull java.net.URI uri) { throw new RuntimeExc
  *          is empty
  */
 
-@android.annotation.NonNull
+@androidx.annotation.RecentlyNonNull
 public java.lang.String getName() { throw new RuntimeException("Stub!"); }
 
 /**
@@ -284,7 +284,7 @@ public java.lang.String getName() { throw new RuntimeException("Stub!"); }
  *          does not name a parent
  */
 
-@android.annotation.Nullable
+@androidx.annotation.RecentlyNullable
 public java.lang.String getParent() { throw new RuntimeException("Stub!"); }
 
 /**
@@ -304,7 +304,7 @@ public java.lang.String getParent() { throw new RuntimeException("Stub!"); }
  * @since 1.2
  */
 
-@android.annotation.Nullable
+@androidx.annotation.RecentlyNullable
 public java.io.File getParentFile() { throw new RuntimeException("Stub!"); }
 
 /**
@@ -315,7 +315,7 @@ public java.io.File getParentFile() { throw new RuntimeException("Stub!"); }
  * @return  The string form of this abstract pathname
  */
 
-@android.annotation.NonNull
+@androidx.annotation.RecentlyNonNull
 public java.lang.String getPath() { throw new RuntimeException("Stub!"); }
 
 /**
@@ -343,7 +343,7 @@ public boolean isAbsolute() { throw new RuntimeException("Stub!"); }
  * @see     java.io.File#isAbsolute()
  */
 
-@android.annotation.NonNull
+@androidx.annotation.RecentlyNonNull
 public java.lang.String getAbsolutePath() { throw new RuntimeException("Stub!"); }
 
 /**
@@ -359,7 +359,7 @@ public java.lang.String getAbsolutePath() { throw new RuntimeException("Stub!");
  * @since 1.2
  */
 
-@android.annotation.NonNull
+@androidx.annotation.RecentlyNonNull
 public java.io.File getAbsoluteFile() { throw new RuntimeException("Stub!"); }
 
 /**
@@ -401,7 +401,7 @@ public java.io.File getAbsoluteFile() { throw new RuntimeException("Stub!"); }
  * @see     java.nio.file.Path#toRealPath
  */
 
-@android.annotation.NonNull
+@androidx.annotation.RecentlyNonNull
 public java.lang.String getCanonicalPath() throws java.io.IOException { throw new RuntimeException("Stub!"); }
 
 /**
@@ -426,7 +426,7 @@ public java.lang.String getCanonicalPath() throws java.io.IOException { throw ne
  * @see     java.nio.file.Path#toRealPath
  */
 
-@android.annotation.NonNull
+@androidx.annotation.RecentlyNonNull
 public java.io.File getCanonicalFile() throws java.io.IOException { throw new RuntimeException("Stub!"); }
 
 /**
@@ -454,7 +454,7 @@ public java.io.File getCanonicalFile() throws java.io.IOException { throw new Ru
  */
 
 @Deprecated
-@android.annotation.NonNull
+@androidx.annotation.RecentlyNonNull
 public java.net.URL toURL() throws java.net.MalformedURLException { throw new RuntimeException("Stub!"); }
 
 /**
@@ -482,7 +482,7 @@ public java.net.URL toURL() throws java.net.MalformedURLException { throw new Ru
  * all components of the UNC (including the server name component) are encoded
  * in the {@code URI} path. The authority component is undefined, meaning
  * that it is represented as {@code null}. The {@link java.nio.file.Path Path} class defines the
- * {@link java.nio.file.Path#toUri Path#toUri} method to encode the server name in the authority
+ * {@link java.nio.file.Path#toUri toUri} method to encode the server name in the authority
  * component of the resulting {@code URI}. The {@link #toPath toPath} method
  * may be used to obtain a {@code Path} representing this abstract pathname.
  *
@@ -498,7 +498,7 @@ public java.net.URL toURL() throws java.net.MalformedURLException { throw new Ru
  * @since 1.4
  */
 
-@android.annotation.NonNull
+@androidx.annotation.RecentlyNonNull
 public java.net.URI toURI() { throw new RuntimeException("Stub!"); }
 
 /**
@@ -783,11 +783,11 @@ public void deleteOnExit() { throw new RuntimeException("Stub!"); }
  *          I/O error occurs.
  *
  * @throws  java.lang.SecurityException
- *          If a security manager exists and its {@link java.lang.SecurityManager#checkRead(java.lang.String) SecurityManager#checkRead(String)} method denies read access to
+ *          If a security manager exists and its {@link java.lang.SecurityManager#checkRead(java.lang.String)           } method denies read access to
  *          the directory
  */
 
-@android.annotation.Nullable
+@androidx.annotation.RecentlyNullable
 public java.lang.String[] list() { throw new RuntimeException("Stub!"); }
 
 /**
@@ -797,7 +797,7 @@ public java.lang.String[] list() { throw new RuntimeException("Stub!"); }
  * {@link #list()} method, except that the strings in the returned array
  * must satisfy the filter.  If the given {@code filter} is {@code null}
  * then all names are accepted.  Otherwise, a name satisfies the filter if
- * and only if the value {@code true} results when the {@link java.io.FilenameFilter#accept FilenameFilter#accept} method
+ * and only if the value {@code true} results when the {@link java.io.FilenameFilter#accept FilenameFilter.accept(File,&nbsp;String)} method
  * of the filter is invoked on this abstract pathname and the name of a
  * file or directory in the directory that it denotes.
  *
@@ -812,14 +812,14 @@ public java.lang.String[] list() { throw new RuntimeException("Stub!"); }
  *          a directory, or if an I/O error occurs.
  *
  * @throws  java.lang.SecurityException
- *          If a security manager exists and its {@link java.lang.SecurityManager#checkRead(java.lang.String) SecurityManager#checkRead(String)} method denies read access to
+ *          If a security manager exists and its {@link java.lang.SecurityManager#checkRead(java.lang.String)           } method denies read access to
  *          the directory
  *
  * @see java.nio.file.Files#newDirectoryStream(Path,String)
  */
 
-@android.annotation.Nullable
-public java.lang.String[] list(@android.annotation.Nullable java.io.FilenameFilter filter) { throw new RuntimeException("Stub!"); }
+@androidx.annotation.RecentlyNullable
+public java.lang.String[] list(@androidx.annotation.RecentlyNullable java.io.FilenameFilter filter) { throw new RuntimeException("Stub!"); }
 
 /**
  * Returns an array of abstract pathnames denoting the files in the
@@ -852,13 +852,13 @@ public java.lang.String[] list(@android.annotation.Nullable java.io.FilenameFilt
  *          directory, or if an I/O error occurs.
  *
  * @throws  java.lang.SecurityException
- *          If a security manager exists and its {@link java.lang.SecurityManager#checkRead(java.lang.String) SecurityManager#checkRead(String)} method denies read access to
+ *          If a security manager exists and its {@link java.lang.SecurityManager#checkRead(java.lang.String)           } method denies read access to
  *          the directory
  *
  * @since  1.2
  */
 
-@android.annotation.Nullable
+@androidx.annotation.RecentlyNullable
 public java.io.File[] listFiles() { throw new RuntimeException("Stub!"); }
 
 /**
@@ -869,7 +869,7 @@ public java.io.File[] listFiles() { throw new RuntimeException("Stub!"); }
  * the returned array must satisfy the filter.  If the given {@code filter}
  * is {@code null} then all pathnames are accepted.  Otherwise, a pathname
  * satisfies the filter if and only if the value {@code true} results when
- * the {@link java.io.FilenameFilter#accept FilenameFilter#accept} method of the filter is
+ * the {@link java.io.FilenameFilter#accept  FilenameFilter.accept(File,&nbsp;String)} method of the filter is
  * invoked on this abstract pathname and the name of a file or directory in
  * the directory that it denotes.
  *
@@ -883,15 +883,15 @@ public java.io.File[] listFiles() { throw new RuntimeException("Stub!"); }
  *          directory, or if an I/O error occurs.
  *
  * @throws  java.lang.SecurityException
- *          If a security manager exists and its {@link java.lang.SecurityManager#checkRead(java.lang.String) SecurityManager#checkRead(String)} method denies read access to
+ *          If a security manager exists and its {@link java.lang.SecurityManager#checkRead(java.lang.String)           } method denies read access to
  *          the directory
  *
  * @since  1.2
  * @see java.nio.file.Files#newDirectoryStream(Path,String)
  */
 
-@android.annotation.Nullable
-public java.io.File[] listFiles(@android.annotation.Nullable java.io.FilenameFilter filter) { throw new RuntimeException("Stub!"); }
+@androidx.annotation.RecentlyNullable
+public java.io.File[] listFiles(@androidx.annotation.RecentlyNullable java.io.FilenameFilter filter) { throw new RuntimeException("Stub!"); }
 
 /**
  * Returns an array of abstract pathnames denoting the files and
@@ -901,7 +901,7 @@ public java.io.File[] listFiles(@android.annotation.Nullable java.io.FilenameFil
  * the returned array must satisfy the filter.  If the given {@code filter}
  * is {@code null} then all pathnames are accepted.  Otherwise, a pathname
  * satisfies the filter if and only if the value {@code true} results when
- * the {@link java.io.FileFilter#accept FileFilter#accept} method of the
+ * the {@link java.io.FileFilter#accept FileFilter.accept(File)} method of the
  * filter is invoked on the pathname.
  *
  * @param  filter
@@ -914,15 +914,15 @@ public java.io.File[] listFiles(@android.annotation.Nullable java.io.FilenameFil
  *          directory, or if an I/O error occurs.
  *
  * @throws  java.lang.SecurityException
- *          If a security manager exists and its {@link java.lang.SecurityManager#checkRead(java.lang.String) SecurityManager#checkRead(String)} method denies read access to
+ *          If a security manager exists and its {@link java.lang.SecurityManager#checkRead(java.lang.String)           } method denies read access to
  *          the directory
  *
  * @since  1.2
  * @see java.nio.file.Files#newDirectoryStream(Path,java.nio.file.DirectoryStream.Filter)
  */
 
-@android.annotation.Nullable
-public java.io.File[] listFiles(@android.annotation.Nullable java.io.FileFilter filter) { throw new RuntimeException("Stub!"); }
+@androidx.annotation.RecentlyNullable
+public java.io.File[] listFiles(@androidx.annotation.RecentlyNullable java.io.FileFilter filter) { throw new RuntimeException("Stub!"); }
 
 /**
  * Creates the directory named by this abstract pathname.
@@ -994,7 +994,7 @@ public boolean mkdirs() { throw new RuntimeException("Stub!"); }
  *          If parameter <code>dest</code> is <code>null</code>
  */
 
-public boolean renameTo(@android.annotation.NonNull java.io.File dest) { throw new RuntimeException("Stub!"); }
+public boolean renameTo(@androidx.annotation.RecentlyNonNull java.io.File dest) { throw new RuntimeException("Stub!"); }
 
 /**
  * Sets the last-modified time of the file or directory named by this
@@ -1262,7 +1262,7 @@ public boolean canExecute() { throw new RuntimeException("Stub!"); }
  * a single root, {@code /}.
  */
 
-@android.annotation.NonNull
+@androidx.annotation.RecentlyNonNull
 public static java.io.File[] listRoots() { throw new RuntimeException("Stub!"); }
 
 /**
@@ -1419,8 +1419,8 @@ public long getUsableSpace() { throw new RuntimeException("Stub!"); }
  * @since 1.2
  */
 
-@android.annotation.NonNull
-public static java.io.File createTempFile(@android.annotation.NonNull java.lang.String prefix, @android.annotation.Nullable java.lang.String suffix, @android.annotation.Nullable java.io.File directory) throws java.io.IOException { throw new RuntimeException("Stub!"); }
+@androidx.annotation.RecentlyNonNull
+public static java.io.File createTempFile(@androidx.annotation.RecentlyNonNull java.lang.String prefix, @androidx.annotation.RecentlyNullable java.lang.String suffix, @androidx.annotation.RecentlyNullable java.io.File directory) throws java.io.IOException { throw new RuntimeException("Stub!"); }
 
 /**
  * Creates an empty file in the default temporary-file directory, using
@@ -1459,8 +1459,8 @@ public static java.io.File createTempFile(@android.annotation.NonNull java.lang.
  * @see java.nio.file.Files#createTempDirectory(String,FileAttribute[])
  */
 
-@android.annotation.NonNull
-public static java.io.File createTempFile(@android.annotation.NonNull java.lang.String prefix, @android.annotation.Nullable java.lang.String suffix) throws java.io.IOException { throw new RuntimeException("Stub!"); }
+@androidx.annotation.RecentlyNonNull
+public static java.io.File createTempFile(@androidx.annotation.RecentlyNonNull java.lang.String prefix, @androidx.annotation.RecentlyNullable java.lang.String suffix) throws java.io.IOException { throw new RuntimeException("Stub!"); }
 
 /**
  * Compares two abstract pathnames lexicographically.  The ordering
@@ -1480,7 +1480,7 @@ public static java.io.File createTempFile(@android.annotation.NonNull java.lang.
  * @since   1.2
  */
 
-public int compareTo(@android.annotation.NonNull java.io.File pathname) { throw new RuntimeException("Stub!"); }
+public int compareTo(@androidx.annotation.RecentlyNonNull java.io.File pathname) { throw new RuntimeException("Stub!"); }
 
 /**
  * Tests this abstract pathname for equality with the given object.
@@ -1497,7 +1497,7 @@ public int compareTo(@android.annotation.NonNull java.io.File pathname) { throw 
  *          <code>false</code> otherwise
  */
 
-public boolean equals(@android.annotation.Nullable java.lang.Object obj) { throw new RuntimeException("Stub!"); }
+public boolean equals(@androidx.annotation.RecentlyNullable java.lang.Object obj) { throw new RuntimeException("Stub!"); }
 
 /**
  * Computes a hash code for this abstract pathname.  Because equality of
@@ -1523,11 +1523,11 @@ public int hashCode() { throw new RuntimeException("Stub!"); }
  * @return  The string form of this abstract pathname
  */
 
-@android.annotation.NonNull
+@androidx.annotation.RecentlyNonNull
 public java.lang.String toString() { throw new RuntimeException("Stub!"); }
 
 /**
- * Returns a {@link java.nio.file.Path Path} object constructed from the
+ * Returns a {@link java.nio.file.Path java.nio.file.Path} object constructed from the
  * this abstract path. The resulting {@code Path} is associated with the
  * {@link java.nio.file.FileSystems#getDefault default-filesystem}.
  *
@@ -1553,7 +1553,7 @@ public java.lang.String toString() { throw new RuntimeException("Stub!"); }
  * @see java.nio.file.Path#toFile
  */
 
-@android.annotation.NonNull
+@androidx.annotation.RecentlyNonNull
 public java.nio.file.Path toPath() { throw new RuntimeException("Stub!"); }
 
 /**
@@ -1562,7 +1562,7 @@ public java.nio.file.Path toPath() { throw new RuntimeException("Stub!"); }
  * <code>{@link #pathSeparatorChar}</code>.
  */
 
-@android.annotation.NonNull public static final java.lang.String pathSeparator;
+@androidx.annotation.RecentlyNonNull public static final java.lang.String pathSeparator;
 static { pathSeparator = null; }
 
 /**
@@ -1585,7 +1585,7 @@ static { pathSeparatorChar = 0; }
  * <code>{@link #separatorChar}</code>.
  */
 
-@android.annotation.NonNull public static final java.lang.String separator;
+@androidx.annotation.RecentlyNonNull public static final java.lang.String separator;
 static { separator = null; }
 
 /**

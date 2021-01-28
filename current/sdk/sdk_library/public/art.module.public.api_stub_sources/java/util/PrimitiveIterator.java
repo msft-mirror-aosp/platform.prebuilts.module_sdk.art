@@ -32,8 +32,8 @@ import java.util.function.DoubleConsumer;
 
 /**
  * A base type for primitive specializations of {@code Iterator}.  Specialized
- * subtypes are provided for {@link java.util.PrimitiveIterator.OfInt OfInt}, {@link java.util.PrimitiveIterator.OfLong OfLong}, and
- * {@link java.util.PrimitiveIterator.OfDouble OfDouble} values.
+ * subtypes are provided for {@link java.util.PrimitiveIterator.OfInt int}, {@link java.util.PrimitiveIterator.OfLong long}, and
+ * {@link java.util.PrimitiveIterator.OfDouble double} values.
  *
  * <p>The specialized subtype default implementations of {@link java.util.Iterator#next Iterator#next}
  * and {@link java.util.Iterator#forEachRemaining(java.util.function.Consumer) Iterator#forEachRemaining(java.util.function.Consumer)} box
@@ -46,8 +46,8 @@ import java.util.function.DoubleConsumer;
  * {@link java.util.PrimitiveIterator.OfInt#forEachRemaining(java.util.function.Consumer) PrimitiveIterator.OfInt#forEachRemaining(java.util.function.Consumer)}.
  *
  * <p>Iteration of primitive values using boxing-based methods
- * {@link java.util.Iterator#next Iterator#next} and
- * {@link java.util.Iterator#forEachRemaining(java.util.function.Consumer) Iterator#forEachRemaining(java.util.function.Consumer)},
+ * {@link java.util.Iterator#next next()} and
+ * {@link java.util.Iterator#forEachRemaining(java.util.function.Consumer) forEachRemaining()},
  * does not affect the order in which the values, transformed to boxed values,
  * are encountered.
  *
