@@ -43,8 +43,8 @@ import java.io.IOException;
  * <p> A channel cannot be deregistered directly; instead, the key representing
  * its registration must be <i>cancelled</i>.  Cancelling a key requests that
  * the channel be deregistered during the selector's next selection operation.
- * A key may be cancelled explicitly by invoking its {@link java.nio.channels.SelectionKey#cancel() SelectionKey#cancel()} method.  All of a channel's keys are cancelled
- * implicitly when the channel is closed, whether by invoking its {@link java.nio.channels.Channel#close Channel#close} method or by interrupting a thread blocked in an I/O
+ * A key may be cancelled explicitly by invoking its {@link java.nio.channels.SelectionKey#cancel() cancel} method.  All of a channel's keys are cancelled
+ * implicitly when the channel is closed, whether by invoking its {@link java.nio.channels.Channel#close close} method or by interrupting a thread blocked in an I/O
  * operation upon the channel.
  *
  * <p> If the selector itself is closed then the channel will be deregistered,
@@ -149,7 +149,7 @@ public abstract java.nio.channels.SelectionKey keyFor(java.nio.channels.Selector
  * <p> If this channel is currently registered with the given selector then
  * the selection key representing that registration is returned.  The key's
  * interest set will have been changed to <tt>ops</tt>, as if by invoking
- * the {@link java.nio.channels.SelectionKey#interestOps(int) SelectionKey#interestOps(int)} method.  If
+ * the {@link java.nio.channels.SelectionKey#interestOps(int) interestOps(int)} method.  If
  * the <tt>att</tt> argument is not <tt>null</tt> then the key's attachment
  * will have been set to that value.  A {@link java.nio.channels.CancelledKeyException CancelledKeyException} will
  * be thrown if the key has already been cancelled.

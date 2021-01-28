@@ -74,7 +74,7 @@ private Executors() { throw new RuntimeException("Stub!"); }
  * If any thread terminates due to a failure during execution
  * prior to shutdown, a new one will take its place if needed to
  * execute subsequent tasks.  The threads in the pool will exist
- * until it is explicitly {@link java.util.concurrent.ExecutorService#shutdown ExecutorService#shutdown}.
+ * until it is explicitly {@link java.util.concurrent.ExecutorService#shutdown shutdown}.
  *
  * @param nThreads the number of threads in the pool
  * @return the newly created thread pool
@@ -103,7 +103,7 @@ public static java.util.concurrent.ExecutorService newWorkStealingPool(int paral
 
 /**
  * Creates a work-stealing thread pool using the number of
- * {@linkplain java.lang.Runtime#availableProcessors Runtime#availableProcessors}
+ * {@linkplain java.lang.Runtime#availableProcessors available processors}
  * as its target parallelism level.
  *
  * @return the newly created thread pool
@@ -123,7 +123,7 @@ public static java.util.concurrent.ExecutorService newWorkStealingPool() { throw
  * available.  If any thread terminates due to a failure during
  * execution prior to shutdown, a new one will take its place if
  * needed to execute subsequent tasks.  The threads in the pool will
- * exist until it is explicitly {@link java.util.concurrent.ExecutorService#shutdown ExecutorService#shutdown}.
+ * exist until it is explicitly {@link java.util.concurrent.ExecutorService#shutdown  shutdown}.
  *
  * @param nThreads the number of threads in the pool
  * @param threadFactory the factory to use when creating new threads

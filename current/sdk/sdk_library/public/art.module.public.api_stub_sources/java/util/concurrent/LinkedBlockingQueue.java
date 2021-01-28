@@ -41,7 +41,7 @@ import java.util.Collection;
 import java.util.Spliterator;
 
 /**
- * An optionally-bounded {@linkplain java.util.concurrent.BlockingQueue BlockingQueue} based on
+ * An optionally-bounded {@linkplain java.util.concurrent.BlockingQueue blocking queue} based on
  * linked nodes.
  * This queue orders elements FIFO (first-in-first-out).
  * The <em>head</em> of the queue is that element that has been on the
@@ -150,7 +150,7 @@ public boolean offer(E e, long timeout, java.util.concurrent.TimeUnit unit) thro
  * returning {@code true} upon success and {@code false} if this queue
  * is full.
  * When using a capacity-restricted queue, this method is generally
- * preferable to method {@link java.util.concurrent.BlockingQueue#add BlockingQueue#add}, which can fail to
+ * preferable to method {@link java.util.concurrent.BlockingQueue#add add}, which can fail to
  * insert an element only by throwing an exception.
  *
  * @throws java.lang.NullPointerException if the specified element is null

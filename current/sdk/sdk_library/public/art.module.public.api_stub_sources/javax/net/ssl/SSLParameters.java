@@ -41,17 +41,17 @@ import java.util.Collection;
  * SSLParameters can be created via the constructors in this class.
  * Objects can also be obtained using the <code>getSSLParameters()</code>
  * methods in
- * {@link javax.net.ssl.SSLSocket#getSSLParameters SSLSocket#getSSLParameters} and
- * {@link javax.net.ssl.SSLServerSocket#getSSLParameters SSLServerSocket#getSSLParameters} and
- * {@link javax.net.ssl.SSLEngine#getSSLParameters SSLEngine#getSSLParameters} or the
- * {@link javax.net.ssl.SSLContext#getDefaultSSLParameters SSLContext#getDefaultSSLParameters} and
- * {@link javax.net.ssl.SSLContext#getSupportedSSLParameters SSLContext#getSupportedSSLParameters}
+ * {@link javax.net.ssl.SSLSocket#getSSLParameters SSLSocket} and
+ * {@link javax.net.ssl.SSLServerSocket#getSSLParameters SSLServerSocket} and
+ * {@link javax.net.ssl.SSLEngine#getSSLParameters SSLEngine} or the
+ * {@link javax.net.ssl.SSLContext#getDefaultSSLParameters getDefaultSSLParameters()} and
+ * {@link javax.net.ssl.SSLContext#getSupportedSSLParameters getSupportedSSLParameters()}
  * methods in <code>SSLContext</code>.
  * <p>
  * SSLParameters can be applied to a connection via the methods
- * {@link javax.net.ssl.SSLSocket#setSSLParameters SSLSocket#setSSLParameters} and
- * {@link javax.net.ssl.SSLServerSocket#setSSLParameters SSLServerSocket#setSSLParameters}
- * and {@link javax.net.ssl.SSLEngine#setSSLParameters SSLEngine#setSSLParameters}.
+ * {@link javax.net.ssl.SSLSocket#setSSLParameters SSLSocket.setSSLParameters()} and
+ * {@link javax.net.ssl.SSLServerSocket#setSSLParameters SSLServerSocket.setSSLParameters()}
+ * and {@link javax.net.ssl.SSLEngine#setSSLParameters SSLEngine.setSSLParameters()}.
  *
  * @see javax.net.ssl.SSLSocket
  * @see javax.net.ssl.SSLEngine

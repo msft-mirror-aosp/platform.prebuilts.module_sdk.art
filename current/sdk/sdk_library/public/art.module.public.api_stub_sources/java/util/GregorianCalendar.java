@@ -83,9 +83,9 @@ import java.time.ZonedDateTime;
  *
  * <h3><a name="week_and_year">Week Of Year and Week Year</a></h3>
  *
- * <p>Values calculated for the {@link java.util.Calendar#WEEK_OF_YEAR Calendar#WEEK_OF_YEAR} field range from 1 to 53. The first week of a
- * calendar year is the earliest seven day period starting on {@link java.util.Calendar#getFirstDayOfWeek() Calendar#getFirstDayOfWeek()} that contains at
- * least {@link java.util.Calendar#getMinimalDaysInFirstWeek() Calendar#getMinimalDaysInFirstWeek()} days from that year. It thus depends
+ * <p>Values calculated for the {@link java.util.Calendar#WEEK_OF_YEAR  WEEK_OF_YEAR} field range from 1 to 53. The first week of a
+ * calendar year is the earliest seven day period starting on {@link java.util.Calendar#getFirstDayOfWeek() getFirstDayOfWeek()} that contains at
+ * least {@link java.util.Calendar#getMinimalDaysInFirstWeek()  getMinimalDaysInFirstWeek()} days from that year. It thus depends
  * on the values of {@code getMinimalDaysInFirstWeek()}, {@code
  * getFirstDayOfWeek()}, and the day of the week of January 1. Weeks
  * between week 1 of one year and week 1 of the following year
@@ -100,8 +100,8 @@ import java.time.ZonedDateTime;
  * getFirstDayOfWeek()} is {@code MONDAY} and {@code
  * getMinimalDaysInFirstWeek()} is 4, which values are used in locales
  * where the standard is preferred. These values can explicitly be set by
- * calling {@link java.util.Calendar#setFirstDayOfWeek(int) Calendar#setFirstDayOfWeek(int)} and
- * {@link java.util.Calendar#setMinimalDaysInFirstWeek(int) Calendar#setMinimalDaysInFirstWeek(int)}.
+ * calling {@link java.util.Calendar#setFirstDayOfWeek(int) setFirstDayOfWeek()} and
+ * {@link java.util.Calendar#setMinimalDaysInFirstWeek(int)  setMinimalDaysInFirstWeek()}.
  *
  * <p>A <a name="week_year"><em>week year</em></a> is in sync with a
  * {@code WEEK_OF_YEAR} cycle. All weeks between the first and last
@@ -320,7 +320,7 @@ public class GregorianCalendar extends java.util.Calendar {
 /**
  * Constructs a default <code>GregorianCalendar</code> using the current time
  * in the default time zone with the default
- * {@link java.util.Locale.Category#FORMAT Locale.Category#FORMAT} locale.
+ * {@link java.util.Locale.Category#FORMAT FORMAT} locale.
  */
 
 public GregorianCalendar() { throw new RuntimeException("Stub!"); }
@@ -328,7 +328,7 @@ public GregorianCalendar() { throw new RuntimeException("Stub!"); }
 /**
  * Constructs a <code>GregorianCalendar</code> based on the current time
  * in the given time zone with the default
- * {@link java.util.Locale.Category#FORMAT Locale.Category#FORMAT} locale.
+ * {@link java.util.Locale.Category#FORMAT FORMAT} locale.
  *
  * @param zone the given time zone.
  */
@@ -571,12 +571,12 @@ public void roll(int field, int amount) { throw new RuntimeException("Stub!"); }
 /**
  * Returns the minimum value for the given calendar field of this
  * <code>GregorianCalendar</code> instance. The minimum value is
- * defined as the smallest value returned by the {@link java.util.Calendar#get(int) Calendar#get(int)} method for any possible time value,
+ * defined as the smallest value returned by the {@link java.util.Calendar#get(int) get} method for any possible time value,
  * taking into consideration the current values of the
- * {@link java.util.Calendar#getFirstDayOfWeek() Calendar#getFirstDayOfWeek()},
- * {@link java.util.Calendar#getMinimalDaysInFirstWeek() Calendar#getMinimalDaysInFirstWeek()},
+ * {@link java.util.Calendar#getFirstDayOfWeek() getFirstDayOfWeek},
+ * {@link java.util.Calendar#getMinimalDaysInFirstWeek() getMinimalDaysInFirstWeek},
  * {@link #getGregorianChange() getGregorianChange} and
- * {@link java.util.Calendar#getTimeZone() Calendar#getTimeZone()} methods.
+ * {@link java.util.Calendar#getTimeZone() getTimeZone} methods.
  *
  * @param field the calendar field.
  * @return the minimum value for the given calendar field.
@@ -592,12 +592,12 @@ public int getMinimum(int field) { throw new RuntimeException("Stub!"); }
 /**
  * Returns the maximum value for the given calendar field of this
  * <code>GregorianCalendar</code> instance. The maximum value is
- * defined as the largest value returned by the {@link java.util.Calendar#get(int) Calendar#get(int)} method for any possible time value,
+ * defined as the largest value returned by the {@link java.util.Calendar#get(int) get} method for any possible time value,
  * taking into consideration the current values of the
- * {@link java.util.Calendar#getFirstDayOfWeek() Calendar#getFirstDayOfWeek()},
- * {@link java.util.Calendar#getMinimalDaysInFirstWeek() Calendar#getMinimalDaysInFirstWeek()},
+ * {@link java.util.Calendar#getFirstDayOfWeek() getFirstDayOfWeek},
+ * {@link java.util.Calendar#getMinimalDaysInFirstWeek() getMinimalDaysInFirstWeek},
  * {@link #getGregorianChange() getGregorianChange} and
- * {@link java.util.Calendar#getTimeZone() Calendar#getTimeZone()} methods.
+ * {@link java.util.Calendar#getTimeZone() getTimeZone} methods.
  *
  * @param field the calendar field.
  * @return the maximum value for the given calendar field.
@@ -616,10 +616,10 @@ public int getMaximum(int field) { throw new RuntimeException("Stub!"); }
  * minimum value is defined as the largest value returned by
  * {@link #getActualMinimum(int)} for any possible time value,
  * taking into consideration the current values of the
- * {@link java.util.Calendar#getFirstDayOfWeek() Calendar#getFirstDayOfWeek()},
- * {@link java.util.Calendar#getMinimalDaysInFirstWeek() Calendar#getMinimalDaysInFirstWeek()},
+ * {@link java.util.Calendar#getFirstDayOfWeek() getFirstDayOfWeek},
+ * {@link java.util.Calendar#getMinimalDaysInFirstWeek() getMinimalDaysInFirstWeek},
  * {@link #getGregorianChange() getGregorianChange} and
- * {@link java.util.Calendar#getTimeZone() Calendar#getTimeZone()} methods.
+ * {@link java.util.Calendar#getTimeZone() getTimeZone} methods.
  *
  * @param field the calendar field.
  * @return the highest minimum value for the given calendar field.
@@ -638,10 +638,10 @@ public int getGreatestMinimum(int field) { throw new RuntimeException("Stub!"); 
  * maximum value is defined as the smallest value returned by
  * {@link #getActualMaximum(int)} for any possible time value,
  * taking into consideration the current values of the
- * {@link java.util.Calendar#getFirstDayOfWeek() Calendar#getFirstDayOfWeek()},
- * {@link java.util.Calendar#getMinimalDaysInFirstWeek() Calendar#getMinimalDaysInFirstWeek()},
+ * {@link java.util.Calendar#getFirstDayOfWeek() getFirstDayOfWeek},
+ * {@link java.util.Calendar#getMinimalDaysInFirstWeek() getMinimalDaysInFirstWeek},
  * {@link #getGregorianChange() getGregorianChange} and
- * {@link java.util.Calendar#getTimeZone() Calendar#getTimeZone()} methods.
+ * {@link java.util.Calendar#getTimeZone() getTimeZone} methods.
  *
  * @param field the calendar field
  * @return the lowest maximum value for the given calendar field.
@@ -658,10 +658,10 @@ public int getLeastMaximum(int field) { throw new RuntimeException("Stub!"); }
  * Returns the minimum value that this calendar field could have,
  * taking into consideration the given time value and the current
  * values of the
- * {@link java.util.Calendar#getFirstDayOfWeek() Calendar#getFirstDayOfWeek()},
- * {@link java.util.Calendar#getMinimalDaysInFirstWeek() Calendar#getMinimalDaysInFirstWeek()},
+ * {@link java.util.Calendar#getFirstDayOfWeek() getFirstDayOfWeek},
+ * {@link java.util.Calendar#getMinimalDaysInFirstWeek() getMinimalDaysInFirstWeek},
  * {@link #getGregorianChange() getGregorianChange} and
- * {@link java.util.Calendar#getTimeZone() Calendar#getTimeZone()} methods.
+ * {@link java.util.Calendar#getTimeZone() getTimeZone} methods.
  *
  * <p>For example, if the Gregorian change date is January 10,
  * 1970 and the date of this <code>GregorianCalendar</code> is
@@ -688,16 +688,16 @@ public int getActualMinimum(int field) { throw new RuntimeException("Stub!"); }
  * Returns the maximum value that this calendar field could have,
  * taking into consideration the given time value and the current
  * values of the
- * {@link java.util.Calendar#getFirstDayOfWeek() Calendar#getFirstDayOfWeek()},
- * {@link java.util.Calendar#getMinimalDaysInFirstWeek() Calendar#getMinimalDaysInFirstWeek()},
+ * {@link java.util.Calendar#getFirstDayOfWeek() getFirstDayOfWeek},
+ * {@link java.util.Calendar#getMinimalDaysInFirstWeek() getMinimalDaysInFirstWeek},
  * {@link #getGregorianChange() getGregorianChange} and
- * {@link java.util.Calendar#getTimeZone() Calendar#getTimeZone()} methods.
+ * {@link java.util.Calendar#getTimeZone() getTimeZone} methods.
  * For example, if the date of this instance is February 1, 2004,
  * the actual maximum value of the <code>DAY_OF_MONTH</code> field
  * is 29 because 2004 is a leap year, and if the date of this
  * instance is February 1, 2005, it's 28.
  *
- * <p>This method calculates the maximum value of {@link java.util.Calendar#WEEK_OF_YEAR Calendar#WEEK_OF_YEAR} based on the {@link java.util.Calendar#YEAR Calendar#YEAR} (calendar year) value, not the <a
+ * <p>This method calculates the maximum value of {@link java.util.Calendar#WEEK_OF_YEAR WEEK_OF_YEAR} based on the {@link java.util.Calendar#YEAR YEAR} (calendar year) value, not the <a
  * href="#week_year">week year</a>. Call {@link
  * #getWeeksInWeekYear()} to get the maximum value of {@code
  * WEEK_OF_YEAR} in the week year of this {@code GregorianCalendar}.
@@ -738,14 +738,14 @@ public final boolean isWeekDateSupported() { throw new RuntimeException("Stub!")
  * Returns the <a href="#week_year">week year</a> represented by this
  * {@code GregorianCalendar}. The dates in the weeks between 1 and the
  * maximum week number of the week year have the same week year value
- * that may be one year before or after the {@link java.util.Calendar#YEAR Calendar#YEAR}
+ * that may be one year before or after the {@link java.util.Calendar#YEAR YEAR}
  * (calendar year) value.
  *
  * <p>This method calls {@link java.util.Calendar#complete() Calendar#complete()} before
  * calculating the week year.
  *
  * @return the week year represented by this {@code GregorianCalendar}.
- *         If the {@link java.util.Calendar#ERA Calendar#ERA} value is {@link #BC}, the year is
+ *         If the {@link java.util.Calendar#ERA ERA} value is {@link #BC}, the year is
  *         represented by 0 or a negative number: BC 1 is 0, BC 2
  *         is -1, BC 3 is -2, and so on.
  * @throws java.lang.IllegalArgumentException
@@ -765,7 +765,7 @@ public int getWeekYear() { throw new RuntimeException("Stub!"); }
  * {@code weekOfYear}, and {@code dayOfWeek}. {@code weekOfYear}
  * follows the <a href="#week_and_year">{@code WEEK_OF_YEAR}
  * numbering</a>.  The {@code dayOfWeek} value must be one of the
- * {@link java.util.Calendar#DAY_OF_WEEK Calendar#DAY_OF_WEEK} values: {@link java.util.Calendar#SUNDAY Calendar#SUNDAY} to {@link java.util.Calendar#SATURDAY Calendar#SATURDAY}.
+ * {@link java.util.Calendar#DAY_OF_WEEK DAY_OF_WEEK} values: {@link java.util.Calendar#SUNDAY SUNDAY} to {@link java.util.Calendar#SATURDAY SATURDAY}.
  *
  * <p>Note that the numeric day-of-week representation differs from
  * the ISO 8601 standard, and that the {@code weekOfYear}
@@ -786,8 +786,8 @@ public int getWeekYear() { throw new RuntimeException("Stub!"); }
  * @param weekOfYear  the week number based on {@code weekYear}
  * @param dayOfWeek   the day of week value: one of the constants
  *                    for the {@link #DAY_OF_WEEK DAY_OF_WEEK} field:
- *                    {@link java.util.Calendar#SUNDAY Calendar#SUNDAY}, ...,
- *                    {@link java.util.Calendar#SATURDAY Calendar#SATURDAY}.
+ *                    {@link java.util.Calendar#SUNDAY SUNDAY}, ...,
+ *                    {@link java.util.Calendar#SATURDAY SATURDAY}.
  * @exception java.lang.IllegalArgumentException
  *            if any of the given date specifiers is invalid,
  *            or if any of the calendar fields are inconsistent
@@ -865,8 +865,8 @@ public java.time.ZonedDateTime toZonedDateTime() { throw new RuntimeException("S
  * Since {@code ZonedDateTime} does not support a Julian-Gregorian cutover
  * date and uses ISO calendar system, the return GregorianCalendar is a pure
  * Gregorian calendar and uses ISO 8601 standard for week definitions,
- * which has {@code MONDAY} as the {@link java.util.Calendar#getFirstDayOfWeek() Calendar#getFirstDayOfWeek()} and {@code 4} as the value of the
- * {@link java.util.Calendar#getMinimalDaysInFirstWeek() Calendar#getMinimalDaysInFirstWeek()}.
+ * which has {@code MONDAY} as the {@link java.util.Calendar#getFirstDayOfWeek()  FirstDayOfWeek} and {@code 4} as the value of the
+ * {@link java.util.Calendar#getMinimalDaysInFirstWeek() MinimalDaysInFirstWeek}.
  * <p>
  * {@code ZoneDateTime} can store points on the time-line further in the
  * future and further in the past than {@code GregorianCalendar}. In this

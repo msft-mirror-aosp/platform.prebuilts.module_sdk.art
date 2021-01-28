@@ -449,7 +449,7 @@ public java.lang.String toString() { throw new RuntimeException("Stub!"); }
  * Returns a plain {@link java.util.concurrent.locks.Lock Lock} view of this StampedLock in which
  * the {@link java.util.concurrent.locks.Lock#lock Lock#lock} method is mapped to {@link #readLock},
  * and similarly for other methods. The returned Lock does not
- * support a {@link java.util.concurrent.locks.Condition Condition}; method {@link java.util.concurrent.locks.Lock#newCondition() Lock#newCondition()} throws {@code
+ * support a {@link java.util.concurrent.locks.Condition Condition}; method {@link java.util.concurrent.locks.Lock#newCondition()  } throws {@code
  * UnsupportedOperationException}.
  *
  * @return the lock
@@ -461,7 +461,7 @@ public java.util.concurrent.locks.Lock asReadLock() { throw new RuntimeException
  * Returns a plain {@link java.util.concurrent.locks.Lock Lock} view of this StampedLock in which
  * the {@link java.util.concurrent.locks.Lock#lock Lock#lock} method is mapped to {@link #writeLock},
  * and similarly for other methods. The returned Lock does not
- * support a {@link java.util.concurrent.locks.Condition Condition}; method {@link java.util.concurrent.locks.Lock#newCondition() Lock#newCondition()} throws {@code
+ * support a {@link java.util.concurrent.locks.Condition Condition}; method {@link java.util.concurrent.locks.Lock#newCondition()  } throws {@code
  * UnsupportedOperationException}.
  *
  * @return the lock

@@ -68,9 +68,9 @@ public int count();
 /**
  * Returns the context for the event.
  *
- * <p> In the case of {@link java.nio.file.StandardWatchEventKinds#ENTRY_CREATE StandardWatchEventKinds#ENTRY_CREATE},
- * {@link java.nio.file.StandardWatchEventKinds#ENTRY_DELETE StandardWatchEventKinds#ENTRY_DELETE}, and {@link java.nio.file.StandardWatchEventKinds#ENTRY_MODIFY StandardWatchEventKinds#ENTRY_MODIFY} events the context is
- * a {@code Path} that is the {@link java.nio.file.Path#relativize Path#relativize} path between
+ * <p> In the case of {@link java.nio.file.StandardWatchEventKinds#ENTRY_CREATE ENTRY_CREATE},
+ * {@link java.nio.file.StandardWatchEventKinds#ENTRY_DELETE ENTRY_DELETE}, and {@link java.nio.file.StandardWatchEventKinds#ENTRY_MODIFY ENTRY_MODIFY} events the context is
+ * a {@code Path} that is the {@link java.nio.file.Path#relativize relative} path between
  * the directory registered with the watch service, and the entry that is
  * created, deleted, or modified.
  *
@@ -97,7 +97,7 @@ public static interface Kind<T> {
 public java.lang.String name();
 
 /**
- * Returns the type of the {@link java.nio.file.WatchEvent#context WatchEvent#context} value.
+ * Returns the type of the {@link java.nio.file.WatchEvent#context context} value.
  *
  *
  * @return the type of the context value

@@ -82,7 +82,7 @@ public final java.nio.channels.SelectionKey keyFor(java.nio.channels.Selector se
  * setting its interest set to the given value.
  *
  * <p> Otherwise this channel has not yet been registered with the given
- * selector, so the {@link java.nio.channels.spi.AbstractSelector#register AbstractSelector#register} method of
+ * selector, so the {@link java.nio.channels.spi.AbstractSelector#register register} method of
  * the selector is invoked while holding the appropriate locks.  The
  * resulting key is added to this channel's key set before being returned.
  * </p>

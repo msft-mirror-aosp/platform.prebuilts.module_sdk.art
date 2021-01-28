@@ -74,7 +74,7 @@ public interface TypeVariable<D extends java.lang.reflect.GenericDeclaration> ex
  *     bound(s) of this type variable
  */
 
-@android.annotation.NonNull
+@androidx.annotation.RecentlyNonNull
 public java.lang.reflect.Type[] getBounds();
 
 /**
@@ -86,7 +86,7 @@ public java.lang.reflect.Type[] getBounds();
  * @since 1.5
  */
 
-@android.annotation.NonNull
+@androidx.annotation.RecentlyNonNull
 public D getGenericDeclaration();
 
 /**
@@ -95,7 +95,7 @@ public D getGenericDeclaration();
  * @return the name of this type variable, as it appears in the source code
  */
 
-@android.annotation.NonNull
+@androidx.annotation.RecentlyNonNull
 public java.lang.String getName();
 }
 

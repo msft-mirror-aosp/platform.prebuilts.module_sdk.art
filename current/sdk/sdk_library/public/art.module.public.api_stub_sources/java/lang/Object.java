@@ -63,7 +63,7 @@ public Object() { throw new RuntimeException("Stub!"); }
  * @jls 15.8.2 Class Literals
  */
 
-@android.annotation.NonNull
+@androidx.annotation.RecentlyNonNull
 public final java.lang.Class<?> getClass() { throw new RuntimeException("Stub!"); }
 
 /**
@@ -151,7 +151,7 @@ public int hashCode() { throw new RuntimeException("Stub!"); }
  * @see     java.util.HashMap
  */
 
-public boolean equals(@android.annotation.Nullable java.lang.Object obj) { throw new RuntimeException("Stub!"); }
+public boolean equals(@androidx.annotation.RecentlyNullable java.lang.Object obj) { throw new RuntimeException("Stub!"); }
 
 /**
  * Creates and returns a copy of this object.  The precise meaning
@@ -214,7 +214,7 @@ public boolean equals(@android.annotation.Nullable java.lang.Object obj) { throw
  * @see java.lang.Cloneable
  */
 
-@android.annotation.NonNull
+@androidx.annotation.RecentlyNonNull
 protected java.lang.Object clone() throws java.lang.CloneNotSupportedException { throw new RuntimeException("Stub!"); }
 
 /**
@@ -239,7 +239,7 @@ protected java.lang.Object clone() throws java.lang.CloneNotSupportedException {
  * @return  a string representation of the object.
  */
 
-@android.annotation.NonNull
+@androidx.annotation.RecentlyNonNull
 public java.lang.String toString() { throw new RuntimeException("Stub!"); }
 
 /**
@@ -321,7 +321,7 @@ public final native void notifyAll();
  * the thread to be awakened.
  * <li>Some other thread invokes the {@code notifyAll} method for this
  * object.
- * <li>Some other thread {@linkplain java.lang.Thread#interrupt() Thread#interrupt()}
+ * <li>Some other thread {@linkplain java.lang.Thread#interrupt() interrupts}
  * thread <var>T</var>.
  * <li>The specified amount of real time has elapsed, more or less.  If
  * {@code timeout} is zero, however, then real time is not taken into

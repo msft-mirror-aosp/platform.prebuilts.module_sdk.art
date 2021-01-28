@@ -785,7 +785,7 @@ public java.lang.String findWithinHorizon(java.lang.String pattern, int horizon)
  * points beyond its current position. Note that a match may be clipped
  * by the horizon; that is, an arbitrary match result may have been
  * different if the horizon had been larger. The scanner treats the
- * horizon as a transparent, non-anchoring bound (see {@link java.util.regex.Matcher#useTransparentBounds Matcher#useTransparentBounds} and {@link java.util.regex.Matcher#useAnchoringBounds Matcher#useAnchoringBounds}).
+ * horizon as a transparent, non-anchoring bound (see {@link java.util.regex.Matcher#useTransparentBounds  } and {@link java.util.regex.Matcher#useAnchoringBounds Matcher#useAnchoringBounds}).
  *
  * <p>If horizon is <code>0</code>, then the horizon is ignored and
  * this method continues to search through the input looking for the
@@ -928,10 +928,10 @@ public byte nextByte() { throw new RuntimeException("Stub!"); }
  * above then the token is converted into a <tt>byte</tt> value as if by
  * removing all locale specific prefixes, group separators, and locale
  * specific suffixes, then mapping non-ASCII digits into ASCII
- * digits via {@link java.lang.Character#digit Character#digit}, prepending a
+ * digits via {@link java.lang.Character#digit Character.digit}, prepending a
  * negative sign (-) if the locale specific negative prefixes and suffixes
  * were present, and passing the resulting string to
- * {@link java.lang.Byte#parseByte(java.lang.String,int) Byte#parseByte(String, int)} with the
+ * {@link java.lang.Byte#parseByte(java.lang.String,int) Byte.parseByte} with the
  * specified radix.
  *
  * @param radix the radix used to interpret the token as a byte value
@@ -1000,10 +1000,10 @@ public short nextShort() { throw new RuntimeException("Stub!"); }
  * above then the token is converted into a <tt>short</tt> value as if by
  * removing all locale specific prefixes, group separators, and locale
  * specific suffixes, then mapping non-ASCII digits into ASCII
- * digits via {@link java.lang.Character#digit Character#digit}, prepending a
+ * digits via {@link java.lang.Character#digit Character.digit}, prepending a
  * negative sign (-) if the locale specific negative prefixes and suffixes
  * were present, and passing the resulting string to
- * {@link java.lang.Short#parseShort(java.lang.String,int) Short#parseShort(String, int)} with the
+ * {@link java.lang.Short#parseShort(java.lang.String,int) Short.parseShort} with the
  * specified radix.
  *
  * @param radix the radix used to interpret the token as a short value
@@ -1072,10 +1072,10 @@ public int nextInt() { throw new RuntimeException("Stub!"); }
  * above then the token is converted into an <tt>int</tt> value as if by
  * removing all locale specific prefixes, group separators, and locale
  * specific suffixes, then mapping non-ASCII digits into ASCII
- * digits via {@link java.lang.Character#digit Character#digit}, prepending a
+ * digits via {@link java.lang.Character#digit Character.digit}, prepending a
  * negative sign (-) if the locale specific negative prefixes and suffixes
  * were present, and passing the resulting string to
- * {@link java.lang.Integer#parseInt(java.lang.String,int) Integer#parseInt(String, int)} with the
+ * {@link java.lang.Integer#parseInt(java.lang.String,int) Integer.parseInt} with the
  * specified radix.
  *
  * @param radix the radix used to interpret the token as an int value
@@ -1144,10 +1144,10 @@ public long nextLong() { throw new RuntimeException("Stub!"); }
  * above then the token is converted into a <tt>long</tt> value as if by
  * removing all locale specific prefixes, group separators, and locale
  * specific suffixes, then mapping non-ASCII digits into ASCII
- * digits via {@link java.lang.Character#digit Character#digit}, prepending a
+ * digits via {@link java.lang.Character#digit Character.digit}, prepending a
  * negative sign (-) if the locale specific negative prefixes and suffixes
  * were present, and passing the resulting string to
- * {@link java.lang.Long#parseLong(java.lang.String,int) Long#parseLong(String, int)} with the
+ * {@link java.lang.Long#parseLong(java.lang.String,int) Long.parseLong} with the
  * specified radix.
  *
  * @param radix the radix used to interpret the token as an int value
@@ -1185,12 +1185,12 @@ public boolean hasNextFloat() { throw new RuntimeException("Stub!"); }
  * then the token is converted into a <tt>float</tt> value as if by
  * removing all locale specific prefixes, group separators, and locale
  * specific suffixes, then mapping non-ASCII digits into ASCII
- * digits via {@link java.lang.Character#digit Character#digit}, prepending a
+ * digits via {@link java.lang.Character#digit Character.digit}, prepending a
  * negative sign (-) if the locale specific negative prefixes and suffixes
  * were present, and passing the resulting string to
- * {@link java.lang.Float#parseFloat Float#parseFloat}. If the token matches
+ * {@link java.lang.Float#parseFloat Float.parseFloat}. If the token matches
  * the localized NaN or infinity strings, then either "Nan" or "Infinity"
- * is passed to {@link java.lang.Float#parseFloat(java.lang.String) Float#parseFloat(String)} as
+ * is passed to {@link java.lang.Float#parseFloat(java.lang.String) Float.parseFloat} as
  * appropriate.
  *
  * @return the <tt>float</tt> scanned from the input
@@ -1227,12 +1227,12 @@ public boolean hasNextDouble() { throw new RuntimeException("Stub!"); }
  * then the token is converted into a <tt>double</tt> value as if by
  * removing all locale specific prefixes, group separators, and locale
  * specific suffixes, then mapping non-ASCII digits into ASCII
- * digits via {@link java.lang.Character#digit Character#digit}, prepending a
+ * digits via {@link java.lang.Character#digit Character.digit}, prepending a
  * negative sign (-) if the locale specific negative prefixes and suffixes
  * were present, and passing the resulting string to
- * {@link java.lang.Double#parseDouble Double#parseDouble}. If the token matches
+ * {@link java.lang.Double#parseDouble Double.parseDouble}. If the token matches
  * the localized NaN or infinity strings, then either "Nan" or "Infinity"
- * is passed to {@link java.lang.Double#parseDouble(java.lang.String) Double#parseDouble(String)} as
+ * is passed to {@link java.lang.Double#parseDouble(java.lang.String) Double.parseDouble} as
  * appropriate.
  *
  * @return the <tt>double</tt> scanned from the input
@@ -1299,7 +1299,7 @@ public java.math.BigInteger nextBigInteger() { throw new RuntimeException("Stub!
  * href="#Integer-regex"><i>Integer</i></a> regular expression defined
  * above then the token is converted into a <tt>BigInteger</tt> value as if
  * by removing all group separators, mapping non-ASCII digits into ASCII
- * digits via the {@link java.lang.Character#digit Character#digit}, and passing the
+ * digits via the {@link java.lang.Character#digit Character.digit}, and passing the
  * resulting string to the {@link
  * java.math.BigInteger#BigInteger(java.lang.String)
  * BigInteger(String, int)} constructor with the specified radix.
@@ -1336,7 +1336,7 @@ public boolean hasNextBigDecimal() { throw new RuntimeException("Stub!"); }
  * href="#Decimal-regex"><i>Decimal</i></a> regular expression defined
  * above then the token is converted into a <tt>BigDecimal</tt> value as if
  * by removing all group separators, mapping non-ASCII digits into ASCII
- * digits via the {@link java.lang.Character#digit Character#digit}, and passing the
+ * digits via the {@link java.lang.Character#digit Character.digit}, and passing the
  * resulting string to the {@link
  * java.math.BigDecimal#BigDecimal(java.lang.String) BigDecimal(String)}
  * constructor.

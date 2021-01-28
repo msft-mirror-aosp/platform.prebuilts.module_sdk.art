@@ -29,7 +29,7 @@ package java.util;
 
 /**
  * A {@link java.util.NavigableSet NavigableSet} implementation based on a {@link java.util.TreeMap TreeMap}.
- * The elements are ordered using their {@linkplain java.lang.Comparable Comparable}, or by a {@link java.util.Comparator Comparator} provided at set creation
+ * The elements are ordered using their {@linkplain java.lang.Comparable  ordering}, or by a {@link java.util.Comparator Comparator} provided at set creation
  * time, depending on which constructor is used.
  *
  * <p>This implementation provides guaranteed log(n) time cost for the basic
@@ -53,7 +53,7 @@ package java.util;
  * externally.  This is typically accomplished by synchronizing on some
  * object that naturally encapsulates the set.
  * If no such object exists, the set should be "wrapped" using the
- * {@link java.util.Collections#synchronizedSortedSet Collections#synchronizedSortedSet}
+ * {@link java.util.Collections#synchronizedSortedSet Collections.synchronizedSortedSet}
  * method.  This is best done at creation time, to prevent accidental
  * unsynchronized access to the set: <pre>
  *   SortedSet s = Collections.synchronizedSortedSet(new TreeSet(...));</pre>
@@ -119,7 +119,7 @@ public TreeSet() { throw new RuntimeException("Stub!"); }
  * {@code add} call will throw a {@code ClassCastException}.
  *
  * @param comparator the comparator that will be used to order this set.
- *        If {@code null}, the {@linkplain java.lang.Comparable Comparable} of the elements will be used.
+ *        If {@code null}, the {@linkplain java.lang.Comparable         ordering} of the elements will be used.
  */
 
 public TreeSet(java.util.Comparator<? super E> comparator) { throw new RuntimeException("Stub!"); }

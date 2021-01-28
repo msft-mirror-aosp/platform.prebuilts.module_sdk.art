@@ -119,7 +119,7 @@ public java.lang.String name();
  *          if an I/O error occurs
  * @throws  java.lang.SecurityException
  *          In the case of the default provider, a security manager is
- *          installed, its {@link java.lang.SecurityManager#checkRead(java.lang.String) SecurityManager#checkRead(String)}
+ *          installed, its {@link java.lang.SecurityManager#checkRead(java.lang.String) checkRead}
  *          method is invoked to check read access to the file
  */
 
@@ -168,7 +168,7 @@ public java.nio.file.attribute.BasicFileAttributes readAttributes() throws java.
  *          if an I/O error occurs
  * @throws  java.lang.SecurityException
  *          In the case of the default provider, a security manager is
- *          installed, its  {@link java.lang.SecurityManager#checkWrite(java.lang.String) SecurityManager#checkWrite(String)}
+ *          installed, its  {@link java.lang.SecurityManager#checkWrite(java.lang.String) checkWrite}
  *          method is invoked to check write access to the file
  *
  * @see java.nio.file.Files#setLastModifiedTime

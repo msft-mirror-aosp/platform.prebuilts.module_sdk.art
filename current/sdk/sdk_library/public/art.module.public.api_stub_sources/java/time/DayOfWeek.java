@@ -166,7 +166,7 @@ public static java.time.DayOfWeek of(int dayOfWeek) { throw new RuntimeException
  * A {@code TemporalAccessor} represents an arbitrary set of date and time information,
  * which this factory converts to an instance of {@code DayOfWeek}.
  * <p>
- * The conversion extracts the {@link java.time.temporal.ChronoField#DAY_OF_WEEK ChronoField#DAY_OF_WEEK} field.
+ * The conversion extracts the {@link java.time.temporal.ChronoField#DAY_OF_WEEK DAY_OF_WEEK} field.
  * <p>
  * This method matches the signature of the functional interface {@link java.time.temporal.TemporalQuery TemporalQuery}
  * allowing it to be used as a query via method reference, {@code DayOfWeek::from}.
@@ -212,7 +212,7 @@ public java.lang.String getDisplayName(java.time.format.TextStyle style, java.ut
  * If false, then calling the {@link #range(java.time.temporal.TemporalField) range} and
  * {@link #get(java.time.temporal.TemporalField) get} methods will throw an exception.
  * <p>
- * If the field is {@link java.time.temporal.ChronoField#DAY_OF_WEEK ChronoField#DAY_OF_WEEK} then
+ * If the field is {@link java.time.temporal.ChronoField#DAY_OF_WEEK DAY_OF_WEEK} then
  * this method returns true.
  * All other {@code ChronoField} instances will return false.
  * <p>
@@ -235,7 +235,7 @@ public boolean isSupported(java.time.temporal.TemporalField field) { throw new R
  * If it is not possible to return the range, because the field is not supported
  * or for some other reason, an exception is thrown.
  * <p>
- * If the field is {@link java.time.temporal.ChronoField#DAY_OF_WEEK ChronoField#DAY_OF_WEEK} then the
+ * If the field is {@link java.time.temporal.ChronoField#DAY_OF_WEEK DAY_OF_WEEK} then the
  * range of the day-of-week, from 1 to 7, will be returned.
  * All other {@code ChronoField} instances will throw an {@code UnsupportedTemporalTypeException}.
  * <p>
@@ -260,7 +260,7 @@ public java.time.temporal.ValueRange range(java.time.temporal.TemporalField fiel
  * If it is not possible to return the value, because the field is not supported
  * or for some other reason, an exception is thrown.
  * <p>
- * If the field is {@link java.time.temporal.ChronoField#DAY_OF_WEEK ChronoField#DAY_OF_WEEK} then the
+ * If the field is {@link java.time.temporal.ChronoField#DAY_OF_WEEK DAY_OF_WEEK} then the
  * value of the day-of-week, from 1 to 7, will be returned.
  * All other {@code ChronoField} instances will throw an {@code UnsupportedTemporalTypeException}.
  * <p>
@@ -287,7 +287,7 @@ public int get(java.time.temporal.TemporalField field) { throw new RuntimeExcept
  * If it is not possible to return the value, because the field is not supported
  * or for some other reason, an exception is thrown.
  * <p>
- * If the field is {@link java.time.temporal.ChronoField#DAY_OF_WEEK ChronoField#DAY_OF_WEEK} then the
+ * If the field is {@link java.time.temporal.ChronoField#DAY_OF_WEEK DAY_OF_WEEK} then the
  * value of the day-of-week, from 1 to 7, will be returned.
  * All other {@code ChronoField} instances will throw an {@code UnsupportedTemporalTypeException}.
  * <p>

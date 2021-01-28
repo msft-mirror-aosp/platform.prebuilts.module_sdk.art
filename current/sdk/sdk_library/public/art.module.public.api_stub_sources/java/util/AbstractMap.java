@@ -109,7 +109,7 @@ public boolean isEmpty() { throw new RuntimeException("Stub!"); }
  * @throws java.lang.NullPointerException {@inheritDoc}
  */
 
-public boolean containsValue(@android.annotation.Nullable java.lang.Object value) { throw new RuntimeException("Stub!"); }
+public boolean containsValue(@androidx.annotation.RecentlyNullable java.lang.Object value) { throw new RuntimeException("Stub!"); }
 
 /**
  * {@inheritDoc}
@@ -126,7 +126,7 @@ public boolean containsValue(@android.annotation.Nullable java.lang.Object value
  * @throws java.lang.NullPointerException {@inheritDoc}
  */
 
-public boolean containsKey(@android.annotation.Nullable java.lang.Object key) { throw new RuntimeException("Stub!"); }
+public boolean containsKey(@androidx.annotation.RecentlyNullable java.lang.Object key) { throw new RuntimeException("Stub!"); }
 
 /**
  * {@inheritDoc}
@@ -143,8 +143,8 @@ public boolean containsKey(@android.annotation.Nullable java.lang.Object key) { 
  * @throws java.lang.NullPointerException          {@inheritDoc}
  */
 
-@android.annotation.Nullable
-public V get(@android.annotation.Nullable java.lang.Object key) { throw new RuntimeException("Stub!"); }
+@androidx.annotation.RecentlyNullable
+public V get(@androidx.annotation.RecentlyNullable java.lang.Object key) { throw new RuntimeException("Stub!"); }
 
 /**
  * {@inheritDoc}
@@ -159,7 +159,7 @@ public V get(@android.annotation.Nullable java.lang.Object key) { throw new Runt
  * @throws java.lang.IllegalArgumentException      {@inheritDoc}
  */
 
-@android.annotation.Nullable
+@androidx.annotation.RecentlyNullable
 public V put(K key, V value) { throw new RuntimeException("Stub!"); }
 
 /**
@@ -185,8 +185,8 @@ public V put(K key, V value) { throw new RuntimeException("Stub!"); }
  * @throws java.lang.NullPointerException          {@inheritDoc}
  */
 
-@android.annotation.Nullable
-public V remove(@android.annotation.Nullable java.lang.Object key) { throw new RuntimeException("Stub!"); }
+@androidx.annotation.RecentlyNullable
+public V remove(@androidx.annotation.RecentlyNullable java.lang.Object key) { throw new RuntimeException("Stub!"); }
 
 /**
  * {@inheritDoc}
@@ -206,7 +206,7 @@ public V remove(@android.annotation.Nullable java.lang.Object key) { throw new R
  * @throws java.lang.IllegalArgumentException      {@inheritDoc}
  */
 
-public void putAll(@android.annotation.NonNull java.util.Map<? extends K,? extends V> m) { throw new RuntimeException("Stub!"); }
+public void putAll(@androidx.annotation.RecentlyNonNull java.util.Map<? extends K,? extends V> m) { throw new RuntimeException("Stub!"); }
 
 /**
  * {@inheritDoc}
@@ -240,7 +240,7 @@ public void clear() { throw new RuntimeException("Stub!"); }
  * method will not all return the same set.
  */
 
-@android.annotation.NonNull
+@androidx.annotation.RecentlyNonNull
 public java.util.Set<K> keySet() { throw new RuntimeException("Stub!"); }
 
 /**
@@ -259,10 +259,10 @@ public java.util.Set<K> keySet() { throw new RuntimeException("Stub!"); }
  * method will not all return the same collection.
  */
 
-@android.annotation.NonNull
+@androidx.annotation.RecentlyNonNull
 public java.util.Collection<V> values() { throw new RuntimeException("Stub!"); }
 
-@android.annotation.NonNull
+@androidx.annotation.RecentlyNonNull
 public abstract java.util.Set<java.util.Map.Entry<K,V>> entrySet();
 
 /**
@@ -288,7 +288,7 @@ public abstract java.util.Set<java.util.Map.Entry<K,V>> entrySet();
  * @return <tt>true</tt> if the specified object is equal to this map
  */
 
-public boolean equals(@android.annotation.Nullable java.lang.Object o) { throw new RuntimeException("Stub!"); }
+public boolean equals(@androidx.annotation.RecentlyNullable java.lang.Object o) { throw new RuntimeException("Stub!"); }
 
 /**
  * Returns the hash code value for this map.  The hash code of a map is
@@ -300,7 +300,7 @@ public boolean equals(@android.annotation.Nullable java.lang.Object o) { throw n
  *
  * @implSpec
  * This implementation iterates over <tt>entrySet()</tt>, calling
- * {@link java.util.Map.Entry#hashCode Map.Entry#hashCode} on each element (entry) in the
+ * {@link java.util.Map.Entry#hashCode hashCode()} on each element (entry) in the
  * set, and adding up the results.
  *
  * @return the hash code value for this map
@@ -324,7 +324,7 @@ public int hashCode() { throw new RuntimeException("Stub!"); }
  * @return a string representation of this map
  */
 
-@android.annotation.NonNull
+@androidx.annotation.RecentlyNonNull
 public java.lang.String toString() { throw new RuntimeException("Stub!"); }
 
 /**
@@ -334,7 +334,7 @@ public java.lang.String toString() { throw new RuntimeException("Stub!"); }
  * @return a shallow copy of this map
  */
 
-@android.annotation.NonNull
+@androidx.annotation.RecentlyNonNull
 protected java.lang.Object clone() throws java.lang.CloneNotSupportedException { throw new RuntimeException("Stub!"); }
 /**
  * An Entry maintaining a key and a value.  The value may be
@@ -367,7 +367,7 @@ public SimpleEntry(K key, V value) { throw new RuntimeException("Stub!"); }
  * @param entry the entry to copy
  */
 
-public SimpleEntry(@android.annotation.NonNull java.util.Map.Entry<? extends K,? extends V> entry) { throw new RuntimeException("Stub!"); }
+public SimpleEntry(@androidx.annotation.RecentlyNonNull java.util.Map.Entry<? extends K,? extends V> entry) { throw new RuntimeException("Stub!"); }
 
 /**
  * Returns the key corresponding to this entry.
@@ -417,7 +417,7 @@ public V setValue(V value) { throw new RuntimeException("Stub!"); }
  * @see    #hashCode
  */
 
-public boolean equals(@android.annotation.Nullable java.lang.Object o) { throw new RuntimeException("Stub!"); }
+public boolean equals(@androidx.annotation.RecentlyNullable java.lang.Object o) { throw new RuntimeException("Stub!"); }
 
 /**
  * Returns the hash code value for this map entry.  The hash code
@@ -444,7 +444,7 @@ public int hashCode() { throw new RuntimeException("Stub!"); }
  * @return a String representation of this map entry
  */
 
-@android.annotation.NonNull
+@androidx.annotation.RecentlyNonNull
 public java.lang.String toString() { throw new RuntimeException("Stub!"); }
 }
 
@@ -477,7 +477,7 @@ public SimpleImmutableEntry(K key, V value) { throw new RuntimeException("Stub!"
  * @param entry the entry to copy
  */
 
-public SimpleImmutableEntry(@android.annotation.NonNull java.util.Map.Entry<? extends K,? extends V> entry) { throw new RuntimeException("Stub!"); }
+public SimpleImmutableEntry(@androidx.annotation.RecentlyNonNull java.util.Map.Entry<? extends K,? extends V> entry) { throw new RuntimeException("Stub!"); }
 
 /**
  * Returns the key corresponding to this entry.
@@ -530,7 +530,7 @@ public V setValue(V value) { throw new RuntimeException("Stub!"); }
  * @see    #hashCode
  */
 
-public boolean equals(@android.annotation.Nullable java.lang.Object o) { throw new RuntimeException("Stub!"); }
+public boolean equals(@androidx.annotation.RecentlyNullable java.lang.Object o) { throw new RuntimeException("Stub!"); }
 
 /**
  * Returns the hash code value for this map entry.  The hash code
@@ -557,7 +557,7 @@ public int hashCode() { throw new RuntimeException("Stub!"); }
  * @return a String representation of this map entry
  */
 
-@android.annotation.NonNull
+@androidx.annotation.RecentlyNonNull
 public java.lang.String toString() { throw new RuntimeException("Stub!"); }
 }
 

@@ -32,7 +32,7 @@ import java.io.IOException;
 /**
  * A pair of channels that implements a unidirectional pipe.
  *
- * <p> A pipe consists of a pair of channels: A writable {@link java.nio.channels.Pipe.SinkChannel Pipe.SinkChannel} channel and a readable {@link java.nio.channels.Pipe.SourceChannel Pipe.SourceChannel}
+ * <p> A pipe consists of a pair of channels: A writable {@link java.nio.channels.Pipe.SinkChannel sink} channel and a readable {@link java.nio.channels.Pipe.SourceChannel source}
  * channel.  Once some bytes are written to the sink channel they can be read
  * from source channel in exactlyAthe order in which they were written.
  *

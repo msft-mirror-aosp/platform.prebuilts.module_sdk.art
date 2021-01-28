@@ -36,7 +36,7 @@ package java.lang;
  * {@code ThreadDeath} is caught by a method, it is important that it
  * be rethrown so that the thread actually dies.
  *
- * <p>The {@linkplain java.lang.ThreadGroup#uncaughtException ThreadGroup#uncaughtException} does not print out a message if {@code ThreadDeath} is
+ * <p>The {@linkplain java.lang.ThreadGroup#uncaughtException  handler} does not print out a message if {@code ThreadDeath} is
  * never caught.
  *
  * <p>The class {@code ThreadDeath} is specifically a subclass of

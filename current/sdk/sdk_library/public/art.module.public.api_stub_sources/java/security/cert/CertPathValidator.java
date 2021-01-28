@@ -129,7 +129,7 @@ protected CertPathValidator(java.security.cert.CertPathValidatorSpi validatorSpi
  * Provider that supports the specified algorithm is returned.
  *
  * <p> Note that the list of registered providers may be retrieved via
- * the {@link java.security.Security#getProviders() Security#getProviders()} method.
+ * the {@link java.security.Security#getProviders() Security.getProviders()} method.
  *
  * @param algorithm the name of the requested {@code CertPathValidator}
  *  algorithm. See the CertPathValidator section in the <a href=
@@ -159,7 +159,7 @@ public static java.security.cert.CertPathValidator getInstance(java.lang.String 
  * in the security provider list.
  *
  * <p> Note that the list of registered providers may be retrieved via
- * the {@link java.security.Security#getProviders() Security#getProviders()} method.
+ * the {@link java.security.Security#getProviders() Security.getProviders()} method.
  *
  * @param algorithm the name of the requested {@code CertPathValidator}
  *  algorithm. See the CertPathValidator section in the <a href=

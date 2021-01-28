@@ -45,18 +45,18 @@ Executable() { throw new RuntimeException("Stub!"); }
  * that declares the executable represented by this object.
  */
 
-@android.annotation.NonNull
+@androidx.annotation.RecentlyNonNull
 public abstract java.lang.Class<?> getDeclaringClass();
 
 /**
  * Returns the name of the executable represented by this object.
  */
 
-@android.annotation.NonNull
+@androidx.annotation.RecentlyNonNull
 public abstract java.lang.String getName();
 
 /**
- * Returns the Java language {@linkplain java.lang.reflect.Modifier Modifier} for
+ * Returns the Java language {@linkplain java.lang.reflect.Modifier modifiers} for
  * the executable represented by this object.
  */
 
@@ -77,7 +77,7 @@ public abstract int getModifiers();
  *     <cite>The Java&trade; Virtual Machine Specification</cite>
  */
 
-@android.annotation.NonNull
+@androidx.annotation.RecentlyNonNull
 public abstract java.lang.reflect.TypeVariable<?>[] getTypeParameters();
 
 /**
@@ -90,7 +90,7 @@ public abstract java.lang.reflect.TypeVariable<?>[] getTypeParameters();
  * represents
  */
 
-@android.annotation.NonNull
+@androidx.annotation.RecentlyNonNull
 public abstract java.lang.Class<?>[] getParameterTypes();
 
 /**
@@ -131,7 +131,7 @@ public int getParameterCount() { throw new RuntimeException("Stub!"); }
  *     type that cannot be instantiated for any reason
  */
 
-@android.annotation.NonNull
+@androidx.annotation.RecentlyNonNull
 public java.lang.reflect.Type[] getGenericParameterTypes() { throw new RuntimeException("Stub!"); }
 
 /**
@@ -150,7 +150,7 @@ public java.lang.reflect.Type[] getGenericParameterTypes() { throw new RuntimeEx
  * the parameters to the executable this object represents.
  */
 
-@android.annotation.NonNull
+@androidx.annotation.RecentlyNonNull
 public java.lang.reflect.Parameter[] getParameters() { throw new RuntimeException("Stub!"); }
 
 /**
@@ -164,7 +164,7 @@ public java.lang.reflect.Parameter[] getParameters() { throw new RuntimeExceptio
  * executable this object represents
  */
 
-@android.annotation.NonNull
+@androidx.annotation.RecentlyNonNull
 public abstract java.lang.Class<?>[] getExceptionTypes();
 
 /**
@@ -189,7 +189,7 @@ public abstract java.lang.Class<?>[] getExceptionTypes();
  *     parameterized type that cannot be instantiated for any reason
  */
 
-@android.annotation.NonNull
+@androidx.annotation.RecentlyNonNull
 public java.lang.reflect.Type[] getGenericExceptionTypes() { throw new RuntimeException("Stub!"); }
 
 /**
@@ -199,7 +199,7 @@ public java.lang.reflect.Type[] getGenericExceptionTypes() { throw new RuntimeEx
  * any type parameters
  */
 
-@android.annotation.NonNull
+@androidx.annotation.RecentlyNonNull
 public abstract java.lang.String toGenericString();
 
 /**
@@ -253,7 +253,7 @@ public boolean isSynthetic() { throw new RuntimeException("Stub!"); }
  *    the executable represented by this object
  */
 
-@android.annotation.NonNull
+@androidx.annotation.RecentlyNonNull
 public abstract java.lang.annotation.Annotation[][] getParameterAnnotations();
 
 /**
@@ -261,23 +261,23 @@ public abstract java.lang.annotation.Annotation[][] getParameterAnnotations();
  * @throws java.lang.NullPointerException  {@inheritDoc}
  */
 
-@android.annotation.Nullable
-public <T extends java.lang.annotation.Annotation> T getAnnotation(@android.annotation.NonNull java.lang.Class<T> annotationClass) { throw new RuntimeException("Stub!"); }
+@androidx.annotation.RecentlyNullable
+public <T extends java.lang.annotation.Annotation> T getAnnotation(@androidx.annotation.RecentlyNonNull java.lang.Class<T> annotationClass) { throw new RuntimeException("Stub!"); }
 
 /**
  * {@inheritDoc}
  * @throws java.lang.NullPointerException {@inheritDoc}
  */
 
-public <T extends java.lang.annotation.Annotation> T[] getAnnotationsByType(@android.annotation.NonNull java.lang.Class<T> annotationClass) { throw new RuntimeException("Stub!"); }
+public <T extends java.lang.annotation.Annotation> T[] getAnnotationsByType(@androidx.annotation.RecentlyNonNull java.lang.Class<T> annotationClass) { throw new RuntimeException("Stub!"); }
 
 /**
  * {@inheritDoc}
  */
 
-@android.annotation.NonNull
+@androidx.annotation.RecentlyNonNull
 public java.lang.annotation.Annotation[] getDeclaredAnnotations() { throw new RuntimeException("Stub!"); }
 
-public final boolean isAnnotationPresent(@android.annotation.NonNull java.lang.Class<? extends java.lang.annotation.Annotation> annotationType) { throw new RuntimeException("Stub!"); }
+public final boolean isAnnotationPresent(@androidx.annotation.RecentlyNonNull java.lang.Class<? extends java.lang.annotation.Annotation> annotationType) { throw new RuntimeException("Stub!"); }
 }
 

@@ -91,14 +91,14 @@ public class Timer {
 
 /**
  * Creates a new timer.  The associated thread does <i>not</i>
- * {@linkplain java.lang.Thread#setDaemon Thread#setDaemon}.
+ * {@linkplain java.lang.Thread#setDaemon run as a daemon}.
  */
 
 public Timer() { throw new RuntimeException("Stub!"); }
 
 /**
  * Creates a new timer whose associated thread may be specified to
- * {@linkplain java.lang.Thread#setDaemon Thread#setDaemon}.
+ * {@linkplain java.lang.Thread#setDaemon run as a daemon}.
  * A daemon thread is called for if the timer will be used to
  * schedule repeating "maintenance activities", which must be
  * performed as long as the application is running, but should not
@@ -112,7 +112,7 @@ public Timer(boolean isDaemon) { throw new RuntimeException("Stub!"); }
 /**
  * Creates a new timer whose associated thread has the specified name.
  * The associated thread does <i>not</i>
- * {@linkplain java.lang.Thread#setDaemon Thread#setDaemon}.
+ * {@linkplain java.lang.Thread#setDaemon run as a daemon}.
  *
  * @param name the name of the associated thread
  * @throws java.lang.NullPointerException if {@code name} is null
@@ -124,7 +124,7 @@ public Timer(java.lang.String name) { throw new RuntimeException("Stub!"); }
 /**
  * Creates a new timer whose associated thread has the specified name,
  * and may be specified to
- * {@linkplain java.lang.Thread#setDaemon Thread#setDaemon}.
+ * {@linkplain java.lang.Thread#setDaemon run as a daemon}.
  *
  * @param name the name of the associated thread
  * @param isDaemon true if the associated thread should run as a daemon

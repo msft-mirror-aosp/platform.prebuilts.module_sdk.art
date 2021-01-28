@@ -514,15 +514,15 @@ public void list() { throw new RuntimeException("Stub!"); }
  *     <code>uncaughtException</code> method of that parent is called
  *     with the same two arguments.
  * <li>Otherwise, this method checks to see if there is a
- *     {@linkplain java.lang.Thread#getDefaultUncaughtExceptionHandler Thread#getDefaultUncaughtExceptionHandler} installed, and if so, its
+ *     {@linkplain java.lang.Thread#getDefaultUncaughtExceptionHandler      uncaught exception handler} installed, and if so, its
  *     <code>uncaughtException</code> method is called with the same
  *     two arguments.
  * <li>Otherwise, this method determines if the <code>Throwable</code>
  *     argument is an instance of {@link java.lang.ThreadDeath ThreadDeath}. If so, nothing
  *     special is done. Otherwise, a message containing the
- *     thread's name, as returned from the thread's {@link java.lang.Thread#getName Thread#getName} method, and a stack backtrace,
- *     using the <code>Throwable</code>'s {@link java.lang.Throwable#printStackTrace Throwable#printStackTrace} method, is
- *     printed to the {@linkplain java.lang.System#err System#err}.
+ *     thread's name, as returned from the thread's {@link java.lang.Thread#getName getName} method, and a stack backtrace,
+ *     using the <code>Throwable</code>'s {@link java.lang.Throwable#printStackTrace printStackTrace} method, is
+ *     printed to the {@linkplain java.lang.System#err standard error stream}.
  * </ul>
  * <p>
  * Applications can override this method in subclasses of

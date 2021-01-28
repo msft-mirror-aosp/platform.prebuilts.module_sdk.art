@@ -88,7 +88,7 @@ package java.util;
  * interface.
  *
  * <h2><a id="immutable">Immutable List Static Factory Methods</a></h2>
- * <p>The {@link java.util.List#of(java.lang.Object...) List#of(Object...)} static factory methods
+ * <p>The {@link java.util.List#of(java.lang.Object...) List.of()} static factory methods
  * provide a convenient way to create immutable lists. The {@code List}
  * instances created by these methods have the following characteristics:
  *
@@ -167,7 +167,7 @@ public boolean isEmpty();
  * (<a href="Collection.html#optional-restrictions">optional</a>)
  */
 
-public boolean contains(@android.annotation.Nullable java.lang.Object o);
+public boolean contains(@androidx.annotation.RecentlyNullable java.lang.Object o);
 
 /**
  * Returns an iterator over the elements in this list in proper sequence.
@@ -175,7 +175,7 @@ public boolean contains(@android.annotation.Nullable java.lang.Object o);
  * @return an iterator over the elements in this list in proper sequence
  */
 
-@android.annotation.NonNull
+@androidx.annotation.RecentlyNonNull
 public java.util.Iterator<E> iterator();
 
 /**
@@ -195,7 +195,7 @@ public java.util.Iterator<E> iterator();
  * @see java.util.Arrays#asList(Object[])
  */
 
-@android.annotation.NonNull
+@androidx.annotation.RecentlyNonNull
 public java.lang.Object[] toArray();
 
 /**
@@ -238,8 +238,8 @@ public java.lang.Object[] toArray();
  * @throws java.lang.NullPointerException if the specified array is null
  */
 
-@android.annotation.NonNull
-public <T> T[] toArray(@android.annotation.NonNull T[] a);
+@androidx.annotation.RecentlyNonNull
+public <T> T[] toArray(@androidx.annotation.RecentlyNonNull T[] a);
 
 /**
  * Appends the specified element to the end of this list (optional
@@ -288,7 +288,7 @@ public boolean add(E e);
  *         is not supported by this list
  */
 
-public boolean remove(@android.annotation.Nullable java.lang.Object o);
+public boolean remove(@androidx.annotation.RecentlyNullable java.lang.Object o);
 
 /**
  * Returns {@code true} if this list contains all of the elements of the
@@ -309,7 +309,7 @@ public boolean remove(@android.annotation.Nullable java.lang.Object o);
  * @see #contains(Object)
  */
 
-public boolean containsAll(@android.annotation.NonNull java.util.Collection<?> c);
+public boolean containsAll(@androidx.annotation.RecentlyNonNull java.util.Collection<?> c);
 
 /**
  * Appends all of the elements in the specified collection to the end of
@@ -333,7 +333,7 @@ public boolean containsAll(@android.annotation.NonNull java.util.Collection<?> c
  * @see #add(Object)
  */
 
-public boolean addAll(@android.annotation.NonNull java.util.Collection<? extends E> c);
+public boolean addAll(@androidx.annotation.RecentlyNonNull java.util.Collection<? extends E> c);
 
 /**
  * Inserts all of the elements in the specified collection into this
@@ -363,7 +363,7 @@ public boolean addAll(@android.annotation.NonNull java.util.Collection<? extends
  *         ({@code index < 0 || index > size()})
  */
 
-public boolean addAll(int index, @android.annotation.NonNull java.util.Collection<? extends E> c);
+public boolean addAll(int index, @androidx.annotation.RecentlyNonNull java.util.Collection<? extends E> c);
 
 /**
  * Removes from this list all of its elements that are contained in the
@@ -384,7 +384,7 @@ public boolean addAll(int index, @android.annotation.NonNull java.util.Collectio
  * @see #contains(Object)
  */
 
-public boolean removeAll(@android.annotation.NonNull java.util.Collection<?> c);
+public boolean removeAll(@androidx.annotation.RecentlyNonNull java.util.Collection<?> c);
 
 /**
  * Retains only the elements in this list that are contained in the
@@ -407,7 +407,7 @@ public boolean removeAll(@android.annotation.NonNull java.util.Collection<?> c);
  * @see #contains(Object)
  */
 
-public boolean retainAll(@android.annotation.NonNull java.util.Collection<?> c);
+public boolean retainAll(@androidx.annotation.RecentlyNonNull java.util.Collection<?> c);
 
 /**
  * Replaces each element of this list with the result of applying the
@@ -439,7 +439,7 @@ public boolean retainAll(@android.annotation.NonNull java.util.Collection<?> c);
  * @since 1.8
  */
 
-public default void replaceAll(@android.annotation.NonNull java.util.function.UnaryOperator<E> operator) { throw new RuntimeException("Stub!"); }
+public default void replaceAll(@androidx.annotation.RecentlyNonNull java.util.function.UnaryOperator<E> operator) { throw new RuntimeException("Stub!"); }
 
 /**
  * Sorts this list according to the order induced by the specified
@@ -452,7 +452,7 @@ public default void replaceAll(@android.annotation.NonNull java.util.function.Un
  *
  * <p>If the specified comparator is {@code null} then all elements in this
  * list must implement the {@link java.lang.Comparable Comparable} interface and the elements'
- * {@linkplain java.lang.Comparable Comparable} should be used.
+ * {@linkplain java.lang.Comparable natural ordering} should be used.
  *
  * <p>This list must be modifiable, but need not be resizable.
  *
@@ -507,7 +507,7 @@ public default void replaceAll(@android.annotation.NonNull java.util.function.Un
  *
  * @param c the {@code Comparator} used to compare list elements.
  *          A {@code null} value indicates that the elements'
- *          {@linkplain java.lang.Comparable Comparable} should be used
+ *          {@linkplain java.lang.Comparable natural ordering} should be used
  * @throws java.lang.ClassCastException if the list contains elements that are not
  *         <i>mutually comparable</i> using the specified comparator
  * @throws java.lang.UnsupportedOperationException if the list's list-iterator does
@@ -519,7 +519,7 @@ public default void replaceAll(@android.annotation.NonNull java.util.function.Un
  * @since 1.8
  */
 
-public default void sort(@android.annotation.Nullable java.util.Comparator<? super E> c) { throw new RuntimeException("Stub!"); }
+public default void sort(@androidx.annotation.RecentlyNullable java.util.Comparator<? super E> c) { throw new RuntimeException("Stub!"); }
 
 /**
  * Removes all of the elements from this list (optional operation).
@@ -546,7 +546,7 @@ public void clear();
  * @return {@code true} if the specified object is equal to this list
  */
 
-public boolean equals(@android.annotation.Nullable java.lang.Object o);
+public boolean equals(@androidx.annotation.RecentlyNullable java.lang.Object o);
 
 /**
  * Returns the hash code value for this list.  The hash code of a list
@@ -656,7 +656,7 @@ public E remove(int index);
  *         (<a href="Collection.html#optional-restrictions">optional</a>)
  */
 
-public int indexOf(@android.annotation.Nullable java.lang.Object o);
+public int indexOf(@androidx.annotation.RecentlyNullable java.lang.Object o);
 
 /**
  * Returns the index of the last occurrence of the specified element
@@ -676,7 +676,7 @@ public int indexOf(@android.annotation.Nullable java.lang.Object o);
  *         (<a href="Collection.html#optional-restrictions">optional</a>)
  */
 
-public int lastIndexOf(@android.annotation.Nullable java.lang.Object o);
+public int lastIndexOf(@androidx.annotation.RecentlyNullable java.lang.Object o);
 
 /**
  * Returns a list iterator over the elements in this list (in proper
@@ -686,26 +686,26 @@ public int lastIndexOf(@android.annotation.Nullable java.lang.Object o);
  *         sequence)
  */
 
-@android.annotation.NonNull
+@androidx.annotation.RecentlyNonNull
 public java.util.ListIterator<E> listIterator();
 
 /**
  * Returns a list iterator over the elements in this list (in proper
  * sequence), starting at the specified position in the list.
  * The specified index indicates the first element that would be
- * returned by an initial call to {@link java.util.ListIterator#next ListIterator#next}.
- * An initial call to {@link java.util.ListIterator#previous ListIterator#previous} would
+ * returned by an initial call to {@link java.util.ListIterator#next next}.
+ * An initial call to {@link java.util.ListIterator#previous previous} would
  * return the element with the specified index minus one.
  *
  * @param index index of the first element to be returned from the
- *        list iterator (by a call to {@link java.util.ListIterator#next ListIterator#next})
+ *        list iterator (by a call to {@link java.util.ListIterator#next next})
  * @return a list iterator over the elements in this list (in proper
  *         sequence), starting at the specified position in the list
  * @throws java.lang.IndexOutOfBoundsException if the index is out of range
  *         ({@code index < 0 || index > size()})
  */
 
-@android.annotation.NonNull
+@androidx.annotation.RecentlyNonNull
 public java.util.ListIterator<E> listIterator(int index);
 
 /**
@@ -743,7 +743,7 @@ public java.util.ListIterator<E> listIterator(int index);
  *         fromIndex > toIndex})
  */
 
-@android.annotation.NonNull
+@androidx.annotation.RecentlyNonNull
 public java.util.List<E> subList(int fromIndex, int toIndex);
 
 /**
@@ -765,7 +765,7 @@ public java.util.List<E> subList(int fromIndex, int toIndex);
  *     spliterator will <em>fail-fast</em> and throw a
  *     {@code ConcurrentModificationException}.
  *     If the list is also an instance of {@link java.util.AbstractList AbstractList} then the
- *     spliterator will use the list's {@link java.util.AbstractList#modCount AbstractList#modCount}
+ *     spliterator will use the list's {@link java.util.AbstractList#modCount modCount}
  *     field to provide additional <em>fail-fast</em> behavior.
  * <li>Otherwise, the default implementation creates a spliterator from the
  *     list's {@code Iterator}.  The spliterator inherits the
@@ -780,7 +780,7 @@ public java.util.List<E> subList(int fromIndex, int toIndex);
  * @since 1.8
  */
 
-@android.annotation.NonNull
+@androidx.annotation.RecentlyNonNull
 public default java.util.Spliterator<E> spliterator() { throw new RuntimeException("Stub!"); }
 
 /**
@@ -794,7 +794,7 @@ public default java.util.Spliterator<E> spliterator() { throw new RuntimeExcepti
  * @since 9
  */
 
-@android.annotation.NonNull
+@androidx.annotation.RecentlyNonNull
 public static <E> java.util.List<E> of() { throw new RuntimeException("Stub!"); }
 
 /**
@@ -810,8 +810,8 @@ public static <E> java.util.List<E> of() { throw new RuntimeException("Stub!"); 
  * @since 9
  */
 
-@android.annotation.NonNull
-public static <E> java.util.List<E> of(@android.annotation.NonNull E e1) { throw new RuntimeException("Stub!"); }
+@androidx.annotation.RecentlyNonNull
+public static <E> java.util.List<E> of(@androidx.annotation.RecentlyNonNull E e1) { throw new RuntimeException("Stub!"); }
 
 /**
  * Returns an immutable list containing two elements.
@@ -827,8 +827,8 @@ public static <E> java.util.List<E> of(@android.annotation.NonNull E e1) { throw
  * @since 9
  */
 
-@android.annotation.NonNull
-public static <E> java.util.List<E> of(@android.annotation.NonNull E e1, @android.annotation.NonNull E e2) { throw new RuntimeException("Stub!"); }
+@androidx.annotation.RecentlyNonNull
+public static <E> java.util.List<E> of(@androidx.annotation.RecentlyNonNull E e1, @androidx.annotation.RecentlyNonNull E e2) { throw new RuntimeException("Stub!"); }
 
 /**
  * Returns an immutable list containing three elements.
@@ -845,8 +845,8 @@ public static <E> java.util.List<E> of(@android.annotation.NonNull E e1, @androi
  * @since 9
  */
 
-@android.annotation.NonNull
-public static <E> java.util.List<E> of(@android.annotation.NonNull E e1, @android.annotation.NonNull E e2, @android.annotation.NonNull E e3) { throw new RuntimeException("Stub!"); }
+@androidx.annotation.RecentlyNonNull
+public static <E> java.util.List<E> of(@androidx.annotation.RecentlyNonNull E e1, @androidx.annotation.RecentlyNonNull E e2, @androidx.annotation.RecentlyNonNull E e3) { throw new RuntimeException("Stub!"); }
 
 /**
  * Returns an immutable list containing four elements.
@@ -864,8 +864,8 @@ public static <E> java.util.List<E> of(@android.annotation.NonNull E e1, @androi
  * @since 9
  */
 
-@android.annotation.NonNull
-public static <E> java.util.List<E> of(@android.annotation.NonNull E e1, @android.annotation.NonNull E e2, @android.annotation.NonNull E e3, @android.annotation.NonNull E e4) { throw new RuntimeException("Stub!"); }
+@androidx.annotation.RecentlyNonNull
+public static <E> java.util.List<E> of(@androidx.annotation.RecentlyNonNull E e1, @androidx.annotation.RecentlyNonNull E e2, @androidx.annotation.RecentlyNonNull E e3, @androidx.annotation.RecentlyNonNull E e4) { throw new RuntimeException("Stub!"); }
 
 /**
  * Returns an immutable list containing five elements.
@@ -884,8 +884,8 @@ public static <E> java.util.List<E> of(@android.annotation.NonNull E e1, @androi
  * @since 9
  */
 
-@android.annotation.NonNull
-public static <E> java.util.List<E> of(@android.annotation.NonNull E e1, @android.annotation.NonNull E e2, @android.annotation.NonNull E e3, @android.annotation.NonNull E e4, @android.annotation.NonNull E e5) { throw new RuntimeException("Stub!"); }
+@androidx.annotation.RecentlyNonNull
+public static <E> java.util.List<E> of(@androidx.annotation.RecentlyNonNull E e1, @androidx.annotation.RecentlyNonNull E e2, @androidx.annotation.RecentlyNonNull E e3, @androidx.annotation.RecentlyNonNull E e4, @androidx.annotation.RecentlyNonNull E e5) { throw new RuntimeException("Stub!"); }
 
 /**
  * Returns an immutable list containing six elements.
@@ -905,8 +905,8 @@ public static <E> java.util.List<E> of(@android.annotation.NonNull E e1, @androi
  * @since 9
  */
 
-@android.annotation.NonNull
-public static <E> java.util.List<E> of(@android.annotation.NonNull E e1, @android.annotation.NonNull E e2, @android.annotation.NonNull E e3, @android.annotation.NonNull E e4, @android.annotation.NonNull E e5, @android.annotation.NonNull E e6) { throw new RuntimeException("Stub!"); }
+@androidx.annotation.RecentlyNonNull
+public static <E> java.util.List<E> of(@androidx.annotation.RecentlyNonNull E e1, @androidx.annotation.RecentlyNonNull E e2, @androidx.annotation.RecentlyNonNull E e3, @androidx.annotation.RecentlyNonNull E e4, @androidx.annotation.RecentlyNonNull E e5, @androidx.annotation.RecentlyNonNull E e6) { throw new RuntimeException("Stub!"); }
 
 /**
  * Returns an immutable list containing seven elements.
@@ -927,8 +927,8 @@ public static <E> java.util.List<E> of(@android.annotation.NonNull E e1, @androi
  * @since 9
  */
 
-@android.annotation.NonNull
-public static <E> java.util.List<E> of(@android.annotation.NonNull E e1, @android.annotation.NonNull E e2, @android.annotation.NonNull E e3, @android.annotation.NonNull E e4, @android.annotation.NonNull E e5, @android.annotation.NonNull E e6, @android.annotation.NonNull E e7) { throw new RuntimeException("Stub!"); }
+@androidx.annotation.RecentlyNonNull
+public static <E> java.util.List<E> of(@androidx.annotation.RecentlyNonNull E e1, @androidx.annotation.RecentlyNonNull E e2, @androidx.annotation.RecentlyNonNull E e3, @androidx.annotation.RecentlyNonNull E e4, @androidx.annotation.RecentlyNonNull E e5, @androidx.annotation.RecentlyNonNull E e6, @androidx.annotation.RecentlyNonNull E e7) { throw new RuntimeException("Stub!"); }
 
 /**
  * Returns an immutable list containing eight elements.
@@ -950,8 +950,8 @@ public static <E> java.util.List<E> of(@android.annotation.NonNull E e1, @androi
  * @since 9
  */
 
-@android.annotation.NonNull
-public static <E> java.util.List<E> of(@android.annotation.NonNull E e1, @android.annotation.NonNull E e2, @android.annotation.NonNull E e3, @android.annotation.NonNull E e4, @android.annotation.NonNull E e5, @android.annotation.NonNull E e6, @android.annotation.NonNull E e7, @android.annotation.NonNull E e8) { throw new RuntimeException("Stub!"); }
+@androidx.annotation.RecentlyNonNull
+public static <E> java.util.List<E> of(@androidx.annotation.RecentlyNonNull E e1, @androidx.annotation.RecentlyNonNull E e2, @androidx.annotation.RecentlyNonNull E e3, @androidx.annotation.RecentlyNonNull E e4, @androidx.annotation.RecentlyNonNull E e5, @androidx.annotation.RecentlyNonNull E e6, @androidx.annotation.RecentlyNonNull E e7, @androidx.annotation.RecentlyNonNull E e8) { throw new RuntimeException("Stub!"); }
 
 /**
  * Returns an immutable list containing nine elements.
@@ -974,8 +974,8 @@ public static <E> java.util.List<E> of(@android.annotation.NonNull E e1, @androi
  * @since 9
  */
 
-@android.annotation.NonNull
-public static <E> java.util.List<E> of(@android.annotation.NonNull E e1, @android.annotation.NonNull E e2, @android.annotation.NonNull E e3, @android.annotation.NonNull E e4, @android.annotation.NonNull E e5, @android.annotation.NonNull E e6, @android.annotation.NonNull E e7, @android.annotation.NonNull E e8, @android.annotation.NonNull E e9) { throw new RuntimeException("Stub!"); }
+@androidx.annotation.RecentlyNonNull
+public static <E> java.util.List<E> of(@androidx.annotation.RecentlyNonNull E e1, @androidx.annotation.RecentlyNonNull E e2, @androidx.annotation.RecentlyNonNull E e3, @androidx.annotation.RecentlyNonNull E e4, @androidx.annotation.RecentlyNonNull E e5, @androidx.annotation.RecentlyNonNull E e6, @androidx.annotation.RecentlyNonNull E e7, @androidx.annotation.RecentlyNonNull E e8, @androidx.annotation.RecentlyNonNull E e9) { throw new RuntimeException("Stub!"); }
 
 /**
  * Returns an immutable list containing ten elements.
@@ -999,8 +999,8 @@ public static <E> java.util.List<E> of(@android.annotation.NonNull E e1, @androi
  * @since 9
  */
 
-@android.annotation.NonNull
-public static <E> java.util.List<E> of(@android.annotation.NonNull E e1, @android.annotation.NonNull E e2, @android.annotation.NonNull E e3, @android.annotation.NonNull E e4, @android.annotation.NonNull E e5, @android.annotation.NonNull E e6, @android.annotation.NonNull E e7, @android.annotation.NonNull E e8, @android.annotation.NonNull E e9, @android.annotation.NonNull E e10) { throw new RuntimeException("Stub!"); }
+@androidx.annotation.RecentlyNonNull
+public static <E> java.util.List<E> of(@androidx.annotation.RecentlyNonNull E e1, @androidx.annotation.RecentlyNonNull E e2, @androidx.annotation.RecentlyNonNull E e3, @androidx.annotation.RecentlyNonNull E e4, @androidx.annotation.RecentlyNonNull E e5, @androidx.annotation.RecentlyNonNull E e6, @androidx.annotation.RecentlyNonNull E e7, @androidx.annotation.RecentlyNonNull E e8, @androidx.annotation.RecentlyNonNull E e9, @androidx.annotation.RecentlyNonNull E e10) { throw new RuntimeException("Stub!"); }
 
 /**
  * Returns an immutable list containing an arbitrary number of elements.
@@ -1017,7 +1017,7 @@ public static <E> java.util.List<E> of(@android.annotation.NonNull E e1, @androi
  *     List<String[]> list = List.<String[]>of(array);
  * }</pre>
  *
- * This will cause the {@link java.util.List#of(java.lang.Object) List#of(Object)} method
+ * This will cause the {@link java.util.List#of(java.lang.Object) List.of(E)} method
  * to be invoked instead.
  *
  * @param <E> the {@code List}'s element type
@@ -1028,8 +1028,8 @@ public static <E> java.util.List<E> of(@android.annotation.NonNull E e1, @androi
  * @since 9
  */
 
-@android.annotation.NonNull
+@androidx.annotation.RecentlyNonNull
 @java.lang.SafeVarargs
-public static <E> java.util.List<E> of(@android.annotation.NonNull E... elements) { throw new RuntimeException("Stub!"); }
+public static <E> java.util.List<E> of(@androidx.annotation.RecentlyNonNull E... elements) { throw new RuntimeException("Stub!"); }
 }
 
