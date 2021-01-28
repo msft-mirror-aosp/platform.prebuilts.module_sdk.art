@@ -82,7 +82,7 @@ public final java.lang.String getName() { throw new RuntimeException("Stub!"); }
  * Provider that supports the specified algorithm is returned.
  *
  * <p> Note that the list of registered providers may be retrieved via
- * the {@link java.security.Security#getProviders() Security#getProviders()} method.
+ * the {@link java.security.Security#getProviders() Security.getProviders()} method.
  *
  * @param algorithm the standard name of the requested exemption
  * mechanism.
@@ -116,7 +116,7 @@ public static final javax.crypto.ExemptionMechanism getInstance(java.lang.String
  * in the security provider list.
  *
  * <p> Note that the list of registered providers may be retrieved via
- * the {@link java.security.Security#getProviders() Security#getProviders()} method.
+ * the {@link java.security.Security#getProviders() Security.getProviders()} method.
  
  * @param algorithm the standard name of the requested exemption mechanism.
  * See the ExemptionMechanism section in the

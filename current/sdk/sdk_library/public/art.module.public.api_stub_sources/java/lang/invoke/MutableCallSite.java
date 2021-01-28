@@ -32,7 +32,7 @@ package java.lang.invoke;
  * behaves like an ordinary field.
  * An {@code invokedynamic} instruction linked to a {@code MutableCallSite} delegates
  * all calls to the site's current target.
- * The {@linkplain java.lang.invoke.CallSite#dynamicInvoker CallSite#dynamicInvoker} of a mutable call site
+ * The {@linkplain java.lang.invoke.CallSite#dynamicInvoker dynamic invoker} of a mutable call site
  * also delegates each call to the site's current target.
  * <p>
  * Here is an example of a mutable call site which introduces a
@@ -75,7 +75,7 @@ package java.lang.invoke;
  * to object fields.)
  * <p>
  * For target values which will be frequently updated, consider using
- * a {@linkplain java.lang.invoke.VolatileCallSite VolatileCallSite} instead.
+ * a {@linkplain java.lang.invoke.VolatileCallSite volatile call site} instead.
  * @author John Rose, JSR 292 EG
  */
 
@@ -92,7 +92,7 @@ public class MutableCallSite extends java.lang.invoke.CallSite {
  * Before this {@code CallSite} object is returned from a bootstrap method,
  * or invoked in some other manner,
  * it is usually provided with a more useful target method,
- * via a call to {@link java.lang.invoke.CallSite#setTarget(java.lang.invoke.MethodHandle) CallSite#setTarget(MethodHandle)}.
+ * via a call to {@link java.lang.invoke.CallSite#setTarget(java.lang.invoke.MethodHandle) setTarget}.
  * @param type the method type that this call site will have
  * @throws java.lang.NullPointerException if the proposed type is null
  */

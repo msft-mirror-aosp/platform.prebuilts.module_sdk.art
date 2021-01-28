@@ -31,7 +31,7 @@ import java.nio.file.attribute.BasicFileAttributes;
 
 /**
  * A visitor of files. An implementation of this interface is provided to the
- * {@link java.nio.file.Files#walkFileTree Files#walkFileTree} methods to visit each file in
+ * {@link java.nio.file.Files#walkFileTree Files.walkFileTree} methods to visit each file in
  * a file tree.
  *
  * <p> <b>Usage Examples:</b>
@@ -102,8 +102,8 @@ public interface FileVisitor<T> {
 /**
  * Invoked for a directory before entries in the directory are visited.
  *
- * <p> If this method returns {@link java.nio.file.FileVisitResult#CONTINUE FileVisitResult#CONTINUE},
- * then entries in the directory are visited. If this method returns {@link java.nio.file.FileVisitResult#SKIP_SUBTREE FileVisitResult#SKIP_SUBTREE} or {@link java.nio.file.FileVisitResult#SKIP_SIBLINGS FileVisitResult#SKIP_SIBLINGS} then entries in the
+ * <p> If this method returns {@link java.nio.file.FileVisitResult#CONTINUE CONTINUE},
+ * then entries in the directory are visited. If this method returns {@link java.nio.file.FileVisitResult#SKIP_SUBTREE SKIP_SUBTREE} or {@link java.nio.file.FileVisitResult#SKIP_SIBLINGS SKIP_SIBLINGS} then entries in the
  * directory (and any descendants) will not be visited.
  *
  * @param   dir
@@ -157,7 +157,7 @@ public java.nio.file.FileVisitResult visitFileFailed(T file, java.io.IOException
  * Invoked for a directory after entries in the directory, and all of their
  * descendants, have been visited. This method is also invoked when iteration
  * of the directory completes prematurely (by a {@link #visitFile visitFile}
- * method returning {@link java.nio.file.FileVisitResult#SKIP_SIBLINGS FileVisitResult#SKIP_SIBLINGS},
+ * method returning {@link java.nio.file.FileVisitResult#SKIP_SIBLINGS SKIP_SIBLINGS},
  * or an I/O error when iterating over the directory).
  *
  * @param   dir

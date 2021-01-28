@@ -119,7 +119,7 @@ package java.nio;
  * primitive types, except <tt>boolean</tt>.  Primitive values are translated
  * to (or from) sequences of bytes according to the buffer's current byte
  * order, which may be retrieved and modified via the {@link #order order}
- * methods.  Specific byte orders are represented by instances of the {@link java.nio.ByteOrder ByteOrder} class.  The initial order of a byte buffer is always {@link java.nio.ByteOrder#BIG_ENDIAN ByteOrder#BIG_ENDIAN}.
+ * methods.  Specific byte orders are represented by instances of the {@link java.nio.ByteOrder ByteOrder} class.  The initial order of a byte buffer is always {@link java.nio.ByteOrder#BIG_ENDIAN BIG_ENDIAN}.
  *
  * <p> For access to heterogeneous binary data, that is, sequences of values of
  * different types, this class defines a family of absolute and relative
@@ -222,7 +222,7 @@ ByteBuffer() { throw new RuntimeException("Stub!"); }
  *          If the <tt>capacity</tt> is a negative integer
  */
 
-@android.annotation.NonNull
+@androidx.annotation.RecentlyNonNull
 public static java.nio.ByteBuffer allocateDirect(int capacity) { throw new RuntimeException("Stub!"); }
 
 /**
@@ -242,7 +242,7 @@ public static java.nio.ByteBuffer allocateDirect(int capacity) { throw new Runti
  *          If the <tt>capacity</tt> is a negative integer
  */
 
-@android.annotation.NonNull
+@androidx.annotation.RecentlyNonNull
 public static java.nio.ByteBuffer allocate(int capacity) { throw new RuntimeException("Stub!"); }
 
 /**
@@ -277,8 +277,8 @@ public static java.nio.ByteBuffer allocate(int capacity) { throw new RuntimeExce
  *          parameters do not hold
  */
 
-@android.annotation.NonNull
-public static java.nio.ByteBuffer wrap(@android.annotation.NonNull byte[] array, int offset, int length) { throw new RuntimeException("Stub!"); }
+@androidx.annotation.RecentlyNonNull
+public static java.nio.ByteBuffer wrap(@androidx.annotation.RecentlyNonNull byte[] array, int offset, int length) { throw new RuntimeException("Stub!"); }
 
 /**
  * Wraps a byte array into a buffer.
@@ -297,8 +297,8 @@ public static java.nio.ByteBuffer wrap(@android.annotation.NonNull byte[] array,
  * @return  The new byte buffer
  */
 
-@android.annotation.NonNull
-public static java.nio.ByteBuffer wrap(@android.annotation.NonNull byte[] array) { throw new RuntimeException("Stub!"); }
+@androidx.annotation.RecentlyNonNull
+public static java.nio.ByteBuffer wrap(@androidx.annotation.RecentlyNonNull byte[] array) { throw new RuntimeException("Stub!"); }
 
 /**
  * Creates a new byte buffer whose content is a shared subsequence of
@@ -318,7 +318,7 @@ public static java.nio.ByteBuffer wrap(@android.annotation.NonNull byte[] array)
  * @return  The new byte buffer
  */
 
-@android.annotation.NonNull
+@androidx.annotation.RecentlyNonNull
 public abstract java.nio.ByteBuffer slice();
 
 /**
@@ -337,7 +337,7 @@ public abstract java.nio.ByteBuffer slice();
  * @return  The new byte buffer
  */
 
-@android.annotation.NonNull
+@androidx.annotation.RecentlyNonNull
 public abstract java.nio.ByteBuffer duplicate();
 
 /**
@@ -359,7 +359,7 @@ public abstract java.nio.ByteBuffer duplicate();
  * @return  The new, read-only byte buffer
  */
 
-@android.annotation.NonNull
+@androidx.annotation.RecentlyNonNull
 public abstract java.nio.ByteBuffer asReadOnlyBuffer();
 
 /**
@@ -392,7 +392,7 @@ public abstract byte get();
  *          If this buffer is read-only
  */
 
-@android.annotation.NonNull
+@androidx.annotation.RecentlyNonNull
 public abstract java.nio.ByteBuffer put(byte b);
 
 /**
@@ -433,7 +433,7 @@ public abstract byte get(int index);
  *          If this buffer is read-only
  */
 
-@android.annotation.NonNull
+@androidx.annotation.RecentlyNonNull
 public abstract java.nio.ByteBuffer put(int index, byte b);
 
 /**
@@ -487,8 +487,8 @@ public abstract java.nio.ByteBuffer put(int index, byte b);
  *          parameters do not hold
  */
 
-@android.annotation.NonNull
-public java.nio.ByteBuffer get(@android.annotation.NonNull byte[] dst, int offset, int length) { throw new RuntimeException("Stub!"); }
+@androidx.annotation.RecentlyNonNull
+public java.nio.ByteBuffer get(@androidx.annotation.RecentlyNonNull byte[] dst, int offset, int length) { throw new RuntimeException("Stub!"); }
 
 /**
  * Relative bulk <i>get</i> method.
@@ -510,8 +510,8 @@ public java.nio.ByteBuffer get(@android.annotation.NonNull byte[] dst, int offse
  *          remaining in this buffer
  */
 
-@android.annotation.NonNull
-public java.nio.ByteBuffer get(@android.annotation.NonNull byte[] dst) { throw new RuntimeException("Stub!"); }
+@androidx.annotation.RecentlyNonNull
+public java.nio.ByteBuffer get(@androidx.annotation.RecentlyNonNull byte[] dst) { throw new RuntimeException("Stub!"); }
 
 /**
  * Relative bulk <i>put</i> method&nbsp;&nbsp;<i>(optional operation)</i>.
@@ -554,8 +554,8 @@ public java.nio.ByteBuffer get(@android.annotation.NonNull byte[] dst) { throw n
  *          If this buffer is read-only
  */
 
-@android.annotation.NonNull
-public java.nio.ByteBuffer put(@android.annotation.NonNull java.nio.ByteBuffer src) { throw new RuntimeException("Stub!"); }
+@androidx.annotation.RecentlyNonNull
+public java.nio.ByteBuffer put(@androidx.annotation.RecentlyNonNull java.nio.ByteBuffer src) { throw new RuntimeException("Stub!"); }
 
 /**
  * Relative bulk <i>put</i> method&nbsp;&nbsp;<i>(optional operation)</i>.
@@ -609,8 +609,8 @@ public java.nio.ByteBuffer put(@android.annotation.NonNull java.nio.ByteBuffer s
  *          If this buffer is read-only
  */
 
-@android.annotation.NonNull
-public java.nio.ByteBuffer put(@android.annotation.NonNull byte[] src, int offset, int length) { throw new RuntimeException("Stub!"); }
+@androidx.annotation.RecentlyNonNull
+public java.nio.ByteBuffer put(@androidx.annotation.RecentlyNonNull byte[] src, int offset, int length) { throw new RuntimeException("Stub!"); }
 
 /**
  * Relative bulk <i>put</i> method&nbsp;&nbsp;<i>(optional operation)</i>.
@@ -635,8 +635,8 @@ public java.nio.ByteBuffer put(@android.annotation.NonNull byte[] src, int offse
  *          If this buffer is read-only
  */
 
-@android.annotation.NonNull
-public final java.nio.ByteBuffer put(@android.annotation.NonNull byte[] src) { throw new RuntimeException("Stub!"); }
+@androidx.annotation.RecentlyNonNull
+public final java.nio.ByteBuffer put(@androidx.annotation.RecentlyNonNull byte[] src) { throw new RuntimeException("Stub!"); }
 
 /**
  * Tells whether or not this buffer is backed by an accessible byte
@@ -672,7 +672,7 @@ public final boolean hasArray() { throw new RuntimeException("Stub!"); }
  *          If this buffer is not backed by an accessible array
  */
 
-@android.annotation.NonNull
+@androidx.annotation.RecentlyNonNull
 public final byte[] array() { throw new RuntimeException("Stub!"); }
 
 /**
@@ -698,25 +698,25 @@ public final byte[] array() { throw new RuntimeException("Stub!"); }
 
 public final int arrayOffset() { throw new RuntimeException("Stub!"); }
 
-@android.annotation.NonNull
+@androidx.annotation.RecentlyNonNull
 public java.nio.Buffer position(int newPosition) { throw new RuntimeException("Stub!"); }
 
-@android.annotation.NonNull
+@androidx.annotation.RecentlyNonNull
 public java.nio.Buffer limit(int newLimit) { throw new RuntimeException("Stub!"); }
 
-@android.annotation.NonNull
+@androidx.annotation.RecentlyNonNull
 public java.nio.Buffer mark() { throw new RuntimeException("Stub!"); }
 
-@android.annotation.NonNull
+@androidx.annotation.RecentlyNonNull
 public java.nio.Buffer reset() { throw new RuntimeException("Stub!"); }
 
-@android.annotation.NonNull
+@androidx.annotation.RecentlyNonNull
 public java.nio.Buffer clear() { throw new RuntimeException("Stub!"); }
 
-@android.annotation.NonNull
+@androidx.annotation.RecentlyNonNull
 public java.nio.Buffer flip() { throw new RuntimeException("Stub!"); }
 
-@android.annotation.NonNull
+@androidx.annotation.RecentlyNonNull
 public java.nio.Buffer rewind() { throw new RuntimeException("Stub!"); }
 
 /**
@@ -760,7 +760,7 @@ public java.nio.Buffer rewind() { throw new RuntimeException("Stub!"); }
  *          If this buffer is read-only
  */
 
-@android.annotation.NonNull
+@androidx.annotation.RecentlyNonNull
 public abstract java.nio.ByteBuffer compact();
 
 /**
@@ -777,7 +777,7 @@ public abstract boolean isDirect();
  * @return  A summary string
  */
 
-@android.annotation.NonNull
+@androidx.annotation.RecentlyNonNull
 public java.lang.String toString() { throw new RuntimeException("Stub!"); }
 
 /**
@@ -823,7 +823,7 @@ public int hashCode() { throw new RuntimeException("Stub!"); }
  *           given object
  */
 
-public boolean equals(@android.annotation.Nullable java.lang.Object ob) { throw new RuntimeException("Stub!"); }
+public boolean equals(@androidx.annotation.RecentlyNullable java.lang.Object ob) { throw new RuntimeException("Stub!"); }
 
 /**
  * Compares this buffer to another.
@@ -849,19 +849,19 @@ public boolean equals(@android.annotation.Nullable java.lang.Object ob) { throw 
  *          is less than, equal to, or greater than the given buffer
  */
 
-public int compareTo(@android.annotation.NonNull java.nio.ByteBuffer that) { throw new RuntimeException("Stub!"); }
+public int compareTo(@androidx.annotation.RecentlyNonNull java.nio.ByteBuffer that) { throw new RuntimeException("Stub!"); }
 
 /**
  * Retrieves this buffer's byte order.
  *
  * <p> The byte order is used when reading or writing multibyte values, and
  * when creating buffers that are views of this byte buffer.  The order of
- * a newly-created byte buffer is always {@link java.nio.ByteOrder#BIG_ENDIAN ByteOrder#BIG_ENDIAN}.  </p>
+ * a newly-created byte buffer is always {@link java.nio.ByteOrder#BIG_ENDIAN  BIG_ENDIAN}.  </p>
  *
  * @return  This buffer's byte order
  */
 
-@android.annotation.NonNull
+@androidx.annotation.RecentlyNonNull
 public final java.nio.ByteOrder order() { throw new RuntimeException("Stub!"); }
 
 /**
@@ -869,14 +869,14 @@ public final java.nio.ByteOrder order() { throw new RuntimeException("Stub!"); }
  *
  * @param  bo
  *         The new byte order,
- *         either {@link java.nio.ByteOrder#BIG_ENDIAN ByteOrder#BIG_ENDIAN}
- *         or {@link java.nio.ByteOrder#LITTLE_ENDIAN ByteOrder#LITTLE_ENDIAN}
+ *         either {@link java.nio.ByteOrder#BIG_ENDIAN BIG_ENDIAN}
+ *         or {@link java.nio.ByteOrder#LITTLE_ENDIAN LITTLE_ENDIAN}
  *
  * @return  This buffer
  */
 
-@android.annotation.NonNull
-public final java.nio.ByteBuffer order(@android.annotation.NonNull java.nio.ByteOrder bo) { throw new RuntimeException("Stub!"); }
+@androidx.annotation.RecentlyNonNull
+public final java.nio.ByteBuffer order(@androidx.annotation.RecentlyNonNull java.nio.ByteOrder bo) { throw new RuntimeException("Stub!"); }
 
 /**
  * Relative <i>get</i> method for reading a char value.
@@ -915,7 +915,7 @@ public abstract char getChar();
  *          If this buffer is read-only
  */
 
-@android.annotation.NonNull
+@androidx.annotation.RecentlyNonNull
 public abstract java.nio.ByteBuffer putChar(char value);
 
 /**
@@ -961,7 +961,7 @@ public abstract char getChar(int index);
  *          If this buffer is read-only
  */
 
-@android.annotation.NonNull
+@androidx.annotation.RecentlyNonNull
 public abstract java.nio.ByteBuffer putChar(int index, char value);
 
 /**
@@ -981,7 +981,7 @@ public abstract java.nio.ByteBuffer putChar(int index, char value);
  * @return  A new char buffer
  */
 
-@android.annotation.NonNull
+@androidx.annotation.RecentlyNonNull
 public abstract java.nio.CharBuffer asCharBuffer();
 
 /**
@@ -1021,7 +1021,7 @@ public abstract short getShort();
  *          If this buffer is read-only
  */
 
-@android.annotation.NonNull
+@androidx.annotation.RecentlyNonNull
 public abstract java.nio.ByteBuffer putShort(short value);
 
 /**
@@ -1067,7 +1067,7 @@ public abstract short getShort(int index);
  *          If this buffer is read-only
  */
 
-@android.annotation.NonNull
+@androidx.annotation.RecentlyNonNull
 public abstract java.nio.ByteBuffer putShort(int index, short value);
 
 /**
@@ -1087,7 +1087,7 @@ public abstract java.nio.ByteBuffer putShort(int index, short value);
  * @return  A new short buffer
  */
 
-@android.annotation.NonNull
+@androidx.annotation.RecentlyNonNull
 public abstract java.nio.ShortBuffer asShortBuffer();
 
 /**
@@ -1127,7 +1127,7 @@ public abstract int getInt();
  *          If this buffer is read-only
  */
 
-@android.annotation.NonNull
+@androidx.annotation.RecentlyNonNull
 public abstract java.nio.ByteBuffer putInt(int value);
 
 /**
@@ -1173,7 +1173,7 @@ public abstract int getInt(int index);
  *          If this buffer is read-only
  */
 
-@android.annotation.NonNull
+@androidx.annotation.RecentlyNonNull
 public abstract java.nio.ByteBuffer putInt(int index, int value);
 
 /**
@@ -1193,7 +1193,7 @@ public abstract java.nio.ByteBuffer putInt(int index, int value);
  * @return  A new int buffer
  */
 
-@android.annotation.NonNull
+@androidx.annotation.RecentlyNonNull
 public abstract java.nio.IntBuffer asIntBuffer();
 
 /**
@@ -1233,7 +1233,7 @@ public abstract long getLong();
  *          If this buffer is read-only
  */
 
-@android.annotation.NonNull
+@androidx.annotation.RecentlyNonNull
 public abstract java.nio.ByteBuffer putLong(long value);
 
 /**
@@ -1279,7 +1279,7 @@ public abstract long getLong(int index);
  *          If this buffer is read-only
  */
 
-@android.annotation.NonNull
+@androidx.annotation.RecentlyNonNull
 public abstract java.nio.ByteBuffer putLong(int index, long value);
 
 /**
@@ -1299,7 +1299,7 @@ public abstract java.nio.ByteBuffer putLong(int index, long value);
  * @return  A new long buffer
  */
 
-@android.annotation.NonNull
+@androidx.annotation.RecentlyNonNull
 public abstract java.nio.LongBuffer asLongBuffer();
 
 /**
@@ -1339,7 +1339,7 @@ public abstract float getFloat();
  *          If this buffer is read-only
  */
 
-@android.annotation.NonNull
+@androidx.annotation.RecentlyNonNull
 public abstract java.nio.ByteBuffer putFloat(float value);
 
 /**
@@ -1385,7 +1385,7 @@ public abstract float getFloat(int index);
  *          If this buffer is read-only
  */
 
-@android.annotation.NonNull
+@androidx.annotation.RecentlyNonNull
 public abstract java.nio.ByteBuffer putFloat(int index, float value);
 
 /**
@@ -1405,7 +1405,7 @@ public abstract java.nio.ByteBuffer putFloat(int index, float value);
  * @return  A new float buffer
  */
 
-@android.annotation.NonNull
+@androidx.annotation.RecentlyNonNull
 public abstract java.nio.FloatBuffer asFloatBuffer();
 
 /**
@@ -1445,7 +1445,7 @@ public abstract double getDouble();
  *          If this buffer is read-only
  */
 
-@android.annotation.NonNull
+@androidx.annotation.RecentlyNonNull
 public abstract java.nio.ByteBuffer putDouble(double value);
 
 /**
@@ -1491,7 +1491,7 @@ public abstract double getDouble(int index);
  *          If this buffer is read-only
  */
 
-@android.annotation.NonNull
+@androidx.annotation.RecentlyNonNull
 public abstract java.nio.ByteBuffer putDouble(int index, double value);
 
 /**
@@ -1511,7 +1511,7 @@ public abstract java.nio.ByteBuffer putDouble(int index, double value);
  * @return  A new double buffer
  */
 
-@android.annotation.NonNull
+@androidx.annotation.RecentlyNonNull
 public abstract java.nio.DoubleBuffer asDoubleBuffer();
 }
 

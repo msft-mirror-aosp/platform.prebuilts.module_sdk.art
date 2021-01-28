@@ -30,7 +30,7 @@ package java.util;
 
 /**
  * A Red-Black tree based {@link java.util.NavigableMap NavigableMap} implementation.
- * The map is sorted according to the {@linkplain java.lang.Comparable Comparable} of its keys, or by a {@link java.util.Comparator Comparator} provided at map
+ * The map is sorted according to the {@linkplain java.lang.Comparable  ordering} of its keys, or by a {@link java.util.Comparator Comparator} provided at map
  * creation time, depending on which constructor is used.
  *
  * <p>This implementation provides guaranteed log(n) time cost for the
@@ -60,7 +60,7 @@ package java.util;
  * typically accomplished by synchronizing on some object that naturally
  * encapsulates the map.
  * If no such object exists, the map should be "wrapped" using the
- * {@link java.util.Collections#synchronizedSortedMap Collections#synchronizedSortedMap}
+ * {@link java.util.Collections#synchronizedSortedMap Collections.synchronizedSortedMap}
  * method.  This is best done at creation time, to prevent accidental
  * unsynchronized access to the map: <pre>
  *   SortedMap m = Collections.synchronizedSortedMap(new TreeMap(...));</pre>
@@ -132,10 +132,10 @@ public TreeMap() { throw new RuntimeException("Stub!"); }
  * {@code ClassCastException}.
  *
  * @param comparator the comparator that will be used to order this map.
- *        If {@code null}, the {@linkplain java.lang.Comparable Comparable} of the keys will be used.
+ *        If {@code null}, the {@linkplain java.lang.Comparable         ordering} of the keys will be used.
  */
 
-public TreeMap(@android.annotation.Nullable java.util.Comparator<? super K> comparator) { throw new RuntimeException("Stub!"); }
+public TreeMap(@androidx.annotation.RecentlyNullable java.util.Comparator<? super K> comparator) { throw new RuntimeException("Stub!"); }
 
 /**
  * Constructs a new tree map containing the same mappings as the given
@@ -151,7 +151,7 @@ public TreeMap(@android.annotation.Nullable java.util.Comparator<? super K> comp
  * @throws java.lang.NullPointerException if the specified map is null
  */
 
-public TreeMap(@android.annotation.NonNull java.util.Map<? extends K,? extends V> m) { throw new RuntimeException("Stub!"); }
+public TreeMap(@androidx.annotation.RecentlyNonNull java.util.Map<? extends K,? extends V> m) { throw new RuntimeException("Stub!"); }
 
 /**
  * Constructs a new tree map containing the same mappings and
@@ -163,7 +163,7 @@ public TreeMap(@android.annotation.NonNull java.util.Map<? extends K,? extends V
  * @throws java.lang.NullPointerException if the specified map is null
  */
 
-public TreeMap(@android.annotation.NonNull java.util.SortedMap<K,? extends V> m) { throw new RuntimeException("Stub!"); }
+public TreeMap(@androidx.annotation.RecentlyNonNull java.util.SortedMap<K,? extends V> m) { throw new RuntimeException("Stub!"); }
 
 /**
  * Returns the number of key-value mappings in this map.
@@ -187,7 +187,7 @@ public int size() { throw new RuntimeException("Stub!"); }
  *         does not permit null keys
  */
 
-public boolean containsKey(@android.annotation.Nullable java.lang.Object key) { throw new RuntimeException("Stub!"); }
+public boolean containsKey(@androidx.annotation.RecentlyNullable java.lang.Object key) { throw new RuntimeException("Stub!"); }
 
 /**
  * Returns {@code true} if this map maps one or more keys to the
@@ -203,7 +203,7 @@ public boolean containsKey(@android.annotation.Nullable java.lang.Object key) { 
  * @since 1.2
  */
 
-public boolean containsValue(@android.annotation.Nullable java.lang.Object value) { throw new RuntimeException("Stub!"); }
+public boolean containsValue(@androidx.annotation.RecentlyNullable java.lang.Object value) { throw new RuntimeException("Stub!"); }
 
 /**
  * Returns the value to which the specified key is mapped,
@@ -228,10 +228,10 @@ public boolean containsValue(@android.annotation.Nullable java.lang.Object value
  *         does not permit null keys
  */
 
-@android.annotation.Nullable
-public V get(@android.annotation.Nullable java.lang.Object key) { throw new RuntimeException("Stub!"); }
+@androidx.annotation.RecentlyNullable
+public V get(@androidx.annotation.RecentlyNullable java.lang.Object key) { throw new RuntimeException("Stub!"); }
 
-@android.annotation.Nullable
+@androidx.annotation.RecentlyNullable
 public java.util.Comparator<? super K> comparator() { throw new RuntimeException("Stub!"); }
 
 /**
@@ -259,7 +259,7 @@ public K lastKey() { throw new RuntimeException("Stub!"); }
  *         permit null keys
  */
 
-public void putAll(@android.annotation.NonNull java.util.Map<? extends K,? extends V> map) { throw new RuntimeException("Stub!"); }
+public void putAll(@androidx.annotation.RecentlyNonNull java.util.Map<? extends K,? extends V> map) { throw new RuntimeException("Stub!"); }
 
 /**
  * Associates the specified value with the specified key in this map.
@@ -280,7 +280,7 @@ public void putAll(@android.annotation.NonNull java.util.Map<? extends K,? exten
  *         does not permit null keys
  */
 
-@android.annotation.Nullable
+@androidx.annotation.RecentlyNullable
 public V put(K key, V value) { throw new RuntimeException("Stub!"); }
 
 /**
@@ -298,8 +298,8 @@ public V put(K key, V value) { throw new RuntimeException("Stub!"); }
  *         does not permit null keys
  */
 
-@android.annotation.Nullable
-public V remove(@android.annotation.Nullable java.lang.Object key) { throw new RuntimeException("Stub!"); }
+@androidx.annotation.RecentlyNullable
+public V remove(@androidx.annotation.RecentlyNullable java.lang.Object key) { throw new RuntimeException("Stub!"); }
 
 /**
  * Removes all of the mappings from this map.
@@ -315,35 +315,35 @@ public void clear() { throw new RuntimeException("Stub!"); }
  * @return a shallow copy of this map
  */
 
-@android.annotation.NonNull
+@androidx.annotation.RecentlyNonNull
 public java.lang.Object clone() { throw new RuntimeException("Stub!"); }
 
 /**
  * @since 1.6
  */
 
-@android.annotation.Nullable
+@androidx.annotation.RecentlyNullable
 public java.util.Map.Entry<K,V> firstEntry() { throw new RuntimeException("Stub!"); }
 
 /**
  * @since 1.6
  */
 
-@android.annotation.Nullable
+@androidx.annotation.RecentlyNullable
 public java.util.Map.Entry<K,V> lastEntry() { throw new RuntimeException("Stub!"); }
 
 /**
  * @since 1.6
  */
 
-@android.annotation.Nullable
+@androidx.annotation.RecentlyNullable
 public java.util.Map.Entry<K,V> pollFirstEntry() { throw new RuntimeException("Stub!"); }
 
 /**
  * @since 1.6
  */
 
-@android.annotation.Nullable
+@androidx.annotation.RecentlyNullable
 public java.util.Map.Entry<K,V> pollLastEntry() { throw new RuntimeException("Stub!"); }
 
 /**
@@ -354,7 +354,7 @@ public java.util.Map.Entry<K,V> pollLastEntry() { throw new RuntimeException("St
  * @since 1.6
  */
 
-@android.annotation.Nullable
+@androidx.annotation.RecentlyNullable
 public java.util.Map.Entry<K,V> lowerEntry(K key) { throw new RuntimeException("Stub!"); }
 
 /**
@@ -365,7 +365,7 @@ public java.util.Map.Entry<K,V> lowerEntry(K key) { throw new RuntimeException("
  * @since 1.6
  */
 
-@android.annotation.Nullable
+@androidx.annotation.RecentlyNullable
 public K lowerKey(K key) { throw new RuntimeException("Stub!"); }
 
 /**
@@ -376,7 +376,7 @@ public K lowerKey(K key) { throw new RuntimeException("Stub!"); }
  * @since 1.6
  */
 
-@android.annotation.Nullable
+@androidx.annotation.RecentlyNullable
 public java.util.Map.Entry<K,V> floorEntry(K key) { throw new RuntimeException("Stub!"); }
 
 /**
@@ -387,7 +387,7 @@ public java.util.Map.Entry<K,V> floorEntry(K key) { throw new RuntimeException("
  * @since 1.6
  */
 
-@android.annotation.Nullable
+@androidx.annotation.RecentlyNullable
 public K floorKey(K key) { throw new RuntimeException("Stub!"); }
 
 /**
@@ -398,7 +398,7 @@ public K floorKey(K key) { throw new RuntimeException("Stub!"); }
  * @since 1.6
  */
 
-@android.annotation.Nullable
+@androidx.annotation.RecentlyNullable
 public java.util.Map.Entry<K,V> ceilingEntry(K key) { throw new RuntimeException("Stub!"); }
 
 /**
@@ -409,7 +409,7 @@ public java.util.Map.Entry<K,V> ceilingEntry(K key) { throw new RuntimeException
  * @since 1.6
  */
 
-@android.annotation.Nullable
+@androidx.annotation.RecentlyNullable
 public K ceilingKey(K key) { throw new RuntimeException("Stub!"); }
 
 /**
@@ -420,7 +420,7 @@ public K ceilingKey(K key) { throw new RuntimeException("Stub!"); }
  * @since 1.6
  */
 
-@android.annotation.Nullable
+@androidx.annotation.RecentlyNullable
 public java.util.Map.Entry<K,V> higherEntry(K key) { throw new RuntimeException("Stub!"); }
 
 /**
@@ -431,7 +431,7 @@ public java.util.Map.Entry<K,V> higherEntry(K key) { throw new RuntimeException(
  * @since 1.6
  */
 
-@android.annotation.Nullable
+@androidx.annotation.RecentlyNullable
 public K higherKey(K key) { throw new RuntimeException("Stub!"); }
 
 /**
@@ -460,21 +460,21 @@ public K higherKey(K key) { throw new RuntimeException("Stub!"); }
  * operations.
  */
 
-@android.annotation.NonNull
+@androidx.annotation.RecentlyNonNull
 public java.util.Set<K> keySet() { throw new RuntimeException("Stub!"); }
 
 /**
  * @since 1.6
  */
 
-@android.annotation.NonNull
+@androidx.annotation.RecentlyNonNull
 public java.util.NavigableSet<K> navigableKeySet() { throw new RuntimeException("Stub!"); }
 
 /**
  * @since 1.6
  */
 
-@android.annotation.NonNull
+@androidx.annotation.RecentlyNonNull
 public java.util.NavigableSet<K> descendingKeySet() { throw new RuntimeException("Stub!"); }
 
 /**
@@ -499,7 +499,7 @@ public java.util.NavigableSet<K> descendingKeySet() { throw new RuntimeException
  * support the {@code add} or {@code addAll} operations.
  */
 
-@android.annotation.NonNull
+@androidx.annotation.RecentlyNonNull
 public java.util.Collection<V> values() { throw new RuntimeException("Stub!"); }
 
 /**
@@ -525,14 +525,14 @@ public java.util.Collection<V> values() { throw new RuntimeException("Stub!"); }
  * {@code add} or {@code addAll} operations.
  */
 
-@android.annotation.NonNull
+@androidx.annotation.RecentlyNonNull
 public java.util.Set<java.util.Map.Entry<K,V>> entrySet() { throw new RuntimeException("Stub!"); }
 
 /**
  * @since 1.6
  */
 
-@android.annotation.NonNull
+@androidx.annotation.RecentlyNonNull
 public java.util.NavigableMap<K,V> descendingMap() { throw new RuntimeException("Stub!"); }
 
 /**
@@ -544,7 +544,7 @@ public java.util.NavigableMap<K,V> descendingMap() { throw new RuntimeException(
  * @since 1.6
  */
 
-@android.annotation.NonNull
+@androidx.annotation.RecentlyNonNull
 public java.util.NavigableMap<K,V> subMap(K fromKey, boolean fromInclusive, K toKey, boolean toInclusive) { throw new RuntimeException("Stub!"); }
 
 /**
@@ -556,7 +556,7 @@ public java.util.NavigableMap<K,V> subMap(K fromKey, boolean fromInclusive, K to
  * @since 1.6
  */
 
-@android.annotation.NonNull
+@androidx.annotation.RecentlyNonNull
 public java.util.NavigableMap<K,V> headMap(K toKey, boolean inclusive) { throw new RuntimeException("Stub!"); }
 
 /**
@@ -568,7 +568,7 @@ public java.util.NavigableMap<K,V> headMap(K toKey, boolean inclusive) { throw n
  * @since 1.6
  */
 
-@android.annotation.NonNull
+@androidx.annotation.RecentlyNonNull
 public java.util.NavigableMap<K,V> tailMap(K fromKey, boolean inclusive) { throw new RuntimeException("Stub!"); }
 
 /**
@@ -579,7 +579,7 @@ public java.util.NavigableMap<K,V> tailMap(K fromKey, boolean inclusive) { throw
  * @throws java.lang.IllegalArgumentException {@inheritDoc}
  */
 
-@android.annotation.NonNull
+@androidx.annotation.RecentlyNonNull
 public java.util.SortedMap<K,V> subMap(K fromKey, K toKey) { throw new RuntimeException("Stub!"); }
 
 /**
@@ -590,7 +590,7 @@ public java.util.SortedMap<K,V> subMap(K fromKey, K toKey) { throw new RuntimeEx
  * @throws java.lang.IllegalArgumentException {@inheritDoc}
  */
 
-@android.annotation.NonNull
+@androidx.annotation.RecentlyNonNull
 public java.util.SortedMap<K,V> headMap(K toKey) { throw new RuntimeException("Stub!"); }
 
 /**
@@ -601,15 +601,15 @@ public java.util.SortedMap<K,V> headMap(K toKey) { throw new RuntimeException("S
  * @throws java.lang.IllegalArgumentException {@inheritDoc}
  */
 
-@android.annotation.NonNull
+@androidx.annotation.RecentlyNonNull
 public java.util.SortedMap<K,V> tailMap(K fromKey) { throw new RuntimeException("Stub!"); }
 
-public boolean replace(K key, @android.annotation.Nullable V oldValue, V newValue) { throw new RuntimeException("Stub!"); }
+public boolean replace(K key, @androidx.annotation.RecentlyNullable V oldValue, V newValue) { throw new RuntimeException("Stub!"); }
 
 public V replace(K key, V value) { throw new RuntimeException("Stub!"); }
 
-public void forEach(@android.annotation.NonNull java.util.function.BiConsumer<? super K,? super V> action) { throw new RuntimeException("Stub!"); }
+public void forEach(@androidx.annotation.RecentlyNonNull java.util.function.BiConsumer<? super K,? super V> action) { throw new RuntimeException("Stub!"); }
 
-public void replaceAll(@android.annotation.NonNull java.util.function.BiFunction<? super K,? super V,? extends V> function) { throw new RuntimeException("Stub!"); }
+public void replaceAll(@androidx.annotation.RecentlyNonNull java.util.function.BiFunction<? super K,? super V,? extends V> function) { throw new RuntimeException("Stub!"); }
 }
 

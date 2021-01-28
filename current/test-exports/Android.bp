@@ -79,6 +79,7 @@ art_prebuilt_java_import {
         "//frameworks/base/location/tests/locationtests",
         "//frameworks/base/wifi/tests",
         "//libcore",
+        "//packages/modules/Wifi/framework/tests",
         "//prebuilts:__subpackages__",
     ],
     apex_available: ["//apex_available:platform"],
@@ -242,6 +243,7 @@ java_import {
         "//frameworks/layoutlib",
         "//libcore",
         "//libcore/benchmarks",
+        "//packages/modules/ArtPrebuilt",
         "//prebuilts:__subpackages__",
     ],
     apex_available: [
@@ -268,6 +270,7 @@ art_prebuilt_java_import {
         "//frameworks/layoutlib",
         "//libcore",
         "//libcore/benchmarks",
+        "//packages/modules/ArtPrebuilt",
         "//prebuilts:__subpackages__",
     ],
     apex_available: [
@@ -287,6 +290,7 @@ java_import {
         "//external/okhttp",
         "//external/robolectric-shadows",
         "//libcore",
+        "//packages/modules/ArtPrebuilt",
         "//prebuilts:__subpackages__",
     ],
     apex_available: [
@@ -312,6 +316,7 @@ art_prebuilt_java_import {
         "//external/okhttp",
         "//external/robolectric-shadows",
         "//libcore",
+        "//packages/modules/ArtPrebuilt",
         "//prebuilts:__subpackages__",
     ],
     apex_available: [

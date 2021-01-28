@@ -137,7 +137,7 @@ public final int validOps() { throw new RuntimeException("Stub!"); }
  * @throws  java.nio.channels.ClosedChannelException              {@inheritDoc}
  * @throws  java.io.IOException                         {@inheritDoc}
  * @throws  java.lang.SecurityException
- *          If a security manager has been installed and its {@link java.lang.SecurityManager#checkListen SecurityManager#checkListen} method denies the
+ *          If a security manager has been installed and its {@link java.lang.SecurityManager#checkListen checkListen} method denies the
  *          operation
  *
  * @since 1.7
@@ -177,7 +177,7 @@ public final java.nio.channels.ServerSocketChannel bind(java.net.SocketAddress l
  * @throws  java.io.IOException
  *          If some other I/O error occurs
  * @throws  java.lang.SecurityException
- *          If a security manager has been installed and its {@link java.lang.SecurityManager#checkListen SecurityManager#checkListen} method denies the
+ *          If a security manager has been installed and its {@link java.lang.SecurityManager#checkListen checkListen} method denies the
  *          operation
  *
  * @since 1.7

@@ -50,7 +50,7 @@ protected SimpleFileVisitor() { throw new RuntimeException("Stub!"); }
 /**
  * Invoked for a directory before entries in the directory are visited.
  *
- * <p> Unless overridden, this method returns {@link java.nio.file.FileVisitResult#CONTINUE FileVisitResult#CONTINUE}.
+ * <p> Unless overridden, this method returns {@link java.nio.file.FileVisitResult#CONTINUE  CONTINUE}.
  */
 
 public java.nio.file.FileVisitResult preVisitDirectory(T dir, java.nio.file.attribute.BasicFileAttributes attrs) throws java.io.IOException { throw new RuntimeException("Stub!"); }
@@ -58,7 +58,7 @@ public java.nio.file.FileVisitResult preVisitDirectory(T dir, java.nio.file.attr
 /**
  * Invoked for a file in a directory.
  *
- * <p> Unless overridden, this method returns {@link java.nio.file.FileVisitResult#CONTINUE FileVisitResult#CONTINUE}.
+ * <p> Unless overridden, this method returns {@link java.nio.file.FileVisitResult#CONTINUE  CONTINUE}.
  */
 
 public java.nio.file.FileVisitResult visitFile(T file, java.nio.file.attribute.BasicFileAttributes attrs) throws java.io.IOException { throw new RuntimeException("Stub!"); }
@@ -76,7 +76,7 @@ public java.nio.file.FileVisitResult visitFileFailed(T file, java.io.IOException
  * Invoked for a directory after entries in the directory, and all of their
  * descendants, have been visited.
  *
- * <p> Unless overridden, this method returns {@link java.nio.file.FileVisitResult#CONTINUE FileVisitResult#CONTINUE} if the directory iteration completes without an I/O exception;
+ * <p> Unless overridden, this method returns {@link java.nio.file.FileVisitResult#CONTINUE  CONTINUE} if the directory iteration completes without an I/O exception;
  * otherwise this method re-throws the I/O exception that caused the iteration
  * of the directory to terminate prematurely.
  */

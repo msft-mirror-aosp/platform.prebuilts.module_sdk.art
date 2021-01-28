@@ -32,7 +32,7 @@ package java.nio.file.attribute;
  * that implement the Portable Operating System Interface (POSIX) family of
  * standards.
  *
- * <p> The POSIX attributes of a file are retrieved using a {@link java.nio.file.attribute.PosixFileAttributeView PosixFileAttributeView} by invoking its {@link java.nio.file.attribute.PosixFileAttributeView#readAttributes PosixFileAttributeView#readAttributes} method.
+ * <p> The POSIX attributes of a file are retrieved using a {@link java.nio.file.attribute.PosixFileAttributeView PosixFileAttributeView} by invoking its {@link java.nio.file.attribute.PosixFileAttributeView#readAttributes readAttributes} method.
  *
  * @since 1.7
  */
@@ -64,7 +64,7 @@ public java.nio.file.attribute.GroupPrincipal group();
  * Returns the permissions of the file. The file permissions are returned
  * as a set of {@link java.nio.file.attribute.PosixFilePermission PosixFilePermission} elements. The returned set is a
  * copy of the file permissions and is modifiable. This allows the result
- * to be modified and passed to the {@link java.nio.file.attribute.PosixFileAttributeView#setPermissions PosixFileAttributeView#setPermissions} method to update the file's permissions.
+ * to be modified and passed to the {@link java.nio.file.attribute.PosixFileAttributeView#setPermissions  setPermissions} method to update the file's permissions.
  *
  * @return  the file permissions
  *

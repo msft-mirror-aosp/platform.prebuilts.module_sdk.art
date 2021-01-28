@@ -212,13 +212,13 @@ public long toHours(long duration) { throw new RuntimeException("Stub!"); }
 public long toDays(long duration) { throw new RuntimeException("Stub!"); }
 
 /**
- * Performs a timed {@link java.lang.Object#wait(long,int) Object#wait(long, int)}
+ * Performs a timed {@link java.lang.Object#wait(long,int) Object.wait}
  * using this time unit.
  * This is a convenience method that converts timeout arguments
  * into the form required by the {@code Object.wait} method.
  *
  * <p>For example, you could implement a blocking {@code poll}
- * method (see {@link java.util.concurrent.BlockingQueue#poll BlockingQueue#poll})
+ * method (see {@link java.util.concurrent.BlockingQueue#poll BlockingQueue.poll})
  * using:
  *
  * <pre> {@code
@@ -239,7 +239,7 @@ public long toDays(long duration) { throw new RuntimeException("Stub!"); }
 public void timedWait(java.lang.Object obj, long timeout) throws java.lang.InterruptedException { throw new RuntimeException("Stub!"); }
 
 /**
- * Performs a timed {@link java.lang.Thread#join(long,int) Thread#join(long, int)}
+ * Performs a timed {@link java.lang.Thread#join(long,int) Thread.join}
  * using this time unit.
  * This is a convenience method that converts time arguments into the
  * form required by the {@code Thread.join} method.
@@ -253,7 +253,7 @@ public void timedWait(java.lang.Object obj, long timeout) throws java.lang.Inter
 public void timedJoin(java.lang.Thread thread, long timeout) throws java.lang.InterruptedException { throw new RuntimeException("Stub!"); }
 
 /**
- * Performs a {@link java.lang.Thread#sleep(long,int) Thread#sleep(long, int)} using
+ * Performs a {@link java.lang.Thread#sleep(long,int) Thread.sleep} using
  * this time unit.
  * This is a convenience method that converts time arguments into the
  * form required by the {@code Thread.sleep} method.

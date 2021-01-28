@@ -152,7 +152,7 @@ public java.time.temporal.ValueRange range();
  * Checks if this field represents a component of a date.
  * <p>
  * A field is date-based if it can be derived from
- * {@link java.time.temporal.ChronoField#EPOCH_DAY ChronoField#EPOCH_DAY}.
+ * {@link java.time.temporal.ChronoField#EPOCH_DAY EPOCH_DAY}.
  * Note that it is valid for both {@code isDateBased()} and {@code isTimeBased()}
  * to return false, such as when representing a field like minute-of-week.
  *
@@ -165,7 +165,7 @@ public boolean isDateBased();
  * Checks if this field represents a component of a time.
  * <p>
  * A field is time-based if it can be derived from
- * {@link java.time.temporal.ChronoField#NANO_OF_DAY ChronoField#NANO_OF_DAY}.
+ * {@link java.time.temporal.ChronoField#NANO_OF_DAY NANO_OF_DAY}.
  * Note that it is valid for both {@code isDateBased()} and {@code isTimeBased()}
  * to return false, such as when representing a field like minute-of-week.
  *
@@ -336,7 +336,7 @@ public <R extends java.time.temporal.Temporal> R adjustInto(R temporal, long new
  * <p>
  * For example, the {@code IsoFields} class contains the quarter-of-year
  * and day-of-quarter fields. The implementation of this method in that class
- * resolves the two fields plus the {@link java.time.temporal.ChronoField#YEAR ChronoField#YEAR} into a
+ * resolves the two fields plus the {@link java.time.temporal.ChronoField#YEAR YEAR} into a
  * complete {@code LocalDate}. The resolve method will remove all three
  * fields from the map before returning the {@code LocalDate}.
  * <p>

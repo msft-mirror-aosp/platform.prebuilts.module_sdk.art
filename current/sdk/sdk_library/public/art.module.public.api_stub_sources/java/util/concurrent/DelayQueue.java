@@ -40,7 +40,7 @@ import java.util.Iterator;
 import java.util.Collection;
 
 /**
- * An unbounded {@linkplain java.util.concurrent.BlockingQueue BlockingQueue} of
+ * An unbounded {@linkplain java.util.concurrent.BlockingQueue blocking queue} of
  * {@code Delayed} elements, in which an element can only be taken
  * when its delay has expired.  The <em>head</em> of the queue is that
  * {@code Delayed} element whose delay expired furthest in the

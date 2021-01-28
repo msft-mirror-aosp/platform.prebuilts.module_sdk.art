@@ -105,7 +105,7 @@ private YearMonth() { throw new RuntimeException("Stub!"); }
 /**
  * Obtains the current year-month from the system clock in the default time-zone.
  * <p>
- * This will query the {@link java.time.Clock#systemDefaultZone() Clock#systemDefaultZone()} in the default
+ * This will query the {@link java.time.Clock#systemDefaultZone() system clock} in the default
  * time-zone to obtain the current year-month.
  * <p>
  * Using this method will prevent the ability to use an alternate clock for testing
@@ -119,7 +119,7 @@ public static java.time.YearMonth now() { throw new RuntimeException("Stub!"); }
 /**
  * Obtains the current year-month from the system clock in the specified time-zone.
  * <p>
- * This will query the {@link java.time.Clock#system(java.time.ZoneId) Clock#system(ZoneId)} to obtain the current year-month.
+ * This will query the {@link java.time.Clock#system(java.time.ZoneId) system clock} to obtain the current year-month.
  * Specifying the time-zone avoids dependence on the default time-zone.
  * <p>
  * Using this method will prevent the ability to use an alternate clock for testing
@@ -136,7 +136,7 @@ public static java.time.YearMonth now(java.time.ZoneId zone) { throw new Runtime
  * <p>
  * This will query the specified clock to obtain the current year-month.
  * Using this method allows the use of an alternate clock for testing.
- * The alternate clock may be introduced using {@link java.time.Clock Clock}.
+ * The alternate clock may be introduced using {@link java.time.Clock dependency injection}.
  *
  * @param clock  the clock to use, not null
  * @return the current year-month, not null
@@ -173,8 +173,8 @@ public static java.time.YearMonth of(int year, int month) { throw new RuntimeExc
  * A {@code TemporalAccessor} represents an arbitrary set of date and time information,
  * which this factory converts to an instance of {@code YearMonth}.
  * <p>
- * The conversion extracts the {@link java.time.temporal.ChronoField#YEAR ChronoField#YEAR} and
- * {@link java.time.temporal.ChronoField#MONTH_OF_YEAR ChronoField#MONTH_OF_YEAR} fields.
+ * The conversion extracts the {@link java.time.temporal.ChronoField#YEAR YEAR} and
+ * {@link java.time.temporal.ChronoField#MONTH_OF_YEAR MONTH_OF_YEAR} fields.
  * The extraction is only permitted if the temporal object has an ISO
  * chronology, or can be converted to a {@code LocalDate}.
  * <p>
@@ -388,7 +388,7 @@ public int getMonthValue() { throw new RuntimeException("Stub!"); }
  * This method returns the enum {@link java.time.Month Month} for the month.
  * This avoids confusion as to what {@code int} values mean.
  * If you need access to the primitive {@code int} value then the enum
- * provides the {@link java.time.Month#getValue() Month#getValue()}.
+ * provides the {@link java.time.Month#getValue() int value}.
  *
  * @return the month-of-year, not null
  * @see #getMonthValue()

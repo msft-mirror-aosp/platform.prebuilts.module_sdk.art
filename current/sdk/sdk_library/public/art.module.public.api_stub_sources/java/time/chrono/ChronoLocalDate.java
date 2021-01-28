@@ -584,7 +584,7 @@ public default java.time.chrono.ChronoLocalDateTime<?> atTime(java.time.LocalTim
 /**
  * Converts this date to the Epoch Day.
  * <p>
- * The {@link java.time.temporal.ChronoField#EPOCH_DAY ChronoField#EPOCH_DAY} is a simple
+ * The {@link java.time.temporal.ChronoField#EPOCH_DAY Epoch Day count} is a simple
  * incrementing count of days where day 0 is 1970-01-01 (ISO).
  * This definition is the same for all chronologies, enabling conversion.
  * <p>

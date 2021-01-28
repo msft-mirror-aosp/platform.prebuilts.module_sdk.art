@@ -191,7 +191,7 @@ public static java.time.Month of(int month) { throw new RuntimeException("Stub!"
  * A {@code TemporalAccessor} represents an arbitrary set of date and time information,
  * which this factory converts to an instance of {@code Month}.
  * <p>
- * The conversion extracts the {@link java.time.temporal.ChronoField#MONTH_OF_YEAR ChronoField#MONTH_OF_YEAR} field.
+ * The conversion extracts the {@link java.time.temporal.ChronoField#MONTH_OF_YEAR MONTH_OF_YEAR} field.
  * The extraction is only permitted if the temporal object has an ISO
  * chronology, or can be converted to a {@code LocalDate}.
  * <p>
@@ -239,7 +239,7 @@ public java.lang.String getDisplayName(java.time.format.TextStyle style, java.ut
  * If false, then calling the {@link #range(java.time.temporal.TemporalField) range} and
  * {@link #get(java.time.temporal.TemporalField) get} methods will throw an exception.
  * <p>
- * If the field is {@link java.time.temporal.ChronoField#MONTH_OF_YEAR ChronoField#MONTH_OF_YEAR} then
+ * If the field is {@link java.time.temporal.ChronoField#MONTH_OF_YEAR MONTH_OF_YEAR} then
  * this method returns true.
  * All other {@code ChronoField} instances will return false.
  * <p>
@@ -262,7 +262,7 @@ public boolean isSupported(java.time.temporal.TemporalField field) { throw new R
  * If it is not possible to return the range, because the field is not supported
  * or for some other reason, an exception is thrown.
  * <p>
- * If the field is {@link java.time.temporal.ChronoField#MONTH_OF_YEAR ChronoField#MONTH_OF_YEAR} then the
+ * If the field is {@link java.time.temporal.ChronoField#MONTH_OF_YEAR MONTH_OF_YEAR} then the
  * range of the month-of-year, from 1 to 12, will be returned.
  * All other {@code ChronoField} instances will throw an {@code UnsupportedTemporalTypeException}.
  * <p>
@@ -287,7 +287,7 @@ public java.time.temporal.ValueRange range(java.time.temporal.TemporalField fiel
  * If it is not possible to return the value, because the field is not supported
  * or for some other reason, an exception is thrown.
  * <p>
- * If the field is {@link java.time.temporal.ChronoField#MONTH_OF_YEAR ChronoField#MONTH_OF_YEAR} then the
+ * If the field is {@link java.time.temporal.ChronoField#MONTH_OF_YEAR MONTH_OF_YEAR} then the
  * value of the month-of-year, from 1 to 12, will be returned.
  * All other {@code ChronoField} instances will throw an {@code UnsupportedTemporalTypeException}.
  * <p>
@@ -314,7 +314,7 @@ public int get(java.time.temporal.TemporalField field) { throw new RuntimeExcept
  * If it is not possible to return the value, because the field is not supported
  * or for some other reason, an exception is thrown.
  * <p>
- * If the field is {@link java.time.temporal.ChronoField#MONTH_OF_YEAR ChronoField#MONTH_OF_YEAR} then the
+ * If the field is {@link java.time.temporal.ChronoField#MONTH_OF_YEAR MONTH_OF_YEAR} then the
  * value of the month-of-year, from 1 to 12, will be returned.
  * All other {@code ChronoField} instances will throw an {@code UnsupportedTemporalTypeException}.
  * <p>

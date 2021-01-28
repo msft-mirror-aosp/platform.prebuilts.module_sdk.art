@@ -42,7 +42,7 @@ import java.io.IOException;
  *
  * <p> A channel that implements this interface is also <i>interruptible:</i>
  * If a thread is blocked in an I/O operation on an interruptible channel then
- * another thread may invoke the blocked thread's {@link java.lang.Thread#interrupt() Thread#interrupt()} method.  This will cause the channel to be closed, the blocked
+ * another thread may invoke the blocked thread's {@link java.lang.Thread#interrupt()  interrupt} method.  This will cause the channel to be closed, the blocked
  * thread to receive a {@link java.nio.channels.ClosedByInterruptException ClosedByInterruptException}, and the blocked
  * thread's interrupt status to be set.
  *
@@ -70,7 +70,7 @@ public interface InterruptibleChannel extends java.nio.channels.Channel {
  * <p> Any thread currently blocked in an I/O operation upon this channel
  * will receive an {@link java.nio.channels.AsynchronousCloseException AsynchronousCloseException}.
  *
- * <p> This method otherwise behaves exactly as specified by the {@link java.nio.channels.Channel#close Channel#close} interface.  </p>
+ * <p> This method otherwise behaves exactly as specified by the {@link java.nio.channels.Channel#close Channel} interface.  </p>
  *
  * @throws  java.io.IOException  If an I/O error occurs
  */

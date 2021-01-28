@@ -49,12 +49,12 @@ import java.io.IOException;
  * which include this certificate.
  * <p>
  * A {@code Set} of {@code PolicyQualifierInfo} objects are returned
- * by the {@link java.security.cert.PolicyNode#getPolicyQualifiers PolicyNode#getPolicyQualifiers}
+ * by the {@link java.security.cert.PolicyNode#getPolicyQualifiers PolicyNode.getPolicyQualifiers}
  * method. This allows applications with specific policy requirements to
  * process and validate each policy qualifier. Applications that need to
  * process policy qualifiers should explicitly set the
  * {@code policyQualifiersRejected} flag to false (by calling the
- * {@link java.security.cert.PKIXParameters#setPolicyQualifiersRejected PKIXParameters#setPolicyQualifiersRejected} method) before validating
+ * {@link java.security.cert.PKIXParameters#setPolicyQualifiersRejected  PKIXParameters.setPolicyQualifiersRejected} method) before validating
  * a certification path.
  *
  * <p>Note that the PKIX certification path validation algorithm specifies

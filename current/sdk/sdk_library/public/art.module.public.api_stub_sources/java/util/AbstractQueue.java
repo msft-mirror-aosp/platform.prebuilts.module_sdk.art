@@ -49,7 +49,7 @@ package java.util;
  *
  * <p>A {@code Queue} implementation that extends this class must
  * minimally define a method {@link java.util.Queue#offer Queue#offer} which does not permit
- * insertion of {@code null} elements, along with methods {@link java.util.Queue#peek Queue#peek}, {@link java.util.Queue#poll Queue#poll}, {@link java.util.Collection#size Collection#size}, and
+ * insertion of {@code null} elements, along with methods {@link java.util.Queue#peek  }, {@link java.util.Queue#poll Queue#poll}, {@link java.util.Collection#size Collection#size}, and
  * {@link java.util.Collection#iterator Collection#iterator}.  Typically, additional methods will be
  * overridden as well.  If these requirements cannot be met, consider
  * instead subclassing {@link java.util.AbstractCollection AbstractCollection}.
