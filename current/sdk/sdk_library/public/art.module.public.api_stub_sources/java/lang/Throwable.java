@@ -52,7 +52,7 @@ import java.util.*;
  * <p>A throwable contains a snapshot of the execution stack of its
  * thread at the time it was created. It can also contain a message
  * string that gives more information about the error. Over time, a
- * throwable can {@linkplain java.lang.Throwable#addSuppressed Throwable#addSuppressed} other
+ * throwable can {@linkplain java.lang.Throwable#addSuppressed suppress} other
  * throwables from being propagated.  Finally, the throwable can also
  * contain a <i>cause</i>: another throwable that caused this
  * throwable to be constructed.  The recording of this causal information
@@ -141,7 +141,7 @@ public Throwable() { throw new RuntimeException("Stub!"); }
  *          later retrieval by the {@link #getMessage()} method.
  */
 
-public Throwable(@android.annotation.Nullable java.lang.String message) { throw new RuntimeException("Stub!"); }
+public Throwable(@androidx.annotation.RecentlyNullable java.lang.String message) { throw new RuntimeException("Stub!"); }
 
 /**
  * Constructs a new throwable with the specified detail message and
@@ -161,7 +161,7 @@ public Throwable(@android.annotation.Nullable java.lang.String message) { throw 
  * @since  1.4
  */
 
-public Throwable(@android.annotation.Nullable java.lang.String message, @android.annotation.Nullable java.lang.Throwable cause) { throw new RuntimeException("Stub!"); }
+public Throwable(@androidx.annotation.RecentlyNullable java.lang.String message, @androidx.annotation.RecentlyNullable java.lang.Throwable cause) { throw new RuntimeException("Stub!"); }
 
 /**
  * Constructs a new throwable with the specified cause and a detail
@@ -181,7 +181,7 @@ public Throwable(@android.annotation.Nullable java.lang.String message, @android
  * @since  1.4
  */
 
-public Throwable(@android.annotation.Nullable java.lang.Throwable cause) { throw new RuntimeException("Stub!"); }
+public Throwable(@androidx.annotation.RecentlyNullable java.lang.Throwable cause) { throw new RuntimeException("Stub!"); }
 
 /**
  * Constructs a new throwable with the specified detail message,
@@ -225,7 +225,7 @@ public Throwable(@android.annotation.Nullable java.lang.Throwable cause) { throw
  * @since 1.7
  */
 
-protected Throwable(@android.annotation.Nullable java.lang.String message, @android.annotation.Nullable java.lang.Throwable cause, boolean enableSuppression, boolean writableStackTrace) { throw new RuntimeException("Stub!"); }
+protected Throwable(@androidx.annotation.RecentlyNullable java.lang.String message, @androidx.annotation.RecentlyNullable java.lang.Throwable cause, boolean enableSuppression, boolean writableStackTrace) { throw new RuntimeException("Stub!"); }
 
 /**
  * Returns the detail message string of this throwable.
@@ -234,7 +234,7 @@ protected Throwable(@android.annotation.Nullable java.lang.String message, @andr
  *          (which may be {@code null}).
  */
 
-@android.annotation.Nullable
+@androidx.annotation.RecentlyNullable
 public java.lang.String getMessage() { throw new RuntimeException("Stub!"); }
 
 /**
@@ -248,7 +248,7 @@ public java.lang.String getMessage() { throw new RuntimeException("Stub!"); }
  * @since   JDK1.1
  */
 
-@android.annotation.Nullable
+@androidx.annotation.RecentlyNullable
 public java.lang.String getLocalizedMessage() { throw new RuntimeException("Stub!"); }
 
 /**
@@ -272,7 +272,7 @@ public java.lang.String getLocalizedMessage() { throw new RuntimeException("Stub
  * @since 1.4
  */
 
-@android.annotation.Nullable
+@androidx.annotation.RecentlyNullable
 public synchronized java.lang.Throwable getCause() { throw new RuntimeException("Stub!"); }
 
 /**
@@ -312,14 +312,14 @@ public synchronized java.lang.Throwable getCause() { throw new RuntimeException(
  * @since  1.4
  */
 
-@android.annotation.NonNull
-public synchronized java.lang.Throwable initCause(@android.annotation.Nullable java.lang.Throwable cause) { throw new RuntimeException("Stub!"); }
+@androidx.annotation.RecentlyNonNull
+public synchronized java.lang.Throwable initCause(@androidx.annotation.RecentlyNullable java.lang.Throwable cause) { throw new RuntimeException("Stub!"); }
 
 /**
  * Returns a short description of this throwable.
  * The result is the concatenation of:
  * <ul>
- * <li> the {@linkplain java.lang.Class#getName() Class#getName()} of the class of this object
+ * <li> the {@linkplain java.lang.Class#getName() name} of the class of this object
  * <li> ": " (a colon and a space)
  * <li> the result of invoking this object's {@link #getLocalizedMessage}
  *      method
@@ -330,7 +330,7 @@ public synchronized java.lang.Throwable initCause(@android.annotation.Nullable j
  * @return a string representation of this throwable.
  */
 
-@android.annotation.NonNull
+@androidx.annotation.RecentlyNonNull
 public java.lang.String toString() { throw new RuntimeException("Stub!"); }
 
 /**
@@ -491,7 +491,7 @@ public void printStackTrace() { throw new RuntimeException("Stub!"); }
  * @param s {@code PrintStream} to use for output
  */
 
-public void printStackTrace(@android.annotation.NonNull java.io.PrintStream s) { throw new RuntimeException("Stub!"); }
+public void printStackTrace(@androidx.annotation.RecentlyNonNull java.io.PrintStream s) { throw new RuntimeException("Stub!"); }
 
 /**
  * Prints this throwable and its backtrace to the specified
@@ -501,20 +501,20 @@ public void printStackTrace(@android.annotation.NonNull java.io.PrintStream s) {
  * @since   JDK1.1
  */
 
-public void printStackTrace(@android.annotation.NonNull java.io.PrintWriter s) { throw new RuntimeException("Stub!"); }
+public void printStackTrace(@androidx.annotation.RecentlyNonNull java.io.PrintWriter s) { throw new RuntimeException("Stub!"); }
 
 /**
  * Fills in the execution stack trace. This method records within this
  * {@code Throwable} object information about the current state of
  * the stack frames for the current thread.
  *
- * <p>If the stack trace of this {@code Throwable} {@linkplain java.lang.Throwable#Throwable(java.lang.String,java.lang.Throwable,boolean,boolean) Throwable#Throwable(String, Throwable, boolean, boolean)}, calling this method has no effect.
+ * <p>If the stack trace of this {@code Throwable} {@linkplain java.lang.Throwable#Throwable(java.lang.String,java.lang.Throwable,boolean,boolean)  writable}, calling this method has no effect.
  *
  * @return  a reference to this {@code Throwable} instance.
  * @see     java.lang.Throwable#printStackTrace()
  */
 
-@android.annotation.NonNull
+@androidx.annotation.RecentlyNonNull
 public synchronized java.lang.Throwable fillInStackTrace() { throw new RuntimeException("Stub!"); }
 
 /**
@@ -542,7 +542,7 @@ public synchronized java.lang.Throwable fillInStackTrace() { throw new RuntimeEx
  * @since  1.4
  */
 
-@android.annotation.NonNull
+@androidx.annotation.RecentlyNonNull
 public java.lang.StackTraceElement[] getStackTrace() { throw new RuntimeException("Stub!"); }
 
 /**
@@ -556,7 +556,7 @@ public java.lang.StackTraceElement[] getStackTrace() { throw new RuntimeExceptio
  * when a throwable is constructed or deserialized when a throwable is
  * read from a serialization stream.
  *
- * <p>If the stack trace of this {@code Throwable} {@linkplain java.lang.Throwable#Throwable(java.lang.String,java.lang.Throwable,boolean,boolean) Throwable#Throwable(String, Throwable, boolean, boolean)}, calling this method has no effect other than
+ * <p>If the stack trace of this {@code Throwable} {@linkplain java.lang.Throwable#Throwable(java.lang.String,java.lang.Throwable,boolean,boolean)  writable}, calling this method has no effect other than
  * validating its argument.
  *
  * @param   stackTrace the stack trace elements to be associated with
@@ -572,7 +572,7 @@ public java.lang.StackTraceElement[] getStackTrace() { throw new RuntimeExceptio
  * @since  1.4
  */
 
-public void setStackTrace(@android.annotation.NonNull java.lang.StackTraceElement[] stackTrace) { throw new RuntimeException("Stub!"); }
+public void setStackTrace(@androidx.annotation.RecentlyNonNull java.lang.StackTraceElement[] stackTrace) { throw new RuntimeException("Stub!"); }
 
 /**
  * Appends the specified exception to the exceptions that were
@@ -625,7 +625,7 @@ public void setStackTrace(@android.annotation.NonNull java.lang.StackTraceElemen
  * @since 1.7
  */
 
-public final synchronized void addSuppressed(@android.annotation.NonNull java.lang.Throwable exception) { throw new RuntimeException("Stub!"); }
+public final synchronized void addSuppressed(@androidx.annotation.RecentlyNonNull java.lang.Throwable exception) { throw new RuntimeException("Stub!"); }
 
 /**
  * Returns an array containing all of the exceptions that were
@@ -643,7 +643,7 @@ public final synchronized void addSuppressed(@android.annotation.NonNull java.la
  * @since 1.7
  */
 
-@android.annotation.NonNull
+@androidx.annotation.RecentlyNonNull
 public final synchronized java.lang.Throwable[] getSuppressed() { throw new RuntimeException("Stub!"); }
 }
 

@@ -72,9 +72,9 @@ import java.util.Map;
  * <i>null output stream</i>, for which:
  *
  * <ul>
- * <li>the {@link java.io.OutputStream#write(int) OutputStream#write(int)} methods always
+ * <li>the {@link java.io.OutputStream#write(int) write} methods always
  * throw {@code IOException}
- * <li>the {@link java.io.OutputStream#close() OutputStream#close()} method does nothing
+ * <li>the {@link java.io.OutputStream#close() close} method does nothing
  * </ul>
  *
  * <li><a name="redirect-output">a destination for <i>standard output</i>
@@ -90,17 +90,17 @@ import java.util.Map;
  * stream</i>, for which:
  *
  * <ul>
- * <li>the {@link java.io.InputStream#read() InputStream#read()} methods always return
+ * <li>the {@link java.io.InputStream#read() read} methods always return
  * {@code -1}
- * <li>the {@link java.io.InputStream#available() InputStream#available()} method always returns
+ * <li>the {@link java.io.InputStream#available() available} method always returns
  * {@code 0}
- * <li>the {@link java.io.InputStream#close() InputStream#close()} method does nothing
+ * <li>the {@link java.io.InputStream#close() close} method does nothing
  * </ul>
  *
  * <li>a <i>redirectErrorStream</i> property.  Initially, this property
  * is {@code false}, meaning that the standard output and error
  * output of a subprocess are sent to two separate streams, which can
- * be accessed using the {@link java.lang.Process#getInputStream() Process#getInputStream()} and {@link java.lang.Process#getErrorStream() Process#getErrorStream()} methods.
+ * be accessed using the {@link java.lang.Process#getInputStream() Process#getInputStream()} and {@link java.lang.Process#getErrorStream()  } methods.
  *
  * <p>If the value is set to {@code true}, then:
  *
@@ -261,7 +261,7 @@ public java.util.List<java.lang.String> command() { throw new RuntimeException("
  * contain independent process environments, so changes to the
  * returned map will never be reflected in any other
  * {@code ProcessBuilder} instance or the values returned by
- * {@link java.lang.System#getenv System#getenv}.
+ * {@link java.lang.System#getenv System.getenv}.
  *
  * <p>If the system does not support environment variables, an
  * empty map is returned.
@@ -294,7 +294,7 @@ public java.util.List<java.lang.String> command() { throw new RuntimeException("
  * <p>The returned map is typically case-sensitive on all platforms.
  *
  * <p>If a security manager exists, its
- * {@link java.lang.SecurityManager#checkPermission SecurityManager#checkPermission} method
+ * {@link java.lang.SecurityManager#checkPermission checkPermission} method
  * is called with a
  * {@link java.lang.RuntimePermission RuntimePermission}{@code ("getenv.*")} permission.
  * This may result in a {@link java.lang.SecurityException SecurityException} being thrown.
@@ -307,7 +307,7 @@ public java.util.List<java.lang.String> command() { throw new RuntimeException("
  *
  * @throws java.lang.SecurityException
  *         if a security manager exists and its
- *         {@link java.lang.SecurityManager#checkPermission SecurityManager#checkPermission}
+ *         {@link java.lang.SecurityManager#checkPermission checkPermission}
  *         method doesn't allow access to the process environment
  *
  * @see    java.lang.Runtime#exec(String[],String[],java.io.File)
@@ -353,7 +353,7 @@ public java.lang.ProcessBuilder directory(java.io.File directory) { throw new Ru
  * Subprocesses subsequently started by this object's {@link #start()}
  * method obtain their standard input from this source.
  *
- * <p>If the source is {@link java.lang.ProcessBuilder.Redirect#PIPE Redirect#PIPE}
+ * <p>If the source is {@link java.lang.ProcessBuilder.Redirect#PIPE Redirect.PIPE}
  * (the initial value), then the standard input of a
  * subprocess can be written to using the output stream
  * returned by {@link java.lang.Process#getOutputStream() Process#getOutputStream()}.
@@ -379,9 +379,9 @@ public java.lang.ProcessBuilder redirectInput(java.lang.ProcessBuilder.Redirect 
  * Subprocesses subsequently started by this object's {@link #start()}
  * method send their standard output to this destination.
  *
- * <p>If the destination is {@link java.lang.ProcessBuilder.Redirect#PIPE Redirect#PIPE}
+ * <p>If the destination is {@link java.lang.ProcessBuilder.Redirect#PIPE Redirect.PIPE}
  * (the initial value), then the standard output of a subprocess
- * can be read using the input stream returned by {@link java.lang.Process#getInputStream() Process#getInputStream()}.
+ * can be read using the input stream returned by {@link java.lang.Process#getInputStream()  }.
  * If the destination is set to any other value, then
  * {@link java.lang.Process#getInputStream() Process#getInputStream()} will return a
  * <a href="#redirect-output">null input stream</a>.
@@ -403,9 +403,9 @@ public java.lang.ProcessBuilder redirectOutput(java.lang.ProcessBuilder.Redirect
  * Subprocesses subsequently started by this object's {@link #start()}
  * method send their standard error to this destination.
  *
- * <p>If the destination is {@link java.lang.ProcessBuilder.Redirect#PIPE Redirect#PIPE}
+ * <p>If the destination is {@link java.lang.ProcessBuilder.Redirect#PIPE Redirect.PIPE}
  * (the initial value), then the error output of a subprocess
- * can be read using the input stream returned by {@link java.lang.Process#getErrorStream() Process#getErrorStream()}.
+ * can be read using the input stream returned by {@link java.lang.Process#getErrorStream()  }.
  * If the destination is set to any other value, then
  * {@link java.lang.Process#getErrorStream() Process#getErrorStream()} will return a
  * <a href="#redirect-output">null input stream</a>.
@@ -478,7 +478,7 @@ public java.lang.ProcessBuilder redirectError(java.io.File file) { throw new Run
  *
  * Subprocesses subsequently started by this object's {@link #start()}
  * method obtain their standard input from this source.
- * The initial value is {@link java.lang.ProcessBuilder.Redirect#PIPE Redirect#PIPE}.
+ * The initial value is {@link java.lang.ProcessBuilder.Redirect#PIPE Redirect.PIPE}.
  *
  * @return this process builder's standard input source
  * @since  1.7
@@ -491,7 +491,7 @@ public java.lang.ProcessBuilder.Redirect redirectInput() { throw new RuntimeExce
  *
  * Subprocesses subsequently started by this object's {@link #start()}
  * method redirect their standard output to this destination.
- * The initial value is {@link java.lang.ProcessBuilder.Redirect#PIPE Redirect#PIPE}.
+ * The initial value is {@link java.lang.ProcessBuilder.Redirect#PIPE Redirect.PIPE}.
  *
  * @return this process builder's standard output destination
  * @since  1.7
@@ -504,7 +504,7 @@ public java.lang.ProcessBuilder.Redirect redirectOutput() { throw new RuntimeExc
  *
  * Subprocesses subsequently started by this object's {@link #start()}
  * method redirect their standard error to this destination.
- * The initial value is {@link java.lang.ProcessBuilder.Redirect#PIPE Redirect#PIPE}.
+ * The initial value is {@link java.lang.ProcessBuilder.Redirect#PIPE Redirect.PIPE}.
  *
  * @return this process builder's standard error destination
  * @since  1.7
@@ -590,7 +590,7 @@ public java.lang.ProcessBuilder redirectErrorStream(boolean redirectErrorStream)
  * settings beyond those in the process builder's {@link #environment()}.
  *
  * <p>If there is a security manager, its
- * {@link java.lang.SecurityManager#checkExec SecurityManager#checkExec}
+ * {@link java.lang.SecurityManager#checkExec checkExec}
  * method is called with the first component of this object's
  * {@code command} array as its argument. This may result in
  * a {@link java.lang.SecurityException SecurityException} being thrown.
@@ -623,20 +623,20 @@ public java.lang.ProcessBuilder redirectErrorStream(boolean redirectErrorStream)
  *         <ul>
  *
  *         <li>its
- *         {@link java.lang.SecurityManager#checkExec SecurityManager#checkExec}
+ *         {@link java.lang.SecurityManager#checkExec checkExec}
  *         method doesn't allow creation of the subprocess, or
  *
  *         <li>the standard input to the subprocess was
  *         {@linkplain #redirectInput redirected from a file}
  *         and the security manager's
- *         {@link java.lang.SecurityManager#checkRead SecurityManager#checkRead} method
+ *         {@link java.lang.SecurityManager#checkRead checkRead} method
  *         denies read access to the file, or
  *
  *         <li>the standard output or standard error of the
  *         subprocess was
  *         {@linkplain #redirectOutput redirected to a file}
  *         and the security manager's
- *         {@link java.lang.SecurityManager#checkWrite SecurityManager#checkWrite} method
+ *         {@link java.lang.SecurityManager#checkWrite checkWrite} method
  *         denies write access to the file
  *
  *         </ul>
@@ -657,11 +657,11 @@ public java.lang.Process start() throws java.io.IOException { throw new RuntimeE
  * <li>the special value {@link #PIPE Redirect.PIPE}
  * <li>the special value {@link #INHERIT Redirect.INHERIT}
  * <li>a redirection to read from a file, created by an invocation of
- *     {@link java.lang.ProcessBuilder.Redirect#from Redirect#from}
+ *     {@link java.lang.ProcessBuilder.Redirect#from Redirect.from(File)}
  * <li>a redirection to write to a file,  created by an invocation of
- *     {@link java.lang.ProcessBuilder.Redirect#to Redirect#to}
+ *     {@link java.lang.ProcessBuilder.Redirect#to Redirect.to(File)}
  * <li>a redirection to append to a file, created by an invocation of
- *     {@link java.lang.ProcessBuilder.Redirect#appendTo Redirect#appendTo}
+ *     {@link java.lang.ProcessBuilder.Redirect#appendTo Redirect.appendTo(File)}
  * </ul>
  *
  * <p>Each of the above categories has an associated unique
@@ -801,30 +801,30 @@ static { PIPE = null; }
 @SuppressWarnings({"unchecked", "deprecation", "all"})
 public enum Type {
 /**
- * The type of {@link java.lang.ProcessBuilder.Redirect#PIPE Redirect#PIPE}.
+ * The type of {@link java.lang.ProcessBuilder.Redirect#PIPE Redirect.PIPE}.
  */
 
 PIPE,
 /**
- * The type of {@link java.lang.ProcessBuilder.Redirect#INHERIT Redirect#INHERIT}.
+ * The type of {@link java.lang.ProcessBuilder.Redirect#INHERIT Redirect.INHERIT}.
  */
 
 INHERIT,
 /**
  * The type of redirects returned from
- * {@link java.lang.ProcessBuilder.Redirect#from Redirect#from}.
+ * {@link java.lang.ProcessBuilder.Redirect#from Redirect.from(File)}.
  */
 
 READ,
 /**
  * The type of redirects returned from
- * {@link java.lang.ProcessBuilder.Redirect#to Redirect#to}.
+ * {@link java.lang.ProcessBuilder.Redirect#to Redirect.to(File)}.
  */
 
 WRITE,
 /**
  * The type of redirects returned from
- * {@link java.lang.ProcessBuilder.Redirect#appendTo Redirect#appendTo}.
+ * {@link java.lang.ProcessBuilder.Redirect#appendTo Redirect.appendTo(File)}.
  */
 
 APPEND;

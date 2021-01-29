@@ -56,7 +56,7 @@ import java.util.Date;
  * can be specified (by calling {@link #setInitialPolicies setInitialPolicies}
  * or {@link #setDate setDate}, for instance) and then the
  * {@code PKIXParameters} is passed along with the {@code CertPath}
- * to be validated to {@link java.security.cert.CertPathValidator#validate CertPathValidator#validate}.
+ * to be validated to {@link java.security.cert.CertPathValidator#validate  CertPathValidator.validate}.
  * <p>
  * Any parameter that is not set (or is set to {@code null}) will
  * be set to the default value for that parameter. The default value for the

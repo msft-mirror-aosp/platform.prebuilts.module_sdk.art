@@ -43,7 +43,7 @@ import java.io.IOException;
  * several criteria are enabled (by calling {@link #setIssuers setIssuers}
  * or {@link #setDateAndTime setDateAndTime}, for instance) and then the
  * {@code X509CRLSelector} is passed to
- * {@link java.security.cert.CertStore#getCRLs CertStore#getCRLs} or some similar
+ * {@link java.security.cert.CertStore#getCRLs CertStore.getCRLs} or some similar
  * method.
  * <p>
  * Please refer to <a href="http://www.ietf.org/rfc/rfc3280.txt">RFC 3280:

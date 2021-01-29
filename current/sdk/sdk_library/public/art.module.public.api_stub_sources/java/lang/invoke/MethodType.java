@@ -34,8 +34,8 @@ import java.util.List;
  * and expected  by a method handle caller.  Method types must be properly
  * matched between a method handle and all its callers,
  * and the JVM's operations enforce this matching at, specifically
- * during calls to {@link java.lang.invoke.MethodHandle#invokeExact MethodHandle#invokeExact}
- * and {@link java.lang.invoke.MethodHandle#invoke MethodHandle#invoke}, and during execution
+ * during calls to {@link java.lang.invoke.MethodHandle#invokeExact MethodHandle.invokeExact}
+ * and {@link java.lang.invoke.MethodHandle#invoke MethodHandle.invoke}, and during execution
  * of {@code invokedynamic} instructions.
  * <p>
  * The structure is a return type accompanied by any number of parameter types.

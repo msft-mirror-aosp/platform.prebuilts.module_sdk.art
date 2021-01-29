@@ -227,7 +227,7 @@ public static java.time.ZoneId of(java.lang.String zoneId, java.util.Map<java.la
  * <li>If the zone ID starts with 'UTC+', 'UTC-', 'GMT+', 'GMT-', 'UT+' or 'UT-'
  *  then the ID is a prefixed offset-based ID. The ID is split in two, with
  *  a two or three letter prefix and a suffix starting with the sign.
- *  The suffix is parsed as a {@link java.time.ZoneOffset#of(java.lang.String) ZoneOffset#of(String)}.
+ *  The suffix is parsed as a {@link java.time.ZoneOffset#of(java.lang.String) ZoneOffset}.
  *  The result will be a {@code ZoneId} with the specified UTC/GMT/UT prefix
  *  and the normalized offset ID as per {@link java.time.ZoneOffset#getId() ZoneOffset#getId()}.
  *  The rules of the returned {@code ZoneId} will be equivalent to the

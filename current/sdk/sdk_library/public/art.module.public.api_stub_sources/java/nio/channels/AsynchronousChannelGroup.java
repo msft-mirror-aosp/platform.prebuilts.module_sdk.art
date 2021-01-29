@@ -35,9 +35,9 @@ import java.util.concurrent.ExecutorService;
  * A grouping of asynchronous channels for the purpose of resource sharing.
  *
  * <p> An asynchronous channel group encapsulates the mechanics required to
- * handle the completion of I/O operations initiated by {@link java.nio.channels.AsynchronousChannel AsynchronousChannel} that are bound to the group. A group has an associated
+ * handle the completion of I/O operations initiated by {@link java.nio.channels.AsynchronousChannel  asynchronous channels} that are bound to the group. A group has an associated
  * thread pool to which tasks are submitted to handle I/O events and dispatch to
- * {@link java.nio.channels.CompletionHandler CompletionHandler} that consume the result of
+ * {@link java.nio.channels.CompletionHandler completion-handlers} that consume the result of
  * asynchronous operations performed on channels in the group. In addition to
  * handling I/O events, the pooled threads may also execute other tasks required
  * to support the execution of asynchronous I/O operations.
@@ -57,7 +57,7 @@ import java.util.concurrent.ExecutorService;
  * may be configured by means of system properties defined in the table below.
  * Where the {@link java.util.concurrent.ThreadFactory ThreadFactory} for the
  * default group is not configured then the pooled threads of the default group
- * are {@link java.lang.Thread#isDaemon Thread#isDaemon} threads.
+ * are {@link java.lang.Thread#isDaemon daemon} threads.
  *
  * <table border summary="System properties">
  *   <tr>
@@ -99,7 +99,7 @@ import java.util.concurrent.ExecutorService;
  * be invoked directly by the initiating thread. To avoid stack overflow, an
  * implementation may impose a limit as to the number of activations on the
  * thread stack. Some I/O operations may prohibit invoking the completion
- * handler directly by the initiating thread (see {@link java.nio.channels.AsynchronousServerSocketChannel#accept(java.lang.Object,java.nio.channels.CompletionHandler) AsynchronousServerSocketChannel#accept(Object,CompletionHandler)}).
+ * handler directly by the initiating thread (see {@link java.nio.channels.AsynchronousServerSocketChannel#accept(java.lang.Object,java.nio.channels.CompletionHandler) accept}).
  *
  * <a name="shutdown"></a><h2>Shutdown and Termination</h2>
  *
@@ -119,7 +119,7 @@ import java.util.concurrent.ExecutorService;
  * <p> The {@link #shutdownNow() shutdownNow} method can be used to initiate a
  * <em>forceful shutdown</em> of the group. In addition to the actions performed
  * by an orderly shutdown, the {@code shutdownNow} method closes all open channels
- * in the group as if by invoking the {@link java.nio.channels.AsynchronousChannel#close AsynchronousChannel#close}
+ * in the group as if by invoking the {@link java.nio.channels.AsynchronousChannel#close close}
  * method.
  *
  * @since 1.7
@@ -157,7 +157,7 @@ public final java.nio.channels.spi.AsynchronousChannelProvider provider() { thro
  * completion results for operations initiated on asynchronous channels in
  * the group.
  *
- * <p> The group is created by invoking the {@link java.nio.channels.spi.AsynchronousChannelProvider#openAsynchronousChannelGroup(int,java.util.concurrent.ThreadFactory) AsynchronousChannelProvider#openAsynchronousChannelGroup(int,ThreadFactory)} method of the system-wide
+ * <p> The group is created by invoking the {@link java.nio.channels.spi.AsynchronousChannelProvider#openAsynchronousChannelGroup(int,java.util.concurrent.ThreadFactory)  openAsynchronousChannelGroup(int,ThreadFactory)} method of the system-wide
  * default {@link java.nio.channels.spi.AsynchronousChannelProvider AsynchronousChannelProvider} object.
  *
  * @param   nThreads
@@ -192,11 +192,11 @@ public static java.nio.channels.AsynchronousChannelGroup withFixedThreadPool(int
  *
  * <p> The executor is intended to be used exclusively by the resulting
  * asynchronous channel group. Termination of the group results in the
- * orderly  {@link java.util.concurrent.ExecutorService#shutdown ExecutorService#shutdown} of the executor
+ * orderly  {@link java.util.concurrent.ExecutorService#shutdown shutdown} of the executor
  * service. Shutting down the executor service by other means results in
  * unspecified behavior.
  *
- * <p> The group is created by invoking the {@link java.nio.channels.spi.AsynchronousChannelProvider#openAsynchronousChannelGroup(java.util.concurrent.ExecutorService,int) AsynchronousChannelProvider#openAsynchronousChannelGroup(ExecutorService,int)} method of the system-wide
+ * <p> The group is created by invoking the {@link java.nio.channels.spi.AsynchronousChannelProvider#openAsynchronousChannelGroup(java.util.concurrent.ExecutorService,int)  openAsynchronousChannelGroup(ExecutorService,int)} method of the system-wide
  * default {@link java.nio.channels.spi.AsynchronousChannelProvider AsynchronousChannelProvider} object.
  *
  * @param   executor
@@ -224,16 +224,16 @@ public static java.nio.channels.AsynchronousChannelGroup withCachedThreadPool(ja
  *
  * <p> Care should be taken when configuring the executor service. It
  * should support <em>direct handoff</em> or <em>unbounded queuing</em> of
- * submitted tasks, and the thread that invokes the {@link java.util.concurrent.ExecutorService#execute ExecutorService#execute} method should never invoke the task
+ * submitted tasks, and the thread that invokes the {@link java.util.concurrent.ExecutorService#execute execute} method should never invoke the task
  * directly. An implementation may mandate additional constraints.
  *
  * <p> The executor is intended to be used exclusively by the resulting
  * asynchronous channel group. Termination of the group results in the
- * orderly  {@link java.util.concurrent.ExecutorService#shutdown ExecutorService#shutdown} of the executor
+ * orderly  {@link java.util.concurrent.ExecutorService#shutdown shutdown} of the executor
  * service. Shutting down the executor service by other means results in
  * unspecified behavior.
  *
- * <p> The group is created by invoking the {@link java.nio.channels.spi.AsynchronousChannelProvider#openAsynchronousChannelGroup(java.util.concurrent.ExecutorService,int) AsynchronousChannelProvider#openAsynchronousChannelGroup(ExecutorService,int)} method of the system-wide
+ * <p> The group is created by invoking the {@link java.nio.channels.spi.AsynchronousChannelProvider#openAsynchronousChannelGroup(java.util.concurrent.ExecutorService,int)  openAsynchronousChannelGroup(ExecutorService,int)} method of the system-wide
  * default {@link java.nio.channels.spi.AsynchronousChannelProvider AsynchronousChannelProvider} object with an {@code
  * initialSize} of {@code 0}.
  *
@@ -261,7 +261,7 @@ public abstract boolean isShutdown();
  * Tells whether or not this group has terminated.
  *
  * <p> Where this method returns {@code true}, then the associated thread
- * pool has also {@link java.util.concurrent.ExecutorService#isTerminated ExecutorService#isTerminated}.
+ * pool has also {@link java.util.concurrent.ExecutorService#isTerminated terminated}.
  *
  * @return  {@code true} if this group has terminated
  */
@@ -285,7 +285,7 @@ public abstract void shutdown();
  * Shuts down the group and closes all open channels in the group.
  *
  * <p> In addition to the actions performed by the {@link #shutdown() shutdown}
- * method, this method invokes the {@link java.nio.channels.AsynchronousChannel#close AsynchronousChannel#close}
+ * method, this method invokes the {@link java.nio.channels.AsynchronousChannel#close close}
  * method on all open channels in the group. This method does not attempt to
  * stop or interrupt threads that are executing completion handlers. The
  * group terminates when all actively executing completion handlers have run

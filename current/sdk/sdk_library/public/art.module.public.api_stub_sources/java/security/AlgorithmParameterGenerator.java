@@ -146,7 +146,7 @@ public final java.lang.String getAlgorithm() { throw new RuntimeException("Stub!
  * Provider that supports the specified algorithm is returned.
  *
  * <p> Note that the list of registered providers may be retrieved via
- * the {@link java.security.Security#getProviders() Security#getProviders()} method.
+ * the {@link java.security.Security#getProviders() Security.getProviders()} method.
  *
  * @param algorithm the name of the algorithm this
  * parameter generator is associated with.
@@ -176,7 +176,7 @@ public static java.security.AlgorithmParameterGenerator getInstance(java.lang.St
  * in the security provider list.
  *
  * <p> Note that the list of registered providers may be retrieved via
- * the {@link java.security.Security#getProviders() Security#getProviders()} method.
+ * the {@link java.security.Security#getProviders() Security.getProviders()} method.
  *
  * @param algorithm the name of the algorithm this
  * parameter generator is associated with.

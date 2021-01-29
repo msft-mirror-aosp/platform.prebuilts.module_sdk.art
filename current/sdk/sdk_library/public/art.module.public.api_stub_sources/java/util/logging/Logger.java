@@ -230,7 +230,7 @@ public class Logger {
  *             no corresponding resource can be found.
  */
 
-protected Logger(@android.annotation.Nullable java.lang.String name, @android.annotation.Nullable java.lang.String resourceBundleName) { throw new RuntimeException("Stub!"); }
+protected Logger(@androidx.annotation.RecentlyNullable java.lang.String name, @androidx.annotation.RecentlyNullable java.lang.String resourceBundleName) { throw new RuntimeException("Stub!"); }
 
 /**
  * Return global logger object with the name Logger.GLOBAL_LOGGER_NAME.
@@ -239,7 +239,7 @@ protected Logger(@android.annotation.Nullable java.lang.String name, @android.an
  * @since 1.7
  */
 
-@android.annotation.NonNull
+@androidx.annotation.RecentlyNonNull
 public static final java.util.logging.Logger getGlobal() { throw new RuntimeException("Stub!"); }
 
 /**
@@ -270,8 +270,8 @@ public static final java.util.logging.Logger getGlobal() { throw new RuntimeExce
  * @throws java.lang.NullPointerException if the name is null.
  */
 
-@android.annotation.NonNull
-public static java.util.logging.Logger getLogger(@android.annotation.NonNull java.lang.String name) { throw new RuntimeException("Stub!"); }
+@androidx.annotation.RecentlyNonNull
+public static java.util.logging.Logger getLogger(@androidx.annotation.RecentlyNonNull java.lang.String name) { throw new RuntimeException("Stub!"); }
 
 /**
  * Find or create a logger for a named subsystem.  If a logger has
@@ -316,8 +316,8 @@ public static java.util.logging.Logger getLogger(@android.annotation.NonNull jav
  * @throws java.lang.NullPointerException if the name is null.
  */
 
-@android.annotation.NonNull
-public static java.util.logging.Logger getLogger(@android.annotation.NonNull java.lang.String name, @android.annotation.Nullable java.lang.String resourceBundleName) { throw new RuntimeException("Stub!"); }
+@androidx.annotation.RecentlyNonNull
+public static java.util.logging.Logger getLogger(@androidx.annotation.RecentlyNonNull java.lang.String name, @androidx.annotation.RecentlyNullable java.lang.String resourceBundleName) { throw new RuntimeException("Stub!"); }
 
 /**
  * Create an anonymous Logger.  The newly created Logger is not
@@ -342,7 +342,7 @@ public static java.util.logging.Logger getLogger(@android.annotation.NonNull jav
  * @return a newly created private Logger
  */
 
-@android.annotation.NonNull
+@androidx.annotation.RecentlyNonNull
 public static java.util.logging.Logger getAnonymousLogger() { throw new RuntimeException("Stub!"); }
 
 /**
@@ -372,8 +372,8 @@ public static java.util.logging.Logger getAnonymousLogger() { throw new RuntimeE
  *             no corresponding resource can be found.
  */
 
-@android.annotation.NonNull
-public static java.util.logging.Logger getAnonymousLogger(@android.annotation.Nullable java.lang.String resourceBundleName) { throw new RuntimeException("Stub!"); }
+@androidx.annotation.RecentlyNonNull
+public static java.util.logging.Logger getAnonymousLogger(@androidx.annotation.RecentlyNullable java.lang.String resourceBundleName) { throw new RuntimeException("Stub!"); }
 
 /**
  * Retrieve the localization resource bundle for this
@@ -382,7 +382,7 @@ public static java.util.logging.Logger getAnonymousLogger(@android.annotation.Nu
  * set by the {@link
  * #setResourceBundle(java.util.ResourceBundle) setResourceBundle} method or
  * <a href="#ResourceBundleMapping">mapped from the
- * the resource bundle name</a> set via the {@link java.util.logging.Logger#getLogger(java.lang.String,java.lang.String) Logger#getLogger(java.lang.String, java.lang.String)} factory
+ * the resource bundle name</a> set via the {@link java.util.logging.Logger#getLogger(java.lang.String,java.lang.String) getLogger} factory
  * method for the current default locale.
  * <br>Note that if the result is {@code null}, then the Logger will use a resource
  * bundle or resource bundle name inherited from its parent.
@@ -390,7 +390,7 @@ public static java.util.logging.Logger getAnonymousLogger(@android.annotation.Nu
  * @return localization bundle (may be {@code null})
  */
 
-@android.annotation.Nullable
+@androidx.annotation.RecentlyNullable
 public java.util.ResourceBundle getResourceBundle() { throw new RuntimeException("Stub!"); }
 
 /**
@@ -398,7 +398,7 @@ public java.util.ResourceBundle getResourceBundle() { throw new RuntimeException
  * logger.
  * This is either the name specified through the {@link
  * #getLogger(java.lang.String,java.lang.String) getLogger} factory method,
- * or the {@linkplain java.util.ResourceBundle#getBaseBundleName() ResourceBundle#getBaseBundleName()} of the
+ * or the {@linkplain java.util.ResourceBundle#getBaseBundleName() base name} of the
  * ResourceBundle set through {@link
  * #setResourceBundle(java.util.ResourceBundle) setResourceBundle} method.
  * <br>Note that if the result is {@code null}, then the Logger will use a resource
@@ -407,7 +407,7 @@ public java.util.ResourceBundle getResourceBundle() { throw new RuntimeException
  * @return localization bundle name (may be {@code null})
  */
 
-@android.annotation.Nullable
+@androidx.annotation.RecentlyNullable
 public java.lang.String getResourceBundleName() { throw new RuntimeException("Stub!"); }
 
 /**
@@ -423,7 +423,7 @@ public java.lang.String getResourceBundleName() { throw new RuntimeException("St
  *          does not have LoggingPermission("control").
  */
 
-public void setFilter(@android.annotation.Nullable java.util.logging.Filter newFilter) throws java.lang.SecurityException { throw new RuntimeException("Stub!"); }
+public void setFilter(@androidx.annotation.RecentlyNullable java.util.logging.Filter newFilter) throws java.lang.SecurityException { throw new RuntimeException("Stub!"); }
 
 /**
  * Get the current filter for this Logger.
@@ -431,7 +431,7 @@ public void setFilter(@android.annotation.Nullable java.util.logging.Filter newF
  * @return  a filter object (may be null)
  */
 
-@android.annotation.Nullable
+@androidx.annotation.RecentlyNullable
 public java.util.logging.Filter getFilter() { throw new RuntimeException("Stub!"); }
 
 /**
@@ -444,7 +444,7 @@ public java.util.logging.Filter getFilter() { throw new RuntimeException("Stub!"
  * @param record the LogRecord to be published
  */
 
-public void log(@android.annotation.NonNull java.util.logging.LogRecord record) { throw new RuntimeException("Stub!"); }
+public void log(@androidx.annotation.RecentlyNonNull java.util.logging.LogRecord record) { throw new RuntimeException("Stub!"); }
 
 /**
  * Log a message, with no arguments.
@@ -457,7 +457,7 @@ public void log(@android.annotation.NonNull java.util.logging.LogRecord record) 
  * @param   msg     The string message (or a key in the message catalog)
  */
 
-public void log(@android.annotation.NonNull java.util.logging.Level level, @android.annotation.Nullable java.lang.String msg) { throw new RuntimeException("Stub!"); }
+public void log(@androidx.annotation.RecentlyNonNull java.util.logging.Level level, @androidx.annotation.RecentlyNullable java.lang.String msg) { throw new RuntimeException("Stub!"); }
 
 /**
  * Log a message, which is only to be constructed if the logging level
@@ -474,7 +474,7 @@ public void log(@android.annotation.NonNull java.util.logging.Level level, @andr
  * @since 1.8
  */
 
-public void log(@android.annotation.NonNull java.util.logging.Level level, @android.annotation.NonNull java.util.function.Supplier<java.lang.String> msgSupplier) { throw new RuntimeException("Stub!"); }
+public void log(@androidx.annotation.RecentlyNonNull java.util.logging.Level level, @androidx.annotation.RecentlyNonNull java.util.function.Supplier<java.lang.String> msgSupplier) { throw new RuntimeException("Stub!"); }
 
 /**
  * Log a message, with one object parameter.
@@ -488,7 +488,7 @@ public void log(@android.annotation.NonNull java.util.logging.Level level, @andr
  * @param   param1  parameter to the message
  */
 
-public void log(@android.annotation.NonNull java.util.logging.Level level, @android.annotation.Nullable java.lang.String msg, @android.annotation.Nullable java.lang.Object param1) { throw new RuntimeException("Stub!"); }
+public void log(@androidx.annotation.RecentlyNonNull java.util.logging.Level level, @androidx.annotation.RecentlyNullable java.lang.String msg, @androidx.annotation.RecentlyNullable java.lang.Object param1) { throw new RuntimeException("Stub!"); }
 
 /**
  * Log a message, with an array of object arguments.
@@ -502,7 +502,7 @@ public void log(@android.annotation.NonNull java.util.logging.Level level, @andr
  * @param   params  array of parameters to the message
  */
 
-public void log(@android.annotation.NonNull java.util.logging.Level level, @android.annotation.Nullable java.lang.String msg, @android.annotation.Nullable java.lang.Object[] params) { throw new RuntimeException("Stub!"); }
+public void log(@androidx.annotation.RecentlyNonNull java.util.logging.Level level, @androidx.annotation.RecentlyNullable java.lang.String msg, @androidx.annotation.RecentlyNullable java.lang.Object[] params) { throw new RuntimeException("Stub!"); }
 
 /**
  * Log a message, with associated Throwable information.
@@ -521,7 +521,7 @@ public void log(@android.annotation.NonNull java.util.logging.Level level, @andr
  * @param   thrown  Throwable associated with log message.
  */
 
-public void log(@android.annotation.NonNull java.util.logging.Level level, @android.annotation.Nullable java.lang.String msg, @android.annotation.Nullable java.lang.Throwable thrown) { throw new RuntimeException("Stub!"); }
+public void log(@androidx.annotation.RecentlyNonNull java.util.logging.Level level, @androidx.annotation.RecentlyNullable java.lang.String msg, @androidx.annotation.RecentlyNullable java.lang.Throwable thrown) { throw new RuntimeException("Stub!"); }
 
 /**
  * Log a lazily constructed message, with associated Throwable information.
@@ -542,7 +542,7 @@ public void log(@android.annotation.NonNull java.util.logging.Level level, @andr
  * @since   1.8
  */
 
-public void log(@android.annotation.NonNull java.util.logging.Level level, @android.annotation.Nullable java.lang.Throwable thrown, @android.annotation.NonNull java.util.function.Supplier<java.lang.String> msgSupplier) { throw new RuntimeException("Stub!"); }
+public void log(@androidx.annotation.RecentlyNonNull java.util.logging.Level level, @androidx.annotation.RecentlyNullable java.lang.Throwable thrown, @androidx.annotation.RecentlyNonNull java.util.function.Supplier<java.lang.String> msgSupplier) { throw new RuntimeException("Stub!"); }
 
 /**
  * Log a message, specifying source class and method,
@@ -558,7 +558,7 @@ public void log(@android.annotation.NonNull java.util.logging.Level level, @andr
  * @param   msg     The string message (or a key in the message catalog)
  */
 
-public void logp(@android.annotation.NonNull java.util.logging.Level level, @android.annotation.Nullable java.lang.String sourceClass, @android.annotation.Nullable java.lang.String sourceMethod, @android.annotation.Nullable java.lang.String msg) { throw new RuntimeException("Stub!"); }
+public void logp(@androidx.annotation.RecentlyNonNull java.util.logging.Level level, @androidx.annotation.RecentlyNullable java.lang.String sourceClass, @androidx.annotation.RecentlyNullable java.lang.String sourceMethod, @androidx.annotation.RecentlyNullable java.lang.String msg) { throw new RuntimeException("Stub!"); }
 
 /**
  * Log a lazily constructed message, specifying source class and method,
@@ -577,7 +577,7 @@ public void logp(@android.annotation.NonNull java.util.logging.Level level, @and
  * @since   1.8
  */
 
-public void logp(@android.annotation.NonNull java.util.logging.Level level, @android.annotation.Nullable java.lang.String sourceClass, @android.annotation.Nullable java.lang.String sourceMethod, @android.annotation.NonNull java.util.function.Supplier<java.lang.String> msgSupplier) { throw new RuntimeException("Stub!"); }
+public void logp(@androidx.annotation.RecentlyNonNull java.util.logging.Level level, @androidx.annotation.RecentlyNullable java.lang.String sourceClass, @androidx.annotation.RecentlyNullable java.lang.String sourceMethod, @androidx.annotation.RecentlyNonNull java.util.function.Supplier<java.lang.String> msgSupplier) { throw new RuntimeException("Stub!"); }
 
 /**
  * Log a message, specifying source class and method,
@@ -594,7 +594,7 @@ public void logp(@android.annotation.NonNull java.util.logging.Level level, @and
  * @param   param1    Parameter to the log message.
  */
 
-public void logp(@android.annotation.NonNull java.util.logging.Level level, @android.annotation.Nullable java.lang.String sourceClass, @android.annotation.Nullable java.lang.String sourceMethod, @android.annotation.Nullable java.lang.String msg, @android.annotation.Nullable java.lang.Object param1) { throw new RuntimeException("Stub!"); }
+public void logp(@androidx.annotation.RecentlyNonNull java.util.logging.Level level, @androidx.annotation.RecentlyNullable java.lang.String sourceClass, @androidx.annotation.RecentlyNullable java.lang.String sourceMethod, @androidx.annotation.RecentlyNullable java.lang.String msg, @androidx.annotation.RecentlyNullable java.lang.Object param1) { throw new RuntimeException("Stub!"); }
 
 /**
  * Log a message, specifying source class and method,
@@ -611,7 +611,7 @@ public void logp(@android.annotation.NonNull java.util.logging.Level level, @and
  * @param   params  Array of parameters to the message
  */
 
-public void logp(@android.annotation.NonNull java.util.logging.Level level, @android.annotation.Nullable java.lang.String sourceClass, @android.annotation.Nullable java.lang.String sourceMethod, @android.annotation.Nullable java.lang.String msg, @android.annotation.Nullable java.lang.Object[] params) { throw new RuntimeException("Stub!"); }
+public void logp(@androidx.annotation.RecentlyNonNull java.util.logging.Level level, @androidx.annotation.RecentlyNullable java.lang.String sourceClass, @androidx.annotation.RecentlyNullable java.lang.String sourceMethod, @androidx.annotation.RecentlyNullable java.lang.String msg, @androidx.annotation.RecentlyNullable java.lang.Object[] params) { throw new RuntimeException("Stub!"); }
 
 /**
  * Log a message, specifying source class and method,
@@ -633,7 +633,7 @@ public void logp(@android.annotation.NonNull java.util.logging.Level level, @and
  * @param   thrown  Throwable associated with log message.
  */
 
-public void logp(@android.annotation.NonNull java.util.logging.Level level, @android.annotation.Nullable java.lang.String sourceClass, @android.annotation.Nullable java.lang.String sourceMethod, @android.annotation.Nullable java.lang.String msg, @android.annotation.Nullable java.lang.Throwable thrown) { throw new RuntimeException("Stub!"); }
+public void logp(@androidx.annotation.RecentlyNonNull java.util.logging.Level level, @androidx.annotation.RecentlyNullable java.lang.String sourceClass, @androidx.annotation.RecentlyNullable java.lang.String sourceMethod, @androidx.annotation.RecentlyNullable java.lang.String msg, @androidx.annotation.RecentlyNullable java.lang.Throwable thrown) { throw new RuntimeException("Stub!"); }
 
 /**
  * Log a lazily constructed message, specifying source class and method,
@@ -657,7 +657,7 @@ public void logp(@android.annotation.NonNull java.util.logging.Level level, @and
  * @since   1.8
  */
 
-public void logp(@android.annotation.NonNull java.util.logging.Level level, @android.annotation.Nullable java.lang.String sourceClass, @android.annotation.Nullable java.lang.String sourceMethod, @android.annotation.Nullable java.lang.Throwable thrown, @android.annotation.NonNull java.util.function.Supplier<java.lang.String> msgSupplier) { throw new RuntimeException("Stub!"); }
+public void logp(@androidx.annotation.RecentlyNonNull java.util.logging.Level level, @androidx.annotation.RecentlyNullable java.lang.String sourceClass, @androidx.annotation.RecentlyNullable java.lang.String sourceMethod, @androidx.annotation.RecentlyNullable java.lang.Throwable thrown, @androidx.annotation.RecentlyNonNull java.util.function.Supplier<java.lang.String> msgSupplier) { throw new RuntimeException("Stub!"); }
 
 /**
  * Log a message, specifying source class, method, and resource bundle name
@@ -681,7 +681,7 @@ public void logp(@android.annotation.NonNull java.util.logging.Level level, @and
  */
 
 @Deprecated
-public void logrb(@android.annotation.NonNull java.util.logging.Level level, @android.annotation.Nullable java.lang.String sourceClass, @android.annotation.Nullable java.lang.String sourceMethod, @android.annotation.Nullable java.lang.String bundleName, @android.annotation.Nullable java.lang.String msg) { throw new RuntimeException("Stub!"); }
+public void logrb(@androidx.annotation.RecentlyNonNull java.util.logging.Level level, @androidx.annotation.RecentlyNullable java.lang.String sourceClass, @androidx.annotation.RecentlyNullable java.lang.String sourceMethod, @androidx.annotation.RecentlyNullable java.lang.String bundleName, @androidx.annotation.RecentlyNullable java.lang.String msg) { throw new RuntimeException("Stub!"); }
 
 /**
  * Log a message, specifying source class, method, and resource bundle name,
@@ -706,7 +706,7 @@ public void logrb(@android.annotation.NonNull java.util.logging.Level level, @an
  */
 
 @Deprecated
-public void logrb(@android.annotation.NonNull java.util.logging.Level level, @android.annotation.Nullable java.lang.String sourceClass, @android.annotation.Nullable java.lang.String sourceMethod, @android.annotation.Nullable java.lang.String bundleName, @android.annotation.Nullable java.lang.String msg, @android.annotation.Nullable java.lang.Object param1) { throw new RuntimeException("Stub!"); }
+public void logrb(@androidx.annotation.RecentlyNonNull java.util.logging.Level level, @androidx.annotation.RecentlyNullable java.lang.String sourceClass, @androidx.annotation.RecentlyNullable java.lang.String sourceMethod, @androidx.annotation.RecentlyNullable java.lang.String bundleName, @androidx.annotation.RecentlyNullable java.lang.String msg, @androidx.annotation.RecentlyNullable java.lang.Object param1) { throw new RuntimeException("Stub!"); }
 
 /**
  * Log a message, specifying source class, method, and resource bundle name,
@@ -731,7 +731,7 @@ public void logrb(@android.annotation.NonNull java.util.logging.Level level, @an
  */
 
 @Deprecated
-public void logrb(@android.annotation.NonNull java.util.logging.Level level, @android.annotation.Nullable java.lang.String sourceClass, @android.annotation.Nullable java.lang.String sourceMethod, @android.annotation.Nullable java.lang.String bundleName, @android.annotation.Nullable java.lang.String msg, @android.annotation.Nullable java.lang.Object[] params) { throw new RuntimeException("Stub!"); }
+public void logrb(@androidx.annotation.RecentlyNonNull java.util.logging.Level level, @androidx.annotation.RecentlyNullable java.lang.String sourceClass, @androidx.annotation.RecentlyNullable java.lang.String sourceMethod, @androidx.annotation.RecentlyNullable java.lang.String bundleName, @androidx.annotation.RecentlyNullable java.lang.String msg, @androidx.annotation.RecentlyNullable java.lang.Object[] params) { throw new RuntimeException("Stub!"); }
 
 /**
  * Log a message, specifying source class, method, and resource bundle,
@@ -755,7 +755,7 @@ public void logrb(@android.annotation.NonNull java.util.logging.Level level, @an
  * @since 1.8
  */
 
-public void logrb(@android.annotation.NonNull java.util.logging.Level level, @android.annotation.Nullable java.lang.String sourceClass, @android.annotation.Nullable java.lang.String sourceMethod, @android.annotation.Nullable java.util.ResourceBundle bundle, @android.annotation.Nullable java.lang.String msg, @android.annotation.Nullable java.lang.Object... params) { throw new RuntimeException("Stub!"); }
+public void logrb(@androidx.annotation.RecentlyNonNull java.util.logging.Level level, @androidx.annotation.RecentlyNullable java.lang.String sourceClass, @androidx.annotation.RecentlyNullable java.lang.String sourceMethod, @androidx.annotation.RecentlyNullable java.util.ResourceBundle bundle, @androidx.annotation.RecentlyNullable java.lang.String msg, @androidx.annotation.RecentlyNullable java.lang.Object... params) { throw new RuntimeException("Stub!"); }
 
 /**
  * Log a message, specifying source class, method, and resource bundle name,
@@ -785,7 +785,7 @@ public void logrb(@android.annotation.NonNull java.util.logging.Level level, @an
  */
 
 @Deprecated
-public void logrb(@android.annotation.NonNull java.util.logging.Level level, @android.annotation.Nullable java.lang.String sourceClass, @android.annotation.Nullable java.lang.String sourceMethod, @android.annotation.Nullable java.lang.String bundleName, @android.annotation.Nullable java.lang.String msg, @android.annotation.Nullable java.lang.Throwable thrown) { throw new RuntimeException("Stub!"); }
+public void logrb(@androidx.annotation.RecentlyNonNull java.util.logging.Level level, @androidx.annotation.RecentlyNullable java.lang.String sourceClass, @androidx.annotation.RecentlyNullable java.lang.String sourceMethod, @androidx.annotation.RecentlyNullable java.lang.String bundleName, @androidx.annotation.RecentlyNullable java.lang.String msg, @androidx.annotation.RecentlyNullable java.lang.Throwable thrown) { throw new RuntimeException("Stub!"); }
 
 /**
  * Log a message, specifying source class, method, and resource bundle,
@@ -814,7 +814,7 @@ public void logrb(@android.annotation.NonNull java.util.logging.Level level, @an
  * @since 1.8
  */
 
-public void logrb(@android.annotation.NonNull java.util.logging.Level level, @android.annotation.Nullable java.lang.String sourceClass, @android.annotation.Nullable java.lang.String sourceMethod, @android.annotation.Nullable java.util.ResourceBundle bundle, @android.annotation.Nullable java.lang.String msg, @android.annotation.Nullable java.lang.Throwable thrown) { throw new RuntimeException("Stub!"); }
+public void logrb(@androidx.annotation.RecentlyNonNull java.util.logging.Level level, @androidx.annotation.RecentlyNullable java.lang.String sourceClass, @androidx.annotation.RecentlyNullable java.lang.String sourceMethod, @androidx.annotation.RecentlyNullable java.util.ResourceBundle bundle, @androidx.annotation.RecentlyNullable java.lang.String msg, @androidx.annotation.RecentlyNullable java.lang.Throwable thrown) { throw new RuntimeException("Stub!"); }
 
 /**
  * Log a method entry.
@@ -827,7 +827,7 @@ public void logrb(@android.annotation.NonNull java.util.logging.Level level, @an
  * @param   sourceMethod   name of method that is being entered
  */
 
-public void entering(@android.annotation.Nullable java.lang.String sourceClass, @android.annotation.Nullable java.lang.String sourceMethod) { throw new RuntimeException("Stub!"); }
+public void entering(@androidx.annotation.RecentlyNullable java.lang.String sourceClass, @androidx.annotation.RecentlyNullable java.lang.String sourceMethod) { throw new RuntimeException("Stub!"); }
 
 /**
  * Log a method entry, with one parameter.
@@ -842,7 +842,7 @@ public void entering(@android.annotation.Nullable java.lang.String sourceClass, 
  * @param   param1         parameter to the method being entered
  */
 
-public void entering(@android.annotation.Nullable java.lang.String sourceClass, @android.annotation.Nullable java.lang.String sourceMethod, @android.annotation.Nullable java.lang.Object param1) { throw new RuntimeException("Stub!"); }
+public void entering(@androidx.annotation.RecentlyNullable java.lang.String sourceClass, @androidx.annotation.RecentlyNullable java.lang.String sourceMethod, @androidx.annotation.RecentlyNullable java.lang.Object param1) { throw new RuntimeException("Stub!"); }
 
 /**
  * Log a method entry, with an array of parameters.
@@ -858,7 +858,7 @@ public void entering(@android.annotation.Nullable java.lang.String sourceClass, 
  * @param   params         array of parameters to the method being entered
  */
 
-public void entering(@android.annotation.Nullable java.lang.String sourceClass, @android.annotation.Nullable java.lang.String sourceMethod, @android.annotation.Nullable java.lang.Object[] params) { throw new RuntimeException("Stub!"); }
+public void entering(@androidx.annotation.RecentlyNullable java.lang.String sourceClass, @androidx.annotation.RecentlyNullable java.lang.String sourceMethod, @androidx.annotation.RecentlyNullable java.lang.Object[] params) { throw new RuntimeException("Stub!"); }
 
 /**
  * Log a method return.
@@ -871,7 +871,7 @@ public void entering(@android.annotation.Nullable java.lang.String sourceClass, 
  * @param   sourceMethod   name of the method
  */
 
-public void exiting(@android.annotation.Nullable java.lang.String sourceClass, @android.annotation.Nullable java.lang.String sourceMethod) { throw new RuntimeException("Stub!"); }
+public void exiting(@androidx.annotation.RecentlyNullable java.lang.String sourceClass, @androidx.annotation.RecentlyNullable java.lang.String sourceMethod) { throw new RuntimeException("Stub!"); }
 
 /**
  * Log a method return, with result object.
@@ -886,7 +886,7 @@ public void exiting(@android.annotation.Nullable java.lang.String sourceClass, @
  * @param   result  Object that is being returned
  */
 
-public void exiting(@android.annotation.Nullable java.lang.String sourceClass, @android.annotation.Nullable java.lang.String sourceMethod, @android.annotation.Nullable java.lang.Object result) { throw new RuntimeException("Stub!"); }
+public void exiting(@androidx.annotation.RecentlyNullable java.lang.String sourceClass, @androidx.annotation.RecentlyNullable java.lang.String sourceMethod, @androidx.annotation.RecentlyNullable java.lang.Object result) { throw new RuntimeException("Stub!"); }
 
 /**
  * Log throwing an exception.
@@ -910,7 +910,7 @@ public void exiting(@android.annotation.Nullable java.lang.String sourceClass, @
  * @param   thrown  The Throwable that is being thrown.
  */
 
-public void throwing(@android.annotation.Nullable java.lang.String sourceClass, @android.annotation.Nullable java.lang.String sourceMethod, @android.annotation.Nullable java.lang.Throwable thrown) { throw new RuntimeException("Stub!"); }
+public void throwing(@androidx.annotation.RecentlyNullable java.lang.String sourceClass, @androidx.annotation.RecentlyNullable java.lang.String sourceMethod, @androidx.annotation.RecentlyNullable java.lang.Throwable thrown) { throw new RuntimeException("Stub!"); }
 
 /**
  * Log a SEVERE message.
@@ -922,7 +922,7 @@ public void throwing(@android.annotation.Nullable java.lang.String sourceClass, 
  * @param   msg     The string message (or a key in the message catalog)
  */
 
-public void severe(@android.annotation.Nullable java.lang.String msg) { throw new RuntimeException("Stub!"); }
+public void severe(@androidx.annotation.RecentlyNullable java.lang.String msg) { throw new RuntimeException("Stub!"); }
 
 /**
  * Log a WARNING message.
@@ -934,7 +934,7 @@ public void severe(@android.annotation.Nullable java.lang.String msg) { throw ne
  * @param   msg     The string message (or a key in the message catalog)
  */
 
-public void warning(@android.annotation.Nullable java.lang.String msg) { throw new RuntimeException("Stub!"); }
+public void warning(@androidx.annotation.RecentlyNullable java.lang.String msg) { throw new RuntimeException("Stub!"); }
 
 /**
  * Log an INFO message.
@@ -946,7 +946,7 @@ public void warning(@android.annotation.Nullable java.lang.String msg) { throw n
  * @param   msg     The string message (or a key in the message catalog)
  */
 
-public void info(@android.annotation.Nullable java.lang.String msg) { throw new RuntimeException("Stub!"); }
+public void info(@androidx.annotation.RecentlyNullable java.lang.String msg) { throw new RuntimeException("Stub!"); }
 
 /**
  * Log a CONFIG message.
@@ -958,7 +958,7 @@ public void info(@android.annotation.Nullable java.lang.String msg) { throw new 
  * @param   msg     The string message (or a key in the message catalog)
  */
 
-public void config(@android.annotation.Nullable java.lang.String msg) { throw new RuntimeException("Stub!"); }
+public void config(@androidx.annotation.RecentlyNullable java.lang.String msg) { throw new RuntimeException("Stub!"); }
 
 /**
  * Log a FINE message.
@@ -970,7 +970,7 @@ public void config(@android.annotation.Nullable java.lang.String msg) { throw ne
  * @param   msg     The string message (or a key in the message catalog)
  */
 
-public void fine(@android.annotation.Nullable java.lang.String msg) { throw new RuntimeException("Stub!"); }
+public void fine(@androidx.annotation.RecentlyNullable java.lang.String msg) { throw new RuntimeException("Stub!"); }
 
 /**
  * Log a FINER message.
@@ -982,7 +982,7 @@ public void fine(@android.annotation.Nullable java.lang.String msg) { throw new 
  * @param   msg     The string message (or a key in the message catalog)
  */
 
-public void finer(@android.annotation.Nullable java.lang.String msg) { throw new RuntimeException("Stub!"); }
+public void finer(@androidx.annotation.RecentlyNullable java.lang.String msg) { throw new RuntimeException("Stub!"); }
 
 /**
  * Log a FINEST message.
@@ -994,7 +994,7 @@ public void finer(@android.annotation.Nullable java.lang.String msg) { throw new
  * @param   msg     The string message (or a key in the message catalog)
  */
 
-public void finest(@android.annotation.Nullable java.lang.String msg) { throw new RuntimeException("Stub!"); }
+public void finest(@androidx.annotation.RecentlyNullable java.lang.String msg) { throw new RuntimeException("Stub!"); }
 
 /**
  * Log a SEVERE message, which is only to be constructed if the logging
@@ -1010,7 +1010,7 @@ public void finest(@android.annotation.Nullable java.lang.String msg) { throw ne
  * @since   1.8
  */
 
-public void severe(@android.annotation.NonNull java.util.function.Supplier<java.lang.String> msgSupplier) { throw new RuntimeException("Stub!"); }
+public void severe(@androidx.annotation.RecentlyNonNull java.util.function.Supplier<java.lang.String> msgSupplier) { throw new RuntimeException("Stub!"); }
 
 /**
  * Log a WARNING message, which is only to be constructed if the logging
@@ -1026,7 +1026,7 @@ public void severe(@android.annotation.NonNull java.util.function.Supplier<java.
  * @since   1.8
  */
 
-public void warning(@android.annotation.NonNull java.util.function.Supplier<java.lang.String> msgSupplier) { throw new RuntimeException("Stub!"); }
+public void warning(@androidx.annotation.RecentlyNonNull java.util.function.Supplier<java.lang.String> msgSupplier) { throw new RuntimeException("Stub!"); }
 
 /**
  * Log a INFO message, which is only to be constructed if the logging
@@ -1042,7 +1042,7 @@ public void warning(@android.annotation.NonNull java.util.function.Supplier<java
  * @since   1.8
  */
 
-public void info(@android.annotation.NonNull java.util.function.Supplier<java.lang.String> msgSupplier) { throw new RuntimeException("Stub!"); }
+public void info(@androidx.annotation.RecentlyNonNull java.util.function.Supplier<java.lang.String> msgSupplier) { throw new RuntimeException("Stub!"); }
 
 /**
  * Log a CONFIG message, which is only to be constructed if the logging
@@ -1058,7 +1058,7 @@ public void info(@android.annotation.NonNull java.util.function.Supplier<java.la
  * @since   1.8
  */
 
-public void config(@android.annotation.NonNull java.util.function.Supplier<java.lang.String> msgSupplier) { throw new RuntimeException("Stub!"); }
+public void config(@androidx.annotation.RecentlyNonNull java.util.function.Supplier<java.lang.String> msgSupplier) { throw new RuntimeException("Stub!"); }
 
 /**
  * Log a FINE message, which is only to be constructed if the logging
@@ -1074,7 +1074,7 @@ public void config(@android.annotation.NonNull java.util.function.Supplier<java.
  * @since   1.8
  */
 
-public void fine(@android.annotation.NonNull java.util.function.Supplier<java.lang.String> msgSupplier) { throw new RuntimeException("Stub!"); }
+public void fine(@androidx.annotation.RecentlyNonNull java.util.function.Supplier<java.lang.String> msgSupplier) { throw new RuntimeException("Stub!"); }
 
 /**
  * Log a FINER message, which is only to be constructed if the logging
@@ -1090,7 +1090,7 @@ public void fine(@android.annotation.NonNull java.util.function.Supplier<java.la
  * @since   1.8
  */
 
-public void finer(@android.annotation.NonNull java.util.function.Supplier<java.lang.String> msgSupplier) { throw new RuntimeException("Stub!"); }
+public void finer(@androidx.annotation.RecentlyNonNull java.util.function.Supplier<java.lang.String> msgSupplier) { throw new RuntimeException("Stub!"); }
 
 /**
  * Log a FINEST message, which is only to be constructed if the logging
@@ -1106,7 +1106,7 @@ public void finer(@android.annotation.NonNull java.util.function.Supplier<java.l
  * @since   1.8
  */
 
-public void finest(@android.annotation.NonNull java.util.function.Supplier<java.lang.String> msgSupplier) { throw new RuntimeException("Stub!"); }
+public void finest(@androidx.annotation.RecentlyNonNull java.util.function.Supplier<java.lang.String> msgSupplier) { throw new RuntimeException("Stub!"); }
 
 /**
  * Set the log level specifying which message levels will be
@@ -1124,7 +1124,7 @@ public void finest(@android.annotation.NonNull java.util.function.Supplier<java.
  *          does not have LoggingPermission("control").
  */
 
-public void setLevel(@android.annotation.Nullable java.util.logging.Level newLevel) throws java.lang.SecurityException { throw new RuntimeException("Stub!"); }
+public void setLevel(@androidx.annotation.RecentlyNullable java.util.logging.Level newLevel) throws java.lang.SecurityException { throw new RuntimeException("Stub!"); }
 
 /**
  * Get the log Level that has been specified for this Logger.
@@ -1134,7 +1134,7 @@ public void setLevel(@android.annotation.Nullable java.util.logging.Level newLev
  * @return  this Logger's level
  */
 
-@android.annotation.Nullable
+@androidx.annotation.RecentlyNullable
 public java.util.logging.Level getLevel() { throw new RuntimeException("Stub!"); }
 
 /**
@@ -1146,14 +1146,14 @@ public java.util.logging.Level getLevel() { throw new RuntimeException("Stub!");
  * @return  true if the given message level is currently being logged.
  */
 
-public boolean isLoggable(@android.annotation.NonNull java.util.logging.Level level) { throw new RuntimeException("Stub!"); }
+public boolean isLoggable(@androidx.annotation.RecentlyNonNull java.util.logging.Level level) { throw new RuntimeException("Stub!"); }
 
 /**
  * Get the name for this logger.
  * @return logger name.  Will be null for anonymous Loggers.
  */
 
-@android.annotation.Nullable
+@androidx.annotation.RecentlyNullable
 public java.lang.String getName() { throw new RuntimeException("Stub!"); }
 
 /**
@@ -1169,7 +1169,7 @@ public java.lang.String getName() { throw new RuntimeException("Stub!"); }
  *          does not have LoggingPermission("control").
  */
 
-public void addHandler(@android.annotation.NonNull java.util.logging.Handler handler) throws java.lang.SecurityException { throw new RuntimeException("Stub!"); }
+public void addHandler(@androidx.annotation.RecentlyNonNull java.util.logging.Handler handler) throws java.lang.SecurityException { throw new RuntimeException("Stub!"); }
 
 /**
  * Remove a log Handler.
@@ -1182,7 +1182,7 @@ public void addHandler(@android.annotation.NonNull java.util.logging.Handler han
  *          does not have LoggingPermission("control").
  */
 
-public void removeHandler(@android.annotation.Nullable java.util.logging.Handler handler) throws java.lang.SecurityException { throw new RuntimeException("Stub!"); }
+public void removeHandler(@androidx.annotation.RecentlyNullable java.util.logging.Handler handler) throws java.lang.SecurityException { throw new RuntimeException("Stub!"); }
 
 /**
  * Get the Handlers associated with this logger.
@@ -1190,7 +1190,7 @@ public void removeHandler(@android.annotation.Nullable java.util.logging.Handler
  * @return  an array of all registered Handlers
  */
 
-@android.annotation.NonNull
+@androidx.annotation.RecentlyNonNull
 public java.util.logging.Handler[] getHandlers() { throw new RuntimeException("Stub!"); }
 
 /**
@@ -1220,11 +1220,11 @@ public boolean getUseParentHandlers() { throw new RuntimeException("Stub!"); }
 /**
  * Sets a resource bundle on this logger.
  * All messages will be logged using the given resource bundle for its
- * specific {@linkplain java.util.ResourceBundle#getLocale ResourceBundle#getLocale}.
+ * specific {@linkplain java.util.ResourceBundle#getLocale locale}.
  * @param bundle The resource bundle that this logger shall use.
  * @throws java.lang.NullPointerException if the given bundle is {@code null}.
  * @throws java.lang.IllegalArgumentException if the given bundle doesn't have a
- *         {@linkplain java.util.ResourceBundle#getBaseBundleName ResourceBundle#getBaseBundleName},
+ *         {@linkplain java.util.ResourceBundle#getBaseBundleName base name},
  *         or if this logger already has a resource bundle set but
  *         the given bundle has a different base name.
  * @throws java.lang.SecurityException if a security manager exists,
@@ -1233,7 +1233,7 @@ public boolean getUseParentHandlers() { throw new RuntimeException("Stub!"); }
  * @since 1.8
  */
 
-public void setResourceBundle(@android.annotation.NonNull java.util.ResourceBundle bundle) { throw new RuntimeException("Stub!"); }
+public void setResourceBundle(@androidx.annotation.RecentlyNonNull java.util.ResourceBundle bundle) { throw new RuntimeException("Stub!"); }
 
 /**
  * Return the parent for this Logger.
@@ -1249,7 +1249,7 @@ public void setResourceBundle(@android.annotation.NonNull java.util.ResourceBund
  * @return nearest existing parent Logger
  */
 
-@android.annotation.Nullable
+@androidx.annotation.RecentlyNullable
 public java.util.logging.Logger getParent() { throw new RuntimeException("Stub!"); }
 
 /**
@@ -1263,7 +1263,7 @@ public java.util.logging.Logger getParent() { throw new RuntimeException("Stub!"
  *          the caller does not have LoggingPermission("control").
  */
 
-public void setParent(@android.annotation.NonNull java.util.logging.Logger parent) { throw new RuntimeException("Stub!"); }
+public void setParent(@androidx.annotation.RecentlyNonNull java.util.logging.Logger parent) { throw new RuntimeException("Stub!"); }
 
 /**
  * GLOBAL_LOGGER_NAME is a name for the global logger.
@@ -1271,7 +1271,7 @@ public void setParent(@android.annotation.NonNull java.util.logging.Logger paren
  * @since 1.6
  */
 
-@android.annotation.NonNull public static final java.lang.String GLOBAL_LOGGER_NAME = "global";
+@androidx.annotation.RecentlyNonNull public static final java.lang.String GLOBAL_LOGGER_NAME = "global";
 
 /**
  * The "global" Logger object is provided as a convenience to developers
@@ -1295,7 +1295,7 @@ public void setParent(@android.annotation.NonNull java.util.logging.Logger paren
  * or <code>Logger.getLogger("global")</code>.
  */
 
-@Deprecated @android.annotation.NonNull public static final java.util.logging.Logger global;
+@Deprecated @androidx.annotation.RecentlyNonNull public static final java.util.logging.Logger global;
 static { global = null; }
 }
 

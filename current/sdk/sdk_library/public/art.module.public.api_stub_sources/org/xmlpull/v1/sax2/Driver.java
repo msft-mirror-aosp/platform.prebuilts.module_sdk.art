@@ -88,7 +88,7 @@ public void parse(java.lang.String systemId) throws java.io.IOException, org.xml
 public void parseSubTree(org.xmlpull.v1.XmlPullParser pp) throws java.io.IOException, org.xml.sax.SAXException { throw new RuntimeException("Stub!"); }
 
 /**
- * Calls {@link org.xml.sax.ContentHandler#startElement(java.lang.String,java.lang.String,java.lang.String,org.xml.sax.Attributes) ContentHandler#startElement(String, String, String, Attributes)}
+ * Calls {@link org.xml.sax.ContentHandler#startElement(java.lang.String,java.lang.String,java.lang.String,org.xml.sax.Attributes) startElement}
  * on the <code>ContentHandler</code> with <code>this</code> driver object as the
  * {@link org.xml.sax.Attributes Attributes} implementation. In default implementation
  * {@link org.xml.sax.Attributes Attributes} object is valid only during this method call and may not

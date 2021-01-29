@@ -106,7 +106,7 @@ import java.util.function.DoubleConsumer;
  * traversal has begun.
  *
  * <p>Primitive subtype specializations of {@code Spliterator} are provided for
- * {@link java.util.Spliterator.OfInt OfInt}, {@link java.util.Spliterator.OfLong OfLong}, and {@link java.util.Spliterator.OfDouble OfDouble} values.
+ * {@link java.util.Spliterator.OfInt int}, {@link java.util.Spliterator.OfLong long}, and {@link java.util.Spliterator.OfDouble double} values.
  * The subtype default implementations of
  * {@link java.util.Spliterator#tryAdvance(java.util.function.Consumer) Spliterator#tryAdvance(java.util.function.Consumer)}
  * and {@link java.util.Spliterator#forEachRemaining(java.util.function.Consumer) Spliterator#forEachRemaining(java.util.function.Consumer)} box
@@ -376,7 +376,7 @@ public java.util.Spliterator<T> trySplit();
 
 /**
  * Returns an estimate of the number of elements that would be
- * encountered by a {@link #forEachRemaining} traversal, or returns {@link java.lang.Long#MAX_VALUE Long#MAX_VALUE} if infinite, unknown, or too expensive to compute.
+ * encountered by a {@link #forEachRemaining} traversal, or returns {@link java.lang.Long#MAX_VALUE  } if infinite, unknown, or too expensive to compute.
  *
  * <p>If this Spliterator is {@link #SIZED} and has not yet been partially
  * traversed or split, or this Spliterator is {@link #SUBSIZED} and has
@@ -454,7 +454,7 @@ public default boolean hasCharacteristics(int characteristics) { throw new Runti
 /**
  * If this Spliterator's source is {@link #SORTED} by a {@link java.util.Comparator Comparator},
  * returns that {@code Comparator}. If the source is {@code SORTED} in
- * {@linkplain java.lang.Comparable Comparable}, returns {@code null}.  Otherwise,
+ * {@linkplain java.lang.Comparable natural order}, returns {@code null}.  Otherwise,
  * if the source is not {@code SORTED}, throws {@link java.lang.IllegalStateException IllegalStateException}.
  *
  * @implSpec

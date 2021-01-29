@@ -143,7 +143,7 @@ public void lock() { throw new RuntimeException("Stub!"); }
 
 /**
  * Acquires the lock unless the current thread is
- * {@linkplain java.lang.Thread#interrupt Thread#interrupt}.
+ * {@linkplain java.lang.Thread#interrupt interrupted}.
  *
  * <p>Acquires the lock if it is not held by another thread and returns
  * immediately, setting the lock hold count to one.
@@ -159,7 +159,7 @@ public void lock() { throw new RuntimeException("Stub!"); }
  *
  * <li>The lock is acquired by the current thread; or
  *
- * <li>Some other thread {@linkplain java.lang.Thread#interrupt Thread#interrupt} the
+ * <li>Some other thread {@linkplain java.lang.Thread#interrupt interrupts} the
  * current thread.
  *
  * </ul>
@@ -173,7 +173,7 @@ public void lock() { throw new RuntimeException("Stub!"); }
  *
  * <li>has its interrupted status set on entry to this method; or
  *
- * <li>is {@linkplain java.lang.Thread#interrupt Thread#interrupt} while acquiring
+ * <li>is {@linkplain java.lang.Thread#interrupt interrupted} while acquiring
  * the lock,
  *
  * </ul>
@@ -222,7 +222,7 @@ public boolean tryLock() { throw new RuntimeException("Stub!"); }
 /**
  * Acquires the lock if it is not held by another thread within the given
  * waiting time and the current thread has not been
- * {@linkplain java.lang.Thread#interrupt Thread#interrupt}.
+ * {@linkplain java.lang.Thread#interrupt interrupted}.
  *
  * <p>Acquires the lock if it is not held by another thread and returns
  * immediately with the value {@code true}, setting the lock hold count
@@ -250,7 +250,7 @@ public boolean tryLock() { throw new RuntimeException("Stub!"); }
  *
  * <li>The lock is acquired by the current thread; or
  *
- * <li>Some other thread {@linkplain java.lang.Thread#interrupt Thread#interrupt}
+ * <li>Some other thread {@linkplain java.lang.Thread#interrupt interrupts}
  * the current thread; or
  *
  * <li>The specified waiting time elapses
@@ -266,7 +266,7 @@ public boolean tryLock() { throw new RuntimeException("Stub!"); }
  *
  * <li>has its interrupted status set on entry to this method; or
  *
- * <li>is {@linkplain java.lang.Thread#interrupt Thread#interrupt} while
+ * <li>is {@linkplain java.lang.Thread#interrupt interrupted} while
  * acquiring the lock,
  *
  * </ul>
@@ -313,20 +313,20 @@ public void unlock() { throw new RuntimeException("Stub!"); }
  * {@link java.util.concurrent.locks.Lock Lock} instance.
  *
  * <p>The returned {@link java.util.concurrent.locks.Condition Condition} instance supports the same
- * usages as do the {@link java.lang.Object Object} monitor methods ({@link java.lang.Object#wait() Object#wait()}, {@link java.lang.Object#notify Object#notify}, and {@link java.lang.Object#notifyAll Object#notifyAll}) when used with the built-in
+ * usages as do the {@link java.lang.Object Object} monitor methods ({@link java.lang.Object#wait() wait}, {@link java.lang.Object#notify notify}, and {@link java.lang.Object#notifyAll notifyAll}) when used with the built-in
  * monitor lock.
  *
  * <ul>
  *
  * <li>If this lock is not held when any of the {@link java.util.concurrent.locks.Condition Condition}
- * {@linkplain java.util.concurrent.locks.Condition#await() Condition#await()} or {@linkplain java.util.concurrent.locks.Condition#signal Condition#signal} methods are called, then an {@link java.lang.IllegalMonitorStateException IllegalMonitorStateException} is thrown.
+ * {@linkplain java.util.concurrent.locks.Condition#await() waiting} or {@linkplain java.util.concurrent.locks.Condition#signal signalling} methods are called, then an {@link java.lang.IllegalMonitorStateException IllegalMonitorStateException} is thrown.
  *
- * <li>When the condition {@linkplain java.util.concurrent.locks.Condition#await() Condition#await()}
+ * <li>When the condition {@linkplain java.util.concurrent.locks.Condition#await() waiting}
  * methods are called the lock is released and, before they
  * return, the lock is reacquired and the lock hold count restored
  * to what it was when the method was called.
  *
- * <li>If a thread is {@linkplain java.lang.Thread#interrupt Thread#interrupt}
+ * <li>If a thread is {@linkplain java.lang.Thread#interrupt interrupted}
  * while waiting then the wait will terminate, an {@link java.lang.InterruptedException InterruptedException} will be thrown, and the thread's
  * interrupted status will be cleared.
  *
@@ -569,7 +569,7 @@ protected java.util.Collection<java.lang.Thread> getWaitingThreads(java.util.con
  * Returns a string identifying this lock, as well as its lock state.
  * The state, in brackets, includes either the String {@code "Unlocked"}
  * or the String {@code "Locked by"} followed by the
- * {@linkplain java.lang.Thread#getName Thread#getName} of the owning thread.
+ * {@linkplain java.lang.Thread#getName name} of the owning thread.
  *
  * @return a string identifying this lock, as well as its lock state
  */

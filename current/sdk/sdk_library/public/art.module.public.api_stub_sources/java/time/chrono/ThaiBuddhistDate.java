@@ -67,7 +67,7 @@ import java.time.temporal.TemporalQuery;
 /**
  * A date in the Thai Buddhist calendar system.
  * <p>
- * This date operates using the {@linkplain java.time.chrono.ThaiBuddhistChronology ThaiBuddhistChronology}.
+ * This date operates using the {@linkplain java.time.chrono.ThaiBuddhistChronology Thai Buddhist calendar}.
  * This calendar system is primarily used in Thailand.
  * Dates are aligned such that {@code 2484-01-01 (Buddhist)} is {@code 1941-01-01 (ISO)}.
  *
@@ -85,7 +85,7 @@ ThaiBuddhistDate() { throw new RuntimeException("Stub!"); }
 /**
  * Obtains the current {@code ThaiBuddhistDate} from the system clock in the default time-zone.
  * <p>
- * This will query the {@link java.time.Clock#systemDefaultZone() Clock#systemDefaultZone()} in the default
+ * This will query the {@link java.time.Clock#systemDefaultZone() system clock} in the default
  * time-zone to obtain the current date.
  * <p>
  * Using this method will prevent the ability to use an alternate clock for testing
@@ -99,7 +99,7 @@ public static java.time.chrono.ThaiBuddhistDate now() { throw new RuntimeExcepti
 /**
  * Obtains the current {@code ThaiBuddhistDate} from the system clock in the specified time-zone.
  * <p>
- * This will query the {@link java.time.Clock#system(java.time.ZoneId) Clock#system(ZoneId)} to obtain the current date.
+ * This will query the {@link java.time.Clock#system(java.time.ZoneId) system clock} to obtain the current date.
  * Specifying the time-zone avoids dependence on the default time-zone.
  * <p>
  * Using this method will prevent the ability to use an alternate clock for testing
@@ -116,7 +116,7 @@ public static java.time.chrono.ThaiBuddhistDate now(java.time.ZoneId zone) { thr
  * <p>
  * This will query the specified clock to obtain the current date - today.
  * Using this method allows the use of an alternate clock for testing.
- * The alternate clock may be introduced using {@linkplain java.time.Clock Clock}.
+ * The alternate clock may be introduced using {@linkplain java.time.Clock dependency injection}.
  *
  * @param clock  the clock to use, not null
  * @return the current date, not null
@@ -149,7 +149,7 @@ public static java.time.chrono.ThaiBuddhistDate of(int prolepticYear, int month,
  * A {@code TemporalAccessor} represents an arbitrary set of date and time information,
  * which this factory converts to an instance of {@code ThaiBuddhistDate}.
  * <p>
- * The conversion typically uses the {@link java.time.temporal.ChronoField#EPOCH_DAY ChronoField#EPOCH_DAY}
+ * The conversion typically uses the {@link java.time.temporal.ChronoField#EPOCH_DAY EPOCH_DAY}
  * field, which is standardized across calendar systems.
  * <p>
  * This method matches the signature of the functional interface {@link java.time.temporal.TemporalQuery TemporalQuery}

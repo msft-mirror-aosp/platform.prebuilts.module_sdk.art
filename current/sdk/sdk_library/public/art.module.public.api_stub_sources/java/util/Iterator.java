@@ -115,6 +115,6 @@ public default void remove() { throw new RuntimeException("Stub!"); }
  * @since 1.8
  */
 
-public default void forEachRemaining(@android.annotation.NonNull java.util.function.Consumer<? super E> action) { throw new RuntimeException("Stub!"); }
+public default void forEachRemaining(@androidx.annotation.RecentlyNonNull java.util.function.Consumer<? super E> action) { throw new RuntimeException("Stub!"); }
 }
 

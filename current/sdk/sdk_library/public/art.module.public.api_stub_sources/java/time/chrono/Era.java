@@ -79,7 +79,7 @@ import java.time.temporal.TemporalAdjuster;
  * of each leader.
  * In all cases, the era is conceptually the largest division of the time-line.
  * Each chronology defines the Era's that are known Eras and a
- * {@link java.time.chrono.Chronology#eras Chronology#eras} to get the valid eras.
+ * {@link java.time.chrono.Chronology#eras Chronology.eras} to get the valid eras.
  * <p>
  * For example, the Thai Buddhist calendar system divides time into two eras,
  * before and after a single date. By contrast, the Japanese calendar system

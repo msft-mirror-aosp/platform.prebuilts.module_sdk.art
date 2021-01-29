@@ -44,8 +44,7 @@ package java.lang;
  * other illegal uses of the {@code null} object.
  *
  * {@code NullPointerException} objects may be constructed by the
- * virtual machine as if {@linkplain java.lang.Throwable#Throwable(java.lang.String,java.lang.Throwable,boolean,boolean) Throwable#Throwable(String,
- * Throwable, boolean, boolean)}.
+ * virtual machine as if {@linkplain java.lang.Throwable#Throwable(java.lang.String,java.lang.Throwable,boolean,boolean)  stack trace was not writable}.
  *
  * @author  unascribed
  * @since   JDK1.0

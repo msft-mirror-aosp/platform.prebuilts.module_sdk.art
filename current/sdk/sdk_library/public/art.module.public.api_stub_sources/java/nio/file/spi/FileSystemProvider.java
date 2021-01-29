@@ -177,7 +177,7 @@ public abstract java.nio.file.FileSystem newFileSystem(java.net.URI uri, java.ut
  *
  * <p> If a security manager is installed then a provider implementation
  * may require to check a permission before returning a reference to an
- * existing file system. In the case of the {@link java.nio.file.FileSystems#getDefault FileSystems#getDefault} file system, no permission check is required.
+ * existing file system. In the case of the {@link java.nio.file.FileSystems#getDefault  default} file system, no permission check is required.
  *
  * @param   uri
  *          URI reference
@@ -204,10 +204,10 @@ public abstract java.nio.file.FileSystem getFileSystem(java.net.URI uri);
  * case of the default provider, the URI scheme is {@code "file"} and the
  * given URI has a non-empty path component, and undefined query, and
  * fragment components. The resulting {@code Path} is associated with the
- * default {@link java.nio.file.FileSystems#getDefault FileSystems#getDefault} {@code FileSystem}.
+ * default {@link java.nio.file.FileSystems#getDefault default} {@code FileSystem}.
  *
  * <p> If a security manager is installed then a provider implementation
- * may require to check a permission. In the case of the {@link java.nio.file.FileSystems#getDefault FileSystems#getDefault} file system, no permission check is
+ * may require to check a permission. In the case of the {@link java.nio.file.FileSystems#getDefault default} file system, no permission check is
  * required.
  *
  * @param   uri
@@ -268,7 +268,7 @@ public java.nio.file.FileSystem newFileSystem(java.nio.file.Path path, java.util
 
 /**
  * Opens a file, returning an input stream to read from the file. This
- * method works in exactly the manner specified by the {@link java.nio.file.Files#newInputStream Files#newInputStream} method.
+ * method works in exactly the manner specified by the {@link java.nio.file.Files#newInputStream  } method.
  *
  * <p> The default implementation of this method opens a channel to the file
  * as if by invoking the {@link #newByteChannel} method and constructs a
@@ -290,7 +290,7 @@ public java.nio.file.FileSystem newFileSystem(java.nio.file.Path path, java.util
  *          if an I/O error occurs
  * @throws  java.lang.SecurityException
  *          In the case of the default provider, and a security manager is
- *          installed, the {@link java.lang.SecurityManager#checkRead(java.lang.String) SecurityManager#checkRead(String)}
+ *          installed, the {@link java.lang.SecurityManager#checkRead(java.lang.String) checkRead}
  *          method is invoked to check read access to the file.
  */
 
@@ -321,8 +321,8 @@ public java.io.InputStream newInputStream(java.nio.file.Path path, java.nio.file
  *          if an I/O error occurs
  * @throws  java.lang.SecurityException
  *          In the case of the default provider, and a security manager is
- *          installed, the {@link java.lang.SecurityManager#checkWrite(java.lang.String) SecurityManager#checkWrite(String)}
- *          method is invoked to check write access to the file. The {@link java.lang.SecurityManager#checkDelete(java.lang.String) SecurityManager#checkDelete(String)} method is
+ *          installed, the {@link java.lang.SecurityManager#checkWrite(java.lang.String) checkWrite}
+ *          method is invoked to check write access to the file. The {@link java.lang.SecurityManager#checkDelete(java.lang.String) checkDelete} method is
  *          invoked to check delete access if the file is opened with the
  *          {@code DELETE_ON_CLOSE} option.
  */
@@ -332,7 +332,7 @@ public java.io.OutputStream newOutputStream(java.nio.file.Path path, java.nio.fi
 /**
  * Opens or creates a file for reading and/or writing, returning a file
  * channel to access the file. This method works in exactly the manner
- * specified by the {@link java.nio.channels.FileChannel#open(java.nio.file.Path,java.util.Set,java.nio.file.attribute.FileAttribute[]) FileChannel#open(Path,Set,FileAttribute[])} method. A provider that does not support all the
+ * specified by the {@link java.nio.channels.FileChannel#open(java.nio.file.Path,java.util.Set,java.nio.file.attribute.FileAttribute[])  FileChannel.open} method. A provider that does not support all the
  * features required to construct a file channel throws {@code
  * UnsupportedOperationException}. The default provider is required to
  * support the creation of file channels. When not overridden, the default
@@ -356,8 +356,8 @@ public java.io.OutputStream newOutputStream(java.nio.file.Path path, java.nio.fi
  * @throws  java.io.IOException
  *          If an I/O error occurs
  * @throws  java.lang.SecurityException
- *          In the case of the default file system, the {@link java.lang.SecurityManager#checkRead(java.lang.String) SecurityManager#checkRead(String)} method is invoked to check
- *          read access if the file is opened for reading. The {@link java.lang.SecurityManager#checkWrite(java.lang.String) SecurityManager#checkWrite(String)} method is invoked to check
+ *          In the case of the default file system, the {@link java.lang.SecurityManager#checkRead(java.lang.String)           } method is invoked to check
+ *          read access if the file is opened for reading. The {@link java.lang.SecurityManager#checkWrite(java.lang.String)           } method is invoked to check
  *          write access if the file is opened for writing
  */
 
@@ -366,7 +366,7 @@ public java.nio.channels.FileChannel newFileChannel(java.nio.file.Path path, jav
 /**
  * Opens or creates a file for reading and/or writing, returning an
  * asynchronous file channel to access the file. This method works in
- * exactly the manner specified by the {@link java.nio.channels.AsynchronousFileChannel#open(java.nio.file.Path,java.util.Set,java.util.concurrent.ExecutorService,java.nio.file.attribute.FileAttribute[]) AsynchronousFileChannel#open(Path,Set,ExecutorService,FileAttribute[])} method.
+ * exactly the manner specified by the {@link java.nio.channels.AsynchronousFileChannel#open(java.nio.file.Path,java.util.Set,java.util.concurrent.ExecutorService,java.nio.file.attribute.FileAttribute[])  AsynchronousFileChannel.open} method.
  * A provider that does not support all the features required to construct
  * an asynchronous file channel throws {@code UnsupportedOperationException}.
  * The default provider is required to support the creation of asynchronous
@@ -395,8 +395,8 @@ public java.nio.channels.FileChannel newFileChannel(java.nio.file.Path path, jav
  * @throws  java.io.IOException
  *          If an I/O error occurs
  * @throws  java.lang.SecurityException
- *          In the case of the default file system, the {@link java.lang.SecurityManager#checkRead(java.lang.String) SecurityManager#checkRead(String)} method is invoked to check
- *          read access if the file is opened for reading. The {@link java.lang.SecurityManager#checkWrite(java.lang.String) SecurityManager#checkWrite(String)} method is invoked to check
+ *          In the case of the default file system, the {@link java.lang.SecurityManager#checkRead(java.lang.String)           } method is invoked to check
+ *          read access if the file is opened for reading. The {@link java.lang.SecurityManager#checkWrite(java.lang.String)           } method is invoked to check
  *          write access if the file is opened for writing
  */
 
@@ -404,7 +404,7 @@ public java.nio.channels.AsynchronousFileChannel newAsynchronousFileChannel(java
 
 /**
  * Opens or creates a file, returning a seekable byte channel to access the
- * file. This method works in exactly the manner specified by the {@link java.nio.file.Files#newByteChannel(java.nio.file.Path,java.util.Set,java.nio.file.attribute.FileAttribute[]) Files#newByteChannel(Path,Set,FileAttribute[])} method.
+ * file. This method works in exactly the manner specified by the {@link java.nio.file.Files#newByteChannel(java.nio.file.Path,java.util.Set,java.nio.file.attribute.FileAttribute[])  } method.
  *
  * @param   path
  *          the path to the file to open or create
@@ -422,16 +422,16 @@ public java.nio.channels.AsynchronousFileChannel newAsynchronousFileChannel(java
  *          if an unsupported open option is specified or the array contains
  *          attributes that cannot be set atomically when creating the file
  * @throws  java.nio.file.FileAlreadyExistsException
- *          if a file of that name already exists and the {@link java.nio.file.StandardOpenOption#CREATE_NEW StandardOpenOption#CREATE_NEW} option is specified
+ *          if a file of that name already exists and the {@link java.nio.file.StandardOpenOption#CREATE_NEW CREATE_NEW} option is specified
  *          <i>(optional specific exception)</i>
  * @throws  java.io.IOException
  *          if an I/O error occurs
  * @throws  java.lang.SecurityException
  *          In the case of the default provider, and a security manager is
- *          installed, the {@link java.lang.SecurityManager#checkRead(java.lang.String) SecurityManager#checkRead(String)}
+ *          installed, the {@link java.lang.SecurityManager#checkRead(java.lang.String) checkRead}
  *          method is invoked to check read access to the path if the file is
- *          opened for reading. The {@link java.lang.SecurityManager#checkWrite(java.lang.String) SecurityManager#checkWrite(String)} method is invoked to check write access to the path
- *          if the file is opened for writing. The {@link java.lang.SecurityManager#checkDelete(java.lang.String) SecurityManager#checkDelete(String)} method is
+ *          opened for reading. The {@link java.lang.SecurityManager#checkWrite(java.lang.String)           checkWrite} method is invoked to check write access to the path
+ *          if the file is opened for writing. The {@link java.lang.SecurityManager#checkDelete(java.lang.String) checkDelete} method is
  *          invoked to check delete access if the file is opened with the
  *          {@code DELETE_ON_CLOSE} option.
  */
@@ -441,7 +441,7 @@ public abstract java.nio.channels.SeekableByteChannel newByteChannel(java.nio.fi
 /**
  * Opens a directory, returning a {@code DirectoryStream} to iterate over
  * the entries in the directory. This method works in exactly the manner
- * specified by the {@link java.nio.file.Files#newDirectoryStream(java.nio.file.Path,java.nio.file.DirectoryStream.Filter) Files#newDirectoryStream(java.nio.file.Path, java.nio.file.DirectoryStream.Filter)}
+ * specified by the {@link java.nio.file.Files#newDirectoryStream(java.nio.file.Path,java.nio.file.DirectoryStream.Filter)  }
  * method.
  *
  * @param   dir
@@ -458,7 +458,7 @@ public abstract java.nio.channels.SeekableByteChannel newByteChannel(java.nio.fi
  *          if an I/O error occurs
  * @throws  java.lang.SecurityException
  *          In the case of the default provider, and a security manager is
- *          installed, the {@link java.lang.SecurityManager#checkRead(java.lang.String) SecurityManager#checkRead(String)}
+ *          installed, the {@link java.lang.SecurityManager#checkRead(java.lang.String) checkRead}
  *          method is invoked to check read access to the directory.
  */
 
@@ -484,7 +484,7 @@ public abstract java.nio.file.DirectoryStream<java.nio.file.Path> newDirectorySt
  *          if an I/O error occurs or the parent directory does not exist
  * @throws  java.lang.SecurityException
  *          In the case of the default provider, and a security manager is
- *          installed, the {@link java.lang.SecurityManager#checkWrite(java.lang.String) SecurityManager#checkWrite(String)}
+ *          installed, the {@link java.lang.SecurityManager#checkWrite(java.lang.String) checkWrite}
  *          method is invoked to check write access to the new directory.
  */
 
@@ -517,7 +517,7 @@ public abstract void createDirectory(java.nio.file.Path dir, java.nio.file.attri
  * @throws  java.lang.SecurityException
  *          In the case of the default provider, and a security manager
  *          is installed, it denies {@link java.nio.file.LinkPermission LinkPermission}<tt>("symbolic")</tt>
- *          or its {@link java.lang.SecurityManager#checkWrite(java.lang.String) SecurityManager#checkWrite(String)}
+ *          or its {@link java.lang.SecurityManager#checkWrite(java.lang.String) checkWrite}
  *          method denies write access to the path of the symbolic link.
  */
 
@@ -547,7 +547,7 @@ public void createSymbolicLink(java.nio.file.Path link, java.nio.file.Path targe
  * @throws  java.lang.SecurityException
  *          In the case of the default provider, and a security manager
  *          is installed, it denies {@link java.nio.file.LinkPermission LinkPermission}<tt>("hard")</tt>
- *          or its {@link java.lang.SecurityManager#checkWrite(java.lang.String) SecurityManager#checkWrite(String)}
+ *          or its {@link java.lang.SecurityManager#checkWrite(java.lang.String) checkWrite}
  *          method denies write access to either the  link or the
  *          existing file.
  */
@@ -660,9 +660,9 @@ public java.nio.file.Path readSymbolicLink(java.nio.file.Path link) throws java.
  *          if an I/O error occurs
  * @throws  java.lang.SecurityException
  *          In the case of the default provider, and a security manager is
- *          installed, the {@link java.lang.SecurityManager#checkRead(java.lang.String) SecurityManager#checkRead(String)}
+ *          installed, the {@link java.lang.SecurityManager#checkRead(java.lang.String) checkRead}
  *          method is invoked to check read access to the source file, the
- *          {@link java.lang.SecurityManager#checkWrite(java.lang.String) SecurityManager#checkWrite(String)} is invoked
+ *          {@link java.lang.SecurityManager#checkWrite(java.lang.String) checkWrite} is invoked
  *          to check write access to the target file. If a symbolic link is
  *          copied the security manager is invoked to check {@link java.nio.file.LinkPermission LinkPermission}{@code ("symbolic")}.
  */
@@ -698,7 +698,7 @@ public abstract void copy(java.nio.file.Path source, java.nio.file.Path target, 
  *          if an I/O error occurs
  * @throws  java.lang.SecurityException
  *          In the case of the default provider, and a security manager is
- *          installed, the {@link java.lang.SecurityManager#checkWrite(java.lang.String) SecurityManager#checkWrite(String)}
+ *          installed, the {@link java.lang.SecurityManager#checkWrite(java.lang.String) checkWrite}
  *          method is invoked to check write access to both the source and
  *          target file.
  */
@@ -720,7 +720,7 @@ public abstract void move(java.nio.file.Path source, java.nio.file.Path target, 
  *          if an I/O error occurs
  * @throws  java.lang.SecurityException
  *          In the case of the default provider, and a security manager is
- *          installed, the {@link java.lang.SecurityManager#checkRead(java.lang.String) SecurityManager#checkRead(String)}
+ *          installed, the {@link java.lang.SecurityManager#checkRead(java.lang.String) checkRead}
  *          method is invoked to check read access to both files.
  */
 
@@ -731,7 +731,7 @@ public abstract boolean isSameFile(java.nio.file.Path path, java.nio.file.Path p
  * works in exactly the manner specified by the {@link java.nio.file.Files#isHidden Files#isHidden}
  * method.
  *
- * <p> This method is invoked by the {@link java.nio.file.Files#isHidden Files#isHidden} method.
+ * <p> This method is invoked by the {@link java.nio.file.Files#isHidden isHidden} method.
  *
  * @param   path
  *          the path to the file to test
@@ -742,7 +742,7 @@ public abstract boolean isSameFile(java.nio.file.Path path, java.nio.file.Path p
  *          if an I/O error occurs
  * @throws  java.lang.SecurityException
  *          In the case of the default provider, and a security manager is
- *          installed, the {@link java.lang.SecurityManager#checkRead(java.lang.String) SecurityManager#checkRead(String)}
+ *          installed, the {@link java.lang.SecurityManager#checkRead(java.lang.String) checkRead}
  *          method is invoked to check read access to the file.
  */
 
@@ -762,7 +762,7 @@ public abstract boolean isHidden(java.nio.file.Path path) throws java.io.IOExcep
  *          if an I/O error occurs
  * @throws  java.lang.SecurityException
  *          In the case of the default provider, and a security manager is
- *          installed, the {@link java.lang.SecurityManager#checkRead(java.lang.String) SecurityManager#checkRead(String)}
+ *          installed, the {@link java.lang.SecurityManager#checkRead(java.lang.String) checkRead}
  *          method is invoked to check read access to the file, and in
  *          addition it checks {@link java.lang.RuntimePermission RuntimePermission}<tt>
  *          ("getFileStoreAttributes")</tt>
@@ -773,8 +773,8 @@ public abstract java.nio.file.FileStore getFileStore(java.nio.file.Path path) th
 /**
  * Checks the existence, and optionally the accessibility, of a file.
  *
- * <p> This method may be used by the {@link java.nio.file.Files#isReadable Files#isReadable},
- * {@link java.nio.file.Files#isWritable Files#isWritable} and {@link java.nio.file.Files#isExecutable Files#isExecutable} methods to check the accessibility of a file.
+ * <p> This method may be used by the {@link java.nio.file.Files#isReadable isReadable},
+ * {@link java.nio.file.Files#isWritable isWritable} and {@link java.nio.file.Files#isExecutable  isExecutable} methods to check the accessibility of a file.
  *
  * <p> This method checks the existence of a file and that this Java virtual
  * machine has appropriate privileges that would allow it access the file
@@ -784,19 +784,19 @@ public abstract java.nio.file.FileStore getFileStore(java.nio.file.Path path) th
  * <table border=1 cellpadding=5 summary="">
  * <tr> <th>Value</th> <th>Description</th> </tr>
  * <tr>
- *   <td> {@link java.nio.file.AccessMode#READ AccessMode#READ} </td>
+ *   <td> {@link java.nio.file.AccessMode#READ READ} </td>
  *   <td> Checks that the file exists and that the Java virtual machine has
  *     permission to read the file. </td>
  * </tr>
  * <tr>
- *   <td> {@link java.nio.file.AccessMode#WRITE AccessMode#WRITE} </td>
+ *   <td> {@link java.nio.file.AccessMode#WRITE WRITE} </td>
  *   <td> Checks that the file exists and that the Java virtual machine has
  *     permission to write to the file, </td>
  * </tr>
  * <tr>
- *   <td> {@link java.nio.file.AccessMode#EXECUTE AccessMode#EXECUTE} </td>
+ *   <td> {@link java.nio.file.AccessMode#EXECUTE EXECUTE} </td>
  *   <td> Checks that the file exists and that the Java virtual machine has
- *     permission to {@link java.lang.Runtime#exec Runtime#exec} the file. The semantics
+ *     permission to {@link java.lang.Runtime#exec execute} the file. The semantics
  *     may differ when checking access to a directory. For example, on UNIX
  *     systems, checking for {@code EXECUTE} access checks that the Java
  *     virtual machine has permission to search the directory in order to
@@ -835,10 +835,10 @@ public abstract java.nio.file.FileStore getFileStore(java.nio.file.Path path) th
  *          if an I/O error occurs
  * @throws  java.lang.SecurityException
  *          In the case of the default provider, and a security manager is
- *          installed, the {@link java.lang.SecurityManager#checkRead(java.lang.String) SecurityManager#checkRead(String)}
+ *          installed, the {@link java.lang.SecurityManager#checkRead(java.lang.String) checkRead}
  *          is invoked when checking read access to the file or only the
- *          existence of the file, the {@link java.lang.SecurityManager#checkWrite(java.lang.String) SecurityManager#checkWrite(String)} is invoked when checking write access to the file,
- *          and {@link java.lang.SecurityManager#checkExec(java.lang.String) SecurityManager#checkExec(String)} is invoked
+ *          existence of the file, the {@link java.lang.SecurityManager#checkWrite(java.lang.String)           checkWrite} is invoked when checking write access to the file,
+ *          and {@link java.lang.SecurityManager#checkExec(java.lang.String) checkExec} is invoked
  *          when checking execute access.
  */
 
@@ -866,7 +866,7 @@ public abstract <V extends java.nio.file.attribute.FileAttributeView> V getFileA
 
 /**
  * Reads a file's attributes as a bulk operation. This method works in
- * exactly the manner specified by the {@link java.nio.file.Files#readAttributes(java.nio.file.Path,java.lang.Class,java.nio.file.LinkOption[]) Files#readAttributes(Path,Class,LinkOption[])} method.
+ * exactly the manner specified by the {@link java.nio.file.Files#readAttributes(java.nio.file.Path,java.lang.Class,java.nio.file.LinkOption[])  } method.
  *
  * @param   <A>
  *          The {@code BasicFileAttributes} type
@@ -886,7 +886,7 @@ public abstract <V extends java.nio.file.attribute.FileAttributeView> V getFileA
  *          if an I/O error occurs
  * @throws  java.lang.SecurityException
  *          In the case of the default provider, a security manager is
- *          installed, its {@link java.lang.SecurityManager#checkRead(java.lang.String) SecurityManager#checkRead(String)}
+ *          installed, its {@link java.lang.SecurityManager#checkRead(java.lang.String) checkRead}
  *          method is invoked to check read access to the file
  */
 
@@ -894,7 +894,7 @@ public abstract <A extends java.nio.file.attribute.BasicFileAttributes> A readAt
 
 /**
  * Reads a set of file attributes as a bulk operation. This method works in
- * exactly the manner specified by the {@link java.nio.file.Files#readAttributes(java.nio.file.Path,java.lang.String,java.nio.file.LinkOption[]) Files#readAttributes(Path,String,LinkOption[])} method.
+ * exactly the manner specified by the {@link java.nio.file.Files#readAttributes(java.nio.file.Path,java.lang.String,java.nio.file.LinkOption[])  } method.
  *
  * @param   path
  *          the path to the file
@@ -915,7 +915,7 @@ public abstract <A extends java.nio.file.attribute.BasicFileAttributes> A readAt
  *          If an I/O error occurs
  * @throws  java.lang.SecurityException
  *          In the case of the default provider, and a security manager is
- *          installed, its {@link java.lang.SecurityManager#checkRead(java.lang.String) SecurityManager#checkRead(String)}
+ *          installed, its {@link java.lang.SecurityManager#checkRead(java.lang.String) checkRead}
  *          method denies read access to the file. If this method is invoked
  *          to read security sensitive attributes then the security manager
  *          may be invoke to check for additional permissions.
@@ -950,7 +950,7 @@ public abstract java.util.Map<java.lang.String,java.lang.Object> readAttributes(
  *          If an I/O error occurs
  * @throws  java.lang.SecurityException
  *          In the case of the default provider, and a security manager is
- *          installed, its {@link java.lang.SecurityManager#checkWrite(java.lang.String) SecurityManager#checkWrite(String)}
+ *          installed, its {@link java.lang.SecurityManager#checkWrite(java.lang.String) checkWrite}
  *          method denies write access to the file. If this method is invoked
  *          to set security sensitive attributes then the security manager
  *          may be invoked to check for additional permissions.

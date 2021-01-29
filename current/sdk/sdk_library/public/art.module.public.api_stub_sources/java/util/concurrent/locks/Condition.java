@@ -41,8 +41,8 @@ import java.util.Date;
 
 /**
  * {@code Condition} factors out the {@code Object} monitor
- * methods ({@link java.lang.Object#wait() Object#wait()}, {@link java.lang.Object#notify Object#notify}
- * and {@link java.lang.Object#notifyAll Object#notifyAll}) into distinct objects to
+ * methods ({@link java.lang.Object#wait() wait}, {@link java.lang.Object#notify notify}
+ * and {@link java.lang.Object#notifyAll notifyAll}) into distinct objects to
  * give the effect of having multiple wait-sets per object, by
  * combining them with the use of arbitrary {@link java.util.concurrent.locks.Lock Lock} implementations.
  * Where a {@code Lock} replaces the use of {@code synchronized} methods
@@ -61,7 +61,7 @@ import java.util.Date;
  *
  * <p>A {@code Condition} instance is intrinsically bound to a lock.
  * To obtain a {@code Condition} instance for a particular {@link java.util.concurrent.locks.Lock Lock}
- * instance use its {@link java.util.concurrent.locks.Lock#newCondition Lock#newCondition} method.
+ * instance use its {@link java.util.concurrent.locks.Lock#newCondition newCondition()} method.
  *
  * <p>As an example, suppose we have a bounded buffer which supports
  * {@code put} and {@code take} methods.  If a
@@ -127,8 +127,8 @@ import java.util.Date;
  *
  * <p>Note that {@code Condition} instances are just normal objects and can
  * themselves be used as the target in a {@code synchronized} statement,
- * and can have their own monitor {@link java.lang.Object#wait Object#wait} and
- * {@link java.lang.Object#notify Object#notify} methods invoked.
+ * and can have their own monitor {@link java.lang.Object#wait wait} and
+ * {@link java.lang.Object#notify notify} methods invoked.
  * Acquiring the monitor lock of a {@code Condition} instance, or using its
  * monitor methods, has no specified relationship with acquiring the
  * {@link java.util.concurrent.locks.Lock Lock} associated with that {@code Condition} or the use of its
@@ -184,7 +184,7 @@ public interface Condition {
 
 /**
  * Causes the current thread to wait until it is signalled or
- * {@linkplain java.lang.Thread#interrupt Thread#interrupt}.
+ * {@linkplain java.lang.Thread#interrupt interrupted}.
  *
  * <p>The lock associated with this {@code Condition} is atomically
  * released and the current thread becomes disabled for thread scheduling
@@ -195,7 +195,7 @@ public interface Condition {
  * thread to be awakened; or
  * <li>Some other thread invokes the {@link #signalAll} method for this
  * {@code Condition}; or
- * <li>Some other thread {@linkplain java.lang.Thread#interrupt Thread#interrupt} the
+ * <li>Some other thread {@linkplain java.lang.Thread#interrupt interrupts} the
  * current thread, and interruption of thread suspension is supported; or
  * <li>A &quot;<em>spurious wakeup</em>&quot; occurs.
  * </ul>
@@ -207,7 +207,7 @@ public interface Condition {
  * <p>If the current thread:
  * <ul>
  * <li>has its interrupted status set on entry to this method; or
- * <li>is {@linkplain java.lang.Thread#interrupt Thread#interrupt} while waiting
+ * <li>is {@linkplain java.lang.Thread#interrupt interrupted} while waiting
  * and interruption of thread suspension is supported,
  * </ul>
  * then {@link java.lang.InterruptedException InterruptedException} is thrown and the current thread's
@@ -255,7 +255,7 @@ public void await() throws java.lang.InterruptedException;
  * thread returns it is <em>guaranteed</em> to hold this lock.
  *
  * <p>If the current thread's interrupted status is set when it enters
- * this method, or it is {@linkplain java.lang.Thread#interrupt Thread#interrupt}
+ * this method, or it is {@linkplain java.lang.Thread#interrupt interrupted}
  * while waiting, it will continue to wait until signalled. When it finally
  * returns from this method its interrupted status will still
  * be set.
@@ -285,7 +285,7 @@ public void awaitUninterruptibly();
  * thread to be awakened; or
  * <li>Some other thread invokes the {@link #signalAll} method for this
  * {@code Condition}; or
- * <li>Some other thread {@linkplain java.lang.Thread#interrupt Thread#interrupt} the
+ * <li>Some other thread {@linkplain java.lang.Thread#interrupt interrupts} the
  * current thread, and interruption of thread suspension is supported; or
  * <li>The specified waiting time elapses; or
  * <li>A &quot;<em>spurious wakeup</em>&quot; occurs.
@@ -298,7 +298,7 @@ public void awaitUninterruptibly();
  * <p>If the current thread:
  * <ul>
  * <li>has its interrupted status set on entry to this method; or
- * <li>is {@linkplain java.lang.Thread#interrupt Thread#interrupt} while waiting
+ * <li>is {@linkplain java.lang.Thread#interrupt interrupted} while waiting
  * and interruption of thread suspension is supported,
  * </ul>
  * then {@link java.lang.InterruptedException InterruptedException} is thrown and the current thread's
@@ -393,7 +393,7 @@ public boolean await(long time, java.util.concurrent.TimeUnit unit) throws java.
  * thread to be awakened; or
  * <li>Some other thread invokes the {@link #signalAll} method for this
  * {@code Condition}; or
- * <li>Some other thread {@linkplain java.lang.Thread#interrupt Thread#interrupt} the
+ * <li>Some other thread {@linkplain java.lang.Thread#interrupt interrupts} the
  * current thread, and interruption of thread suspension is supported; or
  * <li>The specified deadline elapses; or
  * <li>A &quot;<em>spurious wakeup</em>&quot; occurs.
@@ -407,7 +407,7 @@ public boolean await(long time, java.util.concurrent.TimeUnit unit) throws java.
  * <p>If the current thread:
  * <ul>
  * <li>has its interrupted status set on entry to this method; or
- * <li>is {@linkplain java.lang.Thread#interrupt Thread#interrupt} while waiting
+ * <li>is {@linkplain java.lang.Thread#interrupt interrupted} while waiting
  * and interruption of thread suspension is supported,
  * </ul>
  * then {@link java.lang.InterruptedException InterruptedException} is thrown and the current thread's

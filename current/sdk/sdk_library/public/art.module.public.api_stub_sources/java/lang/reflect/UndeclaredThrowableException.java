@@ -29,7 +29,7 @@ package java.lang.reflect;
 
 /**
  * Thrown by a method invocation on a proxy instance if its invocation
- * handler's {@link java.lang.reflect.InvocationHandler#invoke InvocationHandler#invoke} method throws a
+ * handler's {@link java.lang.reflect.InvocationHandler#invoke invoke} method throws a
  * checked exception (a {@code Throwable} that is not assignable
  * to {@code RuntimeException} or {@code Error}) that
  * is not assignable to any of the exception types declared in the
@@ -49,7 +49,7 @@ package java.lang.reflect;
  * "undeclared checked exception that was thrown by the invocation
  * handler" that may be provided at construction time and accessed via
  * the {@link #getUndeclaredThrowable()} method is now known as the
- * <i>cause</i>, and may be accessed via the {@link java.lang.Throwable#getCause() Throwable#getCause()} method, as well as the aforementioned "legacy
+ * <i>cause</i>, and may be accessed via the {@link java.lang.Throwable#getCause()  } method, as well as the aforementioned "legacy
  * method."
  *
  * @author      Peter Jones

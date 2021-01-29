@@ -100,7 +100,7 @@ public static java.util.Set<java.nio.file.attribute.PosixFilePermission> fromStr
  *          the set of permissions
  *
  * @return  an attribute encapsulating the given file permissions with
- *          {@link java.nio.file.attribute.FileAttribute#name FileAttribute#name} {@code "posix:permissions"}
+ *          {@link java.nio.file.attribute.FileAttribute#name name} {@code "posix:permissions"}
  *
  * @throws  java.lang.ClassCastException
  *          if the set contains elements that are not of type {@code

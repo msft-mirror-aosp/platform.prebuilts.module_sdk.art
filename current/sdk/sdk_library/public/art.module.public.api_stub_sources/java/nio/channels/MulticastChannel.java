@@ -40,13 +40,13 @@ import java.io.IOException;
  * a <em>group</em> that is zero or more hosts identified by a single destination
  * address.
  *
- * <p> In the case of a channel to an {@link java.net.StandardProtocolFamily#INET StandardProtocolFamily#INET} socket,
+ * <p> In the case of a channel to an {@link java.net.StandardProtocolFamily#INET IPv4} socket,
  * the underlying operating system supports <a href="http://www.ietf.org/rfc/rfc2236.txt">
  * <i>RFC&nbsp;2236: Internet Group Management Protocol, Version 2 (IGMPv2)</i></a>.
  * It may optionally support source filtering as specified by <a
  * href="http://www.ietf.org/rfc/rfc3376.txt"> <i>RFC&nbsp;3376: Internet Group
  * Management Protocol, Version 3 (IGMPv3)</i></a>.
- * For channels to an {@link java.net.StandardProtocolFamily#INET6 StandardProtocolFamily#INET6} socket, the equivalent
+ * For channels to an {@link java.net.StandardProtocolFamily#INET6 IPv6} socket, the equivalent
  * standards are <a href="http://www.ietf.org/rfc/rfc2710.txt"> <i>RFC&nbsp;2710:
  * Multicast Listener Discovery (MLD) for IPv6</i></a> and <a
  * href="http://www.ietf.org/rfc/rfc3810.txt"> <i>RFC&nbsp;3810: Multicast Listener
@@ -55,8 +55,8 @@ import java.io.IOException;
  * <p> The {@link #join(java.net.InetAddress,java.net.NetworkInterface)} method is used to
  * join a group and receive all multicast datagrams sent to the group. A channel
  * may join several multicast groups and may join the same group on several
- * {@link java.net.NetworkInterface NetworkInterface}. Membership is dropped by invoking the {@link java.nio.channels.MembershipKey#drop MembershipKey#drop} method on the returned {@link java.nio.channels.MembershipKey MembershipKey}. If the
- * underlying platform supports source filtering then the {@link java.nio.channels.MembershipKey#block MembershipKey#block} and {@link java.nio.channels.MembershipKey#unblock MembershipKey#unblock} methods can be used to block or
+ * {@link java.net.NetworkInterface interfaces}. Membership is dropped by invoking the {@link java.nio.channels.MembershipKey#drop drop} method on the returned {@link java.nio.channels.MembershipKey MembershipKey}. If the
+ * underlying platform supports source filtering then the {@link java.nio.channels.MembershipKey#block  block} and {@link java.nio.channels.MembershipKey#unblock unblock} methods can be used to block or
  * unblock multicast datagrams from particular source addresses.
  *
  * <p> The {@link #join(java.net.InetAddress,java.net.NetworkInterface,java.net.InetAddress)} method
@@ -66,7 +66,7 @@ import java.io.IOException;
  * <em>cumulative</em> and this method may be invoked again with the same group
  * and interface to allow receiving datagrams from other source addresses. The
  * method returns a {@link java.nio.channels.MembershipKey MembershipKey} that represents membership to receive
- * datagrams from the given source address. Invoking the key's {@link java.nio.channels.MembershipKey#drop MembershipKey#drop} method drops membership so that datagrams from the
+ * datagrams from the given source address. Invoking the key's {@link java.nio.channels.MembershipKey#drop drop} method drops membership so that datagrams from the
  * source address can no longer be received.
  *
  * <h2>Platform dependencies</h2>
@@ -82,16 +82,16 @@ import java.io.IOException;
  * will join. There is no guarantee that a channel to a socket in one protocol
  * family can join and receive multicast datagrams when the address of the
  * multicast group corresponds to another protocol family. For example, it is
- * implementation specific if a channel to an {@link java.net.StandardProtocolFamily#INET6 StandardProtocolFamily#INET6}
- * socket can join an {@link java.net.StandardProtocolFamily#INET StandardProtocolFamily#INET} multicast group and receive
+ * implementation specific if a channel to an {@link java.net.StandardProtocolFamily#INET6 IPv6}
+ * socket can join an {@link java.net.StandardProtocolFamily#INET IPv4} multicast group and receive
  * multicast datagrams sent to the group. </p></li>
  *
- * <li><p> The channel's socket should be bound to the {@link java.net.InetAddress#isAnyLocalAddress InetAddress#isAnyLocalAddress} address. If the socket is bound to
+ * <li><p> The channel's socket should be bound to the {@link java.net.InetAddress#isAnyLocalAddress wildcard} address. If the socket is bound to
  * a specific address, rather than the wildcard address then it is implementation
  * specific if multicast datagrams are received by the socket. </p></li>
  *
- * <li><p> The {@link java.net.StandardSocketOptions#SO_REUSEADDR StandardSocketOptions#SO_REUSEADDR} option should be
- * enabled prior to {@link java.nio.channels.NetworkChannel#bind NetworkChannel#bind} the socket. This is
+ * <li><p> The {@link java.net.StandardSocketOptions#SO_REUSEADDR SO_REUSEADDR} option should be
+ * enabled prior to {@link java.nio.channels.NetworkChannel#bind binding} the socket. This is
  * required to allow multiple members of the group to bind to the same
  * address. </p></li>
  *
@@ -123,7 +123,7 @@ public interface MulticastChannel extends java.nio.channels.NetworkChannel {
  * Closes this channel.
  *
  * <p> If the channel is a member of a multicast group then the membership
- * is {@link java.nio.channels.MembershipKey#drop MembershipKey#drop}. Upon return, the {@link java.nio.channels.MembershipKey MembershipKey} will be {@link java.nio.channels.MembershipKey#isValid MembershipKey#isValid}.
+ * is {@link java.nio.channels.MembershipKey#drop dropped}. Upon return, the {@link java.nio.channels.MembershipKey membership-key} will be {@link java.nio.channels.MembershipKey#isValid  invalid}.
  *
  * <p> This method otherwise behaves exactly as specified by the {@link java.nio.channels.Channel Channel} interface.
  *
@@ -141,7 +141,7 @@ public void close() throws java.io.IOException;
  * interface to receive all datagrams then the membership key, representing
  * that membership, is returned. Otherwise this channel joins the group and
  * the resulting new membership key is returned. The resulting membership key
- * is not {@link java.nio.channels.MembershipKey#sourceAddress MembershipKey#sourceAddress}.
+ * is not {@link java.nio.channels.MembershipKey#sourceAddress source-specific}.
  *
  * <p> A multicast channel may join several multicast groups, including
  * the same group on more than one interface. An implementation may impose a
@@ -155,7 +155,7 @@ public void close() throws java.io.IOException;
  * @return  The membership key
  *
  * @throws  java.lang.IllegalArgumentException
- *          If the group parameter is not a {@link java.net.InetAddress#isMulticastAddress InetAddress#isMulticastAddress} address, or the group parameter is an address type
+ *          If the group parameter is not a {@link java.net.InetAddress#isMulticastAddress           multicast} address, or the group parameter is an address type
  *          that is not supported by this channel
  * @throws  java.lang.IllegalStateException
  *          If the channel already has source-specific membership of the
@@ -168,7 +168,7 @@ public void close() throws java.io.IOException;
  *          If an I/O error occurs
  * @throws  java.lang.SecurityException
  *          If a security manager is set, and its
- *          {@link java.lang.SecurityManager#checkMulticast(java.net.InetAddress) SecurityManager#checkMulticast(InetAddress)}
+ *          {@link java.lang.SecurityManager#checkMulticast(java.net.InetAddress) checkMulticast}
  *          method denies access to the multiast group
  */
 
@@ -182,7 +182,7 @@ public java.nio.channels.MembershipKey join(java.net.InetAddress group, java.net
  * interface to receive datagrams from the given source address then the
  * membership key, representing that membership, is returned. Otherwise this
  * channel joins the group and the resulting new membership key is returned.
- * The resulting membership key is {@link java.nio.channels.MembershipKey#sourceAddress MembershipKey#sourceAddress}.
+ * The resulting membership key is {@link java.nio.channels.MembershipKey#sourceAddress  source-specific}.
  *
  * <p> Membership is <em>cumulative</em> and this method may be invoked
  * again with the same group and interface to allow receiving datagrams sent
@@ -198,7 +198,7 @@ public java.nio.channels.MembershipKey join(java.net.InetAddress group, java.net
  * @return  The membership key
  *
  * @throws  java.lang.IllegalArgumentException
- *          If the group parameter is not a {@link java.net.InetAddress#isMulticastAddress InetAddress#isMulticastAddress} address, the
+ *          If the group parameter is not a {@link java.net.InetAddress#isMulticastAddress multicast} address, the
  *          source parameter is not a unicast address, the group
  *          parameter is an address type that is not supported by this channel,
  *          or the source parameter is not the same address type as the group
@@ -214,7 +214,7 @@ public java.nio.channels.MembershipKey join(java.net.InetAddress group, java.net
  *          If an I/O error occurs
  * @throws  java.lang.SecurityException
  *          If a security manager is set, and its
- *          {@link java.lang.SecurityManager#checkMulticast(java.net.InetAddress) SecurityManager#checkMulticast(InetAddress)}
+ *          {@link java.lang.SecurityManager#checkMulticast(java.net.InetAddress) checkMulticast}
  *          method denies access to the multiast group
  */
 

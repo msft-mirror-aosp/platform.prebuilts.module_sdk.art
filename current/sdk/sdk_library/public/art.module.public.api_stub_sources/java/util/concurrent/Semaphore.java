@@ -189,7 +189,7 @@ public Semaphore(int permits, boolean fair) { throw new RuntimeException("Stub!"
 
 /**
  * Acquires a permit from this semaphore, blocking until one is
- * available, or the thread is {@linkplain java.lang.Thread#interrupt Thread#interrupt}.
+ * available, or the thread is {@linkplain java.lang.Thread#interrupt interrupted}.
  *
  * <p>Acquires a permit, if one is available and returns immediately,
  * reducing the number of available permits by one.
@@ -200,14 +200,14 @@ public Semaphore(int permits, boolean fair) { throw new RuntimeException("Stub!"
  * <ul>
  * <li>Some other thread invokes the {@link #release} method for this
  * semaphore and the current thread is next to be assigned a permit; or
- * <li>Some other thread {@linkplain java.lang.Thread#interrupt Thread#interrupt}
+ * <li>Some other thread {@linkplain java.lang.Thread#interrupt interrupts}
  * the current thread.
  * </ul>
  *
  * <p>If the current thread:
  * <ul>
  * <li>has its interrupted status set on entry to this method; or
- * <li>is {@linkplain java.lang.Thread#interrupt Thread#interrupt} while waiting
+ * <li>is {@linkplain java.lang.Thread#interrupt interrupted} while waiting
  * for a permit,
  * </ul>
  * then {@link java.lang.InterruptedException InterruptedException} is thrown and the current thread's
@@ -230,7 +230,7 @@ public void acquire() throws java.lang.InterruptedException { throw new RuntimeE
  * some other thread invokes the {@link #release} method for this
  * semaphore and the current thread is next to be assigned a permit.
  *
- * <p>If the current thread is {@linkplain java.lang.Thread#interrupt Thread#interrupt}
+ * <p>If the current thread is {@linkplain java.lang.Thread#interrupt interrupted}
  * while waiting for a permit then it will continue to wait, but the
  * time at which the thread is assigned a permit may change compared to
  * the time it would have received the permit had no interruption
@@ -270,7 +270,7 @@ public boolean tryAcquire() { throw new RuntimeException("Stub!"); }
 /**
  * Acquires a permit from this semaphore, if one becomes available
  * within the given waiting time and the current thread has not
- * been {@linkplain java.lang.Thread#interrupt Thread#interrupt}.
+ * been {@linkplain java.lang.Thread#interrupt interrupted}.
  *
  * <p>Acquires a permit, if one is available and returns immediately,
  * with the value {@code true},
@@ -282,7 +282,7 @@ public boolean tryAcquire() { throw new RuntimeException("Stub!"); }
  * <ul>
  * <li>Some other thread invokes the {@link #release} method for this
  * semaphore and the current thread is next to be assigned a permit; or
- * <li>Some other thread {@linkplain java.lang.Thread#interrupt Thread#interrupt}
+ * <li>Some other thread {@linkplain java.lang.Thread#interrupt interrupts}
  * the current thread; or
  * <li>The specified waiting time elapses.
  * </ul>
@@ -292,7 +292,7 @@ public boolean tryAcquire() { throw new RuntimeException("Stub!"); }
  * <p>If the current thread:
  * <ul>
  * <li>has its interrupted status set on entry to this method; or
- * <li>is {@linkplain java.lang.Thread#interrupt Thread#interrupt} while waiting
+ * <li>is {@linkplain java.lang.Thread#interrupt interrupted} while waiting
  * to acquire a permit,
  * </ul>
  * then {@link java.lang.InterruptedException InterruptedException} is thrown and the current thread's
@@ -330,7 +330,7 @@ public void release() { throw new RuntimeException("Stub!"); }
 /**
  * Acquires the given number of permits from this semaphore,
  * blocking until all are available,
- * or the thread is {@linkplain java.lang.Thread#interrupt Thread#interrupt}.
+ * or the thread is {@linkplain java.lang.Thread#interrupt interrupted}.
  *
  * <p>Acquires the given number of permits, if they are available,
  * and returns immediately, reducing the number of available permits
@@ -345,14 +345,14 @@ public void release() { throw new RuntimeException("Stub!"); }
  * <li>Some other thread invokes one of the {@link #release() release}
  * methods for this semaphore and the current thread is next to be assigned
  * permits and the number of available permits satisfies this request; or
- * <li>Some other thread {@linkplain java.lang.Thread#interrupt Thread#interrupt}
+ * <li>Some other thread {@linkplain java.lang.Thread#interrupt interrupts}
  * the current thread.
  * </ul>
  *
  * <p>If the current thread:
  * <ul>
  * <li>has its interrupted status set on entry to this method; or
- * <li>is {@linkplain java.lang.Thread#interrupt Thread#interrupt} while waiting
+ * <li>is {@linkplain java.lang.Thread#interrupt interrupted} while waiting
  * for a permit,
  * </ul>
  * then {@link java.lang.InterruptedException InterruptedException} is thrown and the current thread's
@@ -384,7 +384,7 @@ public void acquire(int permits) throws java.lang.InterruptedException { throw n
  * methods for this semaphore and the current thread is next to be assigned
  * permits and the number of available permits satisfies this request.
  *
- * <p>If the current thread is {@linkplain java.lang.Thread#interrupt Thread#interrupt}
+ * <p>If the current thread is {@linkplain java.lang.Thread#interrupt interrupted}
  * while waiting for permits then it will continue to wait and its
  * position in the queue is not affected.  When the thread does return
  * from this method its interrupt status will be set.
@@ -427,7 +427,7 @@ public boolean tryAcquire(int permits) { throw new RuntimeException("Stub!"); }
 /**
  * Acquires the given number of permits from this semaphore, if all
  * become available within the given waiting time and the current
- * thread has not been {@linkplain java.lang.Thread#interrupt Thread#interrupt}.
+ * thread has not been {@linkplain java.lang.Thread#interrupt interrupted}.
  *
  * <p>Acquires the given number of permits, if they are available and
  * returns immediately, with the value {@code true},
@@ -440,7 +440,7 @@ public boolean tryAcquire(int permits) { throw new RuntimeException("Stub!"); }
  * <li>Some other thread invokes one of the {@link #release() release}
  * methods for this semaphore and the current thread is next to be assigned
  * permits and the number of available permits satisfies this request; or
- * <li>Some other thread {@linkplain java.lang.Thread#interrupt Thread#interrupt}
+ * <li>Some other thread {@linkplain java.lang.Thread#interrupt interrupts}
  * the current thread; or
  * <li>The specified waiting time elapses.
  * </ul>
@@ -450,7 +450,7 @@ public boolean tryAcquire(int permits) { throw new RuntimeException("Stub!"); }
  * <p>If the current thread:
  * <ul>
  * <li>has its interrupted status set on entry to this method; or
- * <li>is {@linkplain java.lang.Thread#interrupt Thread#interrupt} while waiting
+ * <li>is {@linkplain java.lang.Thread#interrupt interrupted} while waiting
  * to acquire the permits,
  * </ul>
  * then {@link java.lang.InterruptedException InterruptedException} is thrown and the current thread's
@@ -492,7 +492,7 @@ public boolean tryAcquire(int permits, long timeout, java.util.concurrent.TimeUn
  * are assigned in turn to other threads trying to acquire permits.
  *
  * <p>There is no requirement that a thread that releases a permit must
- * have acquired that permit by calling {@link java.util.concurrent.Semaphore#acquire Semaphore#acquire}.
+ * have acquired that permit by calling {@link java.util.concurrent.Semaphore#acquire acquire}.
  * Correct usage of a semaphore is established by programming convention
  * in the application.
  *

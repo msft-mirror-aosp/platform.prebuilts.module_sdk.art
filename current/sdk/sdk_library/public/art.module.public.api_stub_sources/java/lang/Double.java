@@ -69,7 +69,7 @@ public Double(double value) { throw new RuntimeException("Stub!"); }
  * @see       java.lang.Double#valueOf(java.lang.String)
  */
 
-public Double(@android.annotation.NonNull java.lang.String s) throws java.lang.NumberFormatException { throw new RuntimeException("Stub!"); }
+public Double(@androidx.annotation.RecentlyNonNull java.lang.String s) throws java.lang.NumberFormatException { throw new RuntimeException("Stub!"); }
 
 /**
  * Returns a string representation of the {@code double}
@@ -134,7 +134,7 @@ public Double(@android.annotation.NonNull java.lang.String s) throws java.lang.N
  * @return a string representation of the argument.
  */
 
-@android.annotation.NonNull
+@androidx.annotation.RecentlyNonNull
 public static java.lang.String toString(double d) { throw new RuntimeException("Stub!"); }
 
 /**
@@ -172,7 +172,7 @@ public static java.lang.String toString(double d) { throw new RuntimeException("
  * are zero, in which case a single zero is used. Next, the
  * exponent is represented by {@code "p"} followed
  * by a decimal string of the unbiased exponent as if produced by
- * a call to {@link java.lang.Integer#toString(int) Integer#toString(int)} on the
+ * a call to {@link java.lang.Integer#toString(int) Integer.toString} on the
  * exponent value.
  *
  * <li>If <i>m</i> is a {@code double} value with a subnormal
@@ -212,7 +212,7 @@ public static java.lang.String toString(double d) { throw new RuntimeException("
  * @author Joseph D. Darcy
  */
 
-@android.annotation.NonNull
+@androidx.annotation.RecentlyNonNull
 public static java.lang.String toHexString(double d) { throw new RuntimeException("Stub!"); }
 
 /**
@@ -224,7 +224,7 @@ public static java.lang.String toHexString(double d) { throw new RuntimeExceptio
  * {@code NullPointerException} is thrown.
  *
  * <p>Leading and trailing whitespace characters in {@code s}
- * are ignored.  Whitespace is removed as if by the {@link java.lang.String#trim String#trim} method; that is, both ASCII space and control
+ * are ignored.  Whitespace is removed as if by the {@link java.lang.String#trim  } method; that is, both ASCII space and control
  * characters are removed. The rest of {@code s} should
  * constitute a <i>FloatValue</i> as described by the lexical
  * syntax rules:
@@ -288,7 +288,7 @@ public static java.lang.String toHexString(double d) { throw new RuntimeExceptio
  * Note that the round-to-nearest rule also implies overflow and
  * underflow behaviour; if the exact value of {@code s} is large
  * enough in magnitude (greater than or equal to ({@link
- * #MAX_VALUE} + {@link java.lang.Math#ulp(double) Math#ulp(double)}/2),
+ * #MAX_VALUE} + {@link java.lang.Math#ulp(double) ulp(MAX_VALUE)}/2),
  * rounding to {@code double} will result in an infinity and if the
  * exact value of {@code s} is small enough in magnitude (less
  * than or equal to {@link #MIN_VALUE}/2), rounding to float will
@@ -377,8 +377,8 @@ public static java.lang.String toHexString(double d) { throw new RuntimeExceptio
  *             parsable number.
  */
 
-@android.annotation.NonNull
-public static java.lang.Double valueOf(@android.annotation.NonNull java.lang.String s) throws java.lang.NumberFormatException { throw new RuntimeException("Stub!"); }
+@androidx.annotation.RecentlyNonNull
+public static java.lang.Double valueOf(@androidx.annotation.RecentlyNonNull java.lang.String s) throws java.lang.NumberFormatException { throw new RuntimeException("Stub!"); }
 
 /**
  * Returns a {@code Double} instance representing the specified
@@ -394,7 +394,7 @@ public static java.lang.Double valueOf(@android.annotation.NonNull java.lang.Str
  * @since  1.5
  */
 
-@android.annotation.NonNull
+@androidx.annotation.RecentlyNonNull
 public static java.lang.Double valueOf(double d) { throw new RuntimeException("Stub!"); }
 
 /**
@@ -413,7 +413,7 @@ public static java.lang.Double valueOf(double d) { throw new RuntimeException("S
  * @since 1.2
  */
 
-public static double parseDouble(@android.annotation.NonNull java.lang.String s) throws java.lang.NumberFormatException { throw new RuntimeException("Stub!"); }
+public static double parseDouble(@androidx.annotation.RecentlyNonNull java.lang.String s) throws java.lang.NumberFormatException { throw new RuntimeException("Stub!"); }
 
 /**
  * Returns {@code true} if the specified number is a
@@ -481,7 +481,7 @@ public boolean isInfinite() { throw new RuntimeException("Stub!"); }
  * @see java.lang.Double#toString(double)
  */
 
-@android.annotation.NonNull
+@androidx.annotation.RecentlyNonNull
 public java.lang.String toString() { throw new RuntimeException("Stub!"); }
 
 /**
@@ -625,7 +625,7 @@ public static int hashCode(double value) { throw new RuntimeException("Stub!"); 
  * @see java.lang.Double#doubleToLongBits(double)
  */
 
-public boolean equals(@android.annotation.Nullable java.lang.Object obj) { throw new RuntimeException("Stub!"); }
+public boolean equals(@androidx.annotation.RecentlyNullable java.lang.Object obj) { throw new RuntimeException("Stub!"); }
 
 /**
  * Returns a representation of the specified floating-point value
@@ -796,7 +796,7 @@ public static native double longBitsToDouble(long bits);
  * @since   1.2
  */
 
-public int compareTo(@android.annotation.NonNull java.lang.Double anotherDouble) { throw new RuntimeException("Stub!"); }
+public int compareTo(@androidx.annotation.RecentlyNonNull java.lang.Double anotherDouble) { throw new RuntimeException("Stub!"); }
 
 /**
  * Compares the two specified {@code double} values. The sign
@@ -834,7 +834,7 @@ public static double sum(double a, double b) { throw new RuntimeException("Stub!
 
 /**
  * Returns the greater of two {@code double} values
- * as if by calling {@link java.lang.Math#max(double,double) Math#max(double, double)}.
+ * as if by calling {@link java.lang.Math#max(double,double) Math.max}.
  *
  * @param a the first operand
  * @param b the second operand
@@ -847,7 +847,7 @@ public static double max(double a, double b) { throw new RuntimeException("Stub!
 
 /**
  * Returns the smaller of two {@code double} values
- * as if by calling {@link java.lang.Math#min(double,double) Math#min(double, double)}.
+ * as if by calling {@link java.lang.Math#min(double,double) Math.min}.
  *
  * @param a the first operand
  * @param b the second operand

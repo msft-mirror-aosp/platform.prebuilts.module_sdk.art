@@ -93,7 +93,7 @@ public CopyOnWriteArrayList() { throw new RuntimeException("Stub!"); }
  * @throws java.lang.NullPointerException if the specified collection is null
  */
 
-public CopyOnWriteArrayList(@android.annotation.NonNull java.util.Collection<? extends E> c) { throw new RuntimeException("Stub!"); }
+public CopyOnWriteArrayList(@androidx.annotation.RecentlyNonNull java.util.Collection<? extends E> c) { throw new RuntimeException("Stub!"); }
 
 /**
  * Creates a list holding a copy of the given array.
@@ -103,7 +103,7 @@ public CopyOnWriteArrayList(@android.annotation.NonNull java.util.Collection<? e
  * @throws java.lang.NullPointerException if the specified array is null
  */
 
-public CopyOnWriteArrayList(@android.annotation.NonNull E[] toCopyIn) { throw new RuntimeException("Stub!"); }
+public CopyOnWriteArrayList(@androidx.annotation.RecentlyNonNull E[] toCopyIn) { throw new RuntimeException("Stub!"); }
 
 /**
  * Returns the number of elements in this list.
@@ -130,13 +130,13 @@ public boolean isEmpty() { throw new RuntimeException("Stub!"); }
  * @return {@code true} if this list contains the specified element
  */
 
-public boolean contains(@android.annotation.Nullable java.lang.Object o) { throw new RuntimeException("Stub!"); }
+public boolean contains(@androidx.annotation.RecentlyNullable java.lang.Object o) { throw new RuntimeException("Stub!"); }
 
 /**
  * {@inheritDoc}
  */
 
-public int indexOf(@android.annotation.Nullable java.lang.Object o) { throw new RuntimeException("Stub!"); }
+public int indexOf(@androidx.annotation.RecentlyNullable java.lang.Object o) { throw new RuntimeException("Stub!"); }
 
 /**
  * Returns the index of the first occurrence of the specified element in
@@ -154,13 +154,13 @@ public int indexOf(@android.annotation.Nullable java.lang.Object o) { throw new 
  * @throws java.lang.IndexOutOfBoundsException if the specified index is negative
  */
 
-public int indexOf(@android.annotation.Nullable E e, int index) { throw new RuntimeException("Stub!"); }
+public int indexOf(@androidx.annotation.RecentlyNullable E e, int index) { throw new RuntimeException("Stub!"); }
 
 /**
  * {@inheritDoc}
  */
 
-public int lastIndexOf(@android.annotation.Nullable java.lang.Object o) { throw new RuntimeException("Stub!"); }
+public int lastIndexOf(@androidx.annotation.RecentlyNullable java.lang.Object o) { throw new RuntimeException("Stub!"); }
 
 /**
  * Returns the index of the last occurrence of the specified element in
@@ -179,7 +179,7 @@ public int lastIndexOf(@android.annotation.Nullable java.lang.Object o) { throw 
  *         than or equal to the current size of this list
  */
 
-public int lastIndexOf(@android.annotation.Nullable E e, int index) { throw new RuntimeException("Stub!"); }
+public int lastIndexOf(@androidx.annotation.RecentlyNullable E e, int index) { throw new RuntimeException("Stub!"); }
 
 /**
  * Returns a shallow copy of this list.  (The elements themselves
@@ -188,7 +188,7 @@ public int lastIndexOf(@android.annotation.Nullable E e, int index) { throw new 
  * @return a clone of this list
  */
 
-@android.annotation.NonNull
+@androidx.annotation.RecentlyNonNull
 public java.lang.Object clone() { throw new RuntimeException("Stub!"); }
 
 /**
@@ -205,7 +205,7 @@ public java.lang.Object clone() { throw new RuntimeException("Stub!"); }
  * @return an array containing all the elements in this list
  */
 
-@android.annotation.NonNull
+@androidx.annotation.RecentlyNonNull
 public java.lang.Object[] toArray() { throw new RuntimeException("Stub!"); }
 
 /**
@@ -247,8 +247,8 @@ public java.lang.Object[] toArray() { throw new RuntimeException("Stub!"); }
  * @throws java.lang.NullPointerException if the specified array is null
  */
 
-@android.annotation.NonNull
-public <T> T[] toArray(@android.annotation.NonNull T[] a) { throw new RuntimeException("Stub!"); }
+@androidx.annotation.RecentlyNonNull
+public <T> T[] toArray(@androidx.annotation.RecentlyNonNull T[] a) { throw new RuntimeException("Stub!"); }
 
 /**
  * {@inheritDoc}
@@ -309,7 +309,7 @@ public E remove(int index) { throw new RuntimeException("Stub!"); }
  * @return {@code true} if this list contained the specified element
  */
 
-public boolean remove(@android.annotation.Nullable java.lang.Object o) { throw new RuntimeException("Stub!"); }
+public boolean remove(@androidx.annotation.RecentlyNullable java.lang.Object o) { throw new RuntimeException("Stub!"); }
 
 /**
  * Appends the element, if not present.
@@ -331,7 +331,7 @@ public boolean addIfAbsent(E e) { throw new RuntimeException("Stub!"); }
  * @see #contains(Object)
  */
 
-public boolean containsAll(@android.annotation.NonNull java.util.Collection<?> c) { throw new RuntimeException("Stub!"); }
+public boolean containsAll(@androidx.annotation.RecentlyNonNull java.util.Collection<?> c) { throw new RuntimeException("Stub!"); }
 
 /**
  * Removes from this list all of its elements that are contained in
@@ -350,7 +350,7 @@ public boolean containsAll(@android.annotation.NonNull java.util.Collection<?> c
  * @see #remove(Object)
  */
 
-public boolean removeAll(@android.annotation.NonNull java.util.Collection<?> c) { throw new RuntimeException("Stub!"); }
+public boolean removeAll(@androidx.annotation.RecentlyNonNull java.util.Collection<?> c) { throw new RuntimeException("Stub!"); }
 
 /**
  * Retains only the elements in this list that are contained in the
@@ -369,7 +369,7 @@ public boolean removeAll(@android.annotation.NonNull java.util.Collection<?> c) 
  * @see #remove(Object)
  */
 
-public boolean retainAll(@android.annotation.NonNull java.util.Collection<?> c) { throw new RuntimeException("Stub!"); }
+public boolean retainAll(@androidx.annotation.RecentlyNonNull java.util.Collection<?> c) { throw new RuntimeException("Stub!"); }
 
 /**
  * Appends all of the elements in the specified collection that
@@ -383,7 +383,7 @@ public boolean retainAll(@android.annotation.NonNull java.util.Collection<?> c) 
  * @see #addIfAbsent(Object)
  */
 
-public int addAllAbsent(@android.annotation.NonNull java.util.Collection<? extends E> c) { throw new RuntimeException("Stub!"); }
+public int addAllAbsent(@androidx.annotation.RecentlyNonNull java.util.Collection<? extends E> c) { throw new RuntimeException("Stub!"); }
 
 /**
  * Removes all of the elements from this list.
@@ -403,7 +403,7 @@ public void clear() { throw new RuntimeException("Stub!"); }
  * @see #add(Object)
  */
 
-public boolean addAll(@android.annotation.NonNull java.util.Collection<? extends E> c) { throw new RuntimeException("Stub!"); }
+public boolean addAll(@androidx.annotation.RecentlyNonNull java.util.Collection<? extends E> c) { throw new RuntimeException("Stub!"); }
 
 /**
  * Inserts all of the elements in the specified collection into this
@@ -422,15 +422,15 @@ public boolean addAll(@android.annotation.NonNull java.util.Collection<? extends
  * @see #add(int,Object)
  */
 
-public boolean addAll(int index, @android.annotation.NonNull java.util.Collection<? extends E> c) { throw new RuntimeException("Stub!"); }
+public boolean addAll(int index, @androidx.annotation.RecentlyNonNull java.util.Collection<? extends E> c) { throw new RuntimeException("Stub!"); }
 
-public void forEach(@android.annotation.NonNull java.util.function.Consumer<? super E> action) { throw new RuntimeException("Stub!"); }
+public void forEach(@androidx.annotation.RecentlyNonNull java.util.function.Consumer<? super E> action) { throw new RuntimeException("Stub!"); }
 
-public boolean removeIf(@android.annotation.NonNull java.util.function.Predicate<? super E> filter) { throw new RuntimeException("Stub!"); }
+public boolean removeIf(@androidx.annotation.RecentlyNonNull java.util.function.Predicate<? super E> filter) { throw new RuntimeException("Stub!"); }
 
-public void replaceAll(@android.annotation.NonNull java.util.function.UnaryOperator<E> operator) { throw new RuntimeException("Stub!"); }
+public void replaceAll(@androidx.annotation.RecentlyNonNull java.util.function.UnaryOperator<E> operator) { throw new RuntimeException("Stub!"); }
 
-public void sort(@android.annotation.Nullable java.util.Comparator<? super E> c) { throw new RuntimeException("Stub!"); }
+public void sort(@androidx.annotation.RecentlyNullable java.util.Comparator<? super E> c) { throw new RuntimeException("Stub!"); }
 
 /**
  * Returns a string representation of this list.  The string
@@ -443,14 +443,14 @@ public void sort(@android.annotation.Nullable java.util.Comparator<? super E> c)
  * @return a string representation of this list
  */
 
-@android.annotation.NonNull
+@androidx.annotation.RecentlyNonNull
 public java.lang.String toString() { throw new RuntimeException("Stub!"); }
 
 /**
  * Compares the specified object with this list for equality.
  * Returns {@code true} if the specified object is the same object
  * as this object, or if it is also a {@link java.util.List List} and the sequence
- * of elements returned by an {@linkplain java.util.List#iterator() List#iterator()}
+ * of elements returned by an {@linkplain java.util.List#iterator() iterator}
  * over the specified list is the same as the sequence returned by
  * an iterator over this list.  The two sequences are considered to
  * be the same if they have the same length and corresponding
@@ -462,7 +462,7 @@ public java.lang.String toString() { throw new RuntimeException("Stub!"); }
  * @return {@code true} if the specified object is equal to this list
  */
 
-public boolean equals(@android.annotation.Nullable java.lang.Object o) { throw new RuntimeException("Stub!"); }
+public boolean equals(@androidx.annotation.RecentlyNullable java.lang.Object o) { throw new RuntimeException("Stub!"); }
 
 /**
  * Returns the hash code value for this list.
@@ -485,7 +485,7 @@ public int hashCode() { throw new RuntimeException("Stub!"); }
  * @return an iterator over the elements in this list in proper sequence
  */
 
-@android.annotation.NonNull
+@androidx.annotation.RecentlyNonNull
 public java.util.Iterator<E> iterator() { throw new RuntimeException("Stub!"); }
 
 /**
@@ -497,7 +497,7 @@ public java.util.Iterator<E> iterator() { throw new RuntimeException("Stub!"); }
  * {@code remove}, {@code set} or {@code add} methods.
  */
 
-@android.annotation.NonNull
+@androidx.annotation.RecentlyNonNull
 public java.util.ListIterator<E> listIterator() { throw new RuntimeException("Stub!"); }
 
 /**
@@ -511,7 +511,7 @@ public java.util.ListIterator<E> listIterator() { throw new RuntimeException("St
  * @throws java.lang.IndexOutOfBoundsException {@inheritDoc}
  */
 
-@android.annotation.NonNull
+@androidx.annotation.RecentlyNonNull
 public java.util.ListIterator<E> listIterator(int index) { throw new RuntimeException("Stub!"); }
 
 /**
@@ -529,7 +529,7 @@ public java.util.ListIterator<E> listIterator(int index) { throw new RuntimeExce
  * @since 1.8
  */
 
-@android.annotation.NonNull
+@androidx.annotation.RecentlyNonNull
 public java.util.Spliterator<E> spliterator() { throw new RuntimeException("Stub!"); }
 
 /**
@@ -548,7 +548,7 @@ public java.util.Spliterator<E> spliterator() { throw new RuntimeException("Stub
  * @throws java.lang.IndexOutOfBoundsException {@inheritDoc}
  */
 
-@android.annotation.NonNull
+@androidx.annotation.RecentlyNonNull
 public java.util.List<E> subList(int fromIndex, int toIndex) { throw new RuntimeException("Stub!"); }
 }
 

@@ -271,15 +271,15 @@ import java.util.Locale;
  *     </ul>
  *     Otherwise, calendar system specific forms are applied.
  *     For both formatting and parsing, if the number of pattern
- *     letters is 4 or more, a calendar specific {@linkplain java.util.Calendar#LONG Calendar#LONG} is used. Otherwise, a calendar
- *     specific {@linkplain java.util.Calendar#SHORT Calendar#SHORT}
+ *     letters is 4 or more, a calendar specific {@linkplain java.util.Calendar#LONG long form} is used. Otherwise, a calendar
+ *     specific {@linkplain java.util.Calendar#SHORT short or abbreviated form}
  *     is used.
  *     <br>
  *     If week year {@code 'Y'} is specified and the {@linkplain
  *     #getCalendar() calendar} doesn't support any <a
  *     href="../util/GregorianCalendar.html#week_year"> week
  *     years</a>, the calendar year ({@code 'y'}) is used instead. The
- *     support of week years can be tested with a call to {@link java.text.DateFormat#getCalendar() DateFormat#getCalendar()}.{@link
+ *     support of week years can be tested with a call to {@link java.text.DateFormat#getCalendar() getCalendar()}.{@link
  *     java.util.Calendar#isWeekDateSupported()
  *     isWeekDateSupported()}.</li>
  * <li><strong><a name="month">Month:</a></strong>
@@ -393,7 +393,7 @@ import java.util.Locale;
  *         <td><code>"K:mm a, z"</code>
  *         <td><code>0:08 PM, PDT</code>
  *     <tr style="background-color: rgb(238, 238, 255);">
- *         <td><code>"yyyyy.MMMMM.dd GGG hh:mm aaa"</code>
+ *         <td><code>"yyyyy.MMMM.dd GGG hh:mm aaa"</code>
  *         <td><code>02001.July.04 AD 12:08 PM</code>
  *     <tr>
  *         <td><code>"EEE, d MMM yyyy HH:mm:ss Z"</code>
@@ -562,8 +562,8 @@ public java.text.AttributedCharacterIterator formatToCharacterIterator(java.lang
  * changed, the error index of <code>pos</code> is set to the index of
  * the character where the error occurred, and null is returned.
  *
- * <p>This parsing operation uses the {@link java.text.DateFormat#calendar DateFormat#calendar} to produce a {@code Date}. All of the {@code
- * calendar}'s date-time fields are {@linkplain java.util.Calendar#clear() Calendar#clear()} before parsing, and the {@code calendar}'s default
+ * <p>This parsing operation uses the {@link java.text.DateFormat#calendar  calendar} to produce a {@code Date}. All of the {@code
+ * calendar}'s date-time fields are {@linkplain java.util.Calendar#clear()  cleared} before parsing, and the {@code calendar}'s default
  * values of the date-time fields are used for any missing
  * date-time information. For example, the year value of the
  * parsed {@code Date} is 1970 with {@link java.util.GregorianCalendar GregorianCalendar} if

@@ -42,13 +42,13 @@ import java.io.IOException;
  * to these attributes.
  *
  * <p> The {@link #readAttributes() readAttributes} method is used to read the
- * file's attributes. The file {@link java.nio.file.attribute.PosixFileAttributes#owner() PosixFileAttributes#owner()} is
+ * file's attributes. The file {@link java.nio.file.attribute.PosixFileAttributes#owner() owner} is
  * represented by a {@link java.nio.file.attribute.UserPrincipal UserPrincipal} that is the identity of the file owner
- * for the purposes of access control. The {@link java.nio.file.attribute.PosixFileAttributes#group() PosixFileAttributes#group()}, represented by a {@link java.nio.file.attribute.GroupPrincipal GroupPrincipal}, is the identity of the
+ * for the purposes of access control. The {@link java.nio.file.attribute.PosixFileAttributes#group()  group-owner}, represented by a {@link java.nio.file.attribute.GroupPrincipal GroupPrincipal}, is the identity of the
  * group owner, where a group is an identity created for administrative purposes
  * so as to determine the access rights for the members of the group.
  *
- * <p> The {@link java.nio.file.attribute.PosixFileAttributes#permissions() PosixFileAttributes#permissions()} attribute is a
+ * <p> The {@link java.nio.file.attribute.PosixFileAttributes#permissions() permissions} attribute is a
  * set of access permissions. This file attribute view provides access to the nine
  * permission defined by the {@link java.nio.file.attribute.PosixFilePermission PosixFilePermission} class.
  * These nine permission bits determine the <em>read</em>, <em>write</em>, and
@@ -89,11 +89,11 @@ import java.io.IOException;
  * </table>
  * </blockquote>
  *
- * <p> The {@link java.nio.file.Files#getAttribute Files#getAttribute} method may be used to read
+ * <p> The {@link java.nio.file.Files#getAttribute getAttribute} method may be used to read
  * any of these attributes, or any of the attributes defined by {@link java.nio.file.attribute.BasicFileAttributeView BasicFileAttributeView} as if by invoking the {@link #readAttributes
  * readAttributes()} method.
  *
- * <p> The {@link java.nio.file.Files#setAttribute Files#setAttribute} method may be used to update
+ * <p> The {@link java.nio.file.Files#setAttribute setAttribute} method may be used to update
  * the file's last modified time, last access time or create time attributes as
  * defined by {@link java.nio.file.attribute.BasicFileAttributeView BasicFileAttributeView}. It may also be used to update
  * the permissions, owner, or group-owner as if by invoking the {@link
@@ -103,10 +103,10 @@ import java.io.IOException;
  * <h2> Setting Initial Permissions </h2>
  * <p> Implementations supporting this attribute view may also support setting
  * the initial permissions when creating a file or directory. The
- * initial permissions are provided to the {@link java.nio.file.Files#createFile Files#createFile}
- * or {@link java.nio.file.Files#createDirectory Files#createDirectory} methods as a {@link java.nio.file.attribute.FileAttribute FileAttribute} with {@link java.nio.file.attribute.FileAttribute#name FileAttribute#name} {@code "posix:permissions"}
- * and a {@link java.nio.file.attribute.FileAttribute#value FileAttribute#value} that is the set of permissions. The
- * following example uses the {@link java.nio.file.attribute.PosixFilePermissions#asFileAttribute PosixFilePermissions#asFileAttribute} method to construct a {@code FileAttribute} when creating a
+ * initial permissions are provided to the {@link java.nio.file.Files#createFile createFile}
+ * or {@link java.nio.file.Files#createDirectory createDirectory} methods as a {@link java.nio.file.attribute.FileAttribute FileAttribute} with {@link java.nio.file.attribute.FileAttribute#name name} {@code "posix:permissions"}
+ * and a {@link java.nio.file.attribute.FileAttribute#value value} that is the set of permissions. The
+ * following example uses the {@link java.nio.file.attribute.PosixFilePermissions#asFileAttribute  asFileAttribute} method to construct a {@code FileAttribute} when creating a
  * file:
  *
  * <pre>
@@ -124,7 +124,7 @@ import java.io.IOException;
  * the access permissions, and the underlying file system supports access
  * permissions, then it is required that the value of the actual access
  * permissions will be equal or less than the value of the attribute
- * provided to the {@link java.nio.file.Files#createFile Files#createFile} or {@link java.nio.file.Files#createDirectory Files#createDirectory} methods. In other words, the file may
+ * provided to the {@link java.nio.file.Files#createFile createFile} or {@link java.nio.file.Files#createDirectory createDirectory} methods. In other words, the file may
  * be more secure than requested.
  *
  * @since 1.7
@@ -145,7 +145,7 @@ public java.lang.String name();
  * @throws  java.lang.SecurityException
  *          In the case of the default provider, a security manager is
  *          installed, and it denies {@link java.lang.RuntimePermission RuntimePermission}<tt>("accessUserInformation")</tt>
- *          or its {@link java.lang.SecurityManager#checkRead(java.lang.String) SecurityManager#checkRead(String)} method
+ *          or its {@link java.lang.SecurityManager#checkRead(java.lang.String) checkRead} method
  *          denies read access to the file.
  */
 
@@ -165,7 +165,7 @@ public java.nio.file.attribute.PosixFileAttributes readAttributes() throws java.
  * @throws  java.lang.SecurityException
  *          In the case of the default provider, a security manager is
  *          installed, and it denies {@link java.lang.RuntimePermission RuntimePermission}<tt>("accessUserInformation")</tt>
- *          or its {@link java.lang.SecurityManager#checkWrite(java.lang.String) SecurityManager#checkWrite(String)}
+ *          or its {@link java.lang.SecurityManager#checkWrite(java.lang.String) checkWrite}
  *          method denies write access to the file.
  */
 
@@ -182,7 +182,7 @@ public void setPermissions(java.util.Set<java.nio.file.attribute.PosixFilePermis
  * @throws  java.lang.SecurityException
  *          In the case of the default provider, and a security manager is
  *          installed, it denies {@link java.lang.RuntimePermission RuntimePermission}<tt>("accessUserInformation")</tt>
- *          or its {@link java.lang.SecurityManager#checkWrite(java.lang.String) SecurityManager#checkWrite(String)}
+ *          or its {@link java.lang.SecurityManager#checkWrite(java.lang.String) checkWrite}
  *          method denies write access to the file.
  */
 

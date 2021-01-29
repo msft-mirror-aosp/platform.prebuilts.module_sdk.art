@@ -44,7 +44,7 @@ import java.security.Principal;
  * identity. It has a {@link #getName() name} that is typically the username or
  * account name that it represents. User principal objects may be obtained using
  * a {@link java.nio.file.attribute.UserPrincipalLookupService UserPrincipalLookupService}, or returned by {@link java.nio.file.attribute.FileAttributeView FileAttributeView} implementations that provide access to identity related
- * attributes. For example, the {@link java.nio.file.attribute.AclFileAttributeView AclFileAttributeView} and {@link java.nio.file.attribute.PosixFileAttributeView PosixFileAttributeView} provide access to a file's {@link java.nio.file.attribute.PosixFileAttributes#owner PosixFileAttributes#owner}.
+ * attributes. For example, the {@link java.nio.file.attribute.AclFileAttributeView AclFileAttributeView} and {@link java.nio.file.attribute.PosixFileAttributeView PosixFileAttributeView} provide access to a file's {@link java.nio.file.attribute.PosixFileAttributes#owner owner}.
  *
  * @since 1.7
  */

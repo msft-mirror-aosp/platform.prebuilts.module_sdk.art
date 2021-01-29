@@ -293,7 +293,7 @@ import java.math.BigInteger;
  * characters starting with the localized zero digit defined in the
  * <code>DecimalFormatSymbols</code> object as digits. For parsing, these
  * digits as well as all Unicode decimal digits, as defined by
- * {@link java.lang.Character#digit Character#digit}, are recognized.
+ * {@link java.lang.Character#digit Character.digit}, are recognized.
  *
  * <h4>Special Values</h4>
  *
@@ -965,7 +965,7 @@ public int getMinimumFractionDigits() { throw new RuntimeException("Stub!"); }
  * Gets the currency used by this decimal format when formatting
  * currency values.
  * The currency is obtained by calling
- * {@link java.text.DecimalFormatSymbols#getCurrency DecimalFormatSymbols#getCurrency}
+ * {@link java.text.DecimalFormatSymbols#getCurrency DecimalFormatSymbols.getCurrency}
  * on this number format's symbols.
  *
  * @return the currency used by this decimal format, or <code>null</code>
@@ -979,7 +979,7 @@ public java.util.Currency getCurrency() { throw new RuntimeException("Stub!"); }
  * currency values. This does not update the minimum or maximum
  * number of fraction digits used by the number format.
  * The currency is set by calling
- * {@link java.text.DecimalFormatSymbols#setCurrency DecimalFormatSymbols#setCurrency}
+ * {@link java.text.DecimalFormatSymbols#setCurrency DecimalFormatSymbols.setCurrency}
  * on this number format's symbols.
  *
  * @param currency the new currency to be used by this decimal format
