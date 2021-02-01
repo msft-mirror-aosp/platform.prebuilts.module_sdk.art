@@ -84,7 +84,7 @@ package java.util;
  * interface.
  *
  * <p>Many methods in Collections Framework interfaces are defined
- * in terms of the {@link java.lang.Object#equals(java.lang.Object) Object#equals(Object)} method.  For
+ * in terms of the {@link java.lang.Object#equals(java.lang.Object) equals} method.  For
  * example, the specification for the {@link #containsKey(java.lang.Object)
  * containsKey(Object key)} method says: "returns {@code true} if and
  * only if this map contains a mapping for a key {@code k} such that
@@ -108,8 +108,8 @@ package java.util;
  * most current implementations do not do so.
  *
  * <h2><a id="immutable">Immutable Map Static Factory Methods</a></h2>
- * <p>The {@link java.util.Map#of() Map#of()} and
- * {@link java.util.Map#ofEntries(java.util.Map.Entry...) Map#ofEntries(Map.Entry...)}
+ * <p>The {@link java.util.Map#of() Map.of()} and
+ * {@link java.util.Map#ofEntries(java.util.Map.Entry...) Map.ofEntries()}
  * static factory methods provide a convenient way to create immutable maps.
  * The {@code Map}
  * instances created by these methods have the following characteristics:
@@ -188,7 +188,7 @@ public boolean isEmpty();
  * (<a href="Collection.html#optional-restrictions">optional</a>)
  */
 
-public boolean containsKey(@android.annotation.Nullable java.lang.Object key);
+public boolean containsKey(@androidx.annotation.RecentlyNullable java.lang.Object key);
 
 /**
  * Returns {@code true} if this map maps one or more keys to the
@@ -209,7 +209,7 @@ public boolean containsKey(@android.annotation.Nullable java.lang.Object key);
  * (<a href="Collection.html#optional-restrictions">optional</a>)
  */
 
-public boolean containsValue(@android.annotation.Nullable java.lang.Object value);
+public boolean containsValue(@androidx.annotation.RecentlyNullable java.lang.Object value);
 
 /**
  * Returns the value to which the specified key is mapped,
@@ -238,8 +238,8 @@ public boolean containsValue(@android.annotation.Nullable java.lang.Object value
  * (<a href="Collection.html#optional-restrictions">optional</a>)
  */
 
-@android.annotation.Nullable
-public V get(@android.annotation.Nullable java.lang.Object key);
+@androidx.annotation.RecentlyNullable
+public V get(@androidx.annotation.RecentlyNullable java.lang.Object key);
 
 /**
  * Associates the specified value with the specified key in this map
@@ -266,7 +266,7 @@ public V get(@android.annotation.Nullable java.lang.Object key);
  *         or value prevents it from being stored in this map
  */
 
-@android.annotation.Nullable
+@androidx.annotation.RecentlyNullable
 public V put(K key, V value);
 
 /**
@@ -300,8 +300,8 @@ public V put(K key, V value);
  * (<a href="Collection.html#optional-restrictions">optional</a>)
  */
 
-@android.annotation.Nullable
-public V remove(@android.annotation.Nullable java.lang.Object key);
+@androidx.annotation.RecentlyNullable
+public V remove(@androidx.annotation.RecentlyNullable java.lang.Object key);
 
 /**
  * Copies all of the mappings from the specified map to this map
@@ -323,7 +323,7 @@ public V remove(@android.annotation.Nullable java.lang.Object key);
  *         the specified map prevents it from being stored in this map
  */
 
-public void putAll(@android.annotation.NonNull java.util.Map<? extends K,? extends V> m);
+public void putAll(@androidx.annotation.RecentlyNonNull java.util.Map<? extends K,? extends V> m);
 
 /**
  * Removes all of the mappings from this map (optional operation).
@@ -351,7 +351,7 @@ public void clear();
  * @return a set view of the keys contained in this map
  */
 
-@android.annotation.NonNull
+@androidx.annotation.RecentlyNonNull
 public java.util.Set<K> keySet();
 
 /**
@@ -370,7 +370,7 @@ public java.util.Set<K> keySet();
  * @return a collection view of the values contained in this map
  */
 
-@android.annotation.NonNull
+@androidx.annotation.RecentlyNonNull
 public java.util.Collection<V> values();
 
 /**
@@ -390,7 +390,7 @@ public java.util.Collection<V> values();
  * @return a set view of the mappings contained in this map
  */
 
-@android.annotation.NonNull
+@androidx.annotation.RecentlyNonNull
 public java.util.Set<java.util.Map.Entry<K,V>> entrySet();
 
 /**
@@ -406,7 +406,7 @@ public java.util.Set<java.util.Map.Entry<K,V>> entrySet();
  * @return {@code true} if the specified object is equal to this map
  */
 
-public boolean equals(@android.annotation.Nullable java.lang.Object o);
+public boolean equals(@androidx.annotation.RecentlyNullable java.lang.Object o);
 
 /**
  * Returns the hash code value for this map.  The hash code of a map is
@@ -447,8 +447,8 @@ public int hashCode();
  * @since 1.8
  */
 
-@android.annotation.Nullable
-public default V getOrDefault(@android.annotation.Nullable java.lang.Object key, @android.annotation.Nullable V defaultValue) { throw new RuntimeException("Stub!"); }
+@androidx.annotation.RecentlyNullable
+public default V getOrDefault(@androidx.annotation.RecentlyNullable java.lang.Object key, @androidx.annotation.RecentlyNullable V defaultValue) { throw new RuntimeException("Stub!"); }
 
 /**
  * Performs the given action for each entry in this map until all entries
@@ -476,7 +476,7 @@ public default V getOrDefault(@android.annotation.Nullable java.lang.Object key,
  * @since 1.8
  */
 
-public default void forEach(@android.annotation.NonNull java.util.function.BiConsumer<? super K,? super V> action) { throw new RuntimeException("Stub!"); }
+public default void forEach(@androidx.annotation.RecentlyNonNull java.util.function.BiConsumer<? super K,? super V> action) { throw new RuntimeException("Stub!"); }
 
 /**
  * Replaces each entry's value with the result of invoking the given
@@ -518,7 +518,7 @@ public default void forEach(@android.annotation.NonNull java.util.function.BiCon
  * @since 1.8
  */
 
-public default void replaceAll(@android.annotation.NonNull java.util.function.BiFunction<? super K,? super V,? extends V> function) { throw new RuntimeException("Stub!"); }
+public default void replaceAll(@androidx.annotation.RecentlyNonNull java.util.function.BiFunction<? super K,? super V,? extends V> function) { throw new RuntimeException("Stub!"); }
 
 /**
  * If the specified key is not already associated with a value (or is mapped
@@ -564,7 +564,7 @@ public default void replaceAll(@android.annotation.NonNull java.util.function.Bi
  * @since 1.8
  */
 
-@android.annotation.Nullable
+@androidx.annotation.RecentlyNullable
 public default V putIfAbsent(K key, V value) { throw new RuntimeException("Stub!"); }
 
 /**
@@ -602,7 +602,7 @@ public default V putIfAbsent(K key, V value) { throw new RuntimeException("Stub!
  * @since 1.8
  */
 
-public default boolean remove(@android.annotation.Nullable java.lang.Object key, @android.annotation.Nullable java.lang.Object value) { throw new RuntimeException("Stub!"); }
+public default boolean remove(@androidx.annotation.RecentlyNullable java.lang.Object key, @androidx.annotation.RecentlyNullable java.lang.Object value) { throw new RuntimeException("Stub!"); }
 
 /**
  * Replaces the entry for the specified key only if currently
@@ -647,7 +647,7 @@ public default boolean remove(@android.annotation.Nullable java.lang.Object key,
  * @since 1.8
  */
 
-public default boolean replace(K key, @android.annotation.Nullable V oldValue, V newValue) { throw new RuntimeException("Stub!"); }
+public default boolean replace(K key, @androidx.annotation.RecentlyNullable V oldValue, V newValue) { throw new RuntimeException("Stub!"); }
 
 /**
  * Replaces the entry for the specified key only if it is
@@ -688,7 +688,7 @@ public default boolean replace(K key, @android.annotation.Nullable V oldValue, V
  * @since 1.8
  */
 
-@android.annotation.Nullable
+@androidx.annotation.RecentlyNullable
 public default V replace(K key, V value) { throw new RuntimeException("Stub!"); }
 
 /**
@@ -766,8 +766,8 @@ public default V replace(K key, V value) { throw new RuntimeException("Stub!"); 
  * @since 1.8
  */
 
-@android.annotation.Nullable
-public default V computeIfAbsent(K key, @android.annotation.NonNull java.util.function.Function<? super K,? extends V> mappingFunction) { throw new RuntimeException("Stub!"); }
+@androidx.annotation.RecentlyNullable
+public default V computeIfAbsent(K key, @androidx.annotation.RecentlyNonNull java.util.function.Function<? super K,? extends V> mappingFunction) { throw new RuntimeException("Stub!"); }
 
 /**
  * If the value for the specified key is present and non-null, attempts to
@@ -832,8 +832,8 @@ public default V computeIfAbsent(K key, @android.annotation.NonNull java.util.fu
  * @since 1.8
  */
 
-@android.annotation.Nullable
-public default V computeIfPresent(K key, @android.annotation.NonNull java.util.function.BiFunction<? super K,? super V,? extends V> remappingFunction) { throw new RuntimeException("Stub!"); }
+@androidx.annotation.RecentlyNullable
+public default V computeIfPresent(K key, @androidx.annotation.RecentlyNonNull java.util.function.BiFunction<? super K,? super V,? extends V> remappingFunction) { throw new RuntimeException("Stub!"); }
 
 /**
  * Attempts to compute a mapping for the specified key and its current
@@ -910,8 +910,8 @@ public default V computeIfPresent(K key, @android.annotation.NonNull java.util.f
  * @since 1.8
  */
 
-@android.annotation.Nullable
-public default V compute(K key, @android.annotation.NonNull java.util.function.BiFunction<? super K,? super V,? extends V> remappingFunction) { throw new RuntimeException("Stub!"); }
+@androidx.annotation.RecentlyNullable
+public default V compute(K key, @androidx.annotation.RecentlyNonNull java.util.function.BiFunction<? super K,? super V,? extends V> remappingFunction) { throw new RuntimeException("Stub!"); }
 
 /**
  * If the specified key is not already associated with a value or is
@@ -989,8 +989,8 @@ public default V compute(K key, @android.annotation.NonNull java.util.function.B
  * @since 1.8
  */
 
-@android.annotation.Nullable
-public default V merge(K key, @android.annotation.NonNull V value, @android.annotation.NonNull java.util.function.BiFunction<? super V,? super V,? extends V> remappingFunction) { throw new RuntimeException("Stub!"); }
+@androidx.annotation.RecentlyNullable
+public default V merge(K key, @androidx.annotation.RecentlyNonNull V value, @androidx.annotation.RecentlyNonNull java.util.function.BiFunction<? super V,? super V,? extends V> remappingFunction) { throw new RuntimeException("Stub!"); }
 
 /**
  * Returns an immutable map containing zero mappings.
@@ -1003,7 +1003,7 @@ public default V merge(K key, @android.annotation.NonNull V value, @android.anno
  * @since 9
  */
 
-@android.annotation.NonNull
+@androidx.annotation.RecentlyNonNull
 public static <K, V> java.util.Map<K,V> of() { throw new RuntimeException("Stub!"); }
 
 /**
@@ -1020,8 +1020,8 @@ public static <K, V> java.util.Map<K,V> of() { throw new RuntimeException("Stub!
  * @since 9
  */
 
-@android.annotation.NonNull
-public static <K, V> java.util.Map<K,V> of(@android.annotation.NonNull K k1, @android.annotation.NonNull V v1) { throw new RuntimeException("Stub!"); }
+@androidx.annotation.RecentlyNonNull
+public static <K, V> java.util.Map<K,V> of(@androidx.annotation.RecentlyNonNull K k1, @androidx.annotation.RecentlyNonNull V v1) { throw new RuntimeException("Stub!"); }
 
 /**
  * Returns an immutable map containing two mappings.
@@ -1040,8 +1040,8 @@ public static <K, V> java.util.Map<K,V> of(@android.annotation.NonNull K k1, @an
  * @since 9
  */
 
-@android.annotation.NonNull
-public static <K, V> java.util.Map<K,V> of(@android.annotation.NonNull K k1, @android.annotation.NonNull V v1, @android.annotation.NonNull K k2, @android.annotation.NonNull V v2) { throw new RuntimeException("Stub!"); }
+@androidx.annotation.RecentlyNonNull
+public static <K, V> java.util.Map<K,V> of(@androidx.annotation.RecentlyNonNull K k1, @androidx.annotation.RecentlyNonNull V v1, @androidx.annotation.RecentlyNonNull K k2, @androidx.annotation.RecentlyNonNull V v2) { throw new RuntimeException("Stub!"); }
 
 /**
  * Returns an immutable map containing three mappings.
@@ -1062,8 +1062,8 @@ public static <K, V> java.util.Map<K,V> of(@android.annotation.NonNull K k1, @an
  * @since 9
  */
 
-@android.annotation.NonNull
-public static <K, V> java.util.Map<K,V> of(@android.annotation.NonNull K k1, @android.annotation.NonNull V v1, @android.annotation.NonNull K k2, @android.annotation.NonNull V v2, @android.annotation.NonNull K k3, @android.annotation.NonNull V v3) { throw new RuntimeException("Stub!"); }
+@androidx.annotation.RecentlyNonNull
+public static <K, V> java.util.Map<K,V> of(@androidx.annotation.RecentlyNonNull K k1, @androidx.annotation.RecentlyNonNull V v1, @androidx.annotation.RecentlyNonNull K k2, @androidx.annotation.RecentlyNonNull V v2, @androidx.annotation.RecentlyNonNull K k3, @androidx.annotation.RecentlyNonNull V v3) { throw new RuntimeException("Stub!"); }
 
 /**
  * Returns an immutable map containing four mappings.
@@ -1086,8 +1086,8 @@ public static <K, V> java.util.Map<K,V> of(@android.annotation.NonNull K k1, @an
  * @since 9
  */
 
-@android.annotation.NonNull
-public static <K, V> java.util.Map<K,V> of(@android.annotation.NonNull K k1, @android.annotation.NonNull V v1, @android.annotation.NonNull K k2, @android.annotation.NonNull V v2, @android.annotation.NonNull K k3, @android.annotation.NonNull V v3, @android.annotation.NonNull K k4, @android.annotation.NonNull V v4) { throw new RuntimeException("Stub!"); }
+@androidx.annotation.RecentlyNonNull
+public static <K, V> java.util.Map<K,V> of(@androidx.annotation.RecentlyNonNull K k1, @androidx.annotation.RecentlyNonNull V v1, @androidx.annotation.RecentlyNonNull K k2, @androidx.annotation.RecentlyNonNull V v2, @androidx.annotation.RecentlyNonNull K k3, @androidx.annotation.RecentlyNonNull V v3, @androidx.annotation.RecentlyNonNull K k4, @androidx.annotation.RecentlyNonNull V v4) { throw new RuntimeException("Stub!"); }
 
 /**
  * Returns an immutable map containing five mappings.
@@ -1112,8 +1112,8 @@ public static <K, V> java.util.Map<K,V> of(@android.annotation.NonNull K k1, @an
  * @since 9
  */
 
-@android.annotation.NonNull
-public static <K, V> java.util.Map<K,V> of(@android.annotation.NonNull K k1, @android.annotation.NonNull V v1, @android.annotation.NonNull K k2, @android.annotation.NonNull V v2, @android.annotation.NonNull K k3, @android.annotation.NonNull V v3, @android.annotation.NonNull K k4, @android.annotation.NonNull V v4, @android.annotation.NonNull K k5, @android.annotation.NonNull V v5) { throw new RuntimeException("Stub!"); }
+@androidx.annotation.RecentlyNonNull
+public static <K, V> java.util.Map<K,V> of(@androidx.annotation.RecentlyNonNull K k1, @androidx.annotation.RecentlyNonNull V v1, @androidx.annotation.RecentlyNonNull K k2, @androidx.annotation.RecentlyNonNull V v2, @androidx.annotation.RecentlyNonNull K k3, @androidx.annotation.RecentlyNonNull V v3, @androidx.annotation.RecentlyNonNull K k4, @androidx.annotation.RecentlyNonNull V v4, @androidx.annotation.RecentlyNonNull K k5, @androidx.annotation.RecentlyNonNull V v5) { throw new RuntimeException("Stub!"); }
 
 /**
  * Returns an immutable map containing six mappings.
@@ -1140,8 +1140,8 @@ public static <K, V> java.util.Map<K,V> of(@android.annotation.NonNull K k1, @an
  * @since 9
  */
 
-@android.annotation.NonNull
-public static <K, V> java.util.Map<K,V> of(@android.annotation.NonNull K k1, @android.annotation.NonNull V v1, @android.annotation.NonNull K k2, @android.annotation.NonNull V v2, @android.annotation.NonNull K k3, @android.annotation.NonNull V v3, @android.annotation.NonNull K k4, @android.annotation.NonNull V v4, @android.annotation.NonNull K k5, @android.annotation.NonNull V v5, @android.annotation.NonNull K k6, @android.annotation.NonNull V v6) { throw new RuntimeException("Stub!"); }
+@androidx.annotation.RecentlyNonNull
+public static <K, V> java.util.Map<K,V> of(@androidx.annotation.RecentlyNonNull K k1, @androidx.annotation.RecentlyNonNull V v1, @androidx.annotation.RecentlyNonNull K k2, @androidx.annotation.RecentlyNonNull V v2, @androidx.annotation.RecentlyNonNull K k3, @androidx.annotation.RecentlyNonNull V v3, @androidx.annotation.RecentlyNonNull K k4, @androidx.annotation.RecentlyNonNull V v4, @androidx.annotation.RecentlyNonNull K k5, @androidx.annotation.RecentlyNonNull V v5, @androidx.annotation.RecentlyNonNull K k6, @androidx.annotation.RecentlyNonNull V v6) { throw new RuntimeException("Stub!"); }
 
 /**
  * Returns an immutable map containing seven mappings.
@@ -1170,8 +1170,8 @@ public static <K, V> java.util.Map<K,V> of(@android.annotation.NonNull K k1, @an
  * @since 9
  */
 
-@android.annotation.NonNull
-public static <K, V> java.util.Map<K,V> of(@android.annotation.NonNull K k1, @android.annotation.NonNull V v1, @android.annotation.NonNull K k2, @android.annotation.NonNull V v2, @android.annotation.NonNull K k3, @android.annotation.NonNull V v3, @android.annotation.NonNull K k4, @android.annotation.NonNull V v4, @android.annotation.NonNull K k5, @android.annotation.NonNull V v5, @android.annotation.NonNull K k6, @android.annotation.NonNull V v6, @android.annotation.NonNull K k7, @android.annotation.NonNull V v7) { throw new RuntimeException("Stub!"); }
+@androidx.annotation.RecentlyNonNull
+public static <K, V> java.util.Map<K,V> of(@androidx.annotation.RecentlyNonNull K k1, @androidx.annotation.RecentlyNonNull V v1, @androidx.annotation.RecentlyNonNull K k2, @androidx.annotation.RecentlyNonNull V v2, @androidx.annotation.RecentlyNonNull K k3, @androidx.annotation.RecentlyNonNull V v3, @androidx.annotation.RecentlyNonNull K k4, @androidx.annotation.RecentlyNonNull V v4, @androidx.annotation.RecentlyNonNull K k5, @androidx.annotation.RecentlyNonNull V v5, @androidx.annotation.RecentlyNonNull K k6, @androidx.annotation.RecentlyNonNull V v6, @androidx.annotation.RecentlyNonNull K k7, @androidx.annotation.RecentlyNonNull V v7) { throw new RuntimeException("Stub!"); }
 
 /**
  * Returns an immutable map containing eight mappings.
@@ -1202,8 +1202,8 @@ public static <K, V> java.util.Map<K,V> of(@android.annotation.NonNull K k1, @an
  * @since 9
  */
 
-@android.annotation.NonNull
-public static <K, V> java.util.Map<K,V> of(@android.annotation.NonNull K k1, @android.annotation.NonNull V v1, @android.annotation.NonNull K k2, @android.annotation.NonNull V v2, @android.annotation.NonNull K k3, @android.annotation.NonNull V v3, @android.annotation.NonNull K k4, @android.annotation.NonNull V v4, @android.annotation.NonNull K k5, @android.annotation.NonNull V v5, @android.annotation.NonNull K k6, @android.annotation.NonNull V v6, @android.annotation.NonNull K k7, @android.annotation.NonNull V v7, @android.annotation.NonNull K k8, @android.annotation.NonNull V v8) { throw new RuntimeException("Stub!"); }
+@androidx.annotation.RecentlyNonNull
+public static <K, V> java.util.Map<K,V> of(@androidx.annotation.RecentlyNonNull K k1, @androidx.annotation.RecentlyNonNull V v1, @androidx.annotation.RecentlyNonNull K k2, @androidx.annotation.RecentlyNonNull V v2, @androidx.annotation.RecentlyNonNull K k3, @androidx.annotation.RecentlyNonNull V v3, @androidx.annotation.RecentlyNonNull K k4, @androidx.annotation.RecentlyNonNull V v4, @androidx.annotation.RecentlyNonNull K k5, @androidx.annotation.RecentlyNonNull V v5, @androidx.annotation.RecentlyNonNull K k6, @androidx.annotation.RecentlyNonNull V v6, @androidx.annotation.RecentlyNonNull K k7, @androidx.annotation.RecentlyNonNull V v7, @androidx.annotation.RecentlyNonNull K k8, @androidx.annotation.RecentlyNonNull V v8) { throw new RuntimeException("Stub!"); }
 
 /**
  * Returns an immutable map containing nine mappings.
@@ -1236,8 +1236,8 @@ public static <K, V> java.util.Map<K,V> of(@android.annotation.NonNull K k1, @an
  * @since 9
  */
 
-@android.annotation.NonNull
-public static <K, V> java.util.Map<K,V> of(@android.annotation.NonNull K k1, @android.annotation.NonNull V v1, @android.annotation.NonNull K k2, @android.annotation.NonNull V v2, @android.annotation.NonNull K k3, @android.annotation.NonNull V v3, @android.annotation.NonNull K k4, @android.annotation.NonNull V v4, @android.annotation.NonNull K k5, @android.annotation.NonNull V v5, @android.annotation.NonNull K k6, @android.annotation.NonNull V v6, @android.annotation.NonNull K k7, @android.annotation.NonNull V v7, @android.annotation.NonNull K k8, @android.annotation.NonNull V v8, @android.annotation.NonNull K k9, @android.annotation.NonNull V v9) { throw new RuntimeException("Stub!"); }
+@androidx.annotation.RecentlyNonNull
+public static <K, V> java.util.Map<K,V> of(@androidx.annotation.RecentlyNonNull K k1, @androidx.annotation.RecentlyNonNull V v1, @androidx.annotation.RecentlyNonNull K k2, @androidx.annotation.RecentlyNonNull V v2, @androidx.annotation.RecentlyNonNull K k3, @androidx.annotation.RecentlyNonNull V v3, @androidx.annotation.RecentlyNonNull K k4, @androidx.annotation.RecentlyNonNull V v4, @androidx.annotation.RecentlyNonNull K k5, @androidx.annotation.RecentlyNonNull V v5, @androidx.annotation.RecentlyNonNull K k6, @androidx.annotation.RecentlyNonNull V v6, @androidx.annotation.RecentlyNonNull K k7, @androidx.annotation.RecentlyNonNull V v7, @androidx.annotation.RecentlyNonNull K k8, @androidx.annotation.RecentlyNonNull V v8, @androidx.annotation.RecentlyNonNull K k9, @androidx.annotation.RecentlyNonNull V v9) { throw new RuntimeException("Stub!"); }
 
 /**
  * Returns an immutable map containing ten mappings.
@@ -1272,8 +1272,8 @@ public static <K, V> java.util.Map<K,V> of(@android.annotation.NonNull K k1, @an
  * @since 9
  */
 
-@android.annotation.NonNull
-public static <K, V> java.util.Map<K,V> of(@android.annotation.NonNull K k1, @android.annotation.NonNull V v1, @android.annotation.NonNull K k2, @android.annotation.NonNull V v2, @android.annotation.NonNull K k3, @android.annotation.NonNull V v3, @android.annotation.NonNull K k4, @android.annotation.NonNull V v4, @android.annotation.NonNull K k5, @android.annotation.NonNull V v5, @android.annotation.NonNull K k6, @android.annotation.NonNull V v6, @android.annotation.NonNull K k7, @android.annotation.NonNull V v7, @android.annotation.NonNull K k8, @android.annotation.NonNull V v8, @android.annotation.NonNull K k9, @android.annotation.NonNull V v9, @android.annotation.NonNull K k10, @android.annotation.NonNull V v10) { throw new RuntimeException("Stub!"); }
+@androidx.annotation.RecentlyNonNull
+public static <K, V> java.util.Map<K,V> of(@androidx.annotation.RecentlyNonNull K k1, @androidx.annotation.RecentlyNonNull V v1, @androidx.annotation.RecentlyNonNull K k2, @androidx.annotation.RecentlyNonNull V v2, @androidx.annotation.RecentlyNonNull K k3, @androidx.annotation.RecentlyNonNull V v3, @androidx.annotation.RecentlyNonNull K k4, @androidx.annotation.RecentlyNonNull V v4, @androidx.annotation.RecentlyNonNull K k5, @androidx.annotation.RecentlyNonNull V v5, @androidx.annotation.RecentlyNonNull K k6, @androidx.annotation.RecentlyNonNull V v6, @androidx.annotation.RecentlyNonNull K k7, @androidx.annotation.RecentlyNonNull V v7, @androidx.annotation.RecentlyNonNull K k8, @androidx.annotation.RecentlyNonNull V v8, @androidx.annotation.RecentlyNonNull K k9, @androidx.annotation.RecentlyNonNull V v9, @androidx.annotation.RecentlyNonNull K k10, @androidx.annotation.RecentlyNonNull V v10) { throw new RuntimeException("Stub!"); }
 
 /**
  * Returns an immutable map containing keys and values extracted from the given entries.
@@ -1281,7 +1281,7 @@ public static <K, V> java.util.Map<K,V> of(@android.annotation.NonNull K k1, @an
  * See <a href="#immutable">Immutable Map Static Factory Methods</a> for details.
  *
  * @apiNote
- * It is convenient to create the map entries using the {@link java.util.Map#entry Map#entry} method.
+ * It is convenient to create the map entries using the {@link java.util.Map#entry Map.entry()} method.
  * For example,
  *
  * <pre>{@code
@@ -1307,20 +1307,20 @@ public static <K, V> java.util.Map<K,V> of(@android.annotation.NonNull K k1, @an
  * @since 9
  */
 
-@android.annotation.NonNull
+@androidx.annotation.RecentlyNonNull
 @java.lang.SafeVarargs
-public static <K, V> java.util.Map<K,V> ofEntries(@android.annotation.NonNull java.util.Map.Entry<? extends K,? extends V>... entries) { throw new RuntimeException("Stub!"); }
+public static <K, V> java.util.Map<K,V> ofEntries(@androidx.annotation.RecentlyNonNull java.util.Map.Entry<? extends K,? extends V>... entries) { throw new RuntimeException("Stub!"); }
 
 /**
  * Returns an immutable {@link java.util.Map.Entry Entry} containing the given key and value.
  * These entries are suitable for populating {@code Map} instances using the
- * {@link java.util.Map#ofEntries Map#ofEntries} method.
+ * {@link java.util.Map#ofEntries Map.ofEntries()} method.
  * The {@code Entry} instances created by this method have the following characteristics:
  *
  * <ul>
  * <li>They disallow {@code null} keys and values. Attempts to create them using a {@code null}
  * key or value result in {@code NullPointerException}.
- * <li>They are immutable. Calls to {@link java.util.Map.Entry#setValue Entry#setValue}
+ * <li>They are immutable. Calls to {@link java.util.Map.Entry#setValue Entry.setValue()}
  * on a returned {@code Entry} result in {@code UnsupportedOperationException}.
  * <li>They are not serializable.
  * <li>They are <a href="../lang/doc-files/ValueBased.html">value-based</a>.
@@ -1345,8 +1345,28 @@ public static <K, V> java.util.Map<K,V> ofEntries(@android.annotation.NonNull ja
  * @since 9
  */
 
-@android.annotation.NonNull
-public static <K, V> java.util.Map.Entry<K,V> entry(@android.annotation.NonNull K k, @android.annotation.NonNull V v) { throw new RuntimeException("Stub!"); }
+@androidx.annotation.RecentlyNonNull
+public static <K, V> java.util.Map.Entry<K,V> entry(@androidx.annotation.RecentlyNonNull K k, @androidx.annotation.RecentlyNonNull V v) { throw new RuntimeException("Stub!"); }
+
+/**
+ * Returns an <a href="#unmodifiable">unmodifiable Map</a> containing the entries
+ * of the given Map. The given Map must not be null, and it must not contain any
+ * null keys or values. If the given Map is subsequently modified, the returned
+ * Map will not reflect such modifications.
+ *
+ * @implNote
+ * If the given Map is an <a href="#unmodifiable">unmodifiable Map</a>,
+ * calling copyOf will generally not create a copy.
+ *
+ * @param <K> the {@code Map}'s key type
+ * @param <V> the {@code Map}'s value type
+ * @param map a {@code Map} from which entries are drawn, must be non-null
+ * @return a {@code Map} containing the entries of the given {@code Map}
+ * @throws java.lang.NullPointerException if map is null, or if it contains any null keys or values
+ * @since 10
+ */
+
+public static <K, V> java.util.Map<K,V> copyOf(java.util.Map<? extends K,? extends V> map) { throw new RuntimeException("Stub!"); }
 /**
  * A map entry (key-value pair).  The {@code Map.entrySet} method returns
  * a collection-view of the map, whose elements are of this class.  The
@@ -1430,7 +1450,7 @@ public V setValue(V value);
  *         entry
  */
 
-public boolean equals(@android.annotation.Nullable java.lang.Object o);
+public boolean equals(@androidx.annotation.RecentlyNullable java.lang.Object o);
 
 /**
  * Returns the hash code value for this map entry.  The hash code
@@ -1463,7 +1483,7 @@ public int hashCode();
  * @since 1.8
  */
 
-@android.annotation.NonNull
+@androidx.annotation.RecentlyNonNull
 public static <K extends java.lang.Comparable<? super K>, V> java.util.Comparator<java.util.Map.Entry<K,V>> comparingByKey() { throw new RuntimeException("Stub!"); }
 
 /**
@@ -1478,7 +1498,7 @@ public static <K extends java.lang.Comparable<? super K>, V> java.util.Comparato
  * @since 1.8
  */
 
-@android.annotation.NonNull
+@androidx.annotation.RecentlyNonNull
 public static <K, V extends java.lang.Comparable<? super V>> java.util.Comparator<java.util.Map.Entry<K,V>> comparingByValue() { throw new RuntimeException("Stub!"); }
 
 /**
@@ -1495,8 +1515,8 @@ public static <K, V extends java.lang.Comparable<? super V>> java.util.Comparato
  * @since 1.8
  */
 
-@android.annotation.NonNull
-public static <K, V> java.util.Comparator<java.util.Map.Entry<K,V>> comparingByKey(@android.annotation.NonNull java.util.Comparator<? super K> cmp) { throw new RuntimeException("Stub!"); }
+@androidx.annotation.RecentlyNonNull
+public static <K, V> java.util.Comparator<java.util.Map.Entry<K,V>> comparingByKey(@androidx.annotation.RecentlyNonNull java.util.Comparator<? super K> cmp) { throw new RuntimeException("Stub!"); }
 
 /**
  * Returns a comparator that compares {@link java.util.Map.Entry Map.Entry} by value using the given
@@ -1512,8 +1532,8 @@ public static <K, V> java.util.Comparator<java.util.Map.Entry<K,V>> comparingByK
  * @since 1.8
  */
 
-@android.annotation.NonNull
-public static <K, V> java.util.Comparator<java.util.Map.Entry<K,V>> comparingByValue(@android.annotation.NonNull java.util.Comparator<? super V> cmp) { throw new RuntimeException("Stub!"); }
+@androidx.annotation.RecentlyNonNull
+public static <K, V> java.util.Comparator<java.util.Map.Entry<K,V>> comparingByValue(@androidx.annotation.RecentlyNonNull java.util.Comparator<? super V> cmp) { throw new RuntimeException("Stub!"); }
 }
 
 }

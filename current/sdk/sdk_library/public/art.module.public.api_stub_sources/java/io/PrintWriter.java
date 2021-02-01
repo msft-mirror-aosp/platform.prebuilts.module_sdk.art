@@ -59,7 +59,7 @@ public class PrintWriter extends java.io.Writer {
  * @param  out        A character-output stream
  */
 
-public PrintWriter(@android.annotation.NonNull java.io.Writer out) { throw new RuntimeException("Stub!"); }
+public PrintWriter(@androidx.annotation.RecentlyNonNull java.io.Writer out) { throw new RuntimeException("Stub!"); }
 
 /**
  * Creates a new PrintWriter.
@@ -70,7 +70,7 @@ public PrintWriter(@android.annotation.NonNull java.io.Writer out) { throw new R
  *                    flush the output buffer
  */
 
-public PrintWriter(@android.annotation.NonNull java.io.Writer out, boolean autoFlush) { throw new RuntimeException("Stub!"); }
+public PrintWriter(@androidx.annotation.RecentlyNonNull java.io.Writer out, boolean autoFlush) { throw new RuntimeException("Stub!"); }
 
 /**
  * Creates a new PrintWriter, without automatic line flushing, from an
@@ -83,7 +83,7 @@ public PrintWriter(@android.annotation.NonNull java.io.Writer out, boolean autoF
  * @see java.io.OutputStreamWriter#OutputStreamWriter(java.io.OutputStream)
  */
 
-public PrintWriter(@android.annotation.NonNull java.io.OutputStream out) { throw new RuntimeException("Stub!"); }
+public PrintWriter(@androidx.annotation.RecentlyNonNull java.io.OutputStream out) { throw new RuntimeException("Stub!"); }
 
 /**
  * Creates a new PrintWriter from an existing OutputStream.  This
@@ -99,7 +99,7 @@ public PrintWriter(@android.annotation.NonNull java.io.OutputStream out) { throw
  * @see java.io.OutputStreamWriter#OutputStreamWriter(java.io.OutputStream)
  */
 
-public PrintWriter(@android.annotation.NonNull java.io.OutputStream out, boolean autoFlush) { throw new RuntimeException("Stub!"); }
+public PrintWriter(@androidx.annotation.RecentlyNonNull java.io.OutputStream out, boolean autoFlush) { throw new RuntimeException("Stub!"); }
 
 /**
  * Creates a new PrintWriter, without automatic line flushing, with the
@@ -122,13 +122,13 @@ public PrintWriter(@android.annotation.NonNull java.io.OutputStream out, boolean
  *          creating the file
  *
  * @throws  java.lang.SecurityException
- *          If a security manager is present and {@link java.lang.SecurityManager#checkWrite SecurityManager#checkWrite} denies write
+ *          If a security manager is present and {@link java.lang.SecurityManager#checkWrite checkWrite(fileName)} denies write
  *          access to the file
  *
  * @since  1.5
  */
 
-public PrintWriter(@android.annotation.NonNull java.lang.String fileName) throws java.io.FileNotFoundException { throw new RuntimeException("Stub!"); }
+public PrintWriter(@androidx.annotation.RecentlyNonNull java.lang.String fileName) throws java.io.FileNotFoundException { throw new RuntimeException("Stub!"); }
 
 /**
  * Creates a new PrintWriter, without automatic line flushing, with the
@@ -154,7 +154,7 @@ public PrintWriter(@android.annotation.NonNull java.lang.String fileName) throws
  *          creating the file
  *
  * @throws  java.lang.SecurityException
- *          If a security manager is present and {@link java.lang.SecurityManager#checkWrite SecurityManager#checkWrite} denies write
+ *          If a security manager is present and {@link java.lang.SecurityManager#checkWrite checkWrite(fileName)} denies write
  *          access to the file
  *
  * @throws  java.io.UnsupportedEncodingException
@@ -163,7 +163,7 @@ public PrintWriter(@android.annotation.NonNull java.lang.String fileName) throws
  * @since  1.5
  */
 
-public PrintWriter(@android.annotation.NonNull java.lang.String fileName, @android.annotation.NonNull java.lang.String csn) throws java.io.FileNotFoundException, java.io.UnsupportedEncodingException { throw new RuntimeException("Stub!"); }
+public PrintWriter(@androidx.annotation.RecentlyNonNull java.lang.String fileName, @androidx.annotation.RecentlyNonNull java.lang.String csn) throws java.io.FileNotFoundException, java.io.UnsupportedEncodingException { throw new RuntimeException("Stub!"); }
 
 /**
  * Creates a new PrintWriter, without automatic line flushing, with the
@@ -186,13 +186,13 @@ public PrintWriter(@android.annotation.NonNull java.lang.String fileName, @andro
  *          creating the file
  *
  * @throws  java.lang.SecurityException
- *          If a security manager is present and {@link java.lang.SecurityManager#checkWrite SecurityManager#checkWrite}
+ *          If a security manager is present and {@link java.lang.SecurityManager#checkWrite checkWrite(file.getPath())}
  *          denies write access to the file
  *
  * @since  1.5
  */
 
-public PrintWriter(@android.annotation.NonNull java.io.File file) throws java.io.FileNotFoundException { throw new RuntimeException("Stub!"); }
+public PrintWriter(@androidx.annotation.RecentlyNonNull java.io.File file) throws java.io.FileNotFoundException { throw new RuntimeException("Stub!"); }
 
 /**
  * Creates a new PrintWriter, without automatic line flushing, with the
@@ -218,7 +218,7 @@ public PrintWriter(@android.annotation.NonNull java.io.File file) throws java.io
  *          creating the file
  *
  * @throws  java.lang.SecurityException
- *          If a security manager is present and {@link java.lang.SecurityManager#checkWrite SecurityManager#checkWrite}
+ *          If a security manager is present and {@link java.lang.SecurityManager#checkWrite checkWrite(file.getPath())}
  *          denies write access to the file
  *
  * @throws  java.io.UnsupportedEncodingException
@@ -227,7 +227,7 @@ public PrintWriter(@android.annotation.NonNull java.io.File file) throws java.io
  * @since  1.5
  */
 
-public PrintWriter(@android.annotation.NonNull java.io.File file, @android.annotation.NonNull java.lang.String csn) throws java.io.FileNotFoundException, java.io.UnsupportedEncodingException { throw new RuntimeException("Stub!"); }
+public PrintWriter(@androidx.annotation.RecentlyNonNull java.io.File file, @androidx.annotation.RecentlyNonNull java.lang.String csn) throws java.io.FileNotFoundException, java.io.UnsupportedEncodingException { throw new RuntimeException("Stub!"); }
 
 /**
  * Flushes the stream.
@@ -308,7 +308,7 @@ public void write(char[] buf) { throw new RuntimeException("Stub!"); }
  * @param len Number of characters to write
  */
 
-public void write(@android.annotation.NonNull java.lang.String s, int off, int len) { throw new RuntimeException("Stub!"); }
+public void write(@androidx.annotation.RecentlyNonNull java.lang.String s, int off, int len) { throw new RuntimeException("Stub!"); }
 
 /**
  * Writes a string.  This method cannot be inherited from the Writer class
@@ -316,7 +316,7 @@ public void write(@android.annotation.NonNull java.lang.String s, int off, int l
  * @param s String to be written
  */
 
-public void write(@android.annotation.NonNull java.lang.String s) { throw new RuntimeException("Stub!"); }
+public void write(@androidx.annotation.RecentlyNonNull java.lang.String s) { throw new RuntimeException("Stub!"); }
 
 /**
  * Prints a boolean value.  The string produced by <code>{@link
@@ -416,7 +416,7 @@ public void print(char[] s) { throw new RuntimeException("Stub!"); }
  * @param      s   The <code>String</code> to be printed
  */
 
-public void print(@android.annotation.Nullable java.lang.String s) { throw new RuntimeException("Stub!"); }
+public void print(@androidx.annotation.RecentlyNullable java.lang.String s) { throw new RuntimeException("Stub!"); }
 
 /**
  * Prints an object.  The string produced by the <code>{@link
@@ -429,7 +429,7 @@ public void print(@android.annotation.Nullable java.lang.String s) { throw new R
  * @see        java.lang.Object#toString()
  */
 
-public void print(@android.annotation.Nullable java.lang.Object obj) { throw new RuntimeException("Stub!"); }
+public void print(@androidx.annotation.RecentlyNullable java.lang.Object obj) { throw new RuntimeException("Stub!"); }
 
 /**
  * Terminates the current line by writing the line separator string.  The
@@ -518,7 +518,7 @@ public void println(char[] x) { throw new RuntimeException("Stub!"); }
  * @param x the <code>String</code> value to be printed
  */
 
-public void println(@android.annotation.Nullable java.lang.String x) { throw new RuntimeException("Stub!"); }
+public void println(@androidx.annotation.RecentlyNullable java.lang.String x) { throw new RuntimeException("Stub!"); }
 
 /**
  * Prints an Object and then terminates the line.  This method calls
@@ -530,7 +530,7 @@ public void println(@android.annotation.Nullable java.lang.String x) { throw new
  * @param x  The <code>Object</code> to be printed.
  */
 
-public void println(@android.annotation.Nullable java.lang.Object x) { throw new RuntimeException("Stub!"); }
+public void println(@androidx.annotation.RecentlyNullable java.lang.Object x) { throw new RuntimeException("Stub!"); }
 
 /**
  * A convenience method to write a formatted string to this writer using
@@ -575,8 +575,8 @@ public void println(@android.annotation.Nullable java.lang.Object x) { throw new
  * @since  1.5
  */
 
-@android.annotation.NonNull
-public java.io.PrintWriter printf(@android.annotation.NonNull java.lang.String format, @android.annotation.NonNull java.lang.Object... args) { throw new RuntimeException("Stub!"); }
+@androidx.annotation.RecentlyNonNull
+public java.io.PrintWriter printf(@androidx.annotation.RecentlyNonNull java.lang.String format, @androidx.annotation.RecentlyNonNull java.lang.Object... args) { throw new RuntimeException("Stub!"); }
 
 /**
  * A convenience method to write a formatted string to this writer using
@@ -626,8 +626,8 @@ public java.io.PrintWriter printf(@android.annotation.NonNull java.lang.String f
  * @since  1.5
  */
 
-@android.annotation.NonNull
-public java.io.PrintWriter printf(@android.annotation.Nullable java.util.Locale l, @android.annotation.NonNull java.lang.String format, @android.annotation.NonNull java.lang.Object... args) { throw new RuntimeException("Stub!"); }
+@androidx.annotation.RecentlyNonNull
+public java.io.PrintWriter printf(@androidx.annotation.RecentlyNullable java.util.Locale l, @androidx.annotation.RecentlyNonNull java.lang.String format, @androidx.annotation.RecentlyNonNull java.lang.Object... args) { throw new RuntimeException("Stub!"); }
 
 /**
  * Writes a formatted string to this writer using the specified format
@@ -670,8 +670,8 @@ public java.io.PrintWriter printf(@android.annotation.Nullable java.util.Locale 
  * @since  1.5
  */
 
-@android.annotation.NonNull
-public java.io.PrintWriter format(@android.annotation.NonNull java.lang.String format, @android.annotation.NonNull java.lang.Object... args) { throw new RuntimeException("Stub!"); }
+@androidx.annotation.RecentlyNonNull
+public java.io.PrintWriter format(@androidx.annotation.RecentlyNonNull java.lang.String format, @androidx.annotation.RecentlyNonNull java.lang.Object... args) { throw new RuntimeException("Stub!"); }
 
 /**
  * Writes a formatted string to this writer using the specified format
@@ -715,8 +715,8 @@ public java.io.PrintWriter format(@android.annotation.NonNull java.lang.String f
  * @since  1.5
  */
 
-@android.annotation.NonNull
-public java.io.PrintWriter format(@android.annotation.Nullable java.util.Locale l, @android.annotation.NonNull java.lang.String format, @android.annotation.NonNull java.lang.Object... args) { throw new RuntimeException("Stub!"); }
+@androidx.annotation.RecentlyNonNull
+public java.io.PrintWriter format(@androidx.annotation.RecentlyNullable java.util.Locale l, @androidx.annotation.RecentlyNonNull java.lang.String format, @androidx.annotation.RecentlyNonNull java.lang.Object... args) { throw new RuntimeException("Stub!"); }
 
 /**
  * Appends the specified character sequence to this writer.
@@ -743,8 +743,8 @@ public java.io.PrintWriter format(@android.annotation.Nullable java.util.Locale 
  * @since  1.5
  */
 
-@android.annotation.NonNull
-public java.io.PrintWriter append(@android.annotation.Nullable java.lang.CharSequence csq) { throw new RuntimeException("Stub!"); }
+@androidx.annotation.RecentlyNonNull
+public java.io.PrintWriter append(@androidx.annotation.RecentlyNullable java.lang.CharSequence csq) { throw new RuntimeException("Stub!"); }
 
 /**
  * Appends a subsequence of the specified character sequence to this writer.
@@ -779,8 +779,8 @@ public java.io.PrintWriter append(@android.annotation.Nullable java.lang.CharSeq
  * @since  1.5
  */
 
-@android.annotation.NonNull
-public java.io.PrintWriter append(@android.annotation.Nullable java.lang.CharSequence csq, int start, int end) { throw new RuntimeException("Stub!"); }
+@androidx.annotation.RecentlyNonNull
+public java.io.PrintWriter append(@androidx.annotation.RecentlyNullable java.lang.CharSequence csq, int start, int end) { throw new RuntimeException("Stub!"); }
 
 /**
  * Appends the specified character to this writer.
@@ -799,7 +799,7 @@ public java.io.PrintWriter append(@android.annotation.Nullable java.lang.CharSeq
  * @since 1.5
  */
 
-@android.annotation.NonNull
+@androidx.annotation.RecentlyNonNull
 public java.io.PrintWriter append(char c) { throw new RuntimeException("Stub!"); }
 
 /**

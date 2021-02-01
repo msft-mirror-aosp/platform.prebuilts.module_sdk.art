@@ -37,13 +37,13 @@ import java.io.IOException;
  * construct other types of file systems.
  *
  * <p> The first invocation of any of the methods defined by this class causes
- * the default {@link java.nio.file.spi.FileSystemProvider FileSystemProvider} to be loaded. The default
+ * the default {@link java.nio.file.spi.FileSystemProvider provider} to be loaded. The default
  * provider, identified by the URI scheme "file", creates the {@link java.nio.file.FileSystem FileSystem}
  * that provides access to the file systems accessible to the Java virtual
  * machine. If the process of loading or initializing the default provider fails
  * then an unspecified error is thrown.
  *
- * <p> The first invocation of the {@link java.nio.file.spi.FileSystemProvider#installedProviders FileSystemProvider#installedProviders} method, by way of invoking any of the {@code
+ * <p> The first invocation of the {@link java.nio.file.spi.FileSystemProvider#installedProviders  installedProviders} method, by way of invoking any of the {@code
  * newFileSystem} methods defined by this class, locates and loads all
  * installed file system providers. Installed providers are loaded using the
  * service-provider loading facility defined by the {@link java.util.ServiceLoader ServiceLoader} class.
@@ -57,7 +57,7 @@ import java.io.IOException;
  * more fully-qualified names of concrete subclass of {@link java.nio.file.spi.FileSystemProvider FileSystemProvider}
  * that have a zero argument constructor.
  * The ordering that installed providers are located is implementation specific.
- * If a provider is instantiated and its {@link java.nio.file.spi.FileSystemProvider#getScheme() FileSystemProvider#getScheme()} returns the same URI scheme of a provider that was previously
+ * If a provider is instantiated and its {@link java.nio.file.spi.FileSystemProvider#getScheme()  getScheme} returns the same URI scheme of a provider that was previously
  * instantiated then the most recently instantiated duplicate is discarded. URI
  * schemes are compared without regard to case. During construction a provider
  * may safely access files associated with the default provider but care needs
@@ -91,7 +91,7 @@ private FileSystems() { throw new RuntimeException("Stub!"); }
  * class.
  *
  * <p> The first invocation of any of the methods defined by this class
- * locates the default {@link java.nio.file.spi.FileSystemProvider FileSystemProvider} object. Where the
+ * locates the default {@link java.nio.file.spi.FileSystemProvider provider} object. Where the
  * system property {@code java.nio.file.spi.DefaultFileSystemProvider} is
  * not defined then the default provider is a system-default provider that
  * is invoked to create the default file system.
@@ -127,13 +127,13 @@ public static java.nio.file.FileSystem getDefault() { throw new RuntimeException
 /**
  * Returns a reference to an existing {@code FileSystem}.
  *
- * <p> This method iterates over the {@link java.nio.file.spi.FileSystemProvider#installedProviders() FileSystemProvider#installedProviders()} providers to locate the provider that is identified by the URI
- * {@link java.net.URI#getScheme URI#getScheme} of the given URI. URI schemes are compared
+ * <p> This method iterates over the {@link java.nio.file.spi.FileSystemProvider#installedProviders()  installed} providers to locate the provider that is identified by the URI
+ * {@link java.net.URI#getScheme scheme} of the given URI. URI schemes are compared
  * without regard to case. The exact form of the URI is highly provider
- * dependent. If found, the provider's {@link java.nio.file.spi.FileSystemProvider#getFileSystem FileSystemProvider#getFileSystem} method is invoked to obtain a reference to the {@code
+ * dependent. If found, the provider's {@link java.nio.file.spi.FileSystemProvider#getFileSystem  getFileSystem} method is invoked to obtain a reference to the {@code
  * FileSystem}.
  *
- * <p> Once a file system created by this provider is {@link java.nio.file.FileSystem#close FileSystem#close} it is provider-dependent if this method returns a reference to
+ * <p> Once a file system created by this provider is {@link java.nio.file.FileSystem#close  closed} it is provider-dependent if this method returns a reference to
  * the closed file system or throws {@link java.nio.file.FileSystemNotFoundException FileSystemNotFoundException}.
  * If the provider allows a new file system to be created with the same URI
  * as a file system it previously created then this method throws the
@@ -142,7 +142,7 @@ public static java.nio.file.FileSystem getDefault() { throw new RuntimeException
  *
  * <p> If a security manager is installed then a provider implementation
  * may require to check a permission before returning a reference to an
- * existing file system. In the case of the {@link java.nio.file.FileSystems#getDefault FileSystems#getDefault} file system, no permission check is required.
+ * existing file system. In the case of the {@link java.nio.file.FileSystems#getDefault  default} file system, no permission check is required.
  *
  * @param   uri  the URI to locate the file system
  *
@@ -164,12 +164,12 @@ public static java.nio.file.FileSystem getFileSystem(java.net.URI uri) { throw n
 /**
  * Constructs a new file system that is identified by a {@link java.net.URI URI}
  *
- * <p> This method iterates over the {@link java.nio.file.spi.FileSystemProvider#installedProviders() FileSystemProvider#installedProviders()} providers to locate the provider that is identified by the URI
- * {@link java.net.URI#getScheme URI#getScheme} of the given URI. URI schemes are compared
+ * <p> This method iterates over the {@link java.nio.file.spi.FileSystemProvider#installedProviders()  installed} providers to locate the provider that is identified by the URI
+ * {@link java.net.URI#getScheme scheme} of the given URI. URI schemes are compared
  * without regard to case. The exact form of the URI is highly provider
- * dependent. If found, the provider's {@link java.nio.file.spi.FileSystemProvider#newFileSystem(java.net.URI,java.util.Map) FileSystemProvider#newFileSystem(URI,Map)} method is invoked to construct the new file system.
+ * dependent. If found, the provider's {@link java.nio.file.spi.FileSystemProvider#newFileSystem(java.net.URI,java.util.Map)  newFileSystem(URI,Map)} method is invoked to construct the new file system.
  *
- * <p> Once a file system is {@link java.nio.file.FileSystem#close FileSystem#close} it is
+ * <p> Once a file system is {@link java.nio.file.FileSystem#close closed} it is
  * provider-dependent if the provider allows a new file system to be created
  * with the same URI as a file system it previously created.
  *
@@ -215,7 +215,7 @@ public static java.nio.file.FileSystem newFileSystem(java.net.URI uri, java.util
  * the same manner as the {@link #newFileSystem(java.net.URI,java.util.Map) newFileSystem(URI,Map)}
  * method. If none of the installed providers support the URI scheme then an
  * attempt is made to locate the provider using the given class loader. If a
- * provider supporting the URI scheme is located then its {@link java.nio.file.spi.FileSystemProvider#newFileSystem(java.net.URI,java.util.Map) FileSystemProvider#newFileSystem(URI,Map)} is
+ * provider supporting the URI scheme is located then its {@link java.nio.file.spi.FileSystemProvider#newFileSystem(java.net.URI,java.util.Map) newFileSystem(URI,Map)} is
  * invoked to construct the new file system.
  *
  * @param   uri
@@ -257,7 +257,7 @@ public static java.nio.file.FileSystem newFileSystem(java.net.URI uri, java.util
  * systems where the contents of one or more files is treated as a file
  * system.
  *
- * <p> This method iterates over the {@link java.nio.file.spi.FileSystemProvider#installedProviders() FileSystemProvider#installedProviders()} providers. It invokes, in turn, each provider's {@link java.nio.file.spi.FileSystemProvider#newFileSystem(java.nio.file.Path,java.util.Map) FileSystemProvider#newFileSystem(Path,Map)} method
+ * <p> This method iterates over the {@link java.nio.file.spi.FileSystemProvider#installedProviders()  installed} providers. It invokes, in turn, each provider's {@link java.nio.file.spi.FileSystemProvider#newFileSystem(java.nio.file.Path,java.util.Map) newFileSystem(Path,Map)} method
  * with an empty map. If a provider returns a file system then the iteration
  * terminates and the file system is returned. If none of the installed
  * providers return a {@code FileSystem} then an attempt is made to locate

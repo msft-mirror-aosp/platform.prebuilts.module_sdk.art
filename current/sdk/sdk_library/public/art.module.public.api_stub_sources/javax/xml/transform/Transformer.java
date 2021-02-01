@@ -27,7 +27,7 @@ import java.util.Properties;
  * source tree into a result tree.
  *
  * <p>An instance of this class can be obtained with the
- * {@link javax.xml.transform.TransformerFactory#newTransformer TransformerFactory#newTransformer}
+ * {@link javax.xml.transform.TransformerFactory#newTransformer TransformerFactory.newTransformer}
  * method. This instance may then be used to process XML from a
  * variety of sources and write the transformation output to a
  * variety of sinks.</p>

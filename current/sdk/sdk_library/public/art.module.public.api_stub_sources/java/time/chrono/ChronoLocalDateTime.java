@@ -351,7 +351,7 @@ public default java.lang.String format(java.time.format.DateTimeFormatter format
  * <p>
  * The local date-time is resolved to a single instant on the time-line.
  * This is achieved by finding a valid offset from UTC/Greenwich for the local
- * date-time as defined by the {@link java.time.zone.ZoneRules ZoneRules} of the zone ID.
+ * date-time as defined by the {@link java.time.zone.ZoneRules rules} of the zone ID.
  *<p>
  * In most cases, there is only one valid offset for a local date-time.
  * In the case of an overlap, where clocks are set back, there are two valid offsets.

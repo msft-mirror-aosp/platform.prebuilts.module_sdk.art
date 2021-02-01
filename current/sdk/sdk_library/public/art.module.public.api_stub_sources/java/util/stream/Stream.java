@@ -52,7 +52,7 @@ import java.util.function.BiConsumer;
  * }</pre>
  *
  * In this example, {@code widgets} is a {@code Collection<Widget>}.  We create
- * a stream of {@code Widget} objects via {@link java.util.Collection#stream Collection#stream},
+ * a stream of {@code Widget} objects via {@link java.util.Collection#stream Collection.stream()},
  * filter it to produce a stream containing only the red widgets, and then
  * transform it into a stream of {@code int} values representing the weight of
  * each red widget. Then this stream is summed to produce a total weight.
@@ -128,8 +128,8 @@ import java.util.function.BiConsumer;
  * <a href="package-summary.html#Parallelism">parallel</a>.  This
  * execution mode is a property of the stream.  Streams are created
  * with an initial choice of sequential or parallel execution.  (For example,
- * {@link java.util.Collection#stream() Collection#stream()} creates a sequential stream,
- * and {@link java.util.Collection#parallelStream() Collection#parallelStream()} creates
+ * {@link java.util.Collection#stream() Collection.stream()} creates a sequential stream,
+ * and {@link java.util.Collection#parallelStream() Collection.parallelStream()} creates
  * a parallel one.)  This choice of execution mode may be modified by the
  * {@link #sequential()} or {@link #parallel()} methods, and may be queried with
  * the {@link #isParallel()} method.
@@ -773,9 +773,9 @@ public <R> R collect(java.util.function.Supplier<R> supplier, java.util.function
  * multiple-level grouping or partitioning.
  *
  * <p>If the stream is parallel, and the {@code Collector}
- * is {@link java.util.stream.Collector.Characteristics#CONCURRENT Collector.Characteristics#CONCURRENT}, and
+ * is {@link java.util.stream.Collector.Characteristics#CONCURRENT concurrent}, and
  * either the stream is unordered or the collector is
- * {@link java.util.stream.Collector.Characteristics#UNORDERED Collector.Characteristics#UNORDERED},
+ * {@link java.util.stream.Collector.Characteristics#UNORDERED unordered},
  * then a concurrent reduction will be performed (see {@link java.util.stream.Collector Collector} for
  * details on concurrent reduction.)
  *

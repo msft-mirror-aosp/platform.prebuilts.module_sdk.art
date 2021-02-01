@@ -165,7 +165,7 @@ public BigInteger(int signum, byte[] magnitude) { throw new RuntimeException("St
  * @see    Character#digit
  */
 
-public BigInteger(@android.annotation.NonNull java.lang.String val, int radix) { throw new RuntimeException("Stub!"); }
+public BigInteger(@androidx.annotation.RecentlyNonNull java.lang.String val, int radix) { throw new RuntimeException("Stub!"); }
 
 /**
  * Translates the decimal String representation of a BigInteger into a
@@ -181,7 +181,7 @@ public BigInteger(@android.annotation.NonNull java.lang.String val, int radix) {
  * @see    Character#digit
  */
 
-public BigInteger(@android.annotation.NonNull java.lang.String val) { throw new RuntimeException("Stub!"); }
+public BigInteger(@androidx.annotation.RecentlyNonNull java.lang.String val) { throw new RuntimeException("Stub!"); }
 
 /**
  * Constructs a randomly generated BigInteger, uniformly distributed over
@@ -197,7 +197,7 @@ public BigInteger(@android.annotation.NonNull java.lang.String val) { throw new 
  * @see #bitLength()
  */
 
-public BigInteger(int numBits, @android.annotation.NonNull java.util.Random rnd) { throw new RuntimeException("Stub!"); }
+public BigInteger(int numBits, @androidx.annotation.RecentlyNonNull java.util.Random rnd) { throw new RuntimeException("Stub!"); }
 
 /**
  * Constructs a randomly generated positive BigInteger that is probably
@@ -219,7 +219,7 @@ public BigInteger(int numBits, @android.annotation.NonNull java.util.Random rnd)
  * @see    #bitLength()
  */
 
-public BigInteger(int bitLength, int certainty, @android.annotation.NonNull java.util.Random rnd) { throw new RuntimeException("Stub!"); }
+public BigInteger(int bitLength, int certainty, @androidx.annotation.RecentlyNonNull java.util.Random rnd) { throw new RuntimeException("Stub!"); }
 
 /**
  * Returns a positive BigInteger that is probably prime, with the
@@ -235,8 +235,8 @@ public BigInteger(int bitLength, int certainty, @android.annotation.NonNull java
  * @since 1.4
  */
 
-@android.annotation.NonNull
-public static java.math.BigInteger probablePrime(int bitLength, @android.annotation.NonNull java.util.Random rnd) { throw new RuntimeException("Stub!"); }
+@androidx.annotation.RecentlyNonNull
+public static java.math.BigInteger probablePrime(int bitLength, @androidx.annotation.RecentlyNonNull java.util.Random rnd) { throw new RuntimeException("Stub!"); }
 
 /**
  * Returns the first integer greater than this {@code BigInteger} that
@@ -251,7 +251,7 @@ public static java.math.BigInteger probablePrime(int bitLength, @android.annotat
  * @since 1.5
  */
 
-@android.annotation.NonNull
+@androidx.annotation.RecentlyNonNull
 public java.math.BigInteger nextProbablePrime() { throw new RuntimeException("Stub!"); }
 
 /**
@@ -264,7 +264,7 @@ public java.math.BigInteger nextProbablePrime() { throw new RuntimeException("St
  * @return a BigInteger with the specified value.
  */
 
-@android.annotation.NonNull
+@androidx.annotation.RecentlyNonNull
 public static java.math.BigInteger valueOf(long val) { throw new RuntimeException("Stub!"); }
 
 /**
@@ -274,8 +274,8 @@ public static java.math.BigInteger valueOf(long val) { throw new RuntimeExceptio
  * @return {@code this + val}
  */
 
-@android.annotation.NonNull
-public java.math.BigInteger add(@android.annotation.NonNull java.math.BigInteger val) { throw new RuntimeException("Stub!"); }
+@androidx.annotation.RecentlyNonNull
+public java.math.BigInteger add(@androidx.annotation.RecentlyNonNull java.math.BigInteger val) { throw new RuntimeException("Stub!"); }
 
 /**
  * Returns a BigInteger whose value is {@code (this - val)}.
@@ -284,8 +284,8 @@ public java.math.BigInteger add(@android.annotation.NonNull java.math.BigInteger
  * @return {@code this - val}
  */
 
-@android.annotation.NonNull
-public java.math.BigInteger subtract(@android.annotation.NonNull java.math.BigInteger val) { throw new RuntimeException("Stub!"); }
+@androidx.annotation.RecentlyNonNull
+public java.math.BigInteger subtract(@androidx.annotation.RecentlyNonNull java.math.BigInteger val) { throw new RuntimeException("Stub!"); }
 
 /**
  * Returns a BigInteger whose value is {@code (this * val)}.
@@ -297,8 +297,8 @@ public java.math.BigInteger subtract(@android.annotation.NonNull java.math.BigIn
  * @return {@code this * val}
  */
 
-@android.annotation.NonNull
-public java.math.BigInteger multiply(@android.annotation.NonNull java.math.BigInteger val) { throw new RuntimeException("Stub!"); }
+@androidx.annotation.RecentlyNonNull
+public java.math.BigInteger multiply(@androidx.annotation.RecentlyNonNull java.math.BigInteger val) { throw new RuntimeException("Stub!"); }
 
 /**
  * Returns a BigInteger whose value is {@code (this / val)}.
@@ -308,8 +308,8 @@ public java.math.BigInteger multiply(@android.annotation.NonNull java.math.BigIn
  * @throws java.lang.ArithmeticException if {@code val} is zero.
  */
 
-@android.annotation.NonNull
-public java.math.BigInteger divide(@android.annotation.NonNull java.math.BigInteger val) { throw new RuntimeException("Stub!"); }
+@androidx.annotation.RecentlyNonNull
+public java.math.BigInteger divide(@androidx.annotation.RecentlyNonNull java.math.BigInteger val) { throw new RuntimeException("Stub!"); }
 
 /**
  * Returns an array of two BigIntegers containing {@code (this / val)}
@@ -323,8 +323,8 @@ public java.math.BigInteger divide(@android.annotation.NonNull java.math.BigInte
  * @throws java.lang.ArithmeticException if {@code val} is zero.
  */
 
-@android.annotation.NonNull
-public java.math.BigInteger[] divideAndRemainder(@android.annotation.NonNull java.math.BigInteger val) { throw new RuntimeException("Stub!"); }
+@androidx.annotation.RecentlyNonNull
+public java.math.BigInteger[] divideAndRemainder(@androidx.annotation.RecentlyNonNull java.math.BigInteger val) { throw new RuntimeException("Stub!"); }
 
 /**
  * Returns a BigInteger whose value is {@code (this % val)}.
@@ -335,8 +335,8 @@ public java.math.BigInteger[] divideAndRemainder(@android.annotation.NonNull jav
  * @throws java.lang.ArithmeticException if {@code val} is zero.
  */
 
-@android.annotation.NonNull
-public java.math.BigInteger remainder(@android.annotation.NonNull java.math.BigInteger val) { throw new RuntimeException("Stub!"); }
+@androidx.annotation.RecentlyNonNull
+public java.math.BigInteger remainder(@androidx.annotation.RecentlyNonNull java.math.BigInteger val) { throw new RuntimeException("Stub!"); }
 
 /**
  * Returns a BigInteger whose value is <tt>(this<sup>exponent</sup>)</tt>.
@@ -348,7 +348,7 @@ public java.math.BigInteger remainder(@android.annotation.NonNull java.math.BigI
  *         cause the operation to yield a non-integer value.)
  */
 
-@android.annotation.NonNull
+@androidx.annotation.RecentlyNonNull
 public java.math.BigInteger pow(int exponent) { throw new RuntimeException("Stub!"); }
 
 /**
@@ -360,8 +360,8 @@ public java.math.BigInteger pow(int exponent) { throw new RuntimeException("Stub
  * @return {@code GCD(abs(this), abs(val))}
  */
 
-@android.annotation.NonNull
-public java.math.BigInteger gcd(@android.annotation.NonNull java.math.BigInteger val) { throw new RuntimeException("Stub!"); }
+@androidx.annotation.RecentlyNonNull
+public java.math.BigInteger gcd(@androidx.annotation.RecentlyNonNull java.math.BigInteger val) { throw new RuntimeException("Stub!"); }
 
 /**
  * Returns a BigInteger whose value is the absolute value of this
@@ -370,7 +370,7 @@ public java.math.BigInteger gcd(@android.annotation.NonNull java.math.BigInteger
  * @return {@code abs(this)}
  */
 
-@android.annotation.NonNull
+@androidx.annotation.RecentlyNonNull
 public java.math.BigInteger abs() { throw new RuntimeException("Stub!"); }
 
 /**
@@ -379,7 +379,7 @@ public java.math.BigInteger abs() { throw new RuntimeException("Stub!"); }
  * @return {@code -this}
  */
 
-@android.annotation.NonNull
+@androidx.annotation.RecentlyNonNull
 public java.math.BigInteger negate() { throw new RuntimeException("Stub!"); }
 
 /**
@@ -402,8 +402,8 @@ public int signum() { throw new RuntimeException("Stub!"); }
  * @see    #remainder
  */
 
-@android.annotation.NonNull
-public java.math.BigInteger mod(@android.annotation.NonNull java.math.BigInteger m) { throw new RuntimeException("Stub!"); }
+@androidx.annotation.RecentlyNonNull
+public java.math.BigInteger mod(@androidx.annotation.RecentlyNonNull java.math.BigInteger m) { throw new RuntimeException("Stub!"); }
 
 /**
  * Returns a BigInteger whose value is
@@ -419,8 +419,8 @@ public java.math.BigInteger mod(@android.annotation.NonNull java.math.BigInteger
  * @see    #modInverse
  */
 
-@android.annotation.NonNull
-public java.math.BigInteger modPow(@android.annotation.NonNull java.math.BigInteger exponent, @android.annotation.NonNull java.math.BigInteger m) { throw new RuntimeException("Stub!"); }
+@androidx.annotation.RecentlyNonNull
+public java.math.BigInteger modPow(@androidx.annotation.RecentlyNonNull java.math.BigInteger exponent, @androidx.annotation.RecentlyNonNull java.math.BigInteger m) { throw new RuntimeException("Stub!"); }
 
 /**
  * Returns a BigInteger whose value is {@code (this}<sup>-1</sup> {@code mod m)}.
@@ -432,8 +432,8 @@ public java.math.BigInteger modPow(@android.annotation.NonNull java.math.BigInte
  *         is not <i>relatively prime</i> to m).
  */
 
-@android.annotation.NonNull
-public java.math.BigInteger modInverse(@android.annotation.NonNull java.math.BigInteger m) { throw new RuntimeException("Stub!"); }
+@androidx.annotation.RecentlyNonNull
+public java.math.BigInteger modInverse(@androidx.annotation.RecentlyNonNull java.math.BigInteger m) { throw new RuntimeException("Stub!"); }
 
 /**
  * Returns a BigInteger whose value is {@code (this << n)}.
@@ -446,7 +446,7 @@ public java.math.BigInteger modInverse(@android.annotation.NonNull java.math.Big
  * @see #shiftRight
  */
 
-@android.annotation.NonNull
+@androidx.annotation.RecentlyNonNull
 public java.math.BigInteger shiftLeft(int n) { throw new RuntimeException("Stub!"); }
 
 /**
@@ -460,7 +460,7 @@ public java.math.BigInteger shiftLeft(int n) { throw new RuntimeException("Stub!
  * @see #shiftLeft
  */
 
-@android.annotation.NonNull
+@androidx.annotation.RecentlyNonNull
 public java.math.BigInteger shiftRight(int n) { throw new RuntimeException("Stub!"); }
 
 /**
@@ -472,8 +472,8 @@ public java.math.BigInteger shiftRight(int n) { throw new RuntimeException("Stub
  * @return {@code this & val}
  */
 
-@android.annotation.NonNull
-public java.math.BigInteger and(@android.annotation.NonNull java.math.BigInteger val) { throw new RuntimeException("Stub!"); }
+@androidx.annotation.RecentlyNonNull
+public java.math.BigInteger and(@androidx.annotation.RecentlyNonNull java.math.BigInteger val) { throw new RuntimeException("Stub!"); }
 
 /**
  * Returns a BigInteger whose value is {@code (this | val)}.  (This method
@@ -484,8 +484,8 @@ public java.math.BigInteger and(@android.annotation.NonNull java.math.BigInteger
  * @return {@code this | val}
  */
 
-@android.annotation.NonNull
-public java.math.BigInteger or(@android.annotation.NonNull java.math.BigInteger val) { throw new RuntimeException("Stub!"); }
+@androidx.annotation.RecentlyNonNull
+public java.math.BigInteger or(@androidx.annotation.RecentlyNonNull java.math.BigInteger val) { throw new RuntimeException("Stub!"); }
 
 /**
  * Returns a BigInteger whose value is {@code (this ^ val)}.  (This method
@@ -496,8 +496,8 @@ public java.math.BigInteger or(@android.annotation.NonNull java.math.BigInteger 
  * @return {@code this ^ val}
  */
 
-@android.annotation.NonNull
-public java.math.BigInteger xor(@android.annotation.NonNull java.math.BigInteger val) { throw new RuntimeException("Stub!"); }
+@androidx.annotation.RecentlyNonNull
+public java.math.BigInteger xor(@androidx.annotation.RecentlyNonNull java.math.BigInteger val) { throw new RuntimeException("Stub!"); }
 
 /**
  * Returns a BigInteger whose value is {@code (~this)}.  (This method
@@ -507,7 +507,7 @@ public java.math.BigInteger xor(@android.annotation.NonNull java.math.BigInteger
  * @return {@code ~this}
  */
 
-@android.annotation.NonNull
+@androidx.annotation.RecentlyNonNull
 public java.math.BigInteger not() { throw new RuntimeException("Stub!"); }
 
 /**
@@ -521,8 +521,8 @@ public java.math.BigInteger not() { throw new RuntimeException("Stub!"); }
  * @return {@code this & ~val}
  */
 
-@android.annotation.NonNull
-public java.math.BigInteger andNot(@android.annotation.NonNull java.math.BigInteger val) { throw new RuntimeException("Stub!"); }
+@androidx.annotation.RecentlyNonNull
+public java.math.BigInteger andNot(@androidx.annotation.RecentlyNonNull java.math.BigInteger val) { throw new RuntimeException("Stub!"); }
 
 /**
  * Returns {@code true} if and only if the designated bit is set.
@@ -544,7 +544,7 @@ public boolean testBit(int n) { throw new RuntimeException("Stub!"); }
  * @throws java.lang.ArithmeticException {@code n} is negative.
  */
 
-@android.annotation.NonNull
+@androidx.annotation.RecentlyNonNull
 public java.math.BigInteger setBit(int n) { throw new RuntimeException("Stub!"); }
 
 /**
@@ -557,7 +557,7 @@ public java.math.BigInteger setBit(int n) { throw new RuntimeException("Stub!");
  * @throws java.lang.ArithmeticException {@code n} is negative.
  */
 
-@android.annotation.NonNull
+@androidx.annotation.RecentlyNonNull
 public java.math.BigInteger clearBit(int n) { throw new RuntimeException("Stub!"); }
 
 /**
@@ -570,7 +570,7 @@ public java.math.BigInteger clearBit(int n) { throw new RuntimeException("Stub!"
  * @throws java.lang.ArithmeticException {@code n} is negative.
  */
 
-@android.annotation.NonNull
+@androidx.annotation.RecentlyNonNull
 public java.math.BigInteger flipBit(int n) { throw new RuntimeException("Stub!"); }
 
 /**
@@ -639,7 +639,7 @@ public boolean isProbablePrime(int certainty) { throw new RuntimeException("Stub
  *         to, or greater than {@code val}.
  */
 
-public int compareTo(@android.annotation.NonNull java.math.BigInteger val) { throw new RuntimeException("Stub!"); }
+public int compareTo(@androidx.annotation.RecentlyNonNull java.math.BigInteger val) { throw new RuntimeException("Stub!"); }
 
 /**
  * Compares this BigInteger with the specified Object for equality.
@@ -649,7 +649,7 @@ public int compareTo(@android.annotation.NonNull java.math.BigInteger val) { thr
  *         BigInteger whose value is numerically equal to this BigInteger.
  */
 
-public boolean equals(@android.annotation.NonNull java.lang.Object x) { throw new RuntimeException("Stub!"); }
+public boolean equals(@androidx.annotation.RecentlyNonNull java.lang.Object x) { throw new RuntimeException("Stub!"); }
 
 /**
  * Returns the minimum of this BigInteger and {@code val}.
@@ -659,8 +659,8 @@ public boolean equals(@android.annotation.NonNull java.lang.Object x) { throw ne
  *         {@code val}.  If they are equal, either may be returned.
  */
 
-@android.annotation.NonNull
-public java.math.BigInteger min(@android.annotation.NonNull java.math.BigInteger val) { throw new RuntimeException("Stub!"); }
+@androidx.annotation.RecentlyNonNull
+public java.math.BigInteger min(@androidx.annotation.RecentlyNonNull java.math.BigInteger val) { throw new RuntimeException("Stub!"); }
 
 /**
  * Returns the maximum of this BigInteger and {@code val}.
@@ -670,8 +670,8 @@ public java.math.BigInteger min(@android.annotation.NonNull java.math.BigInteger
  *         {@code val}.  If they are equal, either may be returned.
  */
 
-@android.annotation.NonNull
-public java.math.BigInteger max(@android.annotation.NonNull java.math.BigInteger val) { throw new RuntimeException("Stub!"); }
+@androidx.annotation.RecentlyNonNull
+public java.math.BigInteger max(@androidx.annotation.RecentlyNonNull java.math.BigInteger val) { throw new RuntimeException("Stub!"); }
 
 /**
  * Returns the hash code for this BigInteger.
@@ -683,7 +683,7 @@ public int hashCode() { throw new RuntimeException("Stub!"); }
 
 /**
  * Returns the String representation of this BigInteger in the
- * given radix.  If the radix is outside the range from {@link java.lang.Character#MIN_RADIX Character#MIN_RADIX} to {@link java.lang.Character#MAX_RADIX Character#MAX_RADIX} inclusive,
+ * given radix.  If the radix is outside the range from {@link java.lang.Character#MIN_RADIX  } to {@link java.lang.Character#MAX_RADIX Character#MAX_RADIX} inclusive,
  * it will default to 10 (as is the case for
  * {@code Integer.toString}).  The digit-to-character mapping
  * provided by {@code Character.forDigit} is used, and a minus
@@ -698,7 +698,7 @@ public int hashCode() { throw new RuntimeException("Stub!"); }
  * @see    #BigInteger(java.lang.String, int)
  */
 
-@android.annotation.NonNull
+@androidx.annotation.RecentlyNonNull
 public java.lang.String toString(int radix) { throw new RuntimeException("Stub!"); }
 
 /**
@@ -714,7 +714,7 @@ public java.lang.String toString(int radix) { throw new RuntimeException("Stub!"
  * @see    #BigInteger(java.lang.String)
  */
 
-@android.annotation.NonNull
+@androidx.annotation.RecentlyNonNull
 public java.lang.String toString() { throw new RuntimeException("Stub!"); }
 
 /**
@@ -778,7 +778,7 @@ public long longValue() { throw new RuntimeException("Stub!"); }
  * <cite>The Java&trade; Language Specification</cite>:
  * if this BigInteger has too great a magnitude
  * to represent as a {@code float}, it will be converted to
- * {@link java.lang.Float#NEGATIVE_INFINITY Float#NEGATIVE_INFINITY} or {@link java.lang.Float#POSITIVE_INFINITY Float#POSITIVE_INFINITY} as appropriate.  Note that even when
+ * {@link java.lang.Float#NEGATIVE_INFINITY Float#NEGATIVE_INFINITY} or {@link java.lang.Float#POSITIVE_INFINITY  } as appropriate.  Note that even when
  * the return value is finite, this conversion can lose
  * information about the precision of the BigInteger value.
  *
@@ -795,7 +795,7 @@ public float floatValue() { throw new RuntimeException("Stub!"); }
  * <cite>The Java&trade; Language Specification</cite>:
  * if this BigInteger has too great a magnitude
  * to represent as a {@code double}, it will be converted to
- * {@link java.lang.Double#NEGATIVE_INFINITY Double#NEGATIVE_INFINITY} or {@link java.lang.Double#POSITIVE_INFINITY Double#POSITIVE_INFINITY} as appropriate.  Note that even when
+ * {@link java.lang.Double#NEGATIVE_INFINITY Double#NEGATIVE_INFINITY} or {@link java.lang.Double#POSITIVE_INFINITY  } as appropriate.  Note that even when
  * the return value is finite, this conversion can lose
  * information about the precision of the BigInteger value.
  *
@@ -870,7 +870,7 @@ public byte byteValueExact() { throw new RuntimeException("Stub!"); }
  * @since   1.2
  */
 
-@android.annotation.NonNull public static final java.math.BigInteger ONE;
+@androidx.annotation.RecentlyNonNull public static final java.math.BigInteger ONE;
 static { ONE = null; }
 
 /**
@@ -879,7 +879,7 @@ static { ONE = null; }
  * @since   1.5
  */
 
-@android.annotation.NonNull public static final java.math.BigInteger TEN;
+@androidx.annotation.RecentlyNonNull public static final java.math.BigInteger TEN;
 static { TEN = null; }
 
 /**
@@ -888,7 +888,7 @@ static { TEN = null; }
  * @since   1.2
  */
 
-@android.annotation.NonNull public static final java.math.BigInteger ZERO;
+@androidx.annotation.RecentlyNonNull public static final java.math.BigInteger ZERO;
 static { ZERO = null; }
 }
 

@@ -71,7 +71,7 @@ import java.time.DateTimeException;
  * This is the base interface type for date, time and offset objects that
  * are complete enough to be manipulated using plus and minus.
  * It is implemented by those classes that can provide and manipulate information
- * as {@linkplain java.time.temporal.TemporalField TemporalField} or {@linkplain java.time.temporal.TemporalQuery TemporalQuery}.
+ * as {@linkplain java.time.temporal.TemporalField fields} or {@linkplain java.time.temporal.TemporalQuery queries}.
  * See {@link java.time.temporal.TemporalAccessor TemporalAccessor} for the read-only version of this interface.
  * <p>
  * Most date and time information can be represented as a number.

@@ -139,7 +139,7 @@ public final java.nio.channels.spi.AsynchronousChannelProvider provider() { thro
 /**
  * Opens an asynchronous socket channel.
  *
- * <p> The new channel is created by invoking the {@link java.nio.channels.spi.AsynchronousChannelProvider#openAsynchronousSocketChannel AsynchronousChannelProvider#openAsynchronousSocketChannel} method on the {@link java.nio.channels.spi.AsynchronousChannelProvider AsynchronousChannelProvider} that created the group. If the group parameter
+ * <p> The new channel is created by invoking the {@link java.nio.channels.spi.AsynchronousChannelProvider#openAsynchronousSocketChannel  openAsynchronousSocketChannel} method on the {@link java.nio.channels.spi.AsynchronousChannelProvider AsynchronousChannelProvider} that created the group. If the group parameter
  * is {@code null} then the resulting channel is created by the system-wide
  * default provider, and bound to the <em>default group</em>.
  *
@@ -184,7 +184,7 @@ public static java.nio.channels.AsynchronousSocketChannel open() throws java.io.
  * @throws  java.io.IOException                         {@inheritDoc}
  * @throws  java.lang.SecurityException
  *          If a security manager has been installed and its
- *          {@link java.lang.SecurityManager#checkListen SecurityManager#checkListen} method denies
+ *          {@link java.lang.SecurityManager#checkListen checkListen} method denies
  *          the operation
  */
 
@@ -310,7 +310,7 @@ public abstract <A> void connect(java.net.SocketAddress remote, A attachment, ja
  * method behaves in exactly the same manner as the {@link
  * #connect(java.net.SocketAddress,java.lang.Object,java.nio.channels.CompletionHandler)} method except that
  * instead of specifying a completion handler, this method returns a {@code
- * Future} representing the pending result. The {@code Future}'s {@link java.util.concurrent.Future#get() Future#get()} method returns {@code null} on successful completion.
+ * Future} representing the pending result. The {@code Future}'s {@link java.util.concurrent.Future#get() get} method returns {@code null} on successful completion.
  *
  * @param   remote
  *          The remote address to which this channel is to be connected
@@ -349,7 +349,7 @@ public abstract java.util.concurrent.Future<java.lang.Void> connect(java.net.Soc
  * read from the channel will cause an unspecific runtime exception to be
  * thrown.
  *
- * <p> Otherwise this method works in the same manner as the {@link java.nio.channels.AsynchronousByteChannel#read(java.nio.ByteBuffer,java.lang.Object,java.nio.channels.CompletionHandler) AsynchronousByteChannel#read(ByteBuffer,Object,CompletionHandler)}
+ * <p> Otherwise this method works in the same manner as the {@link java.nio.channels.AsynchronousByteChannel#read(java.nio.ByteBuffer,java.lang.Object,java.nio.channels.CompletionHandler)  }
  * method.
  *
  * @param   <A>
@@ -492,7 +492,7 @@ public abstract <A> void read(java.nio.ByteBuffer[] dsts, int offset, int length
  * to write to the channel will cause an unspecific runtime exception to be
  * thrown.
  *
- * <p> Otherwise this method works in the same manner as the {@link java.nio.channels.AsynchronousByteChannel#write(java.nio.ByteBuffer,java.lang.Object,java.nio.channels.CompletionHandler) AsynchronousByteChannel#write(ByteBuffer,Object,CompletionHandler)}
+ * <p> Otherwise this method works in the same manner as the {@link java.nio.channels.AsynchronousByteChannel#write(java.nio.ByteBuffer,java.lang.Object,java.nio.channels.CompletionHandler)  }
  * method.
  *
  * @param   <A>

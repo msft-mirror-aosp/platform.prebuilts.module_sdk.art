@@ -93,7 +93,7 @@ import java.time.temporal.TemporalAmount;
  * represented by a {@code ZoneOffset}.
  * <p>
  * Converting between the two time-lines involves calculating the offset using the
- * {@link java.time.zone.ZoneRules ZoneRules} accessed from the {@code ZoneId}.
+ * {@link java.time.zone.ZoneRules rules} accessed from the {@code ZoneId}.
  * Obtaining the offset for an instant is simple, as there is exactly one valid
  * offset for each instant. By contrast, obtaining the offset for a local date-time
  * is not straightforward. There are three cases:
@@ -148,7 +148,7 @@ private ZonedDateTime() { throw new RuntimeException("Stub!"); }
 /**
  * Obtains the current date-time from the system clock in the default time-zone.
  * <p>
- * This will query the {@link java.time.Clock#systemDefaultZone() Clock#systemDefaultZone()} in the default
+ * This will query the {@link java.time.Clock#systemDefaultZone() system clock} in the default
  * time-zone to obtain the current date-time.
  * The zone and offset will be set based on the time-zone in the clock.
  * <p>
@@ -163,7 +163,7 @@ public static java.time.ZonedDateTime now() { throw new RuntimeException("Stub!"
 /**
  * Obtains the current date-time from the system clock in the specified time-zone.
  * <p>
- * This will query the {@link java.time.Clock#system(java.time.ZoneId) Clock#system(ZoneId)} to obtain the current date-time.
+ * This will query the {@link java.time.Clock#system(java.time.ZoneId) system clock} to obtain the current date-time.
  * Specifying the time-zone avoids dependence on the default time-zone.
  * The offset will be calculated from the specified time-zone.
  * <p>
@@ -183,7 +183,7 @@ public static java.time.ZonedDateTime now(java.time.ZoneId zone) { throw new Run
  * The zone and offset will be set based on the time-zone in the clock.
  * <p>
  * Using this method allows the use of an alternate clock for testing.
- * The alternate clock may be introduced using {@link java.time.Clock Clock}.
+ * The alternate clock may be introduced using {@link java.time.Clock dependency injection}.
  *
  * @param clock  the clock to use, not null
  * @return the current date-time, not null
@@ -201,7 +201,7 @@ public static java.time.ZonedDateTime now(java.time.Clock clock) { throw new Run
  * The local date time and first combined to form a local date-time.
  * The local date-time is then resolved to a single instant on the time-line.
  * This is achieved by finding a valid offset from UTC/Greenwich for the local
- * date-time as defined by the {@link java.time.zone.ZoneRules ZoneRules} of the zone ID.
+ * date-time as defined by the {@link java.time.zone.ZoneRules rules} of the zone ID.
  *<p>
  * In most cases, there is only one valid offset for a local date-time.
  * In the case of an overlap, when clocks are set back, there are two valid offsets.
@@ -229,7 +229,7 @@ public static java.time.ZonedDateTime of(java.time.LocalDate date, java.time.Loc
  * <p>
  * The local date-time is resolved to a single instant on the time-line.
  * This is achieved by finding a valid offset from UTC/Greenwich for the local
- * date-time as defined by the {@link java.time.zone.ZoneRules ZoneRules} of the zone ID.
+ * date-time as defined by the {@link java.time.zone.ZoneRules rules} of the zone ID.
  *<p>
  * In most cases, there is only one valid offset for a local date-time.
  * In the case of an overlap, when clocks are set back, there are two valid offsets.
@@ -258,7 +258,7 @@ public static java.time.ZonedDateTime of(java.time.LocalDateTime localDateTime, 
  * <p>
  * The local date-time is resolved to a single instant on the time-line.
  * This is achieved by finding a valid offset from UTC/Greenwich for the local
- * date-time as defined by the {@link java.time.zone.ZoneRules ZoneRules} of the zone ID.
+ * date-time as defined by the {@link java.time.zone.ZoneRules rules} of the zone ID.
  *<p>
  * In most cases, there is only one valid offset for a local date-time.
  * In the case of an overlap, when clocks are set back, there are two valid offsets.
@@ -296,7 +296,7 @@ public static java.time.ZonedDateTime of(int year, int month, int dayOfMonth, in
  * <p>
  * The local date-time is resolved to a single instant on the time-line.
  * This is achieved by finding a valid offset from UTC/Greenwich for the local
- * date-time as defined by the {@link java.time.zone.ZoneRules ZoneRules} of the zone ID.
+ * date-time as defined by the {@link java.time.zone.ZoneRules rules} of the zone ID.
  *<p>
  * In most cases, there is only one valid offset for a local date-time.
  * In the case of an overlap, where clocks are set back, there are two valid offsets.
@@ -337,7 +337,7 @@ public static java.time.ZonedDateTime ofInstant(java.time.Instant instant, java.
  * Obtains an instance of {@code ZonedDateTime} from the instant formed by combining
  * the local date-time and offset.
  * <p>
- * This creates a zoned date-time by {@link java.time.LocalDateTime#toInstant(java.time.ZoneOffset) LocalDateTime#toInstant(ZoneOffset)}
+ * This creates a zoned date-time by {@link java.time.LocalDateTime#toInstant(java.time.ZoneOffset) combining}
  * the {@code LocalDateTime} and {@code ZoneOffset}.
  * This combination uniquely specifies an instant without ambiguity.
  * <p>
@@ -652,7 +652,7 @@ public java.time.ZonedDateTime withLaterOffsetAtOverlap() { throw new RuntimeExc
 /**
  * Gets the time-zone, such as 'Europe/Paris'.
  * <p>
- * This returns the zone ID. This identifies the time-zone {@link java.time.zone.ZoneRules ZoneRules}
+ * This returns the zone ID. This identifies the time-zone {@link java.time.zone.ZoneRules rules}
  * that determine when and how the offset from UTC/Greenwich changes.
  * <p>
  * The zone ID may be same as the {@linkplain #getOffset() offset}.
@@ -779,7 +779,7 @@ public int getMonthValue() { throw new RuntimeException("Stub!"); }
  * This method returns the enum {@link java.time.Month Month} for the month.
  * This avoids confusion as to what {@code int} values mean.
  * If you need access to the primitive {@code int} value then the enum
- * provides the {@link java.time.Month#getValue() Month#getValue()}.
+ * provides the {@link java.time.Month#getValue() int value}.
  *
  * @return the month-of-year, not null
  * @see #getMonthValue()
@@ -813,7 +813,7 @@ public int getDayOfYear() { throw new RuntimeException("Stub!"); }
  * This method returns the enum {@link java.time.DayOfWeek DayOfWeek} for the day-of-week.
  * This avoids confusion as to what {@code int} values mean.
  * If you need access to the primitive {@code int} value then the enum
- * provides the {@link java.time.DayOfWeek#getValue() DayOfWeek#getValue()}.
+ * provides the {@link java.time.DayOfWeek#getValue() int value}.
  * <p>
  * Additional information can be obtained from the {@code DayOfWeek}.
  * This includes textual names of the values.
@@ -949,7 +949,7 @@ public java.time.ZonedDateTime with(java.time.temporal.TemporalAdjuster adjuster
  * If the new offset value is outside the valid range then a {@code DateTimeException} will be thrown.
  * <p>
  * The other {@link #isSupported(java.time.temporal.TemporalField) supported fields} will behave as per
- * the matching method on {@link java.time.LocalDateTime#with(java.time.temporal.TemporalField,long) LocalDateTime#with(TemporalField, long)}.
+ * the matching method on {@link java.time.LocalDateTime#with(java.time.temporal.TemporalField,long) LocalDateTime}.
  * The zone is not part of the calculation and will be unchanged.
  * When converting back to {@code ZonedDateTime}, if the local date-time is in an overlap,
  * then the offset will be retained if possible, otherwise the earlier offset will be used.
@@ -978,7 +978,7 @@ public java.time.ZonedDateTime with(java.time.temporal.TemporalField field, long
  * Returns a copy of this {@code ZonedDateTime} with the year altered.
  * <p>
  * This operates on the local time-line,
- * {@link java.time.LocalDateTime#withYear(int) LocalDateTime#withYear(int)} of the local date-time.
+ * {@link java.time.LocalDateTime#withYear(int) changing the year} of the local date-time.
  * This is then converted back to a {@code ZonedDateTime}, using the zone ID
  * to obtain the offset.
  * <p>
@@ -999,7 +999,7 @@ public java.time.ZonedDateTime withYear(int year) { throw new RuntimeException("
  * Returns a copy of this {@code ZonedDateTime} with the month-of-year altered.
  * <p>
  * This operates on the local time-line,
- * {@link java.time.LocalDateTime#withMonth(int) LocalDateTime#withMonth(int)} of the local date-time.
+ * {@link java.time.LocalDateTime#withMonth(int) changing the month} of the local date-time.
  * This is then converted back to a {@code ZonedDateTime}, using the zone ID
  * to obtain the offset.
  * <p>
@@ -1020,7 +1020,7 @@ public java.time.ZonedDateTime withMonth(int month) { throw new RuntimeException
  * Returns a copy of this {@code ZonedDateTime} with the day-of-month altered.
  * <p>
  * This operates on the local time-line,
- * {@link java.time.LocalDateTime#withDayOfMonth(int) LocalDateTime#withDayOfMonth(int)} of the local date-time.
+ * {@link java.time.LocalDateTime#withDayOfMonth(int) changing the day-of-month} of the local date-time.
  * This is then converted back to a {@code ZonedDateTime}, using the zone ID
  * to obtain the offset.
  * <p>
@@ -1042,7 +1042,7 @@ public java.time.ZonedDateTime withDayOfMonth(int dayOfMonth) { throw new Runtim
  * Returns a copy of this {@code ZonedDateTime} with the day-of-year altered.
  * <p>
  * This operates on the local time-line,
- * {@link java.time.LocalDateTime#withDayOfYear(int) LocalDateTime#withDayOfYear(int)} of the local date-time.
+ * {@link java.time.LocalDateTime#withDayOfYear(int) changing the day-of-year} of the local date-time.
  * This is then converted back to a {@code ZonedDateTime}, using the zone ID
  * to obtain the offset.
  * <p>
@@ -1064,7 +1064,7 @@ public java.time.ZonedDateTime withDayOfYear(int dayOfYear) { throw new RuntimeE
  * Returns a copy of this {@code ZonedDateTime} with the hour-of-day altered.
  * <p>
  * This operates on the local time-line,
- * {@linkplain java.time.LocalDateTime#withHour(int) LocalDateTime#withHour(int)} of the local date-time.
+ * {@linkplain java.time.LocalDateTime#withHour(int) changing the time} of the local date-time.
  * This is then converted back to a {@code ZonedDateTime}, using the zone ID
  * to obtain the offset.
  * <p>
@@ -1085,7 +1085,7 @@ public java.time.ZonedDateTime withHour(int hour) { throw new RuntimeException("
  * Returns a copy of this {@code ZonedDateTime} with the minute-of-hour altered.
  * <p>
  * This operates on the local time-line,
- * {@linkplain java.time.LocalDateTime#withMinute(int) LocalDateTime#withMinute(int)} of the local date-time.
+ * {@linkplain java.time.LocalDateTime#withMinute(int) changing the time} of the local date-time.
  * This is then converted back to a {@code ZonedDateTime}, using the zone ID
  * to obtain the offset.
  * <p>
@@ -1106,7 +1106,7 @@ public java.time.ZonedDateTime withMinute(int minute) { throw new RuntimeExcepti
  * Returns a copy of this {@code ZonedDateTime} with the second-of-minute altered.
  * <p>
  * This operates on the local time-line,
- * {@linkplain java.time.LocalDateTime#withSecond(int) LocalDateTime#withSecond(int)} of the local date-time.
+ * {@linkplain java.time.LocalDateTime#withSecond(int) changing the time} of the local date-time.
  * This is then converted back to a {@code ZonedDateTime}, using the zone ID
  * to obtain the offset.
  * <p>
@@ -1127,7 +1127,7 @@ public java.time.ZonedDateTime withSecond(int second) { throw new RuntimeExcepti
  * Returns a copy of this {@code ZonedDateTime} with the nano-of-second altered.
  * <p>
  * This operates on the local time-line,
- * {@linkplain java.time.LocalDateTime#withNano(int) LocalDateTime#withNano(int)} of the local date-time.
+ * {@linkplain java.time.LocalDateTime#withNano(int) changing the time} of the local date-time.
  * This is then converted back to a {@code ZonedDateTime}, using the zone ID
  * to obtain the offset.
  * <p>
@@ -1149,16 +1149,16 @@ public java.time.ZonedDateTime withNano(int nanoOfSecond) { throw new RuntimeExc
  * <p>
  * Truncation returns a copy of the original date-time with fields
  * smaller than the specified unit set to zero.
- * For example, truncating with the {@link java.time.temporal.ChronoUnit#MINUTES ChronoUnit#MINUTES} unit
+ * For example, truncating with the {@link java.time.temporal.ChronoUnit#MINUTES minutes} unit
  * will set the second-of-minute and nano-of-second field to zero.
  * <p>
- * The unit must have a {@linkplain java.time.temporal.TemporalUnit#getDuration() TemporalUnit#getDuration()}
+ * The unit must have a {@linkplain java.time.temporal.TemporalUnit#getDuration() duration}
  * that divides into the length of a standard day without remainder.
  * This includes all supplied time units on {@link java.time.temporal.ChronoUnit ChronoUnit} and
- * {@link java.time.temporal.ChronoUnit#DAYS ChronoUnit#DAYS}. Other units throw an exception.
+ * {@link java.time.temporal.ChronoUnit#DAYS DAYS}. Other units throw an exception.
  * <p>
  * This operates on the local time-line,
- * {@link java.time.LocalDateTime#truncatedTo(java.time.temporal.TemporalUnit) LocalDateTime#truncatedTo(TemporalUnit)}
+ * {@link java.time.LocalDateTime#truncatedTo(java.time.temporal.TemporalUnit) truncating}
  * the underlying local date-time. This is then converted back to a
  * {@code ZonedDateTime}, using the zone ID to obtain the offset.
  * <p>
@@ -1243,7 +1243,7 @@ public java.time.ZonedDateTime plus(long amountToAdd, java.time.temporal.Tempora
  * Returns a copy of this {@code ZonedDateTime} with the specified number of years added.
  * <p>
  * This operates on the local time-line,
- * {@link java.time.LocalDateTime#plusYears(long) LocalDateTime#plusYears(long)} to the local date-time.
+ * {@link java.time.LocalDateTime#plusYears(long) adding years} to the local date-time.
  * This is then converted back to a {@code ZonedDateTime}, using the zone ID
  * to obtain the offset.
  * <p>
@@ -1264,7 +1264,7 @@ public java.time.ZonedDateTime plusYears(long years) { throw new RuntimeExceptio
  * Returns a copy of this {@code ZonedDateTime} with the specified number of months added.
  * <p>
  * This operates on the local time-line,
- * {@link java.time.LocalDateTime#plusMonths(long) LocalDateTime#plusMonths(long)} to the local date-time.
+ * {@link java.time.LocalDateTime#plusMonths(long) adding months} to the local date-time.
  * This is then converted back to a {@code ZonedDateTime}, using the zone ID
  * to obtain the offset.
  * <p>
@@ -1285,7 +1285,7 @@ public java.time.ZonedDateTime plusMonths(long months) { throw new RuntimeExcept
  * Returns a copy of this {@code ZonedDateTime} with the specified number of weeks added.
  * <p>
  * This operates on the local time-line,
- * {@link java.time.LocalDateTime#plusWeeks(long) LocalDateTime#plusWeeks(long)} to the local date-time.
+ * {@link java.time.LocalDateTime#plusWeeks(long) adding weeks} to the local date-time.
  * This is then converted back to a {@code ZonedDateTime}, using the zone ID
  * to obtain the offset.
  * <p>
@@ -1306,7 +1306,7 @@ public java.time.ZonedDateTime plusWeeks(long weeks) { throw new RuntimeExceptio
  * Returns a copy of this {@code ZonedDateTime} with the specified number of days added.
  * <p>
  * This operates on the local time-line,
- * {@link java.time.LocalDateTime#plusDays(long) LocalDateTime#plusDays(long)} to the local date-time.
+ * {@link java.time.LocalDateTime#plusDays(long) adding days} to the local date-time.
  * This is then converted back to a {@code ZonedDateTime}, using the zone ID
  * to obtain the offset.
  * <p>
@@ -1464,7 +1464,7 @@ public java.time.ZonedDateTime minus(long amountToSubtract, java.time.temporal.T
  * Returns a copy of this {@code ZonedDateTime} with the specified number of years subtracted.
  * <p>
  * This operates on the local time-line,
- * {@link java.time.LocalDateTime#minusYears(long) LocalDateTime#minusYears(long)} to the local date-time.
+ * {@link java.time.LocalDateTime#minusYears(long) subtracting years} to the local date-time.
  * This is then converted back to a {@code ZonedDateTime}, using the zone ID
  * to obtain the offset.
  * <p>
@@ -1485,7 +1485,7 @@ public java.time.ZonedDateTime minusYears(long years) { throw new RuntimeExcepti
  * Returns a copy of this {@code ZonedDateTime} with the specified number of months subtracted.
  * <p>
  * This operates on the local time-line,
- * {@link java.time.LocalDateTime#minusMonths(long) LocalDateTime#minusMonths(long)} to the local date-time.
+ * {@link java.time.LocalDateTime#minusMonths(long) subtracting months} to the local date-time.
  * This is then converted back to a {@code ZonedDateTime}, using the zone ID
  * to obtain the offset.
  * <p>
@@ -1506,7 +1506,7 @@ public java.time.ZonedDateTime minusMonths(long months) { throw new RuntimeExcep
  * Returns a copy of this {@code ZonedDateTime} with the specified number of weeks subtracted.
  * <p>
  * This operates on the local time-line,
- * {@link java.time.LocalDateTime#minusWeeks(long) LocalDateTime#minusWeeks(long)} to the local date-time.
+ * {@link java.time.LocalDateTime#minusWeeks(long) subtracting weeks} to the local date-time.
  * This is then converted back to a {@code ZonedDateTime}, using the zone ID
  * to obtain the offset.
  * <p>
@@ -1527,7 +1527,7 @@ public java.time.ZonedDateTime minusWeeks(long weeks) { throw new RuntimeExcepti
  * Returns a copy of this {@code ZonedDateTime} with the specified number of days subtracted.
  * <p>
  * This operates on the local time-line,
- * {@link java.time.LocalDateTime#minusDays(long) LocalDateTime#minusDays(long)} to the local date-time.
+ * {@link java.time.LocalDateTime#minusDays(long) subtracting days} to the local date-time.
  * This is then converted back to a {@code ZonedDateTime}, using the zone ID
  * to obtain the offset.
  * <p>

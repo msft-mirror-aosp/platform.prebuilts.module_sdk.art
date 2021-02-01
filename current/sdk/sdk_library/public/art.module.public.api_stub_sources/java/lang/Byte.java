@@ -41,7 +41,7 @@ package java.lang;
  * @author  Nakul Saraiya
  * @author  Joseph D. Darcy
  * @see     java.lang.Number
- * @since   JDK1.1
+ * @since   1.1
  */
 
 @SuppressWarnings({"unchecked", "deprecation", "all"})
@@ -53,8 +53,14 @@ public final class Byte extends java.lang.Number implements java.lang.Comparable
  *
  * @param value     the value to be represented by the
  *                  {@code Byte}.
+ *
+ * @deprecated
+ * It is rarely appropriate to use this constructor. The static factory
+ * {@link #valueOf(byte)} is generally a better choice, as it is
+ * likely to yield significantly better space and time performance.
  */
 
+@Deprecated
 public Byte(byte value) { throw new RuntimeException("Stub!"); }
 
 /**
@@ -66,12 +72,18 @@ public Byte(byte value) { throw new RuntimeException("Stub!"); }
  *
  * @param s         the {@code String} to be converted to a
  *                  {@code Byte}
- * @throws           java.lang.NumberFormatException If the {@code String}
+ * @throws          java.lang.NumberFormatException if the {@code String}
  *                  does not contain a parsable {@code byte}.
- * @see        java.lang.Byte#parseByte(java.lang.String, int)
+ *
+ * @deprecated
+ * It is rarely appropriate to use this constructor.
+ * Use {@link #parseByte(java.lang.String)} to convert a string to a
+ * {@code byte} primitive, or use {@link #valueOf(java.lang.String)}
+ * to convert a string to a {@code Byte} object.
  */
 
-public Byte(@android.annotation.NonNull java.lang.String s) throws java.lang.NumberFormatException { throw new RuntimeException("Stub!"); }
+@Deprecated
+public Byte(@androidx.annotation.RecentlyNonNull java.lang.String s) throws java.lang.NumberFormatException { throw new RuntimeException("Stub!"); }
 
 /**
  * Returns a new {@code String} object representing the
@@ -82,7 +94,7 @@ public Byte(@android.annotation.NonNull java.lang.String s) throws java.lang.Num
  * @see java.lang.Integer#toString(int)
  */
 
-@android.annotation.NonNull
+@androidx.annotation.RecentlyNonNull
 public static java.lang.String toString(byte b) { throw new RuntimeException("Stub!"); }
 
 /**
@@ -99,7 +111,7 @@ public static java.lang.String toString(byte b) { throw new RuntimeException("St
  * @since  1.5
  */
 
-@android.annotation.NonNull
+@androidx.annotation.RecentlyNonNull
 public static java.lang.Byte valueOf(byte b) { throw new RuntimeException("Stub!"); }
 
 /**
@@ -144,7 +156,7 @@ public static java.lang.Byte valueOf(byte b) { throw new RuntimeException("Stub!
  *                  not contain a parsable {@code byte}.
  */
 
-public static byte parseByte(@android.annotation.NonNull java.lang.String s, int radix) throws java.lang.NumberFormatException { throw new RuntimeException("Stub!"); }
+public static byte parseByte(@androidx.annotation.RecentlyNonNull java.lang.String s, int radix) throws java.lang.NumberFormatException { throw new RuntimeException("Stub!"); }
 
 /**
  * Parses the string argument as a signed decimal {@code
@@ -165,7 +177,7 @@ public static byte parseByte(@android.annotation.NonNull java.lang.String s, int
  *                  contain a parsable {@code byte}.
  */
 
-public static byte parseByte(@android.annotation.NonNull java.lang.String s) throws java.lang.NumberFormatException { throw new RuntimeException("Stub!"); }
+public static byte parseByte(@androidx.annotation.RecentlyNonNull java.lang.String s) throws java.lang.NumberFormatException { throw new RuntimeException("Stub!"); }
 
 /**
  * Returns a {@code Byte} object holding the value
@@ -192,8 +204,8 @@ public static byte parseByte(@android.annotation.NonNull java.lang.String s) thr
  *                  not contain a parsable {@code byte}.
  */
 
-@android.annotation.NonNull
-public static java.lang.Byte valueOf(@android.annotation.NonNull java.lang.String s, int radix) throws java.lang.NumberFormatException { throw new RuntimeException("Stub!"); }
+@androidx.annotation.RecentlyNonNull
+public static java.lang.Byte valueOf(@androidx.annotation.RecentlyNonNull java.lang.String s, int radix) throws java.lang.NumberFormatException { throw new RuntimeException("Stub!"); }
 
 /**
  * Returns a {@code Byte} object holding the value
@@ -218,8 +230,8 @@ public static java.lang.Byte valueOf(@android.annotation.NonNull java.lang.Strin
  *                  not contain a parsable {@code byte}.
  */
 
-@android.annotation.NonNull
-public static java.lang.Byte valueOf(@android.annotation.NonNull java.lang.String s) throws java.lang.NumberFormatException { throw new RuntimeException("Stub!"); }
+@androidx.annotation.RecentlyNonNull
+public static java.lang.Byte valueOf(@androidx.annotation.RecentlyNonNull java.lang.String s) throws java.lang.NumberFormatException { throw new RuntimeException("Stub!"); }
 
 /**
  * Decodes a {@code String} into a {@code Byte}.
@@ -264,8 +276,8 @@ public static java.lang.Byte valueOf(@android.annotation.NonNull java.lang.Strin
  * @see java.lang.Byte#parseByte(java.lang.String, int)
  */
 
-@android.annotation.NonNull
-public static java.lang.Byte decode(@android.annotation.NonNull java.lang.String nm) throws java.lang.NumberFormatException { throw new RuntimeException("Stub!"); }
+@androidx.annotation.RecentlyNonNull
+public static java.lang.Byte decode(@androidx.annotation.RecentlyNonNull java.lang.String nm) throws java.lang.NumberFormatException { throw new RuntimeException("Stub!"); }
 
 /**
  * Returns the value of this {@code Byte} as a
@@ -325,7 +337,7 @@ public double doubleValue() { throw new RuntimeException("Stub!"); }
  *          base&nbsp;10.
  */
 
-@android.annotation.NonNull
+@androidx.annotation.RecentlyNonNull
 public java.lang.String toString() { throw new RuntimeException("Stub!"); }
 
 /**
@@ -359,7 +371,7 @@ public static int hashCode(byte value) { throw new RuntimeException("Stub!"); }
  *                  {@code false} otherwise.
  */
 
-public boolean equals(@android.annotation.Nullable java.lang.Object obj) { throw new RuntimeException("Stub!"); }
+public boolean equals(@androidx.annotation.RecentlyNullable java.lang.Object obj) { throw new RuntimeException("Stub!"); }
 
 /**
  * Compares two {@code Byte} objects numerically.
@@ -375,7 +387,7 @@ public boolean equals(@android.annotation.Nullable java.lang.Object obj) { throw
  * @since   1.2
  */
 
-public int compareTo(@android.annotation.NonNull java.lang.Byte anotherByte) { throw new RuntimeException("Stub!"); }
+public int compareTo(@androidx.annotation.RecentlyNonNull java.lang.Byte anotherByte) { throw new RuntimeException("Stub!"); }
 
 /**
  * Compares two {@code byte} values numerically.
@@ -393,6 +405,21 @@ public int compareTo(@android.annotation.NonNull java.lang.Byte anotherByte) { t
  */
 
 public static int compare(byte x, byte y) { throw new RuntimeException("Stub!"); }
+
+/**
+ * Compares two {@code byte} values numerically treating the values
+ * as unsigned.
+ *
+ * @param  x the first {@code byte} to compare
+ * @param  y the second {@code byte} to compare
+ * @return the value {@code 0} if {@code x == y}; a value less
+ *         than {@code 0} if {@code x < y} as unsigned values; and
+ *         a value greater than {@code 0} if {@code x > y} as
+ *         unsigned values
+ * @since 9
+ */
+
+public static int compareUnsigned(byte x, byte y) { throw new RuntimeException("Stub!"); }
 
 /**
  * Converts the argument to an {@code int} by an unsigned

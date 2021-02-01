@@ -76,7 +76,7 @@ protected AbstractCollection() { throw new RuntimeException("Stub!"); }
  * @return an iterator over the elements contained in this collection
  */
 
-@android.annotation.NonNull
+@androidx.annotation.RecentlyNonNull
 public abstract java.util.Iterator<E> iterator();
 
 public abstract int size();
@@ -99,7 +99,7 @@ public boolean isEmpty() { throw new RuntimeException("Stub!"); }
  * @throws java.lang.NullPointerException {@inheritDoc}
  */
 
-public boolean contains(@android.annotation.Nullable java.lang.Object o) { throw new RuntimeException("Stub!"); }
+public boolean contains(@androidx.annotation.RecentlyNullable java.lang.Object o) { throw new RuntimeException("Stub!"); }
 
 /**
  * {@inheritDoc}
@@ -124,7 +124,7 @@ public boolean contains(@android.annotation.Nullable java.lang.Object o) { throw
  * }</pre>
  */
 
-@android.annotation.NonNull
+@androidx.annotation.RecentlyNonNull
 public java.lang.Object[] toArray() { throw new RuntimeException("Stub!"); }
 
 /**
@@ -155,8 +155,8 @@ public java.lang.Object[] toArray() { throw new RuntimeException("Stub!"); }
  * @throws java.lang.NullPointerException {@inheritDoc}
  */
 
-@android.annotation.NonNull
-public <T> T[] toArray(@android.annotation.NonNull T[] a) { throw new RuntimeException("Stub!"); }
+@androidx.annotation.RecentlyNonNull
+public <T> T[] toArray(@androidx.annotation.RecentlyNonNull T[] a) { throw new RuntimeException("Stub!"); }
 
 /**
  * {@inheritDoc}
@@ -190,7 +190,7 @@ public boolean add(E e) { throw new RuntimeException("Stub!"); }
  * @throws java.lang.NullPointerException          {@inheritDoc}
  */
 
-public boolean remove(@android.annotation.Nullable java.lang.Object o) { throw new RuntimeException("Stub!"); }
+public boolean remove(@androidx.annotation.RecentlyNullable java.lang.Object o) { throw new RuntimeException("Stub!"); }
 
 /**
  * {@inheritDoc}
@@ -205,7 +205,7 @@ public boolean remove(@android.annotation.Nullable java.lang.Object o) { throw n
  * @see #contains(Object)
  */
 
-public boolean containsAll(@android.annotation.NonNull java.util.Collection<?> c) { throw new RuntimeException("Stub!"); }
+public boolean containsAll(@androidx.annotation.RecentlyNonNull java.util.Collection<?> c) { throw new RuntimeException("Stub!"); }
 
 /**
  * {@inheritDoc}
@@ -226,7 +226,7 @@ public boolean containsAll(@android.annotation.NonNull java.util.Collection<?> c
  * @see #add(Object)
  */
 
-public boolean addAll(@android.annotation.NonNull java.util.Collection<? extends E> c) { throw new RuntimeException("Stub!"); }
+public boolean addAll(@androidx.annotation.RecentlyNonNull java.util.Collection<? extends E> c) { throw new RuntimeException("Stub!"); }
 
 /**
  * {@inheritDoc}
@@ -250,7 +250,7 @@ public boolean addAll(@android.annotation.NonNull java.util.Collection<? extends
  * @see #contains(Object)
  */
 
-public boolean removeAll(@android.annotation.NonNull java.util.Collection<?> c) { throw new RuntimeException("Stub!"); }
+public boolean removeAll(@androidx.annotation.RecentlyNonNull java.util.Collection<?> c) { throw new RuntimeException("Stub!"); }
 
 /**
  * {@inheritDoc}
@@ -274,7 +274,7 @@ public boolean removeAll(@android.annotation.NonNull java.util.Collection<?> c) 
  * @see #contains(Object)
  */
 
-public boolean retainAll(@android.annotation.NonNull java.util.Collection<?> c) { throw new RuntimeException("Stub!"); }
+public boolean retainAll(@androidx.annotation.RecentlyNonNull java.util.Collection<?> c) { throw new RuntimeException("Stub!"); }
 
 /**
  * {@inheritDoc}
@@ -305,7 +305,7 @@ public void clear() { throw new RuntimeException("Stub!"); }
  * @return a string representation of this collection
  */
 
-@android.annotation.NonNull
+@androidx.annotation.RecentlyNonNull
 public java.lang.String toString() { throw new RuntimeException("Stub!"); }
 }
 

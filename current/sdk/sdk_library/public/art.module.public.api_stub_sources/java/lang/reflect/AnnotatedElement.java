@@ -250,7 +250,7 @@ public interface AnnotatedElement {
  * @since 1.5
  */
 
-public default boolean isAnnotationPresent(@android.annotation.NonNull java.lang.Class<? extends java.lang.annotation.Annotation> annotationClass) { throw new RuntimeException("Stub!"); }
+public default boolean isAnnotationPresent(@androidx.annotation.RecentlyNonNull java.lang.Class<? extends java.lang.annotation.Annotation> annotationClass) { throw new RuntimeException("Stub!"); }
 
 /**
  * Returns this element's annotation for the specified type if
@@ -265,8 +265,8 @@ public default boolean isAnnotationPresent(@android.annotation.NonNull java.lang
  * @since 1.5
  */
 
-@android.annotation.Nullable
-public <T extends java.lang.annotation.Annotation> T getAnnotation(@android.annotation.NonNull java.lang.Class<T> annotationClass);
+@androidx.annotation.RecentlyNullable
+public <T extends java.lang.annotation.Annotation> T getAnnotation(@androidx.annotation.RecentlyNonNull java.lang.Class<T> annotationClass);
 
 /**
  * Returns annotations that are <em>present</em> on this element.
@@ -281,7 +281,7 @@ public <T extends java.lang.annotation.Annotation> T getAnnotation(@android.anno
  * @since 1.5
  */
 
-@android.annotation.NonNull
+@androidx.annotation.RecentlyNonNull
 public java.lang.annotation.Annotation[] getAnnotations();
 
 /**
@@ -320,7 +320,7 @@ public java.lang.annotation.Annotation[] getAnnotations();
  * @since 1.8
  */
 
-public default <T extends java.lang.annotation.Annotation> T[] getAnnotationsByType(@android.annotation.NonNull java.lang.Class<T> annotationClass) { throw new RuntimeException("Stub!"); }
+public default <T extends java.lang.annotation.Annotation> T[] getAnnotationsByType(@androidx.annotation.RecentlyNonNull java.lang.Class<T> annotationClass) { throw new RuntimeException("Stub!"); }
 
 /**
  * Returns this element's annotation for the specified type if
@@ -343,8 +343,8 @@ public default <T extends java.lang.annotation.Annotation> T[] getAnnotationsByT
  * @since 1.8
  */
 
-@android.annotation.Nullable
-public default <T extends java.lang.annotation.Annotation> T getDeclaredAnnotation(@android.annotation.NonNull java.lang.Class<T> annotationClass) { throw new RuntimeException("Stub!"); }
+@androidx.annotation.RecentlyNullable
+public default <T extends java.lang.annotation.Annotation> T getDeclaredAnnotation(@androidx.annotation.RecentlyNonNull java.lang.Class<T> annotationClass) { throw new RuntimeException("Stub!"); }
 
 /**
  * Returns this element's annotation(s) for the specified type if
@@ -391,7 +391,7 @@ public default <T extends java.lang.annotation.Annotation> T getDeclaredAnnotati
  * @since 1.8
  */
 
-public default <T extends java.lang.annotation.Annotation> T[] getDeclaredAnnotationsByType(@android.annotation.NonNull java.lang.Class<T> annotationClass) { throw new RuntimeException("Stub!"); }
+public default <T extends java.lang.annotation.Annotation> T[] getDeclaredAnnotationsByType(@androidx.annotation.RecentlyNonNull java.lang.Class<T> annotationClass) { throw new RuntimeException("Stub!"); }
 
 /**
  * Returns annotations that are <em>directly present</em> on this element.
@@ -407,7 +407,7 @@ public default <T extends java.lang.annotation.Annotation> T[] getDeclaredAnnota
  * @since 1.5
  */
 
-@android.annotation.NonNull
+@androidx.annotation.RecentlyNonNull
 public java.lang.annotation.Annotation[] getDeclaredAnnotations();
 }
 

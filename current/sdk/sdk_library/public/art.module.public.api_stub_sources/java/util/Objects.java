@@ -62,7 +62,7 @@ private Objects() { throw new RuntimeException("Stub!"); }
  * Consequently, if both arguments are {@code null}, {@code true}
  * is returned and if exactly one argument is {@code null}, {@code
  * false} is returned.  Otherwise, equality is determined by using
- * the {@link java.lang.Object#equals Object#equals} method of the first
+ * the {@link java.lang.Object#equals equals} method of the first
  * argument.
  *
  * @param a an object
@@ -72,16 +72,15 @@ private Objects() { throw new RuntimeException("Stub!"); }
  * @see java.lang.Object#equals(Object)
  */
 
-public static boolean equals(@android.annotation.Nullable java.lang.Object a, @android.annotation.Nullable java.lang.Object b) { throw new RuntimeException("Stub!"); }
+public static boolean equals(@androidx.annotation.RecentlyNullable java.lang.Object a, @androidx.annotation.RecentlyNullable java.lang.Object b) { throw new RuntimeException("Stub!"); }
 
 /**
  * Returns {@code true} if the arguments are deeply equal to each other
  * and {@code false} otherwise.
  *
  * Two {@code null} values are deeply equal.  If both arguments are
- * arrays, the algorithm in {@link java.util.Arrays#deepEquals(java.lang.Object[],java.lang.Object[]) Arrays#deepEquals(Object[],
- * Object[])} is used to determine equality.
- * Otherwise, equality is determined by using the {@link java.lang.Object#equals Object#equals} method of the first argument.
+ * arrays, the algorithm in {@link java.util.Arrays#deepEquals(java.lang.Object[],java.lang.Object[]) Arrays.deepEquals} is used to determine equality.
+ * Otherwise, equality is determined by using the {@link java.lang.Object#equals equals} method of the first argument.
  *
  * @param a an object
  * @param b an object to be compared with {@code a} for deep equality
@@ -91,7 +90,7 @@ public static boolean equals(@android.annotation.Nullable java.lang.Object a, @a
  * @see java.util.Objects#equals(Object, Object)
  */
 
-public static boolean deepEquals(@android.annotation.Nullable java.lang.Object a, @android.annotation.Nullable java.lang.Object b) { throw new RuntimeException("Stub!"); }
+public static boolean deepEquals(@androidx.annotation.RecentlyNullable java.lang.Object a, @androidx.annotation.RecentlyNullable java.lang.Object b) { throw new RuntimeException("Stub!"); }
 
 /**
  * Returns the hash code of a non-{@code null} argument and 0 for
@@ -103,14 +102,14 @@ public static boolean deepEquals(@android.annotation.Nullable java.lang.Object a
  * @see java.lang.Object#hashCode
  */
 
-public static int hashCode(@android.annotation.Nullable java.lang.Object o) { throw new RuntimeException("Stub!"); }
+public static int hashCode(@androidx.annotation.RecentlyNullable java.lang.Object o) { throw new RuntimeException("Stub!"); }
 
 /**
  * Generates a hash code for a sequence of input values. The hash
  * code is generated as if all the input values were placed into an
- * array, and that array were hashed by calling {@link java.util.Arrays#hashCode(java.lang.Object[]) Arrays#hashCode(Object[])}.
+ * array, and that array were hashed by calling {@link java.util.Arrays#hashCode(java.lang.Object[])  }.
  *
- * <p>This method is useful for implementing {@link java.lang.Object#hashCode() Object#hashCode()} on objects containing multiple fields. For
+ * <p>This method is useful for implementing {@link java.lang.Object#hashCode()  } on objects containing multiple fields. For
  * example, if an object that has three fields, {@code x}, {@code
  * y}, and {@code z}, one could write:
  *
@@ -130,7 +129,7 @@ public static int hashCode(@android.annotation.Nullable java.lang.Object o) { th
  * @see List#hashCode
  */
 
-public static int hash(@android.annotation.Nullable java.lang.Object... values) { throw new RuntimeException("Stub!"); }
+public static int hash(@androidx.annotation.RecentlyNullable java.lang.Object... values) { throw new RuntimeException("Stub!"); }
 
 /**
  * Returns the result of calling {@code toString} for a non-{@code
@@ -143,8 +142,8 @@ public static int hash(@android.annotation.Nullable java.lang.Object... values) 
  * @see java.lang.String#valueOf(Object)
  */
 
-@android.annotation.NonNull
-public static java.lang.String toString(@android.annotation.Nullable java.lang.Object o) { throw new RuntimeException("Stub!"); }
+@androidx.annotation.RecentlyNonNull
+public static java.lang.String toString(@androidx.annotation.RecentlyNullable java.lang.Object o) { throw new RuntimeException("Stub!"); }
 
 /**
  * Returns the result of calling {@code toString} on the first
@@ -160,8 +159,8 @@ public static java.lang.String toString(@android.annotation.Nullable java.lang.O
  * @see java.util.Objects#toString(Object)
  */
 
-@android.annotation.NonNull
-public static java.lang.String toString(@android.annotation.Nullable java.lang.Object o, @android.annotation.NonNull java.lang.String nullDefault) { throw new RuntimeException("Stub!"); }
+@androidx.annotation.RecentlyNonNull
+public static java.lang.String toString(@androidx.annotation.RecentlyNullable java.lang.Object o, @androidx.annotation.RecentlyNonNull java.lang.String nullDefault) { throw new RuntimeException("Stub!"); }
 
 /**
  * Returns 0 if the arguments are identical and {@code
@@ -184,7 +183,7 @@ public static java.lang.String toString(@android.annotation.Nullable java.lang.O
  * @see java.util.Comparator
  */
 
-public static <T> int compare(T a, T b, @android.annotation.NonNull java.util.Comparator<? super T> c) { throw new RuntimeException("Stub!"); }
+public static <T> int compare(T a, T b, @androidx.annotation.RecentlyNonNull java.util.Comparator<? super T> c) { throw new RuntimeException("Stub!"); }
 
 /**
  * Checks that the specified object reference is not {@code null}. This
@@ -202,8 +201,8 @@ public static <T> int compare(T a, T b, @android.annotation.NonNull java.util.Co
  * @throws java.lang.NullPointerException if {@code obj} is {@code null}
  */
 
-@android.annotation.NonNull
-public static <T> T requireNonNull(@android.annotation.Nullable T obj) { throw new RuntimeException("Stub!"); }
+@androidx.annotation.RecentlyNonNull
+public static <T> T requireNonNull(@androidx.annotation.RecentlyNullable T obj) { throw new RuntimeException("Stub!"); }
 
 /**
  * Checks that the specified object reference is not {@code null} and
@@ -225,8 +224,8 @@ public static <T> T requireNonNull(@android.annotation.Nullable T obj) { throw n
  * @throws java.lang.NullPointerException if {@code obj} is {@code null}
  */
 
-@android.annotation.NonNull
-public static <T> T requireNonNull(@android.annotation.Nullable T obj, @android.annotation.NonNull java.lang.String message) { throw new RuntimeException("Stub!"); }
+@androidx.annotation.RecentlyNonNull
+public static <T> T requireNonNull(@androidx.annotation.RecentlyNullable T obj, @androidx.annotation.RecentlyNonNull java.lang.String message) { throw new RuntimeException("Stub!"); }
 
 /**
  * Returns {@code true} if the provided reference is {@code null} otherwise
@@ -243,7 +242,7 @@ public static <T> T requireNonNull(@android.annotation.Nullable T obj, @android.
  * @since 1.8
  */
 
-public static boolean isNull(@android.annotation.Nullable java.lang.Object obj) { throw new RuntimeException("Stub!"); }
+public static boolean isNull(@androidx.annotation.RecentlyNullable java.lang.Object obj) { throw new RuntimeException("Stub!"); }
 
 /**
  * Returns {@code true} if the provided reference is non-{@code null}
@@ -260,7 +259,7 @@ public static boolean isNull(@android.annotation.Nullable java.lang.Object obj) 
  * @since 1.8
  */
 
-public static boolean nonNull(@android.annotation.Nullable java.lang.Object obj) { throw new RuntimeException("Stub!"); }
+public static boolean nonNull(@androidx.annotation.RecentlyNullable java.lang.Object obj) { throw new RuntimeException("Stub!"); }
 
 /**
  * Returns the first argument if it is non-{@code null} and
@@ -277,8 +276,8 @@ public static boolean nonNull(@android.annotation.Nullable java.lang.Object obj)
  * @since 9
  */
 
-@android.annotation.NonNull
-public static <T> T requireNonNullElse(@android.annotation.Nullable T obj, @android.annotation.NonNull T defaultObj) { throw new RuntimeException("Stub!"); }
+@androidx.annotation.RecentlyNonNull
+public static <T> T requireNonNullElse(@androidx.annotation.RecentlyNullable T obj, @androidx.annotation.RecentlyNonNull T defaultObj) { throw new RuntimeException("Stub!"); }
 
 /**
  * Returns the first argument if it is non-{@code null} and otherwise
@@ -296,8 +295,8 @@ public static <T> T requireNonNullElse(@android.annotation.Nullable T obj, @andr
  * @since 9
  */
 
-@android.annotation.NonNull
-public static <T> T requireNonNullElseGet(@android.annotation.Nullable T obj, @android.annotation.NonNull java.util.function.Supplier<? extends T> supplier) { throw new RuntimeException("Stub!"); }
+@androidx.annotation.RecentlyNonNull
+public static <T> T requireNonNullElseGet(@androidx.annotation.RecentlyNullable T obj, @androidx.annotation.RecentlyNonNull java.util.function.Supplier<? extends T> supplier) { throw new RuntimeException("Stub!"); }
 
 /**
  * Checks that the specified object reference is not {@code null} and
@@ -320,8 +319,8 @@ public static <T> T requireNonNullElseGet(@android.annotation.Nullable T obj, @a
  * @since 1.8
  */
 
-@android.annotation.NonNull
-public static <T> T requireNonNull(@android.annotation.Nullable T obj, @android.annotation.NonNull java.util.function.Supplier<java.lang.String> messageSupplier) { throw new RuntimeException("Stub!"); }
+@androidx.annotation.RecentlyNonNull
+public static <T> T requireNonNull(@androidx.annotation.RecentlyNullable T obj, @androidx.annotation.RecentlyNonNull java.util.function.Supplier<java.lang.String> messageSupplier) { throw new RuntimeException("Stub!"); }
 
 /**
  * Checks if the {@code index} is within the bounds of the range from

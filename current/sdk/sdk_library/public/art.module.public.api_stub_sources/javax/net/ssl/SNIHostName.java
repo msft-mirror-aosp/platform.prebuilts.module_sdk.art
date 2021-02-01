@@ -32,7 +32,7 @@ import java.util.regex.Pattern;
 
 /**
  * Instances of this class represent a server name of type
- * {@link javax.net.ssl.StandardConstants#SNI_HOST_NAME StandardConstants#SNI_HOST_NAME} in a Server Name
+ * {@link javax.net.ssl.StandardConstants#SNI_HOST_NAME host_name} in a Server Name
  * Indication (SNI) extension.
  * <P>
  * As described in section 3, "Server Name Indication", of

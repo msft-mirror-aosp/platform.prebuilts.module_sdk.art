@@ -127,7 +127,7 @@ public String() { throw new RuntimeException("Stub!"); }
  *         A {@code String}
  */
 
-public String(@android.annotation.NonNull java.lang.String original) { throw new RuntimeException("Stub!"); }
+public String(@androidx.annotation.RecentlyNonNull java.lang.String original) { throw new RuntimeException("Stub!"); }
 
 /**
  * Allocates a new {@code String} so that it represents the sequence of
@@ -307,7 +307,7 @@ public String(byte[] ascii, int hibyte) { throw new RuntimeException("Stub!"); }
  * @since  JDK1.1
  */
 
-public String(byte[] bytes, int offset, int length, @android.annotation.NonNull java.lang.String charsetName) throws java.io.UnsupportedEncodingException { throw new RuntimeException("Stub!"); }
+public String(byte[] bytes, int offset, int length, @androidx.annotation.RecentlyNonNull java.lang.String charsetName) throws java.io.UnsupportedEncodingException { throw new RuntimeException("Stub!"); }
 
 /**
  * Constructs a new {@code String} by decoding the specified subarray of
@@ -340,7 +340,7 @@ public String(byte[] bytes, int offset, int length, @android.annotation.NonNull 
  * @since  1.6
  */
 
-public String(byte[] bytes, int offset, int length, @android.annotation.NonNull java.nio.charset.Charset charset) { throw new RuntimeException("Stub!"); }
+public String(byte[] bytes, int offset, int length, @androidx.annotation.RecentlyNonNull java.nio.charset.Charset charset) { throw new RuntimeException("Stub!"); }
 
 /**
  * Constructs a new {@code String} by decoding the specified array of bytes
@@ -366,7 +366,7 @@ public String(byte[] bytes, int offset, int length, @android.annotation.NonNull 
  * @since  JDK1.1
  */
 
-public String(byte[] bytes, @android.annotation.NonNull java.lang.String charsetName) throws java.io.UnsupportedEncodingException { throw new RuntimeException("Stub!"); }
+public String(byte[] bytes, @androidx.annotation.RecentlyNonNull java.lang.String charsetName) throws java.io.UnsupportedEncodingException { throw new RuntimeException("Stub!"); }
 
 /**
  * Constructs a new {@code String} by decoding the specified array of
@@ -389,7 +389,7 @@ public String(byte[] bytes, @android.annotation.NonNull java.lang.String charset
  * @since  1.6
  */
 
-public String(byte[] bytes, @android.annotation.NonNull java.nio.charset.Charset charset) { throw new RuntimeException("Stub!"); }
+public String(byte[] bytes, @androidx.annotation.RecentlyNonNull java.nio.charset.Charset charset) { throw new RuntimeException("Stub!"); }
 
 /**
  * Constructs a new {@code String} by decoding the specified subarray of
@@ -449,7 +449,7 @@ public String(byte[] bytes) { throw new RuntimeException("Stub!"); }
  *         A {@code StringBuffer}
  */
 
-public String(@android.annotation.NonNull java.lang.StringBuffer buffer) { throw new RuntimeException("Stub!"); }
+public String(@androidx.annotation.RecentlyNonNull java.lang.StringBuffer buffer) { throw new RuntimeException("Stub!"); }
 
 /**
  * Allocates a new string that contains the sequence of characters
@@ -467,7 +467,7 @@ public String(@android.annotation.NonNull java.lang.StringBuffer buffer) { throw
  * @since  1.5
  */
 
-public String(@android.annotation.NonNull java.lang.StringBuilder builder) { throw new RuntimeException("Stub!"); }
+public String(@androidx.annotation.RecentlyNonNull java.lang.StringBuilder builder) { throw new RuntimeException("Stub!"); }
 
 /**
  * Returns the length of this string.
@@ -540,7 +540,7 @@ public int codePointAt(int index) { throw new RuntimeException("Stub!"); }
 /**
  * Returns the character (Unicode code point) before the specified
  * index. The index refers to {@code char} values
- * (Unicode code units) and ranges from {@code 1} to {@link java.lang.CharSequence#length() CharSequence#length()}.
+ * (Unicode code units) and ranges from {@code 1} to {@link java.lang.CharSequence#length() length}.
  *
  * <p> If the {@code char} value at {@code (index - 1)}
  * is in the low-surrogate range, {@code (index - 2)} is not
@@ -709,7 +709,7 @@ public void getBytes(int srcBegin, int srcEnd, byte[] dst, int dstBegin) { throw
  * @since  JDK1.1
  */
 
-public byte[] getBytes(@android.annotation.NonNull java.lang.String charsetName) throws java.io.UnsupportedEncodingException { throw new RuntimeException("Stub!"); }
+public byte[] getBytes(@androidx.annotation.RecentlyNonNull java.lang.String charsetName) throws java.io.UnsupportedEncodingException { throw new RuntimeException("Stub!"); }
 
 /**
  * Encodes this {@code String} into a sequence of bytes using the given
@@ -730,7 +730,7 @@ public byte[] getBytes(@android.annotation.NonNull java.lang.String charsetName)
  * @since  1.6
  */
 
-public byte[] getBytes(@android.annotation.NonNull java.nio.charset.Charset charset) { throw new RuntimeException("Stub!"); }
+public byte[] getBytes(@androidx.annotation.RecentlyNonNull java.nio.charset.Charset charset) { throw new RuntimeException("Stub!"); }
 
 /**
  * Encodes this {@code String} into a sequence of bytes using the
@@ -764,7 +764,7 @@ public byte[] getBytes() { throw new RuntimeException("Stub!"); }
  * @see  #equalsIgnoreCase(String)
  */
 
-public boolean equals(@android.annotation.Nullable java.lang.Object anObject) { throw new RuntimeException("Stub!"); }
+public boolean equals(@androidx.annotation.RecentlyNullable java.lang.Object anObject) { throw new RuntimeException("Stub!"); }
 
 /**
  * Compares this string to the specified {@code StringBuffer}.  The result
@@ -782,7 +782,7 @@ public boolean equals(@android.annotation.Nullable java.lang.Object anObject) { 
  * @since  1.4
  */
 
-public boolean contentEquals(@android.annotation.NonNull java.lang.StringBuffer sb) { throw new RuntimeException("Stub!"); }
+public boolean contentEquals(@androidx.annotation.RecentlyNonNull java.lang.StringBuffer sb) { throw new RuntimeException("Stub!"); }
 
 /**
  * Compares this string to the specified {@code CharSequence}.  The
@@ -801,7 +801,7 @@ public boolean contentEquals(@android.annotation.NonNull java.lang.StringBuffer 
  * @since  1.5
  */
 
-public boolean contentEquals(@android.annotation.NonNull java.lang.CharSequence cs) { throw new RuntimeException("Stub!"); }
+public boolean contentEquals(@androidx.annotation.RecentlyNonNull java.lang.CharSequence cs) { throw new RuntimeException("Stub!"); }
 
 /**
  * Compares this {@code String} to another {@code String}, ignoring case
@@ -832,7 +832,7 @@ public boolean contentEquals(@android.annotation.NonNull java.lang.CharSequence 
  * @see  #equals(Object)
  */
 
-public boolean equalsIgnoreCase(@android.annotation.Nullable java.lang.String anotherString) { throw new RuntimeException("Stub!"); }
+public boolean equalsIgnoreCase(@androidx.annotation.RecentlyNullable java.lang.String anotherString) { throw new RuntimeException("Stub!"); }
 
 /**
  * Compares two strings lexicographically.
@@ -876,7 +876,7 @@ public boolean equalsIgnoreCase(@android.annotation.Nullable java.lang.String an
  *          lexicographically greater than the string argument.
  */
 
-public native int compareTo(@android.annotation.NonNull java.lang.String anotherString);
+public native int compareTo(@androidx.annotation.RecentlyNonNull java.lang.String anotherString);
 
 /**
  * Compares two strings lexicographically, ignoring case
@@ -899,7 +899,7 @@ public native int compareTo(@android.annotation.NonNull java.lang.String another
  * @since   1.2
  */
 
-public int compareToIgnoreCase(@android.annotation.NonNull java.lang.String str) { throw new RuntimeException("Stub!"); }
+public int compareToIgnoreCase(@androidx.annotation.RecentlyNonNull java.lang.String str) { throw new RuntimeException("Stub!"); }
 
 /**
  * Tests if two string regions are equal.
@@ -934,7 +934,7 @@ public int compareToIgnoreCase(@android.annotation.NonNull java.lang.String str)
  *          {@code false} otherwise.
  */
 
-public boolean regionMatches(int toffset, @android.annotation.NonNull java.lang.String other, int ooffset, int len) { throw new RuntimeException("Stub!"); }
+public boolean regionMatches(int toffset, @androidx.annotation.RecentlyNonNull java.lang.String other, int ooffset, int len) { throw new RuntimeException("Stub!"); }
 
 /**
  * Tests if two string regions are equal.
@@ -987,7 +987,7 @@ public boolean regionMatches(int toffset, @android.annotation.NonNull java.lang.
  *          argument.
  */
 
-public boolean regionMatches(boolean ignoreCase, int toffset, @android.annotation.NonNull java.lang.String other, int ooffset, int len) { throw new RuntimeException("Stub!"); }
+public boolean regionMatches(boolean ignoreCase, int toffset, @androidx.annotation.RecentlyNonNull java.lang.String other, int ooffset, int len) { throw new RuntimeException("Stub!"); }
 
 /**
  * Tests if the substring of this string beginning at the
@@ -1007,7 +1007,7 @@ public boolean regionMatches(boolean ignoreCase, int toffset, @android.annotatio
  *          </pre>
  */
 
-public boolean startsWith(@android.annotation.NonNull java.lang.String prefix, int toffset) { throw new RuntimeException("Stub!"); }
+public boolean startsWith(@androidx.annotation.RecentlyNonNull java.lang.String prefix, int toffset) { throw new RuntimeException("Stub!"); }
 
 /**
  * Tests if this string starts with the specified prefix.
@@ -1023,7 +1023,7 @@ public boolean startsWith(@android.annotation.NonNull java.lang.String prefix, i
  * @since   1. 0
  */
 
-public boolean startsWith(@android.annotation.NonNull java.lang.String prefix) { throw new RuntimeException("Stub!"); }
+public boolean startsWith(@androidx.annotation.RecentlyNonNull java.lang.String prefix) { throw new RuntimeException("Stub!"); }
 
 /**
  * Tests if this string ends with the specified suffix.
@@ -1037,7 +1037,7 @@ public boolean startsWith(@android.annotation.NonNull java.lang.String prefix) {
  *          as determined by the {@link #equals(java.lang.Object)} method.
  */
 
-public boolean endsWith(@android.annotation.NonNull java.lang.String suffix) { throw new RuntimeException("Stub!"); }
+public boolean endsWith(@androidx.annotation.RecentlyNonNull java.lang.String suffix) { throw new RuntimeException("Stub!"); }
 
 /**
  * Returns a hash code for this string. The hash code for a
@@ -1202,7 +1202,7 @@ public int lastIndexOf(int ch, int fromIndex) { throw new RuntimeException("Stub
  *          or {@code -1} if there is no such occurrence.
  */
 
-public int indexOf(@android.annotation.NonNull java.lang.String str) { throw new RuntimeException("Stub!"); }
+public int indexOf(@androidx.annotation.RecentlyNonNull java.lang.String str) { throw new RuntimeException("Stub!"); }
 
 /**
  * Returns the index within this string of the first occurrence of the
@@ -1221,7 +1221,7 @@ public int indexOf(@android.annotation.NonNull java.lang.String str) { throw new
  *          or {@code -1} if there is no such occurrence.
  */
 
-public int indexOf(@android.annotation.NonNull java.lang.String str, int fromIndex) { throw new RuntimeException("Stub!"); }
+public int indexOf(@androidx.annotation.RecentlyNonNull java.lang.String str, int fromIndex) { throw new RuntimeException("Stub!"); }
 
 /**
  * Returns the index within this string of the last occurrence of the
@@ -1239,7 +1239,7 @@ public int indexOf(@android.annotation.NonNull java.lang.String str, int fromInd
  *          or {@code -1} if there is no such occurrence.
  */
 
-public int lastIndexOf(@android.annotation.NonNull java.lang.String str) { throw new RuntimeException("Stub!"); }
+public int lastIndexOf(@androidx.annotation.RecentlyNonNull java.lang.String str) { throw new RuntimeException("Stub!"); }
 
 /**
  * Returns the index within this string of the last occurrence of the
@@ -1258,7 +1258,7 @@ public int lastIndexOf(@android.annotation.NonNull java.lang.String str) { throw
  *          or {@code -1} if there is no such occurrence.
  */
 
-public int lastIndexOf(@android.annotation.NonNull java.lang.String str, int fromIndex) { throw new RuntimeException("Stub!"); }
+public int lastIndexOf(@androidx.annotation.RecentlyNonNull java.lang.String str, int fromIndex) { throw new RuntimeException("Stub!"); }
 
 /**
  * Returns a string that is a substring of this string. The
@@ -1278,7 +1278,7 @@ public int lastIndexOf(@android.annotation.NonNull java.lang.String str, int fro
  *             length of this {@code String} object.
  */
 
-@android.annotation.NonNull
+@androidx.annotation.RecentlyNonNull
 public java.lang.String substring(int beginIndex) { throw new RuntimeException("Stub!"); }
 
 /**
@@ -1304,7 +1304,7 @@ public java.lang.String substring(int beginIndex) { throw new RuntimeException("
  *             {@code endIndex}.
  */
 
-@android.annotation.NonNull
+@androidx.annotation.RecentlyNonNull
 public java.lang.String substring(int beginIndex, int endIndex) { throw new RuntimeException("Stub!"); }
 
 /**
@@ -1337,7 +1337,7 @@ public java.lang.String substring(int beginIndex, int endIndex) { throw new Runt
  * @spec JSR-51
  */
 
-@android.annotation.NonNull
+@androidx.annotation.RecentlyNonNull
 public java.lang.CharSequence subSequence(int beginIndex, int endIndex) { throw new RuntimeException("Stub!"); }
 
 /**
@@ -1361,8 +1361,8 @@ public java.lang.CharSequence subSequence(int beginIndex, int endIndex) { throw 
  *          characters followed by the string argument's characters.
  */
 
-@android.annotation.NonNull
-public native java.lang.String concat(@android.annotation.NonNull java.lang.String str);
+@androidx.annotation.RecentlyNonNull
+public native java.lang.String concat(@androidx.annotation.RecentlyNonNull java.lang.String str);
 
 /**
  * Returns a string resulting from replacing all occurrences of
@@ -1394,7 +1394,7 @@ public native java.lang.String concat(@android.annotation.NonNull java.lang.Stri
  *          occurrence of {@code oldChar} with {@code newChar}.
  */
 
-@android.annotation.NonNull
+@androidx.annotation.RecentlyNonNull
 public java.lang.String replace(char oldChar, char newChar) { throw new RuntimeException("Stub!"); }
 
 /**
@@ -1425,7 +1425,7 @@ public java.lang.String replace(char oldChar, char newChar) { throw new RuntimeE
  * @spec JSR-51
  */
 
-public boolean matches(@android.annotation.NonNull java.lang.String regex) { throw new RuntimeException("Stub!"); }
+public boolean matches(@androidx.annotation.RecentlyNonNull java.lang.String regex) { throw new RuntimeException("Stub!"); }
 
 /**
  * Returns true if and only if this string contains the specified
@@ -1436,7 +1436,7 @@ public boolean matches(@android.annotation.NonNull java.lang.String regex) { thr
  * @since 1.5
  */
 
-public boolean contains(@android.annotation.NonNull java.lang.CharSequence s) { throw new RuntimeException("Stub!"); }
+public boolean contains(@androidx.annotation.RecentlyNonNull java.lang.CharSequence s) { throw new RuntimeException("Stub!"); }
 
 /**
  * Replaces the first substring of this string that matches the given <a
@@ -1480,8 +1480,8 @@ public boolean contains(@android.annotation.NonNull java.lang.CharSequence s) { 
  * @spec JSR-51
  */
 
-@android.annotation.NonNull
-public java.lang.String replaceFirst(@android.annotation.NonNull java.lang.String regex, @android.annotation.NonNull java.lang.String replacement) { throw new RuntimeException("Stub!"); }
+@androidx.annotation.RecentlyNonNull
+public java.lang.String replaceFirst(@androidx.annotation.RecentlyNonNull java.lang.String regex, @androidx.annotation.RecentlyNonNull java.lang.String replacement) { throw new RuntimeException("Stub!"); }
 
 /**
  * Replaces each substring of this string that matches the given <a
@@ -1525,8 +1525,8 @@ public java.lang.String replaceFirst(@android.annotation.NonNull java.lang.Strin
  * @spec JSR-51
  */
 
-@android.annotation.NonNull
-public java.lang.String replaceAll(@android.annotation.NonNull java.lang.String regex, @android.annotation.NonNull java.lang.String replacement) { throw new RuntimeException("Stub!"); }
+@androidx.annotation.RecentlyNonNull
+public java.lang.String replaceAll(@androidx.annotation.RecentlyNonNull java.lang.String regex, @androidx.annotation.RecentlyNonNull java.lang.String replacement) { throw new RuntimeException("Stub!"); }
 
 /**
  * Replaces each substring of this string that matches the literal target
@@ -1541,8 +1541,8 @@ public java.lang.String replaceAll(@android.annotation.NonNull java.lang.String 
  * @since 1.5
  */
 
-@android.annotation.NonNull
-public java.lang.String replace(@android.annotation.NonNull java.lang.CharSequence target, @android.annotation.NonNull java.lang.CharSequence replacement) { throw new RuntimeException("Stub!"); }
+@androidx.annotation.RecentlyNonNull
+public java.lang.String replace(@androidx.annotation.RecentlyNonNull java.lang.CharSequence target, @androidx.annotation.RecentlyNonNull java.lang.CharSequence replacement) { throw new RuntimeException("Stub!"); }
 
 /**
  * Splits this string around matches of the given
@@ -1631,8 +1631,8 @@ public java.lang.String replace(@android.annotation.NonNull java.lang.CharSequen
  * @spec JSR-51
  */
 
-@android.annotation.NonNull
-public java.lang.String[] split(@android.annotation.NonNull java.lang.String regex, int limit) { throw new RuntimeException("Stub!"); }
+@androidx.annotation.RecentlyNonNull
+public java.lang.String[] split(@androidx.annotation.RecentlyNonNull java.lang.String regex, int limit) { throw new RuntimeException("Stub!"); }
 
 /**
  * Splits this string around matches of the given <a
@@ -1673,8 +1673,8 @@ public java.lang.String[] split(@android.annotation.NonNull java.lang.String reg
  * @spec JSR-51
  */
 
-@android.annotation.NonNull
-public java.lang.String[] split(@android.annotation.NonNull java.lang.String regex) { throw new RuntimeException("Stub!"); }
+@androidx.annotation.RecentlyNonNull
+public java.lang.String[] split(@androidx.annotation.RecentlyNonNull java.lang.String regex) { throw new RuntimeException("Stub!"); }
 
 /**
  * Returns a new String composed of copies of the
@@ -1702,8 +1702,8 @@ public java.lang.String[] split(@android.annotation.NonNull java.lang.String reg
  * @since 1.8
  */
 
-@android.annotation.NonNull
-public static java.lang.String join(@android.annotation.NonNull java.lang.CharSequence delimiter, @android.annotation.Nullable java.lang.CharSequence... elements) { throw new RuntimeException("Stub!"); }
+@androidx.annotation.RecentlyNonNull
+public static java.lang.String join(@androidx.annotation.RecentlyNonNull java.lang.CharSequence delimiter, @androidx.annotation.RecentlyNullable java.lang.CharSequence... elements) { throw new RuntimeException("Stub!"); }
 
 /**
  * Returns a new {@code String} composed of copies of the
@@ -1743,8 +1743,8 @@ public static java.lang.String join(@android.annotation.NonNull java.lang.CharSe
  * @since 1.8
  */
 
-@android.annotation.NonNull
-public static java.lang.String join(@android.annotation.NonNull java.lang.CharSequence delimiter, @android.annotation.NonNull java.lang.Iterable<? extends java.lang.CharSequence> elements) { throw new RuntimeException("Stub!"); }
+@androidx.annotation.RecentlyNonNull
+public static java.lang.String join(@androidx.annotation.RecentlyNonNull java.lang.CharSequence delimiter, @androidx.annotation.RecentlyNonNull java.lang.Iterable<? extends java.lang.CharSequence> elements) { throw new RuntimeException("Stub!"); }
 
 /**
  * Converts all of the characters in this {@code String} to lower
@@ -1799,8 +1799,8 @@ public static java.lang.String join(@android.annotation.NonNull java.lang.CharSe
  * @since   1.1
  */
 
-@android.annotation.NonNull
-public java.lang.String toLowerCase(@android.annotation.NonNull java.util.Locale locale) { throw new RuntimeException("Stub!"); }
+@androidx.annotation.RecentlyNonNull
+public java.lang.String toLowerCase(@androidx.annotation.RecentlyNonNull java.util.Locale locale) { throw new RuntimeException("Stub!"); }
 
 /**
  * Converts all of the characters in this {@code String} to lower
@@ -1822,7 +1822,7 @@ public java.lang.String toLowerCase(@android.annotation.NonNull java.util.Locale
  * @see     java.lang.String#toLowerCase(Locale)
  */
 
-@android.annotation.NonNull
+@androidx.annotation.RecentlyNonNull
 public java.lang.String toLowerCase() { throw new RuntimeException("Stub!"); }
 
 /**
@@ -1874,8 +1874,8 @@ public java.lang.String toLowerCase() { throw new RuntimeException("Stub!"); }
  * @since   1.1
  */
 
-@android.annotation.NonNull
-public java.lang.String toUpperCase(@android.annotation.NonNull java.util.Locale locale) { throw new RuntimeException("Stub!"); }
+@androidx.annotation.RecentlyNonNull
+public java.lang.String toUpperCase(@androidx.annotation.RecentlyNonNull java.util.Locale locale) { throw new RuntimeException("Stub!"); }
 
 /**
  * Converts all of the characters in this {@code String} to upper
@@ -1897,7 +1897,7 @@ public java.lang.String toUpperCase(@android.annotation.NonNull java.util.Locale
  * @see     java.lang.String#toUpperCase(Locale)
  */
 
-@android.annotation.NonNull
+@androidx.annotation.RecentlyNonNull
 public java.lang.String toUpperCase() { throw new RuntimeException("Stub!"); }
 
 /**
@@ -1932,7 +1932,7 @@ public java.lang.String toUpperCase() { throw new RuntimeException("Stub!"); }
  *          trailing white space.
  */
 
-@android.annotation.NonNull
+@androidx.annotation.RecentlyNonNull
 public java.lang.String trim() { throw new RuntimeException("Stub!"); }
 
 /**
@@ -1941,7 +1941,7 @@ public java.lang.String trim() { throw new RuntimeException("Stub!"); }
  * @return  the string itself.
  */
 
-@android.annotation.NonNull
+@androidx.annotation.RecentlyNonNull
 public java.lang.String toString() { throw new RuntimeException("Stub!"); }
 
 /**
@@ -1990,8 +1990,8 @@ public native char[] toCharArray();
  * @since  1.5
  */
 
-@android.annotation.NonNull
-public static java.lang.String format(@android.annotation.NonNull java.lang.String format, @android.annotation.NonNull java.lang.Object... args) { throw new RuntimeException("Stub!"); }
+@androidx.annotation.RecentlyNonNull
+public static java.lang.String format(@androidx.annotation.RecentlyNonNull java.lang.String format, @androidx.annotation.RecentlyNonNull java.lang.Object... args) { throw new RuntimeException("Stub!"); }
 
 /**
  * Returns a formatted string using the specified locale, format string,
@@ -2031,8 +2031,8 @@ public static java.lang.String format(@android.annotation.NonNull java.lang.Stri
  * @since  1.5
  */
 
-@android.annotation.NonNull
-public static java.lang.String format(@android.annotation.NonNull java.util.Locale l, @android.annotation.NonNull java.lang.String format, @android.annotation.NonNull java.lang.Object... args) { throw new RuntimeException("Stub!"); }
+@androidx.annotation.RecentlyNonNull
+public static java.lang.String format(@androidx.annotation.RecentlyNonNull java.util.Locale l, @androidx.annotation.RecentlyNonNull java.lang.String format, @androidx.annotation.RecentlyNonNull java.lang.Object... args) { throw new RuntimeException("Stub!"); }
 
 /**
  * Returns the string representation of the {@code Object} argument.
@@ -2044,8 +2044,8 @@ public static java.lang.String format(@android.annotation.NonNull java.util.Loca
  * @see     java.lang.Object#toString()
  */
 
-@android.annotation.NonNull
-public static java.lang.String valueOf(@android.annotation.Nullable java.lang.Object obj) { throw new RuntimeException("Stub!"); }
+@androidx.annotation.RecentlyNonNull
+public static java.lang.String valueOf(@androidx.annotation.RecentlyNullable java.lang.Object obj) { throw new RuntimeException("Stub!"); }
 
 /**
  * Returns the string representation of the {@code char} array
@@ -2058,7 +2058,7 @@ public static java.lang.String valueOf(@android.annotation.Nullable java.lang.Ob
  *          character array.
  */
 
-@android.annotation.NonNull
+@androidx.annotation.RecentlyNonNull
 public static java.lang.String valueOf(char[] data) { throw new RuntimeException("Stub!"); }
 
 /**
@@ -2082,7 +2082,7 @@ public static java.lang.String valueOf(char[] data) { throw new RuntimeException
  *          {@code data.length}.
  */
 
-@android.annotation.NonNull
+@androidx.annotation.RecentlyNonNull
 public static java.lang.String valueOf(char[] data, int offset, int count) { throw new RuntimeException("Stub!"); }
 
 /**
@@ -2099,7 +2099,7 @@ public static java.lang.String valueOf(char[] data, int offset, int count) { thr
  *          {@code data.length}.
  */
 
-@android.annotation.NonNull
+@androidx.annotation.RecentlyNonNull
 public static java.lang.String copyValueOf(char[] data, int offset, int count) { throw new RuntimeException("Stub!"); }
 
 /**
@@ -2110,7 +2110,7 @@ public static java.lang.String copyValueOf(char[] data, int offset, int count) {
  *          character array.
  */
 
-@android.annotation.NonNull
+@androidx.annotation.RecentlyNonNull
 public static java.lang.String copyValueOf(char[] data) { throw new RuntimeException("Stub!"); }
 
 /**
@@ -2122,7 +2122,7 @@ public static java.lang.String copyValueOf(char[] data) { throw new RuntimeExcep
  *          {@code "false"} is returned.
  */
 
-@android.annotation.NonNull
+@androidx.annotation.RecentlyNonNull
 public static java.lang.String valueOf(boolean b) { throw new RuntimeException("Stub!"); }
 
 /**
@@ -2134,7 +2134,7 @@ public static java.lang.String valueOf(boolean b) { throw new RuntimeException("
  *          as its single character the argument {@code c}.
  */
 
-@android.annotation.NonNull
+@androidx.annotation.RecentlyNonNull
 public static java.lang.String valueOf(char c) { throw new RuntimeException("Stub!"); }
 
 /**
@@ -2148,7 +2148,7 @@ public static java.lang.String valueOf(char c) { throw new RuntimeException("Stu
  * @see     java.lang.Integer#toString(int, int)
  */
 
-@android.annotation.NonNull
+@androidx.annotation.RecentlyNonNull
 public static java.lang.String valueOf(int i) { throw new RuntimeException("Stub!"); }
 
 /**
@@ -2162,7 +2162,7 @@ public static java.lang.String valueOf(int i) { throw new RuntimeException("Stub
  * @see     java.lang.Long#toString(long)
  */
 
-@android.annotation.NonNull
+@androidx.annotation.RecentlyNonNull
 public static java.lang.String valueOf(long l) { throw new RuntimeException("Stub!"); }
 
 /**
@@ -2176,7 +2176,7 @@ public static java.lang.String valueOf(long l) { throw new RuntimeException("Stu
  * @see     java.lang.Float#toString(float)
  */
 
-@android.annotation.NonNull
+@androidx.annotation.RecentlyNonNull
 public static java.lang.String valueOf(float f) { throw new RuntimeException("Stub!"); }
 
 /**
@@ -2190,7 +2190,7 @@ public static java.lang.String valueOf(float f) { throw new RuntimeException("St
  * @see     java.lang.Double#toString(double)
  */
 
-@android.annotation.NonNull
+@androidx.annotation.RecentlyNonNull
 public static java.lang.String valueOf(double d) { throw new RuntimeException("Stub!"); }
 
 /**
@@ -2217,7 +2217,7 @@ public static java.lang.String valueOf(double d) { throw new RuntimeException("S
  *          guaranteed to be from a pool of unique strings.
  */
 
-@android.annotation.NonNull
+@androidx.annotation.RecentlyNonNull
 public native java.lang.String intern();
 
 /**

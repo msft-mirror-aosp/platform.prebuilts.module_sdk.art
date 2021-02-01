@@ -36,7 +36,7 @@ package java.security.cert;
  * interface.
  * <p>
  * Typically, a {@code CertStoreParameters} object is passed as a parameter
- * to one of the {@link java.security.cert.CertStore#getInstance CertStore#getInstance} methods.
+ * to one of the {@link java.security.cert.CertStore#getInstance CertStore.getInstance} methods.
  * The {@code getInstance} method returns a {@code CertStore} that
  * is used for retrieving {@code Certificate}s and {@code CRL}s. The
  * {@code CertStore} that is returned is initialized with the specified

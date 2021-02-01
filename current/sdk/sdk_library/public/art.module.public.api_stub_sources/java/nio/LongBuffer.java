@@ -687,7 +687,7 @@ public int compareTo(java.nio.LongBuffer that) { throw new RuntimeException("Stu
  * Retrieves this buffer's byte order.
  *
  * <p> The byte order of a long buffer created by allocation or by
- * wrapping an existing <tt>long</tt> array is the {@link java.nio.ByteOrder#nativeOrder ByteOrder#nativeOrder} of the underlying
+ * wrapping an existing <tt>long</tt> array is the {@link java.nio.ByteOrder#nativeOrder native order} of the underlying
  * hardware.  The byte order of a long buffer created as a <a
  * href="ByteBuffer.html#views">view</a> of a byte buffer is that of the
  * byte buffer at the moment that the view is created.  </p>

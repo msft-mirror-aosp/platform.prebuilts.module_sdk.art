@@ -74,13 +74,13 @@ import java.nio.MappedByteBuffer;
  *   into a very fast transfer directly to or from the filesystem cache.
  *   </p></li>
  *
- *   <li><p> A region of a file may be {@link java.nio.channels.FileLock FileLock}
+ *   <li><p> A region of a file may be {@link java.nio.channels.FileLock <i>locked</i>}
  *   against access by other programs.  </p></li>
  *
  * </ul>
  *
  * <p> File channels are safe for use by multiple concurrent threads.  The
- * {@link java.nio.channels.Channel#close Channel#close} method may be invoked at any time, as specified
+ * {@link java.nio.channels.Channel#close close} method may be invoked at any time, as specified
  * by the {@link java.nio.channels.Channel Channel} interface.  Only one operation that involves the
  * channel's position or can change its file's size may be in progress at any
  * given time; attempts to initiate a second such operation while the first is
@@ -163,8 +163,8 @@ protected FileChannel() { throw new RuntimeException("Stub!"); }
  * Opens or creates a file, returning a file channel to access the file.
  *
  * <p> The {@code options} parameter determines how the file is opened.
- * The {@link java.nio.file.StandardOpenOption#READ StandardOpenOption#READ} and {@link java.nio.file.StandardOpenOption#WRITE StandardOpenOption#WRITE} options determine if the file should be opened for reading and/or
- * writing. If neither option (or the {@link java.nio.file.StandardOpenOption#APPEND StandardOpenOption#APPEND}
+ * The {@link java.nio.file.StandardOpenOption#READ READ} and {@link java.nio.file.StandardOpenOption#WRITE  WRITE} options determine if the file should be opened for reading and/or
+ * writing. If neither option (or the {@link java.nio.file.StandardOpenOption#APPEND APPEND}
  * option) is contained in the array then the file is opened for reading.
  * By default reading or writing commences at the beginning of the file.
  *
@@ -174,7 +174,7 @@ protected FileChannel() { throw new RuntimeException("Stub!"); }
  * <table border=1 cellpadding=5 summary="">
  * <tr> <th>Option</th> <th>Description</th> </tr>
  * <tr>
- *   <td> {@link java.nio.file.StandardOpenOption#APPEND StandardOpenOption#APPEND} </td>
+ *   <td> {@link java.nio.file.StandardOpenOption#APPEND APPEND} </td>
  *   <td> If this option is present then the file is opened for writing and
  *     each invocation of the channel's {@code write} method first advances
  *     the position to the end of the file and then writes the requested
@@ -184,13 +184,13 @@ protected FileChannel() { throw new RuntimeException("Stub!"); }
  *     with the {@code READ} or {@code TRUNCATE_EXISTING} options. </td>
  * </tr>
  * <tr>
- *   <td> {@link java.nio.file.StandardOpenOption#TRUNCATE_EXISTING StandardOpenOption#TRUNCATE_EXISTING} </td>
+ *   <td> {@link java.nio.file.StandardOpenOption#TRUNCATE_EXISTING TRUNCATE_EXISTING} </td>
  *   <td> If this option is present then the existing file is truncated to
  *   a size of 0 bytes. This option is ignored when the file is opened only
  *   for reading. </td>
  * </tr>
  * <tr>
- *   <td> {@link java.nio.file.StandardOpenOption#CREATE_NEW StandardOpenOption#CREATE_NEW} </td>
+ *   <td> {@link java.nio.file.StandardOpenOption#CREATE_NEW CREATE_NEW} </td>
  *   <td> If this option is present then a new file is created, failing if
  *   the file already exists. When creating a file the check for the
  *   existence of the file and the creation of the file if it does not exist
@@ -198,7 +198,7 @@ protected FileChannel() { throw new RuntimeException("Stub!"); }
  *   ignored when the file is opened only for reading. </td>
  * </tr>
  * <tr>
- *   <td > {@link java.nio.file.StandardOpenOption#CREATE StandardOpenOption#CREATE} </td>
+ *   <td > {@link java.nio.file.StandardOpenOption#CREATE CREATE} </td>
  *   <td> If this option is present then an existing file is opened if it
  *   exists, otherwise a new file is created. When creating a file the check
  *   for the existence of the file and the creation of the file if it does
@@ -207,7 +207,7 @@ protected FileChannel() { throw new RuntimeException("Stub!"); }
  *   the file is opened only for reading. </td>
  * </tr>
  * <tr>
- *   <td > {@link java.nio.file.StandardOpenOption#DELETE_ON_CLOSE StandardOpenOption#DELETE_ON_CLOSE} </td>
+ *   <td > {@link java.nio.file.StandardOpenOption#DELETE_ON_CLOSE DELETE_ON_CLOSE} </td>
  *   <td> When this option is present then the implementation makes a
  *   <em>best effort</em> attempt to delete the file when closed by the
  *   the {@link #close close} method. If the {@code close} method is not
@@ -215,20 +215,20 @@ protected FileChannel() { throw new RuntimeException("Stub!"); }
  *   when the Java virtual machine terminates. </td>
  * </tr>
  * <tr>
- *   <td>{@link java.nio.file.StandardOpenOption#SPARSE StandardOpenOption#SPARSE} </td>
+ *   <td>{@link java.nio.file.StandardOpenOption#SPARSE SPARSE} </td>
  *   <td> When creating a new file this option is a <em>hint</em> that the
  *   new file will be sparse. This option is ignored when not creating
  *   a new file. </td>
  * </tr>
  * <tr>
- *   <td> {@link java.nio.file.StandardOpenOption#SYNC StandardOpenOption#SYNC} </td>
+ *   <td> {@link java.nio.file.StandardOpenOption#SYNC SYNC} </td>
  *   <td> Requires that every update to the file's content or metadata be
  *   written synchronously to the underlying storage device. (see <a
  *   href="../file/package-summary.html#integrity"> Synchronized I/O file
  *   integrity</a>). </td>
  * </tr>
  * <tr>
- *   <td> {@link java.nio.file.StandardOpenOption#DSYNC StandardOpenOption#DSYNC} </td>
+ *   <td> {@link java.nio.file.StandardOpenOption#DSYNC DSYNC} </td>
  *   <td> Requires that every update to the file's content be written
  *   synchronously to the underlying storage device. (see <a
  *   href="../file/package-summary.html#integrity"> Synchronized I/O file
@@ -238,9 +238,9 @@ protected FileChannel() { throw new RuntimeException("Stub!"); }
  *
  * <p> An implementation may also support additional options.
  *
- * <p> The {@code attrs} parameter is an optional array of file {@link java.nio.file.attribute.FileAttribute FileAttribute} to set atomically when creating the file.
+ * <p> The {@code attrs} parameter is an optional array of file {@link java.nio.file.attribute.FileAttribute file-attributes} to set atomically when creating the file.
  *
- * <p> The new channel is created by invoking the {@link java.nio.file.spi.FileSystemProvider#newFileChannel FileSystemProvider#newFileChannel} method on the
+ * <p> The new channel is created by invoking the {@link java.nio.file.spi.FileSystemProvider#newFileChannel newFileChannel} method on the
  * provider that created the {@code Path}.
  *
  * @param   path
@@ -265,8 +265,8 @@ protected FileChannel() { throw new RuntimeException("Stub!"); }
  * @throws  java.lang.SecurityException
  *          If a security manager is installed and it denies an
  *          unspecified permission required by the implementation.
- *          In the case of the default provider, the {@link java.lang.SecurityManager#checkRead(java.lang.String) SecurityManager#checkRead(String)} method is invoked to check
- *          read access if the file is opened for reading. The {@link java.lang.SecurityManager#checkWrite(java.lang.String) SecurityManager#checkWrite(String)} method is invoked to check
+ *          In the case of the default provider, the {@link java.lang.SecurityManager#checkRead(java.lang.String)           } method is invoked to check
+ *          read access if the file is opened for reading. The {@link java.lang.SecurityManager#checkWrite(java.lang.String)           } method is invoked to check
  *          write access if the file is opened for writing
  *
  * @since   1.7
@@ -303,8 +303,8 @@ public static java.nio.channels.FileChannel open(java.nio.file.Path path, java.u
  * @throws  java.lang.SecurityException
  *          If a security manager is installed and it denies an
  *          unspecified permission required by the implementation.
- *          In the case of the default provider, the {@link java.lang.SecurityManager#checkRead(java.lang.String) SecurityManager#checkRead(String)} method is invoked to check
- *          read access if the file is opened for reading. The {@link java.lang.SecurityManager#checkWrite(java.lang.String) SecurityManager#checkWrite(String)} method is invoked to check
+ *          In the case of the default provider, the {@link java.lang.SecurityManager#checkRead(java.lang.String)           } method is invoked to check
+ *          read access if the file is opened for reading. The {@link java.lang.SecurityManager#checkWrite(java.lang.String)           } method is invoked to check
  *          write access if the file is opened for writing
  *
  * @since   1.7
@@ -507,8 +507,8 @@ public abstract java.nio.channels.FileChannel truncate(long size) throws java.io
  * <p> This method is only guaranteed to force changes that were made to
  * this channel's file via the methods defined in this class.  It may or
  * may not force changes that were made by modifying the content of a
- * {@link java.nio.MappedByteBuffer MappedByteBuffer} obtained by
- * invoking the {@link #map map} method.  Invoking the {@link java.nio.MappedByteBuffer#force MappedByteBuffer#force} method of the mapped byte buffer will
+ * {@link java.nio.MappedByteBuffer <i>mapped byte buffer</i>} obtained by
+ * invoking the {@link #map map} method.  Invoking the {@link java.nio.MappedByteBuffer#force force} method of the mapped byte buffer will
  * force changes made to the buffer's content to be written.  </p>
  *
  * @param   metaData
@@ -760,16 +760,16 @@ public abstract int write(java.nio.ByteBuffer src, long position) throws java.io
  *
  *   <li><p> <i>Read-only:</i> Any attempt to modify the resulting buffer
  *   will cause a {@link java.nio.ReadOnlyBufferException} to be thrown.
- *   ({@link java.nio.channels.FileChannel.MapMode#READ_ONLY MapMode#READ_ONLY}) </p></li>
+ *   ({@link java.nio.channels.FileChannel.MapMode#READ_ONLY MapMode.READ_ONLY}) </p></li>
  *
  *   <li><p> <i>Read/write:</i> Changes made to the resulting buffer will
  *   eventually be propagated to the file; they may or may not be made
- *   visible to other programs that have mapped the same file.  ({@link java.nio.channels.FileChannel.MapMode#READ_WRITE MapMode#READ_WRITE}) </p></li>
+ *   visible to other programs that have mapped the same file.  ({@link java.nio.channels.FileChannel.MapMode#READ_WRITE MapMode.READ_WRITE}) </p></li>
  *
  *   <li><p> <i>Private:</i> Changes made to the resulting buffer will not
  *   be propagated to the file and will not be visible to other programs
  *   that have mapped the same file; instead, they will cause private
- *   copies of the modified portions of the buffer to be created.  ({@link java.nio.channels.FileChannel.MapMode#PRIVATE MapMode#PRIVATE}) </p></li>
+ *   copies of the modified portions of the buffer to be created.  ({@link java.nio.channels.FileChannel.MapMode#PRIVATE MapMode.PRIVATE}) </p></li>
  *
  * </ul>
  *
@@ -777,7 +777,7 @@ public abstract int write(java.nio.ByteBuffer src, long position) throws java.io
  * reading; for a read/write or private mapping, this channel must have
  * been opened for both reading and writing.
  *
- * <p> The {@link java.nio.MappedByteBuffer MappedByteBuffer}
+ * <p> The {@link java.nio.MappedByteBuffer <i>mapped byte buffer</i>}
  * returned by this method will have a position of zero and a limit and
  * capacity of <tt>size</tt>; its mark will be undefined.  The buffer and
  * the mapping that it represents will remain valid until the buffer itself
@@ -802,7 +802,7 @@ public abstract int write(java.nio.ByteBuffer src, long position) throws java.io
  * large files into memory.  </p>
  *
  * @param  mode
- *         One of the constants {@link java.nio.channels.FileChannel.MapMode#READ_ONLY MapMode#READ_ONLY}, {@link java.nio.channels.FileChannel.MapMode#READ_WRITE MapMode#READ_WRITE}, or {@link java.nio.channels.FileChannel.MapMode#PRIVATE MapMode#PRIVATE} defined in the {@link java.nio.channels.FileChannel.MapMode MapMode} class, according to
+ *         One of the constants {@link java.nio.channels.FileChannel.MapMode#READ_ONLY READ_ONLY}, {@link java.nio.channels.FileChannel.MapMode#READ_WRITE READ_WRITE}, or {@link java.nio.channels.FileChannel.MapMode#PRIVATE          PRIVATE} defined in the {@link java.nio.channels.FileChannel.MapMode MapMode} class, according to
  *         whether the file is to be mapped read-only, read/write, or
  *         privately (copy-on-write), respectively
  *
@@ -817,12 +817,12 @@ public abstract int write(java.nio.ByteBuffer src, long position) throws java.io
  * @return  The mapped byte buffer
  *
  * @throws java.nio.channels.NonReadableChannelException
- *         If the <tt>mode</tt> is {@link java.nio.channels.FileChannel.MapMode#READ_ONLY MapMode#READ_ONLY} but
+ *         If the <tt>mode</tt> is {@link java.nio.channels.FileChannel.MapMode#READ_ONLY READ_ONLY} but
  *         this channel was not opened for reading
  *
  * @throws java.nio.channels.NonWritableChannelException
- *         If the <tt>mode</tt> is {@link java.nio.channels.FileChannel.MapMode#READ_WRITE MapMode#READ_WRITE} or
- *         {@link java.nio.channels.FileChannel.MapMode#PRIVATE MapMode#PRIVATE} but this channel was not opened
+ *         If the <tt>mode</tt> is {@link java.nio.channels.FileChannel.MapMode#READ_WRITE READ_WRITE} or
+ *         {@link java.nio.channels.FileChannel.MapMode#PRIVATE PRIVATE} but this channel was not opened
  *         for both reading and writing
  *
  * @throws java.lang.IllegalArgumentException
@@ -861,12 +861,12 @@ public abstract java.nio.MappedByteBuffer map(java.nio.channels.FileChannel.MapM
  * If a file is expected to grow in size and a lock on the entire file is
  * required then a region starting at zero, and no smaller than the
  * expected maximum size of the file, should be locked.  The zero-argument
- * {@link #lock()} method simply locks a region of size {@link java.lang.Long#MAX_VALUE Long#MAX_VALUE}.
+ * {@link #lock()} method simply locks a region of size {@link java.lang.Long#MAX_VALUE  }.
  *
  * <p> Some operating systems do not support shared locks, in which case a
  * request for a shared lock is automatically converted into a request for
  * an exclusive lock.  Whether the newly-acquired lock is shared or
- * exclusive may be tested by invoking the resulting lock object's {@link java.nio.channels.FileLock#isShared() FileLock#isShared()} method.
+ * exclusive may be tested by invoking the resulting lock object's {@link java.nio.channels.FileLock#isShared() isShared} method.
  *
  * <p> File locks are held on behalf of the entire Java virtual machine.
  * They are not suitable for controlling access to a file by multiple
@@ -985,12 +985,12 @@ public final java.nio.channels.FileLock lock() throws java.io.IOException { thro
  * If a file is expected to grow in size and a lock on the entire file is
  * required then a region starting at zero, and no smaller than the
  * expected maximum size of the file, should be locked.  The zero-argument
- * {@link #tryLock()} method simply locks a region of size {@link java.lang.Long#MAX_VALUE Long#MAX_VALUE}.
+ * {@link #tryLock()} method simply locks a region of size {@link java.lang.Long#MAX_VALUE  }.
  *
  * <p> Some operating systems do not support shared locks, in which case a
  * request for a shared lock is automatically converted into a request for
  * an exclusive lock.  Whether the newly-acquired lock is shared or
- * exclusive may be tested by invoking the resulting lock object's {@link java.nio.channels.FileLock#isShared() FileLock#isShared()} method.
+ * exclusive may be tested by invoking the resulting lock object's {@link java.nio.channels.FileLock#isShared() isShared} method.
  *
  * <p> File locks are held on behalf of the entire Java virtual machine.
  * They are not suitable for controlling access to a file by multiple

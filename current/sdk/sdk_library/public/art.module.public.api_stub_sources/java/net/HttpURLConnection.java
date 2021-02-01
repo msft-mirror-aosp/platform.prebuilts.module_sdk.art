@@ -37,7 +37,7 @@ import java.io.IOException;
  *
  * <p>Uses of this class follow a pattern:
  * <ol>
- *   <li>Obtain a new {@code HttpURLConnection} by calling {@link java.net.URL#openConnection() URL#openConnection()} and casting the result to
+ *   <li>Obtain a new {@code HttpURLConnection} by calling {@link java.net.URL#openConnection() URL.openConnection()} and casting the result to
  *       {@code HttpURLConnection}.
  *   <li>Prepare the request. The primary property of a request is its URI.
  *       Request headers may also include metadata such as credentials, preferred
@@ -199,7 +199,7 @@ import java.io.IOException;
  * }</pre>
  * By default, {@code CookieManager} accepts cookies from the <a
  * href="http://www.w3.org/Protocols/rfc2616/rfc2616-sec1.html">origin
- * server</a> only. Two other policies are included: {@link java.net.CookiePolicy#ACCEPT_ALL CookiePolicy#ACCEPT_ALL} and {@link java.net.CookiePolicy#ACCEPT_NONE CookiePolicy#ACCEPT_NONE}. Implement
+ * server</a> only. Two other policies are included: {@link java.net.CookiePolicy#ACCEPT_ALL  } and {@link java.net.CookiePolicy#ACCEPT_NONE CookiePolicy#ACCEPT_NONE}. Implement
  * {@link java.net.CookiePolicy CookiePolicy} to define a custom policy.
  *
  * <p>The default {@code CookieManager} keeps all accepted cookies in memory. It
@@ -233,7 +233,7 @@ import java.io.IOException;
  * <h3>Proxies</h3>
  * By default, this class will connect directly to the <a
  * href="http://www.w3.org/Protocols/rfc2616/rfc2616-sec1.html">origin
- * server</a>. It can also connect via an {@link java.net.Proxy.Type#HTTP Proxy.Type#HTTP} or {@link java.net.Proxy.Type#SOCKS Proxy.Type#SOCKS} proxy. To use a proxy, use {@link java.net.URL#openConnection(java.net.Proxy) URL#openConnection(Proxy)} when creating the
+ * server</a>. It can also connect via an {@link java.net.Proxy.Type#HTTP HTTP} or {@link java.net.Proxy.Type#SOCKS SOCKS} proxy. To use a proxy, use {@link java.net.URL#openConnection(java.net.Proxy) URL.openConnection(Proxy)} when creating the
  * connection.
  *
  * <h3>IPv6 Support</h3>

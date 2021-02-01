@@ -125,7 +125,7 @@ public static java.util.Comparator<java.time.OffsetDateTime> timeLineOrder() { t
 /**
  * Obtains the current date-time from the system clock in the default time-zone.
  * <p>
- * This will query the {@link java.time.Clock#systemDefaultZone() Clock#systemDefaultZone()} in the default
+ * This will query the {@link java.time.Clock#systemDefaultZone() system clock} in the default
  * time-zone to obtain the current date-time.
  * The offset will be calculated from the time-zone in the clock.
  * <p>
@@ -140,7 +140,7 @@ public static java.time.OffsetDateTime now() { throw new RuntimeException("Stub!
 /**
  * Obtains the current date-time from the system clock in the specified time-zone.
  * <p>
- * This will query the {@link java.time.Clock#system(java.time.ZoneId) Clock#system(ZoneId)} to obtain the current date-time.
+ * This will query the {@link java.time.Clock#system(java.time.ZoneId) system clock} to obtain the current date-time.
  * Specifying the time-zone avoids dependence on the default time-zone.
  * The offset will be calculated from the specified time-zone.
  * <p>
@@ -160,7 +160,7 @@ public static java.time.OffsetDateTime now(java.time.ZoneId zone) { throw new Ru
  * The offset will be calculated from the time-zone in the clock.
  * <p>
  * Using this method allows the use of an alternate clock for testing.
- * The alternate clock may be introduced using {@link java.time.Clock Clock}.
+ * The alternate clock may be introduced using {@link java.time.Clock dependency injection}.
  *
  * @param clock  the clock to use, not null
  * @return the current date-time, not null
@@ -569,7 +569,7 @@ public int getMonthValue() { throw new RuntimeException("Stub!"); }
  * This method returns the enum {@link java.time.Month Month} for the month.
  * This avoids confusion as to what {@code int} values mean.
  * If you need access to the primitive {@code int} value then the enum
- * provides the {@link java.time.Month#getValue() Month#getValue()}.
+ * provides the {@link java.time.Month#getValue() int value}.
  *
  * @return the month-of-year, not null
  * @see #getMonthValue()
@@ -603,7 +603,7 @@ public int getDayOfYear() { throw new RuntimeException("Stub!"); }
  * This method returns the enum {@link java.time.DayOfWeek DayOfWeek} for the day-of-week.
  * This avoids confusion as to what {@code int} values mean.
  * If you need access to the primitive {@code int} value then the enum
- * provides the {@link java.time.DayOfWeek#getValue() DayOfWeek#getValue()}.
+ * provides the {@link java.time.DayOfWeek#getValue() int value}.
  * <p>
  * Additional information can be obtained from the {@code DayOfWeek}.
  * This includes textual names of the values.
@@ -728,7 +728,7 @@ public java.time.OffsetDateTime with(java.time.temporal.TemporalAdjuster adjuste
  * then a {@code DateTimeException} will be thrown.
  * <p>
  * The other {@link #isSupported(java.time.temporal.TemporalField) supported fields} will behave as per
- * the matching method on {@link java.time.LocalDateTime#with(java.time.temporal.TemporalField,long) LocalDateTime#with(TemporalField, long)}.
+ * the matching method on {@link java.time.LocalDateTime#with(java.time.temporal.TemporalField,long) LocalDateTime}.
  * In this case, the offset is not part of the calculation and will be unchanged.
  * <p>
  * All other {@code ChronoField} instances will throw an {@code UnsupportedTemporalTypeException}.
@@ -873,13 +873,13 @@ public java.time.OffsetDateTime withNano(int nanoOfSecond) { throw new RuntimeEx
  * <p>
  * Truncation returns a copy of the original date-time with fields
  * smaller than the specified unit set to zero.
- * For example, truncating with the {@link java.time.temporal.ChronoUnit#MINUTES ChronoUnit#MINUTES} unit
+ * For example, truncating with the {@link java.time.temporal.ChronoUnit#MINUTES minutes} unit
  * will set the second-of-minute and nano-of-second field to zero.
  * <p>
- * The unit must have a {@linkplain java.time.temporal.TemporalUnit#getDuration() TemporalUnit#getDuration()}
+ * The unit must have a {@linkplain java.time.temporal.TemporalUnit#getDuration() duration}
  * that divides into the length of a standard day without remainder.
  * This includes all supplied time units on {@link java.time.temporal.ChronoUnit ChronoUnit} and
- * {@link java.time.temporal.ChronoUnit#DAYS ChronoUnit#DAYS}. Other units throw an exception.
+ * {@link java.time.temporal.ChronoUnit#DAYS DAYS}. Other units throw an exception.
  * <p>
  * The offset does not affect the calculation and will be the same in the result.
  * <p>
@@ -1450,7 +1450,7 @@ public java.time.Instant toInstant() { throw new RuntimeException("Stub!"); }
  * Converts this date-time to the number of seconds from the epoch of 1970-01-01T00:00:00Z.
  * <p>
  * This allows this date-time to be converted to a value of the
- * {@link java.time.temporal.ChronoField#INSTANT_SECONDS ChronoField#INSTANT_SECONDS} field. This is primarily
+ * {@link java.time.temporal.ChronoField#INSTANT_SECONDS epoch-seconds} field. This is primarily
  * intended for low-level conversions rather than general application usage.
  *
  * @return the number of seconds from the epoch of 1970-01-01T00:00:00Z

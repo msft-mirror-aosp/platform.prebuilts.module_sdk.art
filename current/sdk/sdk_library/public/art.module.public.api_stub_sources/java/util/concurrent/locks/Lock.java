@@ -191,7 +191,7 @@ public void lock();
 
 /**
  * Acquires the lock unless the current thread is
- * {@linkplain java.lang.Thread#interrupt Thread#interrupt}.
+ * {@linkplain java.lang.Thread#interrupt interrupted}.
  *
  * <p>Acquires the lock if it is available and returns immediately.
  *
@@ -201,14 +201,14 @@ public void lock();
  *
  * <ul>
  * <li>The lock is acquired by the current thread; or
- * <li>Some other thread {@linkplain java.lang.Thread#interrupt Thread#interrupt} the
+ * <li>Some other thread {@linkplain java.lang.Thread#interrupt interrupts} the
  * current thread, and interruption of lock acquisition is supported.
  * </ul>
  *
  * <p>If the current thread:
  * <ul>
  * <li>has its interrupted status set on entry to this method; or
- * <li>is {@linkplain java.lang.Thread#interrupt Thread#interrupt} while acquiring the
+ * <li>is {@linkplain java.lang.Thread#interrupt interrupted} while acquiring the
  * lock, and interruption of lock acquisition is supported,
  * </ul>
  * then {@link java.lang.InterruptedException InterruptedException} is thrown and the current thread's
@@ -270,7 +270,7 @@ public boolean tryLock();
 
 /**
  * Acquires the lock if it is free within the given waiting time and the
- * current thread has not been {@linkplain java.lang.Thread#interrupt Thread#interrupt}.
+ * current thread has not been {@linkplain java.lang.Thread#interrupt interrupted}.
  *
  * <p>If the lock is available this method returns immediately
  * with the value {@code true}.
@@ -279,7 +279,7 @@ public boolean tryLock();
  * purposes and lies dormant until one of three things happens:
  * <ul>
  * <li>The lock is acquired by the current thread; or
- * <li>Some other thread {@linkplain java.lang.Thread#interrupt Thread#interrupt} the
+ * <li>Some other thread {@linkplain java.lang.Thread#interrupt interrupts} the
  * current thread, and interruption of lock acquisition is supported; or
  * <li>The specified waiting time elapses
  * </ul>
@@ -289,7 +289,7 @@ public boolean tryLock();
  * <p>If the current thread:
  * <ul>
  * <li>has its interrupted status set on entry to this method; or
- * <li>is {@linkplain java.lang.Thread#interrupt Thread#interrupt} while acquiring
+ * <li>is {@linkplain java.lang.Thread#interrupt interrupted} while acquiring
  * the lock, and interruption of lock acquisition is supported,
  * </ul>
  * then {@link java.lang.InterruptedException InterruptedException} is thrown and the current thread's

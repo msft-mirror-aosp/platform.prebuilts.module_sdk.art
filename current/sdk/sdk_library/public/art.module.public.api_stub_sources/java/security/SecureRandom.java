@@ -107,7 +107,7 @@ public class SecureRandom extends java.util.Random {
  * then an implementation-specific default is returned.
  *
  * <p> Note that the list of registered providers may be retrieved via
- * the {@link java.security.Security#getProviders() Security#getProviders()} method.
+ * the {@link java.security.Security#getProviders() Security.getProviders()} method.
  *
  * <p> See the SecureRandom section in the <a href=
  * "{@docRoot}/../technotes/guides/security/StandardNames.html#SecureRandom">
@@ -138,7 +138,7 @@ public SecureRandom() { throw new RuntimeException("Stub!"); }
  * then an implementation-specific default is returned.
  *
  * <p> Note that the list of registered providers may be retrieved via
- * the {@link java.security.Security#getProviders() Security#getProviders()} method.
+ * the {@link java.security.Security#getProviders() Security.getProviders()} method.
  *
  * <p> See the SecureRandom section in the <a href=
  * "{@docRoot}/../technotes/guides/security/StandardNames.html#SecureRandom">
@@ -170,7 +170,7 @@ protected SecureRandom(java.security.SecureRandomSpi secureRandomSpi, java.secur
  * Provider that supports the specified algorithm is returned.
  *
  * <p> Note that the list of registered providers may be retrieved via
- * the {@link java.security.Security#getProviders() Security#getProviders()} method.
+ * the {@link java.security.Security#getProviders() Security.getProviders()} method.
  *
  * <p> The returned SecureRandom object has not been seeded.  To seed the
  * returned object, call the {@code setSeed} method.
@@ -208,7 +208,7 @@ public static java.security.SecureRandom getInstance(java.lang.String algorithm)
  * in the security provider list.
  *
  * <p> Note that the list of registered providers may be retrieved via
- * the {@link java.security.Security#getProviders() Security#getProviders()} method.
+ * the {@link java.security.Security#getProviders() Security.getProviders()} method.
  *
  * <p> The returned SecureRandom object has not been seeded.  To seed the
  * returned object, call the {@code setSeed} method.

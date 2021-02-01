@@ -43,7 +43,7 @@ private StandardWatchEventKinds() { throw new RuntimeException("Stub!"); }
  *
  * <p> When a directory is registered for this event then the {@link java.nio.file.WatchKey WatchKey}
  * is queued when it is observed that an entry is created in the directory
- * or renamed into the directory. The event {@link java.nio.file.WatchEvent#count WatchEvent#count}
+ * or renamed into the directory. The event {@link java.nio.file.WatchEvent#count count}
  * for this event is always {@code 1}.
  */
 
@@ -55,7 +55,7 @@ static { ENTRY_CREATE = null; }
  *
  * <p> When a directory is registered for this event then the {@link java.nio.file.WatchKey WatchKey}
  * is queued when it is observed that an entry is deleted or renamed out of
- * the directory. The event {@link java.nio.file.WatchEvent#count WatchEvent#count} for this event
+ * the directory. The event {@link java.nio.file.WatchEvent#count count} for this event
  * is always {@code 1}.
  */
 
@@ -67,7 +67,7 @@ static { ENTRY_DELETE = null; }
  *
  * <p> When a directory is registered for this event then the {@link java.nio.file.WatchKey WatchKey}
  * is queued when it is observed that an entry in the directory has been
- * modified. The event {@link java.nio.file.WatchEvent#count WatchEvent#count} for this event is
+ * modified. The event {@link java.nio.file.WatchEvent#count count} for this event is
  * {@code 1} or greater.
  */
 
@@ -78,8 +78,8 @@ static { ENTRY_MODIFY = null; }
  * A special event to indicate that events may have been lost or
  * discarded.
  *
- * <p> The {@link java.nio.file.WatchEvent#context WatchEvent#context} for this event is
- * implementation specific and may be {@code null}. The event {@link java.nio.file.WatchEvent#count WatchEvent#count} may be greater than {@code 1}.
+ * <p> The {@link java.nio.file.WatchEvent#context context} for this event is
+ * implementation specific and may be {@code null}. The event {@link java.nio.file.WatchEvent#count count} may be greater than {@code 1}.
  *
  * @see java.nio.file.WatchService
  */

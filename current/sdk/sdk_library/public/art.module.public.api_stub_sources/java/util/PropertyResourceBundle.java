@@ -57,7 +57,7 @@ import java.io.IOException;
  * files containing the resource data.  <code>ResourceBundle.getBundle</code>
  * will automatically look for the appropriate properties file and create a
  * <code>PropertyResourceBundle</code> that refers to it. See
- * {@link java.util.ResourceBundle#getBundle(java.lang.String,java.util.Locale,java.lang.ClassLoader) ResourceBundle#getBundle(java.lang.String, java.util.Locale, java.lang.ClassLoader)}
+ * {@link java.util.ResourceBundle#getBundle(java.lang.String,java.util.Locale,java.lang.ClassLoader) ResourceBundle.getBundle}
  * for a complete description of the search and instantiation strategy.
  *
  * <p>

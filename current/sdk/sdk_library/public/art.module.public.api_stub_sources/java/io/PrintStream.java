@@ -124,7 +124,7 @@ public PrintStream(java.io.OutputStream out, boolean autoFlush, java.lang.String
  *          creating the file
  *
  * @throws  java.lang.SecurityException
- *          If a security manager is present and {@link java.lang.SecurityManager#checkWrite SecurityManager#checkWrite} denies write
+ *          If a security manager is present and {@link java.lang.SecurityManager#checkWrite checkWrite(fileName)} denies write
  *          access to the file
  *
  * @since  1.5
@@ -156,7 +156,7 @@ public PrintStream(java.lang.String fileName) throws java.io.FileNotFoundExcepti
  *          creating the file
  *
  * @throws  java.lang.SecurityException
- *          If a security manager is present and {@link java.lang.SecurityManager#checkWrite SecurityManager#checkWrite} denies write
+ *          If a security manager is present and {@link java.lang.SecurityManager#checkWrite checkWrite(fileName)} denies write
  *          access to the file
  *
  * @throws  java.io.UnsupportedEncodingException
@@ -188,7 +188,7 @@ public PrintStream(java.lang.String fileName, java.lang.String csn) throws java.
  *          creating the file
  *
  * @throws  java.lang.SecurityException
- *          If a security manager is present and {@link java.lang.SecurityManager#checkWrite SecurityManager#checkWrite}
+ *          If a security manager is present and {@link java.lang.SecurityManager#checkWrite checkWrite(file.getPath())}
  *          denies write access to the file
  *
  * @since  1.5
@@ -220,7 +220,7 @@ public PrintStream(java.io.File file) throws java.io.FileNotFoundException { sup
  *          creating the file
  *
  * @throws  java.lang.SecurityException
- *          If a security manager is present and {@link java.lang.SecurityManager#checkWrite SecurityManager#checkWrite}
+ *          If a security manager is present and {@link java.lang.SecurityManager#checkWrite checkWrite(file.getPath())}
  *          denies write access to the file
  *
  * @throws  java.io.UnsupportedEncodingException

@@ -36,7 +36,7 @@ package java.util;
  *
  * <p>To implement an unmodifiable list, the programmer needs only to extend
  * this class and provide implementations for the {@link #get(int)} and
- * {@link java.util.List#size() List#size()} methods.
+ * {@link java.util.List#size() size()} methods.
  *
  * <p>To implement a modifiable list, the programmer must additionally
  * override the {@link #set(int,java.lang.Object) set(int, E)} method (which otherwise
@@ -177,7 +177,7 @@ public E remove(int index) { throw new RuntimeException("Stub!"); }
  * @throws java.lang.NullPointerException {@inheritDoc}
  */
 
-public int indexOf(@android.annotation.Nullable java.lang.Object o) { throw new RuntimeException("Stub!"); }
+public int indexOf(@androidx.annotation.RecentlyNullable java.lang.Object o) { throw new RuntimeException("Stub!"); }
 
 /**
  * {@inheritDoc}
@@ -192,7 +192,7 @@ public int indexOf(@android.annotation.Nullable java.lang.Object o) { throw new 
  * @throws java.lang.NullPointerException {@inheritDoc}
  */
 
-public int lastIndexOf(@android.annotation.Nullable java.lang.Object o) { throw new RuntimeException("Stub!"); }
+public int lastIndexOf(@androidx.annotation.RecentlyNullable java.lang.Object o) { throw new RuntimeException("Stub!"); }
 
 /**
  * Removes all of the elements from this list (optional operation).
@@ -233,7 +233,7 @@ public void clear() { throw new RuntimeException("Stub!"); }
  * @throws java.lang.IndexOutOfBoundsException     {@inheritDoc}
  */
 
-public boolean addAll(int index, @android.annotation.NonNull java.util.Collection<? extends E> c) { throw new RuntimeException("Stub!"); }
+public boolean addAll(int index, @androidx.annotation.RecentlyNonNull java.util.Collection<? extends E> c) { throw new RuntimeException("Stub!"); }
 
 /**
  * Returns an iterator over the elements in this list in proper sequence.
@@ -255,7 +255,7 @@ public boolean addAll(int index, @android.annotation.NonNull java.util.Collectio
  * @return an iterator over the elements in this list in proper sequence
  */
 
-@android.annotation.NonNull
+@androidx.annotation.RecentlyNonNull
 public java.util.Iterator<E> iterator() { throw new RuntimeException("Stub!"); }
 
 /**
@@ -267,7 +267,7 @@ public java.util.Iterator<E> iterator() { throw new RuntimeException("Stub!"); }
  * @see #listIterator(int)
  */
 
-@android.annotation.NonNull
+@androidx.annotation.RecentlyNonNull
 public java.util.ListIterator<E> listIterator() { throw new RuntimeException("Stub!"); }
 
 /**
@@ -294,7 +294,7 @@ public java.util.ListIterator<E> listIterator() { throw new RuntimeException("St
  * @throws java.lang.IndexOutOfBoundsException {@inheritDoc}
  */
 
-@android.annotation.NonNull
+@androidx.annotation.RecentlyNonNull
 public java.util.ListIterator<E> listIterator(int index) { throw new RuntimeException("Stub!"); }
 
 /**
@@ -333,7 +333,7 @@ public java.util.ListIterator<E> listIterator(int index) { throw new RuntimeExce
  *         {@code (fromIndex > toIndex)}
  */
 
-@android.annotation.NonNull
+@androidx.annotation.RecentlyNonNull
 public java.util.List<E> subList(int fromIndex, int toIndex) { throw new RuntimeException("Stub!"); }
 
 /**
@@ -359,7 +359,7 @@ public java.util.List<E> subList(int fromIndex, int toIndex) { throw new Runtime
  * @return {@code true} if the specified object is equal to this list
  */
 
-public boolean equals(@android.annotation.Nullable java.lang.Object o) { throw new RuntimeException("Stub!"); }
+public boolean equals(@androidx.annotation.RecentlyNullable java.lang.Object o) { throw new RuntimeException("Stub!"); }
 
 /**
  * Returns the hash code value for this list.

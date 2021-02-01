@@ -79,7 +79,7 @@ public interface AutoCloseable {
  *
  * This exception interacts with a thread's interrupted status,
  * and runtime misbehavior is likely to occur if an {@code
- * InterruptedException} is {@linkplain java.lang.Throwable#addSuppressed Throwable#addSuppressed}.
+ * InterruptedException} is {@linkplain java.lang.Throwable#addSuppressed  suppressed}.
  *
  * More generally, if it would cause problems for an
  * exception to be suppressed, the {@code AutoCloseable.close}

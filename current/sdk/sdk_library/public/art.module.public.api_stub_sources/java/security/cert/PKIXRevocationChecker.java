@@ -44,23 +44,23 @@ import java.net.URI;
  * status of certificates with OCSP and CRLs. By default, OCSP is the
  * preferred mechanism for checking revocation status, with CRLs as the
  * fallback mechanism. However, this preference can be switched to CRLs with
- * the {@link java.security.cert.PKIXRevocationChecker.Option#PREFER_CRLS Option#PREFER_CRLS} option. In addition, the fallback
- * mechanism can be disabled with the {@link java.security.cert.PKIXRevocationChecker.Option#NO_FALLBACK Option#NO_FALLBACK}
+ * the {@link java.security.cert.PKIXRevocationChecker.Option#PREFER_CRLS PREFER_CRLS} option. In addition, the fallback
+ * mechanism can be disabled with the {@link java.security.cert.PKIXRevocationChecker.Option#NO_FALLBACK NO_FALLBACK}
  * option.
  *
  * <p>A {@code PKIXRevocationChecker} is obtained by calling the
- * {@link java.security.cert.CertPathValidator#getRevocationChecker CertPathValidator#getRevocationChecker} method
+ * {@link java.security.cert.CertPathValidator#getRevocationChecker getRevocationChecker} method
  * of a PKIX {@code CertPathValidator}. Additional parameters and options
  * specific to revocation can be set (by calling the
  * {@link #setOcspResponder setOcspResponder} method for instance). The
  * {@code PKIXRevocationChecker} is added to a {@code PKIXParameters} object
- * using the {@link java.security.cert.PKIXParameters#addCertPathChecker PKIXParameters#addCertPathChecker}
- * or {@link java.security.cert.PKIXParameters#setCertPathCheckers PKIXParameters#setCertPathCheckers} method,
+ * using the {@link java.security.cert.PKIXParameters#addCertPathChecker addCertPathChecker}
+ * or {@link java.security.cert.PKIXParameters#setCertPathCheckers setCertPathCheckers} method,
  * and then the {@code PKIXParameters} is passed along with the {@code CertPath}
- * to be validated to the {@link java.security.cert.CertPathValidator#validate CertPathValidator#validate} method
+ * to be validated to the {@link java.security.cert.CertPathValidator#validate validate} method
  * of a PKIX {@code CertPathValidator}. When supplying a revocation checker in
  * this manner, it will be used to check revocation irrespective of the setting
- * of the {@link java.security.cert.PKIXParameters#isRevocationEnabled PKIXParameters#isRevocationEnabled} flag.
+ * of the {@link java.security.cert.PKIXParameters#isRevocationEnabled RevocationEnabled} flag.
  * Similarly, a {@code PKIXRevocationChecker} may be added to a
  * {@code PKIXBuilderParameters} object for use with a PKIX
  * {@code CertPathBuilder}.
@@ -209,10 +209,10 @@ public java.util.Set<java.security.cert.PKIXRevocationChecker.Option> getOptions
 
 /**
  * Returns a list containing the exceptions that are ignored by the
- * revocation checker when the {@link java.security.cert.PKIXRevocationChecker.Option#SOFT_FAIL Option#SOFT_FAIL} option
+ * revocation checker when the {@link java.security.cert.PKIXRevocationChecker.Option#SOFT_FAIL SOFT_FAIL} option
  * is set. The list is cleared each time {@link #init init} is called.
  * The list is ordered in ascending order according to the certificate
- * index returned by {@link java.security.cert.CertPathValidatorException#getIndex CertPathValidatorException#getIndex}
+ * index returned by {@link java.security.cert.CertPathValidatorException#getIndex getIndex}
  * method of each entry.
  * <p>
  * An implementation of {@code PKIXRevocationChecker} is responsible for
