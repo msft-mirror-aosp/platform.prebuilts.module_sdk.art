@@ -464,6 +464,9 @@ static { ENOMEM = 0; }
 public static final int ENOMSG;
 static { ENOMSG = 0; }
 
+public static final int ENONET;
+static { ENONET = 0; }
+
 public static final int ENOPROTOOPT;
 static { ENOPROTOOPT = 0; }
 
