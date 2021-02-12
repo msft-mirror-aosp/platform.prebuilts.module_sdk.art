@@ -782,8 +782,7 @@ public static java.util.regex.Pattern compile(@androidx.annotation.RecentlyNonNu
  * @param  flags
  *         Match flags, a bit mask that may include
  *         {@link #CASE_INSENSITIVE}, {@link #MULTILINE}, {@link #DOTALL},
- *         {@link #UNICODE_CASE}, {@link #CANON_EQ}, {@link #UNIX_LINES},
- *         {@link #LITERAL}, {@link #UNICODE_CHARACTER_CLASS}
+ *         {@link #UNICODE_CASE}, {@link #UNIX_LINES}, {@link #LITERAL},
  *         and {@link #COMMENTS}
  *
  * @return the given regular expression compiled into a pattern with the given flags
@@ -1034,6 +1033,8 @@ public java.util.function.Predicate<java.lang.String> asPredicate() { throw new 
 public java.util.stream.Stream<java.lang.String> splitAsStream(@androidx.annotation.RecentlyNonNull java.lang.CharSequence input) { throw new RuntimeException("Stub!"); }
 
 /**
+ * This flag is not supported on Android.
+ *
  * Enables canonical equivalence.
  *
  * <p> When this flag is specified then two characters will be considered
@@ -1142,14 +1143,14 @@ public static final int MULTILINE = 8; // 0x8
 public static final int UNICODE_CASE = 64; // 0x40
 
 /**
+ * This flag is not supported on Android, and Unicode character classes are always
+ * used.
+ *
  * Enables the Unicode version of <i>Predefined character classes</i> and
  * <i>POSIX character classes</i> as defined by <a href="http://www.unicode.org/reports/tr18/"><i>Unicode Technical
  * Standard #18: Unicode Regular Expression</i></a>
  * <i>Annex C: Compatibility Properties</i>.
  * <p>
- *
- * This flag has no effect on Android, unicode character classes are always
- * used.
  *
  * @since 1.7
  */
