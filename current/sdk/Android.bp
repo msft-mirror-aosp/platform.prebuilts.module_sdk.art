@@ -1,6 +1,6 @@
 // This is auto-generated. DO NOT EDIT.
 
-// Soong config variable stanza added by packages/modules/ArtPrebuilt/update-art-module-prebuilts.py.
+// Soong config variable stanza added by vendor/unbundled_google/modules/ArtGooglePrebuilt/update-art-module-prebuilts.py.
 soong_config_module_type_import {
     from: "prebuilts/module_sdk/art/SoongConfig.bp",
     module_types: [
@@ -1214,17 +1214,17 @@ cc_prebuilt_library {
         android: {
             export_include_dirs: [
                 "android/include/art/sigchainlib",
-                "android/include/prebuilts/runtime/mainline/runtime/sdk/common_os/include/bionic/libc/async_safe/include",
-                "android/include/prebuilts/runtime/mainline/runtime/sdk/common_os/include/system/logging/liblog/include",
+                "android/include/bionic/libc/async_safe/include",
+                "android/include/system/logging/liblog/include",
             ],
         },
         android_arm64: {
             export_system_include_dirs: [
-                "android/include/prebuilts/runtime/mainline/runtime/sdk/android/arm64/include/bionic/libc/include",
-                "android/include/prebuilts/runtime/mainline/runtime/sdk/android/arm64/include/bionic/libc/kernel/uapi",
-                "android/include/prebuilts/runtime/mainline/runtime/sdk/android/arm64/include/bionic/libc/kernel/android/scsi",
-                "android/include/prebuilts/runtime/mainline/runtime/sdk/android/arm64/include/bionic/libc/kernel/android/uapi",
-                "android/include/prebuilts/runtime/mainline/runtime/sdk/android/arm64/include/bionic/libc/kernel/uapi/asm-arm64",
+                "android/include/bionic/libc/include",
+                "android/include/bionic/libc/kernel/uapi",
+                "android/include/bionic/libc/kernel/android/scsi",
+                "android/include/bionic/libc/kernel/android/uapi",
+                "android/include/bionic/libc/kernel/uapi/asm-arm64",
             ],
             static: {
                 srcs: ["android/arm64/lib/libsigchain.a"],
@@ -1235,11 +1235,11 @@ cc_prebuilt_library {
         },
         android_x86_64: {
             export_system_include_dirs: [
-                "android/include/prebuilts/runtime/mainline/runtime/sdk/android/x86_64/include/bionic/libc/include",
-                "android/include/prebuilts/runtime/mainline/runtime/sdk/android/x86_64/include/bionic/libc/kernel/uapi",
-                "android/include/prebuilts/runtime/mainline/runtime/sdk/android/x86_64/include/bionic/libc/kernel/android/scsi",
-                "android/include/prebuilts/runtime/mainline/runtime/sdk/android/x86_64/include/bionic/libc/kernel/android/uapi",
-                "android/include/prebuilts/runtime/mainline/runtime/sdk/android/x86_64/include/bionic/libc/kernel/uapi/asm-x86",
+                "android/include/bionic/libc/include",
+                "android/include/bionic/libc/kernel/uapi",
+                "android/include/bionic/libc/kernel/android/scsi",
+                "android/include/bionic/libc/kernel/android/uapi",
+                "android/include/bionic/libc/kernel/uapi/asm-x86",
             ],
             static: {
                 srcs: ["android/x86_64/lib/libsigchain.a"],
@@ -1250,11 +1250,11 @@ cc_prebuilt_library {
         },
         android_arm: {
             export_system_include_dirs: [
-                "android/include/prebuilts/runtime/mainline/runtime/sdk/android/arm/include/bionic/libc/include",
-                "android/include/prebuilts/runtime/mainline/runtime/sdk/android/arm/include/bionic/libc/kernel/uapi",
-                "android/include/prebuilts/runtime/mainline/runtime/sdk/android/arm/include/bionic/libc/kernel/android/scsi",
-                "android/include/prebuilts/runtime/mainline/runtime/sdk/android/arm/include/bionic/libc/kernel/android/uapi",
-                "android/include/prebuilts/runtime/mainline/runtime/sdk/android/arm/include/bionic/libc/kernel/uapi/asm-arm",
+                "android/include/bionic/libc/include",
+                "android/include/bionic/libc/kernel/uapi",
+                "android/include/bionic/libc/kernel/android/scsi",
+                "android/include/bionic/libc/kernel/android/uapi",
+                "android/include/bionic/libc/kernel/uapi/asm-arm",
             ],
             static: {
                 srcs: ["android/arm/lib/libsigchain.a"],
@@ -1265,11 +1265,11 @@ cc_prebuilt_library {
         },
         android_x86: {
             export_system_include_dirs: [
-                "android/include/prebuilts/runtime/mainline/runtime/sdk/android/x86/include/bionic/libc/include",
-                "android/include/prebuilts/runtime/mainline/runtime/sdk/android/x86/include/bionic/libc/kernel/uapi",
-                "android/include/prebuilts/runtime/mainline/runtime/sdk/android/x86/include/bionic/libc/kernel/android/scsi",
-                "android/include/prebuilts/runtime/mainline/runtime/sdk/android/x86/include/bionic/libc/kernel/android/uapi",
-                "android/include/prebuilts/runtime/mainline/runtime/sdk/android/x86/include/bionic/libc/kernel/uapi/asm-x86",
+                "android/include/bionic/libc/include",
+                "android/include/bionic/libc/kernel/uapi",
+                "android/include/bionic/libc/kernel/android/scsi",
+                "android/include/bionic/libc/kernel/android/uapi",
+                "android/include/bionic/libc/kernel/uapi/asm-x86",
             ],
             static: {
                 srcs: ["android/x86/lib/libsigchain.a"],
@@ -1330,17 +1330,17 @@ art_prebuilt_cc_prebuilt_library {
         android: {
             export_include_dirs: [
                 "android/include/art/sigchainlib",
-                "android/include/prebuilts/runtime/mainline/runtime/sdk/common_os/include/bionic/libc/async_safe/include",
-                "android/include/prebuilts/runtime/mainline/runtime/sdk/common_os/include/system/logging/liblog/include",
+                "android/include/bionic/libc/async_safe/include",
+                "android/include/system/logging/liblog/include",
             ],
         },
         android_arm64: {
             export_system_include_dirs: [
-                "android/include/prebuilts/runtime/mainline/runtime/sdk/android/arm64/include/bionic/libc/include",
-                "android/include/prebuilts/runtime/mainline/runtime/sdk/android/arm64/include/bionic/libc/kernel/uapi",
-                "android/include/prebuilts/runtime/mainline/runtime/sdk/android/arm64/include/bionic/libc/kernel/android/scsi",
-                "android/include/prebuilts/runtime/mainline/runtime/sdk/android/arm64/include/bionic/libc/kernel/android/uapi",
-                "android/include/prebuilts/runtime/mainline/runtime/sdk/android/arm64/include/bionic/libc/kernel/uapi/asm-arm64",
+                "android/include/bionic/libc/include",
+                "android/include/bionic/libc/kernel/uapi",
+                "android/include/bionic/libc/kernel/android/scsi",
+                "android/include/bionic/libc/kernel/android/uapi",
+                "android/include/bionic/libc/kernel/uapi/asm-arm64",
             ],
             static: {
                 srcs: ["android/arm64/lib/libsigchain.a"],
@@ -1351,11 +1351,11 @@ art_prebuilt_cc_prebuilt_library {
         },
         android_x86_64: {
             export_system_include_dirs: [
-                "android/include/prebuilts/runtime/mainline/runtime/sdk/android/x86_64/include/bionic/libc/include",
-                "android/include/prebuilts/runtime/mainline/runtime/sdk/android/x86_64/include/bionic/libc/kernel/uapi",
-                "android/include/prebuilts/runtime/mainline/runtime/sdk/android/x86_64/include/bionic/libc/kernel/android/scsi",
-                "android/include/prebuilts/runtime/mainline/runtime/sdk/android/x86_64/include/bionic/libc/kernel/android/uapi",
-                "android/include/prebuilts/runtime/mainline/runtime/sdk/android/x86_64/include/bionic/libc/kernel/uapi/asm-x86",
+                "android/include/bionic/libc/include",
+                "android/include/bionic/libc/kernel/uapi",
+                "android/include/bionic/libc/kernel/android/scsi",
+                "android/include/bionic/libc/kernel/android/uapi",
+                "android/include/bionic/libc/kernel/uapi/asm-x86",
             ],
             static: {
                 srcs: ["android/x86_64/lib/libsigchain.a"],
@@ -1366,11 +1366,11 @@ art_prebuilt_cc_prebuilt_library {
         },
         android_arm: {
             export_system_include_dirs: [
-                "android/include/prebuilts/runtime/mainline/runtime/sdk/android/arm/include/bionic/libc/include",
-                "android/include/prebuilts/runtime/mainline/runtime/sdk/android/arm/include/bionic/libc/kernel/uapi",
-                "android/include/prebuilts/runtime/mainline/runtime/sdk/android/arm/include/bionic/libc/kernel/android/scsi",
-                "android/include/prebuilts/runtime/mainline/runtime/sdk/android/arm/include/bionic/libc/kernel/android/uapi",
-                "android/include/prebuilts/runtime/mainline/runtime/sdk/android/arm/include/bionic/libc/kernel/uapi/asm-arm",
+                "android/include/bionic/libc/include",
+                "android/include/bionic/libc/kernel/uapi",
+                "android/include/bionic/libc/kernel/android/scsi",
+                "android/include/bionic/libc/kernel/android/uapi",
+                "android/include/bionic/libc/kernel/uapi/asm-arm",
             ],
             static: {
                 srcs: ["android/arm/lib/libsigchain.a"],
@@ -1381,11 +1381,11 @@ art_prebuilt_cc_prebuilt_library {
         },
         android_x86: {
             export_system_include_dirs: [
-                "android/include/prebuilts/runtime/mainline/runtime/sdk/android/x86/include/bionic/libc/include",
-                "android/include/prebuilts/runtime/mainline/runtime/sdk/android/x86/include/bionic/libc/kernel/uapi",
-                "android/include/prebuilts/runtime/mainline/runtime/sdk/android/x86/include/bionic/libc/kernel/android/scsi",
-                "android/include/prebuilts/runtime/mainline/runtime/sdk/android/x86/include/bionic/libc/kernel/android/uapi",
-                "android/include/prebuilts/runtime/mainline/runtime/sdk/android/x86/include/bionic/libc/kernel/uapi/asm-x86",
+                "android/include/bionic/libc/include",
+                "android/include/bionic/libc/kernel/uapi",
+                "android/include/bionic/libc/kernel/android/scsi",
+                "android/include/bionic/libc/kernel/android/uapi",
+                "android/include/bionic/libc/kernel/uapi/asm-x86",
             ],
             static: {
                 srcs: ["android/x86/lib/libsigchain.a"],
@@ -2209,7 +2209,7 @@ cc_prebuilt_library_static {
         "common_os/include/system/libbase/include",
         "common_os/include/external/fmtlib/include",
         "common_os/include/art/libartpalette/include",
-        "common_os/include/prebuilts/runtime/mainline/platform/sdk/common_os/include/system/logging/liblog/include",
+        "common_os/include/system/logging/liblog/include",
         "common_os/include/external/zlib",
         "common_os/include/system/libziparchive/include",
         "common_os/include/external/googletest/googletest/include",
@@ -2267,7 +2267,7 @@ art_prebuilt_cc_prebuilt_library_static {
         "common_os/include/system/libbase/include",
         "common_os/include/external/fmtlib/include",
         "common_os/include/art/libartpalette/include",
-        "common_os/include/prebuilts/runtime/mainline/platform/sdk/common_os/include/system/logging/liblog/include",
+        "common_os/include/system/logging/liblog/include",
         "common_os/include/external/zlib",
         "common_os/include/system/libziparchive/include",
         "common_os/include/external/googletest/googletest/include",
