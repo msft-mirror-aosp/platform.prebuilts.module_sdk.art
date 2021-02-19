@@ -1,6 +1,23 @@
 // This is auto-generated. DO NOT EDIT.
 
 // Soong config variable stanza added by packages/modules/ArtPrebuilt/update-art-module-prebuilts.py.
+package {
+    // See: http://go/android-license-faq
+    // A large-scale-change added 'default_applicable_licenses' to import
+    // all of the 'license_kinds' from "prebuilts_module_sdk_art_license"
+    // to get the below license kinds:
+    //   SPDX-license-identifier-Apache-2.0
+    //   SPDX-license-identifier-BSD
+    //   SPDX-license-identifier-CC0-1.0
+    //   SPDX-license-identifier-GPL-2.0
+    //   SPDX-license-identifier-ISC
+    //   SPDX-license-identifier-MIT
+    //   SPDX-license-identifier-W3C
+    //   SPDX-license-identifier-Zlib
+    //   legacy_unencumbered
+    default_applicable_licenses: ["prebuilts_module_sdk_art_license"],
+}
+
 soong_config_module_type_import {
     from: "prebuilts/module_sdk/art/SoongConfig.bp",
     module_types: [
