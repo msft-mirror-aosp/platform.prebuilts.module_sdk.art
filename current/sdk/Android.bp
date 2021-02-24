@@ -1,6 +1,23 @@
 // This is auto-generated. DO NOT EDIT.
 
-// Soong config variable stanza added by art/build/update-art-module-prebuilts.py.
+// Soong config variable stanza added by packages/modules/ArtPrebuilt/update-art-module-prebuilts.py.
+package {
+    // See: http://go/android-license-faq
+    // A large-scale-change added 'default_applicable_licenses' to import
+    // all of the 'license_kinds' from "prebuilts_module_sdk_art_license"
+    // to get the below license kinds:
+    //   SPDX-license-identifier-Apache-2.0
+    //   SPDX-license-identifier-BSD
+    //   SPDX-license-identifier-CC0-1.0
+    //   SPDX-license-identifier-GPL-2.0
+    //   SPDX-license-identifier-ISC
+    //   SPDX-license-identifier-MIT
+    //   SPDX-license-identifier-W3C
+    //   SPDX-license-identifier-Zlib
+    //   legacy_unencumbered
+    default_applicable_licenses: ["prebuilts_module_sdk_art_license"],
+}
+
 soong_config_module_type_import {
     from: "prebuilts/module_sdk/art/SoongConfig.bp",
     module_types: [
@@ -29,7 +46,7 @@ java_import {
         "com.android.art",
         "com.android.art.debug",
     ],
-    jars: ["java_boot_libs/snapshot/jars/are/invalid/apache-xml.jar"],
+    jars: ["java/apache-xml.jar"],
 }
 
 art_prebuilt_java_import {
@@ -53,7 +70,7 @@ art_prebuilt_java_import {
         "com.android.art",
         "com.android.art.debug",
     ],
-    jars: ["java_boot_libs/snapshot/jars/are/invalid/apache-xml.jar"],
+    jars: ["java/apache-xml.jar"],
 }
 
 java_import {
@@ -72,7 +89,7 @@ java_import {
         "com.android.art",
         "com.android.art.debug",
     ],
-    jars: ["java_boot_libs/snapshot/jars/are/invalid/bouncycastle.jar"],
+    jars: ["java/bouncycastle.jar"],
 }
 
 art_prebuilt_java_import {
@@ -97,7 +114,7 @@ art_prebuilt_java_import {
         "com.android.art",
         "com.android.art.debug",
     ],
-    jars: ["java_boot_libs/snapshot/jars/are/invalid/bouncycastle.jar"],
+    jars: ["java/bouncycastle.jar"],
 }
 
 java_import {
@@ -116,7 +133,7 @@ java_import {
         "com.android.art",
         "com.android.art.debug",
     ],
-    jars: ["java_boot_libs/snapshot/jars/are/invalid/core-oj.jar"],
+    jars: ["java/core-oj.jar"],
 }
 
 art_prebuilt_java_import {
@@ -141,7 +158,7 @@ art_prebuilt_java_import {
         "com.android.art",
         "com.android.art.debug",
     ],
-    jars: ["java_boot_libs/snapshot/jars/are/invalid/core-oj.jar"],
+    jars: ["java/core-oj.jar"],
 }
 
 java_import {
@@ -1855,19 +1872,15 @@ cc_prebuilt_library_shared {
         },
         android_arm64: {
             srcs: ["android/arm64/lib/libnativeloader.so"],
-            export_include_dirs: ["android/arm64/include_gen/libnativeloader"],
         },
         android_x86_64: {
             srcs: ["android/x86_64/lib/libnativeloader.so"],
-            export_include_dirs: ["android/x86_64/include_gen/libnativeloader"],
         },
         android_arm: {
             srcs: ["android/arm/lib/libnativeloader.so"],
-            export_include_dirs: ["android/arm/include_gen/libnativeloader"],
         },
         android_x86: {
             srcs: ["android/x86/lib/libnativeloader.so"],
-            export_include_dirs: ["android/x86/include_gen/libnativeloader"],
         },
         linux_glibc_x86_64: {
             enabled: true,
@@ -1914,19 +1927,15 @@ art_prebuilt_cc_prebuilt_library_shared {
         },
         android_arm64: {
             srcs: ["android/arm64/lib/libnativeloader.so"],
-            export_include_dirs: ["android/arm64/include_gen/libnativeloader"],
         },
         android_x86_64: {
             srcs: ["android/x86_64/lib/libnativeloader.so"],
-            export_include_dirs: ["android/x86_64/include_gen/libnativeloader"],
         },
         android_arm: {
             srcs: ["android/arm/lib/libnativeloader.so"],
-            export_include_dirs: ["android/arm/include_gen/libnativeloader"],
         },
         android_x86: {
             srcs: ["android/x86/lib/libnativeloader.so"],
-            export_include_dirs: ["android/x86/include_gen/libnativeloader"],
         },
         linux_glibc_x86_64: {
             enabled: true,
@@ -2034,11 +2043,13 @@ cc_prebuilt_library_shared {
         "//libnativehelper:__subpackages__",
         "//packages/modules/Connectivity/Tethering:__subpackages__",
         "//packages/modules/Connectivity/tests:__subpackages__",
+        "//packages/modules/ExtServices:__subpackages__",
         "//packages/modules/NetworkStack:__subpackages__",
         "//prebuilts:__subpackages__",
     ],
     apex_available: [
         "//apex_available:platform",
+        "com.android.extservices",
         "com.android.tethering",
     ],
     installable: false,
@@ -2084,11 +2095,13 @@ art_prebuilt_cc_prebuilt_library_shared {
         "//libnativehelper:__subpackages__",
         "//packages/modules/Connectivity/Tethering:__subpackages__",
         "//packages/modules/Connectivity/tests:__subpackages__",
+        "//packages/modules/ExtServices:__subpackages__",
         "//packages/modules/NetworkStack:__subpackages__",
         "//prebuilts:__subpackages__",
     ],
     apex_available: [
         "//apex_available:platform",
+        "com.android.extservices",
         "com.android.tethering",
     ],
     stl: "none",
@@ -2308,6 +2321,97 @@ art_prebuilt_cc_prebuilt_library_static {
 }
 
 cc_prebuilt_library_static {
+    name: "art-module-sdk_libnativehelper_lazy@current",
+    sdk_member_name: "libnativehelper_lazy",
+    visibility: ["//visibility:public"],
+    apex_available: ["//apex_available:platform"],
+    host_supported: true,
+    installable: false,
+    compile_multilib: "both",
+    shared_libs: ["liblog"],
+    export_include_dirs: [
+        "common_os/include/libnativehelper/header_only_include",
+        "common_os/include/libnativehelper/include",
+        "common_os/include/libnativehelper/include_jni",
+        "common_os/include/libnativehelper/include_platform",
+        "common_os/include/libnativehelper/include_platform_header_only",
+    ],
+    target: {
+        host: {
+            enabled: false,
+        },
+        android_arm64: {
+            srcs: ["android/arm64/lib/libnativehelper_lazy.a"],
+        },
+        android_x86_64: {
+            srcs: ["android/x86_64/lib/libnativehelper_lazy.a"],
+        },
+        android_arm: {
+            srcs: ["android/arm/lib/libnativehelper_lazy.a"],
+        },
+        android_x86: {
+            srcs: ["android/x86/lib/libnativehelper_lazy.a"],
+        },
+        linux_glibc_x86_64: {
+            enabled: true,
+            srcs: ["linux_glibc/x86_64/lib/libnativehelper_lazy.a"],
+        },
+        linux_glibc_x86: {
+            enabled: true,
+            srcs: ["linux_glibc/x86/lib/libnativehelper_lazy.a"],
+        },
+    },
+}
+
+art_prebuilt_cc_prebuilt_library_static {
+    name: "libnativehelper_lazy",
+    // Do not prefer prebuilt if SOONG_CONFIG_art_module_source_build is true.
+    prefer: true,
+    soong_config_variables: {
+        source_build: {
+            prefer: false,
+        },
+    },
+    visibility: ["//visibility:public"],
+    apex_available: ["//apex_available:platform"],
+    host_supported: true,
+    compile_multilib: "both",
+    shared_libs: ["liblog"],
+    export_include_dirs: [
+        "common_os/include/libnativehelper/header_only_include",
+        "common_os/include/libnativehelper/include",
+        "common_os/include/libnativehelper/include_jni",
+        "common_os/include/libnativehelper/include_platform",
+        "common_os/include/libnativehelper/include_platform_header_only",
+    ],
+    target: {
+        host: {
+            enabled: false,
+        },
+        android_arm64: {
+            srcs: ["android/arm64/lib/libnativehelper_lazy.a"],
+        },
+        android_x86_64: {
+            srcs: ["android/x86_64/lib/libnativehelper_lazy.a"],
+        },
+        android_arm: {
+            srcs: ["android/arm/lib/libnativehelper_lazy.a"],
+        },
+        android_x86: {
+            srcs: ["android/x86/lib/libnativehelper_lazy.a"],
+        },
+        linux_glibc_x86_64: {
+            enabled: true,
+            srcs: ["linux_glibc/x86_64/lib/libnativehelper_lazy.a"],
+        },
+        linux_glibc_x86: {
+            enabled: true,
+            srcs: ["linux_glibc/x86/lib/libnativehelper_lazy.a"],
+        },
+    },
+}
+
+cc_prebuilt_library_static {
     name: "art-module-sdk_libctstiagent@current",
     sdk_member_name: "libctstiagent",
     visibility: [
@@ -2428,6 +2532,7 @@ sdk_snapshot {
             ],
             native_static_libs: [
                 "art-module-sdk_libdexfile_external_static@current",
+                "art-module-sdk_libnativehelper_lazy@current",
                 "art-module-sdk_libctstiagent@current",
             ],
         },
@@ -2445,7 +2550,10 @@ sdk_snapshot {
                 "art-module-sdk_libnativehelper@current",
                 "art-module-sdk_libnativeloader@current",
             ],
-            native_static_libs: ["art-module-sdk_libdexfile_external_static@current"],
+            native_static_libs: [
+                "art-module-sdk_libdexfile_external_static@current",
+                "art-module-sdk_libnativehelper_lazy@current",
+            ],
         },
         host: {
             enabled: false,
