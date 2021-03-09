@@ -713,6 +713,7 @@ public static <E> java.util.Set<E> of(@androidx.annotation.RecentlyNonNull E... 
  * @since 10
  */
 
-public static <E> java.util.Set<E> copyOf(java.util.Collection<? extends E> coll) { throw new RuntimeException("Stub!"); }
+@androidx.annotation.RecentlyNonNull
+public static <E> java.util.Set<E> copyOf(@androidx.annotation.RecentlyNonNull java.util.Collection<? extends E> coll) { throw new RuntimeException("Stub!"); }
 }
 
