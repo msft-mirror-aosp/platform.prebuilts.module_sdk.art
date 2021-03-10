@@ -1,5 +1,5 @@
 /*
- * Copyright (c) 1997, 2017, Oracle and/or its affiliates. All rights reserved.
+ * Copyright (c) 1997, 2018, Oracle and/or its affiliates. All rights reserved.
  * DO NOT ALTER OR REMOVE COPYRIGHT NOTICES OR THIS FILE HEADER.
  *
  * This code is free software; you can redistribute it and/or modify it
@@ -87,15 +87,16 @@ package java.util;
  * Such exceptions are marked as "optional" in the specification for this
  * interface.
  *
- * <h2><a id="immutable">Immutable List Static Factory Methods</a></h2>
- * <p>The {@link java.util.List#of(java.lang.Object...) List.of()} static factory methods
- * provide a convenient way to create immutable lists. The {@code List}
+ * <h2><a id="unmodifiable">Unmodifiable Lists</a></h2>
+ * <p>The {@link java.util.List#of(java.lang.Object...) List.of} and
+ * {@link java.util.List#copyOf List.copyOf} static factory methods
+ * provide a convenient way to create unmodifiable lists. The {@code List}
  * instances created by these methods have the following characteristics:
  *
  * <ul>
- * <li>They are <em>structurally immutable</em>. Elements cannot be added, removed,
- * or replaced. Calling any mutator method will always cause
- * {@code UnsupportedOperationException} to be thrown.
+ * <li>They are <a href="Collection.html#unmodifiable"><i>unmodifiable</i></a>. Elements cannot
+ * be added, removed, or replaced. Calling any mutator method on the List
+ * will always cause {@code UnsupportedOperationException} to be thrown.
  * However, if the contained elements are themselves mutable,
  * this may cause the List's contents to appear to change.
  * <li>They disallow {@code null} elements. Attempts to create them with
@@ -784,9 +785,9 @@ public java.util.List<E> subList(int fromIndex, int toIndex);
 public default java.util.Spliterator<E> spliterator() { throw new RuntimeException("Stub!"); }
 
 /**
- * Returns an immutable list containing zero elements.
+ * Returns an unmodifiable list containing zero elements.
  *
- * See <a href="#immutable">Immutable List Static Factory Methods</a> for details.
+ * See <a href="#unmodifiable">Unmodifiable Lists</a> for details.
  *
  * @param <E> the {@code List}'s element type
  * @return an empty {@code List}
@@ -798,9 +799,9 @@ public default java.util.Spliterator<E> spliterator() { throw new RuntimeExcepti
 public static <E> java.util.List<E> of() { throw new RuntimeException("Stub!"); }
 
 /**
- * Returns an immutable list containing one element.
+ * Returns an unmodifiable list containing one element.
  *
- * See <a href="#immutable">Immutable List Static Factory Methods</a> for details.
+ * See <a href="#unmodifiable">Unmodifiable Lists</a> for details.
  *
  * @param <E> the {@code List}'s element type
  * @param e1 the single element
@@ -814,9 +815,9 @@ public static <E> java.util.List<E> of() { throw new RuntimeException("Stub!"); 
 public static <E> java.util.List<E> of(@androidx.annotation.RecentlyNonNull E e1) { throw new RuntimeException("Stub!"); }
 
 /**
- * Returns an immutable list containing two elements.
+ * Returns an unmodifiable list containing two elements.
  *
- * See <a href="#immutable">Immutable List Static Factory Methods</a> for details.
+ * See <a href="#unmodifiable">Unmodifiable Lists</a> for details.
  *
  * @param <E> the {@code List}'s element type
  * @param e1 the first element
@@ -831,9 +832,9 @@ public static <E> java.util.List<E> of(@androidx.annotation.RecentlyNonNull E e1
 public static <E> java.util.List<E> of(@androidx.annotation.RecentlyNonNull E e1, @androidx.annotation.RecentlyNonNull E e2) { throw new RuntimeException("Stub!"); }
 
 /**
- * Returns an immutable list containing three elements.
+ * Returns an unmodifiable list containing three elements.
  *
- * See <a href="#immutable">Immutable List Static Factory Methods</a> for details.
+ * See <a href="#unmodifiable">Unmodifiable Lists</a> for details.
  *
  * @param <E> the {@code List}'s element type
  * @param e1 the first element
@@ -849,9 +850,9 @@ public static <E> java.util.List<E> of(@androidx.annotation.RecentlyNonNull E e1
 public static <E> java.util.List<E> of(@androidx.annotation.RecentlyNonNull E e1, @androidx.annotation.RecentlyNonNull E e2, @androidx.annotation.RecentlyNonNull E e3) { throw new RuntimeException("Stub!"); }
 
 /**
- * Returns an immutable list containing four elements.
+ * Returns an unmodifiable list containing four elements.
  *
- * See <a href="#immutable">Immutable List Static Factory Methods</a> for details.
+ * See <a href="#unmodifiable">Unmodifiable Lists</a> for details.
  *
  * @param <E> the {@code List}'s element type
  * @param e1 the first element
@@ -868,9 +869,9 @@ public static <E> java.util.List<E> of(@androidx.annotation.RecentlyNonNull E e1
 public static <E> java.util.List<E> of(@androidx.annotation.RecentlyNonNull E e1, @androidx.annotation.RecentlyNonNull E e2, @androidx.annotation.RecentlyNonNull E e3, @androidx.annotation.RecentlyNonNull E e4) { throw new RuntimeException("Stub!"); }
 
 /**
- * Returns an immutable list containing five elements.
+ * Returns an unmodifiable list containing five elements.
  *
- * See <a href="#immutable">Immutable List Static Factory Methods</a> for details.
+ * See <a href="#unmodifiable">Unmodifiable Lists</a> for details.
  *
  * @param <E> the {@code List}'s element type
  * @param e1 the first element
@@ -888,9 +889,9 @@ public static <E> java.util.List<E> of(@androidx.annotation.RecentlyNonNull E e1
 public static <E> java.util.List<E> of(@androidx.annotation.RecentlyNonNull E e1, @androidx.annotation.RecentlyNonNull E e2, @androidx.annotation.RecentlyNonNull E e3, @androidx.annotation.RecentlyNonNull E e4, @androidx.annotation.RecentlyNonNull E e5) { throw new RuntimeException("Stub!"); }
 
 /**
- * Returns an immutable list containing six elements.
+ * Returns an unmodifiable list containing six elements.
  *
- * See <a href="#immutable">Immutable List Static Factory Methods</a> for details.
+ * See <a href="#unmodifiable">Unmodifiable Lists</a> for details.
  *
  * @param <E> the {@code List}'s element type
  * @param e1 the first element
@@ -909,9 +910,9 @@ public static <E> java.util.List<E> of(@androidx.annotation.RecentlyNonNull E e1
 public static <E> java.util.List<E> of(@androidx.annotation.RecentlyNonNull E e1, @androidx.annotation.RecentlyNonNull E e2, @androidx.annotation.RecentlyNonNull E e3, @androidx.annotation.RecentlyNonNull E e4, @androidx.annotation.RecentlyNonNull E e5, @androidx.annotation.RecentlyNonNull E e6) { throw new RuntimeException("Stub!"); }
 
 /**
- * Returns an immutable list containing seven elements.
+ * Returns an unmodifiable list containing seven elements.
  *
- * See <a href="#immutable">Immutable List Static Factory Methods</a> for details.
+ * See <a href="#unmodifiable">Unmodifiable Lists</a> for details.
  *
  * @param <E> the {@code List}'s element type
  * @param e1 the first element
@@ -931,9 +932,9 @@ public static <E> java.util.List<E> of(@androidx.annotation.RecentlyNonNull E e1
 public static <E> java.util.List<E> of(@androidx.annotation.RecentlyNonNull E e1, @androidx.annotation.RecentlyNonNull E e2, @androidx.annotation.RecentlyNonNull E e3, @androidx.annotation.RecentlyNonNull E e4, @androidx.annotation.RecentlyNonNull E e5, @androidx.annotation.RecentlyNonNull E e6, @androidx.annotation.RecentlyNonNull E e7) { throw new RuntimeException("Stub!"); }
 
 /**
- * Returns an immutable list containing eight elements.
+ * Returns an unmodifiable list containing eight elements.
  *
- * See <a href="#immutable">Immutable List Static Factory Methods</a> for details.
+ * See <a href="#unmodifiable">Unmodifiable Lists</a> for details.
  *
  * @param <E> the {@code List}'s element type
  * @param e1 the first element
@@ -954,9 +955,9 @@ public static <E> java.util.List<E> of(@androidx.annotation.RecentlyNonNull E e1
 public static <E> java.util.List<E> of(@androidx.annotation.RecentlyNonNull E e1, @androidx.annotation.RecentlyNonNull E e2, @androidx.annotation.RecentlyNonNull E e3, @androidx.annotation.RecentlyNonNull E e4, @androidx.annotation.RecentlyNonNull E e5, @androidx.annotation.RecentlyNonNull E e6, @androidx.annotation.RecentlyNonNull E e7, @androidx.annotation.RecentlyNonNull E e8) { throw new RuntimeException("Stub!"); }
 
 /**
- * Returns an immutable list containing nine elements.
+ * Returns an unmodifiable list containing nine elements.
  *
- * See <a href="#immutable">Immutable List Static Factory Methods</a> for details.
+ * See <a href="#unmodifiable">Unmodifiable Lists</a> for details.
  *
  * @param <E> the {@code List}'s element type
  * @param e1 the first element
@@ -978,9 +979,9 @@ public static <E> java.util.List<E> of(@androidx.annotation.RecentlyNonNull E e1
 public static <E> java.util.List<E> of(@androidx.annotation.RecentlyNonNull E e1, @androidx.annotation.RecentlyNonNull E e2, @androidx.annotation.RecentlyNonNull E e3, @androidx.annotation.RecentlyNonNull E e4, @androidx.annotation.RecentlyNonNull E e5, @androidx.annotation.RecentlyNonNull E e6, @androidx.annotation.RecentlyNonNull E e7, @androidx.annotation.RecentlyNonNull E e8, @androidx.annotation.RecentlyNonNull E e9) { throw new RuntimeException("Stub!"); }
 
 /**
- * Returns an immutable list containing ten elements.
+ * Returns an unmodifiable list containing ten elements.
  *
- * See <a href="#immutable">Immutable List Static Factory Methods</a> for details.
+ * See <a href="#unmodifiable">Unmodifiable Lists</a> for details.
  *
  * @param <E> the {@code List}'s element type
  * @param e1 the first element
@@ -1003,8 +1004,8 @@ public static <E> java.util.List<E> of(@androidx.annotation.RecentlyNonNull E e1
 public static <E> java.util.List<E> of(@androidx.annotation.RecentlyNonNull E e1, @androidx.annotation.RecentlyNonNull E e2, @androidx.annotation.RecentlyNonNull E e3, @androidx.annotation.RecentlyNonNull E e4, @androidx.annotation.RecentlyNonNull E e5, @androidx.annotation.RecentlyNonNull E e6, @androidx.annotation.RecentlyNonNull E e7, @androidx.annotation.RecentlyNonNull E e8, @androidx.annotation.RecentlyNonNull E e9, @androidx.annotation.RecentlyNonNull E e10) { throw new RuntimeException("Stub!"); }
 
 /**
- * Returns an immutable list containing an arbitrary number of elements.
- * See <a href="#immutable">Immutable List Static Factory Methods</a> for details.
+ * Returns an unmodifiable list containing an arbitrary number of elements.
+ * See <a href="#unmodifiable">Unmodifiable Lists</a> for details.
  *
  * @apiNote
  * This method also accepts a single array as an argument. The element type of
@@ -1031,5 +1032,25 @@ public static <E> java.util.List<E> of(@androidx.annotation.RecentlyNonNull E e1
 @androidx.annotation.RecentlyNonNull
 @java.lang.SafeVarargs
 public static <E> java.util.List<E> of(@androidx.annotation.RecentlyNonNull E... elements) { throw new RuntimeException("Stub!"); }
+
+/**
+ * Returns an <a href="#unmodifiable">unmodifiable List</a> containing the elements of
+ * the given Collection, in its iteration order. The given Collection must not be null,
+ * and it must not contain any null elements. If the given Collection is subsequently
+ * modified, the returned List will not reflect such modifications.
+ *
+ * @implNote
+ * If the given Collection is an <a href="#unmodifiable">unmodifiable List</a>,
+ * calling copyOf will generally not create a copy.
+ *
+ * @param <E> the {@code List}'s element type
+ * @param coll a {@code Collection} from which elements are drawn, must be non-null
+ * @return a {@code List} containing the elements of the given {@code Collection}
+ * @throws java.lang.NullPointerException if coll is null, or if it contains any nulls
+ * @since 10
+ */
+
+@androidx.annotation.RecentlyNonNull
+public static <E> java.util.List<E> copyOf(@androidx.annotation.RecentlyNonNull java.util.Collection<? extends E> coll) { throw new RuntimeException("Stub!"); }
 }
 
