@@ -502,6 +502,191 @@ public int getNumberOfDependents() { throw new RuntimeException("Stub!"); }
  */
 
 public java.lang.String toString() { throw new RuntimeException("Stub!"); }
+
+/**
+ * Returns a new incomplete CompletableFuture of the type to be
+ * returned by a CompletionStage method. Subclasses should
+ * normally override this method to return an instance of the same
+ * class as this CompletableFuture. The default implementation
+ * returns an instance of class CompletableFuture.
+ *
+ * @param <U> the type of the value
+ * @return a new CompletableFuture
+ * @since 9
+ */
+
+public <U> java.util.concurrent.CompletableFuture<U> newIncompleteFuture() { throw new RuntimeException("Stub!"); }
+
+/**
+ * Returns the default Executor used for async methods that do not
+ * specify an Executor. This class uses the {@link java.util.concurrent.ForkJoinPool#commonPool()  } if it supports more than one
+ * parallel thread, or else an Executor using one thread per async
+ * task.  This method may be overridden in subclasses to return
+ * an Executor that provides at least one independent thread.
+ *
+ * @return the executor
+ * @since 9
+ */
+
+public java.util.concurrent.Executor defaultExecutor() { throw new RuntimeException("Stub!"); }
+
+/**
+ * Returns a new CompletableFuture that is completed normally with
+ * the same value as this CompletableFuture when it completes
+ * normally. If this CompletableFuture completes exceptionally,
+ * then the returned CompletableFuture completes exceptionally
+ * with a CompletionException with this exception as cause. The
+ * behavior is equivalent to {@code thenApply(x -> x)}. This
+ * method may be useful as a form of "defensive copying", to
+ * prevent clients from completing, while still being able to
+ * arrange dependent actions.
+ *
+ * @return the new CompletableFuture
+ * @since 9
+ */
+
+public java.util.concurrent.CompletableFuture<T> copy() { throw new RuntimeException("Stub!"); }
+
+/**
+ * Returns a new CompletionStage that is completed normally with
+ * the same value as this CompletableFuture when it completes
+ * normally, and cannot be independently completed or otherwise
+ * used in ways not defined by the methods of interface {@link java.util.concurrent.CompletionStage CompletionStage}.  If this CompletableFuture completes
+ * exceptionally, then the returned CompletionStage completes
+ * exceptionally with a CompletionException with this exception as
+ * cause.
+ *
+ * @return the new CompletionStage
+ * @since 9
+ */
+
+public java.util.concurrent.CompletionStage<T> minimalCompletionStage() { throw new RuntimeException("Stub!"); }
+
+/**
+ * Completes this CompletableFuture with the result of
+ * the given Supplier function invoked from an asynchronous
+ * task using the given executor.
+ *
+ * @param supplier a function returning the value to be used
+ * to complete this CompletableFuture
+ * @param executor the executor to use for asynchronous execution
+ * @return this CompletableFuture
+ * @since 9
+ */
+
+public java.util.concurrent.CompletableFuture<T> completeAsync(java.util.function.Supplier<? extends T> supplier, java.util.concurrent.Executor executor) { throw new RuntimeException("Stub!"); }
+
+/**
+ * Completes this CompletableFuture with the result of the given
+ * Supplier function invoked from an asynchronous task using the
+ * default executor.
+ *
+ * @param supplier a function returning the value to be used
+ * to complete this CompletableFuture
+ * @return this CompletableFuture
+ * @since 9
+ */
+
+public java.util.concurrent.CompletableFuture<T> completeAsync(java.util.function.Supplier<? extends T> supplier) { throw new RuntimeException("Stub!"); }
+
+/**
+ * Exceptionally completes this CompletableFuture with
+ * a {@link java.util.concurrent.TimeoutException TimeoutException} if not otherwise completed
+ * before the given timeout.
+ *
+ * @param timeout how long to wait before completing exceptionally
+ *        with a TimeoutException, in units of {@code unit}
+ * @param unit a {@code TimeUnit} determining how to interpret the
+ *        {@code timeout} parameter
+ * @return this CompletableFuture
+ * @since 9
+ */
+
+public java.util.concurrent.CompletableFuture<T> orTimeout(long timeout, java.util.concurrent.TimeUnit unit) { throw new RuntimeException("Stub!"); }
+
+/**
+ * Completes this CompletableFuture with the given value if not
+ * otherwise completed before the given timeout.
+ *
+ * @param value the value to use upon timeout
+ * @param timeout how long to wait before completing normally
+ *        with the given value, in units of {@code unit}
+ * @param unit a {@code TimeUnit} determining how to interpret the
+ *        {@code timeout} parameter
+ * @return this CompletableFuture
+ * @since 9
+ */
+
+public java.util.concurrent.CompletableFuture<T> completeOnTimeout(T value, long timeout, java.util.concurrent.TimeUnit unit) { throw new RuntimeException("Stub!"); }
+
+/**
+ * Returns a new Executor that submits a task to the given base
+ * executor after the given delay (or no delay if non-positive).
+ * Each delay commences upon invocation of the returned executor's
+ * {@code execute} method.
+ *
+ * @param delay how long to delay, in units of {@code unit}
+ * @param unit a {@code TimeUnit} determining how to interpret the
+ *        {@code delay} parameter
+ * @param executor the base executor
+ * @return the new delayed executor
+ * @since 9
+ */
+
+public static java.util.concurrent.Executor delayedExecutor(long delay, java.util.concurrent.TimeUnit unit, java.util.concurrent.Executor executor) { throw new RuntimeException("Stub!"); }
+
+/**
+ * Returns a new Executor that submits a task to the default
+ * executor after the given delay (or no delay if non-positive).
+ * Each delay commences upon invocation of the returned executor's
+ * {@code execute} method.
+ *
+ * @param delay how long to delay, in units of {@code unit}
+ * @param unit a {@code TimeUnit} determining how to interpret the
+ *        {@code delay} parameter
+ * @return the new delayed executor
+ * @since 9
+ */
+
+public static java.util.concurrent.Executor delayedExecutor(long delay, java.util.concurrent.TimeUnit unit) { throw new RuntimeException("Stub!"); }
+
+/**
+ * Returns a new CompletionStage that is already completed with
+ * the given value and supports only those methods in
+ * interface {@link java.util.concurrent.CompletionStage CompletionStage}.
+ *
+ * @param value the value
+ * @param <U> the type of the value
+ * @return the completed CompletionStage
+ * @since 9
+ */
+
+public static <U> java.util.concurrent.CompletionStage<U> completedStage(U value) { throw new RuntimeException("Stub!"); }
+
+/**
+ * Returns a new CompletableFuture that is already completed
+ * exceptionally with the given exception.
+ *
+ * @param ex the exception
+ * @param <U> the type of the value
+ * @return the exceptionally completed CompletableFuture
+ * @since 9
+ */
+
+public static <U> java.util.concurrent.CompletableFuture<U> failedFuture(java.lang.Throwable ex) { throw new RuntimeException("Stub!"); }
+
+/**
+ * Returns a new CompletionStage that is already completed
+ * exceptionally with the given exception and supports only those
+ * methods in interface {@link java.util.concurrent.CompletionStage CompletionStage}.
+ *
+ * @param ex the exception
+ * @param <U> the type of the value
+ * @return the exceptionally completed CompletionStage
+ * @since 9
+ */
+
+public static <U> java.util.concurrent.CompletionStage<U> failedStage(java.lang.Throwable ex) { throw new RuntimeException("Stub!"); }
 /**
  * A marker interface identifying asynchronous tasks produced by
  * {@code async} methods. This may be useful for monitoring,
