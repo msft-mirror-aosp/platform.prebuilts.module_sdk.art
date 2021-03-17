@@ -79,3 +79,11 @@ soong_config_module_type {
     bool_variables: ["source_build"],
     properties: ["prefer"],
 }
+
+soong_config_module_type {
+    name: "art_prebuilt_prebuilt_boot_image",
+    module_type: "prebuilt_boot_image",
+    config_namespace: "art_module",
+    bool_variables: ["source_build"],
+    properties: ["prefer"],
+}
