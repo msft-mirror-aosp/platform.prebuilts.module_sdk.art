@@ -1366,7 +1366,8 @@ public static <K, V> java.util.Map.Entry<K,V> entry(@androidx.annotation.Recentl
  * @since 10
  */
 
-public static <K, V> java.util.Map<K,V> copyOf(java.util.Map<? extends K,? extends V> map) { throw new RuntimeException("Stub!"); }
+@androidx.annotation.RecentlyNonNull
+public static <K, V> java.util.Map<K,V> copyOf(@androidx.annotation.RecentlyNonNull java.util.Map<? extends K,? extends V> map) { throw new RuntimeException("Stub!"); }
 /**
  * A map entry (key-value pair).  The {@code Map.entrySet} method returns
  * a collection-view of the map, whose elements are of this class.  The

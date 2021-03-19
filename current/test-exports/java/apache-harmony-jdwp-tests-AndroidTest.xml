@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<!-- Copyright (C) 2015 The Android Open Source Project
+<!-- Copyright (C) 2018 The Android Open Source Project
 
      Licensed under the Apache License, Version 2.0 (the "License");
      you may not use this file except in compliance with the License.
@@ -13,8 +13,21 @@
      See the License for the specific language governing permissions and
      limitations under the License.
 -->
-<configuration description="Base config for JDWP testing in CTS">
-    <include name="common-config" />
-    <!-- Removes temporary dalvik-cache directory created by JDWP tests -->
-    <option name="run-command:teardown-command" value="rm -rf /data/local/tmp/dalvik-cache" />
+<!-- This test config file is auto-generated. -->
+<configuration description="Runs apache-harmony-jdwp-tests.">
+    <option name="test-suite-tag" value="apct" />
+    <option name="test-suite-tag" value="apct-junit" />
+    <target_preparer class="com.android.compatibility.common.tradefed.targetprep.FilePusher">
+        <option name="cleanup" value="true" />
+        <option name="push" value="cts-dalvik-device-test-runner.jar->/data/local/tmp/apache-harmony-jdwp-tests/cts-dalvik-device-test-runner.jar" />
+        <option name="push" value="apache-harmony-jdwp-tests.jar->/data/local/tmp/apache-harmony-jdwp-tests/apache-harmony-jdwp-tests.jar" />
+    </target_preparer>
+
+    
+
+    <test class="com.android.compatibility.testtype.DalvikTest" >
+        <option name="run-name" value="apache-harmony-jdwp-tests" />
+        <option name="classpath" value="/data/local/tmp/apache-harmony-jdwp-tests/apache-harmony-jdwp-tests.jar" />
+        <option name="classpath" value="/data/local/tmp/apache-harmony-jdwp-tests/cts-dalvik-device-test-runner.jar" />
+    </test>
 </configuration>
