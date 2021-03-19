@@ -1,23 +1,6 @@
 // This is auto-generated. DO NOT EDIT.
 
 // Soong config variable stanza added by packages/modules/ArtPrebuilt/update-art-module-prebuilts.py.
-package {
-    // See: http://go/android-license-faq
-    // A large-scale-change added 'default_applicable_licenses' to import
-    // all of the 'license_kinds' from "prebuilts_module_sdk_art_license"
-    // to get the below license kinds:
-    //   SPDX-license-identifier-Apache-2.0
-    //   SPDX-license-identifier-BSD
-    //   SPDX-license-identifier-CC0-1.0
-    //   SPDX-license-identifier-GPL-2.0
-    //   SPDX-license-identifier-ISC
-    //   SPDX-license-identifier-MIT
-    //   SPDX-license-identifier-W3C
-    //   SPDX-license-identifier-Zlib
-    //   legacy_unencumbered
-    default_applicable_licenses: ["prebuilts_module_sdk_art_license"],
-}
-
 soong_config_module_type_import {
     from: "prebuilts/module_sdk/art/SoongConfig.bp",
     module_types: [
@@ -28,7 +11,46 @@ soong_config_module_type_import {
         "art_prebuilt_java_import",
         "art_prebuilt_java_sdk_library_import",
         "art_prebuilt_java_system_modules_import",
+        "art_prebuilt_prebuilt_boot_image",
     ],
+}
+
+prebuilt_boot_image {
+    name: "art-module-sdk_art-boot-image@current",
+    sdk_member_name: "art-boot-image",
+    visibility: [
+        "//art/build/apex",
+        "//art/build/boot",
+        "//art/build/sdk",
+        "//prebuilts:__subpackages__",
+    ],
+    apex_available: [
+        "com.android.art",
+        "com.android.art.debug",
+    ],
+    image_name: "art",
+}
+
+art_prebuilt_prebuilt_boot_image {
+    name: "art-boot-image",
+    // Do not prefer prebuilt if SOONG_CONFIG_art_module_source_build is true.
+    prefer: true,
+    soong_config_variables: {
+        source_build: {
+            prefer: false,
+        },
+    },
+    visibility: [
+        "//art/build/apex",
+        "//art/build/boot",
+        "//art/build/sdk",
+        "//prebuilts:__subpackages__",
+    ],
+    apex_available: [
+        "com.android.art",
+        "com.android.art.debug",
+    ],
+    image_name: "art",
 }
 
 java_import {
@@ -1208,233 +1230,6 @@ art_prebuilt_cc_prebuilt_library {
     },
 }
 
-cc_prebuilt_library {
-    name: "art-module-sdk_libsigchain@current",
-    sdk_member_name: "libsigchain",
-    visibility: [
-        "//art:__subpackages__",
-        "//frameworks/base/cmds/app_process",
-        "//prebuilts:__subpackages__",
-    ],
-    apex_available: [
-        "//apex_available:platform",
-        "com.android.art",
-        "com.android.art.debug",
-    ],
-    host_supported: true,
-    installable: false,
-    compile_multilib: "both",
-    target: {
-        host: {
-            enabled: false,
-        },
-        android: {
-            export_include_dirs: [
-                "android/include/art/sigchainlib",
-                "android/include/prebuilts/runtime/mainline/runtime/sdk/common_os/include/bionic/libc/async_safe/include",
-                "android/include/prebuilts/runtime/mainline/runtime/sdk/common_os/include/system/logging/liblog/include",
-            ],
-        },
-        android_arm64: {
-            export_system_include_dirs: [
-                "android/include/prebuilts/runtime/mainline/runtime/sdk/android/arm64/include/bionic/libc/include",
-                "android/include/prebuilts/runtime/mainline/runtime/sdk/android/arm64/include/bionic/libc/kernel/uapi",
-                "android/include/prebuilts/runtime/mainline/runtime/sdk/android/arm64/include/bionic/libc/kernel/android/scsi",
-                "android/include/prebuilts/runtime/mainline/runtime/sdk/android/arm64/include/bionic/libc/kernel/android/uapi",
-                "android/include/prebuilts/runtime/mainline/runtime/sdk/android/arm64/include/bionic/libc/kernel/uapi/asm-arm64",
-            ],
-            static: {
-                srcs: ["android/arm64/lib/libsigchain.a"],
-            },
-            shared: {
-                srcs: ["android/arm64/lib/libsigchain.so"],
-            },
-        },
-        android_x86_64: {
-            export_system_include_dirs: [
-                "android/include/prebuilts/runtime/mainline/runtime/sdk/android/x86_64/include/bionic/libc/include",
-                "android/include/prebuilts/runtime/mainline/runtime/sdk/android/x86_64/include/bionic/libc/kernel/uapi",
-                "android/include/prebuilts/runtime/mainline/runtime/sdk/android/x86_64/include/bionic/libc/kernel/android/scsi",
-                "android/include/prebuilts/runtime/mainline/runtime/sdk/android/x86_64/include/bionic/libc/kernel/android/uapi",
-                "android/include/prebuilts/runtime/mainline/runtime/sdk/android/x86_64/include/bionic/libc/kernel/uapi/asm-x86",
-            ],
-            static: {
-                srcs: ["android/x86_64/lib/libsigchain.a"],
-            },
-            shared: {
-                srcs: ["android/x86_64/lib/libsigchain.so"],
-            },
-        },
-        android_arm: {
-            export_system_include_dirs: [
-                "android/include/prebuilts/runtime/mainline/runtime/sdk/android/arm/include/bionic/libc/include",
-                "android/include/prebuilts/runtime/mainline/runtime/sdk/android/arm/include/bionic/libc/kernel/uapi",
-                "android/include/prebuilts/runtime/mainline/runtime/sdk/android/arm/include/bionic/libc/kernel/android/scsi",
-                "android/include/prebuilts/runtime/mainline/runtime/sdk/android/arm/include/bionic/libc/kernel/android/uapi",
-                "android/include/prebuilts/runtime/mainline/runtime/sdk/android/arm/include/bionic/libc/kernel/uapi/asm-arm",
-            ],
-            static: {
-                srcs: ["android/arm/lib/libsigchain.a"],
-            },
-            shared: {
-                srcs: ["android/arm/lib/libsigchain.so"],
-            },
-        },
-        android_x86: {
-            export_system_include_dirs: [
-                "android/include/prebuilts/runtime/mainline/runtime/sdk/android/x86/include/bionic/libc/include",
-                "android/include/prebuilts/runtime/mainline/runtime/sdk/android/x86/include/bionic/libc/kernel/uapi",
-                "android/include/prebuilts/runtime/mainline/runtime/sdk/android/x86/include/bionic/libc/kernel/android/scsi",
-                "android/include/prebuilts/runtime/mainline/runtime/sdk/android/x86/include/bionic/libc/kernel/android/uapi",
-                "android/include/prebuilts/runtime/mainline/runtime/sdk/android/x86/include/bionic/libc/kernel/uapi/asm-x86",
-            ],
-            static: {
-                srcs: ["android/x86/lib/libsigchain.a"],
-            },
-            shared: {
-                srcs: ["android/x86/lib/libsigchain.so"],
-            },
-        },
-        linux_glibc: {
-            export_include_dirs: ["linux_glibc/include/art/sigchainlib"],
-        },
-        linux_glibc_x86_64: {
-            enabled: true,
-            static: {
-                srcs: ["linux_glibc/x86_64/lib/libsigchain.a"],
-            },
-            shared: {
-                srcs: ["linux_glibc/x86_64/lib/libsigchain.so"],
-            },
-        },
-        linux_glibc_x86: {
-            enabled: true,
-            static: {
-                srcs: ["linux_glibc/x86/lib/libsigchain.a"],
-            },
-            shared: {
-                srcs: ["linux_glibc/x86/lib/libsigchain.so"],
-            },
-        },
-    },
-}
-
-art_prebuilt_cc_prebuilt_library {
-    name: "libsigchain",
-    // Do not prefer prebuilt if SOONG_CONFIG_art_module_source_build is true.
-    prefer: true,
-    soong_config_variables: {
-        source_build: {
-            prefer: false,
-        },
-    },
-    visibility: [
-        "//art:__subpackages__",
-        "//frameworks/base/cmds/app_process",
-        "//prebuilts:__subpackages__",
-    ],
-    apex_available: [
-        "//apex_available:platform",
-        "com.android.art",
-        "com.android.art.debug",
-    ],
-    host_supported: true,
-    compile_multilib: "both",
-    target: {
-        host: {
-            enabled: false,
-        },
-        android: {
-            export_include_dirs: [
-                "android/include/art/sigchainlib",
-                "android/include/prebuilts/runtime/mainline/runtime/sdk/common_os/include/bionic/libc/async_safe/include",
-                "android/include/prebuilts/runtime/mainline/runtime/sdk/common_os/include/system/logging/liblog/include",
-            ],
-        },
-        android_arm64: {
-            export_system_include_dirs: [
-                "android/include/prebuilts/runtime/mainline/runtime/sdk/android/arm64/include/bionic/libc/include",
-                "android/include/prebuilts/runtime/mainline/runtime/sdk/android/arm64/include/bionic/libc/kernel/uapi",
-                "android/include/prebuilts/runtime/mainline/runtime/sdk/android/arm64/include/bionic/libc/kernel/android/scsi",
-                "android/include/prebuilts/runtime/mainline/runtime/sdk/android/arm64/include/bionic/libc/kernel/android/uapi",
-                "android/include/prebuilts/runtime/mainline/runtime/sdk/android/arm64/include/bionic/libc/kernel/uapi/asm-arm64",
-            ],
-            static: {
-                srcs: ["android/arm64/lib/libsigchain.a"],
-            },
-            shared: {
-                srcs: ["android/arm64/lib/libsigchain.so"],
-            },
-        },
-        android_x86_64: {
-            export_system_include_dirs: [
-                "android/include/prebuilts/runtime/mainline/runtime/sdk/android/x86_64/include/bionic/libc/include",
-                "android/include/prebuilts/runtime/mainline/runtime/sdk/android/x86_64/include/bionic/libc/kernel/uapi",
-                "android/include/prebuilts/runtime/mainline/runtime/sdk/android/x86_64/include/bionic/libc/kernel/android/scsi",
-                "android/include/prebuilts/runtime/mainline/runtime/sdk/android/x86_64/include/bionic/libc/kernel/android/uapi",
-                "android/include/prebuilts/runtime/mainline/runtime/sdk/android/x86_64/include/bionic/libc/kernel/uapi/asm-x86",
-            ],
-            static: {
-                srcs: ["android/x86_64/lib/libsigchain.a"],
-            },
-            shared: {
-                srcs: ["android/x86_64/lib/libsigchain.so"],
-            },
-        },
-        android_arm: {
-            export_system_include_dirs: [
-                "android/include/prebuilts/runtime/mainline/runtime/sdk/android/arm/include/bionic/libc/include",
-                "android/include/prebuilts/runtime/mainline/runtime/sdk/android/arm/include/bionic/libc/kernel/uapi",
-                "android/include/prebuilts/runtime/mainline/runtime/sdk/android/arm/include/bionic/libc/kernel/android/scsi",
-                "android/include/prebuilts/runtime/mainline/runtime/sdk/android/arm/include/bionic/libc/kernel/android/uapi",
-                "android/include/prebuilts/runtime/mainline/runtime/sdk/android/arm/include/bionic/libc/kernel/uapi/asm-arm",
-            ],
-            static: {
-                srcs: ["android/arm/lib/libsigchain.a"],
-            },
-            shared: {
-                srcs: ["android/arm/lib/libsigchain.so"],
-            },
-        },
-        android_x86: {
-            export_system_include_dirs: [
-                "android/include/prebuilts/runtime/mainline/runtime/sdk/android/x86/include/bionic/libc/include",
-                "android/include/prebuilts/runtime/mainline/runtime/sdk/android/x86/include/bionic/libc/kernel/uapi",
-                "android/include/prebuilts/runtime/mainline/runtime/sdk/android/x86/include/bionic/libc/kernel/android/scsi",
-                "android/include/prebuilts/runtime/mainline/runtime/sdk/android/x86/include/bionic/libc/kernel/android/uapi",
-                "android/include/prebuilts/runtime/mainline/runtime/sdk/android/x86/include/bionic/libc/kernel/uapi/asm-x86",
-            ],
-            static: {
-                srcs: ["android/x86/lib/libsigchain.a"],
-            },
-            shared: {
-                srcs: ["android/x86/lib/libsigchain.so"],
-            },
-        },
-        linux_glibc: {
-            export_include_dirs: ["linux_glibc/include/art/sigchainlib"],
-        },
-        linux_glibc_x86_64: {
-            enabled: true,
-            static: {
-                srcs: ["linux_glibc/x86_64/lib/libsigchain.a"],
-            },
-            shared: {
-                srcs: ["linux_glibc/x86_64/lib/libsigchain.so"],
-            },
-        },
-        linux_glibc_x86: {
-            enabled: true,
-            static: {
-                srcs: ["linux_glibc/x86/lib/libsigchain.a"],
-            },
-            shared: {
-                srcs: ["linux_glibc/x86/lib/libsigchain.so"],
-            },
-        },
-    },
-}
-
 cc_prebuilt_library_shared {
     name: "art-module-sdk_libandroidio@current",
     sdk_member_name: "libandroidio",
@@ -1448,8 +1243,6 @@ cc_prebuilt_library_shared {
     apex_available: [
         "com.android.art",
         "com.android.art.debug",
-        "com.android.conscrypt",
-        "test_com.android.conscrypt",
     ],
     host_supported: true,
     installable: false,
@@ -1503,8 +1296,6 @@ art_prebuilt_cc_prebuilt_library_shared {
     apex_available: [
         "com.android.art",
         "com.android.art.debug",
-        "com.android.conscrypt",
-        "test_com.android.conscrypt",
     ],
     host_supported: true,
     compile_multilib: "both",
@@ -1944,6 +1735,103 @@ art_prebuilt_cc_prebuilt_library_shared {
         linux_glibc_x86: {
             enabled: true,
             srcs: ["linux_glibc/x86/lib/libnativeloader.so"],
+        },
+    },
+}
+
+cc_prebuilt_library_shared {
+    name: "art-module-sdk_libsigchain@current",
+    sdk_member_name: "libsigchain",
+    visibility: [
+        "//art:__subpackages__",
+        "//frameworks/base/cmds/app_process",
+        "//prebuilts:__subpackages__",
+    ],
+    apex_available: [
+        "com.android.art",
+        "com.android.art.debug",
+    ],
+    host_supported: true,
+    installable: false,
+    compile_multilib: "both",
+    export_include_dirs: ["common_os/include/art/sigchainlib"],
+    stubs: {
+        versions: ["1"],
+    },
+    target: {
+        host: {
+            enabled: false,
+        },
+        android_arm64: {
+            srcs: ["android/arm64/lib/libsigchain.so"],
+        },
+        android_x86_64: {
+            srcs: ["android/x86_64/lib/libsigchain.so"],
+        },
+        android_arm: {
+            srcs: ["android/arm/lib/libsigchain.so"],
+        },
+        android_x86: {
+            srcs: ["android/x86/lib/libsigchain.so"],
+        },
+        linux_glibc_x86_64: {
+            enabled: true,
+            srcs: ["linux_glibc/x86_64/lib/libsigchain.so"],
+        },
+        linux_glibc_x86: {
+            enabled: true,
+            srcs: ["linux_glibc/x86/lib/libsigchain.so"],
+        },
+    },
+}
+
+art_prebuilt_cc_prebuilt_library_shared {
+    name: "libsigchain",
+    // Do not prefer prebuilt if SOONG_CONFIG_art_module_source_build is true.
+    prefer: true,
+    soong_config_variables: {
+        source_build: {
+            prefer: false,
+        },
+    },
+    visibility: [
+        "//art:__subpackages__",
+        "//frameworks/base/cmds/app_process",
+        "//prebuilts:__subpackages__",
+    ],
+    apex_available: [
+        "com.android.art",
+        "com.android.art.debug",
+    ],
+    host_supported: true,
+    compile_multilib: "both",
+    export_include_dirs: ["common_os/include/art/sigchainlib"],
+    stubs: {
+        versions: ["1"],
+    },
+    target: {
+        host: {
+            enabled: false,
+        },
+        android_arm64: {
+            srcs: ["android/arm64/lib/libsigchain.so"],
+        },
+        android_x86_64: {
+            srcs: ["android/x86_64/lib/libsigchain.so"],
+        },
+        android_arm: {
+            srcs: ["android/arm/lib/libsigchain.so"],
+        },
+        android_x86: {
+            srcs: ["android/x86/lib/libsigchain.so"],
+        },
+        linux_glibc_x86_64: {
+            enabled: true,
+            srcs: ["linux_glibc/x86_64/lib/libsigchain.so"],
+        },
+        linux_glibc_x86: {
+            enabled: true,
+            srcs: ["linux_glibc/x86/lib/libsigchain.so"],
         },
     },
 }
@@ -2486,12 +2374,10 @@ sdk_snapshot {
     name: "art-module-sdk@current",
     visibility: ["//art:__subpackages__"],
     host_supported: true,
-    native_libs: [
-        "art-module-sdk_libdexfile_support@current",
-        "art-module-sdk_libsigchain@current",
-    ],
+    native_libs: ["art-module-sdk_libdexfile_support@current"],
     target: {
         android: {
+            boot_images: ["art-module-sdk_art-boot-image@current"],
             java_boot_libs: [
                 "art-module-sdk_apache-xml@current",
                 "art-module-sdk_bouncycastle@current",
@@ -2526,6 +2412,7 @@ sdk_snapshot {
                 "art-module-sdk_libnativebridge@current",
                 "art-module-sdk_libnativehelper@current",
                 "art-module-sdk_libnativeloader@current",
+                "art-module-sdk_libsigchain@current",
                 "art-module-sdk_libnativebridge_lazy@current",
                 "art-module-sdk_libnativehelper_compat_libc++@current",
                 "art-module-sdk_libnativeloader_lazy@current",
@@ -2549,6 +2436,7 @@ sdk_snapshot {
                 "art-module-sdk_libnativebridge@current",
                 "art-module-sdk_libnativehelper@current",
                 "art-module-sdk_libnativeloader@current",
+                "art-module-sdk_libsigchain@current",
             ],
             native_static_libs: [
                 "art-module-sdk_libdexfile_external_static@current",
