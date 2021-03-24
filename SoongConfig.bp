@@ -87,3 +87,11 @@ soong_config_module_type {
     bool_variables: ["source_build"],
     properties: ["prefer"],
 }
+
+soong_config_module_type {
+    name: "art_prebuilt_prebuilt_platform_compat_config",
+    module_type: "prebuilt_platform_compat_config",
+    config_namespace: "art_module",
+    bool_variables: ["source_build"],
+    properties: ["prefer"],
+}
