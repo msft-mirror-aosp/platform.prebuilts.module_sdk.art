@@ -28,46 +28,7 @@ soong_config_module_type_import {
         "art_prebuilt_java_import",
         "art_prebuilt_java_sdk_library_import",
         "art_prebuilt_java_system_modules_import",
-        "art_prebuilt_prebuilt_boot_image",
     ],
-}
-
-prebuilt_boot_image {
-    name: "art-module-sdk_art-boot-image@current",
-    sdk_member_name: "art-boot-image",
-    visibility: [
-        "//art/build/apex",
-        "//art/build/boot",
-        "//art/build/sdk",
-        "//prebuilts:__subpackages__",
-    ],
-    apex_available: [
-        "com.android.art",
-        "com.android.art.debug",
-    ],
-    image_name: "art",
-}
-
-art_prebuilt_prebuilt_boot_image {
-    name: "art-boot-image",
-    // Do not prefer prebuilt if SOONG_CONFIG_art_module_source_build is true.
-    prefer: true,
-    soong_config_variables: {
-        source_build: {
-            prefer: false,
-        },
-    },
-    visibility: [
-        "//art/build/apex",
-        "//art/build/boot",
-        "//art/build/sdk",
-        "//prebuilts:__subpackages__",
-    ],
-    apex_available: [
-        "com.android.art",
-        "com.android.art.debug",
-    ],
-    image_name: "art",
 }
 
 java_import {
@@ -2394,7 +2355,6 @@ sdk_snapshot {
     native_libs: ["art-module-sdk_libdexfile_support@current"],
     target: {
         android: {
-            boot_images: ["art-module-sdk_art-boot-image@current"],
             java_boot_libs: [
                 "art-module-sdk_apache-xml@current",
                 "art-module-sdk_bouncycastle@current",
