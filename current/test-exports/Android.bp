@@ -1,10 +1,6 @@
 // This is auto-generated. DO NOT EDIT.
 
 // Soong config variable stanza added by packages/modules/ArtPrebuilt/update-art-module-prebuilts.py.
-package {
-    default_applicable_licenses: ["Android-Apache-2.0"],
-}
-
 soong_config_module_type_import {
     from: "prebuilts/module_sdk/art/SoongConfig.bp",
     module_types: [
@@ -237,28 +233,21 @@ art_prebuilt_java_import {
 }
 
 java_import {
-    name: "art-module-test-exports_core-libart@current",
-    sdk_member_name: "core-libart",
+    name: "art-module-test-exports_core-libart-for-host@current",
+    sdk_member_name: "core-libart-for-host",
     visibility: [
-        "//art/build/apex",
         "//art/build/sdk",
         "//external/robolectric-shadows",
-        "//external/wycheproof",
         "//frameworks/layoutlib",
         "//libcore",
-        "//libcore/benchmarks",
-        "//packages/modules/ArtPrebuilt",
         "//prebuilts:__subpackages__",
     ],
-    apex_available: [
-        "com.android.art",
-        "com.android.art.debug",
-    ],
-    jars: ["java/core-libart.jar"],
+    apex_available: ["//apex_available:platform"],
+    jars: ["java/core-libart-for-host.jar"],
 }
 
 art_prebuilt_java_import {
-    name: "core-libart",
+    name: "core-libart-for-host",
     // Do not prefer prebuilt if SOONG_CONFIG_art_module_source_build is true.
     prefer: true,
     soong_config_variables: {
@@ -267,45 +256,31 @@ art_prebuilt_java_import {
         },
     },
     visibility: [
-        "//art/build/apex",
         "//art/build/sdk",
         "//external/robolectric-shadows",
-        "//external/wycheproof",
         "//frameworks/layoutlib",
         "//libcore",
-        "//libcore/benchmarks",
-        "//packages/modules/ArtPrebuilt",
         "//prebuilts:__subpackages__",
     ],
-    apex_available: [
-        "com.android.art",
-        "com.android.art.debug",
-    ],
-    jars: ["java/core-libart.jar"],
+    apex_available: ["//apex_available:platform"],
+    jars: ["java/core-libart-for-host.jar"],
 }
 
 java_import {
-    name: "art-module-test-exports_okhttp@current",
-    sdk_member_name: "okhttp",
+    name: "art-module-test-exports_okhttp-for-host@current",
+    sdk_member_name: "okhttp-for-host",
     visibility: [
-        "//art/build/apex",
         "//art/build/sdk",
-        "//external/grpc-grpc-java/okhttp",
         "//external/okhttp",
         "//external/robolectric-shadows",
-        "//libcore",
-        "//packages/modules/ArtPrebuilt",
         "//prebuilts:__subpackages__",
     ],
-    apex_available: [
-        "com.android.art",
-        "com.android.art.debug",
-    ],
-    jars: ["java/okhttp.jar"],
+    apex_available: ["//apex_available:platform"],
+    jars: ["java/okhttp-for-host.jar"],
 }
 
 art_prebuilt_java_import {
-    name: "okhttp",
+    name: "okhttp-for-host",
     // Do not prefer prebuilt if SOONG_CONFIG_art_module_source_build is true.
     prefer: true,
     soong_config_variables: {
@@ -314,20 +289,13 @@ art_prebuilt_java_import {
         },
     },
     visibility: [
-        "//art/build/apex",
         "//art/build/sdk",
-        "//external/grpc-grpc-java/okhttp",
         "//external/okhttp",
         "//external/robolectric-shadows",
-        "//libcore",
-        "//packages/modules/ArtPrebuilt",
         "//prebuilts:__subpackages__",
     ],
-    apex_available: [
-        "com.android.art",
-        "com.android.art.debug",
-    ],
-    jars: ["java/okhttp.jar"],
+    apex_available: ["//apex_available:platform"],
+    jars: ["java/okhttp-for-host.jar"],
 }
 
 java_import {
@@ -709,8 +677,8 @@ module_exports_snapshot {
         "art-module-test-exports_okhttp-tests-nojarjar@current",
         "art-module-test-exports_art_cts_jvmti_test_library@current",
         "art-module-test-exports_expected_cts_outputs@current",
-        "art-module-test-exports_core-libart@current",
-        "art-module-test-exports_okhttp@current",
+        "art-module-test-exports_core-libart-for-host@current",
+        "art-module-test-exports_okhttp-for-host@current",
         "art-module-test-exports_libcore-expectations-knownfailures-jar@current",
         "art-module-test-exports_libcore-expectations-virtualdeviceknownfailures-jar@current",
         "art-module-test-exports_okhttp-nojarjar@current",
