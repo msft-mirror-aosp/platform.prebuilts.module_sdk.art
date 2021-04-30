@@ -143,6 +143,17 @@ static { AF_UNIX = 0; }
 public static final int AF_UNSPEC;
 static { AF_UNSPEC = 0; }
 
+/**
+ * The virt-vsock address family, linux specific.
+ * It is used with {@code struct sockaddr_vm} from uapi/linux/vm_sockets.h.
+ *
+ * @see <a href="https://man7.org/linux/man-pages/man7/vsock.7.html">vsock(7)</a>
+ * @see android.system.VmSocketAddress
+ */
+
+public static final int AF_VSOCK;
+static { AF_VSOCK = 0; }
+
 public static final int AI_ADDRCONFIG;
 static { AI_ADDRCONFIG = 0; }
 
@@ -1348,6 +1359,46 @@ static { UDP_GRO = 0; }
 
 public static final int UDP_SEGMENT;
 static { UDP_SEGMENT = 0; }
+
+/**
+ * The virtio-vsock {@code svmCid} value to listens for all CIDs.
+ *
+ * @see <a href="https://man7.org/linux/man-pages/man7/vsock.7.html">vsock(7)</a>
+ * @see android.system.VmSocketAddress
+ */
+
+public static final int VMADDR_CID_ANY;
+static { VMADDR_CID_ANY = 0; }
+
+/**
+ * The virtio-vsock {@code svmCid} value for loopback communication.
+ *
+ * @see <a href="https://man7.org/linux/man-pages/man7/vsock.7.html">vsock(7)</a>
+ * @see android.system.VmSocketAddress
+ */
+
+public static final int VMADDR_CID_HOST;
+static { VMADDR_CID_HOST = 0; }
+
+/**
+ * The virtio-vsock {@code svmCid} value for host communication.
+ *
+ * @see <a href="https://man7.org/linux/man-pages/man7/vsock.7.html">vsock(7)</a>
+ * @see android.system.VmSocketAddress
+ */
+
+public static final int VMADDR_CID_LOCAL;
+static { VMADDR_CID_LOCAL = 0; }
+
+/**
+ * The virtio-vsock {@code svmPort} value to bind for any available port.
+ *
+ * @see <a href="https://man7.org/linux/man-pages/man7/vsock.7.html">vsock(7)</a>
+ * @see android.system.VmSocketAddress
+ */
+
+public static final int VMADDR_PORT_ANY;
+static { VMADDR_PORT_ANY = 0; }
 
 public static final int WCONTINUED;
 static { WCONTINUED = 0; }
