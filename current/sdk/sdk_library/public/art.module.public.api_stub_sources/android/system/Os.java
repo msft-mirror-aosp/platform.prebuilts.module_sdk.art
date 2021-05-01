@@ -462,6 +462,12 @@ public static int recvfrom(java.io.FileDescriptor fd, java.nio.ByteBuffer buffer
 public static int recvfrom(java.io.FileDescriptor fd, byte[] bytes, int byteOffset, int byteCount, int flags, java.net.InetSocketAddress srcAddress) throws android.system.ErrnoException, java.net.SocketException { throw new RuntimeException("Stub!"); }
 
 /**
+ * See <a href="http://man7.org/linux/man-pages/man2/recvmsg.2.html">recvmsg(2)</a>.
+ */
+
+public static int recvmsg(@android.annotation.NonNull java.io.FileDescriptor fd, @android.annotation.NonNull android.system.StructMsghdr msg, int flags) throws android.system.ErrnoException, java.net.SocketException { throw new RuntimeException("Stub!"); }
+
+/**
  * See <a href="http://man7.org/linux/man-pages/man3/remove.3.html">remove(3)</a>.
  */
 
@@ -484,6 +490,12 @@ public static void rename(java.lang.String oldPath, java.lang.String newPath) th
  */
 
 public static long sendfile(java.io.FileDescriptor outFd, java.io.FileDescriptor inFd, android.system.Int64Ref offset, long byteCount) throws android.system.ErrnoException { throw new RuntimeException("Stub!"); }
+
+/**
+ * See <a href="http://man7.org/linux/man-pages/man2/sendmsg.2.html">sendmsg(2)</a>.
+ */
+
+public static int sendmsg(@android.annotation.NonNull java.io.FileDescriptor fd, @android.annotation.NonNull android.system.StructMsghdr msg, int flags) throws android.system.ErrnoException, java.net.SocketException { throw new RuntimeException("Stub!"); }
 
 /**
  * See <a href="http://man7.org/linux/man-pages/man2/sendto.2.html">sendto(2)</a>.
