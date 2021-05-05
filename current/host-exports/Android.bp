@@ -1,6 +1,5 @@
 // This is auto-generated. DO NOT EDIT.
 
-// Soong config variable stanza added by vendor/unbundled_google/modules/ArtGooglePrebuilt/update-art-module-prebuilts.py.
 package {
     // See: http://go/android-license-faq
     // A large-scale-change added 'default_applicable_licenses' to import
@@ -12,6 +11,7 @@ package {
     default_applicable_licenses: ["prebuilts_module_sdk_art_license"],
 }
 
+// Soong config variable stanza added by vendor/unbundled_google/modules/ArtGooglePrebuilt/update-art-module-prebuilts.py.
 soong_config_module_type_import {
     from: "prebuilts/module_sdk/art/SoongConfig.bp",
     module_types: [
