@@ -336,7 +336,7 @@ public boolean isReachable(int timeout) throws java.io.IOException { throw new R
  * @since 1.5
  */
 
-public boolean isReachable(java.net.NetworkInterface netif, int ttl, int timeout) throws java.io.IOException { throw new RuntimeException("Stub!"); }
+public boolean isReachable(@androidx.annotation.RecentlyNullable java.net.NetworkInterface netif, int ttl, int timeout) throws java.io.IOException { throw new RuntimeException("Stub!"); }
 
 /**
  * Gets the host name for this IP address.
@@ -364,6 +364,7 @@ public boolean isReachable(java.net.NetworkInterface netif, int ttl, int timeout
  * @see SecurityManager#checkConnect
  */
 
+@androidx.annotation.RecentlyNonNull
 public java.lang.String getHostName() { throw new RuntimeException("Stub!"); }
 
 /**
@@ -388,6 +389,7 @@ public java.lang.String getHostName() { throw new RuntimeException("Stub!"); }
  * @since 1.4
  */
 
+@androidx.annotation.RecentlyNonNull
 public java.lang.String getCanonicalHostName() { throw new RuntimeException("Stub!"); }
 
 /**
@@ -407,6 +409,7 @@ public byte[] getAddress() { throw new RuntimeException("Stub!"); }
  * @since   JDK1.0.2
  */
 
+@androidx.annotation.RecentlyNullable
 public java.lang.String getHostAddress() { throw new RuntimeException("Stub!"); }
 
 /**
@@ -434,7 +437,7 @@ public int hashCode() { throw new RuntimeException("Stub!"); }
  * @see     java.net.InetAddress#getAddress()
  */
 
-public boolean equals(java.lang.Object obj) { throw new RuntimeException("Stub!"); }
+public boolean equals(@androidx.annotation.RecentlyNullable java.lang.Object obj) { throw new RuntimeException("Stub!"); }
 
 /**
  * Converts this IP address to a {@code String}. The
@@ -447,6 +450,7 @@ public boolean equals(java.lang.Object obj) { throw new RuntimeException("Stub!"
  * @return  a string representation of this IP address.
  */
 
+@androidx.annotation.RecentlyNonNull
 public java.lang.String toString() { throw new RuntimeException("Stub!"); }
 
 /**
@@ -472,7 +476,8 @@ public java.lang.String toString() { throw new RuntimeException("Stub!"); }
  * @since 1.4
  */
 
-public static java.net.InetAddress getByAddress(java.lang.String host, byte[] addr) throws java.net.UnknownHostException { throw new RuntimeException("Stub!"); }
+@androidx.annotation.RecentlyNonNull
+public static java.net.InetAddress getByAddress(@androidx.annotation.RecentlyNullable java.lang.String host, byte[] addr) throws java.net.UnknownHostException { throw new RuntimeException("Stub!"); }
 
 /**
  * Determines the IP address of a host, given the host's name.
@@ -503,7 +508,8 @@ public static java.net.InetAddress getByAddress(java.lang.String host, byte[] ad
  *             and its checkConnect method doesn't allow the operation
  */
 
-public static java.net.InetAddress getByName(java.lang.String host) throws java.net.UnknownHostException { throw new RuntimeException("Stub!"); }
+@androidx.annotation.RecentlyNonNull
+public static java.net.InetAddress getByName(@androidx.annotation.RecentlyNullable java.lang.String host) throws java.net.UnknownHostException { throw new RuntimeException("Stub!"); }
 
 /**
  * Given the name of a host, returns an array of its IP addresses,
@@ -545,7 +551,7 @@ public static java.net.InetAddress getByName(java.lang.String host) throws java.
  * @see SecurityManager#checkConnect
  */
 
-public static java.net.InetAddress[] getAllByName(java.lang.String host) throws java.net.UnknownHostException { throw new RuntimeException("Stub!"); }
+public static java.net.InetAddress[] getAllByName(@androidx.annotation.RecentlyNullable java.lang.String host) throws java.net.UnknownHostException { throw new RuntimeException("Stub!"); }
 
 /**
  * Returns the loopback address.
@@ -559,6 +565,7 @@ public static java.net.InetAddress[] getAllByName(java.lang.String host) throws 
  * @since 1.7
  */
 
+@androidx.annotation.RecentlyNonNull
 public static java.net.InetAddress getLoopbackAddress() { throw new RuntimeException("Stub!"); }
 
 /**
@@ -578,6 +585,7 @@ public static java.net.InetAddress getLoopbackAddress() { throw new RuntimeExcep
  * @since 1.4
  */
 
+@androidx.annotation.RecentlyNonNull
 public static java.net.InetAddress getByAddress(byte[] addr) throws java.net.UnknownHostException { throw new RuntimeException("Stub!"); }
 
 /**
@@ -604,6 +612,7 @@ public static java.net.InetAddress getByAddress(byte[] addr) throws java.net.Unk
  * @see java.net.InetAddress#getByName(java.lang.String)
  */
 
+@androidx.annotation.RecentlyNonNull
 public static java.net.InetAddress getLocalHost() throws java.net.UnknownHostException { throw new RuntimeException("Stub!"); }
 }
 
