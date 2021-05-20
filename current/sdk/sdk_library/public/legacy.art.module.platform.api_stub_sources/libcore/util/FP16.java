@@ -89,7 +89,7 @@ package libcore.util;
  */
 
 @SuppressWarnings({"unchecked", "deprecation", "all"})
-public class FP16 {
+public final class FP16 {
 
 private FP16() { throw new RuntimeException("Stub!"); }
 

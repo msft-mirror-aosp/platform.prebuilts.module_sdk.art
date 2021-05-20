@@ -118,17 +118,21 @@ public default boolean isChangeEnabled(long changeId) { throw new RuntimeExcepti
 @SuppressWarnings({"unchecked", "deprecation", "all"})
 public static final class ChangeConfig {
 
-public ChangeConfig(java.util.Set<java.lang.Long> enabled, java.util.Set<java.lang.Long> disabled) { throw new RuntimeException("Stub!"); }
+public ChangeConfig(@android.annotation.NonNull java.util.Set<java.lang.Long> enabled, @android.annotation.NonNull java.util.Set<java.lang.Long> disabled) { throw new RuntimeException("Stub!"); }
 
 public boolean isEmpty() { throw new RuntimeException("Stub!"); }
 
-public long[] forceEnabledChangesArray() { throw new RuntimeException("Stub!"); }
+@android.annotation.NonNull
+public long[] getEnabledChangesArray() { throw new RuntimeException("Stub!"); }
 
-public long[] forceDisabledChangesArray() { throw new RuntimeException("Stub!"); }
+@android.annotation.NonNull
+public long[] getDisabledChangesArray() { throw new RuntimeException("Stub!"); }
 
-public java.util.Set<java.lang.Long> forceEnabledSet() { throw new RuntimeException("Stub!"); }
+@android.annotation.NonNull
+public java.util.Set<java.lang.Long> getEnabledSet() { throw new RuntimeException("Stub!"); }
 
-public java.util.Set<java.lang.Long> forceDisabledSet() { throw new RuntimeException("Stub!"); }
+@android.annotation.NonNull
+public java.util.Set<java.lang.Long> getDisabledSet() { throw new RuntimeException("Stub!"); }
 
 public boolean isForceEnabled(long changeId) { throw new RuntimeException("Stub!"); }
 

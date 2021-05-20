@@ -448,9 +448,12 @@ public java.util.Iterator<java.lang.String> keys() { throw new RuntimeException(
  *
  * See {@link #keys()}.
  *
+ * @return set of keys in this object
+ *
  * @hide.
  */
 
+@androidx.annotation.RecentlyNonNull
 public java.util.Set<java.lang.String> keySet() { throw new RuntimeException("Stub!"); }
 
 /**
