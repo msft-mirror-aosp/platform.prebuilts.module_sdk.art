@@ -57,8 +57,7 @@ public static void reportUnconditionalChange(long changeId) { throw new RuntimeE
  * {@code false}, the calling code should behave as it did in earlier releases.
  *
  * <p>When this method returns {@code true}, it will also report the change as
- * {@link #reportUnconditionalChange(long)} would, so there is no need to call that method
- * directly.
+ * {@link #reportUnconditionalChange(long)} would, so there is no need to call that method directly.
  *
  * @param changeId The ID of the compatibility change in question.
  * @return {@code true} if the change is enabled for the current app.
@@ -119,17 +118,21 @@ public default boolean isChangeEnabled(long changeId) { throw new RuntimeExcepti
 @SuppressWarnings({"unchecked", "deprecation", "all"})
 public static final class ChangeConfig {
 
-public ChangeConfig(java.util.Set<java.lang.Long> enabled, java.util.Set<java.lang.Long> disabled) { throw new RuntimeException("Stub!"); }
+public ChangeConfig(@android.annotation.NonNull java.util.Set<java.lang.Long> enabled, @android.annotation.NonNull java.util.Set<java.lang.Long> disabled) { throw new RuntimeException("Stub!"); }
 
 public boolean isEmpty() { throw new RuntimeException("Stub!"); }
 
-public long[] forceEnabledChangesArray() { throw new RuntimeException("Stub!"); }
+@android.annotation.NonNull
+public long[] getEnabledChangesArray() { throw new RuntimeException("Stub!"); }
 
-public long[] forceDisabledChangesArray() { throw new RuntimeException("Stub!"); }
+@android.annotation.NonNull
+public long[] getDisabledChangesArray() { throw new RuntimeException("Stub!"); }
 
-public java.util.Set<java.lang.Long> forceEnabledSet() { throw new RuntimeException("Stub!"); }
+@android.annotation.NonNull
+public java.util.Set<java.lang.Long> getEnabledSet() { throw new RuntimeException("Stub!"); }
 
-public java.util.Set<java.lang.Long> forceDisabledSet() { throw new RuntimeException("Stub!"); }
+@android.annotation.NonNull
+public java.util.Set<java.lang.Long> getDisabledSet() { throw new RuntimeException("Stub!"); }
 
 public boolean isForceEnabled(long changeId) { throw new RuntimeException("Stub!"); }
 

@@ -1,22 +1,6 @@
 // This is auto-generated. DO NOT EDIT.
 
-package {
-    // See: http://go/android-license-faq
-    // A large-scale-change added 'default_applicable_licenses' to import
-    // all of the 'license_kinds' from "prebuilts_module_sdk_art_license"
-    // to get the below license kinds:
-    //   SPDX-license-identifier-Apache-2.0
-    //   SPDX-license-identifier-BSD
-    //   SPDX-license-identifier-CC0-1.0
-    //   SPDX-license-identifier-GPL-2.0
-    //   SPDX-license-identifier-MIT
-    //   SPDX-license-identifier-W3C
-    //   SPDX-license-identifier-Zlib
-    //   legacy_unencumbered
-    default_applicable_licenses: ["prebuilts_module_sdk_art_license"],
-}
-
-// Soong config variable stanza added by vendor/unbundled_google/modules/ArtGooglePrebuilt/update-art-module-prebuilts.py.
+// Soong config variable stanza added by packages/modules/ArtPrebuilt/update-art-module-prebuilts.py.
 soong_config_module_type_import {
     from: "prebuilts/module_sdk/art/SoongConfig.bp",
     module_types: [
@@ -32,6 +16,12 @@ soong_config_module_type_import {
     ],
 }
 
+package {
+    // A default list here prevents the license LSC from adding its own list which would
+    // be unnecessary as every module in the sdk already has its own licenses property.
+    default_applicable_licenses: ["Android-Apache-2.0"],
+}
+
 prebuilt_bootclasspath_fragment {
     name: "art-module-sdk_art-bootclasspath-fragment@current",
     sdk_member_name: "art-bootclasspath-fragment",
@@ -45,6 +35,7 @@ prebuilt_bootclasspath_fragment {
         "com.android.art",
         "com.android.art.debug",
     ],
+    licenses: ["art-module-sdk_art_license@current"],
     image_name: "art",
     contents: [
         "art-module-sdk_core-oj@current",
@@ -63,6 +54,11 @@ prebuilt_bootclasspath_fragment {
         max_target_o_low_priority: ["hiddenapi/hiddenapi-max-target-o-low-priority.txt"],
         blocked: ["hiddenapi/hiddenapi-blocked.txt"],
         unsupported_packages: ["hiddenapi/hiddenapi-unsupported-packages.txt"],
+        stub_flags: "hiddenapi/stub-flags.csv",
+        annotation_flags: "hiddenapi/annotation-flags.csv",
+        metadata: "hiddenapi/metadata.csv",
+        index: "hiddenapi/index.csv",
+        all_flags: "hiddenapi/all-flags.csv",
     },
 }
 
@@ -85,6 +81,7 @@ art_prebuilt_prebuilt_bootclasspath_fragment {
         "com.android.art",
         "com.android.art.debug",
     ],
+    licenses: ["art-module-sdk_art_license"],
     image_name: "art",
     contents: [
         "core-oj",
@@ -103,6 +100,11 @@ art_prebuilt_prebuilt_bootclasspath_fragment {
         max_target_o_low_priority: ["hiddenapi/hiddenapi-max-target-o-low-priority.txt"],
         blocked: ["hiddenapi/hiddenapi-blocked.txt"],
         unsupported_packages: ["hiddenapi/hiddenapi-unsupported-packages.txt"],
+        stub_flags: "hiddenapi/stub-flags.csv",
+        annotation_flags: "hiddenapi/annotation-flags.csv",
+        metadata: "hiddenapi/metadata.csv",
+        index: "hiddenapi/index.csv",
+        all_flags: "hiddenapi/all-flags.csv",
     },
 }
 
@@ -115,6 +117,7 @@ prebuilt_platform_compat_config {
         "//libcore",
         "//prebuilts:__subpackages__",
     ],
+    licenses: ["art-module-sdk_libcore_license@current"],
     metadata: "compat_configs/libcore-platform-compat-config/libcore-platform-compat-config_meta.xml",
 }
 
@@ -133,6 +136,7 @@ art_prebuilt_prebuilt_platform_compat_config {
         "//libcore",
         "//prebuilts:__subpackages__",
     ],
+    licenses: ["art-module-sdk_libcore_license"],
     metadata: "compat_configs/libcore-platform-compat-config/libcore-platform-compat-config_meta.xml",
 }
 
@@ -152,6 +156,7 @@ java_import {
         "com.android.art",
         "com.android.art.debug",
     ],
+    licenses: ["art-module-sdk_libcore_license@current"],
     jars: ["java/core-oj.jar"],
 }
 
@@ -177,6 +182,7 @@ art_prebuilt_java_import {
         "com.android.art",
         "com.android.art.debug",
     ],
+    licenses: ["art-module-sdk_libcore_license"],
     jars: ["java/core-oj.jar"],
 }
 
@@ -196,6 +202,7 @@ java_import {
         "com.android.art",
         "com.android.art.debug",
     ],
+    licenses: ["art-module-sdk_libcore_license@current"],
     jars: ["java/core-libart.jar"],
 }
 
@@ -221,6 +228,7 @@ art_prebuilt_java_import {
         "com.android.art",
         "com.android.art.debug",
     ],
+    licenses: ["art-module-sdk_libcore_license"],
     jars: ["java/core-libart.jar"],
 }
 
@@ -241,6 +249,7 @@ java_import {
         "com.android.art",
         "com.android.art.debug",
     ],
+    licenses: ["art-module-sdk_external_okhttp_license@current"],
     jars: ["java/okhttp.jar"],
 }
 
@@ -267,6 +276,7 @@ art_prebuilt_java_import {
         "com.android.art",
         "com.android.art.debug",
     ],
+    licenses: ["art-module-sdk_external_okhttp_license"],
     jars: ["java/okhttp.jar"],
 }
 
@@ -286,6 +296,7 @@ java_import {
         "com.android.art",
         "com.android.art.debug",
     ],
+    licenses: ["art-module-sdk_external_bouncycastle_license@current"],
     jars: ["java/bouncycastle.jar"],
 }
 
@@ -311,6 +322,7 @@ art_prebuilt_java_import {
         "com.android.art",
         "com.android.art.debug",
     ],
+    licenses: ["art-module-sdk_external_bouncycastle_license"],
     jars: ["java/bouncycastle.jar"],
 }
 
@@ -329,6 +341,7 @@ java_import {
         "com.android.art",
         "com.android.art.debug",
     ],
+    licenses: ["art-module-sdk_external_apache-xml_license@current"],
     jars: ["java/apache-xml.jar"],
 }
 
@@ -353,6 +366,7 @@ art_prebuilt_java_import {
         "com.android.art",
         "com.android.art.debug",
     ],
+    licenses: ["art-module-sdk_external_apache-xml_license"],
     jars: ["java/apache-xml.jar"],
 }
 
@@ -361,6 +375,7 @@ java_import {
     sdk_member_name: "core-lambda-stubs",
     visibility: ["//visibility:public"],
     apex_available: ["//apex_available:platform"],
+    licenses: ["art-module-sdk_libcore_license@current"],
     jars: ["java/core-lambda-stubs.jar"],
 }
 
@@ -375,6 +390,7 @@ art_prebuilt_java_import {
     },
     visibility: ["//visibility:public"],
     apex_available: ["//apex_available:platform"],
+    licenses: ["art-module-sdk_libcore_license"],
     jars: ["java/core-lambda-stubs.jar"],
 }
 
@@ -383,6 +399,7 @@ java_import {
     sdk_member_name: "core.current.stubs",
     visibility: ["//visibility:public"],
     apex_available: ["//apex_available:platform"],
+    licenses: ["art-module-sdk_libcore_license@current"],
     jars: ["java/core.current.stubs.jar"],
 }
 
@@ -397,6 +414,7 @@ art_prebuilt_java_import {
     },
     visibility: ["//visibility:public"],
     apex_available: ["//apex_available:platform"],
+    licenses: ["art-module-sdk_libcore_license"],
     jars: ["java/core.current.stubs.jar"],
 }
 
@@ -405,6 +423,7 @@ java_import {
     sdk_member_name: "legacy.core.platform.api.stubs",
     visibility: ["//visibility:public"],
     apex_available: ["//apex_available:platform"],
+    licenses: ["art-module-sdk_libcore_license@current"],
     jars: ["java/legacy.core.platform.api.stubs.jar"],
 }
 
@@ -419,6 +438,7 @@ art_prebuilt_java_import {
     },
     visibility: ["//visibility:public"],
     apex_available: ["//apex_available:platform"],
+    licenses: ["art-module-sdk_libcore_license"],
     jars: ["java/legacy.core.platform.api.stubs.jar"],
 }
 
@@ -427,6 +447,7 @@ java_import {
     sdk_member_name: "stable.core.platform.api.stubs",
     visibility: ["//visibility:public"],
     apex_available: ["//apex_available:platform"],
+    licenses: ["art-module-sdk_libcore_license@current"],
     jars: ["java/stable.core.platform.api.stubs.jar"],
 }
 
@@ -441,6 +462,7 @@ art_prebuilt_java_import {
     },
     visibility: ["//visibility:public"],
     apex_available: ["//apex_available:platform"],
+    licenses: ["art-module-sdk_libcore_license"],
     jars: ["java/stable.core.platform.api.stubs.jar"],
 }
 
@@ -449,6 +471,7 @@ java_import {
     sdk_member_name: "art.module.public.api.stubs",
     visibility: ["//visibility:private"],
     apex_available: ["//apex_available:platform"],
+    licenses: ["art-module-sdk_libcore_license@current"],
     jars: ["java/art.module.public.api.stubs.jar"],
 }
 
@@ -463,6 +486,7 @@ art_prebuilt_java_import {
     },
     visibility: ["//visibility:private"],
     apex_available: ["//apex_available:platform"],
+    licenses: ["art-module-sdk_libcore_license"],
     jars: ["java/art.module.public.api.stubs.jar"],
 }
 
@@ -471,6 +495,7 @@ java_import {
     sdk_member_name: "core-lambda-stubs-for-system-modules",
     visibility: ["//visibility:private"],
     apex_available: ["//apex_available:platform"],
+    licenses: ["art-module-sdk_libcore_license@current"],
     jars: ["java/core-lambda-stubs-for-system-modules.jar"],
 }
 
@@ -485,6 +510,7 @@ art_prebuilt_java_import {
     },
     visibility: ["//visibility:private"],
     apex_available: ["//apex_available:platform"],
+    licenses: ["art-module-sdk_libcore_license"],
     jars: ["java/core-lambda-stubs-for-system-modules.jar"],
 }
 
@@ -493,6 +519,7 @@ java_import {
     sdk_member_name: "core-generated-annotation-stubs",
     visibility: ["//visibility:private"],
     apex_available: ["//apex_available:platform"],
+    licenses: ["art-module-sdk_libcore_license@current"],
     jars: ["java/core-generated-annotation-stubs.jar"],
 }
 
@@ -507,6 +534,7 @@ art_prebuilt_java_import {
     },
     visibility: ["//visibility:private"],
     apex_available: ["//apex_available:platform"],
+    licenses: ["art-module-sdk_libcore_license"],
     jars: ["java/core-generated-annotation-stubs.jar"],
 }
 
@@ -515,6 +543,7 @@ java_import {
     sdk_member_name: "art.module.api.annotations.for.system.modules",
     visibility: ["//visibility:private"],
     apex_available: ["//apex_available:platform"],
+    licenses: ["art-module-sdk_libcore_license@current"],
     jars: ["java/art.module.api.annotations.for.system.modules.jar"],
 }
 
@@ -529,6 +558,7 @@ art_prebuilt_java_import {
     },
     visibility: ["//visibility:private"],
     apex_available: ["//apex_available:platform"],
+    licenses: ["art-module-sdk_libcore_license"],
     jars: ["java/art.module.api.annotations.for.system.modules.jar"],
 }
 
@@ -537,6 +567,7 @@ java_import {
     sdk_member_name: "stub-annotations",
     visibility: ["//visibility:private"],
     apex_available: ["//apex_available:platform"],
+    licenses: ["art-module-sdk_Android-Apache-2.0@current"],
     jars: ["java/stub-annotations.jar"],
 }
 
@@ -551,6 +582,7 @@ art_prebuilt_java_import {
     },
     visibility: ["//visibility:private"],
     apex_available: ["//apex_available:platform"],
+    licenses: ["art-module-sdk_Android-Apache-2.0"],
     jars: ["java/stub-annotations.jar"],
 }
 
@@ -559,6 +591,7 @@ java_import {
     sdk_member_name: "art.module.intra.core.api.stubs",
     visibility: ["//visibility:private"],
     apex_available: ["//apex_available:platform"],
+    licenses: ["art-module-sdk_libcore_license@current"],
     jars: ["java/art.module.intra.core.api.stubs.jar"],
 }
 
@@ -573,6 +606,7 @@ art_prebuilt_java_import {
     },
     visibility: ["//visibility:private"],
     apex_available: ["//apex_available:platform"],
+    licenses: ["art-module-sdk_libcore_license"],
     jars: ["java/art.module.intra.core.api.stubs.jar"],
 }
 
@@ -581,6 +615,7 @@ java_import {
     sdk_member_name: "art-module-intra-core-api-stubs-system-modules-lib",
     visibility: ["//visibility:private"],
     apex_available: ["//apex_available:platform"],
+    licenses: ["art-module-sdk_libcore_license@current"],
     jars: ["java/art-module-intra-core-api-stubs-system-modules-lib.jar"],
 }
 
@@ -595,6 +630,7 @@ art_prebuilt_java_import {
     },
     visibility: ["//visibility:private"],
     apex_available: ["//apex_available:platform"],
+    licenses: ["art-module-sdk_libcore_license"],
     jars: ["java/art-module-intra-core-api-stubs-system-modules-lib.jar"],
 }
 
@@ -603,6 +639,7 @@ java_import {
     sdk_member_name: "legacy.art.module.platform.api.stubs",
     visibility: ["//visibility:private"],
     apex_available: ["//apex_available:platform"],
+    licenses: ["art-module-sdk_libcore_license@current"],
     jars: ["java/legacy.art.module.platform.api.stubs.jar"],
 }
 
@@ -617,6 +654,7 @@ art_prebuilt_java_import {
     },
     visibility: ["//visibility:private"],
     apex_available: ["//apex_available:platform"],
+    licenses: ["art-module-sdk_libcore_license"],
     jars: ["java/legacy.art.module.platform.api.stubs.jar"],
 }
 
@@ -625,6 +663,7 @@ java_import {
     sdk_member_name: "stable.art.module.platform.api.stubs",
     visibility: ["//visibility:private"],
     apex_available: ["//apex_available:platform"],
+    licenses: ["art-module-sdk_libcore_license@current"],
     jars: ["java/stable.art.module.platform.api.stubs.jar"],
 }
 
@@ -639,6 +678,7 @@ art_prebuilt_java_import {
     },
     visibility: ["//visibility:private"],
     apex_available: ["//apex_available:platform"],
+    licenses: ["art-module-sdk_libcore_license"],
     jars: ["java/stable.art.module.platform.api.stubs.jar"],
 }
 
@@ -647,6 +687,7 @@ java_import {
     sdk_member_name: "core-current-stubs-for-system-modules",
     visibility: ["//visibility:private"],
     apex_available: ["//apex_available:platform"],
+    licenses: ["art-module-sdk_libcore_license@current"],
     jars: ["java/core-current-stubs-for-system-modules.jar"],
 }
 
@@ -661,6 +702,7 @@ art_prebuilt_java_import {
     },
     visibility: ["//visibility:private"],
     apex_available: ["//apex_available:platform"],
+    licenses: ["art-module-sdk_libcore_license"],
     jars: ["java/core-current-stubs-for-system-modules.jar"],
 }
 
@@ -675,15 +717,29 @@ java_sdk_library_import {
         "//prebuilts:__subpackages__",
     ],
     apex_available: ["//apex_available:platform"],
+    licenses: ["art-module-sdk_libcore_license@current"],
     shared_library: false,
     compile_dex: true,
     doctag_files: ["doctags/known_oj_tags.txt"],
-    libs: ["i18n.module.intra.core.api.stubs"],
     public: {
         jars: ["sdk_library/public/art.module.public.api-stubs.jar"],
         stub_srcs: ["sdk_library/public/art.module.public.api_stub_sources"],
         current_api: "sdk_library/public/art.module.public.api.txt",
         removed_api: "sdk_library/public/art.module.public.api-removed.txt",
+        sdk_version: "none",
+    },
+    system: {
+        jars: ["sdk_library/system/art.module.public.api-stubs.jar"],
+        stub_srcs: ["sdk_library/system/art.module.public.api_stub_sources"],
+        current_api: "sdk_library/system/art.module.public.api.txt",
+        removed_api: "sdk_library/system/art.module.public.api-removed.txt",
+        sdk_version: "none",
+    },
+    module_lib: {
+        jars: ["sdk_library/module-lib/art.module.public.api-stubs.jar"],
+        stub_srcs: ["sdk_library/module-lib/art.module.public.api_stub_sources"],
+        current_api: "sdk_library/module-lib/art.module.public.api.txt",
+        removed_api: "sdk_library/module-lib/art.module.public.api-removed.txt",
         sdk_version: "none",
     },
 }
@@ -705,15 +761,29 @@ art_prebuilt_java_sdk_library_import {
         "//prebuilts:__subpackages__",
     ],
     apex_available: ["//apex_available:platform"],
+    licenses: ["art-module-sdk_libcore_license"],
     shared_library: false,
     compile_dex: true,
     doctag_files: ["doctags/known_oj_tags.txt"],
-    libs: ["i18n.module.intra.core.api.stubs"],
     public: {
         jars: ["sdk_library/public/art.module.public.api-stubs.jar"],
         stub_srcs: ["sdk_library/public/art.module.public.api_stub_sources"],
         current_api: "sdk_library/public/art.module.public.api.txt",
         removed_api: "sdk_library/public/art.module.public.api-removed.txt",
+        sdk_version: "none",
+    },
+    system: {
+        jars: ["sdk_library/system/art.module.public.api-stubs.jar"],
+        stub_srcs: ["sdk_library/system/art.module.public.api_stub_sources"],
+        current_api: "sdk_library/system/art.module.public.api.txt",
+        removed_api: "sdk_library/system/art.module.public.api-removed.txt",
+        sdk_version: "none",
+    },
+    module_lib: {
+        jars: ["sdk_library/module-lib/art.module.public.api-stubs.jar"],
+        stub_srcs: ["sdk_library/module-lib/art.module.public.api_stub_sources"],
+        current_api: "sdk_library/module-lib/art.module.public.api.txt",
+        removed_api: "sdk_library/module-lib/art.module.public.api-removed.txt",
         sdk_version: "none",
     },
 }
@@ -726,6 +796,7 @@ java_sdk_library_import {
         "//prebuilts:__subpackages__",
     ],
     apex_available: ["//apex_available:platform"],
+    licenses: ["art-module-sdk_libcore_license@current"],
     shared_library: false,
     compile_dex: true,
     public: {
@@ -751,6 +822,7 @@ art_prebuilt_java_sdk_library_import {
         "//prebuilts:__subpackages__",
     ],
     apex_available: ["//apex_available:platform"],
+    licenses: ["art-module-sdk_libcore_license"],
     shared_library: false,
     compile_dex: true,
     public: {
@@ -773,6 +845,7 @@ java_system_modules_import {
         "//libcore",
         "//prebuilts:__subpackages__",
     ],
+    licenses: ["art-module-sdk_libcore_license@current"],
     libs: [
         "art-module-sdk_art.module.public.api.stubs@current",
         "art-module-sdk_core-lambda-stubs-for-system-modules@current",
@@ -799,6 +872,7 @@ art_prebuilt_java_system_modules_import {
         "//libcore",
         "//prebuilts:__subpackages__",
     ],
+    licenses: ["art-module-sdk_libcore_license"],
     libs: [
         "art-module-sdk_art.module.public.api.stubs",
         "art-module-sdk_core-lambda-stubs-for-system-modules",
@@ -819,6 +893,7 @@ java_system_modules_import {
         "//libcore/mmodules/intracoreapi",
         "//prebuilts:__subpackages__",
     ],
+    licenses: ["art-module-sdk_libcore_license@current"],
     libs: [
         "art-module-sdk_art.module.intra.core.api.stubs@current",
         "art-module-sdk_art-module-intra-core-api-stubs-system-modules-lib@current",
@@ -842,6 +917,7 @@ art_prebuilt_java_system_modules_import {
         "//libcore/mmodules/intracoreapi",
         "//prebuilts:__subpackages__",
     ],
+    licenses: ["art-module-sdk_libcore_license"],
     libs: [
         "art-module-sdk_art.module.intra.core.api.stubs",
         "art-module-sdk_art-module-intra-core-api-stubs-system-modules-lib",
@@ -859,6 +935,7 @@ java_system_modules_import {
         "//libcore/mmodules/core_platform_api",
         "//prebuilts:__subpackages__",
     ],
+    licenses: ["art-module-sdk_libcore_license@current"],
     libs: ["art-module-sdk_legacy.art.module.platform.api.stubs@current"],
 }
 
@@ -879,6 +956,7 @@ art_prebuilt_java_system_modules_import {
         "//libcore/mmodules/core_platform_api",
         "//prebuilts:__subpackages__",
     ],
+    licenses: ["art-module-sdk_libcore_license"],
     libs: ["art-module-sdk_legacy.art.module.platform.api.stubs"],
 }
 
@@ -893,6 +971,7 @@ java_system_modules_import {
         "//libcore/mmodules/core_platform_api",
         "//prebuilts:__subpackages__",
     ],
+    licenses: ["art-module-sdk_libcore_license@current"],
     libs: ["art-module-sdk_stable.art.module.platform.api.stubs@current"],
 }
 
@@ -913,6 +992,7 @@ art_prebuilt_java_system_modules_import {
         "//libcore/mmodules/core_platform_api",
         "//prebuilts:__subpackages__",
     ],
+    licenses: ["art-module-sdk_libcore_license"],
     libs: ["art-module-sdk_stable.art.module.platform.api.stubs"],
 }
 
@@ -920,6 +1000,7 @@ java_system_modules_import {
     name: "art-module-sdk_core-current-stubs-system-modules@current",
     sdk_member_name: "core-current-stubs-system-modules",
     visibility: ["//visibility:public"],
+    licenses: ["art-module-sdk_libcore_license@current"],
     libs: ["art-module-sdk_core-current-stubs-for-system-modules@current"],
 }
 
@@ -933,6 +1014,7 @@ art_prebuilt_java_system_modules_import {
         },
     },
     visibility: ["//visibility:public"],
+    licenses: ["art-module-sdk_libcore_license"],
     libs: ["art-module-sdk_core-current-stubs-for-system-modules"],
 }
 
@@ -940,6 +1022,7 @@ java_system_modules_import {
     name: "art-module-sdk_legacy-core-platform-api-stubs-system-modules@current",
     sdk_member_name: "legacy-core-platform-api-stubs-system-modules",
     visibility: ["//visibility:public"],
+    licenses: ["art-module-sdk_libcore_license@current"],
     libs: [
         "art-module-sdk_legacy.core.platform.api.stubs@current",
         "art-module-sdk_core-lambda-stubs-for-system-modules@current",
@@ -957,6 +1040,7 @@ art_prebuilt_java_system_modules_import {
         },
     },
     visibility: ["//visibility:public"],
+    licenses: ["art-module-sdk_libcore_license"],
     libs: [
         "legacy.core.platform.api.stubs",
         "art-module-sdk_core-lambda-stubs-for-system-modules",
@@ -968,6 +1052,7 @@ java_system_modules_import {
     name: "art-module-sdk_stable-core-platform-api-stubs-system-modules@current",
     sdk_member_name: "stable-core-platform-api-stubs-system-modules",
     visibility: ["//visibility:public"],
+    licenses: ["art-module-sdk_libcore_license@current"],
     libs: [
         "art-module-sdk_stable.core.platform.api.stubs@current",
         "art-module-sdk_core-lambda-stubs-for-system-modules@current",
@@ -985,11 +1070,190 @@ art_prebuilt_java_system_modules_import {
         },
     },
     visibility: ["//visibility:public"],
+    licenses: ["art-module-sdk_libcore_license"],
     libs: [
         "stable.core.platform.api.stubs",
         "art-module-sdk_core-lambda-stubs-for-system-modules",
         "art-module-sdk_core-generated-annotation-stubs",
     ],
+}
+
+license {
+    name: "art-module-sdk_art_license@current",
+    sdk_member_name: "art_license",
+    visibility: ["//visibility:private"],
+    license_kinds: [
+        "SPDX-license-identifier-Apache-2.0",
+        "SPDX-license-identifier-BSD",
+        "SPDX-license-identifier-GPL-2.0",
+    ],
+    license_text: ["licenses/art/NOTICE"],
+}
+
+license {
+    name: "art-module-sdk_art_license",
+    visibility: ["//visibility:private"],
+    license_kinds: [
+        "SPDX-license-identifier-Apache-2.0",
+        "SPDX-license-identifier-BSD",
+        "SPDX-license-identifier-GPL-2.0",
+    ],
+    license_text: ["licenses/art/NOTICE"],
+}
+
+license {
+    name: "art-module-sdk_libnativehelper_license@current",
+    sdk_member_name: "libnativehelper_license",
+    visibility: ["//visibility:private"],
+    license_kinds: ["SPDX-license-identifier-Apache-2.0"],
+    license_text: ["licenses/libnativehelper/NOTICE"],
+}
+
+license {
+    name: "art-module-sdk_libnativehelper_license",
+    visibility: ["//visibility:private"],
+    license_kinds: ["SPDX-license-identifier-Apache-2.0"],
+    license_text: ["licenses/libnativehelper/NOTICE"],
+}
+
+license {
+    name: "art-module-sdk_art_openjdkjvmti_license@current",
+    sdk_member_name: "art_openjdkjvmti_license",
+    visibility: ["//visibility:private"],
+    license_kinds: [
+        "SPDX-license-identifier-Apache-2.0",
+        "SPDX-license-identifier-GPL-2.0",
+        "SPDX-license-identifier-GPL-with-classpath-exception",
+    ],
+    license_text: ["licenses/art/openjdkjvmti/NOTICE"],
+}
+
+license {
+    name: "art-module-sdk_art_openjdkjvmti_license",
+    visibility: ["//visibility:private"],
+    license_kinds: [
+        "SPDX-license-identifier-Apache-2.0",
+        "SPDX-license-identifier-GPL-2.0",
+        "SPDX-license-identifier-GPL-with-classpath-exception",
+    ],
+    license_text: ["licenses/art/openjdkjvmti/NOTICE"],
+}
+
+license {
+    name: "art-module-sdk_libcore_license@current",
+    sdk_member_name: "libcore_license",
+    visibility: ["//visibility:private"],
+    license_kinds: [
+        "SPDX-license-identifier-Apache-2.0",
+        "SPDX-license-identifier-BSD",
+        "SPDX-license-identifier-GPL",
+        "SPDX-license-identifier-GPL-2.0",
+        "SPDX-license-identifier-LGPL",
+        "SPDX-license-identifier-MIT",
+        "SPDX-license-identifier-OpenSSL",
+        "SPDX-license-identifier-Unicode-DFS",
+        "SPDX-license-identifier-W3C",
+        "legacy_unencumbered",
+    ],
+    license_text: [
+        "licenses/libcore/LICENSE",
+        "licenses/libcore/NOTICE",
+    ],
+}
+
+license {
+    name: "art-module-sdk_libcore_license",
+    visibility: ["//visibility:private"],
+    license_kinds: [
+        "SPDX-license-identifier-Apache-2.0",
+        "SPDX-license-identifier-BSD",
+        "SPDX-license-identifier-GPL",
+        "SPDX-license-identifier-GPL-2.0",
+        "SPDX-license-identifier-LGPL",
+        "SPDX-license-identifier-MIT",
+        "SPDX-license-identifier-OpenSSL",
+        "SPDX-license-identifier-Unicode-DFS",
+        "SPDX-license-identifier-W3C",
+        "legacy_unencumbered",
+    ],
+    license_text: [
+        "licenses/libcore/LICENSE",
+        "licenses/libcore/NOTICE",
+    ],
+}
+
+license {
+    name: "art-module-sdk_external_okhttp_license@current",
+    sdk_member_name: "external_okhttp_license",
+    visibility: ["//visibility:private"],
+    license_kinds: ["SPDX-license-identifier-Apache-2.0"],
+    license_text: ["licenses/external/okhttp/LICENSE.txt"],
+}
+
+license {
+    name: "art-module-sdk_external_okhttp_license",
+    visibility: ["//visibility:private"],
+    license_kinds: ["SPDX-license-identifier-Apache-2.0"],
+    license_text: ["licenses/external/okhttp/LICENSE.txt"],
+}
+
+license {
+    name: "art-module-sdk_external_bouncycastle_license@current",
+    sdk_member_name: "external_bouncycastle_license",
+    visibility: ["//visibility:private"],
+    license_kinds: [
+        "SPDX-license-identifier-Apache-2.0",
+        "SPDX-license-identifier-BSD",
+        "SPDX-license-identifier-MIT",
+    ],
+    license_text: ["licenses/external/bouncycastle/NOTICE"],
+}
+
+license {
+    name: "art-module-sdk_external_bouncycastle_license",
+    visibility: ["//visibility:private"],
+    license_kinds: [
+        "SPDX-license-identifier-Apache-2.0",
+        "SPDX-license-identifier-BSD",
+        "SPDX-license-identifier-MIT",
+    ],
+    license_text: ["licenses/external/bouncycastle/NOTICE"],
+}
+
+license {
+    name: "art-module-sdk_external_apache-xml_license@current",
+    sdk_member_name: "external_apache-xml_license",
+    visibility: ["//visibility:private"],
+    license_kinds: [
+        "SPDX-license-identifier-Apache-2.0",
+        "SPDX-license-identifier-W3C",
+    ],
+    license_text: ["licenses/external/apache-xml/NOTICE"],
+}
+
+license {
+    name: "art-module-sdk_external_apache-xml_license",
+    visibility: ["//visibility:private"],
+    license_kinds: [
+        "SPDX-license-identifier-Apache-2.0",
+        "SPDX-license-identifier-W3C",
+    ],
+    license_text: ["licenses/external/apache-xml/NOTICE"],
+}
+
+license {
+    name: "art-module-sdk_Android-Apache-2.0@current",
+    sdk_member_name: "Android-Apache-2.0",
+    visibility: ["//visibility:private"],
+    license_kinds: ["SPDX-license-identifier-Apache-2.0"],
+    license_text: ["licenses/build/soong/licenses/LICENSE"],
+}
+
+license {
+    name: "art-module-sdk_Android-Apache-2.0",
+    visibility: ["//visibility:private"],
+    license_kinds: ["SPDX-license-identifier-Apache-2.0"],
+    license_text: ["licenses/build/soong/licenses/LICENSE"],
 }
 
 cc_prebuilt_library_headers {
@@ -1000,6 +1264,7 @@ cc_prebuilt_library_headers {
         "//apex_available:anyapex",
         "//apex_available:platform",
     ],
+    licenses: ["art-module-sdk_libnativehelper_license@current"],
     host_supported: true,
     recovery_available: true,
     vendor_available: true,
@@ -1035,6 +1300,7 @@ art_prebuilt_cc_prebuilt_library_headers {
         "//apex_available:anyapex",
         "//apex_available:platform",
     ],
+    licenses: ["art-module-sdk_libnativehelper_license"],
     host_supported: true,
     recovery_available: true,
     vendor_available: true,
@@ -1065,6 +1331,7 @@ cc_prebuilt_library_headers {
         "//system/libartpalette",
     ],
     apex_available: ["//apex_available:platform"],
+    licenses: ["art-module-sdk_art_license@current"],
     host_supported: true,
     compile_multilib: "both",
     export_include_dirs: ["common_os/include/art/libartpalette/include"],
@@ -1096,6 +1363,7 @@ art_prebuilt_cc_prebuilt_library_headers {
         "//system/libartpalette",
     ],
     apex_available: ["//apex_available:platform"],
+    licenses: ["art-module-sdk_art_license"],
     host_supported: true,
     compile_multilib: "both",
     export_include_dirs: ["common_os/include/art/libartpalette/include"],
@@ -1120,6 +1388,7 @@ cc_prebuilt_library_headers {
         "//apex_available:anyapex",
         "//apex_available:platform",
     ],
+    licenses: ["art-module-sdk_libnativehelper_license@current"],
     host_supported: true,
     sdk_version: "minimum",
     compile_multilib: "both",
@@ -1154,6 +1423,7 @@ art_prebuilt_cc_prebuilt_library_headers {
         "//apex_available:anyapex",
         "//apex_available:platform",
     ],
+    licenses: ["art-module-sdk_libnativehelper_license"],
     host_supported: true,
     sdk_version: "minimum",
     compile_multilib: "both",
@@ -1183,6 +1453,7 @@ cc_prebuilt_library_headers {
         "com.android.art",
         "com.android.art.debug",
     ],
+    licenses: ["art-module-sdk_art_openjdkjvmti_license@current"],
     host_supported: true,
     sdk_version: "current",
     compile_multilib: "both",
@@ -1218,6 +1489,7 @@ art_prebuilt_cc_prebuilt_library_headers {
         "com.android.art",
         "com.android.art.debug",
     ],
+    licenses: ["art-module-sdk_art_openjdkjvmti_license"],
     host_supported: true,
     sdk_version: "current",
     compile_multilib: "both",
@@ -1254,6 +1526,7 @@ cc_prebuilt_library_headers {
         "com.android.art.debug",
         "com.android.media",
     ],
+    licenses: ["art-module-sdk_art_license@current"],
     compile_multilib: "both",
     export_include_dirs: [
         "include/art/libnativeloader/include",
@@ -1283,6 +1556,7 @@ art_prebuilt_cc_prebuilt_library_headers {
         "com.android.art.debug",
         "com.android.media",
     ],
+    licenses: ["art-module-sdk_art_license"],
     compile_multilib: "both",
     export_include_dirs: [
         "include/art/libnativeloader/include",
@@ -1302,6 +1576,7 @@ cc_prebuilt_library {
         "com.android.media.swcodec",
         "com.android.runtime",
     ],
+    licenses: ["art-module-sdk_art_license@current"],
     host_supported: true,
     installable: false,
     compile_multilib: "both",
@@ -1388,6 +1663,7 @@ art_prebuilt_cc_prebuilt_library {
         "com.android.media.swcodec",
         "com.android.runtime",
     ],
+    licenses: ["art-module-sdk_art_license"],
     host_supported: true,
     compile_multilib: "both",
     shared_libs: [
@@ -1469,6 +1745,7 @@ cc_prebuilt_library_shared {
         "com.android.art",
         "com.android.art.debug",
     ],
+    licenses: ["art-module-sdk_libcore_license@current"],
     host_supported: true,
     installable: false,
     compile_multilib: "both",
@@ -1525,6 +1802,7 @@ art_prebuilt_cc_prebuilt_library_shared {
         "com.android.art",
         "com.android.art.debug",
     ],
+    licenses: ["art-module-sdk_libcore_license"],
     host_supported: true,
     compile_multilib: "both",
     stubs: {
@@ -1571,6 +1849,7 @@ cc_prebuilt_library_shared {
         "com.android.art",
         "com.android.art.debug",
     ],
+    licenses: ["art-module-sdk_art_license@current"],
     host_supported: true,
     installable: false,
     compile_multilib: "both",
@@ -1632,6 +1911,7 @@ art_prebuilt_cc_prebuilt_library_shared {
         "com.android.art",
         "com.android.art.debug",
     ],
+    licenses: ["art-module-sdk_art_license"],
     host_supported: true,
     compile_multilib: "both",
     export_include_dirs: [
@@ -1688,6 +1968,7 @@ cc_prebuilt_library_shared {
         "com.android.art",
         "com.android.art.debug",
     ],
+    licenses: ["art-module-sdk_art_license@current"],
     host_supported: true,
     installable: false,
     compile_multilib: "both",
@@ -1747,6 +2028,7 @@ art_prebuilt_cc_prebuilt_library_shared {
         "com.android.art",
         "com.android.art.debug",
     ],
+    licenses: ["art-module-sdk_art_license"],
     host_supported: true,
     compile_multilib: "both",
     export_include_dirs: [
@@ -1794,6 +2076,7 @@ cc_prebuilt_library_shared {
         "com.android.art",
         "com.android.art.debug",
     ],
+    licenses: ["art-module-sdk_libnativehelper_license@current"],
     host_supported: true,
     installable: false,
     stl: "none",
@@ -1852,6 +2135,7 @@ art_prebuilt_cc_prebuilt_library_shared {
         "com.android.art",
         "com.android.art.debug",
     ],
+    licenses: ["art-module-sdk_libnativehelper_license"],
     host_supported: true,
     stl: "none",
     compile_multilib: "both",
@@ -1908,6 +2192,7 @@ cc_prebuilt_library_shared {
         "com.android.art",
         "com.android.art.debug",
     ],
+    licenses: ["art-module-sdk_art_license@current"],
     host_supported: true,
     installable: false,
     compile_multilib: "both",
@@ -1967,6 +2252,7 @@ art_prebuilt_cc_prebuilt_library_shared {
         "com.android.art",
         "com.android.art.debug",
     ],
+    licenses: ["art-module-sdk_art_license"],
     host_supported: true,
     compile_multilib: "both",
     export_include_dirs: [
@@ -2018,6 +2304,7 @@ cc_prebuilt_library_shared {
         "com.android.art",
         "com.android.art.debug",
     ],
+    licenses: ["art-module-sdk_art_license@current"],
     host_supported: true,
     installable: false,
     compile_multilib: "both",
@@ -2073,6 +2360,7 @@ art_prebuilt_cc_prebuilt_library_shared {
         "com.android.art",
         "com.android.art.debug",
     ],
+    licenses: ["art-module-sdk_art_license"],
     host_supported: true,
     compile_multilib: "both",
     export_include_dirs: ["common_os/include/art/sigchainlib"],
@@ -2125,6 +2413,7 @@ cc_prebuilt_library_shared {
         "com.android.media",
         "com.android.media.swcodec",
     ],
+    licenses: ["art-module-sdk_art_license@current"],
     installable: false,
     compile_multilib: "both",
     shared_libs: ["liblog"],
@@ -2170,6 +2459,7 @@ art_prebuilt_cc_prebuilt_library_shared {
         "com.android.media",
         "com.android.media.swcodec",
     ],
+    licenses: ["art-module-sdk_art_license"],
     compile_multilib: "both",
     shared_libs: ["liblog"],
     export_include_dirs: [
@@ -2199,8 +2489,8 @@ cc_prebuilt_library_shared {
         "//art:__subpackages__",
         "//cts:__subpackages__",
         "//external/perfetto:__subpackages__",
+        "//frameworks/base/packages/Connectivity/tests/integration",
         "//frameworks/base/packages/Tethering:__subpackages__",
-        "//frameworks/base/tests/net/integration",
         "//libnativehelper:__subpackages__",
         "//packages/modules/Connectivity/Tethering:__subpackages__",
         "//packages/modules/Connectivity/tests:__subpackages__",
@@ -2213,6 +2503,7 @@ cc_prebuilt_library_shared {
         "com.android.extservices",
         "com.android.tethering",
     ],
+    licenses: ["art-module-sdk_libnativehelper_license@current"],
     installable: false,
     stl: "none",
     compile_multilib: "both",
@@ -2251,8 +2542,8 @@ art_prebuilt_cc_prebuilt_library_shared {
         "//art:__subpackages__",
         "//cts:__subpackages__",
         "//external/perfetto:__subpackages__",
+        "//frameworks/base/packages/Connectivity/tests/integration",
         "//frameworks/base/packages/Tethering:__subpackages__",
-        "//frameworks/base/tests/net/integration",
         "//libnativehelper:__subpackages__",
         "//packages/modules/Connectivity/Tethering:__subpackages__",
         "//packages/modules/Connectivity/tests:__subpackages__",
@@ -2265,6 +2556,7 @@ art_prebuilt_cc_prebuilt_library_shared {
         "com.android.extservices",
         "com.android.tethering",
     ],
+    licenses: ["art-module-sdk_libnativehelper_license"],
     stl: "none",
     compile_multilib: "both",
     shared_libs: ["liblog"],
@@ -2304,6 +2596,7 @@ cc_prebuilt_library_shared {
         "com.android.media",
         "com.android.media.swcodec",
     ],
+    licenses: ["art-module-sdk_art_license@current"],
     installable: false,
     compile_multilib: "both",
     shared_libs: ["liblog"],
@@ -2348,6 +2641,7 @@ art_prebuilt_cc_prebuilt_library_shared {
         "com.android.media",
         "com.android.media.swcodec",
     ],
+    licenses: ["art-module-sdk_art_license"],
     compile_multilib: "both",
     shared_libs: ["liblog"],
     export_include_dirs: [
@@ -2380,6 +2674,7 @@ cc_prebuilt_library_static {
         "//system/extras/simpleperf",
     ],
     apex_available: ["//apex_available:platform"],
+    licenses: ["art-module-sdk_art_license@current"],
     host_supported: true,
     installable: false,
     compile_multilib: "both",
@@ -2387,7 +2682,7 @@ cc_prebuilt_library_static {
         "common_os/include/system/libbase/include",
         "common_os/include/external/fmtlib/include",
         "common_os/include/art/libartpalette/include",
-        "common_os/include/system/logging/liblog/include",
+        "common_os/include/prebuilts/runtime/mainline/platform/sdk/common_os/include/system/logging/liblog/include",
         "common_os/include/external/zlib",
         "common_os/include/system/libziparchive/include",
         "common_os/include/external/googletest/googletest/include",
@@ -2439,13 +2734,14 @@ art_prebuilt_cc_prebuilt_library_static {
         "//system/extras/simpleperf",
     ],
     apex_available: ["//apex_available:platform"],
+    licenses: ["art-module-sdk_art_license"],
     host_supported: true,
     compile_multilib: "both",
     export_include_dirs: [
         "common_os/include/system/libbase/include",
         "common_os/include/external/fmtlib/include",
         "common_os/include/art/libartpalette/include",
-        "common_os/include/system/logging/liblog/include",
+        "common_os/include/prebuilts/runtime/mainline/platform/sdk/common_os/include/system/logging/liblog/include",
         "common_os/include/external/zlib",
         "common_os/include/system/libziparchive/include",
         "common_os/include/external/googletest/googletest/include",
@@ -2486,6 +2782,7 @@ cc_prebuilt_library_static {
     sdk_member_name: "libnativehelper_lazy",
     visibility: ["//visibility:public"],
     apex_available: ["//apex_available:platform"],
+    licenses: ["art-module-sdk_libnativehelper_license@current"],
     host_supported: true,
     installable: false,
     compile_multilib: "both",
@@ -2535,6 +2832,7 @@ art_prebuilt_cc_prebuilt_library_static {
     },
     visibility: ["//visibility:public"],
     apex_available: ["//apex_available:platform"],
+    licenses: ["art-module-sdk_libnativehelper_license"],
     host_supported: true,
     compile_multilib: "both",
     shared_libs: ["liblog"],
@@ -2572,82 +2870,15 @@ art_prebuilt_cc_prebuilt_library_static {
     },
 }
 
-cc_prebuilt_library_static {
-    name: "art-module-sdk_libctstiagent@current",
-    sdk_member_name: "libctstiagent",
-    visibility: [
-        "//art:__subpackages__",
-        "//cts/hostsidetests/jvmti:__subpackages__",
-        "//prebuilts:__subpackages__",
-    ],
-    apex_available: ["com.android.art.debug"],
-    installable: false,
-    stl: "c++_static",
-    compile_multilib: "both",
-    shared_libs: ["libz"],
-    export_include_dirs: [
-        "include/art/test/ti-agent",
-        "include/tools/dexter/slicer/export",
-    ],
-    arch: {
-        arm64: {
-            srcs: ["arm64/lib/libctstiagent.a"],
-        },
-        x86_64: {
-            srcs: ["x86_64/lib/libctstiagent.a"],
-        },
-        arm: {
-            srcs: ["arm/lib/libctstiagent.a"],
-        },
-        x86: {
-            srcs: ["x86/lib/libctstiagent.a"],
-        },
-    },
-}
-
-art_prebuilt_cc_prebuilt_library_static {
-    name: "libctstiagent",
-    // Do not prefer prebuilt if SOONG_CONFIG_art_module_source_build is true.
-    prefer: true,
-    soong_config_variables: {
-        source_build: {
-            prefer: false,
-        },
-    },
-    visibility: [
-        "//art:__subpackages__",
-        "//cts/hostsidetests/jvmti:__subpackages__",
-        "//prebuilts:__subpackages__",
-    ],
-    apex_available: ["com.android.art.debug"],
-    stl: "c++_static",
-    compile_multilib: "both",
-    shared_libs: ["libz"],
-    export_include_dirs: [
-        "include/art/test/ti-agent",
-        "include/tools/dexter/slicer/export",
-    ],
-    arch: {
-        arm64: {
-            srcs: ["arm64/lib/libctstiagent.a"],
-        },
-        x86_64: {
-            srcs: ["x86_64/lib/libctstiagent.a"],
-        },
-        arm: {
-            srcs: ["arm/lib/libctstiagent.a"],
-        },
-        x86: {
-            srcs: ["x86/lib/libctstiagent.a"],
-        },
-    },
-}
-
 sdk_snapshot {
     name: "art-module-sdk@current",
     visibility: ["//art:__subpackages__"],
     host_supported: true,
     native_libs: ["art-module-sdk_libdexfile_support@current"],
+    native_static_libs: [
+        "art-module-sdk_libdexfile_static@current",
+        "art-module-sdk_libnativehelper_lazy@current",
+    ],
     target: {
         android: {
             bootclasspath_fragments: ["art-module-sdk_art-bootclasspath-fragment@current"],
@@ -2696,11 +2927,6 @@ sdk_snapshot {
                 "art-module-sdk_libnativehelper_compat_libc++@current",
                 "art-module-sdk_libnativeloader_lazy@current",
             ],
-            native_static_libs: [
-                "art-module-sdk_libdexfile_static@current",
-                "art-module-sdk_libnativehelper_lazy@current",
-                "art-module-sdk_libctstiagent@current",
-            ],
         },
         linux_glibc: {
             native_header_libs: [
@@ -2716,10 +2942,6 @@ sdk_snapshot {
                 "art-module-sdk_libnativehelper@current",
                 "art-module-sdk_libnativeloader@current",
                 "art-module-sdk_libsigchain@current",
-            ],
-            native_static_libs: [
-                "art-module-sdk_libdexfile_static@current",
-                "art-module-sdk_libnativehelper_lazy@current",
             ],
         },
         host: {

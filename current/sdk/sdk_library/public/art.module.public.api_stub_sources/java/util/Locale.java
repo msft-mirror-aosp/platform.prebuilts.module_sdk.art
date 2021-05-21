@@ -1356,8 +1356,8 @@ public java.lang.String getDisplayName() { throw new RuntimeException("Stub!"); 
  * <li>{@code new Locale("en", "US", "POSIX").getDisplayName(Locale.US)} -> {@code English (United States,Computer)}
  * <li>{@code Locale.forLanguageTag("zh-Hant-CN").getDisplayName(Locale.US)} -> {@code Chinese (Traditional Han,China)}
  * <li>{@code new Locale("en").getDisplayName(Locale.FRANCE)} -> {@code anglais}
- * <li>{@code new Locale("en", "US").getDisplayName(Locale.FRANCE)} -> {@code anglais (?tats-Unis)}
- * <li>{@code new Locale("en", "US", "POSIX").getDisplayName(Locale.FRANCE)} -> {@code anglais (?tats-Unis,informatique)}.
+ * <li>{@code new Locale("en", "US").getDisplayName(Locale.FRANCE)} -> {@code anglais (États-Unis)}
+ * <li>{@code new Locale("en", "US", "POSIX").getDisplayName(Locale.FRANCE)} -> {@code anglais (États-Unis,informatique)}.
  * </ul>
  */
 

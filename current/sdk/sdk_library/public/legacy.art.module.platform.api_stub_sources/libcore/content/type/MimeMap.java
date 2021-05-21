@@ -38,9 +38,10 @@ private MimeMap() { throw new RuntimeException("Stub!"); }
  *
  * @return builder
  *
- * @see {@link libcore.content.type.MimeMap.Builder MimeMap.Builder}
+ * @see libcore.content.type.MimeMap.Builder
  */
 
+@androidx.annotation.RecentlyNonNull
 public static libcore.content.type.MimeMap.Builder builder() { throw new RuntimeException("Stub!"); }
 
 /**
@@ -49,9 +50,10 @@ public static libcore.content.type.MimeMap.Builder builder() { throw new Runtime
  *
  * @return builder
  *
- * @see {@link libcore.content.type.MimeMap.Builder MimeMap.Builder}
+ * @see libcore.content.type.MimeMap.Builder
  */
 
+@androidx.annotation.RecentlyNonNull
 public libcore.content.type.MimeMap.Builder buildUpon() { throw new RuntimeException("Stub!"); }
 
 /**
@@ -155,7 +157,7 @@ public boolean equals(java.lang.Object obj) { throw new RuntimeException("Stub!"
 public java.lang.String toString() { throw new RuntimeException("Stub!"); }
 /**
  * A builder for mapping of MIME types to extensions and back.
- * Use {@link #put(java.lang.String,java.util.List)} and {@link #put(java.lang.String,java.lang.String)} to add
+ * Use {@link #addMimeMapping(java.lang.String,java.util.List)} and {@link #addMimeMapping(java.lang.String,java.lang.String)} to add
  * mapping entries and build final {@link libcore.content.type.MimeMap MimeMap} with {@link #build()}.
  *
  * @hide
@@ -206,7 +208,8 @@ Builder() { throw new RuntimeException("Stub!"); }
  * @return This builder.
  */
 
-public libcore.content.type.MimeMap.Builder put(@androidx.annotation.RecentlyNonNull java.lang.String mimeSpec, @androidx.annotation.RecentlyNonNull java.util.List<java.lang.String> extensionSpecs) { throw new RuntimeException("Stub!"); }
+@androidx.annotation.RecentlyNonNull
+public libcore.content.type.MimeMap.Builder addMimeMapping(@androidx.annotation.RecentlyNonNull java.lang.String mimeSpec, @androidx.annotation.RecentlyNonNull java.util.List<java.lang.String> extensionSpecs) { throw new RuntimeException("Stub!"); }
 
 /**
  * Builds {@link libcore.content.type.MimeMap MimeMap} containing all added MIME mappings.
@@ -214,6 +217,7 @@ public libcore.content.type.MimeMap.Builder put(@androidx.annotation.RecentlyNon
  * @return {@link libcore.content.type.MimeMap MimeMap} containing previously added MIME mapping entries
  */
 
+@androidx.annotation.RecentlyNonNull
 public libcore.content.type.MimeMap build() { throw new RuntimeException("Stub!"); }
 
 public java.lang.String toString() { throw new RuntimeException("Stub!"); }
