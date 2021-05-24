@@ -28,11 +28,12 @@ public interface Dns extends com.android.okhttp.internalandroidapi.Dns {
 
 /**
  * Returns the IP addresses of {@code hostname}, in the order they should
- * be attempted.
+ * be attempted. Returns loopback addresses for {@code null} host.
  *
  * @param hostname The host name will be looked up.
  */
 
-public java.util.List<java.net.InetAddress> lookup(java.lang.String hostname) throws java.net.UnknownHostException;
+@androidx.annotation.RecentlyNonNull
+public java.util.List<java.net.InetAddress> lookup(@androidx.annotation.RecentlyNullable java.lang.String hostname) throws java.net.UnknownHostException;
 }
 

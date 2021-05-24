@@ -38,6 +38,7 @@ HttpURLConnectionFactory() { throw new RuntimeException("Stub!"); }
  * Create a new {@link libcore.net.http.HttpURLConnectionFactory HttpURLConnectionFactory} instance.
  */
 
+@androidx.annotation.RecentlyNonNull
 public static libcore.net.http.HttpURLConnectionFactory createInstance() { throw new RuntimeException("Stub!"); }
 
 /**
@@ -49,7 +50,7 @@ public static libcore.net.http.HttpURLConnectionFactory createInstance() { throw
  * @param timeUnit The time unit of keep alive duration.
  */
 
-public void setNewConnectionPool(int maxIdleConnections, long keepAliveDuration, java.util.concurrent.TimeUnit timeUnit) { throw new RuntimeException("Stub!"); }
+public void setNewConnectionPool(int maxIdleConnections, long keepAliveDuration, @androidx.annotation.RecentlyNonNull java.util.concurrent.TimeUnit timeUnit) { throw new RuntimeException("Stub!"); }
 
 /**
  * Sets a new dns resolver.
@@ -57,7 +58,7 @@ public void setNewConnectionPool(int maxIdleConnections, long keepAliveDuration,
  * @param dns the dns resolver for looking up.
  */
 
-public void setDns(libcore.net.http.Dns dns) { throw new RuntimeException("Stub!"); }
+public void setDns(@androidx.annotation.RecentlyNonNull libcore.net.http.Dns dns) { throw new RuntimeException("Stub!"); }
 
 /**
  * Opens a connection using the specified SocketFactory and the specified proxy
@@ -71,6 +72,6 @@ public void setDns(libcore.net.http.Dns dns) { throw new RuntimeException("Stub!
  *         configuration.
  */
 
-public java.net.URLConnection openConnection(java.net.URL url, javax.net.SocketFactory socketFactory, java.net.Proxy proxy) throws java.io.IOException { throw new RuntimeException("Stub!"); }
+public java.net.URLConnection openConnection(@androidx.annotation.RecentlyNonNull java.net.URL url, @androidx.annotation.RecentlyNonNull javax.net.SocketFactory socketFactory, @androidx.annotation.RecentlyNonNull java.net.Proxy proxy) throws java.io.IOException { throw new RuntimeException("Stub!"); }
 }
 

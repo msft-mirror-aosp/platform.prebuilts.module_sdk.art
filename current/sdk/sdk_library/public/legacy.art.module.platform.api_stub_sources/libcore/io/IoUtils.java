@@ -128,18 +128,5 @@ public static byte[] readFileAsByteArray(@androidx.annotation.RecentlyNonNull ja
 
 @androidx.annotation.RecentlyNonNull
 public static java.lang.String readFileAsString(@androidx.annotation.RecentlyNonNull java.lang.String absolutePath) throws java.io.IOException { throw new RuntimeException("Stub!"); }
-
-/**
- * Do not use. Use createTemporaryDirectory instead.
- *
- * Used by frameworks/base unit tests to clean up a temporary directory.
- * Deliberately ignores errors, on the assumption that test cleanup is only
- * supposed to be best-effort.
- *
- * @deprecated Use {@link TestIoUtils#createTemporaryDirectory} instead.
- */
-
-@Deprecated
-public static void deleteContents(java.io.File dir) throws java.io.IOException { throw new RuntimeException("Stub!"); }
 }
 
