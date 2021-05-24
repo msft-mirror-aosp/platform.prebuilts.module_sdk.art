@@ -161,7 +161,7 @@ public static interface VmPolicy {
  *            for reading or writing.
  */
 
-public void onPathAccess(java.lang.String path);
+public void onPathAccess(@android.annotation.NonNull java.lang.String path);
 }
 
 }

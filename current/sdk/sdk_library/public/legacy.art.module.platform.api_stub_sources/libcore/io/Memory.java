@@ -38,6 +38,8 @@ private Memory() { throw new RuntimeException("Stub!"); }
  * @param offset offset in {@code src} to get bytes from
  * @param order  byte order
  * @return int value
+ *
+ * @hide
  */
 
 public static int peekInt(@androidx.annotation.RecentlyNonNull byte[] src, int offset, @androidx.annotation.RecentlyNonNull java.nio.ByteOrder order) { throw new RuntimeException("Stub!"); }
@@ -50,6 +52,8 @@ public static int peekInt(@androidx.annotation.RecentlyNonNull byte[] src, int o
  * @param offset offset in {@code src} to get bytes from
  * @param order  byte order
  * @return short value
+ *
+ * @hide
  */
 
 public static short peekShort(@androidx.annotation.RecentlyNonNull byte[] src, int offset, @androidx.annotation.RecentlyNonNull java.nio.ByteOrder order) { throw new RuntimeException("Stub!"); }
@@ -62,6 +66,8 @@ public static short peekShort(@androidx.annotation.RecentlyNonNull byte[] src, i
  * @param offset offset in {@code dst} to put value to
  * @param value  int value to write
  * @param order  byte order
+ *
+ * @hide
  */
 
 public static void pokeInt(@androidx.annotation.RecentlyNonNull byte[] dst, int offset, int value, @androidx.annotation.RecentlyNonNull java.nio.ByteOrder order) { throw new RuntimeException("Stub!"); }
@@ -74,6 +80,8 @@ public static void pokeInt(@androidx.annotation.RecentlyNonNull byte[] dst, int 
  * @param offset offset in {@code dst} to put value to
  * @param value  long value to write
  * @param order  byte order
+ *
+ * @hide
  */
 
 public static void pokeLong(@androidx.annotation.RecentlyNonNull byte[] dst, int offset, long value, @androidx.annotation.RecentlyNonNull java.nio.ByteOrder order) { throw new RuntimeException("Stub!"); }
@@ -86,6 +94,8 @@ public static void pokeLong(@androidx.annotation.RecentlyNonNull byte[] dst, int
  * @param offset offset in {@code dst} to put value to
  * @param value  short value to write
  * @param order  byte order
+ *
+ * @hide
  */
 
 public static void pokeShort(@androidx.annotation.RecentlyNonNull byte[] dst, int offset, short value, @androidx.annotation.RecentlyNonNull java.nio.ByteOrder order) { throw new RuntimeException("Stub!"); }
