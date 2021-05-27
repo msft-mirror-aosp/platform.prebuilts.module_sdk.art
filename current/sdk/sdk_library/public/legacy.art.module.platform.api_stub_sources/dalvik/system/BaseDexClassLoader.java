@@ -63,7 +63,7 @@ protected java.lang.Class<?> findClass(java.lang.String name) throws java.lang.C
  * @hide
  */
 
-public void addDexPath(java.lang.String dexPath) { throw new RuntimeException("Stub!"); }
+public void addDexPath(@android.annotation.Nullable java.lang.String dexPath) { throw new RuntimeException("Stub!"); }
 
 /**
  * Adds additional native paths for consideration in subsequent calls to
@@ -74,7 +74,7 @@ public void addDexPath(java.lang.String dexPath) { throw new RuntimeException("S
  * @hide
  */
 
-public void addNativePath(java.util.Collection<java.lang.String> libPaths) { throw new RuntimeException("Stub!"); }
+public void addNativePath(@android.annotation.NonNull java.util.Collection<java.lang.String> libPaths) { throw new RuntimeException("Stub!"); }
 
 protected java.net.URL findResource(java.lang.String name) { throw new RuntimeException("Stub!"); }
 
@@ -120,6 +120,7 @@ protected synchronized java.lang.Package getPackage(java.lang.String name) { thr
  * @hide
  */
 
+@android.annotation.NonNull
 public java.lang.String getLdLibraryPath() { throw new RuntimeException("Stub!"); }
 
 public java.lang.String toString() { throw new RuntimeException("Stub!"); }
@@ -129,11 +130,11 @@ public java.lang.String toString() { throw new RuntimeException("Stub!"); }
  * Once set, all new instances of BaseDexClassLoader will report upon
  * constructions the loaded dex files.
  *
- * @param newReporter the new Reporter. Setting null will cancel reporting.
+ * @param newReporter the new Reporter. Setting {@code null} will cancel reporting.
  * @hide
  */
 
-public static void setReporter(dalvik.system.BaseDexClassLoader.Reporter newReporter) { throw new RuntimeException("Stub!"); }
+public static void setReporter(@android.annotation.Nullable dalvik.system.BaseDexClassLoader.Reporter newReporter) { throw new RuntimeException("Stub!"); }
 /**
  * Reports the construction of a {@link dalvik.system.BaseDexClassLoader BaseDexClassLoader} and provides opaque
  * information about the class loader chain.
@@ -155,7 +156,7 @@ public static interface Reporter {
  *     each dex file.
  */
 
-public void report(java.util.Map<java.lang.String,java.lang.String> contextsMap);
+public void report(@android.annotation.NonNull java.util.Map<java.lang.String,java.lang.String> contextsMap);
 }
 
 }

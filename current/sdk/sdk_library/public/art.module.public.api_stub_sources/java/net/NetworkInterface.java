@@ -39,8 +39,7 @@ import java.util.List;
  * <p>
  * <a name="access-restrictions"></a>Note that information about
  * {@link java.net.NetworkInterface NetworkInterface}s may be restricted. For example, non-system apps
- * with {@code targetSdkVersion >= android.os.Build.VERSION_CODES.R} will only
- * have access to information about {@link java.net.NetworkInterface NetworkInterface}s that are
+ * will only have access to information about {@link java.net.NetworkInterface NetworkInterface}s that are
  * associated with an {@link java.net.InetAddress InetAddress}.
  *
  * @since 1.4
@@ -209,10 +208,8 @@ public static java.net.NetworkInterface getByInetAddress(java.net.InetAddress ad
  * NOTE: can use getNetworkInterfaces()+getInetAddresses()
  *       to obtain all IP addresses for this node
  * <p>
- * For non-system apps with
- * {@code targetSdkVersion >= android.os.Build.VERSION_CODES.R}, this
- * method will only return information for {@link java.net.NetworkInterface NetworkInterface}s that
- * are associated with an {@link java.net.InetAddress InetAddress}.
+ * For non-system apps, this method will only return information for
+ * {@link java.net.NetworkInterface NetworkInterface}s associated with an {@link java.net.InetAddress InetAddress}.
  *
  * @return an Enumeration of NetworkInterfaces found on this machine
  *         that <a href="#access-restrictions">are accessible</a>.
@@ -275,8 +272,8 @@ public boolean supportsMulticast() throws java.net.SocketException { throw new R
  *          manager is set and the caller does not have the permission
  *          NetPermission("getNetworkInformation"). For example, this
  *          method will generally return {@code null} when called by
- *          non-system apps having
- *          {@code targetSdkVersion >= android.os.Build.VERSION_CODES.R}.
+ *          non-system apps (or 02:00:00:00:00:00 for apps having
+ *          {@code targetSdkVersion < android.os.Build.VERSION_CODES.R}).
  *
  * @exception       java.net.SocketException if an I/O error occurs.
  * @since 1.6

@@ -16,11 +16,11 @@ package android.compat {
   }
 
   public static final class Compatibility.ChangeConfig {
-    ctor public Compatibility.ChangeConfig(java.util.Set<java.lang.Long>, java.util.Set<java.lang.Long>);
-    method public long[] forceDisabledChangesArray();
-    method public java.util.Set<java.lang.Long> forceDisabledSet();
-    method public long[] forceEnabledChangesArray();
-    method public java.util.Set<java.lang.Long> forceEnabledSet();
+    ctor public Compatibility.ChangeConfig(@NonNull java.util.Set<java.lang.Long>, @NonNull java.util.Set<java.lang.Long>);
+    method @NonNull public long[] getDisabledChangesArray();
+    method @NonNull public java.util.Set<java.lang.Long> getDisabledSet();
+    method @NonNull public long[] getEnabledChangesArray();
+    method @NonNull public java.util.Set<java.lang.Long> getEnabledSet();
     method public boolean isEmpty();
     method public boolean isForceDisabled(long);
     method public boolean isForceEnabled(long);
@@ -37,8 +37,8 @@ package android.system {
   }
 
   public final class Os {
-    method @Nullable public static android.system.StructCapUserData[] capget(@NonNull android.system.StructCapUserHeader) throws android.system.ErrnoException;
-    method public static void capset(@NonNull android.system.StructCapUserHeader, @NonNull android.system.StructCapUserData[]) throws android.system.ErrnoException;
+    method @Nullable public static android.system.StructUserCapData[] capget(@NonNull android.system.StructUserCapHeader) throws android.system.ErrnoException;
+    method public static void capset(@NonNull android.system.StructUserCapHeader, @NonNull android.system.StructUserCapData[]) throws android.system.ErrnoException;
     method public static int getpgid(int) throws android.system.ErrnoException;
     method @Nullable public static android.system.StructRlimit getrlimit(int) throws android.system.ErrnoException;
     method public static int getsockoptInt(@NonNull java.io.FileDescriptor, int, int) throws android.system.ErrnoException;
@@ -80,25 +80,19 @@ package android.system {
     ctor public PacketSocketAddress(int, int, byte[]);
   }
 
-  public final class StructCapUserData {
-    ctor public StructCapUserData(int, int, int);
+  public final class StructRlimit {
+    field public final long rlim_cur;
+  }
+
+  public final class StructUserCapData {
+    ctor public StructUserCapData(int, int, int);
     field public final int effective;
     field public final int inheritable;
     field public final int permitted;
   }
 
-  public final class StructCapUserHeader {
-    ctor public StructCapUserHeader(int, int);
-  }
-
-  public final class StructLinger {
-    ctor public StructLinger(int, int);
-    method public boolean isOn();
-    field public final int l_linger;
-  }
-
-  public final class StructRlimit {
-    field public final long rlim_cur;
+  public final class StructUserCapHeader {
+    ctor public StructUserCapHeader(int, int);
   }
 
   public final class UnixSocketAddress extends java.net.SocketAddress {
@@ -188,15 +182,15 @@ package dalvik.system {
   }
 
   public class BaseDexClassLoader extends java.lang.ClassLoader {
-    method public void addDexPath(String);
-    method public void addNativePath(java.util.Collection<java.lang.String>);
-    method public String getLdLibraryPath();
+    method public void addDexPath(@Nullable String);
+    method public void addNativePath(@NonNull java.util.Collection<java.lang.String>);
+    method @NonNull public String getLdLibraryPath();
     method public void reportClassLoaderChain();
-    method public static void setReporter(dalvik.system.BaseDexClassLoader.Reporter);
+    method public static void setReporter(@Nullable dalvik.system.BaseDexClassLoader.Reporter);
   }
 
   public static interface BaseDexClassLoader.Reporter {
-    method public void report(java.util.Map<java.lang.String,java.lang.String>);
+    method public void report(@NonNull java.util.Map<java.lang.String,java.lang.String>);
   }
 
   public final class BlockGuard {
@@ -216,7 +210,7 @@ package dalvik.system {
   }
 
   public static interface BlockGuard.VmPolicy {
-    method public void onPathAccess(String);
+    method public void onPathAccess(@NonNull String);
   }
 
   public final class CloseGuard {
@@ -548,8 +542,8 @@ package javax.net.ssl {
 package libcore.content.type {
 
   public final class MimeMap {
-    method public libcore.content.type.MimeMap.Builder buildUpon();
-    method public static libcore.content.type.MimeMap.Builder builder();
+    method @NonNull public libcore.content.type.MimeMap.Builder buildUpon();
+    method @NonNull public static libcore.content.type.MimeMap.Builder builder();
     method @NonNull public java.util.Set<java.lang.String> extensions();
     method @NonNull public static libcore.content.type.MimeMap getDefault();
     method @Nullable public String guessExtensionFromMimeType(@Nullable String);
@@ -561,17 +555,8 @@ package libcore.content.type {
   }
 
   public static final class MimeMap.Builder {
-    method public libcore.content.type.MimeMap build();
-    method public libcore.content.type.MimeMap.Builder put(@NonNull String, @NonNull java.util.List<java.lang.String>);
-  }
-
-}
-
-package libcore.internal {
-
-  public final class StringPool {
-    ctor public StringPool();
-    method public String get(char[], int, int);
+    method @NonNull public libcore.content.type.MimeMap.Builder addMimeMapping(@NonNull String, @NonNull java.util.List<java.lang.String>);
+    method @NonNull public libcore.content.type.MimeMap build();
   }
 
 }
@@ -605,7 +590,6 @@ package libcore.io {
     method public static void closeQuietly(@Nullable AutoCloseable);
     method public static void closeQuietly(@Nullable java.io.FileDescriptor);
     method public static void closeQuietly(@Nullable java.net.Socket);
-    method @Deprecated public static void deleteContents(java.io.File) throws java.io.IOException;
     method @NonNull public static byte[] readFileAsByteArray(@NonNull String) throws java.io.IOException;
     method @NonNull public static String readFileAsString(@NonNull String) throws java.io.IOException;
     method public static void setBlocking(@NonNull java.io.FileDescriptor, boolean) throws java.io.IOException;
@@ -672,10 +656,10 @@ package libcore.net.http {
   }
 
   public class HttpURLConnectionFactory {
-    method public static libcore.net.http.HttpURLConnectionFactory createInstance();
-    method public java.net.URLConnection openConnection(java.net.URL, javax.net.SocketFactory, java.net.Proxy) throws java.io.IOException;
-    method public void setDns(libcore.net.http.Dns);
-    method public void setNewConnectionPool(int, long, java.util.concurrent.TimeUnit);
+    method @NonNull public static libcore.net.http.HttpURLConnectionFactory createInstance();
+    method public java.net.URLConnection openConnection(@NonNull java.net.URL, @NonNull javax.net.SocketFactory, @NonNull java.net.Proxy) throws java.io.IOException;
+    method public void setDns(@NonNull libcore.net.http.Dns);
+    method public void setNewConnectionPool(int, long, @NonNull java.util.concurrent.TimeUnit);
   }
 
 }
@@ -692,7 +676,7 @@ package libcore.util {
     field public static final String[] STRING;
   }
 
-  public class FP16 {
+  public final class FP16 {
     method public static short ceil(short);
     method public static int compare(short, short);
     method public static boolean equals(short, short);
@@ -805,7 +789,7 @@ package org.apache.harmony.dalvik.ddmc {
 package org.json {
 
   public class JSONObject {
-    method public java.util.Set<java.lang.String> keySet();
+    method @NonNull public java.util.Set<java.lang.String> keySet();
   }
 
 }
