@@ -1580,6 +1580,9 @@ cc_prebuilt_library {
     host_supported: true,
     installable: false,
     compile_multilib: "both",
+    shared: {
+        enabled: false,
+    },
     shared_libs: [
         "liblog",
         "libbase",
@@ -1666,6 +1669,9 @@ art_prebuilt_cc_prebuilt_library {
     licenses: ["art-module-sdk_art_license"],
     host_supported: true,
     compile_multilib: "both",
+    shared: {
+        enabled: false,
+    },
     shared_libs: [
         "liblog",
         "libbase",
@@ -2880,9 +2886,9 @@ sdk_snapshot {
     name: "art-module-sdk@current",
     visibility: ["//art:__subpackages__"],
     host_supported: true,
-    native_libs: ["art-module-sdk_libdexfile_support@current"],
     native_static_libs: [
         "art-module-sdk_libdexfile_static@current",
+        "art-module-sdk_libdexfile_support@current",
         "art-module-sdk_libnativehelper_lazy@current",
     ],
     target: {
