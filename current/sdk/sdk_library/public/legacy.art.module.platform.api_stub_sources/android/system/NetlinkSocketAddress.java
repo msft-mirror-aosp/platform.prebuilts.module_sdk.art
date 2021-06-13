@@ -54,6 +54,8 @@ public final class NetlinkSocketAddress extends java.net.SocketAddress {
  *
  * @param nlPortId     port id
  * @param nlGroupsMask groups mask
+ *
+ * @hide
  */
 
 public NetlinkSocketAddress(int nlPortId, int nlGroupsMask) { throw new RuntimeException("Stub!"); }
@@ -62,6 +64,8 @@ public NetlinkSocketAddress(int nlPortId, int nlGroupsMask) { throw new RuntimeE
  * Returns this address's port id.
  *
  * @return port id
+ *
+ * @hide
  */
 
 public int getPortId() { throw new RuntimeException("Stub!"); }
@@ -70,9 +74,15 @@ public int getPortId() { throw new RuntimeException("Stub!"); }
  * Returns this address's groups multicast mask.
  *
  * @return groups mask
+ *
+ * @hide
  */
 
 public int getGroupsMask() { throw new RuntimeException("Stub!"); }
+
+/**
+ * @hide
+ */
 
 public java.lang.String toString() { throw new RuntimeException("Stub!"); }
 }

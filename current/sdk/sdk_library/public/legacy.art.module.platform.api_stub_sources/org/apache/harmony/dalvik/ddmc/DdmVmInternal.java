@@ -25,7 +25,7 @@ package org.apache.harmony.dalvik.ddmc;
  */
 
 @SuppressWarnings({"unchecked", "deprecation", "all"})
-public class DdmVmInternal {
+public final class DdmVmInternal {
 
 private DdmVmInternal() { throw new RuntimeException("Stub!"); }
 
@@ -33,14 +33,22 @@ private DdmVmInternal() { throw new RuntimeException("Stub!"); }
  * Enable thread notification.
  *
  * This is built into the VM, since that's where threads get managed.
+ *
+ * @param enabled {@code true} to enable thread notification; {@code false} to disable
+ *
+ * @hide
  */
 
-public static native void threadNotify(boolean enable);
+public static native void setThreadNotifyEnabled(boolean enabled);
 
 /**
  * Enable or disable "recent allocation" tracking.
+ *
+ * @param enabled {@code true} to enable recent allocation tracking; {@code false} to disable
+ *
+ * @hide
  */
 
-public static native void enableRecentAllocations(boolean enable);
+public static native void setRecentAllocationsTrackingEnabled(boolean enabled);
 }
 

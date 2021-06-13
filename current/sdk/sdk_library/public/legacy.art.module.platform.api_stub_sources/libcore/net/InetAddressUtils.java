@@ -41,6 +41,8 @@ private InetAddressUtils() { throw new RuntimeException("Stub!"); }
  *
  * @param address the address to parse.
  * @return true if the supplied address is numeric, false otherwise.
+ *
+ * @hide
  */
 
 public static boolean isNumericAddress(java.lang.String address) { throw new RuntimeException("Stub!"); }
@@ -57,6 +59,8 @@ public static boolean isNumericAddress(java.lang.String address) { throw new Run
  * @param address the address to parse, must be numeric.
  * @return an {@link java.net.InetAddress InetAddress} instance corresponding to the address.
  * @throws java.lang.IllegalArgumentException if {@code address} is not a numeric address.
+ *
+ * @hide
  */
 
 public static java.net.InetAddress parseNumericAddress(java.lang.String address) { throw new RuntimeException("Stub!"); }

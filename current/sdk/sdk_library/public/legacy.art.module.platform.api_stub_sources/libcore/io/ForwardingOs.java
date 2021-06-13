@@ -34,6 +34,8 @@ public class ForwardingOs implements libcore.io.Os {
  * Constructs new {@link libcore.io.ForwardingOs ForwardingOs}.
  *
  * @param os {@link libcore.io.Os Os} delegate for not overridden methods
+ *
+ * @hide
  */
 
 protected ForwardingOs(@androidx.annotation.RecentlyNonNull libcore.io.Os os) { throw new RuntimeException("Stub!"); }
@@ -64,6 +66,8 @@ protected ForwardingOs(@androidx.annotation.RecentlyNonNull libcore.io.Os os) { 
  *                        or mode is {@link android.system.OsConstants#F_OK} and the file
  *                        does not exist, or some other error occurred. See the full list
  *                        of errors in the "See Also" list.
+ *
+ * @hide
  */
 
 public boolean access(@androidx.annotation.RecentlyNullable java.lang.String path, int mode) throws android.system.ErrnoException { throw new RuntimeException("Stub!"); }
@@ -102,6 +106,8 @@ public boolean access(@androidx.annotation.RecentlyNullable java.lang.String pat
  *                        path prefix of {@code path}, or the file did not exist yet and
  *                        write access to the parent directory is not allowed, or other error.
  *                        See the full list of errors in the "See Also" list.
+ *
+ * @hide
  */
 
 public java.io.FileDescriptor open(@androidx.annotation.RecentlyNullable java.lang.String path, int flags, int mode) throws android.system.ErrnoException { throw new RuntimeException("Stub!"); }
@@ -128,6 +134,8 @@ public java.io.FileDescriptor open(@androidx.annotation.RecentlyNullable java.la
  * @param path file to delete
  * @throws android.system.ErrnoException if access to {@code path} is not allowed, an I/O error occurred.
  *                        See the full list of errors in the "See Also" list.
+ *
+ * @hide
  */
 
 public void remove(@androidx.annotation.RecentlyNullable java.lang.String path) throws android.system.ErrnoException { throw new RuntimeException("Stub!"); }
@@ -144,6 +152,8 @@ public void remove(@androidx.annotation.RecentlyNullable java.lang.String path) 
  *                        one of the directories in the path prefix of {@code oldPath} or
  *                        {@code newPath}, or {@code oldPath} is a directory and does not allow
  *                        write permission. See the full list of errors in the "See Also" list.
+ *
+ * @hide
  */
 
 public void rename(@androidx.annotation.RecentlyNullable java.lang.String oldPath, @androidx.annotation.RecentlyNullable java.lang.String newPath) throws android.system.ErrnoException { throw new RuntimeException("Stub!"); }
@@ -156,6 +166,8 @@ public void rename(@androidx.annotation.RecentlyNullable java.lang.String oldPat
  * @param path path to file to get info about
  * @return {@link android.system.StructStat StructStat} containing information about the file
  * @throws android.system.ErrnoException See the full list of errors in the "See Also" list.
+ *
+ * @hide
  */
 
 @androidx.annotation.RecentlyNullable
@@ -183,9 +195,15 @@ public android.system.StructStat stat(@androidx.annotation.RecentlyNullable java
  * @param pathname file to unlink
  * @throws android.system.ErrnoException if access to {@code pathname} is not allowed, an I/O error occurred.
  *                        See the full list of errors in the "See Also" list.
+ *
+ * @hide
  */
 
 public void unlink(@androidx.annotation.RecentlyNullable java.lang.String pathname) throws android.system.ErrnoException { throw new RuntimeException("Stub!"); }
+
+/**
+ * @hide
+ */
 
 public java.lang.String toString() { throw new RuntimeException("Stub!"); }
 }

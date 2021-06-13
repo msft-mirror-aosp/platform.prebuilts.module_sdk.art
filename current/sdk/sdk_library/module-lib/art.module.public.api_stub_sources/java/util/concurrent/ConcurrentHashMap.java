@@ -71,6 +71,7 @@ public V remove(@androidx.annotation.RecentlyNonNull java.lang.Object key) { thr
 public void clear() { throw new RuntimeException("Stub!"); }
 
 @androidx.annotation.RecentlyNonNull
+@dalvik.annotation.codegen.CovariantReturnType(returnType=KeySetView.class, presentAfter=28)
 public java.util.Set<K> keySet() { throw new RuntimeException("Stub!"); }
 
 @androidx.annotation.RecentlyNonNull

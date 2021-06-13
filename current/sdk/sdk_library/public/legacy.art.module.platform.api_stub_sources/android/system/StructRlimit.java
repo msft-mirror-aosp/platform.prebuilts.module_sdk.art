@@ -32,7 +32,17 @@ public final class StructRlimit {
 
 StructRlimit() { throw new RuntimeException("Stub!"); }
 
+/**
+ * @hide
+ */
+
 public java.lang.String toString() { throw new RuntimeException("Stub!"); }
+
+/**
+ * Soft limit
+ *
+ * @hide
+ */
 
 public final long rlim_cur;
 { rlim_cur = 0; }

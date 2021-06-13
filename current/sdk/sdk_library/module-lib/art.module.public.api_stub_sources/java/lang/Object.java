@@ -45,12 +45,15 @@ protected java.lang.Object clone() throws java.lang.CloneNotSupportedException {
 @androidx.annotation.RecentlyNonNull
 public java.lang.String toString() { throw new RuntimeException("Stub!"); }
 
+@dalvik.annotation.optimization.FastNative
 public final native void notify();
 
+@dalvik.annotation.optimization.FastNative
 public final native void notifyAll();
 
 public final void wait(long timeout) throws java.lang.InterruptedException { throw new RuntimeException("Stub!"); }
 
+@dalvik.annotation.optimization.FastNative
 public final native void wait(long timeout, int nanos) throws java.lang.InterruptedException;
 
 public final void wait() throws java.lang.InterruptedException { throw new RuntimeException("Stub!"); }

@@ -697,12 +697,6 @@ public static long round(double a) { throw new RuntimeException("Stub!"); }
 public static double random() { throw new RuntimeException("Stub!"); }
 
 /**
- * @hide for internal use only.
- */
-
-public static long randomLongInternal() { throw new RuntimeException("Stub!"); }
-
-/**
  * Returns the sum of its arguments,
  * throwing an exception if the result overflows an {@code int}.
  *

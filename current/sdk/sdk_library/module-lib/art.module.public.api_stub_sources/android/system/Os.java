@@ -30,6 +30,11 @@ public static void bind(java.io.FileDescriptor fd, java.net.InetAddress address,
 
 public static void bind(@android.annotation.NonNull java.io.FileDescriptor fd, @android.annotation.NonNull java.net.SocketAddress address) throws android.system.ErrnoException, java.net.SocketException { throw new RuntimeException("Stub!"); }
 
+@android.annotation.Nullable
+public static android.system.StructUserCapData[] capget(@android.annotation.NonNull android.system.StructUserCapHeader hdr) throws android.system.ErrnoException { throw new RuntimeException("Stub!"); }
+
+public static void capset(@android.annotation.NonNull android.system.StructUserCapHeader hdr, @android.annotation.NonNull android.system.StructUserCapData[] data) throws android.system.ErrnoException { throw new RuntimeException("Stub!"); }
+
 public static void chmod(java.lang.String path, int mode) throws android.system.ErrnoException { throw new RuntimeException("Stub!"); }
 
 public static void chown(java.lang.String path, int uid, int gid) throws android.system.ErrnoException { throw new RuntimeException("Stub!"); }
@@ -78,11 +83,18 @@ public static java.lang.String getenv(java.lang.String name) { throw new Runtime
 
 public static java.net.SocketAddress getpeername(java.io.FileDescriptor fd) throws android.system.ErrnoException { throw new RuntimeException("Stub!"); }
 
+public static int getpgid(int pid) throws android.system.ErrnoException { throw new RuntimeException("Stub!"); }
+
 public static int getpid() { throw new RuntimeException("Stub!"); }
 
 public static int getppid() { throw new RuntimeException("Stub!"); }
 
+@android.annotation.Nullable
+public static android.system.StructRlimit getrlimit(int resource) throws android.system.ErrnoException { throw new RuntimeException("Stub!"); }
+
 public static java.net.SocketAddress getsockname(java.io.FileDescriptor fd) throws android.system.ErrnoException { throw new RuntimeException("Stub!"); }
+
+public static int getsockoptInt(@android.annotation.NonNull java.io.FileDescriptor fd, int level, int option) throws android.system.ErrnoException { throw new RuntimeException("Stub!"); }
 
 @android.annotation.Nullable
 public static android.system.StructLinger getsockoptLinger(@android.annotation.NonNull java.io.FileDescriptor fd, int level, int option) throws android.system.ErrnoException { throw new RuntimeException("Stub!"); }
@@ -101,6 +113,8 @@ public static java.lang.String if_indextoname(int index) { throw new RuntimeExce
 public static int if_nametoindex(java.lang.String name) { throw new RuntimeException("Stub!"); }
 
 public static java.net.InetAddress inet_pton(int family, java.lang.String address) { throw new RuntimeException("Stub!"); }
+
+public static int ioctlInt(@android.annotation.NonNull java.io.FileDescriptor fd, int cmd) throws android.system.ErrnoException { throw new RuntimeException("Stub!"); }
 
 public static boolean isatty(java.io.FileDescriptor fd) { throw new RuntimeException("Stub!"); }
 
@@ -141,6 +155,9 @@ public static java.io.FileDescriptor open(java.lang.String path, int flags, int 
 
 public static java.io.FileDescriptor[] pipe() throws android.system.ErrnoException { throw new RuntimeException("Stub!"); }
 
+@android.annotation.Nullable
+public static java.io.FileDescriptor[] pipe2(int flags) throws android.system.ErrnoException { throw new RuntimeException("Stub!"); }
+
 public static int poll(android.system.StructPollfd[] fds, int timeoutMs) throws android.system.ErrnoException { throw new RuntimeException("Stub!"); }
 
 public static void posix_fallocate(java.io.FileDescriptor fd, long offset, long length) throws android.system.ErrnoException { throw new RuntimeException("Stub!"); }
@@ -160,6 +177,9 @@ public static int read(java.io.FileDescriptor fd, java.nio.ByteBuffer buffer) th
 public static int read(java.io.FileDescriptor fd, byte[] bytes, int byteOffset, int byteCount) throws android.system.ErrnoException, java.io.InterruptedIOException { throw new RuntimeException("Stub!"); }
 
 public static java.lang.String readlink(java.lang.String path) throws android.system.ErrnoException { throw new RuntimeException("Stub!"); }
+
+@android.annotation.Nullable
+public static java.lang.String realpath(@android.annotation.Nullable java.lang.String path) throws android.system.ErrnoException { throw new RuntimeException("Stub!"); }
 
 public static int readv(java.io.FileDescriptor fd, java.lang.Object[] buffers, int[] offsets, int[] byteCounts) throws android.system.ErrnoException, java.io.InterruptedIOException { throw new RuntimeException("Stub!"); }
 
@@ -196,7 +216,15 @@ public static void seteuid(int euid) throws android.system.ErrnoException { thro
 @Deprecated
 public static void setgid(int gid) throws android.system.ErrnoException { throw new RuntimeException("Stub!"); }
 
+public static void setpgid(int pid, int pgid) throws android.system.ErrnoException { throw new RuntimeException("Stub!"); }
+
+public static void setregid(int rgid, int egid) throws android.system.ErrnoException { throw new RuntimeException("Stub!"); }
+
+public static void setreuid(int ruid, int euid) throws android.system.ErrnoException { throw new RuntimeException("Stub!"); }
+
 public static int setsid() throws android.system.ErrnoException { throw new RuntimeException("Stub!"); }
+
+public static void setsockoptIfreq(@android.annotation.NonNull java.io.FileDescriptor fd, int level, int option, @android.annotation.Nullable java.lang.String value) throws android.system.ErrnoException { throw new RuntimeException("Stub!"); }
 
 public static void setsockoptInt(java.io.FileDescriptor fd, int level, int option, int value) throws android.system.ErrnoException { throw new RuntimeException("Stub!"); }
 
@@ -214,6 +242,8 @@ public static void shutdown(java.io.FileDescriptor fd, int how) throws android.s
 public static java.io.FileDescriptor socket(int domain, int type, int protocol) throws android.system.ErrnoException { throw new RuntimeException("Stub!"); }
 
 public static void socketpair(int domain, int type, int protocol, java.io.FileDescriptor fd1, java.io.FileDescriptor fd2) throws android.system.ErrnoException { throw new RuntimeException("Stub!"); }
+
+public static long splice(@android.annotation.NonNull java.io.FileDescriptor fdIn, @android.annotation.Nullable android.system.Int64Ref offIn, @android.annotation.NonNull java.io.FileDescriptor fdOut, @android.annotation.Nullable android.system.Int64Ref offOut, long len, int flags) throws android.system.ErrnoException { throw new RuntimeException("Stub!"); }
 
 public static android.system.StructStat stat(java.lang.String path) throws android.system.ErrnoException { throw new RuntimeException("Stub!"); }
 
@@ -234,6 +264,8 @@ public static void tcsendbreak(java.io.FileDescriptor fd, int duration) throws a
 public static int umask(int mask) { throw new RuntimeException("Stub!"); }
 
 public static android.system.StructUtsname uname() { throw new RuntimeException("Stub!"); }
+
+public static void unlink(@android.annotation.Nullable java.lang.String pathname) throws android.system.ErrnoException { throw new RuntimeException("Stub!"); }
 
 public static void unsetenv(java.lang.String name) throws android.system.ErrnoException { throw new RuntimeException("Stub!"); }
 

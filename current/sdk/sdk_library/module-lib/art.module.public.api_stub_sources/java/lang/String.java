@@ -66,6 +66,7 @@ public int length() { throw new RuntimeException("Stub!"); }
 
 public boolean isEmpty() { throw new RuntimeException("Stub!"); }
 
+@dalvik.annotation.optimization.FastNative
 public native char charAt(int index);
 
 public int codePointAt(int index) { throw new RuntimeException("Stub!"); }
@@ -95,6 +96,7 @@ public boolean contentEquals(@androidx.annotation.RecentlyNonNull java.lang.Char
 
 public boolean equalsIgnoreCase(@androidx.annotation.RecentlyNullable java.lang.String anotherString) { throw new RuntimeException("Stub!"); }
 
+@dalvik.annotation.optimization.FastNative
 public native int compareTo(@androidx.annotation.RecentlyNonNull java.lang.String anotherString);
 
 public int compareToIgnoreCase(@androidx.annotation.RecentlyNonNull java.lang.String str) { throw new RuntimeException("Stub!"); }
@@ -137,6 +139,7 @@ public java.lang.String substring(int beginIndex, int endIndex) { throw new Runt
 public java.lang.CharSequence subSequence(int beginIndex, int endIndex) { throw new RuntimeException("Stub!"); }
 
 @androidx.annotation.RecentlyNonNull
+@dalvik.annotation.optimization.FastNative
 public native java.lang.String concat(@androidx.annotation.RecentlyNonNull java.lang.String str);
 
 @androidx.annotation.RecentlyNonNull
@@ -185,6 +188,7 @@ public java.lang.String trim() { throw new RuntimeException("Stub!"); }
 @androidx.annotation.RecentlyNonNull
 public java.lang.String toString() { throw new RuntimeException("Stub!"); }
 
+@dalvik.annotation.optimization.FastNative
 public native char[] toCharArray();
 
 @androidx.annotation.RecentlyNonNull
@@ -227,6 +231,7 @@ public static java.lang.String valueOf(float f) { throw new RuntimeException("St
 public static java.lang.String valueOf(double d) { throw new RuntimeException("Stub!"); }
 
 @androidx.annotation.RecentlyNonNull
+@dalvik.annotation.optimization.FastNative
 public native java.lang.String intern();
 
 public static final java.util.Comparator<java.lang.String> CASE_INSENSITIVE_ORDER;
