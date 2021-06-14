@@ -22,6 +22,10 @@ public final class OsConstants {
 
 private OsConstants() { throw new RuntimeException("Stub!"); }
 
+public static int CAP_TO_INDEX(int x) { throw new RuntimeException("Stub!"); }
+
+public static int CAP_TO_MASK(int x) { throw new RuntimeException("Stub!"); }
+
 public static boolean S_ISBLK(int mode) { throw new RuntimeException("Stub!"); }
 
 public static boolean S_ISCHR(int mode) { throw new RuntimeException("Stub!"); }
@@ -98,6 +102,9 @@ static { AI_V4MAPPED = 0; }
 
 public static final int ARPHRD_ETHER;
 static { ARPHRD_ETHER = 0; }
+
+public static final int ARPHRD_LOOPBACK;
+static { ARPHRD_LOOPBACK = 0; }
 
 public static final int CAP_AUDIT_CONTROL;
 static { CAP_AUDIT_CONTROL = 0; }
@@ -492,6 +499,9 @@ static { ETIMEDOUT = 0; }
 public static final int ETXTBSY;
 static { ETXTBSY = 0; }
 
+public static final int EUSERS;
+static { EUSERS = 0; }
+
 public static final int EXDEV;
 static { EXDEV = 0; }
 
@@ -729,6 +739,9 @@ static { MAP_ANONYMOUS = 0; }
 public static final int MAP_FIXED;
 static { MAP_FIXED = 0; }
 
+public static final int MAP_POPULATE;
+static { MAP_POPULATE = 0; }
+
 public static final int MAP_PRIVATE;
 static { MAP_PRIVATE = 0; }
 
@@ -828,6 +841,9 @@ static { O_CLOEXEC = 0; }
 public static final int O_CREAT;
 static { O_CREAT = 0; }
 
+public static final int O_DIRECT;
+static { O_DIRECT = 0; }
+
 public static final int O_DSYNC;
 static { O_DSYNC = 0; }
 
@@ -900,6 +916,12 @@ static { PROT_READ = 0; }
 public static final int PROT_WRITE;
 static { PROT_WRITE = 0; }
 
+public static final int PR_CAP_AMBIENT;
+static { PR_CAP_AMBIENT = 0; }
+
+public static final int PR_CAP_AMBIENT_RAISE;
+static { PR_CAP_AMBIENT_RAISE = 0; }
+
 public static final int PR_GET_DUMPABLE;
 static { PR_GET_DUMPABLE = 0; }
 
@@ -908,6 +930,12 @@ static { PR_SET_DUMPABLE = 0; }
 
 public static final int PR_SET_NO_NEW_PRIVS;
 static { PR_SET_NO_NEW_PRIVS = 0; }
+
+public static final int RLIMIT_NOFILE;
+static { RLIMIT_NOFILE = 0; }
+
+public static final int RTMGRP_IPV4_IFADDR;
+static { RTMGRP_IPV4_IFADDR = 0; }
 
 public static final int RTMGRP_NEIGH;
 static { RTMGRP_NEIGH = 0; }
@@ -1137,6 +1165,12 @@ static { SO_SNDTIMEO = 0; }
 public static final int SO_TYPE;
 static { SO_TYPE = 0; }
 
+public static final int SPLICE_F_MORE;
+static { SPLICE_F_MORE = 0; }
+
+public static final int SPLICE_F_MOVE;
+static { SPLICE_F_MOVE = 0; }
+
 public static final int STDERR_FILENO;
 static { STDERR_FILENO = 0; }
 
@@ -1248,6 +1282,15 @@ static { TCP_NODELAY = 0; }
 public static final int TCP_USER_TIMEOUT;
 static { TCP_USER_TIMEOUT = 0; }
 
+public static final int TIOCOUTQ;
+static { TIOCOUTQ = 0; }
+
+public static final int UDP_ENCAP;
+static { UDP_ENCAP = 0; }
+
+public static final int UDP_ENCAP_ESPINUDP;
+static { UDP_ENCAP_ESPINUDP = 0; }
+
 public static final int UDP_GRO;
 static { UDP_GRO = 0; }
 
@@ -1287,8 +1330,17 @@ static { WUNTRACED = 0; }
 public static final int W_OK;
 static { W_OK = 0; }
 
+public static final int XATTR_CREATE;
+static { XATTR_CREATE = 0; }
+
+public static final int XATTR_REPLACE;
+static { XATTR_REPLACE = 0; }
+
 public static final int X_OK;
 static { X_OK = 0; }
+
+public static final int _LINUX_CAPABILITY_VERSION_3;
+static { _LINUX_CAPABILITY_VERSION_3 = 0; }
 
 public static final int _SC_2_CHAR_TERM;
 static { _SC_2_CHAR_TERM = 0; }

@@ -37,6 +37,8 @@ private XmlObjectFactory() { throw new RuntimeException("Stub!"); }
  * using {@code XmlPullParserFactory.newInstance().newSerializer()}.
  *
  * @return platform default {@link org.xmlpull.v1.XmlSerializer XmlSerializer}
+ *
+ * @hide
  */
 
 @androidx.annotation.RecentlyNonNull
@@ -47,6 +49,8 @@ public static org.xmlpull.v1.XmlSerializer newXmlSerializer() { throw new Runtim
  * using {@code XmlPullParserFactory.newInstance().newPullParser()}.
  *
  * @return platform default {@link org.xmlpull.v1.XmlPullParser XmlPullParser}
+ *
+ * @hide
  */
 
 @androidx.annotation.RecentlyNonNull
@@ -56,6 +60,8 @@ public static org.xmlpull.v1.XmlPullParser newXmlPullParser() { throw new Runtim
  * Returns the plaform default {@link org.xml.sax.XMLReader XMLReader}.
  *
  * @return plaform default {@link org.xml.sax.XMLReader XMLReader}
+ *
+ * @hide
  */
 
 @androidx.annotation.RecentlyNonNull

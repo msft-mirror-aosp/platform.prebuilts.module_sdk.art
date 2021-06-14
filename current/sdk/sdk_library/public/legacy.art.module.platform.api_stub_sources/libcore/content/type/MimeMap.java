@@ -39,6 +39,8 @@ private MimeMap() { throw new RuntimeException("Stub!"); }
  * @return builder
  *
  * @see libcore.content.type.MimeMap.Builder
+ *
+ * @hide
  */
 
 @androidx.annotation.RecentlyNonNull
@@ -51,6 +53,8 @@ public static libcore.content.type.MimeMap.Builder builder() { throw new Runtime
  * @return builder
  *
  * @see libcore.content.type.MimeMap.Builder
+ *
+ * @hide
  */
 
 @androidx.annotation.RecentlyNonNull
@@ -60,6 +64,8 @@ public libcore.content.type.MimeMap.Builder buildUpon() { throw new RuntimeExcep
  * Gets system's current default {@link libcore.content.type.MimeMap MimeMap}
  *
  * @return The system's current default {@link libcore.content.type.MimeMap MimeMap}.
+ *
+ * @hide
  */
 
 @androidx.annotation.RecentlyNonNull
@@ -75,6 +81,8 @@ public static libcore.content.type.MimeMap getDefault() { throw new RuntimeExcep
  * {@link #getDefault()} without an intervening call to
  * {@link #setDefaultSupplier(java.util.function.Supplier)} will return that same instance
  * without consulting {@code mimeMapSupplier} a second time.
+ *
+ * @hide
  */
 
 public static void setDefaultSupplier(@androidx.annotation.RecentlyNonNull java.util.function.Supplier<libcore.content.type.MimeMap> mimeMapSupplier) { throw new RuntimeException("Stub!"); }
@@ -85,6 +93,8 @@ public static void setDefaultSupplier(@androidx.annotation.RecentlyNonNull java.
  * @param extension A file extension without the leading '.'
  * @return Whether a MIME type has been registered for the given case insensitive file
  *         extension.
+ *
+ * @hide
  */
 
 public boolean hasExtension(@androidx.annotation.RecentlyNullable java.lang.String extension) { throw new RuntimeException("Stub!"); }
@@ -96,6 +106,8 @@ public boolean hasExtension(@androidx.annotation.RecentlyNullable java.lang.Stri
  * @param extension A file extension without the leading '.'
  * @return The lower-case MIME type registered for the given case insensitive file extension,
  *         or null if there is none.
+ *
+ * @hide
  */
 
 @androidx.annotation.RecentlyNullable
@@ -107,6 +119,8 @@ public java.lang.String guessMimeTypeFromExtension(@androidx.annotation.Recently
  * @param mimeType A MIME type (i.e. {@code "text/plain")
  * @return Whether the given case insensitive MIME type is
  *         {@link #guessMimeTypeFromExtension(String) mapped} to a file extension.
+ *
+ * @hide
  */
 
 public boolean hasMimeType(@androidx.annotation.RecentlyNullable java.lang.String mimeType) { throw new RuntimeException("Stub!"); }
@@ -118,6 +132,8 @@ public boolean hasMimeType(@androidx.annotation.RecentlyNullable java.lang.Strin
  * @param mimeType A MIME type (i.e. text/plain)
  * @return The lower-case file extension (without the leading "." that has been registered for
  *         the given case insensitive MIME type, or null if there is none.
+ *
+ * @hide
  */
 
 @androidx.annotation.RecentlyNullable
@@ -150,9 +166,24 @@ public java.util.Set<java.lang.String> mimeTypes() { throw new RuntimeException(
 @androidx.annotation.RecentlyNonNull
 public java.util.Set<java.lang.String> extensions() { throw new RuntimeException("Stub!"); }
 
+/**
+ *
+ * @hide
+ */
+
 public int hashCode() { throw new RuntimeException("Stub!"); }
 
+/**
+ *
+ * @hide
+ */
+
 public boolean equals(java.lang.Object obj) { throw new RuntimeException("Stub!"); }
+
+/**
+ *
+ * @hide
+ */
 
 public java.lang.String toString() { throw new RuntimeException("Stub!"); }
 /**
@@ -206,6 +237,8 @@ Builder() { throw new RuntimeException("Stub!"); }
  *                 are invalid (null, empty, contain ' ', or '?' after an initial '?' has
  *                 been stripped off).
  * @return This builder.
+ *
+ * @hide
  */
 
 @androidx.annotation.RecentlyNonNull
@@ -215,10 +248,17 @@ public libcore.content.type.MimeMap.Builder addMimeMapping(@androidx.annotation.
  * Builds {@link libcore.content.type.MimeMap MimeMap} containing all added MIME mappings.
  *
  * @return {@link libcore.content.type.MimeMap MimeMap} containing previously added MIME mapping entries
+ *
+ * @hide
  */
 
 @androidx.annotation.RecentlyNonNull
 public libcore.content.type.MimeMap build() { throw new RuntimeException("Stub!"); }
+
+/**
+ *
+ * @hide
+ */
 
 public java.lang.String toString() { throw new RuntimeException("Stub!"); }
 }

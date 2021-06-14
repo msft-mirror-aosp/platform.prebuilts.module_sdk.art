@@ -27,7 +27,7 @@ package dalvik.system;
  */
 
 @SuppressWarnings({"unchecked", "deprecation", "all"})
-public class AnnotatedStackTraceElement {
+public final class AnnotatedStackTraceElement {
 
 private AnnotatedStackTraceElement() { throw new RuntimeException("Stub!"); }
 
@@ -35,8 +35,11 @@ private AnnotatedStackTraceElement() { throw new RuntimeException("Stub!"); }
  * Returns the {@link java.lang.StackTraceElement StackTraceElement} describing the Java stack frame.
  *
  * @return {@link java.lang.StackTraceElement StackTraceElement} describing the Java stack frame.
+ *
+ * @hide
  */
 
+@android.annotation.NonNull
 public java.lang.StackTraceElement getStackTraceElement() { throw new RuntimeException("Stub!"); }
 
 /**
@@ -44,8 +47,11 @@ public java.lang.StackTraceElement getStackTraceElement() { throw new RuntimeExc
  * May be {@code null}.
  *
  * @return array of objects current frame is syncronized on.
+ *
+ * @hide
  */
 
+@android.annotation.Nullable
 public java.lang.Object[] getHeldLocks() { throw new RuntimeException("Stub!"); }
 
 /**
@@ -54,8 +60,11 @@ public java.lang.Object[] getHeldLocks() { throw new RuntimeException("Stub!"); 
  *
  * @return object this thread is waiting to lock, or waiting on, if any,
  *         or {@code null}, if none.
+ *
+ * @hide
  */
 
+@android.annotation.Nullable
 public java.lang.Object getBlockedOn() { throw new RuntimeException("Stub!"); }
 }
 

@@ -40,9 +40,15 @@ public final class PacketSocketAddress extends java.net.SocketAddress {
  * @param sll_protocol protocol field in {@code struct sockaddr_ll}
  * @param sll_ifindex  interface index number field in {@code struct sockaddr_ll}
  * @param sll_addr     physical-layer address field in {@code struct sockaddr_ll}
+ *
+ * @hide
  */
 
 public PacketSocketAddress(int sll_protocol, int sll_ifindex, byte[] sll_addr) { throw new RuntimeException("Stub!"); }
+
+/**
+ * @hide
+ */
 
 public java.lang.String toString() { throw new RuntimeException("Stub!"); }
 }

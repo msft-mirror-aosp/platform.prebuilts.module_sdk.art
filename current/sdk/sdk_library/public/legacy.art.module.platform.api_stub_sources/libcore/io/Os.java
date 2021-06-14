@@ -39,12 +39,16 @@ public interface Os {
  * @param expect the expected value.
  * @param update the new value to set; must not be null.
  * @return whether the update was successful.
+ *
+ * @hide
  */
 
 public static boolean compareAndSetDefault(libcore.io.Os expect, libcore.io.Os update) { throw new RuntimeException("Stub!"); }
 
 /**
  * @return the system's default {@link libcore.io.Os Os} implementation currently in use.
+ *
+ * @hide
  */
 
 public static libcore.io.Os getDefault() { throw new RuntimeException("Stub!"); }

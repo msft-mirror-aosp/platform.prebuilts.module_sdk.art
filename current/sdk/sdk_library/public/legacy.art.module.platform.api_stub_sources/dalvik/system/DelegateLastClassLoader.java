@@ -88,6 +88,28 @@ public DelegateLastClassLoader(java.lang.String dexPath, java.lang.String librar
 public DelegateLastClassLoader(@android.annotation.NonNull java.lang.String dexPath, @android.annotation.Nullable java.lang.String librarySearchPath, @android.annotation.Nullable java.lang.ClassLoader parent, boolean delegateResourceLoading) { super((java.lang.String)null, (java.lang.ClassLoader)null); throw new RuntimeException("Stub!"); }
 
 /**
+ * Creates a {@code DelegateLastClassLoader} that operates on a given {@code dexPath}
+ * and a {@code librarySearchPath}.
+ *
+ * The {@code dexPath} should consist of one or more of the following, separated by
+ * {@code File.pathSeparator}, which is {@code ":"} on Android.
+ *
+ * <ul>
+ * <li>JAR/ZIP/APK files, possibly containing a "classes.dex" file as well as arbitrary
+ * resources.
+ * <li>Raw ".dex" files (not inside a zip file).
+ * </ul>
+ *
+ * @param dexPath the list of jar/apk files containing classes and resources, delimited by
+ *                {@code File.pathSeparator}, which defaults to {@code ":"} on Android.
+ * @param librarySearchPath the list of directories containing native libraries, delimited
+ *                          by {@code File.pathSeparator}; may be {@code null}.
+ * @param parent the parent class loader. May be {@code null} for the boot classloader.
+ * @param sharedLibraryLoaders class loaders of Java shared libraries
+ *                             used by this new class loader. The shared library loaders are
+ *                             always checked before the {@code dexPath} when looking
+ *                             up classes and resources.
+ *
  * @hide
  */
 

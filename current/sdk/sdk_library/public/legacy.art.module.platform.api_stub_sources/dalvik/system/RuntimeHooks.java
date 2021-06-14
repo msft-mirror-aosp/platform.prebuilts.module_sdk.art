@@ -47,6 +47,8 @@ private RuntimeHooks() { throw new RuntimeException("Stub!"); }
  * <p>Once set the supplier cannot be changed.
  *
  * @param zoneIdSupplier new {@link java.util.function.Supplier Supplier} of the time zone ID
+ *
+ * @hide
  */
 
 public static void setTimeZoneIdSupplier(@android.annotation.NonNull java.util.function.Supplier<java.lang.String> zoneIdSupplier) { throw new RuntimeException("Stub!"); }
@@ -59,6 +61,8 @@ public static void setTimeZoneIdSupplier(@android.annotation.NonNull java.util.f
  * {@link java.lang.Thread#dispatchUncaughtException(java.lang.Throwable) Thread#dispatchUncaughtException(Throwable)}.
  *
  * @param uncaughtExceptionHandler handler for uncaught exceptions
+ *
+ * @hide
  */
 
 public static void setUncaughtExceptionPreHandler(@android.annotation.Nullable java.lang.Thread.UncaughtExceptionHandler uncaughtExceptionHandler) { throw new RuntimeException("Stub!"); }

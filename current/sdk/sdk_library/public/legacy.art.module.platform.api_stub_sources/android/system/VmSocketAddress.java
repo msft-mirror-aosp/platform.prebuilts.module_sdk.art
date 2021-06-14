@@ -46,15 +46,25 @@ public final class VmSocketAddress extends java.net.SocketAddress {
  *                     see {@link OsConstants.VMADDR_PORT_ANY}.
  * @param svmCid       The svmCid field value,
  *                     see OsConstants.VMADDR_CID_* for VMADDR_CID_* values.
+ *
+ * @hide
  */
 
 public VmSocketAddress(int svmPort, int svmCid) { throw new RuntimeException("Stub!"); }
 
-/** Returns the value of the svmPort field */
+/**
+ * Returns the value of the svmPort field
+ *
+ * @hide
+ */
 
 public int getSvmPort() { throw new RuntimeException("Stub!"); }
 
-/** Returns the value of the svmCid field */
+/**
+ * Returns the value of the svmCid field
+ *
+ * @hide
+ */
 
 public int getSvmCid() { throw new RuntimeException("Stub!"); }
 }

@@ -47,6 +47,7 @@ public Thread(@androidx.annotation.RecentlyNullable java.lang.ThreadGroup group,
 public Thread(@androidx.annotation.RecentlyNullable java.lang.ThreadGroup group, @androidx.annotation.RecentlyNullable java.lang.Runnable target, @androidx.annotation.RecentlyNonNull java.lang.String name, long stackSize) { throw new RuntimeException("Stub!"); }
 
 @androidx.annotation.RecentlyNonNull
+@dalvik.annotation.optimization.FastNative
 public static native java.lang.Thread currentThread();
 
 public static native void yield();
@@ -70,8 +71,10 @@ public final synchronized void stop(@androidx.annotation.RecentlyNullable java.l
 
 public void interrupt() { throw new RuntimeException("Stub!"); }
 
+@dalvik.annotation.optimization.FastNative
 public static native boolean interrupted();
 
+@dalvik.annotation.optimization.FastNative
 public native boolean isInterrupted();
 
 @Deprecated
@@ -143,6 +146,10 @@ public static void setDefaultUncaughtExceptionHandler(@androidx.annotation.Recen
 
 @androidx.annotation.RecentlyNullable
 public static java.lang.Thread.UncaughtExceptionHandler getDefaultUncaughtExceptionHandler() { throw new RuntimeException("Stub!"); }
+
+public static void setUncaughtExceptionPreHandler(java.lang.Thread.UncaughtExceptionHandler eh) { throw new RuntimeException("Stub!"); }
+
+public static java.lang.Thread.UncaughtExceptionHandler getUncaughtExceptionPreHandler() { throw new RuntimeException("Stub!"); }
 
 @androidx.annotation.RecentlyNullable
 public java.lang.Thread.UncaughtExceptionHandler getUncaughtExceptionHandler() { throw new RuntimeException("Stub!"); }

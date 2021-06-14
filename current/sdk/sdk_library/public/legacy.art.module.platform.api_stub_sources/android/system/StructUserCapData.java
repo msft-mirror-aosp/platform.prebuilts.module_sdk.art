@@ -37,23 +37,41 @@ public final class StructUserCapData {
  * @param effective   effective capability mask
  * @param permitted   permitted capability mask
  * @param inheritable inheritable capability mask
+ *
+ * @hide
  */
 
 public StructUserCapData(int effective, int permitted, int inheritable) { throw new RuntimeException("Stub!"); }
 
+/**
+ * @hide
+ */
+
 public java.lang.String toString() { throw new RuntimeException("Stub!"); }
 
-/** Effective capability mask. */
+/**
+ * Effective capability mask.
+ *
+ * @hide
+ */
 
 public final int effective;
 { effective = 0; }
 
-/** Inheritable capability mask. */
+/**
+ * Inheritable capability mask.
+ *
+ * @hide
+ */
 
 public final int inheritable;
 { inheritable = 0; }
 
-/** Permitted capability mask. */
+/**
+ * Permitted capability mask.
+ *
+ * @hide
+ */
 
 public final int permitted;
 { permitted = 0; }

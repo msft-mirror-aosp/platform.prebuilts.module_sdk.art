@@ -99,5 +99,7 @@ public boolean isClosed() { throw new RuntimeException("Stub!"); }
 public java.nio.channels.DatagramChannel getChannel() { throw new RuntimeException("Stub!"); }
 
 public static synchronized void setDatagramSocketImplFactory(java.net.DatagramSocketImplFactory fac) throws java.io.IOException { throw new RuntimeException("Stub!"); }
+
+public java.io.FileDescriptor getFileDescriptor$() { throw new RuntimeException("Stub!"); }
 }
 

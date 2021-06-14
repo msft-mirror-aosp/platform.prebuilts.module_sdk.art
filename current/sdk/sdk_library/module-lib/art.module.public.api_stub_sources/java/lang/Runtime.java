@@ -59,10 +59,13 @@ public java.lang.Process exec(java.lang.String[] cmdarray, java.lang.String[] en
 
 public int availableProcessors() { throw new RuntimeException("Stub!"); }
 
+@dalvik.annotation.optimization.FastNative
 public native long freeMemory();
 
+@dalvik.annotation.optimization.FastNative
 public native long totalMemory();
 
+@dalvik.annotation.optimization.FastNative
 public native long maxMemory();
 
 public void gc() { throw new RuntimeException("Stub!"); }

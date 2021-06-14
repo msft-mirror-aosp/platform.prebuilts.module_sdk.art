@@ -49,6 +49,7 @@ public int getParameterCount() { throw new RuntimeException("Stub!"); }
 
 public java.lang.reflect.Type[] getGenericParameterTypes() { throw new RuntimeException("Stub!"); }
 
+@dalvik.annotation.optimization.FastNative
 public native java.lang.Class<?>[] getExceptionTypes();
 
 public java.lang.reflect.Type[] getGenericExceptionTypes() { throw new RuntimeException("Stub!"); }

@@ -35,6 +35,10 @@ public boolean valid() { throw new RuntimeException("Stub!"); }
 
 public native void sync() throws java.io.SyncFailedException;
 
+public int getInt$() { throw new RuntimeException("Stub!"); }
+
+public void setInt$(int fd) { throw new RuntimeException("Stub!"); }
+
 public static final java.io.FileDescriptor err;
 static { err = null; }
 

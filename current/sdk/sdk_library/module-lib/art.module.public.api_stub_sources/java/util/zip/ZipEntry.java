@@ -34,6 +34,8 @@ public ZipEntry(java.lang.String name) { throw new RuntimeException("Stub!"); }
 
 public ZipEntry(java.util.zip.ZipEntry e) { throw new RuntimeException("Stub!"); }
 
+public long getDataOffset() { throw new RuntimeException("Stub!"); }
+
 public java.lang.String getName() { throw new RuntimeException("Stub!"); }
 
 public void setTime(long time) { throw new RuntimeException("Stub!"); }

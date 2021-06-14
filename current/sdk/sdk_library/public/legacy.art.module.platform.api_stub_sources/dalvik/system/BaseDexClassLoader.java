@@ -154,6 +154,8 @@ public static interface Reporter {
  *
  * @param contextsMap A map from dex file paths to the class loader context used to load
  *     each dex file.
+ *
+ * @hide
  */
 
 public void report(@android.annotation.NonNull java.util.Map<java.lang.String,java.lang.String> contextsMap);
