@@ -25,22 +25,40 @@ package org.apache.harmony.dalvik.ddmc;
  */
 
 @SuppressWarnings({"unchecked", "deprecation", "all"})
-public class DdmServer {
+public final class DdmServer {
 
 private DdmServer() { throw new RuntimeException("Stub!"); }
 
 /**
- * Register an instance of the ChunkHandler class to handle a specific
+ * Register an instance of the {@link org.apache.harmony.dalvik.ddmc.ChunkHandler ChunkHandler} class to handle a specific
  * chunk type.
  *
  * Throws an exception if the type already has a handler registered.
+ *
+ * @param type    int describing registered handler
+ * @param handler handler to be registered
+ * @throws java.lang.NullPointerException if {@code handler} is {@code null}
+ *
+ * @hide
  */
 
 public static void registerHandler(int type, org.apache.harmony.dalvik.ddmc.ChunkHandler handler) { throw new RuntimeException("Stub!"); }
 
 /**
+ * Unregister the existing handler for the specified type.
+ *
+ * Returns the old handler.
+ *
+ * @hide
+ */
+
+public static org.apache.harmony.dalvik.ddmc.ChunkHandler unregisterHandler(int type) { throw new RuntimeException("Stub!"); }
+
+/**
  * The application must call here after it finishes registering
  * handlers.
+ *
+ * @hide
  */
 
 public static void registrationComplete() { throw new RuntimeException("Stub!"); }
@@ -50,6 +68,10 @@ public static void registrationComplete() { throw new RuntimeException("Stub!");
  * JDWP "event", which does not elicit a response from the server.
  *
  * Use this for "unsolicited" chunks.
+ *
+ * @param chunk to send
+ *
+ * @hide
  */
 
 public static void sendChunk(org.apache.harmony.dalvik.ddmc.Chunk chunk) { throw new RuntimeException("Stub!"); }

@@ -42,6 +42,8 @@ private Streams() { throw new RuntimeException("Stub!"); }
  * @param in {@link java.io.InputStream InputStream} to read byte from
  * @return singlge byte read from {@code in}
  * @throws java.io.IOException in case of I/O error
+ *
+ * @hide
  */
 
 public static int readSingleByte(@androidx.annotation.RecentlyNonNull java.io.InputStream in) throws java.io.IOException { throw new RuntimeException("Stub!"); }
@@ -54,6 +56,8 @@ public static int readSingleByte(@androidx.annotation.RecentlyNonNull java.io.In
  * @param out {@link java.io.OutputStream OutputStream} to write byte to
  * @param b byte to write to stream {@code out}
  * @throws java.io.IOException in case of I/O error
+ *
+ * @hide
  */
 
 public static void writeSingleByte(@androidx.annotation.RecentlyNonNull java.io.OutputStream out, int b) throws java.io.IOException { throw new RuntimeException("Stub!"); }
@@ -65,6 +69,8 @@ public static void writeSingleByte(@androidx.annotation.RecentlyNonNull java.io.
  * @param in {@link java.io.InputStream InputStream} to read data from
  * @param dst byte buffer to write data to
  * @throws java.io.IOException in case of I/O error
+ *
+ * @hide
  */
 
 public static void readFully(@androidx.annotation.RecentlyNonNull java.io.InputStream in, @androidx.annotation.RecentlyNonNull byte[] dst) throws java.io.IOException { throw new RuntimeException("Stub!"); }
@@ -76,6 +82,8 @@ public static void readFully(@androidx.annotation.RecentlyNonNull java.io.InputS
  * @param in {@link java.io.InputStream InputStream} to read data from
  * @return remaining bytes in {@code in} stream.
  * @throws java.io.IOException thrown by {@link java.io.InputStream#read(byte[]) InputStream#read(byte[])}.
+ *
+ * @hide
  */
 
 @androidx.annotation.RecentlyNonNull
@@ -88,6 +96,8 @@ public static byte[] readFully(@androidx.annotation.RecentlyNonNull java.io.Inpu
  * @param in {@link java.io.InputStream InputStream} to read data from
  * @return remaining bytes in {@code in} stream.
  * @throws java.io.IOException thrown by {@link java.io.InputStream#read(byte[]) InputStream#read(byte[])}.
+ *
+ * @hide
  */
 
 @androidx.annotation.RecentlyNonNull
@@ -99,6 +109,8 @@ public static byte[] readFullyNoClose(@androidx.annotation.RecentlyNonNull java.
  * @param reader {@link java.io.Reader Reader} instance.
  * @return remainder of {@code reader} as {@link java.lang.String String}.
  * @throws java.io.IOException thrown by {@link java.io.Reader#read(java.nio.CharBuffer) Reader#read(java.nio.CharBuffer)}.
+ *
+ * @hide
  */
 
 @androidx.annotation.RecentlyNonNull
@@ -120,6 +132,8 @@ public static java.lang.String readFully(@androidx.annotation.RecentlyNonNull ja
  * @param byteCount number of bytes to skip from {@code in}
  * @return number of bytes skipped from {@code in}
  * @throws java.io.IOException in case of I/O error
+ *
+ * @hide
  */
 
 public static long skipByReading(@androidx.annotation.RecentlyNonNull java.io.InputStream in, long byteCount) throws java.io.IOException { throw new RuntimeException("Stub!"); }
@@ -132,6 +146,8 @@ public static long skipByReading(@androidx.annotation.RecentlyNonNull java.io.In
  * @param out {@link java.io.InputStream InputStream} to write copied data to
  * @return the total number of bytes transferred.
  * @throws java.io.IOException reading from {@link java.io.InputStream InputStream} or writing to {@link java.io.OutputStream OutputStream}.
+ *
+ * @hide
  */
 
 public static int copy(@androidx.annotation.RecentlyNonNull java.io.InputStream in, @androidx.annotation.RecentlyNonNull java.io.OutputStream out) throws java.io.IOException { throw new RuntimeException("Stub!"); }

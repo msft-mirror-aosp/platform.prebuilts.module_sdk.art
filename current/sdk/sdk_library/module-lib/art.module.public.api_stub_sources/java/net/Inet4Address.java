@@ -59,5 +59,14 @@ public java.lang.String getHostAddress() { throw new RuntimeException("Stub!"); 
 public int hashCode() { throw new RuntimeException("Stub!"); }
 
 public boolean equals(java.lang.Object obj) { throw new RuntimeException("Stub!"); }
+
+public static final java.net.InetAddress ALL;
+static { ALL = null; }
+
+public static final java.net.InetAddress ANY;
+static { ANY = null; }
+
+public static final java.net.InetAddress LOOPBACK;
+static { LOOPBACK = null; }
 }
 

@@ -25,7 +25,7 @@ package libcore.net.event;
  */
 
 @SuppressWarnings({"unchecked", "deprecation", "all"})
-public class NetworkEventDispatcher {
+public final class NetworkEventDispatcher {
 
 NetworkEventDispatcher() { throw new RuntimeException("Stub!"); }
 
@@ -33,14 +33,18 @@ NetworkEventDispatcher() { throw new RuntimeException("Stub!"); }
  * Returns the shared {@link libcore.net.event.NetworkEventDispatcher NetworkEventDispatcher} instance.
  *
  * @return singleton instance of {@link libcore.net.event.NetworkEventDispatcher NetworkEventDispatcher}
+ *
+ * @hide
  */
 
 public static libcore.net.event.NetworkEventDispatcher getInstance() { throw new RuntimeException("Stub!"); }
 
 /**
  * Notifies registered listeners of a network configuration change.
+ *
+ * @hide
  */
 
-public void onNetworkConfigurationChanged() { throw new RuntimeException("Stub!"); }
+public void dispatchNetworkConfigurationChange() { throw new RuntimeException("Stub!"); }
 }
 

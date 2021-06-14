@@ -133,5 +133,7 @@ public boolean isOutputShutdown() { throw new RuntimeException("Stub!"); }
 public static synchronized void setSocketImplFactory(java.net.SocketImplFactory fac) throws java.io.IOException { throw new RuntimeException("Stub!"); }
 
 public void setPerformancePreferences(int connectionTime, int latency, int bandwidth) { throw new RuntimeException("Stub!"); }
+
+public java.io.FileDescriptor getFileDescriptor$() { throw new RuntimeException("Stub!"); }
 }
 

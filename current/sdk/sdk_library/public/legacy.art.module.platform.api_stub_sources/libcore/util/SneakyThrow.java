@@ -38,6 +38,8 @@ private SneakyThrow() { throw new RuntimeException("Stub!"); }
  * and is not declared to be thrown.
  *
  * @param t throwable to throw
+ *
+ * @hide
  */
 
 public static void sneakyThrow(@androidx.annotation.RecentlyNonNull java.lang.Throwable t) { throw new RuntimeException("Stub!"); }

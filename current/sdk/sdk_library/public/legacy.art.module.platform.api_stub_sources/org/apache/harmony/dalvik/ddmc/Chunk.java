@@ -34,16 +34,34 @@ public class Chunk {
 
 /**
  * Constructor with all fields.
+ *
+ * @param type   chunk type
+ * @param data   chunk data
+ * @param offset offset in {@code data} where actual data starts from
+ * @param length length of the {@code data}
+ *
+ * @hide
  */
 
 public Chunk(int type, byte[] data, int offset, int length) { throw new RuntimeException("Stub!"); }
 
 /**
- * Construct from a ByteBuffer.  The chunk is assumed to start at
+ * Construct from a {@link java.nio.ByteBuffer ByteBuffer}.  The chunk is assumed to start at
  * offset 0 and continue to the current position.
+ *
+ * @param type chunk type
+ * @param buf  {@link java.nio.ByteBuffer ByteBuffer} containing chunk data
+ *
+ * @hide
  */
 
 public Chunk(int type, java.nio.ByteBuffer buf) { throw new RuntimeException("Stub!"); }
+
+/**
+ * Public members.  Do not rename without updating the VM.
+ *
+ * @hide
+ */
 
 public int type;
 }

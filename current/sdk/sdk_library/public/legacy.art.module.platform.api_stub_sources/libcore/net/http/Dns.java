@@ -31,6 +31,8 @@ public interface Dns extends com.android.okhttp.internalandroidapi.Dns {
  * be attempted. Returns loopback addresses for {@code null} host.
  *
  * @param hostname The host name will be looked up.
+ *
+ * @hide
  */
 
 @androidx.annotation.RecentlyNonNull

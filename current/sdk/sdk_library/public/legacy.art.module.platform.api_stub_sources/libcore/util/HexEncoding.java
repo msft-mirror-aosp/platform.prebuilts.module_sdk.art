@@ -35,6 +35,8 @@ private HexEncoding() { throw new RuntimeException("Stub!"); }
  * @param  upperCase {@code true} to use uppercase letters, {@code false}
  *         for lowercase
  * @return the encoded string
+ *
+ * @hide
  */
 
 public static java.lang.String encodeToString(byte b, boolean upperCase) { throw new RuntimeException("Stub!"); }
@@ -44,6 +46,8 @@ public static java.lang.String encodeToString(byte b, boolean upperCase) { throw
  *
  * @param  data byte array to encode
  * @return the encoded data, using uppercase letters
+ *
+ * @hide
  */
 
 public static char[] encode(byte[] data) { throw new RuntimeException("Stub!"); }
@@ -55,6 +59,8 @@ public static char[] encode(byte[] data) { throw new RuntimeException("Stub!"); 
  * @param  upperCase {@code true} to use uppercase letters, {@code false}
  *         for lowercase
  * @return the encoded data
+ *
+ * @hide
  */
 
 public static char[] encode(byte[] data, boolean upperCase) { throw new RuntimeException("Stub!"); }
@@ -66,6 +72,8 @@ public static char[] encode(byte[] data, boolean upperCase) { throw new RuntimeE
  * @param  offset offset of the data to encode in the {@code data} array
  * @param  len length of the data to encode in the {@code data} array
  * @return the encoded data, using uppercase letters
+ *
+ * @hide
  */
 
 public static char[] encode(byte[] data, int offset, int len) { throw new RuntimeException("Stub!"); }
@@ -75,6 +83,8 @@ public static char[] encode(byte[] data, int offset, int len) { throw new Runtim
  *
  * @param  data byte array to encode
  * @return the encoded data, using uppercase letters
+ *
+ * @hide
  */
 
 public static java.lang.String encodeToString(byte[] data) { throw new RuntimeException("Stub!"); }
@@ -86,6 +96,8 @@ public static java.lang.String encodeToString(byte[] data) { throw new RuntimeEx
  * @param  upperCase {@code true} to use uppercase letters, {@code false}
  *         for lowercase
  * @return the encoded data
+ *
+ * @hide
  */
 
 public static java.lang.String encodeToString(byte[] data, boolean upperCase) { throw new RuntimeException("Stub!"); }
@@ -98,6 +110,8 @@ public static java.lang.String encodeToString(byte[] data, boolean upperCase) { 
  *         can be either uppercase or lowercase.
  * @return the decoded data
  * @throws java.lang.IllegalArgumentException if the input is malformed
+ *
+ * @hide
  */
 
 public static byte[] decode(java.lang.String encoded) throws java.lang.IllegalArgumentException { throw new RuntimeException("Stub!"); }
@@ -112,6 +126,8 @@ public static byte[] decode(java.lang.String encoded) throws java.lang.IllegalAr
  *         result byte. If {@code false} odd-length inputs are not allowed.
  * @return the decoded data
  * @throws java.lang.IllegalArgumentException if the input is malformed
+ *
+ * @hide
  */
 
 public static byte[] decode(java.lang.String encoded, boolean allowSingleChar) throws java.lang.IllegalArgumentException { throw new RuntimeException("Stub!"); }
@@ -124,6 +140,8 @@ public static byte[] decode(java.lang.String encoded, boolean allowSingleChar) t
  *         can be either uppercase or lowercase.
  * @return the decoded data
  * @throws java.lang.IllegalArgumentException if the input is malformed
+ *
+ * @hide
  */
 
 public static byte[] decode(char[] encoded) throws java.lang.IllegalArgumentException { throw new RuntimeException("Stub!"); }
@@ -138,6 +156,8 @@ public static byte[] decode(char[] encoded) throws java.lang.IllegalArgumentExce
  *         result byte. If {@code false} odd-length inputs are not allowed.
  * @return the decoded data
  * @throws java.lang.IllegalArgumentException if the input is malformed
+ *
+ * @hide
  */
 
 public static byte[] decode(char[] encoded, boolean allowSingleChar) throws java.lang.IllegalArgumentException { throw new RuntimeException("Stub!"); }

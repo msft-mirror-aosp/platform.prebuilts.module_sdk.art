@@ -88,24 +88,31 @@ public final byte[] array() { throw new RuntimeException("Stub!"); }
 public final int arrayOffset() { throw new RuntimeException("Stub!"); }
 
 @androidx.annotation.RecentlyNonNull
+@dalvik.annotation.codegen.CovariantReturnType(returnType=ByteBuffer.class, presentAfter=28)
 public java.nio.Buffer position(int newPosition) { throw new RuntimeException("Stub!"); }
 
 @androidx.annotation.RecentlyNonNull
+@dalvik.annotation.codegen.CovariantReturnType(returnType=ByteBuffer.class, presentAfter=28)
 public java.nio.Buffer limit(int newLimit) { throw new RuntimeException("Stub!"); }
 
 @androidx.annotation.RecentlyNonNull
+@dalvik.annotation.codegen.CovariantReturnType(returnType=ByteBuffer.class, presentAfter=28)
 public java.nio.Buffer mark() { throw new RuntimeException("Stub!"); }
 
 @androidx.annotation.RecentlyNonNull
+@dalvik.annotation.codegen.CovariantReturnType(returnType=ByteBuffer.class, presentAfter=28)
 public java.nio.Buffer reset() { throw new RuntimeException("Stub!"); }
 
 @androidx.annotation.RecentlyNonNull
+@dalvik.annotation.codegen.CovariantReturnType(returnType=ByteBuffer.class, presentAfter=28)
 public java.nio.Buffer clear() { throw new RuntimeException("Stub!"); }
 
 @androidx.annotation.RecentlyNonNull
+@dalvik.annotation.codegen.CovariantReturnType(returnType=ByteBuffer.class, presentAfter=28)
 public java.nio.Buffer flip() { throw new RuntimeException("Stub!"); }
 
 @androidx.annotation.RecentlyNonNull
+@dalvik.annotation.codegen.CovariantReturnType(returnType=ByteBuffer.class, presentAfter=28)
 public java.nio.Buffer rewind() { throw new RuntimeException("Stub!"); }
 
 @androidx.annotation.RecentlyNonNull
@@ -205,5 +212,7 @@ public abstract java.nio.ByteBuffer putDouble(int index, double value);
 
 @androidx.annotation.RecentlyNonNull
 public abstract java.nio.DoubleBuffer asDoubleBuffer();
+
+public void setAccessible(boolean value) { throw new RuntimeException("Stub!"); }
 }
 

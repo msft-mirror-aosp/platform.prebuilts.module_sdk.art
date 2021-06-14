@@ -93,6 +93,8 @@ public synchronized java.util.Set<java.security.Provider.Service> getServices() 
 protected synchronized void putService(java.security.Provider.Service s) { throw new RuntimeException("Stub!"); }
 
 protected synchronized void removeService(java.security.Provider.Service s) { throw new RuntimeException("Stub!"); }
+
+public synchronized void warmUpServiceProvision() { throw new RuntimeException("Stub!"); }
 @SuppressWarnings({"unchecked", "deprecation", "all"})
 public static class Service {
 
