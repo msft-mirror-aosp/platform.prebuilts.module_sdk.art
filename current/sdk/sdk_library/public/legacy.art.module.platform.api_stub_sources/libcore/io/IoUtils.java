@@ -41,6 +41,8 @@ private IoUtils() { throw new RuntimeException("Stub!"); }
  * @param fd {@link java.io.FileDescriptor FileDescriptor} to take ownership from, must be non-{@code null}.
  * @return raw file descriptor
  * @throws java.lang.NullPointerException if fd is null
+ *
+ * @hide
  */
 
 public static int acquireRawFd(@androidx.annotation.RecentlyNonNull java.io.FileDescriptor fd) { throw new RuntimeException("Stub!"); }
@@ -59,6 +61,8 @@ public static int acquireRawFd(@androidx.annotation.RecentlyNonNull java.io.File
  * @param owner owner object
  * @throws java.lang.NullPointerException if {@code fd} or {@code owner} are {@code null}
  * @throws java.lang.IllegalStateException if {@code fd} is already owned
+ *
+ * @hide
  */
 
 public static void setFdOwner(@androidx.annotation.RecentlyNonNull java.io.FileDescriptor fd, @androidx.annotation.RecentlyNonNull java.lang.Object owner) { throw new RuntimeException("Stub!"); }
@@ -69,6 +73,8 @@ public static void setFdOwner(@androidx.annotation.RecentlyNonNull java.io.FileD
  *
  * @param fd is {@link java.io.FileDescriptor FileDescriptor} instance, invalid value is ignored.
  * @throws java.io.IOException if an I/O error occurred.
+ *
+ * @hide
  */
 
 public static void close(@androidx.annotation.RecentlyNullable java.io.FileDescriptor fd) throws java.io.IOException { throw new RuntimeException("Stub!"); }
@@ -77,6 +83,8 @@ public static void close(@androidx.annotation.RecentlyNullable java.io.FileDescr
  * Closes {@link AutoClosable} instance, ignoring any checked exceptions.
  *
  * @param close is AutoClosable instance, null value is ignored.
+ *
+ * @hide
  */
 
 public static void closeQuietly(@androidx.annotation.RecentlyNullable java.lang.AutoCloseable closeable) { throw new RuntimeException("Stub!"); }
@@ -85,6 +93,8 @@ public static void closeQuietly(@androidx.annotation.RecentlyNullable java.lang.
  * Calls {@link #close(java.io.FileDescriptor)}, ignoring any exceptions.
  *
  * @param fd is {@link java.io.FileDescriptor FileDescriptor} instance, invalid value is ignored.
+ *
+ * @hide
  */
 
 public static void closeQuietly(@androidx.annotation.RecentlyNullable java.io.FileDescriptor fd) { throw new RuntimeException("Stub!"); }
@@ -93,6 +103,8 @@ public static void closeQuietly(@androidx.annotation.RecentlyNullable java.io.Fi
  * Closes socket, ignoring any exceptions.
  *
  * @param socket is {@link java.net.Socket Socket} instance, {@code null} value is ignored.
+ *
+ * @hide
  */
 
 public static void closeQuietly(@androidx.annotation.RecentlyNullable java.net.Socket socket) { throw new RuntimeException("Stub!"); }
@@ -103,6 +115,8 @@ public static void closeQuietly(@androidx.annotation.RecentlyNullable java.net.S
  * @param fd is {@link java.io.FileDescriptor FileDescriptor} instance
  * @param blocking is a boolean that defines whether fd should be blocking or non-blocking
  * @throws java.io.IOException if system API call fails
+ *
+ * @hide
  */
 
 public static void setBlocking(@androidx.annotation.RecentlyNonNull java.io.FileDescriptor fd, boolean blocking) throws java.io.IOException { throw new RuntimeException("Stub!"); }
@@ -113,6 +127,8 @@ public static void setBlocking(@androidx.annotation.RecentlyNonNull java.io.File
  * @param absolutePath path to a file to read
  * @return contents of the file at {@code absolutePath} as byte array
  * @throws java.io.IOException if there was I/O error
+ *
+ * @hide
  */
 
 @androidx.annotation.RecentlyNonNull
@@ -124,6 +140,8 @@ public static byte[] readFileAsByteArray(@androidx.annotation.RecentlyNonNull ja
  * @param absolutePath path to a file to read
  * @return contents of the file at {@code absolutePath} as {@link java.lang.String String}
  * @throws java.io.IOException if there was I/O error
+ *
+ * @hide
  */
 
 @androidx.annotation.RecentlyNonNull

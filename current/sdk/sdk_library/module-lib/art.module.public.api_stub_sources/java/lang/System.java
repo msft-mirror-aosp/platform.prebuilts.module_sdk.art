@@ -48,10 +48,13 @@ public static void setSecurityManager(@androidx.annotation.RecentlyNullable java
 @androidx.annotation.RecentlyNullable
 public static java.lang.SecurityManager getSecurityManager() { throw new RuntimeException("Stub!"); }
 
+@dalvik.annotation.optimization.CriticalNative
 public static native long currentTimeMillis();
 
+@dalvik.annotation.optimization.CriticalNative
 public static native long nanoTime();
 
+@dalvik.annotation.optimization.FastNative
 public static native void arraycopy(@androidx.annotation.RecentlyNonNull java.lang.Object src, int srcPos, @androidx.annotation.RecentlyNonNull java.lang.Object dest, int destPos, int length);
 
 public static int identityHashCode(@androidx.annotation.RecentlyNullable java.lang.Object x) { throw new RuntimeException("Stub!"); }

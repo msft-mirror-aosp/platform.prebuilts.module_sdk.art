@@ -303,6 +303,8 @@ private OptimizationInfo() { throw new RuntimeException("Stub!"); }
  * Returns the human readable refined status of the validity of the odex file.
  *
  * @return optimization status
+ *
+ * @hide
  */
 
 @Deprecated
@@ -313,6 +315,8 @@ public java.lang.String getStatus() { throw new RuntimeException("Stub!"); }
  * Returns the reason of a particular optimization used.
  *
  * @return optimization reason
+ *
+ * @hide
  */
 
 @Deprecated

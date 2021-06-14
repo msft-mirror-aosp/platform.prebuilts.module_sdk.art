@@ -32,42 +32,59 @@ public final class Math {
 
 private Math() { throw new RuntimeException("Stub!"); }
 
+@dalvik.annotation.optimization.CriticalNative
 public static native double sin(double a);
 
+@dalvik.annotation.optimization.CriticalNative
 public static native double cos(double a);
 
+@dalvik.annotation.optimization.CriticalNative
 public static native double tan(double a);
 
+@dalvik.annotation.optimization.CriticalNative
 public static native double asin(double a);
 
+@dalvik.annotation.optimization.CriticalNative
 public static native double acos(double a);
 
+@dalvik.annotation.optimization.CriticalNative
 public static native double atan(double a);
 
 public static double toRadians(double angdeg) { throw new RuntimeException("Stub!"); }
 
 public static double toDegrees(double angrad) { throw new RuntimeException("Stub!"); }
 
+@dalvik.annotation.optimization.CriticalNative
 public static native double exp(double a);
 
+@dalvik.annotation.optimization.CriticalNative
 public static native double log(double a);
 
+@dalvik.annotation.optimization.CriticalNative
 public static native double log10(double a);
 
+@dalvik.annotation.optimization.CriticalNative
 public static native double sqrt(double a);
 
+@dalvik.annotation.optimization.CriticalNative
 public static native double cbrt(double a);
 
+@dalvik.annotation.optimization.CriticalNative
 public static native double IEEEremainder(double f1, double f2);
 
+@dalvik.annotation.optimization.CriticalNative
 public static native double ceil(double a);
 
+@dalvik.annotation.optimization.CriticalNative
 public static native double floor(double a);
 
+@dalvik.annotation.optimization.CriticalNative
 public static native double rint(double a);
 
+@dalvik.annotation.optimization.CriticalNative
 public static native double atan2(double y, double x);
 
+@dalvik.annotation.optimization.CriticalNative
 public static native double pow(double a, double b);
 
 public static int round(float a) { throw new RuntimeException("Stub!"); }
@@ -152,16 +169,22 @@ public static double signum(double d) { throw new RuntimeException("Stub!"); }
 
 public static float signum(float f) { throw new RuntimeException("Stub!"); }
 
+@dalvik.annotation.optimization.CriticalNative
 public static native double sinh(double x);
 
+@dalvik.annotation.optimization.CriticalNative
 public static native double cosh(double x);
 
+@dalvik.annotation.optimization.CriticalNative
 public static native double tanh(double x);
 
+@dalvik.annotation.optimization.CriticalNative
 public static native double hypot(double x, double y);
 
+@dalvik.annotation.optimization.CriticalNative
 public static native double expm1(double x);
 
+@dalvik.annotation.optimization.CriticalNative
 public static native double log1p(double x);
 
 public static double copySign(double magnitude, double sign) { throw new RuntimeException("Stub!"); }

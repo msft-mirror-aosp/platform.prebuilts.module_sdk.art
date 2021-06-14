@@ -22,7 +22,13 @@ public class BaseDexClassLoader extends java.lang.ClassLoader {
 
 public BaseDexClassLoader(java.lang.String dexPath, java.io.File optimizedDirectory, java.lang.String librarySearchPath, java.lang.ClassLoader parent) { throw new RuntimeException("Stub!"); }
 
+public void reportClassLoaderChain() { throw new RuntimeException("Stub!"); }
+
 protected java.lang.Class<?> findClass(java.lang.String name) throws java.lang.ClassNotFoundException { throw new RuntimeException("Stub!"); }
+
+public void addDexPath(@android.annotation.Nullable java.lang.String dexPath) { throw new RuntimeException("Stub!"); }
+
+public void addNativePath(@android.annotation.NonNull java.util.Collection<java.lang.String> libPaths) { throw new RuntimeException("Stub!"); }
 
 protected java.net.URL findResource(java.lang.String name) { throw new RuntimeException("Stub!"); }
 
@@ -32,6 +38,17 @@ public java.lang.String findLibrary(java.lang.String name) { throw new RuntimeEx
 
 protected synchronized java.lang.Package getPackage(java.lang.String name) { throw new RuntimeException("Stub!"); }
 
+@android.annotation.NonNull
+public java.lang.String getLdLibraryPath() { throw new RuntimeException("Stub!"); }
+
 public java.lang.String toString() { throw new RuntimeException("Stub!"); }
+
+public static void setReporter(@android.annotation.Nullable dalvik.system.BaseDexClassLoader.Reporter newReporter) { throw new RuntimeException("Stub!"); }
+@SuppressWarnings({"unchecked", "deprecation", "all"})
+public static interface Reporter {
+
+public void report(@android.annotation.NonNull java.util.Map<java.lang.String,java.lang.String> contextsMap);
+}
+
 }
 

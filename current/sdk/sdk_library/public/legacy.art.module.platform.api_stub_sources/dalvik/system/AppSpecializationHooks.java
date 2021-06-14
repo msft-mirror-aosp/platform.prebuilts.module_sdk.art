@@ -27,7 +27,7 @@ package dalvik.system;
 @SuppressWarnings({"unchecked", "deprecation", "all"})
 public class AppSpecializationHooks {
 
-AppSpecializationHooks() { throw new RuntimeException("Stub!"); }
+private AppSpecializationHooks() { throw new RuntimeException("Stub!"); }
 
 /**
  * Called in {@link android.app.ActivityThread}, but before binding the application. This method

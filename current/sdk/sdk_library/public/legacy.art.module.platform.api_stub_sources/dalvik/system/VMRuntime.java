@@ -39,6 +39,8 @@ private VMRuntime() { throw new RuntimeException("Stub!"); }
  *
  * @param hiddenApiUsageLogger an object implement {@code HiddenApiUsageLogger} that the runtime
  *          will call for logging hidden API checks.
+ *
+ * @hide
  */
 
 public static void setHiddenApiUsageLogger(dalvik.system.VMRuntime.HiddenApiUsageLogger hiddenApiUsageLogger) { throw new RuntimeException("Stub!"); }
@@ -46,6 +48,8 @@ public static void setHiddenApiUsageLogger(dalvik.system.VMRuntime.HiddenApiUsag
 /**
  * Returns the object that represents the current runtime.
  * @return the runtime object
+ *
+ * @hide
  */
 
 public static dalvik.system.VMRuntime getRuntime() { throw new RuntimeException("Stub!"); }
@@ -54,6 +58,8 @@ public static dalvik.system.VMRuntime getRuntime() { throw new RuntimeException(
  * Returns the name of the shared library providing the VM implementation.
  *
  * @return the name of the shared library providing the VM implementation.
+ *
+ * @hide
  */
 
 public native java.lang.String vmLibrary();
@@ -62,6 +68,8 @@ public native java.lang.String vmLibrary();
  * Returns the VM's instruction set.
  *
  * @return the VM's instruction set.
+ *
+ * @hide
  */
 
 public native java.lang.String vmInstructionSet();
@@ -70,6 +78,8 @@ public native java.lang.String vmInstructionSet();
  * Returns whether the VM is running in 64-bit mode.
  *
  * @return true if VM is running in 64-bit mode, false otherwise.
+ *
+ * @hide
  */
 
 @dalvik.annotation.optimization.FastNative
@@ -80,6 +90,8 @@ public native boolean is64Bit();
  *
  * @return true if the VM is running with JNI checking enabled,
  *         and false otherwise.
+ *
+ * @hide
  */
 
 @dalvik.annotation.optimization.FastNative
@@ -91,6 +103,8 @@ public native boolean isCheckJniEnabled();
  * dangerous ways. Defaults to {@link #SDK_VERSION_CUR_DEVELOPMENT}.
  *
  * @param targetSdkVersion the SDK version the app wants to run with.
+ *
+ * @hide
  */
 
 public synchronized void setTargetSdkVersion(int targetSdkVersion) { throw new RuntimeException("Stub!"); }
@@ -101,6 +115,8 @@ public synchronized void setTargetSdkVersion(int targetSdkVersion) { throw new R
  * dangerous ways. Defaults to empty.
  *
  * @param disabledCompatChanges An array of ChangeIds that we want to disable.
+ *
+ * @hide
  */
 
 public synchronized void setDisabledCompatChanges(long[] disabledCompatChanges) { throw new RuntimeException("Stub!"); }
@@ -110,6 +126,8 @@ public synchronized void setDisabledCompatChanges(long[] disabledCompatChanges) 
  * special values.
  *
  * @return the target SDK version.
+ *
+ * @hide
  */
 
 public synchronized int getTargetSdkVersion() { throw new RuntimeException("Stub!"); }
@@ -121,6 +139,8 @@ public synchronized int getTargetSdkVersion() { throw new RuntimeException("Stub
  *         A list of signature prefixes. Each item in the list is a prefix match on the type
  *         signature of a blacklisted API. All matching APIs are treated as if they were on
  *         the whitelist: access permitted, and no logging..
+ *
+ * @hide
  */
 
 public native void setHiddenApiExemptions(java.lang.String[] signaturePrefixes);
@@ -130,6 +150,8 @@ public native void setHiddenApiExemptions(java.lang.String[] signaturePrefixes);
  *
  * @param rate Proportion of hidden API accesses that will be logged; an integer between
  *                0 and 0x10000 inclusive.
+ *
+ * @hide
  */
 
 public native void setHiddenApiAccessLogSamplingRate(int rate);
@@ -142,6 +164,8 @@ public native void setHiddenApiAccessLogSamplingRate(int rate);
  * @param componentType the component type of the returned array.
  * @param length the length of the returned array.
  * @return array allocated in an area of the heap where it will never be moved.
+ *
+ * @hide
  */
 
 @dalvik.annotation.optimization.FastNative
@@ -156,6 +180,8 @@ public native java.lang.Object newNonMovableArray(java.lang.Class<?> componentTy
  * @param minLength     the minimum length of the returned array. The actual length could
  *                      be greater.
  * @return              array of at least of {@code minLength}
+ *
+ * @hide
  */
 
 @dalvik.annotation.optimization.FastNative
@@ -167,6 +193,8 @@ public native java.lang.Object newUnpaddedArray(java.lang.Class<?> componentType
  *
  * @param array the object we want the native address of.
  * @return native address of {@code array[0]}.
+ *
+ * @hide
  */
 
 @dalvik.annotation.optimization.FastNative
@@ -175,6 +203,8 @@ public native long addressOf(java.lang.Object array);
 /**
  * Removes any growth limits, allowing the application to allocate
  * up to the maximum heap size.
+ *
+ * @hide
  */
 
 public native void clearGrowthLimit();
@@ -182,6 +212,8 @@ public native void clearGrowthLimit();
 /**
  * Make the current growth limit the new non growth limit capacity by releasing pages which
  * are after the growth limit but before the non growth limit capacity.
+ *
+ * @hide
  */
 
 public native void clampGrowthLimit();
@@ -190,6 +222,8 @@ public native void clampGrowthLimit();
  * Returns true if native debugging is on.
  *
  * @return true if native debugging is on, false otherwise.
+ *
+ * @hide
  */
 
 @dalvik.annotation.optimization.FastNative
@@ -206,6 +240,8 @@ public native boolean isNativeDebuggable();
  * but may otherwise be approximate.
  *
  * @param bytes the number of bytes of the native object.
+ *
+ * @hide
  */
 
 public native void registerNativeAllocation(long bytes);
@@ -216,6 +252,8 @@ public native void registerNativeAllocation(long bytes);
  * @deprecated Use {@link #registerNativeAllocation(long)} instead.
  *
  * @param bytes the number of bytes of the native object.
+ *
+ * @hide
  */
 
 @Deprecated
@@ -225,6 +263,8 @@ public void registerNativeAllocation(int bytes) { throw new RuntimeException("St
  * Registers a native free by reducing the number of native bytes accounted for.
  *
  * @param bytes the number of bytes of the freed object.
+ *
+ * @hide
  */
 
 public native void registerNativeFree(long bytes);
@@ -234,6 +274,8 @@ public native void registerNativeFree(long bytes);
  * @deprecated Use {@link #registerNativeFree(long)} instead.
  *
  * @param bytes the number of bytes of the freed object.
+ *
+ * @hide
  */
 
 @Deprecated
@@ -241,6 +283,8 @@ public void registerNativeFree(int bytes) { throw new RuntimeException("Stub!");
 
 /**
  * Request that a garbage collection gets started on a different thread.
+ *
+ * @hide
  */
 
 public native void requestConcurrentGC();
@@ -250,6 +294,8 @@ public native void requestConcurrentGC();
  * behavior regarding trimming and compaction.
  *
  * @param state The state of the process, as defined in art/runtime/process_state.h.
+ *
+ * @hide
  */
 
 public native void updateProcessState(int state);
@@ -257,6 +303,8 @@ public native void updateProcessState(int state);
 /**
  * Let the runtime know that the application startup is completed. This may affect behavior
  * related to profiling and startup caches.
+ *
+ * @hide
  */
 
 public native void notifyStartupCompleted();
@@ -264,17 +312,31 @@ public native void notifyStartupCompleted();
 /**
  * Fill in dex caches with classes, fields, and methods that are
  * already loaded. Typically used after Zygote preloading.
+ *
+ * @hide
  */
 
 public native void preloadDexCaches();
 
 /**
- * Register application info.
- * @param profileFile the path of the file where the profile information should be stored.
- * @param codePaths the code paths that should be profiled.
+ * Register application info to ART.
+ * This enables ART to support certain low level features (such as profiling) and provide
+ * better debug information. The method should be called after the application loads its
+ * apks or dex files.
+ *
+ * @param packageName the name of the package being ran.
+ * @param currentProfileFile the path of the file where the profile information for the current
+ *        execution should be stored.
+ * @param referenceProfileFile the path of the file where the reference profile information
+ *        (for past executions) is stored.
+ * @param appCodePaths the code paths (apk/dex files) of the applications that were loaded.
+ *        These paths will also be profiled.
+ * @param codePathsTypes the type of the code paths.
+ *
+ * @hide
  */
 
-public static native void registerAppInfo(java.lang.String profileFile, java.lang.String[] codePaths);
+public static native void registerAppInfo(java.lang.String packageName, java.lang.String currentProfileFile, java.lang.String referenceProfileFile, java.lang.String[] appCodePaths, int codePathsType);
 
 /**
  * Returns the runtime instruction set corresponding to a given ABI. Multiple
@@ -284,6 +346,8 @@ public static native void registerAppInfo(java.lang.String profileFile, java.lan
  * This influences the compilation of the applications classes.
  *
  * @param abi The ABI we want the instruction set from.
+ *
+ * @hide
  */
 
 public static java.lang.String getInstructionSet(java.lang.String abi) { throw new RuntimeException("Stub!"); }
@@ -294,6 +358,8 @@ public static java.lang.String getInstructionSet(java.lang.String abi) { throw n
  * @param instructionSet a string representing an instruction set.
  *
  * @return true if given {@code instructionSet} is 64 bits, false otherwise.
+ *
+ * @hide
  */
 
 public static boolean is64BitInstructionSet(java.lang.String instructionSet) { throw new RuntimeException("Stub!"); }
@@ -304,12 +370,16 @@ public static boolean is64BitInstructionSet(java.lang.String instructionSet) { t
  * @param abi a string representing an ABI.
  *
  * @return true if given {@code abi} is 64 bits, false otherwise.
+ *
+ * @hide
  */
 
 public static boolean is64BitAbi(java.lang.String abi) { throw new RuntimeException("Stub!"); }
 
 /**
  * Used to notify the runtime that boot completed.
+ *
+ * @hide
  */
 
 public static native void bootCompleted();
@@ -318,6 +388,8 @@ public static native void bootCompleted();
  * Used to notify the runtime to reset Jit counters. This is done for the boot image
  * profiling configuration to avoid samples during class preloading. This helps avoid
  * the regression from disabling class profiling.
+ *
+ * @hide
  */
 
 public static native void resetJitCounters();
@@ -326,6 +398,8 @@ public static native void resetJitCounters();
  * Returns the instruction set of the current runtime.
  *
  * @return instruction set of the current runtime.
+ *
+ * @hide
  */
 
 public static native java.lang.String getCurrentInstructionSet();
@@ -333,6 +407,8 @@ public static native java.lang.String getCurrentInstructionSet();
 /**
  * Register the current execution thread to the runtime as sensitive thread.
  * Should be called just once. Subsequent calls are ignored.
+ *
+ * @hide
  */
 
 public static native void registerSensitiveThread();
@@ -342,6 +418,8 @@ public static native void registerSensitiveThread();
  *
  * @param consumer an object implementing the {@code java.util.function.Consumer} interface that
  *      the runtime will call whenever a usage of a non SDK API is detected.
+ *
+ * @hide
  */
 
 public static void setNonSdkApiUsageConsumer(java.util.function.Consumer<java.lang.String> consumer) { throw new RuntimeException("Stub!"); }
@@ -351,6 +429,8 @@ public static void setNonSdkApiUsageConsumer(java.util.function.Consumer<java.la
  *
  * @param dedupe if set, only the first usage of each API will be detected. The default
  *      behaviour is to dedupe.
+ *
+ * @hide
  */
 
 public static native void setDedupeHiddenApiWarnings(boolean dedupe);
@@ -359,6 +439,8 @@ public static native void setDedupeHiddenApiWarnings(boolean dedupe);
  * Sets the package name of the app running in this process.
  *
  * @param packageName the value being set
+ *
+ * @hide
  */
 
 public static native void setProcessPackageName(java.lang.String packageName);
@@ -367,6 +449,8 @@ public static native void setProcessPackageName(java.lang.String packageName);
  * Sets the full path to data directory of the app running in this process.
  *
  * @param dataDir the value being set
+ *
+ * @hide
  */
 
 public static native void setProcessDataDirectory(java.lang.String dataDir);
@@ -380,9 +464,41 @@ public static native void setProcessDataDirectory(java.lang.String dataDir);
  * @throws java.lang.NullPointerException if {@code encodedClassLoaderContext is null.
  * @return {@code true} if {@code encodedClassLoaderContext} is a non-null valid encoded class
  *         loader context.
+ *
+ * @hide
  */
 
 public static native boolean isValidClassLoaderContext(java.lang.String encodedClassLoaderContext);
+
+/**
+ * Flag denoting that the code paths passed to
+ * {@link #registerAppInfo(java.lang.String,java.lang.String,java.lang.String,java.lang.String[],int,boolean)}
+ * contains the app primary APK.
+ *
+ * @hide
+ */
+
+public static final int CODE_PATH_TYPE_PRIMARY_APK = 1; // 0x1
+
+/**
+ * Flag denoting that the code paths passed to
+ * {@link #registerAppInfo(java.lang.String,java.lang.String,java.lang.String,java.lang.String[],int,boolean)}
+ * contains a secondary dex file (dynamically loaded by the app).
+ *
+ * @hide
+ */
+
+public static final int CODE_PATH_TYPE_SECONDARY_DEX = 4; // 0x4
+
+/**
+ * Flag denoting that the code paths passed to
+ * {@link #registerAppInfo(java.lang.String,java.lang.String,java.lang.String,java.lang.String[],int,boolean)}
+ * contains the a split APK.
+ *
+ * @hide
+ */
+
+public static final int CODE_PATH_TYPE_SPLIT_APK = 2; // 0x2
 
 /**
  * Magic version number for a current development build, which has not
@@ -394,6 +510,8 @@ public static native boolean isValidClassLoaderContext(java.lang.String encodedC
 public static final int SDK_VERSION_CUR_DEVELOPMENT = 10000; // 0x2710
 /**
  * Interface for logging hidden API usage events.
+ *
+ * @hide
  */
 
 @SuppressWarnings({"unchecked", "deprecation", "all"})
@@ -412,12 +530,16 @@ public static interface HiddenApiUsageLogger {
  *      {@code com.android.app.Activity->finish(I)V})
  * @param accessType how the accessed was done
  * @param accessDenied whether the access was allowed or not
+ *
+ * @hide
  */
 
 public void hiddenApiUsed(int sampledValue, java.lang.String appPackageName, java.lang.String signature, int accessType, boolean accessDenied);
 
 /**
  *  Used when a method has been accessed via JNI.
+ *
+ * @hide
  */
 
 public static final int ACCESS_METHOD_JNI = 2; // 0x2
@@ -425,6 +547,8 @@ public static final int ACCESS_METHOD_JNI = 2; // 0x2
 /**
  * Used when a method is accessed at link time. Never logged, added only
  * for completeness.
+ *
+ * @hide
  */
 
 public static final int ACCESS_METHOD_LINKING = 3; // 0x3
@@ -432,12 +556,16 @@ public static final int ACCESS_METHOD_LINKING = 3; // 0x3
 /**
  * Internal test value that does not correspond to an actual access by the
  * application. Never logged, added for completeness.
+ *
+ * @hide
  */
 
 public static final int ACCESS_METHOD_NONE = 0; // 0x0
 
 /**
  *  Used when a method has been accessed via reflection.
+ *
+ * @hide
  */
 
 public static final int ACCESS_METHOD_REFLECTION = 1; // 0x1

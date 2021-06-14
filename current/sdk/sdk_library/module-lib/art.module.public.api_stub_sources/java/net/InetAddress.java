@@ -90,5 +90,19 @@ public static java.net.InetAddress getByAddress(byte[] addr) throws java.net.Unk
 
 @androidx.annotation.RecentlyNonNull
 public static java.net.InetAddress getLocalHost() throws java.net.UnknownHostException { throw new RuntimeException("Stub!"); }
+
+@Deprecated
+public static boolean isNumeric(java.lang.String address) { throw new RuntimeException("Stub!"); }
+
+@Deprecated
+public static java.net.InetAddress parseNumericAddress(java.lang.String numericAddress) { throw new RuntimeException("Stub!"); }
+
+public static void clearDnsCache() { throw new RuntimeException("Stub!"); }
+
+@androidx.annotation.RecentlyNonNull
+public static java.net.InetAddress getByNameOnNet(@androidx.annotation.RecentlyNullable java.lang.String host, int netId) throws java.net.UnknownHostException { throw new RuntimeException("Stub!"); }
+
+@androidx.annotation.RecentlyNonNull
+public static java.net.InetAddress[] getAllByNameOnNet(@androidx.annotation.RecentlyNullable java.lang.String host, int netId) throws java.net.UnknownHostException { throw new RuntimeException("Stub!"); }
 }
 

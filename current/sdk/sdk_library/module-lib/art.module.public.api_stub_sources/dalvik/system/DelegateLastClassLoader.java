@@ -26,6 +26,8 @@ public DelegateLastClassLoader(java.lang.String dexPath, java.lang.String librar
 
 public DelegateLastClassLoader(@android.annotation.NonNull java.lang.String dexPath, @android.annotation.Nullable java.lang.String librarySearchPath, @android.annotation.Nullable java.lang.ClassLoader parent, boolean delegateResourceLoading) { super((java.lang.String)null, (java.lang.ClassLoader)null); throw new RuntimeException("Stub!"); }
 
+public DelegateLastClassLoader(java.lang.String dexPath, java.lang.String librarySearchPath, java.lang.ClassLoader parent, java.lang.ClassLoader[] sharedLibraryLoaders) { super((java.lang.String)null, (java.lang.ClassLoader)null); throw new RuntimeException("Stub!"); }
+
 protected java.lang.Class<?> loadClass(java.lang.String name, boolean resolve) throws java.lang.ClassNotFoundException { throw new RuntimeException("Stub!"); }
 
 public java.net.URL getResource(java.lang.String name) { throw new RuntimeException("Stub!"); }

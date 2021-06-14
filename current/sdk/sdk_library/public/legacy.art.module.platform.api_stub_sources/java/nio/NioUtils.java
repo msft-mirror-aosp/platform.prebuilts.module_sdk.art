@@ -31,6 +31,8 @@ private NioUtils() { throw new RuntimeException("Stub!"); }
  * Frees {@link java.nio.DirectByteBuffer DirectByteBuffer} running associated {@link sun.misc.Cleaner Cleaner}.
  *
  * @param buffer to free with associated {@code Cleaner}
+ *
+ * @hide
  */
 
 public static void freeDirectBuffer(java.nio.ByteBuffer buffer) { throw new RuntimeException("Stub!"); }
@@ -42,6 +44,8 @@ public static void freeDirectBuffer(java.nio.ByteBuffer buffer) { throw new Runt
  *
  * @param b  {@link java.nio.ByteBuffer ByteBuffer} to access its backing array.
  * @return   buffer's underlying array.
+ *
+ * @hide
  */
 
 public static byte[] unsafeArray(java.nio.ByteBuffer b) { throw new RuntimeException("Stub!"); }
@@ -52,6 +56,8 @@ public static byte[] unsafeArray(java.nio.ByteBuffer b) { throw new RuntimeExcep
  *
  * @param b  {@link java.nio.ByteBuffer ByteBuffer} to access its backing array offset.
  * @return   buffer's underlying array data offset.
+ *
+ * @hide
  */
 
 public static int unsafeArrayOffset(java.nio.ByteBuffer b) { throw new RuntimeException("Stub!"); }

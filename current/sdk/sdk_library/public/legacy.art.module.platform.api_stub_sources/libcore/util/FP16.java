@@ -111,6 +111,8 @@ private FP16() { throw new RuntimeException("Stub!"); }
  *          value less than {@code 0} if {@code x} is numerically less than {@code y},
  *          and a value greater than {@code 0} if {@code x} is numerically greater
  *          than {@code y}
+ *
+ * @hide
  */
 
 public static int compare(short x, short y) { throw new RuntimeException("Stub!"); }
@@ -130,6 +132,8 @@ public static int compare(short x, short y) { throw new RuntimeException("Stub!"
  * @param h A half-precision float value
  * @return The value of the specified half-precision float rounded to the nearest
  *         half-precision float value
+ *
+ * @hide
  */
 
 public static short rint(short h) { throw new RuntimeException("Stub!"); }
@@ -149,6 +153,8 @@ public static short rint(short h) { throw new RuntimeException("Stub!"); }
  * @param h A half-precision float value
  * @return The smallest half-precision float value toward negative infinity
  *         greater than or equal to the specified half-precision float value
+ *
+ * @hide
  */
 
 public static short ceil(short h) { throw new RuntimeException("Stub!"); }
@@ -168,6 +174,8 @@ public static short ceil(short h) { throw new RuntimeException("Stub!"); }
  * @param h A half-precision float value
  * @return The largest half-precision float value toward positive infinity
  *         less than or equal to the specified half-precision float value
+ *
+ * @hide
  */
 
 public static short floor(short h) { throw new RuntimeException("Stub!"); }
@@ -186,6 +194,8 @@ public static short floor(short h) { throw new RuntimeException("Stub!"); }
  * @param h A half-precision float value
  * @return The truncated half-precision float value of the specified
  *         half-precision float value
+ *
+ * @hide
  */
 
 public static short trunc(short h) { throw new RuntimeException("Stub!"); }
@@ -201,6 +211,8 @@ public static short trunc(short h) { throw new RuntimeException("Stub!"); }
  * @param x The first half-precision value
  * @param y The second half-precision value
  * @return The smaller of the two specified half-precision values
+ *
+ * @hide
  */
 
 public static short min(short x, short y) { throw new RuntimeException("Stub!"); }
@@ -217,6 +229,8 @@ public static short min(short x, short y) { throw new RuntimeException("Stub!");
  * @param y The second half-precision value
  *
  * @return The larger of the two specified half-precision values
+ *
+ * @hide
  */
 
 public static short max(short x, short y) { throw new RuntimeException("Stub!"); }
@@ -230,6 +244,8 @@ public static short max(short x, short y) { throw new RuntimeException("Stub!");
  * @param y The second half-precision value
  *
  * @return True if x is less than y, false otherwise
+ *
+ * @hide
  */
 
 public static boolean less(short x, short y) { throw new RuntimeException("Stub!"); }
@@ -243,6 +259,8 @@ public static boolean less(short x, short y) { throw new RuntimeException("Stub!
  * @param y The second half-precision value
  *
  * @return True if x is less than or equal to y, false otherwise
+ *
+ * @hide
  */
 
 public static boolean lessEquals(short x, short y) { throw new RuntimeException("Stub!"); }
@@ -256,6 +274,8 @@ public static boolean lessEquals(short x, short y) { throw new RuntimeException(
  * @param y The second half-precision value
  *
  * @return True if x is greater than y, false otherwise
+ *
+ * @hide
  */
 
 public static boolean greater(short x, short y) { throw new RuntimeException("Stub!"); }
@@ -269,6 +289,8 @@ public static boolean greater(short x, short y) { throw new RuntimeException("St
  * @param y The second half-precision value
  *
  * @return True if x is greater than y, false otherwise
+ *
+ * @hide
  */
 
 public static boolean greaterEquals(short x, short y) { throw new RuntimeException("Stub!"); }
@@ -282,6 +304,8 @@ public static boolean greaterEquals(short x, short y) { throw new RuntimeExcepti
  * @param y The second half-precision value
  *
  * @return True if x is equal to y, false otherwise
+ *
+ * @hide
  */
 
 public static boolean equals(short x, short y) { throw new RuntimeException("Stub!"); }
@@ -293,6 +317,8 @@ public static boolean equals(short x, short y) { throw new RuntimeException("Stu
  * @param h A half-precision float value
  * @return True if the value is positive infinity or negative infinity,
  *         false otherwise
+ *
+ * @hide
  */
 
 public static boolean isInfinite(short h) { throw new RuntimeException("Stub!"); }
@@ -303,6 +329,8 @@ public static boolean isInfinite(short h) { throw new RuntimeException("Stub!");
  *
  * @param h A half-precision float value
  * @return True if the value is a NaN, false otherwise
+ *
+ * @hide
  */
 
 public static boolean isNaN(short h) { throw new RuntimeException("Stub!"); }
@@ -316,6 +344,8 @@ public static boolean isNaN(short h) { throw new RuntimeException("Stub!"); }
  *
  * @param h A half-precision float value
  * @return True if the value is normalized, false otherwise
+ *
+ * @hide
  */
 
 public static boolean isNormalized(short h) { throw new RuntimeException("Stub!"); }
@@ -334,6 +364,8 @@ public static boolean isNormalized(short h) { throw new RuntimeException("Stub!"
  *
  * @param h The half-precision float value to convert to single-precision
  * @return A normalized single-precision float value
+ *
+ * @hide
  */
 
 public static float toFloat(short h) { throw new RuntimeException("Stub!"); }
@@ -359,6 +391,8 @@ public static float toFloat(short h) { throw new RuntimeException("Stub!"); }
  *
  * @param f The single-precision float value to convert to half-precision
  * @return A half-precision float value
+ *
+ * @hide
  */
 
 public static short toHalf(float f) { throw new RuntimeException("Stub!"); }
@@ -388,6 +422,8 @@ public static short toHalf(float f) { throw new RuntimeException("Stub!"); }
  *
  * @param h A half-precision float value
  * @return A hexadecimal string representation of the specified value
+ *
+ * @hide
  */
 
 public static java.lang.String toHexString(short h) { throw new RuntimeException("Stub!"); }
@@ -395,120 +431,160 @@ public static java.lang.String toHexString(short h) { throw new RuntimeException
 /**
  * Epsilon is the difference between 1.0 and the next value representable
  * by a half-precision floating-point.
+ *
+ * @hide
  */
 
 public static final short EPSILON = 5120; // 0x1400
 
 /**
  * The offset of the exponent from the actual value.
+ *
+ * @hide
  */
 
 public static final int EXPONENT_BIAS = 15; // 0xf
 
 /**
  * The offset to shift by to obtain the exponent bits.
+ *
+ * @hide
  */
 
 public static final int EXPONENT_SHIFT = 10; // 0xa
 
 /**
  * The bitmask to AND with to obtain exponent and significand bits.
+ *
+ * @hide
  */
 
 public static final int EXPONENT_SIGNIFICAND_MASK = 32767; // 0x7fff
 
 /**
  * Smallest negative value a half-precision float may have.
+ *
+ * @hide
  */
 
 public static final short LOWEST_VALUE = -1025; // 0xfffffbff
 
 /**
  * Maximum exponent a finite half-precision float may have.
+ *
+ * @hide
  */
 
 public static final int MAX_EXPONENT = 15; // 0xf
 
 /**
  * Maximum positive finite value a half-precision float may have.
+ *
+ * @hide
  */
 
 public static final short MAX_VALUE = 31743; // 0x7bff
 
 /**
  * Minimum exponent a normalized half-precision float may have.
+ *
+ * @hide
  */
 
 public static final int MIN_EXPONENT = -14; // 0xfffffff2
 
 /**
  * Smallest positive normal value a half-precision float may have.
+ *
+ * @hide
  */
 
 public static final short MIN_NORMAL = 1024; // 0x400
 
 /**
  * Smallest positive non-zero value a half-precision float may have.
+ *
+ * @hide
  */
 
 public static final short MIN_VALUE = 1; // 0x1
 
 /**
  * Negative infinity of type half-precision float.
+ *
+ * @hide
  */
 
 public static final short NEGATIVE_INFINITY = -1024; // 0xfffffc00
 
 /**
  * Negative 0 of type half-precision float.
+ *
+ * @hide
  */
 
 public static final short NEGATIVE_ZERO = -32768; // 0xffff8000
 
 /**
  * A Not-a-Number representation of a half-precision float.
+ *
+ * @hide
  */
 
 public static final short NaN = 32256; // 0x7e00
 
 /**
  * Positive infinity of type half-precision float.
+ *
+ * @hide
  */
 
 public static final short POSITIVE_INFINITY = 31744; // 0x7c00
 
 /**
  * Positive 0 of type half-precision float.
+ *
+ * @hide
  */
 
 public static final short POSITIVE_ZERO = 0; // 0x0
 
 /**
  * The bitmask to AND a number shifted by {@link #EXPONENT_SHIFT} right, to obtain exponent bits.
+ *
+ * @hide
  */
 
 public static final int SHIFTED_EXPONENT_MASK = 31; // 0x1f
 
 /**
  * The bitmask to AND a number with to obtain significand bits.
+ *
+ * @hide
  */
 
 public static final int SIGNIFICAND_MASK = 1023; // 0x3ff
 
 /**
  * The bitmask to AND a number with to obtain the sign bit.
+ *
+ * @hide
  */
 
 public static final int SIGN_MASK = 32768; // 0x8000
 
 /**
  * The offset to shift by to obtain the sign bit.
+ *
+ * @hide
  */
 
 public static final int SIGN_SHIFT = 15; // 0xf
 
 /**
  * The number of bits used to represent a half-precision float value.
+ *
+ * @hide
  */
 
 public static final int SIZE = 16; // 0x10

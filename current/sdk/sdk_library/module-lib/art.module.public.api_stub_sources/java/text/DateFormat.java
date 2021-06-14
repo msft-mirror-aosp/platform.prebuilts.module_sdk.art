@@ -93,6 +93,8 @@ public static final java.text.DateFormat getDateTimeInstance(int dateStyle, int 
 @androidx.annotation.RecentlyNonNull
 public static final java.text.DateFormat getInstance() { throw new RuntimeException("Stub!"); }
 
+public static final void set24HourTimePref(java.lang.Boolean is24Hour) { throw new RuntimeException("Stub!"); }
+
 @androidx.annotation.RecentlyNonNull
 public static java.util.Locale[] getAvailableLocales() { throw new RuntimeException("Stub!"); }
 
