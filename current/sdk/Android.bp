@@ -466,30 +466,6 @@ art_prebuilt_java_import {
 }
 
 java_import {
-    name: "art-module-sdk_art.module.public.api.stubs@current",
-    sdk_member_name: "art.module.public.api.stubs",
-    visibility: ["//visibility:private"],
-    apex_available: ["//apex_available:platform"],
-    licenses: ["art-module-sdk_libcore_license@current"],
-    jars: ["java/art.module.public.api.stubs.jar"],
-}
-
-art_prebuilt_java_import {
-    name: "art-module-sdk_art.module.public.api.stubs",
-    // Do not prefer prebuilt if SOONG_CONFIG_art_module_source_build is true.
-    prefer: true,
-    soong_config_variables: {
-        source_build: {
-            prefer: false,
-        },
-    },
-    visibility: ["//visibility:private"],
-    apex_available: ["//apex_available:platform"],
-    licenses: ["art-module-sdk_libcore_license"],
-    jars: ["java/art.module.public.api.stubs.jar"],
-}
-
-java_import {
     name: "art-module-sdk_core-lambda-stubs-for-system-modules@current",
     sdk_member_name: "core-lambda-stubs-for-system-modules",
     visibility: ["//visibility:private"],
@@ -631,30 +607,6 @@ art_prebuilt_java_import {
     apex_available: ["//apex_available:platform"],
     licenses: ["art-module-sdk_libcore_license"],
     jars: ["java/art-module-intra-core-api-stubs-system-modules-lib.jar"],
-}
-
-java_import {
-    name: "art-module-sdk_legacy.art.module.platform.api.stubs@current",
-    sdk_member_name: "legacy.art.module.platform.api.stubs",
-    visibility: ["//visibility:private"],
-    apex_available: ["//apex_available:platform"],
-    licenses: ["art-module-sdk_libcore_license@current"],
-    jars: ["java/legacy.art.module.platform.api.stubs.jar"],
-}
-
-art_prebuilt_java_import {
-    name: "art-module-sdk_legacy.art.module.platform.api.stubs",
-    // Do not prefer prebuilt if SOONG_CONFIG_art_module_source_build is true.
-    prefer: true,
-    soong_config_variables: {
-        source_build: {
-            prefer: false,
-        },
-    },
-    visibility: ["//visibility:private"],
-    apex_available: ["//apex_available:platform"],
-    licenses: ["art-module-sdk_libcore_license"],
-    jars: ["java/legacy.art.module.platform.api.stubs.jar"],
 }
 
 java_import {
@@ -873,7 +825,7 @@ art_prebuilt_java_system_modules_import {
     ],
     licenses: ["art-module-sdk_libcore_license"],
     libs: [
-        "art-module-sdk_art.module.public.api.stubs",
+        "art.module.public.api.stubs",
         "art-module-sdk_core-lambda-stubs-for-system-modules",
         "art-module-sdk_core-generated-annotation-stubs",
         "art-module-sdk_art.module.api.annotations.for.system.modules",
@@ -956,7 +908,7 @@ art_prebuilt_java_system_modules_import {
         "//prebuilts:__subpackages__",
     ],
     licenses: ["art-module-sdk_libcore_license"],
-    libs: ["art-module-sdk_legacy.art.module.platform.api.stubs"],
+    libs: ["legacy.art.module.platform.api.stubs"],
 }
 
 java_system_modules_import {
