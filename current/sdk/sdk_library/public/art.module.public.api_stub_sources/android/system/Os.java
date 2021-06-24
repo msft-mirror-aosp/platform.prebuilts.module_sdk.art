@@ -17,6 +17,7 @@
 
 package android.system;
 
+import java.io.FileDescriptor;
 
 /**
  * Access to low-level system functionality. Most of these are system calls. Most users will want
@@ -216,6 +217,25 @@ public static int getppid() { throw new RuntimeException("Stub!"); }
  */
 
 public static java.net.SocketAddress getsockname(java.io.FileDescriptor fd) throws android.system.ErrnoException { throw new RuntimeException("Stub!"); }
+
+/**
+ * Gets {@link android.system.OsConstants#SO_LINGER OsConstants#SO_LINGER} option for the socket referred to by the file descriptor {@code fd}.
+ * When enabled, a {@link close(FileDescriptor) or {@link shutdown(FileDescriptor, int)} will
+ * not return until all queued messages for the socket have been successfully sent or the
+ * linger timeout has been reached. Otherwise, the call returns immediately and the closing is
+ * done in the background.
+ *
+ * See <a href="https://man7.org/linux/man-pages/man7/socket.7.html">socket(7)</a>.
+ *
+ * @param fd     file descriptor of the socket to get {@code OsConstants.SO_LINGER} option of
+ * @param level  level at which the {@code option} resides
+ * @param option name of the option to get
+ * @return       {@link StructLinger} associated with given {@code fd}
+ * @throws ErrnoException
+ */
+
+@android.annotation.Nullable
+public static android.system.StructLinger getsockoptLinger(@android.annotation.NonNull java.io.FileDescriptor fd, int level, int option) throws android.system.ErrnoException { throw new RuntimeException("Stub!"); }
 
 /**
  * See <a href="http://man7.org/linux/man-pages/man2/setsockopt.2.html">getsockopt(2)</a>.
@@ -462,6 +482,12 @@ public static int recvfrom(java.io.FileDescriptor fd, java.nio.ByteBuffer buffer
 public static int recvfrom(java.io.FileDescriptor fd, byte[] bytes, int byteOffset, int byteCount, int flags, java.net.InetSocketAddress srcAddress) throws android.system.ErrnoException, java.net.SocketException { throw new RuntimeException("Stub!"); }
 
 /**
+ * See <a href="http://man7.org/linux/man-pages/man2/recvmsg.2.html">recvmsg(2)</a>.
+ */
+
+public static int recvmsg(@android.annotation.NonNull java.io.FileDescriptor fd, @android.annotation.NonNull android.system.StructMsghdr msg, int flags) throws android.system.ErrnoException, java.net.SocketException { throw new RuntimeException("Stub!"); }
+
+/**
  * See <a href="http://man7.org/linux/man-pages/man3/remove.3.html">remove(3)</a>.
  */
 
@@ -484,6 +510,12 @@ public static void rename(java.lang.String oldPath, java.lang.String newPath) th
  */
 
 public static long sendfile(java.io.FileDescriptor outFd, java.io.FileDescriptor inFd, android.system.Int64Ref offset, long byteCount) throws android.system.ErrnoException { throw new RuntimeException("Stub!"); }
+
+/**
+ * See <a href="http://man7.org/linux/man-pages/man2/sendmsg.2.html">sendmsg(2)</a>.
+ */
+
+public static int sendmsg(@android.annotation.NonNull java.io.FileDescriptor fd, @android.annotation.NonNull android.system.StructMsghdr msg, int flags) throws android.system.ErrnoException, java.net.SocketException { throw new RuntimeException("Stub!"); }
 
 /**
  * See <a href="http://man7.org/linux/man-pages/man2/sendto.2.html">sendto(2)</a>.
@@ -544,6 +576,20 @@ public static int setsid() throws android.system.ErrnoException { throw new Runt
  */
 
 public static void setsockoptInt(java.io.FileDescriptor fd, int level, int option, int value) throws android.system.ErrnoException { throw new RuntimeException("Stub!"); }
+
+/**
+ * Sets {@link android.system.OsConstants#SO_LINGER OsConstants#SO_LINGER} option for the socket referred to by the file descriptor
+ * {@code fd}.
+ *
+ * @param fd     file descriptor
+ * @param level  level at which the {@code option} resides
+ * @param option name of the option to set
+ * @param value  {@link android.system.StructLinger StructLinger} to set for {@code fd}
+ * @throws android.system.ErrnoException if {@code fd} is invalid; or
+ *                        {@code option} is unknown at given {@code level}
+ */
+
+public static void setsockoptLinger(@android.annotation.NonNull java.io.FileDescriptor fd, int level, int option, @android.annotation.NonNull android.system.StructLinger value) throws android.system.ErrnoException { throw new RuntimeException("Stub!"); }
 
 /**
  * See <a href="http://man7.org/linux/man-pages/man2/setsockopt.2.html">setsockopt(2)</a>.
