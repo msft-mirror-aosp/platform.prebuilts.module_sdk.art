@@ -196,15 +196,6 @@ java_import {
 }
 
 java_import {
-    name: "art-module-sdk_art.module.public.api.stubs@1",
-    sdk_member_name: "art.module.public.api.stubs",
-    visibility: ["//visibility:private"],
-    apex_available: ["//apex_available:platform"],
-    licenses: ["art-module-sdk_libcore_license@1"],
-    jars: ["java/art.module.public.api.stubs.jar"],
-}
-
-java_import {
     name: "art-module-sdk_core-lambda-stubs-for-system-modules@1",
     sdk_member_name: "core-lambda-stubs-for-system-modules",
     visibility: ["//visibility:private"],
@@ -256,15 +247,6 @@ java_import {
     apex_available: ["//apex_available:platform"],
     licenses: ["art-module-sdk_libcore_license@1"],
     jars: ["java/art-module-intra-core-api-stubs-system-modules-lib.jar"],
-}
-
-java_import {
-    name: "art-module-sdk_legacy.art.module.platform.api.stubs@1",
-    sdk_member_name: "legacy.art.module.platform.api.stubs",
-    visibility: ["//visibility:private"],
-    apex_available: ["//apex_available:platform"],
-    licenses: ["art-module-sdk_libcore_license@1"],
-    jars: ["java/legacy.art.module.platform.api.stubs.jar"],
 }
 
 java_import {
