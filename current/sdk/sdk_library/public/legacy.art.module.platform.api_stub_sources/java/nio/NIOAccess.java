@@ -27,7 +27,7 @@ package java.nio;
 @SuppressWarnings({"unchecked", "deprecation", "all"})
 public final class NIOAccess {
 
-NIOAccess() { throw new RuntimeException("Stub!"); }
+private NIOAccess() { throw new RuntimeException("Stub!"); }
 
 /**
  * Returns the underlying Java array containing the data of the
@@ -35,6 +35,8 @@ NIOAccess() { throw new RuntimeException("Stub!"); }
  *
  * @param b  {@code Buffer} to get its underlying data array
  * @return   underlying Java array
+ *
+ * @hide
  */
 
 public static java.lang.Object getBaseArray(java.nio.Buffer b) { throw new RuntimeException("Stub!"); }
@@ -48,6 +50,8 @@ public static java.lang.Object getBaseArray(java.nio.Buffer b) { throw new Runti
  *
  * @param b {@code Buffer} to get its underlying data array's base offset
  * @return  underlying Java array's base offset
+ *
+ * @hide
  */
 
 public static int getBaseArrayOffset(java.nio.Buffer b) { throw new RuntimeException("Stub!"); }

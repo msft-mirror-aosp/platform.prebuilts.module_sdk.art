@@ -25,8 +25,9 @@ package libcore.net;
  * Android framework API should be accessing this policy via the framework's
  * {@code android.security.NetworkSecurityPolicy} instead of via this class.
  *
- * <p>The policy currently consists of a single flag: whether cleartext network traffic is
- * permitted. See {@link #isCleartextTrafficPermitted()}.
+ * <p>The policy can be determined by the {@link #isCleartextTrafficPermitted()},
+ * {@link #isCleartextTrafficPermitted(java.lang.String)} and
+ * {@link #isCertificateTransparencyVerificationRequired(java.lang.String)} methods.
  *
  * @hide
  */
@@ -38,6 +39,8 @@ public abstract class NetworkSecurityPolicy {
  * Constructs a default {@code NetworkSecurityPolicy}.
  *
  * @see {@link #DefaultNetworkSecurityPolicy}.
+ *
+ * @hide
  */
 
 public NetworkSecurityPolicy() { throw new RuntimeException("Stub!"); }
@@ -46,6 +49,8 @@ public NetworkSecurityPolicy() { throw new RuntimeException("Stub!"); }
  * Gets current singleton {@code NetworkSecurityPolicy} instance.
  *
  * @return the current {@code NetworkSecurityPolicy}.
+ *
+ * @hide
  */
 
 public static libcore.net.NetworkSecurityPolicy getInstance() { throw new RuntimeException("Stub!"); }
@@ -54,6 +59,8 @@ public static libcore.net.NetworkSecurityPolicy getInstance() { throw new Runtim
  * Sets current singleton instance
  *
  * @param policy new {@code NetworlSecurityPolicy} instance.
+ *
+ * @hide
  */
 
 public static void setInstance(libcore.net.NetworkSecurityPolicy policy) { throw new RuntimeException("Stub!"); }
@@ -78,6 +85,8 @@ public static void setInstance(libcore.net.NetworkSecurityPolicy policy) { throw
  * honor it.
  *
  * @return {@code true} if cleartext traffic is permitted and {@code false} otherwise.
+ *
+ * @hide
  */
 
 public abstract boolean isCleartextTrafficPermitted();
@@ -91,6 +100,8 @@ public abstract boolean isCleartextTrafficPermitted();
  *
  * @param hostname hostname to check if cleartext traffic is permitted for
  * @return {@code true} if cleartext traffic is permitted and {@code false} otherwise
+ *
+ * @hide
  */
 
 public abstract boolean isCleartextTrafficPermitted(java.lang.String hostname);
@@ -105,6 +116,8 @@ public abstract boolean isCleartextTrafficPermitted(java.lang.String hostname);
  *                 is required
  * @return {@code true} if certificate transparency verification is required and
  *         {@code false} otherwise
+ *
+ * @hide
  */
 
 public abstract boolean isCertificateTransparencyVerificationRequired(java.lang.String hostname);

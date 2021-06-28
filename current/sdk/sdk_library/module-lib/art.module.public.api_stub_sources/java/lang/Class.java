@@ -45,6 +45,7 @@ public static java.lang.Class<?> forName(@androidx.annotation.RecentlyNonNull ja
 public static java.lang.Class<?> forName(@androidx.annotation.RecentlyNonNull java.lang.String name, boolean initialize, @androidx.annotation.RecentlyNullable java.lang.ClassLoader loader) throws java.lang.ClassNotFoundException { throw new RuntimeException("Stub!"); }
 
 @androidx.annotation.RecentlyNonNull
+@dalvik.annotation.optimization.FastNative
 public native T newInstance() throws java.lang.IllegalAccessException, java.lang.InstantiationException;
 
 public boolean isInstance(@androidx.annotation.RecentlyNullable java.lang.Object obj) { throw new RuntimeException("Stub!"); }
@@ -103,9 +104,11 @@ public java.lang.reflect.Method getEnclosingMethod() { throw new RuntimeExceptio
 public java.lang.reflect.Constructor<?> getEnclosingConstructor() { throw new RuntimeException("Stub!"); }
 
 @androidx.annotation.RecentlyNullable
+@dalvik.annotation.optimization.FastNative
 public native java.lang.Class<?> getDeclaringClass();
 
 @androidx.annotation.RecentlyNullable
+@dalvik.annotation.optimization.FastNative
 public native java.lang.Class<?> getEnclosingClass();
 
 @androidx.annotation.RecentlyNonNull
@@ -117,6 +120,7 @@ public java.lang.String getTypeName() { throw new RuntimeException("Stub!"); }
 @androidx.annotation.RecentlyNullable
 public java.lang.String getCanonicalName() { throw new RuntimeException("Stub!"); }
 
+@dalvik.annotation.optimization.FastNative
 public native boolean isAnonymousClass();
 
 public boolean isLocalClass() { throw new RuntimeException("Stub!"); }
@@ -145,9 +149,11 @@ public java.lang.reflect.Method getMethod(@androidx.annotation.RecentlyNonNull j
 public java.lang.reflect.Constructor<T> getConstructor(@androidx.annotation.RecentlyNullable java.lang.Class<?>... parameterTypes) throws java.lang.NoSuchMethodException, java.lang.SecurityException { throw new RuntimeException("Stub!"); }
 
 @androidx.annotation.RecentlyNonNull
+@dalvik.annotation.optimization.FastNative
 public native java.lang.Class<?>[] getDeclaredClasses();
 
 @androidx.annotation.RecentlyNonNull
+@dalvik.annotation.optimization.FastNative
 public native java.lang.reflect.Field[] getDeclaredFields();
 
 @androidx.annotation.RecentlyNonNull
@@ -157,6 +163,7 @@ public java.lang.reflect.Method[] getDeclaredMethods() throws java.lang.Security
 public java.lang.reflect.Constructor<?>[] getDeclaredConstructors() throws java.lang.SecurityException { throw new RuntimeException("Stub!"); }
 
 @androidx.annotation.RecentlyNonNull
+@dalvik.annotation.optimization.FastNative
 public native java.lang.reflect.Field getDeclaredField(@androidx.annotation.RecentlyNonNull java.lang.String name) throws java.lang.NoSuchFieldException;
 
 @androidx.annotation.RecentlyNonNull
@@ -199,9 +206,11 @@ public <A extends java.lang.annotation.Annotation> A[] getAnnotationsByType(@and
 public java.lang.annotation.Annotation[] getAnnotations() { throw new RuntimeException("Stub!"); }
 
 @androidx.annotation.RecentlyNullable
+@dalvik.annotation.optimization.FastNative
 public native <A extends java.lang.annotation.Annotation> A getDeclaredAnnotation(@androidx.annotation.RecentlyNonNull java.lang.Class<A> annotationClass);
 
 @androidx.annotation.RecentlyNonNull
+@dalvik.annotation.optimization.FastNative
 public native java.lang.annotation.Annotation[] getDeclaredAnnotations();
 }
 

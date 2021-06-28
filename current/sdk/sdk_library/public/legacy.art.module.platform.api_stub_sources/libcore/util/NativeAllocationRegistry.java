@@ -66,6 +66,8 @@ public class NativeAllocationRegistry {
  *                     allocation, excluding memory allocated with system malloc.
  *                     A value of 0 indicates that the memory was allocated mainly
  *                     with malloc.
+ *
+ * @hide
  */
 
 public NativeAllocationRegistry(@androidx.annotation.RecentlyNonNull java.lang.ClassLoader classLoader, long freeFunction, long size) { throw new RuntimeException("Stub!"); }
@@ -86,6 +88,8 @@ public NativeAllocationRegistry(@androidx.annotation.RecentlyNonNull java.lang.C
  *                     Approximate values are acceptable.
  * @return allocated {@link libcore.util.NativeAllocationRegistry NativeAllocationRegistry}
  * @throws java.lang.IllegalArgumentException If {@code size} is negative
+ *
+ * @hide
  */
 
 public static libcore.util.NativeAllocationRegistry createNonmalloced(@androidx.annotation.RecentlyNonNull java.lang.ClassLoader classLoader, long freeFunction, long size) { throw new RuntimeException("Stub!"); }
@@ -111,6 +115,8 @@ public static libcore.util.NativeAllocationRegistry createNonmalloced(@androidx.
  *                     a few hundered KB, use the simplified overload below.
  * @return allocated {@link libcore.util.NativeAllocationRegistry NativeAllocationRegistry}
  * @throws java.lang.IllegalArgumentException If {@code size} is negative
+ *
+ * @hide
  */
 
 public static libcore.util.NativeAllocationRegistry createMalloced(@androidx.annotation.RecentlyNonNull java.lang.ClassLoader classLoader, long freeFunction, long size) { throw new RuntimeException("Stub!"); }
@@ -125,6 +131,8 @@ public static libcore.util.NativeAllocationRegistry createMalloced(@androidx.ann
  *                     {@code void f(void* nativePtr)} used to free this
  *                     kind of native allocation
  * @return allocated {@link libcore.util.NativeAllocationRegistry NativeAllocationRegistry}
+ *
+ * @hide
  */
 
 public static libcore.util.NativeAllocationRegistry createMalloced(@androidx.annotation.RecentlyNonNull java.lang.ClassLoader classLoader, long freeFunction) { throw new RuntimeException("Stub!"); }
@@ -160,6 +168,8 @@ public static libcore.util.NativeAllocationRegistry createMalloced(@androidx.ann
  *                           called with {@code nativePtr} as its
  *                           argument before the {@link java.lang.OutOfMemoryError OutOfMemoryError} is
  *                           thrown.
+ *
+ * @hide
  */
 
 @androidx.annotation.RecentlyNonNull
@@ -174,6 +184,8 @@ public java.lang.Runnable registerNativeAllocation(@androidx.annotation.Recently
  * @param freeFunction address of a native function used to free this
  *                     kind of native allocation
  * @param nativePtr    pointer to pass to freeing function
+ *
+ * @hide
  */
 
 public static native void applyFreeFunction(long freeFunction, long nativePtr);

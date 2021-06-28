@@ -117,6 +117,9 @@ public org.json.JSONArray toJSONArray(@androidx.annotation.RecentlyNullable org.
 @androidx.annotation.RecentlyNonNull
 public java.util.Iterator<java.lang.String> keys() { throw new RuntimeException("Stub!"); }
 
+@androidx.annotation.RecentlyNonNull
+public java.util.Set<java.lang.String> keySet() { throw new RuntimeException("Stub!"); }
+
 @androidx.annotation.RecentlyNullable
 public org.json.JSONArray names() { throw new RuntimeException("Stub!"); }
 

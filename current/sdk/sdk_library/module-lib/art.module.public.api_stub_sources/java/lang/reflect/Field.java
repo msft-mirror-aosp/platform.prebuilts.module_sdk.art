@@ -61,40 +61,58 @@ public java.lang.String toString() { throw new RuntimeException("Stub!"); }
 public java.lang.String toGenericString() { throw new RuntimeException("Stub!"); }
 
 @androidx.annotation.RecentlyNullable
+@dalvik.annotation.optimization.FastNative
 public native java.lang.Object get(@androidx.annotation.RecentlyNullable java.lang.Object obj) throws java.lang.IllegalAccessException, java.lang.IllegalArgumentException;
 
+@dalvik.annotation.optimization.FastNative
 public native boolean getBoolean(@androidx.annotation.RecentlyNullable java.lang.Object obj) throws java.lang.IllegalAccessException, java.lang.IllegalArgumentException;
 
+@dalvik.annotation.optimization.FastNative
 public native byte getByte(@androidx.annotation.RecentlyNullable java.lang.Object obj) throws java.lang.IllegalAccessException, java.lang.IllegalArgumentException;
 
+@dalvik.annotation.optimization.FastNative
 public native char getChar(@androidx.annotation.RecentlyNullable java.lang.Object obj) throws java.lang.IllegalAccessException, java.lang.IllegalArgumentException;
 
+@dalvik.annotation.optimization.FastNative
 public native short getShort(@androidx.annotation.RecentlyNullable java.lang.Object obj) throws java.lang.IllegalAccessException, java.lang.IllegalArgumentException;
 
+@dalvik.annotation.optimization.FastNative
 public native int getInt(@androidx.annotation.RecentlyNullable java.lang.Object obj) throws java.lang.IllegalAccessException, java.lang.IllegalArgumentException;
 
+@dalvik.annotation.optimization.FastNative
 public native long getLong(@androidx.annotation.RecentlyNullable java.lang.Object obj) throws java.lang.IllegalAccessException, java.lang.IllegalArgumentException;
 
+@dalvik.annotation.optimization.FastNative
 public native float getFloat(@androidx.annotation.RecentlyNullable java.lang.Object obj) throws java.lang.IllegalAccessException, java.lang.IllegalArgumentException;
 
+@dalvik.annotation.optimization.FastNative
 public native double getDouble(@androidx.annotation.RecentlyNullable java.lang.Object obj) throws java.lang.IllegalAccessException, java.lang.IllegalArgumentException;
 
+@dalvik.annotation.optimization.FastNative
 public native void set(@androidx.annotation.RecentlyNullable java.lang.Object obj, @androidx.annotation.RecentlyNullable java.lang.Object value) throws java.lang.IllegalAccessException, java.lang.IllegalArgumentException;
 
+@dalvik.annotation.optimization.FastNative
 public native void setBoolean(@androidx.annotation.RecentlyNullable java.lang.Object obj, boolean z) throws java.lang.IllegalAccessException, java.lang.IllegalArgumentException;
 
+@dalvik.annotation.optimization.FastNative
 public native void setByte(@androidx.annotation.RecentlyNullable java.lang.Object obj, byte b) throws java.lang.IllegalAccessException, java.lang.IllegalArgumentException;
 
+@dalvik.annotation.optimization.FastNative
 public native void setChar(@androidx.annotation.RecentlyNullable java.lang.Object obj, char c) throws java.lang.IllegalAccessException, java.lang.IllegalArgumentException;
 
+@dalvik.annotation.optimization.FastNative
 public native void setShort(@androidx.annotation.RecentlyNullable java.lang.Object obj, short s) throws java.lang.IllegalAccessException, java.lang.IllegalArgumentException;
 
+@dalvik.annotation.optimization.FastNative
 public native void setInt(@androidx.annotation.RecentlyNullable java.lang.Object obj, int i) throws java.lang.IllegalAccessException, java.lang.IllegalArgumentException;
 
+@dalvik.annotation.optimization.FastNative
 public native void setLong(@androidx.annotation.RecentlyNullable java.lang.Object obj, long l) throws java.lang.IllegalAccessException, java.lang.IllegalArgumentException;
 
+@dalvik.annotation.optimization.FastNative
 public native void setFloat(@androidx.annotation.RecentlyNullable java.lang.Object obj, float f) throws java.lang.IllegalAccessException, java.lang.IllegalArgumentException;
 
+@dalvik.annotation.optimization.FastNative
 public native void setDouble(@androidx.annotation.RecentlyNullable java.lang.Object obj, double d) throws java.lang.IllegalAccessException, java.lang.IllegalArgumentException;
 
 @androidx.annotation.RecentlyNullable
@@ -104,6 +122,7 @@ public <T extends java.lang.annotation.Annotation> T[] getAnnotationsByType(@and
 
 public boolean isAnnotationPresent(@androidx.annotation.RecentlyNonNull java.lang.Class<? extends java.lang.annotation.Annotation> annotationType) { throw new RuntimeException("Stub!"); }
 
+@dalvik.annotation.optimization.FastNative
 public native java.lang.annotation.Annotation[] getDeclaredAnnotations();
 }
 

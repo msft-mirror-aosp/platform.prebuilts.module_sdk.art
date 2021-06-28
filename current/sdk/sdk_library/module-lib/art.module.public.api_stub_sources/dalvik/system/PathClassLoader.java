@@ -23,5 +23,7 @@ public class PathClassLoader extends dalvik.system.BaseDexClassLoader {
 public PathClassLoader(java.lang.String dexPath, java.lang.ClassLoader parent) { super(null, null, null, null); throw new RuntimeException("Stub!"); }
 
 public PathClassLoader(java.lang.String dexPath, java.lang.String librarySearchPath, java.lang.ClassLoader parent) { super(null, null, null, null); throw new RuntimeException("Stub!"); }
+
+public PathClassLoader(@android.annotation.NonNull java.lang.String dexPath, @android.annotation.Nullable java.lang.String librarySearchPath, @android.annotation.Nullable java.lang.ClassLoader parent, @android.annotation.Nullable java.lang.ClassLoader[] sharedLibraryLoaders) { super(null, null, null, null); throw new RuntimeException("Stub!"); }
 }
 

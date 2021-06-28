@@ -70,18 +70,25 @@ public final int[] array() { throw new RuntimeException("Stub!"); }
 
 public final int arrayOffset() { throw new RuntimeException("Stub!"); }
 
+@dalvik.annotation.codegen.CovariantReturnType(returnType=IntBuffer.class, presentAfter=28)
 public java.nio.Buffer position(int newPosition) { throw new RuntimeException("Stub!"); }
 
+@dalvik.annotation.codegen.CovariantReturnType(returnType=IntBuffer.class, presentAfter=28)
 public java.nio.Buffer limit(int newLimit) { throw new RuntimeException("Stub!"); }
 
+@dalvik.annotation.codegen.CovariantReturnType(returnType=IntBuffer.class, presentAfter=28)
 public java.nio.Buffer mark() { throw new RuntimeException("Stub!"); }
 
+@dalvik.annotation.codegen.CovariantReturnType(returnType=IntBuffer.class, presentAfter=28)
 public java.nio.Buffer reset() { throw new RuntimeException("Stub!"); }
 
+@dalvik.annotation.codegen.CovariantReturnType(returnType=IntBuffer.class, presentAfter=28)
 public java.nio.Buffer clear() { throw new RuntimeException("Stub!"); }
 
+@dalvik.annotation.codegen.CovariantReturnType(returnType=IntBuffer.class, presentAfter=28)
 public java.nio.Buffer flip() { throw new RuntimeException("Stub!"); }
 
+@dalvik.annotation.codegen.CovariantReturnType(returnType=IntBuffer.class, presentAfter=28)
 public java.nio.Buffer rewind() { throw new RuntimeException("Stub!"); }
 
 public abstract java.nio.IntBuffer compact();

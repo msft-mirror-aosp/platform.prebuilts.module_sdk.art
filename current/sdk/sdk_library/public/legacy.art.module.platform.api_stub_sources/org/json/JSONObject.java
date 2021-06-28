@@ -450,7 +450,7 @@ public java.util.Iterator<java.lang.String> keys() { throw new RuntimeException(
  *
  * @return set of keys in this object
  *
- * @hide.
+ * @hide
  */
 
 @androidx.annotation.RecentlyNonNull

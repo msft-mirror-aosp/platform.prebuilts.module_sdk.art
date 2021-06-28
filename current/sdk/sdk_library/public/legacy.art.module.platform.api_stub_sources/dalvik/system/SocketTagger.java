@@ -28,6 +28,11 @@ import java.net.SocketException;
 @SuppressWarnings({"unchecked", "deprecation", "all"})
 public abstract class SocketTagger {
 
+/**
+ *
+ * @hide
+ */
+
 public SocketTagger() { throw new RuntimeException("Stub!"); }
 
 /**
@@ -37,6 +42,8 @@ public SocketTagger() { throw new RuntimeException("Stub!"); }
  *
  * @param socketDescriptor to be assigned to the current thread
  * @throws java.net.SocketException when {@link java.net.SocketException SocketException} occurs
+ *
+ * @hide
  */
 
 public abstract void tag(java.io.FileDescriptor socketDescriptor) throws java.net.SocketException;
@@ -51,6 +58,8 @@ public abstract void tag(java.io.FileDescriptor socketDescriptor) throws java.ne
  *
  * @param socketDescriptor to be released from the current thread to a connection pool
  * @throws java.net.SocketException when {@link java.net.SocketException SocketException} occurs
+ *
+ * @hide
  */
 
 public abstract void untag(java.io.FileDescriptor socketDescriptor) throws java.net.SocketException;
@@ -62,6 +71,8 @@ public abstract void untag(java.io.FileDescriptor socketDescriptor) throws java.
  *
  * @param socket to be assigned to the current thread
  * @throws java.net.SocketException when {@link java.net.SocketException SocketException} occurs
+ *
+ * @hide
  */
 
 public final void tag(java.net.Socket socket) throws java.net.SocketException { throw new RuntimeException("Stub!"); }
@@ -77,6 +88,8 @@ public final void tag(java.net.Socket socket) throws java.net.SocketException { 
  * @param socket           to be released from the current thread
  *                         to a connection pool
  * @throws java.net.SocketException when {@link java.net.SocketException SocketException} occurs
+ *
+ * @hide
  */
 
 public final void untag(java.net.Socket socket) throws java.net.SocketException { throw new RuntimeException("Stub!"); }
@@ -88,6 +101,8 @@ public final void untag(java.net.Socket socket) throws java.net.SocketException 
  *
  * @param socket           to be assigned to the current thread
  * @throws java.net.SocketException when {@link java.net.SocketException SocketException} occurs
+ *
+ * @hide
  */
 
 public final void tag(java.net.DatagramSocket socket) throws java.net.SocketException { throw new RuntimeException("Stub!"); }
@@ -103,6 +118,8 @@ public final void tag(java.net.DatagramSocket socket) throws java.net.SocketExce
  * @param socket           to be released from the current thread
  *                         to a connection pool
  * @throws java.net.SocketException when {@link java.net.SocketException SocketException} occurs
+ *
+ * @hide
  */
 
 public final void untag(java.net.DatagramSocket socket) throws java.net.SocketException { throw new RuntimeException("Stub!"); }
@@ -111,6 +128,8 @@ public final void untag(java.net.DatagramSocket socket) throws java.net.SocketEx
  * Sets this process' socket tagger to {@code tagger}.
  *
  * @param tagger socket tagger to be assigned to this process
+ *
+ * @hide
  */
 
 public static synchronized void set(dalvik.system.SocketTagger tagger) { throw new RuntimeException("Stub!"); }
@@ -119,6 +138,8 @@ public static synchronized void set(dalvik.system.SocketTagger tagger) { throw n
  * Returns this process socket tagger.
  *
  * @return {@link dalvik.system.SocketTagger SocketTagger} assigned to this process
+ *
+ * @hide
  */
 
 public static synchronized dalvik.system.SocketTagger get() { throw new RuntimeException("Stub!"); }

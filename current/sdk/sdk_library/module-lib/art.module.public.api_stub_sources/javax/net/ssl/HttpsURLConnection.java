@@ -48,6 +48,8 @@ public static javax.net.ssl.HostnameVerifier getDefaultHostnameVerifier() { thro
 
 public void setHostnameVerifier(javax.net.ssl.HostnameVerifier v) { throw new RuntimeException("Stub!"); }
 
+public static javax.net.ssl.HostnameVerifier getStrictHostnameVerifier() { throw new RuntimeException("Stub!"); }
+
 public javax.net.ssl.HostnameVerifier getHostnameVerifier() { throw new RuntimeException("Stub!"); }
 
 public static void setDefaultSSLSocketFactory(javax.net.ssl.SSLSocketFactory sf) { throw new RuntimeException("Stub!"); }

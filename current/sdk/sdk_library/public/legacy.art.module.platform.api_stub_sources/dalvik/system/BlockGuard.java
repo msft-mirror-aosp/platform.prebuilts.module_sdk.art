@@ -42,6 +42,8 @@ private BlockGuard() { throw new RuntimeException("Stub!"); }
  *
  * @return the current thread's policy. Will return the {@link #LAX_POLICY}
  *         instance if nothing else is set.
+ *
+ * @hide
  */
 
 @android.annotation.NonNull
@@ -55,6 +57,8 @@ public static dalvik.system.BlockGuard.Policy getThreadPolicy() { throw new Runt
  *
  * @param policy policy to set. Use the public {@link #LAX_POLICY} if you
  *            want to unset the active policy.
+ *
+ * @hide
  */
 
 public static void setThreadPolicy(@android.annotation.NonNull dalvik.system.BlockGuard.Policy policy) { throw new RuntimeException("Stub!"); }
@@ -64,6 +68,8 @@ public static void setThreadPolicy(@android.annotation.NonNull dalvik.system.Blo
  *
  * @return the current process's policy. Will return the
  *         {@link #LAX_VM_POLICY} instance if nothing else is set.
+ *
+ * @hide
  */
 
 @android.annotation.NonNull
@@ -77,12 +83,16 @@ public static dalvik.system.BlockGuard.VmPolicy getVmPolicy() { throw new Runtim
  *
  * @param policy policy to set. Use the public {@link #LAX_VM_POLICY} if you
  *            want to unset the active policy.
+ *
+ * @hide
  */
 
 public static void setVmPolicy(@android.annotation.NonNull dalvik.system.BlockGuard.VmPolicy policy) { throw new RuntimeException("Stub!"); }
 
 /**
  * The default, permissive per-thread policy.
+ *
+ * @hide
  */
 
 public static final dalvik.system.BlockGuard.Policy LAX_POLICY;
@@ -90,6 +100,8 @@ static { LAX_POLICY = null; }
 
 /**
  * The default, permissive per-process policy.
+ *
+ * @hide
  */
 
 public static final dalvik.system.BlockGuard.VmPolicy LAX_VM_POLICY;
@@ -105,18 +117,24 @@ public static interface Policy {
 
 /**
  * Called on disk writes.
+ *
+ * @hide
  */
 
 public void onWriteToDisk();
 
 /**
  * Called on disk reads.
+ *
+ * @hide
  */
 
 public void onReadFromDisk();
 
 /**
  * Called on unbuffered input/ouput operations.
+ *
+ * @hide
  */
 
 public void onUnbufferedIO();
@@ -128,6 +146,8 @@ public void onUnbufferedIO();
  * {@code PENALTY_*} constants declared in {@code StrictMode} class.
  *
  * @return policy bitmask
+ *
+ * @hide
  */
 
 public int getPolicyMask();
@@ -159,6 +179,8 @@ public static interface VmPolicy {
  *
  * @param path The path in the local file system that is being accessed
  *            for reading or writing.
+ *
+ * @hide
  */
 
 public void onPathAccess(@android.annotation.NonNull java.lang.String path);

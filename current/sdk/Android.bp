@@ -4,7 +4,6 @@
 soong_config_module_type_import {
     from: "prebuilts/module_sdk/art/SoongConfig.bp",
     module_types: [
-        "art_prebuilt_cc_prebuilt_library",
         "art_prebuilt_cc_prebuilt_library_headers",
         "art_prebuilt_cc_prebuilt_library_shared",
         "art_prebuilt_cc_prebuilt_library_static",
@@ -467,30 +466,6 @@ art_prebuilt_java_import {
 }
 
 java_import {
-    name: "art-module-sdk_art.module.public.api.stubs@current",
-    sdk_member_name: "art.module.public.api.stubs",
-    visibility: ["//visibility:private"],
-    apex_available: ["//apex_available:platform"],
-    licenses: ["art-module-sdk_libcore_license@current"],
-    jars: ["java/art.module.public.api.stubs.jar"],
-}
-
-art_prebuilt_java_import {
-    name: "art-module-sdk_art.module.public.api.stubs",
-    // Do not prefer prebuilt if SOONG_CONFIG_art_module_source_build is true.
-    prefer: true,
-    soong_config_variables: {
-        source_build: {
-            prefer: false,
-        },
-    },
-    visibility: ["//visibility:private"],
-    apex_available: ["//apex_available:platform"],
-    licenses: ["art-module-sdk_libcore_license"],
-    jars: ["java/art.module.public.api.stubs.jar"],
-}
-
-java_import {
     name: "art-module-sdk_core-lambda-stubs-for-system-modules@current",
     sdk_member_name: "core-lambda-stubs-for-system-modules",
     visibility: ["//visibility:private"],
@@ -632,30 +607,6 @@ art_prebuilt_java_import {
     apex_available: ["//apex_available:platform"],
     licenses: ["art-module-sdk_libcore_license"],
     jars: ["java/art-module-intra-core-api-stubs-system-modules-lib.jar"],
-}
-
-java_import {
-    name: "art-module-sdk_legacy.art.module.platform.api.stubs@current",
-    sdk_member_name: "legacy.art.module.platform.api.stubs",
-    visibility: ["//visibility:private"],
-    apex_available: ["//apex_available:platform"],
-    licenses: ["art-module-sdk_libcore_license@current"],
-    jars: ["java/legacy.art.module.platform.api.stubs.jar"],
-}
-
-art_prebuilt_java_import {
-    name: "art-module-sdk_legacy.art.module.platform.api.stubs",
-    // Do not prefer prebuilt if SOONG_CONFIG_art_module_source_build is true.
-    prefer: true,
-    soong_config_variables: {
-        source_build: {
-            prefer: false,
-        },
-    },
-    visibility: ["//visibility:private"],
-    apex_available: ["//apex_available:platform"],
-    licenses: ["art-module-sdk_libcore_license"],
-    jars: ["java/legacy.art.module.platform.api.stubs.jar"],
 }
 
 java_import {
@@ -874,7 +825,7 @@ art_prebuilt_java_system_modules_import {
     ],
     licenses: ["art-module-sdk_libcore_license"],
     libs: [
-        "art-module-sdk_art.module.public.api.stubs",
+        "art.module.public.api.stubs",
         "art-module-sdk_core-lambda-stubs-for-system-modules",
         "art-module-sdk_core-generated-annotation-stubs",
         "art-module-sdk_art.module.api.annotations.for.system.modules",
@@ -957,7 +908,7 @@ art_prebuilt_java_system_modules_import {
         "//prebuilts:__subpackages__",
     ],
     licenses: ["art-module-sdk_libcore_license"],
-    libs: ["art-module-sdk_legacy.art.module.platform.api.stubs"],
+    libs: ["legacy.art.module.platform.api.stubs"],
 }
 
 java_system_modules_import {
@@ -1562,179 +1513,6 @@ art_prebuilt_cc_prebuilt_library_headers {
         "include/art/libnativeloader/include",
         "include/libnativehelper/include_jni",
     ],
-}
-
-cc_prebuilt_library {
-    name: "art-module-sdk_libdexfile_support@current",
-    sdk_member_name: "libdexfile_support",
-    visibility: ["//visibility:public"],
-    apex_available: [
-        "//apex_available:platform",
-        "com.android.art",
-        "com.android.art.debug",
-        "com.android.media",
-        "com.android.media.swcodec",
-        "com.android.runtime",
-    ],
-    licenses: ["art-module-sdk_art_license@current"],
-    host_supported: true,
-    installable: false,
-    compile_multilib: "both",
-    shared: {
-        enabled: false,
-    },
-    shared_libs: [
-        "liblog",
-        "libbase",
-    ],
-    export_include_dirs: [
-        "common_os/include/art/libdexfile/external/include",
-        "common_os/include/system/libbase/include",
-    ],
-    target: {
-        host: {
-            enabled: false,
-        },
-        android_arm64: {
-            static: {
-                srcs: ["android/arm64/lib/libdexfile_support.a"],
-            },
-            shared: {
-                srcs: ["android/arm64/lib/libdexfile_support.so"],
-            },
-        },
-        android_x86_64: {
-            static: {
-                srcs: ["android/x86_64/lib/libdexfile_support.a"],
-            },
-            shared: {
-                srcs: ["android/x86_64/lib/libdexfile_support.so"],
-            },
-        },
-        android_arm: {
-            static: {
-                srcs: ["android/arm/lib/libdexfile_support.a"],
-            },
-            shared: {
-                srcs: ["android/arm/lib/libdexfile_support.so"],
-            },
-        },
-        android_x86: {
-            static: {
-                srcs: ["android/x86/lib/libdexfile_support.a"],
-            },
-            shared: {
-                srcs: ["android/x86/lib/libdexfile_support.so"],
-            },
-        },
-        linux_glibc_x86_64: {
-            enabled: true,
-            static: {
-                srcs: ["linux_glibc/x86_64/lib/libdexfile_support.a"],
-            },
-            shared: {
-                srcs: ["linux_glibc/x86_64/lib/libdexfile_support.so"],
-            },
-        },
-        linux_glibc_x86: {
-            enabled: true,
-            static: {
-                srcs: ["linux_glibc/x86/lib/libdexfile_support.a"],
-            },
-            shared: {
-                srcs: ["linux_glibc/x86/lib/libdexfile_support.so"],
-            },
-        },
-    },
-}
-
-art_prebuilt_cc_prebuilt_library {
-    name: "libdexfile_support",
-    // Do not prefer prebuilt if SOONG_CONFIG_art_module_source_build is true.
-    prefer: true,
-    soong_config_variables: {
-        source_build: {
-            prefer: false,
-        },
-    },
-    visibility: ["//visibility:public"],
-    apex_available: [
-        "//apex_available:platform",
-        "com.android.art",
-        "com.android.art.debug",
-        "com.android.media",
-        "com.android.media.swcodec",
-        "com.android.runtime",
-    ],
-    licenses: ["art-module-sdk_art_license"],
-    host_supported: true,
-    compile_multilib: "both",
-    shared: {
-        enabled: false,
-    },
-    shared_libs: [
-        "liblog",
-        "libbase",
-    ],
-    export_include_dirs: [
-        "common_os/include/art/libdexfile/external/include",
-        "common_os/include/system/libbase/include",
-    ],
-    target: {
-        host: {
-            enabled: false,
-        },
-        android_arm64: {
-            static: {
-                srcs: ["android/arm64/lib/libdexfile_support.a"],
-            },
-            shared: {
-                srcs: ["android/arm64/lib/libdexfile_support.so"],
-            },
-        },
-        android_x86_64: {
-            static: {
-                srcs: ["android/x86_64/lib/libdexfile_support.a"],
-            },
-            shared: {
-                srcs: ["android/x86_64/lib/libdexfile_support.so"],
-            },
-        },
-        android_arm: {
-            static: {
-                srcs: ["android/arm/lib/libdexfile_support.a"],
-            },
-            shared: {
-                srcs: ["android/arm/lib/libdexfile_support.so"],
-            },
-        },
-        android_x86: {
-            static: {
-                srcs: ["android/x86/lib/libdexfile_support.a"],
-            },
-            shared: {
-                srcs: ["android/x86/lib/libdexfile_support.so"],
-            },
-        },
-        linux_glibc_x86_64: {
-            enabled: true,
-            static: {
-                srcs: ["linux_glibc/x86_64/lib/libdexfile_support.a"],
-            },
-            shared: {
-                srcs: ["linux_glibc/x86_64/lib/libdexfile_support.so"],
-            },
-        },
-        linux_glibc_x86: {
-            enabled: true,
-            static: {
-                srcs: ["linux_glibc/x86/lib/libdexfile_support.a"],
-            },
-            shared: {
-                srcs: ["linux_glibc/x86/lib/libdexfile_support.so"],
-            },
-        },
-    },
 }
 
 cc_prebuilt_library_shared {
@@ -2497,6 +2275,7 @@ cc_prebuilt_library_shared {
         "//external/perfetto:__subpackages__",
         "//frameworks/base/packages/Connectivity/tests/integration",
         "//frameworks/base/packages/Tethering:__subpackages__",
+        "//libcore:__subpackages__",
         "//libnativehelper:__subpackages__",
         "//packages/modules/Connectivity/Tethering:__subpackages__",
         "//packages/modules/Connectivity/tests:__subpackages__",
@@ -2506,6 +2285,8 @@ cc_prebuilt_library_shared {
     ],
     apex_available: [
         "//apex_available:platform",
+        "com.android.art",
+        "com.android.art.debug",
         "com.android.extservices",
         "com.android.tethering",
     ],
@@ -2550,6 +2331,7 @@ art_prebuilt_cc_prebuilt_library_shared {
         "//external/perfetto:__subpackages__",
         "//frameworks/base/packages/Connectivity/tests/integration",
         "//frameworks/base/packages/Tethering:__subpackages__",
+        "//libcore:__subpackages__",
         "//libnativehelper:__subpackages__",
         "//packages/modules/Connectivity/Tethering:__subpackages__",
         "//packages/modules/Connectivity/tests:__subpackages__",
@@ -2559,6 +2341,8 @@ art_prebuilt_cc_prebuilt_library_shared {
     ],
     apex_available: [
         "//apex_available:platform",
+        "com.android.art",
+        "com.android.art.debug",
         "com.android.extservices",
         "com.android.tethering",
     ],
@@ -2666,6 +2450,113 @@ art_prebuilt_cc_prebuilt_library_shared {
         },
         x86: {
             srcs: ["x86/lib/libnativeloader_lazy.so"],
+        },
+    },
+}
+
+cc_prebuilt_library_static {
+    name: "art-module-sdk_libdexfile_support@current",
+    sdk_member_name: "libdexfile_support",
+    visibility: ["//visibility:public"],
+    apex_available: [
+        "//apex_available:platform",
+        "com.android.art",
+        "com.android.art.debug",
+        "com.android.media",
+        "com.android.media.swcodec",
+        "com.android.runtime",
+    ],
+    licenses: ["art-module-sdk_art_license@current"],
+    host_supported: true,
+    installable: false,
+    compile_multilib: "both",
+    shared_libs: [
+        "liblog",
+        "libbase",
+    ],
+    export_include_dirs: [
+        "common_os/include/art/libdexfile/external/include",
+        "common_os/include/system/libbase/include",
+    ],
+    target: {
+        host: {
+            enabled: false,
+        },
+        android_arm64: {
+            srcs: ["android/arm64/lib/libdexfile_support.a"],
+        },
+        android_x86_64: {
+            srcs: ["android/x86_64/lib/libdexfile_support.a"],
+        },
+        android_arm: {
+            srcs: ["android/arm/lib/libdexfile_support.a"],
+        },
+        android_x86: {
+            srcs: ["android/x86/lib/libdexfile_support.a"],
+        },
+        linux_glibc_x86_64: {
+            enabled: true,
+            srcs: ["linux_glibc/x86_64/lib/libdexfile_support.a"],
+        },
+        linux_glibc_x86: {
+            enabled: true,
+            srcs: ["linux_glibc/x86/lib/libdexfile_support.a"],
+        },
+    },
+}
+
+art_prebuilt_cc_prebuilt_library_static {
+    name: "libdexfile_support",
+    // Do not prefer prebuilt if SOONG_CONFIG_art_module_source_build is true.
+    prefer: true,
+    soong_config_variables: {
+        source_build: {
+            prefer: false,
+        },
+    },
+    visibility: ["//visibility:public"],
+    apex_available: [
+        "//apex_available:platform",
+        "com.android.art",
+        "com.android.art.debug",
+        "com.android.media",
+        "com.android.media.swcodec",
+        "com.android.runtime",
+    ],
+    licenses: ["art-module-sdk_art_license"],
+    host_supported: true,
+    compile_multilib: "both",
+    shared_libs: [
+        "liblog",
+        "libbase",
+    ],
+    export_include_dirs: [
+        "common_os/include/art/libdexfile/external/include",
+        "common_os/include/system/libbase/include",
+    ],
+    target: {
+        host: {
+            enabled: false,
+        },
+        android_arm64: {
+            srcs: ["android/arm64/lib/libdexfile_support.a"],
+        },
+        android_x86_64: {
+            srcs: ["android/x86_64/lib/libdexfile_support.a"],
+        },
+        android_arm: {
+            srcs: ["android/arm/lib/libdexfile_support.a"],
+        },
+        android_x86: {
+            srcs: ["android/x86/lib/libdexfile_support.a"],
+        },
+        linux_glibc_x86_64: {
+            enabled: true,
+            srcs: ["linux_glibc/x86_64/lib/libdexfile_support.a"],
+        },
+        linux_glibc_x86: {
+            enabled: true,
+            srcs: ["linux_glibc/x86/lib/libdexfile_support.a"],
         },
     },
 }
@@ -2881,8 +2772,8 @@ sdk_snapshot {
     visibility: ["//art:__subpackages__"],
     host_supported: true,
     native_static_libs: [
-        "art-module-sdk_libdexfile_static@current",
         "art-module-sdk_libdexfile_support@current",
+        "art-module-sdk_libdexfile_static@current",
         "art-module-sdk_libnativehelper_lazy@current",
     ],
     target: {

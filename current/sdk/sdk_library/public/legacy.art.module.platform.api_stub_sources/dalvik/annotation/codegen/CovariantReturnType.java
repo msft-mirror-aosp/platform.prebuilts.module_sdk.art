@@ -63,6 +63,8 @@ public @interface CovariantReturnType {
 /**
  * The return type of the synthetic method to generate. Must be a subclass of the return type
  * of the method being annotated.
+ *
+ * @hide
  */
 
 public java.lang.Class<?> returnType();
@@ -70,6 +72,8 @@ public java.lang.Class<?> returnType();
 /**
  * The last Android API level not to have the generated synthetic method. The annotation can be
  * removed and the actual return type updated when support for this API level is dropped.
+ *
+ * @hide
  */
 
 public int presentAfter();
@@ -79,6 +83,8 @@ public int presentAfter();
 @java.lang.annotation.Retention(java.lang.annotation.RetentionPolicy.CLASS)
 @java.lang.annotation.Target({java.lang.annotation.ElementType.METHOD})
 public static @interface CovariantReturnTypes {
+
+/** @hide */
 
 public dalvik.annotation.codegen.CovariantReturnType[] value();
 }

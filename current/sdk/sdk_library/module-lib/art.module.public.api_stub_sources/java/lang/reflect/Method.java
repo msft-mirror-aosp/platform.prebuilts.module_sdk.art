@@ -58,6 +58,7 @@ public int getParameterCount() { throw new RuntimeException("Stub!"); }
 public java.lang.reflect.Type[] getGenericParameterTypes() { throw new RuntimeException("Stub!"); }
 
 @androidx.annotation.RecentlyNonNull
+@dalvik.annotation.optimization.FastNative
 public native java.lang.Class<?>[] getExceptionTypes();
 
 @androidx.annotation.RecentlyNonNull
@@ -74,6 +75,7 @@ public java.lang.String toString() { throw new RuntimeException("Stub!"); }
 public java.lang.String toGenericString() { throw new RuntimeException("Stub!"); }
 
 @androidx.annotation.RecentlyNullable
+@dalvik.annotation.optimization.FastNative
 public native java.lang.Object invoke(@androidx.annotation.RecentlyNullable java.lang.Object obj, @androidx.annotation.RecentlyNullable java.lang.Object... args) throws java.lang.IllegalAccessException, java.lang.IllegalArgumentException, java.lang.reflect.InvocationTargetException;
 
 public boolean isBridge() { throw new RuntimeException("Stub!"); }
@@ -85,6 +87,7 @@ public boolean isSynthetic() { throw new RuntimeException("Stub!"); }
 public boolean isDefault() { throw new RuntimeException("Stub!"); }
 
 @androidx.annotation.RecentlyNullable
+@dalvik.annotation.optimization.FastNative
 public native java.lang.Object getDefaultValue();
 
 @androidx.annotation.RecentlyNullable

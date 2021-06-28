@@ -47,6 +47,8 @@ public V getOrDefault(java.lang.Object key, V defaultValue) { throw new RuntimeE
 
 public void clear() { throw new RuntimeException("Stub!"); }
 
+public java.util.Map.Entry<K,V> eldest() { throw new RuntimeException("Stub!"); }
+
 protected boolean removeEldestEntry(java.util.Map.Entry<K,V> eldest) { throw new RuntimeException("Stub!"); }
 
 public java.util.Set<K> keySet() { throw new RuntimeException("Stub!"); }

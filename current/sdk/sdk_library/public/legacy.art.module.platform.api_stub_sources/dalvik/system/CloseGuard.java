@@ -121,6 +121,8 @@ private CloseGuard() { throw new RuntimeException("Stub!"); }
  * up the instance to warn on failure to close.
  *
  * @return {@link dalvik.system.CloseGuard CloseGuard} instance.
+ *
+ * @hide
  */
 
 public static dalvik.system.CloseGuard get() { throw new RuntimeException("Stub!"); }
@@ -133,6 +135,8 @@ public static dalvik.system.CloseGuard get() { throw new RuntimeException("Stub!
  * one-line warning is logged.
  *
  * @param enabled whether stack capture and tracking is enabled.
+ *
+ * @hide
  */
 
 public static void setEnabled(boolean enabled) { throw new RuntimeException("Stub!"); }
@@ -142,6 +146,8 @@ public static void setEnabled(boolean enabled) { throw new RuntimeException("Stu
  * violations when stack tracking is enabled. Must be non-null.
  *
  * @param rep replacement for default Reporter.
+ *
+ * @hide
  */
 
 public static void setReporter(dalvik.system.CloseGuard.Reporter rep) { throw new RuntimeException("Stub!"); }
@@ -150,6 +156,8 @@ public static void setReporter(dalvik.system.CloseGuard.Reporter rep) { throw ne
  * Returns non-null CloseGuard.Reporter.
  *
  * @return CloseGuard's Reporter.
+ *
+ * @hide
  */
 
 public static dalvik.system.CloseGuard.Reporter getReporter() { throw new RuntimeException("Stub!"); }
@@ -161,6 +169,8 @@ public static dalvik.system.CloseGuard.Reporter getReporter() { throw new Runtim
  *
  * @param closer non-null name of explicit termination method. Printed by warnIfOpen.
  * @throws java.lang.NullPointerException if closer is null.
+ *
+ * @hide
  */
 
 public void open(java.lang.String closer) { throw new RuntimeException("Stub!"); }
@@ -174,6 +184,8 @@ public void open(java.lang.String closer) { throw new RuntimeException("Stub!");
  *
  * @param closer Non-null name of explicit termination method. Printed by warnIfOpen.
  * @param callsite Non-null string uniquely identifying the callsite.
+ *
+ * @hide
  */
 
 public void openWithCallSite(java.lang.String closer, java.lang.String callsite) { throw new RuntimeException("Stub!"); }
@@ -181,6 +193,8 @@ public void openWithCallSite(java.lang.String closer, java.lang.String callsite)
 /**
  * Marks this CloseGuard instance as closed to avoid warnings on
  * finalization.
+ *
+ * @hide
  */
 
 public void close() { throw new RuntimeException("Stub!"); }
@@ -191,6 +205,8 @@ public void close() { throw new RuntimeException("Stub!"); }
  * when the CloseGuard was created, passes the stacktrace associated with
  * the allocation to the current reporter. If it was not enabled, it just
  * directly logs a brief message.
+ *
+ * @hide
  */
 
 public void warnIfOpen() { throw new RuntimeException("Stub!"); }
@@ -202,7 +218,17 @@ public void warnIfOpen() { throw new RuntimeException("Stub!"); }
 @SuppressWarnings({"unchecked", "deprecation", "all"})
 public static interface Reporter {
 
+/**
+ *
+ * @hide
+ */
+
 public void report(java.lang.String message, java.lang.Throwable allocationSite);
+
+/**
+ *
+ * @hide
+ */
 
 public default void report(java.lang.String message) { throw new RuntimeException("Stub!"); }
 }

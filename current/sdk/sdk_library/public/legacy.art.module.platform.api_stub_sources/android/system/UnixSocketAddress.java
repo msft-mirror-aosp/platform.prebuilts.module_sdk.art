@@ -41,13 +41,27 @@ private UnixSocketAddress() { throw new RuntimeException("Stub!"); }
  * @param pathname filename for named unix socket
  * @throws java.lang.NullPointerException if {@code name} is {@code null}
  * @throws java.lang.IllegalArgumentException if {@code name} is invalid, e.g. too long
+ *
+ * @hide
  */
 
 public static android.system.UnixSocketAddress createFileSystem(java.lang.String pathName) { throw new RuntimeException("Stub!"); }
 
+/**
+ * @hide
+ */
+
 public boolean equals(java.lang.Object o) { throw new RuntimeException("Stub!"); }
 
+/**
+ * @hide
+ */
+
 public int hashCode() { throw new RuntimeException("Stub!"); }
+
+/**
+ * @hide
+ */
 
 public java.lang.String toString() { throw new RuntimeException("Stub!"); }
 }

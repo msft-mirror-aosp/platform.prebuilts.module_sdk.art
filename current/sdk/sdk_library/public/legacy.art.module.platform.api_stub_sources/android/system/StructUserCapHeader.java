@@ -35,9 +35,15 @@ public final class StructUserCapHeader {
  *
  * @param version linux capability version
  * @param pid     process id
+ *
+ * @hide
  */
 
 public StructUserCapHeader(int version, int pid) { throw new RuntimeException("Stub!"); }
+
+/**
+ * @hide
+ */
 
 public java.lang.String toString() { throw new RuntimeException("Stub!"); }
 }
