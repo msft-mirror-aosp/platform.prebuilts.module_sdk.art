@@ -31,9 +31,9 @@ public static void bind(java.io.FileDescriptor fd, java.net.InetAddress address,
 public static void bind(@android.annotation.NonNull java.io.FileDescriptor fd, @android.annotation.NonNull java.net.SocketAddress address) throws android.system.ErrnoException, java.net.SocketException { throw new RuntimeException("Stub!"); }
 
 @android.annotation.Nullable
-public static android.system.StructUserCapData[] capget(@android.annotation.NonNull android.system.StructUserCapHeader hdr) throws android.system.ErrnoException { throw new RuntimeException("Stub!"); }
+public static android.system.StructCapUserData[] capget(@android.annotation.NonNull android.system.StructCapUserHeader hdr) throws android.system.ErrnoException { throw new RuntimeException("Stub!"); }
 
-public static void capset(@android.annotation.NonNull android.system.StructUserCapHeader hdr, @android.annotation.NonNull android.system.StructUserCapData[] data) throws android.system.ErrnoException { throw new RuntimeException("Stub!"); }
+public static void capset(@android.annotation.NonNull android.system.StructCapUserHeader hdr, @android.annotation.NonNull android.system.StructCapUserData[] data) throws android.system.ErrnoException { throw new RuntimeException("Stub!"); }
 
 public static void chmod(java.lang.String path, int mode) throws android.system.ErrnoException { throw new RuntimeException("Stub!"); }
 

@@ -24,7 +24,7 @@ package libcore.net.http;
  */
 
 @SuppressWarnings({"unchecked", "deprecation", "all"})
-public interface Dns extends com.android.okhttp.internalandroidapi.Dns {
+public interface Dns {
 
 /**
  * Returns the IP addresses of {@code hostname}, in the order they should

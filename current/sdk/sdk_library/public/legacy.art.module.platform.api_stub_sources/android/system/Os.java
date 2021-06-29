@@ -68,7 +68,7 @@ public static void bind(@android.annotation.NonNull java.io.FileDescriptor fd, @
  */
 
 @android.annotation.Nullable
-public static android.system.StructUserCapData[] capget(@android.annotation.NonNull android.system.StructUserCapHeader hdr) throws android.system.ErrnoException { throw new RuntimeException("Stub!"); }
+public static android.system.StructCapUserData[] capget(@android.annotation.NonNull android.system.StructCapUserHeader hdr) throws android.system.ErrnoException { throw new RuntimeException("Stub!"); }
 
 /**
  * See <a href="http://man7.org/linux/man-pages/man2/capset.2.html">capset(2)</a>.
@@ -81,7 +81,7 @@ public static android.system.StructUserCapData[] capget(@android.annotation.NonN
  *                        set, or to set a capability in the effective set that is
  *                        not in the permitted set; or
  *                        the caller attempted to use
- *                        {@link capset( StructUserCapHeader , StructUserCapData[])}
+ *                        {@link capset(StructCapUserHeader, StructCapUserData[])}
  *                        to modify the capabilities of a thread other than itself,
  *                        but lacked sufficient privilege;
  *                        or there is no such thread.
@@ -89,7 +89,7 @@ public static android.system.StructUserCapData[] capget(@android.annotation.NonN
  * @hide
  */
 
-public static void capset(@android.annotation.NonNull android.system.StructUserCapHeader hdr, @android.annotation.NonNull android.system.StructUserCapData[] data) throws android.system.ErrnoException { throw new RuntimeException("Stub!"); }
+public static void capset(@android.annotation.NonNull android.system.StructCapUserHeader hdr, @android.annotation.NonNull android.system.StructCapUserData[] data) throws android.system.ErrnoException { throw new RuntimeException("Stub!"); }
 
 /**
  * See <a href="http://man7.org/linux/man-pages/man2/chmod.2.html">chmod(2)</a>.
@@ -316,6 +316,8 @@ public static int getsockoptInt(@android.annotation.NonNull java.io.FileDescript
  * @param option name of the option to get
  * @return       {@link StructLinger} associated with given {@code fd}
  * @throws ErrnoException
+ *
+ * @hide
  */
 
 @android.annotation.Nullable
@@ -812,6 +814,8 @@ public static void setsockoptInt(java.io.FileDescriptor fd, int level, int optio
  * @param value  {@link android.system.StructLinger StructLinger} to set for {@code fd}
  * @throws android.system.ErrnoException if {@code fd} is invalid; or
  *                        {@code option} is unknown at given {@code level}
+ *
+ * @hide
  */
 
 public static void setsockoptLinger(@android.annotation.NonNull java.io.FileDescriptor fd, int level, int option, @android.annotation.NonNull android.system.StructLinger value) throws android.system.ErrnoException { throw new RuntimeException("Stub!"); }

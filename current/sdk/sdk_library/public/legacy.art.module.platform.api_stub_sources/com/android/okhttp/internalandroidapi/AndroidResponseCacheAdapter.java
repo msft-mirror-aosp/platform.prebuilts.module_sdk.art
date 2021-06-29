@@ -37,33 +37,50 @@ import java.io.IOException;
 @SuppressWarnings({"unchecked", "deprecation", "all"})
 public final class AndroidResponseCacheAdapter {
 
-public AndroidResponseCacheAdapter(com.android.okhttp.internalandroidapi.HasCacheHolder.CacheHolder cacheHolder) { throw new RuntimeException("Stub!"); }
+/**
+ * Creates an instance from {@link com.android.okhttp.internalandroidapi.HasCacheHolder.CacheHolder CacheHolder}
+ *
+ * @hide
+ */
+
+public AndroidResponseCacheAdapter(@androidx.annotation.RecentlyNonNull com.android.okhttp.internalandroidapi.HasCacheHolder.CacheHolder cacheHolder) { throw new RuntimeException("Stub!"); }
 
 /**
  * Returns the {@link com.android.okhttp.internalandroidapi.HasCacheHolder.CacheHolder CacheHolder} associated with this instance and can be used by OkHttp
  * internal code to obtain the underlying OkHttp Cache object.
+ *
+ * @hide
  */
 
+@androidx.annotation.RecentlyNonNull
 public com.android.okhttp.internalandroidapi.HasCacheHolder.CacheHolder getCacheHolder() { throw new RuntimeException("Stub!"); }
 
 /**
  * Used to implement {@link java.net.ResponseCache#get(URI, String, Map)}. See that method for
  * details.
+ *
+ * @hide
  */
 
-public java.net.CacheResponse get(java.net.URI uri, java.lang.String requestMethod, java.util.Map<java.lang.String,java.util.List<java.lang.String>> requestHeaders) throws java.io.IOException { throw new RuntimeException("Stub!"); }
+@androidx.annotation.RecentlyNullable
+public java.net.CacheResponse get(@androidx.annotation.RecentlyNonNull java.net.URI uri, @androidx.annotation.RecentlyNonNull java.lang.String requestMethod, @androidx.annotation.RecentlyNullable java.util.Map<java.lang.String,java.util.List<java.lang.String>> requestHeaders) throws java.io.IOException { throw new RuntimeException("Stub!"); }
 
 /**
  * Used to implement {@link java.net.ResponseCache#put(URI, URLConnection)}. See that method for
  * details.
+ *
+ * @hide
  */
 
-public java.net.CacheRequest put(java.net.URI uri, java.net.URLConnection urlConnection) throws java.io.IOException { throw new RuntimeException("Stub!"); }
+@androidx.annotation.RecentlyNullable
+public java.net.CacheRequest put(@androidx.annotation.RecentlyNonNull java.net.URI uri, @androidx.annotation.RecentlyNonNull java.net.URLConnection urlConnection) throws java.io.IOException { throw new RuntimeException("Stub!"); }
 
 /**
  * Returns the number of bytes currently being used to store the values in
  * this cache. This may be greater than the {@link #getMaxSize()} if a background
  * deletion is pending. IOException is thrown if the size cannot be determined.
+ *
+ * @hide
  */
 
 public long getSize() throws java.io.IOException { throw new RuntimeException("Stub!"); }
@@ -71,6 +88,8 @@ public long getSize() throws java.io.IOException { throw new RuntimeException("S
 /**
  * Returns the maximum number of bytes that this cache should use to store
  * its data.
+ *
+ * @hide
  */
 
 public long getMaxSize() { throw new RuntimeException("Stub!"); }
@@ -79,6 +98,8 @@ public long getMaxSize() { throw new RuntimeException("Stub!"); }
  * Force buffered operations to the filesystem. This ensures that responses
  * written to the cache will be available the next time the cache is opened,
  * even if this process is killed. IOException is thrown if the flush fails.
+ *
+ * @hide
  */
 
 public void flush() throws java.io.IOException { throw new RuntimeException("Stub!"); }
@@ -86,6 +107,8 @@ public void flush() throws java.io.IOException { throw new RuntimeException("Stu
 /**
  * Returns the number of HTTP requests that required the network to either
  * supply a response or validate a locally cached response.
+ *
+ * @hide
  */
 
 public int getNetworkCount() { throw new RuntimeException("Stub!"); }
@@ -94,6 +117,8 @@ public int getNetworkCount() { throw new RuntimeException("Stub!"); }
  * Returns the number of HTTP requests whose response was provided by the
  * cache. This may include conditional {@code GET} requests that were
  * validated over the network.
+ *
+ * @hide
  */
 
 public int getHitCount() { throw new RuntimeException("Stub!"); }
@@ -102,11 +127,17 @@ public int getHitCount() { throw new RuntimeException("Stub!"); }
  * Returns the total number of HTTP requests that were made. This includes
  * both client requests and requests that were made on the client's behalf
  * to handle a redirects and retries.
+ *
+ * @hide
  */
 
 public int getRequestCount() { throw new RuntimeException("Stub!"); }
 
-/** Closes this cache. Stored values will remain on the filesystem. */
+/**
+ * Closes this cache. Stored values will remain on the filesystem.
+ *
+ * @hide
+ */
 
 public void close() throws java.io.IOException { throw new RuntimeException("Stub!"); }
 
@@ -114,6 +145,8 @@ public void close() throws java.io.IOException { throw new RuntimeException("Stu
  * Closes the cache and deletes all of its stored values. This will delete
  * all files in the cache directory including files that weren't created by
  * the cache.
+ *
+ * @hide
  */
 
 public void delete() throws java.io.IOException { throw new RuntimeException("Stub!"); }
