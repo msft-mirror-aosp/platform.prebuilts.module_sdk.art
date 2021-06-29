@@ -65,5 +65,7 @@ public final byte[] doFinal(byte[] input) throws java.lang.IllegalStateException
 public final void reset() { throw new RuntimeException("Stub!"); }
 
 public final java.lang.Object clone() throws java.lang.CloneNotSupportedException { throw new RuntimeException("Stub!"); }
+
+public javax.crypto.MacSpi getCurrentSpi() { throw new RuntimeException("Stub!"); }
 }
 

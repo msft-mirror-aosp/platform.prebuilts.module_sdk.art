@@ -28,11 +28,11 @@ public final class OsConstants {
 private OsConstants() { throw new RuntimeException("Stub!"); }
 
 /**
- * Returns the index of the element in the {@link android.system.StructUserCapData StructUserCapData} (cap_user_data)
+ * Returns the index of the element in the {@link android.system.StructCapUserData StructCapUserData} (cap_user_data)
  * array that this capability is stored in.
  *
  * @param x capability
- * @return index of the element in the {@link android.system.StructUserCapData StructUserCapData} array storing this capability
+ * @return index of the element in the {@link android.system.StructCapUserData StructCapUserData} array storing this capability
  *
  * @hide
  */
@@ -41,7 +41,7 @@ public static int CAP_TO_INDEX(int x) { throw new RuntimeException("Stub!"); }
 
 /**
  * Returns the mask for the given capability. This is relative to the capability's
- * {@link android.system.StructUserCapData StructUserCapData} (cap_user_data) element, the index of which can be
+ * {@link android.system.StructCapUserData StructCapUserData} (cap_user_data) element, the index of which can be
  * retrieved with {@link CAP_TO_INDEX}.
  *
  * @param x capability
@@ -1638,9 +1638,9 @@ public static final int X_OK;
 static { X_OK = 0; }
 
 /**
- * Version constant to be used in {@link android.system.StructUserCapHeader StructUserCapHeader} with
- * {@link android.system.Os#capset(android.system.StructUserCapHeader,android.system.StructUserCapData[]) Os#capset(StructUserCapHeader, StructUserCapData[])} and
- * {@link android.system.Os#capget(android.system.StructUserCapHeader) Os#capget(StructUserCapHeader)}.
+ * Version constant to be used in {@link android.system.StructCapUserHeader StructCapUserHeader} with
+ * {@link android.system.Os#capset(android.system.StructCapUserHeader,android.system.StructCapUserData[]) Os#capset(StructCapUserHeader, StructCapUserData[])} and
+ * {@link android.system.Os#capget(android.system.StructCapUserHeader) Os#capget(StructCapUserHeader)}.
  *
  * See <a href="https://man7.org/linux/man-pages/man2/capget.2.html">capget(2)</a>.
  *

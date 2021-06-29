@@ -29,6 +29,8 @@ package java.net;
 @SuppressWarnings({"unchecked", "deprecation", "all"})
 public class InetSocketAddress extends java.net.SocketAddress {
 
+public InetSocketAddress() { throw new RuntimeException("Stub!"); }
+
 public InetSocketAddress(int port) { throw new RuntimeException("Stub!"); }
 
 public InetSocketAddress(java.net.InetAddress addr, int port) { throw new RuntimeException("Stub!"); }
