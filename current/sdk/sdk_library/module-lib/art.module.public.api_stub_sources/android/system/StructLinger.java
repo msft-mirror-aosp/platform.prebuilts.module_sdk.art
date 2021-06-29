@@ -28,8 +28,5 @@ public java.lang.String toString() { throw new RuntimeException("Stub!"); }
 
 public final int l_linger;
 { l_linger = 0; }
-
-public final int l_onoff;
-{ l_onoff = 0; }
 }
 

@@ -106,6 +106,8 @@ public final void updateAAD(byte[] src, int offset, int len) { throw new Runtime
 
 public final void updateAAD(java.nio.ByteBuffer src) { throw new RuntimeException("Stub!"); }
 
+public javax.crypto.CipherSpi getCurrentSpi() { throw new RuntimeException("Stub!"); }
+
 public static final int DECRYPT_MODE = 2; // 0x2
 
 public static final int ENCRYPT_MODE = 1; // 0x1

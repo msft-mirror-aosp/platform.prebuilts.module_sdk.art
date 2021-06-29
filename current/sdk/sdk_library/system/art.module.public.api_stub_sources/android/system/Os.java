@@ -84,9 +84,6 @@ public static int getppid() { throw new RuntimeException("Stub!"); }
 
 public static java.net.SocketAddress getsockname(java.io.FileDescriptor fd) throws android.system.ErrnoException { throw new RuntimeException("Stub!"); }
 
-@android.annotation.Nullable
-public static android.system.StructLinger getsockoptLinger(@android.annotation.NonNull java.io.FileDescriptor fd, int level, int option) throws android.system.ErrnoException { throw new RuntimeException("Stub!"); }
-
 @android.annotation.NonNull
 public static android.system.StructTimeval getsockoptTimeval(@android.annotation.NonNull java.io.FileDescriptor fd, int level, int option) throws android.system.ErrnoException { throw new RuntimeException("Stub!"); }
 
@@ -199,8 +196,6 @@ public static void setgid(int gid) throws android.system.ErrnoException { throw 
 public static int setsid() throws android.system.ErrnoException { throw new RuntimeException("Stub!"); }
 
 public static void setsockoptInt(java.io.FileDescriptor fd, int level, int option, int value) throws android.system.ErrnoException { throw new RuntimeException("Stub!"); }
-
-public static void setsockoptLinger(@android.annotation.NonNull java.io.FileDescriptor fd, int level, int option, @android.annotation.NonNull android.system.StructLinger value) throws android.system.ErrnoException { throw new RuntimeException("Stub!"); }
 
 public static void setsockoptTimeval(@android.annotation.NonNull java.io.FileDescriptor fd, int level, int option, @android.annotation.NonNull android.system.StructTimeval value) throws android.system.ErrnoException { throw new RuntimeException("Stub!"); }
 

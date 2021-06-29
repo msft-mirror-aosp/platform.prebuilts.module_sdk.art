@@ -37,6 +37,8 @@ public ServerSocket(int port, int backlog) throws java.io.IOException { throw ne
 
 public ServerSocket(int port, int backlog, java.net.InetAddress bindAddr) throws java.io.IOException { throw new RuntimeException("Stub!"); }
 
+public java.net.SocketImpl getImpl() throws java.net.SocketException { throw new RuntimeException("Stub!"); }
+
 public void bind(java.net.SocketAddress endpoint) throws java.io.IOException { throw new RuntimeException("Stub!"); }
 
 public void bind(java.net.SocketAddress endpoint, int backlog) throws java.io.IOException { throw new RuntimeException("Stub!"); }

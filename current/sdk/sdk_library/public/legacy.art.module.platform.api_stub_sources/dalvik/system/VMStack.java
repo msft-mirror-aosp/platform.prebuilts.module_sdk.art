@@ -37,8 +37,11 @@ private VMStack() { throw new RuntimeException("Stub!"); }
  *      thread of interest
  * @return an array of annotated stack frames, or null if the thread
  *      doesn't have a stack trace (e.g. because it exited)
+ *
+ * @hide
  */
 
+@android.annotation.Nullable
 @dalvik.annotation.optimization.FastNative
 public static native dalvik.system.AnnotatedStackTraceElement[] getAnnotatedThreadStackTrace(java.lang.Thread t);
 }
