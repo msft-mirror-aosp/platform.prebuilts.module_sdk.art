@@ -1628,6 +1628,7 @@ cc_prebuilt_library_shared {
     visibility: [
         "//art:__subpackages__",
         "//prebuilts:__subpackages__",
+        "//system/unwinding/libunwindstack",
     ],
     apex_available: [
         "com.android.art",
@@ -1690,6 +1691,7 @@ art_prebuilt_cc_prebuilt_library_shared {
     visibility: [
         "//art:__subpackages__",
         "//prebuilts:__subpackages__",
+        "//system/unwinding/libunwindstack",
     ],
     apex_available: [
         "com.android.art",
@@ -1874,7 +1876,7 @@ cc_prebuilt_library_shared {
     ],
     stubs: {
         versions: [
-            "S",
+            "31",
             "current",
         ],
     },
@@ -1932,7 +1934,7 @@ art_prebuilt_cc_prebuilt_library_shared {
     ],
     stubs: {
         versions: [
-            "S",
+            "31",
             "current",
         ],
     },
