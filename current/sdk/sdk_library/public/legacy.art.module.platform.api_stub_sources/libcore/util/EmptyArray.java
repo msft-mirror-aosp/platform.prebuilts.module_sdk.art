@@ -18,32 +18,50 @@
 package libcore.util;
 
 
-/** @hide */
+/**
+ * Empty array is immutable. Use a shared empty array to avoid allocation.
+ *
+ * @hide
+ */
 
 @SuppressWarnings({"unchecked", "deprecation", "all"})
 public final class EmptyArray {
 
 private EmptyArray() { throw new RuntimeException("Stub!"); }
 
-public static final boolean[] BOOLEAN;
+/** @hide */
+
+@androidx.annotation.RecentlyNonNull public static final boolean[] BOOLEAN;
 static { BOOLEAN = new boolean[0]; }
 
-public static final byte[] BYTE;
+/** @hide */
+
+@androidx.annotation.RecentlyNonNull public static final byte[] BYTE;
 static { BYTE = new byte[0]; }
 
-public static final float[] FLOAT;
+/** @hide */
+
+@androidx.annotation.RecentlyNonNull public static final float[] FLOAT;
 static { FLOAT = new float[0]; }
 
-public static final int[] INT;
+/** @hide */
+
+@androidx.annotation.RecentlyNonNull public static final int[] INT;
 static { INT = new int[0]; }
 
-public static final long[] LONG;
+/** @hide */
+
+@androidx.annotation.RecentlyNonNull public static final long[] LONG;
 static { LONG = new long[0]; }
 
-public static final java.lang.Object[] OBJECT;
+/** @hide */
+
+@androidx.annotation.RecentlyNonNull public static final java.lang.Object[] OBJECT;
 static { OBJECT = new java.lang.Object[0]; }
 
-public static final java.lang.String[] STRING;
+/** @hide */
+
+@androidx.annotation.RecentlyNonNull public static final java.lang.String[] STRING;
 static { STRING = new java.lang.String[0]; }
 }
 

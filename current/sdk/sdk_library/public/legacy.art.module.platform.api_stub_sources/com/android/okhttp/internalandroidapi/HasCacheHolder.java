@@ -31,8 +31,11 @@ public interface HasCacheHolder {
 
 /**
  * Returns the {@link com.android.okhttp.internalandroidapi.HasCacheHolder.CacheHolder CacheHolder} object.
+ *
+ * @hide
  */
 
+@androidx.annotation.RecentlyNonNull
 public com.android.okhttp.internalandroidapi.HasCacheHolder.CacheHolder getCacheHolder();
 /**
  * A holder for an OkHttp internal Cache object. This class exists as an opaque layer over
@@ -50,16 +53,21 @@ private CacheHolder() { throw new RuntimeException("Stub!"); }
  *
  * @param directory a writable directory
  * @param maxSizeBytes the maximum number of bytes this cache should use to store
+ *
+ * @hide
  */
 
-public static com.android.okhttp.internalandroidapi.HasCacheHolder.CacheHolder create(java.io.File directory, long maxSizeBytes) { throw new RuntimeException("Stub!"); }
+@androidx.annotation.RecentlyNonNull
+public static com.android.okhttp.internalandroidapi.HasCacheHolder.CacheHolder create(@androidx.annotation.RecentlyNonNull java.io.File directory, long maxSizeBytes) { throw new RuntimeException("Stub!"); }
 
 /**
  * Returns true if the arguments supplied would result in an equivalent cache to this one
  * being created if they were passed to {@link #create(java.io.File,long)}.
+ *
+ * @hide
  */
 
-public boolean isEquivalent(java.io.File directory, long maxSizeBytes) { throw new RuntimeException("Stub!"); }
+public boolean isEquivalent(@androidx.annotation.RecentlyNonNull java.io.File directory, long maxSizeBytes) { throw new RuntimeException("Stub!"); }
 }
 
 }
