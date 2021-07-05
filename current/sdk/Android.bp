@@ -657,6 +657,30 @@ art_prebuilt_java_import {
     jars: ["java/core-current-stubs-for-system-modules.jar"],
 }
 
+java_import {
+    name: "art-module-sdk_core.module_lib.stubs@current",
+    sdk_member_name: "core.module_lib.stubs",
+    visibility: ["//visibility:private"],
+    apex_available: ["//apex_available:platform"],
+    licenses: ["art-module-sdk_libcore_license@current"],
+    jars: ["java/core.module_lib.stubs.jar"],
+}
+
+art_prebuilt_java_import {
+    name: "art-module-sdk_core.module_lib.stubs",
+    // Do not prefer prebuilt if SOONG_CONFIG_art_module_source_build is true.
+    prefer: true,
+    soong_config_variables: {
+        source_build: {
+            prefer: false,
+        },
+    },
+    visibility: ["//visibility:private"],
+    apex_available: ["//apex_available:platform"],
+    licenses: ["art-module-sdk_libcore_license"],
+    jars: ["java/core.module_lib.stubs.jar"],
+}
+
 java_sdk_library_import {
     name: "art-module-sdk_art.module.public.api@current",
     sdk_member_name: "art.module.public.api",
@@ -967,6 +991,36 @@ art_prebuilt_java_system_modules_import {
     visibility: ["//visibility:public"],
     licenses: ["art-module-sdk_libcore_license"],
     libs: ["art-module-sdk_core-current-stubs-for-system-modules"],
+}
+
+java_system_modules_import {
+    name: "art-module-sdk_core-module-lib-stubs-system-modules@current",
+    sdk_member_name: "core-module-lib-stubs-system-modules",
+    visibility: ["//visibility:public"],
+    licenses: ["art-module-sdk_libcore_license@current"],
+    libs: [
+        "art-module-sdk_core.module_lib.stubs@current",
+        "art-module-sdk_core-lambda-stubs-for-system-modules@current",
+        "art-module-sdk_core-generated-annotation-stubs@current",
+    ],
+}
+
+art_prebuilt_java_system_modules_import {
+    name: "core-module-lib-stubs-system-modules",
+    // Do not prefer prebuilt if SOONG_CONFIG_art_module_source_build is true.
+    prefer: true,
+    soong_config_variables: {
+        source_build: {
+            prefer: false,
+        },
+    },
+    visibility: ["//visibility:public"],
+    licenses: ["art-module-sdk_libcore_license"],
+    libs: [
+        "art-module-sdk_core.module_lib.stubs",
+        "art-module-sdk_core-lambda-stubs-for-system-modules",
+        "art-module-sdk_core-generated-annotation-stubs",
+    ],
 }
 
 java_system_modules_import {
@@ -2803,6 +2857,7 @@ sdk_snapshot {
                 "art-module-sdk_legacy-art-module-platform-api-stubs-system-modules@current",
                 "art-module-sdk_stable-art-module-platform-api-stubs-system-modules@current",
                 "art-module-sdk_core-current-stubs-system-modules@current",
+                "art-module-sdk_core-module-lib-stubs-system-modules@current",
                 "art-module-sdk_legacy-core-platform-api-stubs-system-modules@current",
                 "art-module-sdk_stable-core-platform-api-stubs-system-modules@current",
             ],
