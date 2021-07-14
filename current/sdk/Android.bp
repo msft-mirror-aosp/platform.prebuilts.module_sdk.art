@@ -47,7 +47,7 @@ prebuilt_bootclasspath_fragment {
         stub_libs: ["art-module-sdk_art.module.public.api@current"],
     },
     core_platform_api: {
-        stub_libs: ["art-module-sdk_legacy.art.module.platform.api@current"],
+        stub_libs: ["art-module-sdk_art.module.public.api.stubs.module_lib@current"],
     },
     hidden_api: {
         max_target_o_low_priority: ["hiddenapi/hiddenapi-max-target-o-low-priority.txt"],
@@ -93,7 +93,7 @@ art_prebuilt_prebuilt_bootclasspath_fragment {
         stub_libs: ["art.module.public.api"],
     },
     core_platform_api: {
-        stub_libs: ["legacy.art.module.platform.api"],
+        stub_libs: ["art.module.public.api.stubs.module_lib"],
     },
     hidden_api: {
         max_target_o_low_priority: ["hiddenapi/hiddenapi-max-target-o-low-priority.txt"],
@@ -394,88 +394,21 @@ art_prebuilt_java_import {
 }
 
 java_import {
-    name: "art-module-sdk_core.current.stubs@current",
-    sdk_member_name: "core.current.stubs",
-    visibility: ["//visibility:public"],
-    apex_available: ["//apex_available:platform"],
-    licenses: ["art-module-sdk_libcore_license@current"],
-    jars: ["java/core.current.stubs.jar"],
-}
-
-art_prebuilt_java_import {
-    name: "core.current.stubs",
-    // Do not prefer prebuilt if SOONG_CONFIG_art_module_source_build is true.
-    prefer: true,
-    soong_config_variables: {
-        source_build: {
-            prefer: false,
-        },
-    },
-    visibility: ["//visibility:public"],
-    apex_available: ["//apex_available:platform"],
-    licenses: ["art-module-sdk_libcore_license"],
-    jars: ["java/core.current.stubs.jar"],
-}
-
-java_import {
-    name: "art-module-sdk_legacy.core.platform.api.stubs@current",
-    sdk_member_name: "legacy.core.platform.api.stubs",
-    visibility: ["//visibility:public"],
-    apex_available: ["//apex_available:platform"],
-    licenses: ["art-module-sdk_libcore_license@current"],
-    jars: ["java/legacy.core.platform.api.stubs.jar"],
-}
-
-art_prebuilt_java_import {
-    name: "legacy.core.platform.api.stubs",
-    // Do not prefer prebuilt if SOONG_CONFIG_art_module_source_build is true.
-    prefer: true,
-    soong_config_variables: {
-        source_build: {
-            prefer: false,
-        },
-    },
-    visibility: ["//visibility:public"],
-    apex_available: ["//apex_available:platform"],
-    licenses: ["art-module-sdk_libcore_license"],
-    jars: ["java/legacy.core.platform.api.stubs.jar"],
-}
-
-java_import {
-    name: "art-module-sdk_stable.core.platform.api.stubs@current",
-    sdk_member_name: "stable.core.platform.api.stubs",
-    visibility: ["//visibility:public"],
-    apex_available: ["//apex_available:platform"],
-    licenses: ["art-module-sdk_libcore_license@current"],
-    jars: ["java/stable.core.platform.api.stubs.jar"],
-}
-
-art_prebuilt_java_import {
-    name: "stable.core.platform.api.stubs",
-    // Do not prefer prebuilt if SOONG_CONFIG_art_module_source_build is true.
-    prefer: true,
-    soong_config_variables: {
-        source_build: {
-            prefer: false,
-        },
-    },
-    visibility: ["//visibility:public"],
-    apex_available: ["//apex_available:platform"],
-    licenses: ["art-module-sdk_libcore_license"],
-    jars: ["java/stable.core.platform.api.stubs.jar"],
-}
-
-java_import {
     name: "art-module-sdk_core-lambda-stubs-for-system-modules@current",
     sdk_member_name: "core-lambda-stubs-for-system-modules",
-    visibility: ["//visibility:private"],
+    visibility: [
+        "//art/build/sdk",
+        "//build/soong/java/core-libraries",
+        "//libcore",
+        "//prebuilts:__subpackages__",
+    ],
     apex_available: ["//apex_available:platform"],
     licenses: ["art-module-sdk_libcore_license@current"],
     jars: ["java/core-lambda-stubs-for-system-modules.jar"],
 }
 
 art_prebuilt_java_import {
-    name: "art-module-sdk_core-lambda-stubs-for-system-modules",
+    name: "core-lambda-stubs-for-system-modules",
     // Do not prefer prebuilt if SOONG_CONFIG_art_module_source_build is true.
     prefer: true,
     soong_config_variables: {
@@ -483,7 +416,12 @@ art_prebuilt_java_import {
             prefer: false,
         },
     },
-    visibility: ["//visibility:private"],
+    visibility: [
+        "//art/build/sdk",
+        "//build/soong/java/core-libraries",
+        "//libcore",
+        "//prebuilts:__subpackages__",
+    ],
     apex_available: ["//apex_available:platform"],
     licenses: ["art-module-sdk_libcore_license"],
     jars: ["java/core-lambda-stubs-for-system-modules.jar"],
@@ -492,14 +430,19 @@ art_prebuilt_java_import {
 java_import {
     name: "art-module-sdk_core-generated-annotation-stubs@current",
     sdk_member_name: "core-generated-annotation-stubs",
-    visibility: ["//visibility:private"],
+    visibility: [
+        "//art/build/sdk",
+        "//build/soong/java/core-libraries",
+        "//libcore",
+        "//prebuilts:__subpackages__",
+    ],
     apex_available: ["//apex_available:platform"],
     licenses: ["art-module-sdk_libcore_license@current"],
     jars: ["java/core-generated-annotation-stubs.jar"],
 }
 
 art_prebuilt_java_import {
-    name: "art-module-sdk_core-generated-annotation-stubs",
+    name: "core-generated-annotation-stubs",
     // Do not prefer prebuilt if SOONG_CONFIG_art_module_source_build is true.
     prefer: true,
     soong_config_variables: {
@@ -507,7 +450,12 @@ art_prebuilt_java_import {
             prefer: false,
         },
     },
-    visibility: ["//visibility:private"],
+    visibility: [
+        "//art/build/sdk",
+        "//build/soong/java/core-libraries",
+        "//libcore",
+        "//prebuilts:__subpackages__",
+    ],
     apex_available: ["//apex_available:platform"],
     licenses: ["art-module-sdk_libcore_license"],
     jars: ["java/core-generated-annotation-stubs.jar"],
@@ -609,59 +557,12 @@ art_prebuilt_java_import {
     jars: ["java/art-module-intra-core-api-stubs-system-modules-lib.jar"],
 }
 
-java_import {
-    name: "art-module-sdk_stable.art.module.platform.api.stubs@current",
-    sdk_member_name: "stable.art.module.platform.api.stubs",
-    visibility: ["//visibility:private"],
-    apex_available: ["//apex_available:platform"],
-    licenses: ["art-module-sdk_libcore_license@current"],
-    jars: ["java/stable.art.module.platform.api.stubs.jar"],
-}
-
-art_prebuilt_java_import {
-    name: "art-module-sdk_stable.art.module.platform.api.stubs",
-    // Do not prefer prebuilt if SOONG_CONFIG_art_module_source_build is true.
-    prefer: true,
-    soong_config_variables: {
-        source_build: {
-            prefer: false,
-        },
-    },
-    visibility: ["//visibility:private"],
-    apex_available: ["//apex_available:platform"],
-    licenses: ["art-module-sdk_libcore_license"],
-    jars: ["java/stable.art.module.platform.api.stubs.jar"],
-}
-
-java_import {
-    name: "art-module-sdk_core-current-stubs-for-system-modules@current",
-    sdk_member_name: "core-current-stubs-for-system-modules",
-    visibility: ["//visibility:private"],
-    apex_available: ["//apex_available:platform"],
-    licenses: ["art-module-sdk_libcore_license@current"],
-    jars: ["java/core-current-stubs-for-system-modules.jar"],
-}
-
-art_prebuilt_java_import {
-    name: "art-module-sdk_core-current-stubs-for-system-modules",
-    // Do not prefer prebuilt if SOONG_CONFIG_art_module_source_build is true.
-    prefer: true,
-    soong_config_variables: {
-        source_build: {
-            prefer: false,
-        },
-    },
-    visibility: ["//visibility:private"],
-    apex_available: ["//apex_available:platform"],
-    licenses: ["art-module-sdk_libcore_license"],
-    jars: ["java/core-current-stubs-for-system-modules.jar"],
-}
-
 java_sdk_library_import {
     name: "art-module-sdk_art.module.public.api@current",
     sdk_member_name: "art.module.public.api",
     visibility: [
         "//art/build/sdk",
+        "//build/soong/java/core-libraries",
         "//frameworks/base",
         "//frameworks/base/api",
         "//libcore",
@@ -706,6 +607,7 @@ art_prebuilt_java_sdk_library_import {
     },
     visibility: [
         "//art/build/sdk",
+        "//build/soong/java/core-libraries",
         "//frameworks/base",
         "//frameworks/base/api",
         "//libcore",
@@ -735,52 +637,6 @@ art_prebuilt_java_sdk_library_import {
         stub_srcs: ["sdk_library/module-lib/art.module.public.api_stub_sources"],
         current_api: "sdk_library/module-lib/art.module.public.api.txt",
         removed_api: "sdk_library/module-lib/art.module.public.api-removed.txt",
-        sdk_version: "none",
-    },
-}
-
-java_sdk_library_import {
-    name: "art-module-sdk_legacy.art.module.platform.api@current",
-    sdk_member_name: "legacy.art.module.platform.api",
-    visibility: [
-        "//libcore/mmodules/core_platform_api",
-        "//prebuilts:__subpackages__",
-    ],
-    apex_available: ["//apex_available:platform"],
-    licenses: ["art-module-sdk_libcore_license@current"],
-    shared_library: false,
-    compile_dex: true,
-    public: {
-        jars: ["sdk_library/public/legacy.art.module.platform.api-stubs.jar"],
-        stub_srcs: ["sdk_library/public/legacy.art.module.platform.api_stub_sources"],
-        current_api: "sdk_library/public/legacy.art.module.platform.api.txt",
-        removed_api: "sdk_library/public/legacy.art.module.platform.api-removed.txt",
-        sdk_version: "none",
-    },
-}
-
-art_prebuilt_java_sdk_library_import {
-    name: "legacy.art.module.platform.api",
-    // Do not prefer prebuilt if SOONG_CONFIG_art_module_source_build is true.
-    prefer: true,
-    soong_config_variables: {
-        source_build: {
-            prefer: false,
-        },
-    },
-    visibility: [
-        "//libcore/mmodules/core_platform_api",
-        "//prebuilts:__subpackages__",
-    ],
-    apex_available: ["//apex_available:platform"],
-    licenses: ["art-module-sdk_libcore_license"],
-    shared_library: false,
-    compile_dex: true,
-    public: {
-        jars: ["sdk_library/public/legacy.art.module.platform.api-stubs.jar"],
-        stub_srcs: ["sdk_library/public/legacy.art.module.platform.api_stub_sources"],
-        current_api: "sdk_library/public/legacy.art.module.platform.api.txt",
-        removed_api: "sdk_library/public/legacy.art.module.platform.api-removed.txt",
         sdk_version: "none",
     },
 }
@@ -826,11 +682,45 @@ art_prebuilt_java_system_modules_import {
     licenses: ["art-module-sdk_libcore_license"],
     libs: [
         "art.module.public.api.stubs",
-        "art-module-sdk_core-lambda-stubs-for-system-modules",
-        "art-module-sdk_core-generated-annotation-stubs",
+        "core-lambda-stubs-for-system-modules",
+        "core-generated-annotation-stubs",
         "art-module-sdk_art.module.api.annotations.for.system.modules",
         "art-module-sdk_stub-annotations",
     ],
+}
+
+java_system_modules_import {
+    name: "art-module-sdk_art-module-lib-api-stubs-system-modules@current",
+    sdk_member_name: "art-module-lib-api-stubs-system-modules",
+    visibility: [
+        "//art/build/sdk",
+        "//external/conscrypt",
+        "//external/icu/android_icu4j",
+        "//libcore",
+        "//prebuilts:__subpackages__",
+    ],
+    licenses: ["art-module-sdk_libcore_license@current"],
+    libs: ["art-module-sdk_art.module.public.api.stubs.module_lib@current"],
+}
+
+art_prebuilt_java_system_modules_import {
+    name: "art-module-lib-api-stubs-system-modules",
+    // Do not prefer prebuilt if SOONG_CONFIG_art_module_source_build is true.
+    prefer: true,
+    soong_config_variables: {
+        source_build: {
+            prefer: false,
+        },
+    },
+    visibility: [
+        "//art/build/sdk",
+        "//external/conscrypt",
+        "//external/icu/android_icu4j",
+        "//libcore",
+        "//prebuilts:__subpackages__",
+    ],
+    licenses: ["art-module-sdk_libcore_license"],
+    libs: ["art.module.public.api.stubs.module_lib"],
 }
 
 java_system_modules_import {
@@ -872,160 +762,6 @@ art_prebuilt_java_system_modules_import {
     libs: [
         "art-module-sdk_art.module.intra.core.api.stubs",
         "art-module-sdk_art-module-intra-core-api-stubs-system-modules-lib",
-    ],
-}
-
-java_system_modules_import {
-    name: "art-module-sdk_legacy-art-module-platform-api-stubs-system-modules@current",
-    sdk_member_name: "legacy-art-module-platform-api-stubs-system-modules",
-    visibility: [
-        "//art/build/sdk",
-        "//external/conscrypt",
-        "//external/icu/android_icu4j",
-        "//external/wycheproof",
-        "//libcore/mmodules/core_platform_api",
-        "//prebuilts:__subpackages__",
-    ],
-    licenses: ["art-module-sdk_libcore_license@current"],
-    libs: ["art-module-sdk_legacy.art.module.platform.api.stubs@current"],
-}
-
-art_prebuilt_java_system_modules_import {
-    name: "legacy-art-module-platform-api-stubs-system-modules",
-    // Do not prefer prebuilt if SOONG_CONFIG_art_module_source_build is true.
-    prefer: true,
-    soong_config_variables: {
-        source_build: {
-            prefer: false,
-        },
-    },
-    visibility: [
-        "//art/build/sdk",
-        "//external/conscrypt",
-        "//external/icu/android_icu4j",
-        "//external/wycheproof",
-        "//libcore/mmodules/core_platform_api",
-        "//prebuilts:__subpackages__",
-    ],
-    licenses: ["art-module-sdk_libcore_license"],
-    libs: ["legacy.art.module.platform.api.stubs"],
-}
-
-java_system_modules_import {
-    name: "art-module-sdk_stable-art-module-platform-api-stubs-system-modules@current",
-    sdk_member_name: "stable-art-module-platform-api-stubs-system-modules",
-    visibility: [
-        "//art/build/sdk",
-        "//external/conscrypt",
-        "//external/icu/android_icu4j",
-        "//external/wycheproof",
-        "//libcore/mmodules/core_platform_api",
-        "//prebuilts:__subpackages__",
-    ],
-    licenses: ["art-module-sdk_libcore_license@current"],
-    libs: ["art-module-sdk_stable.art.module.platform.api.stubs@current"],
-}
-
-art_prebuilt_java_system_modules_import {
-    name: "stable-art-module-platform-api-stubs-system-modules",
-    // Do not prefer prebuilt if SOONG_CONFIG_art_module_source_build is true.
-    prefer: true,
-    soong_config_variables: {
-        source_build: {
-            prefer: false,
-        },
-    },
-    visibility: [
-        "//art/build/sdk",
-        "//external/conscrypt",
-        "//external/icu/android_icu4j",
-        "//external/wycheproof",
-        "//libcore/mmodules/core_platform_api",
-        "//prebuilts:__subpackages__",
-    ],
-    licenses: ["art-module-sdk_libcore_license"],
-    libs: ["art-module-sdk_stable.art.module.platform.api.stubs"],
-}
-
-java_system_modules_import {
-    name: "art-module-sdk_core-current-stubs-system-modules@current",
-    sdk_member_name: "core-current-stubs-system-modules",
-    visibility: ["//visibility:public"],
-    licenses: ["art-module-sdk_libcore_license@current"],
-    libs: ["art-module-sdk_core-current-stubs-for-system-modules@current"],
-}
-
-art_prebuilt_java_system_modules_import {
-    name: "core-current-stubs-system-modules",
-    // Do not prefer prebuilt if SOONG_CONFIG_art_module_source_build is true.
-    prefer: true,
-    soong_config_variables: {
-        source_build: {
-            prefer: false,
-        },
-    },
-    visibility: ["//visibility:public"],
-    licenses: ["art-module-sdk_libcore_license"],
-    libs: ["art-module-sdk_core-current-stubs-for-system-modules"],
-}
-
-java_system_modules_import {
-    name: "art-module-sdk_legacy-core-platform-api-stubs-system-modules@current",
-    sdk_member_name: "legacy-core-platform-api-stubs-system-modules",
-    visibility: ["//visibility:public"],
-    licenses: ["art-module-sdk_libcore_license@current"],
-    libs: [
-        "art-module-sdk_legacy.core.platform.api.stubs@current",
-        "art-module-sdk_core-lambda-stubs-for-system-modules@current",
-        "art-module-sdk_core-generated-annotation-stubs@current",
-    ],
-}
-
-art_prebuilt_java_system_modules_import {
-    name: "legacy-core-platform-api-stubs-system-modules",
-    // Do not prefer prebuilt if SOONG_CONFIG_art_module_source_build is true.
-    prefer: true,
-    soong_config_variables: {
-        source_build: {
-            prefer: false,
-        },
-    },
-    visibility: ["//visibility:public"],
-    licenses: ["art-module-sdk_libcore_license"],
-    libs: [
-        "legacy.core.platform.api.stubs",
-        "art-module-sdk_core-lambda-stubs-for-system-modules",
-        "art-module-sdk_core-generated-annotation-stubs",
-    ],
-}
-
-java_system_modules_import {
-    name: "art-module-sdk_stable-core-platform-api-stubs-system-modules@current",
-    sdk_member_name: "stable-core-platform-api-stubs-system-modules",
-    visibility: ["//visibility:public"],
-    licenses: ["art-module-sdk_libcore_license@current"],
-    libs: [
-        "art-module-sdk_stable.core.platform.api.stubs@current",
-        "art-module-sdk_core-lambda-stubs-for-system-modules@current",
-        "art-module-sdk_core-generated-annotation-stubs@current",
-    ],
-}
-
-art_prebuilt_java_system_modules_import {
-    name: "stable-core-platform-api-stubs-system-modules",
-    // Do not prefer prebuilt if SOONG_CONFIG_art_module_source_build is true.
-    prefer: true,
-    soong_config_variables: {
-        source_build: {
-            prefer: false,
-        },
-    },
-    visibility: ["//visibility:public"],
-    licenses: ["art-module-sdk_libcore_license"],
-    libs: [
-        "stable.core.platform.api.stubs",
-        "art-module-sdk_core-lambda-stubs-for-system-modules",
-        "art-module-sdk_core-generated-annotation-stubs",
     ],
 }
 
@@ -2791,22 +2527,14 @@ sdk_snapshot {
             ],
             java_header_libs: [
                 "art-module-sdk_core-lambda-stubs@current",
-                "art-module-sdk_core.current.stubs@current",
-                "art-module-sdk_legacy.core.platform.api.stubs@current",
-                "art-module-sdk_stable.core.platform.api.stubs@current",
+                "art-module-sdk_core-lambda-stubs-for-system-modules@current",
+                "art-module-sdk_core-generated-annotation-stubs@current",
             ],
-            java_sdk_libs: [
-                "art-module-sdk_art.module.public.api@current",
-                "art-module-sdk_legacy.art.module.platform.api@current",
-            ],
+            java_sdk_libs: ["art-module-sdk_art.module.public.api@current"],
             java_system_modules: [
                 "art-module-sdk_art-module-public-api-stubs-system-modules@current",
+                "art-module-sdk_art-module-lib-api-stubs-system-modules@current",
                 "art-module-sdk_art-module-intra-core-api-stubs-system-modules@current",
-                "art-module-sdk_legacy-art-module-platform-api-stubs-system-modules@current",
-                "art-module-sdk_stable-art-module-platform-api-stubs-system-modules@current",
-                "art-module-sdk_core-current-stubs-system-modules@current",
-                "art-module-sdk_legacy-core-platform-api-stubs-system-modules@current",
-                "art-module-sdk_stable-core-platform-api-stubs-system-modules@current",
             ],
             native_header_libs: [
                 "art-module-sdk_jni_headers@current",
