@@ -32,7 +32,7 @@ prebuilt_bootclasspath_fragment {
         stub_libs: ["art-module-sdk_art.module.public.api@1"],
     },
     core_platform_api: {
-        stub_libs: ["art-module-sdk_legacy.art.module.platform.api@1"],
+        stub_libs: ["art-module-sdk_art.module.public.api.stubs.module_lib@1"],
     },
     hidden_api: {
         max_target_o_low_priority: ["hiddenapi/hiddenapi-max-target-o-low-priority.txt"],
@@ -196,15 +196,6 @@ java_import {
 }
 
 java_import {
-    name: "art-module-sdk_art.module.public.api.stubs@1",
-    sdk_member_name: "art.module.public.api.stubs",
-    visibility: ["//visibility:private"],
-    apex_available: ["//apex_available:platform"],
-    licenses: ["art-module-sdk_libcore_license@1"],
-    jars: ["java/art.module.public.api.stubs.jar"],
-}
-
-java_import {
     name: "art-module-sdk_core-lambda-stubs-for-system-modules@1",
     sdk_member_name: "core-lambda-stubs-for-system-modules",
     visibility: ["//visibility:private"],
@@ -259,30 +250,21 @@ java_import {
 }
 
 java_import {
-    name: "art-module-sdk_legacy.art.module.platform.api.stubs@1",
-    sdk_member_name: "legacy.art.module.platform.api.stubs",
-    visibility: ["//visibility:private"],
-    apex_available: ["//apex_available:platform"],
-    licenses: ["art-module-sdk_libcore_license@1"],
-    jars: ["java/legacy.art.module.platform.api.stubs.jar"],
-}
-
-java_import {
-    name: "art-module-sdk_stable.art.module.platform.api.stubs@1",
-    sdk_member_name: "stable.art.module.platform.api.stubs",
-    visibility: ["//visibility:private"],
-    apex_available: ["//apex_available:platform"],
-    licenses: ["art-module-sdk_libcore_license@1"],
-    jars: ["java/stable.art.module.platform.api.stubs.jar"],
-}
-
-java_import {
     name: "art-module-sdk_core-current-stubs-for-system-modules@1",
     sdk_member_name: "core-current-stubs-for-system-modules",
     visibility: ["//visibility:private"],
     apex_available: ["//apex_available:platform"],
     licenses: ["art-module-sdk_libcore_license@1"],
     jars: ["java/core-current-stubs-for-system-modules.jar"],
+}
+
+java_import {
+    name: "art-module-sdk_core.module_lib.stubs@1",
+    sdk_member_name: "core.module_lib.stubs",
+    visibility: ["//visibility:private"],
+    apex_available: ["//apex_available:platform"],
+    licenses: ["art-module-sdk_libcore_license@1"],
+    jars: ["java/core.module_lib.stubs.jar"],
 }
 
 java_sdk_library_import {
@@ -293,6 +275,7 @@ java_sdk_library_import {
         "//frameworks/base",
         "//frameworks/base/api",
         "//libcore",
+        "//libcore/mmodules/core_platform_api",
         "//prebuilts:__subpackages__",
     ],
     apex_available: ["//apex_available:platform"],
@@ -323,26 +306,6 @@ java_sdk_library_import {
     },
 }
 
-java_sdk_library_import {
-    name: "art-module-sdk_legacy.art.module.platform.api@1",
-    sdk_member_name: "legacy.art.module.platform.api",
-    visibility: [
-        "//libcore/mmodules/core_platform_api",
-        "//prebuilts:__subpackages__",
-    ],
-    apex_available: ["//apex_available:platform"],
-    licenses: ["art-module-sdk_libcore_license@1"],
-    shared_library: false,
-    compile_dex: true,
-    public: {
-        jars: ["sdk_library/public/legacy.art.module.platform.api-stubs.jar"],
-        stub_srcs: ["sdk_library/public/legacy.art.module.platform.api.srcjar"],
-        current_api: "sdk_library/public/legacy.art.module.platform.api.txt",
-        removed_api: "sdk_library/public/legacy.art.module.platform.api-removed.txt",
-        sdk_version: "none",
-    },
-}
-
 java_system_modules_import {
     name: "art-module-sdk_art-module-public-api-stubs-system-modules@1",
     sdk_member_name: "art-module-public-api-stubs-system-modules",
@@ -365,6 +328,20 @@ java_system_modules_import {
 }
 
 java_system_modules_import {
+    name: "art-module-sdk_art-module-lib-api-stubs-system-modules@1",
+    sdk_member_name: "art-module-lib-api-stubs-system-modules",
+    visibility: [
+        "//art/build/sdk",
+        "//external/conscrypt",
+        "//external/icu/android_icu4j",
+        "//libcore",
+        "//prebuilts:__subpackages__",
+    ],
+    licenses: ["art-module-sdk_libcore_license@1"],
+    libs: ["art-module-sdk_art.module.public.api.stubs.module_lib@1"],
+}
+
+java_system_modules_import {
     name: "art-module-sdk_art-module-intra-core-api-stubs-system-modules@1",
     sdk_member_name: "art-module-intra-core-api-stubs-system-modules",
     visibility: [
@@ -383,41 +360,23 @@ java_system_modules_import {
 }
 
 java_system_modules_import {
-    name: "art-module-sdk_legacy-art-module-platform-api-stubs-system-modules@1",
-    sdk_member_name: "legacy-art-module-platform-api-stubs-system-modules",
-    visibility: [
-        "//art/build/sdk",
-        "//external/conscrypt",
-        "//external/icu/android_icu4j",
-        "//external/wycheproof",
-        "//libcore/mmodules/core_platform_api",
-        "//prebuilts:__subpackages__",
-    ],
-    licenses: ["art-module-sdk_libcore_license@1"],
-    libs: ["art-module-sdk_legacy.art.module.platform.api.stubs@1"],
-}
-
-java_system_modules_import {
-    name: "art-module-sdk_stable-art-module-platform-api-stubs-system-modules@1",
-    sdk_member_name: "stable-art-module-platform-api-stubs-system-modules",
-    visibility: [
-        "//art/build/sdk",
-        "//external/conscrypt",
-        "//external/icu/android_icu4j",
-        "//external/wycheproof",
-        "//libcore/mmodules/core_platform_api",
-        "//prebuilts:__subpackages__",
-    ],
-    licenses: ["art-module-sdk_libcore_license@1"],
-    libs: ["art-module-sdk_stable.art.module.platform.api.stubs@1"],
-}
-
-java_system_modules_import {
     name: "art-module-sdk_core-current-stubs-system-modules@1",
     sdk_member_name: "core-current-stubs-system-modules",
     visibility: ["//visibility:public"],
     licenses: ["art-module-sdk_libcore_license@1"],
     libs: ["art-module-sdk_core-current-stubs-for-system-modules@1"],
+}
+
+java_system_modules_import {
+    name: "art-module-sdk_core-module-lib-stubs-system-modules@1",
+    sdk_member_name: "core-module-lib-stubs-system-modules",
+    visibility: ["//visibility:public"],
+    licenses: ["art-module-sdk_libcore_license@1"],
+    libs: [
+        "art-module-sdk_core.module_lib.stubs@1",
+        "art-module-sdk_core-lambda-stubs-for-system-modules@1",
+        "art-module-sdk_core-generated-annotation-stubs@1",
+    ],
 }
 
 java_system_modules_import {
@@ -859,7 +818,7 @@ cc_prebuilt_library_shared {
     ],
     stubs: {
         versions: [
-            "S",
+            "31",
             "current",
         ],
     },
@@ -1298,16 +1257,13 @@ sdk_snapshot {
                 "art-module-sdk_legacy.core.platform.api.stubs@1",
                 "art-module-sdk_stable.core.platform.api.stubs@1",
             ],
-            java_sdk_libs: [
-                "art-module-sdk_art.module.public.api@1",
-                "art-module-sdk_legacy.art.module.platform.api@1",
-            ],
+            java_sdk_libs: ["art-module-sdk_art.module.public.api@1"],
             java_system_modules: [
                 "art-module-sdk_art-module-public-api-stubs-system-modules@1",
+                "art-module-sdk_art-module-lib-api-stubs-system-modules@1",
                 "art-module-sdk_art-module-intra-core-api-stubs-system-modules@1",
-                "art-module-sdk_legacy-art-module-platform-api-stubs-system-modules@1",
-                "art-module-sdk_stable-art-module-platform-api-stubs-system-modules@1",
                 "art-module-sdk_core-current-stubs-system-modules@1",
+                "art-module-sdk_core-module-lib-stubs-system-modules@1",
                 "art-module-sdk_legacy-core-platform-api-stubs-system-modules@1",
                 "art-module-sdk_stable-core-platform-api-stubs-system-modules@1",
             ],
