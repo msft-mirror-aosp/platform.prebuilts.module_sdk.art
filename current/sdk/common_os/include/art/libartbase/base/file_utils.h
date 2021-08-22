@@ -28,12 +28,12 @@
 
 namespace art {
 
-static constexpr const char* kAndroidArtApexDefaultPath = "/apex/com.android.art";
-static constexpr const char* kArtApexDataDefaultPath = "/data/misc/apexdata/com.android.art";
-static constexpr const char* kAndroidConscryptApexDefaultPath = "/apex/com.android.conscrypt";
-static constexpr const char* kAndroidI18nApexDefaultPath = "/apex/com.android.i18n";
+static constexpr const char kAndroidArtApexDefaultPath[] = "/apex/com.android.art";
+static constexpr const char kArtApexDataDefaultPath[] = "/data/misc/apexdata/com.android.art";
+static constexpr const char kAndroidConscryptApexDefaultPath[] = "/apex/com.android.conscrypt";
+static constexpr const char kAndroidI18nApexDefaultPath[] = "/apex/com.android.i18n";
 
-static constexpr const char* kArtImageExtension = "art";
+static constexpr const char kArtImageExtension[] = "art";
 
 // These methods return the Android Root, which is the historical location of
 // the Android "system" directory, containing the built Android artifacts. On
@@ -74,7 +74,8 @@ std::string GetArtApexData();
 std::string GetDefaultBootImageLocation(std::string* error_msg);
 
 // Returns the default boot image location, based on the passed `android_root`.
-std::string GetDefaultBootImageLocation(const std::string& android_root);
+std::string GetDefaultBootImageLocation(const std::string& android_root,
+                                        bool deny_art_apex_data_files);
 
 // Return true if we found the dalvik cache and stored it in the dalvik_cache argument.
 // `have_android_data` will be set to true if we have an ANDROID_DATA that exists,
@@ -138,7 +139,7 @@ bool LocationIsOnConscryptModule(std::string_view location);
 bool LocationIsOnI18nModule(std::string_view location);
 
 // Return whether the location is on system (i.e. android root).
-bool LocationIsOnSystem(const char* location);
+bool LocationIsOnSystem(const std::string& location);
 
 // Return whether the location is on system/framework (i.e. $ANDROID_ROOT/framework).
 bool LocationIsOnSystemFramework(std::string_view location);
@@ -148,6 +149,11 @@ bool LocationIsOnSystemExtFramework(std::string_view location);
 
 // Return whether the location is on /apex/.
 bool LocationIsOnApex(std::string_view location);
+
+// Returns whether the location is trusted for loading oat files. Trusted locations are protected
+// by dm-verity or fs-verity. The recognized locations are on /system or
+// /data/misc/apexdata/com.android.art.
+bool LocationIsTrusted(const std::string& location, bool trust_art_apex_data_files);
 
 // Compare the ART module root against android root. Returns true if they are
 // both known and distinct. This is meant to be a proxy for 'running with apex'.

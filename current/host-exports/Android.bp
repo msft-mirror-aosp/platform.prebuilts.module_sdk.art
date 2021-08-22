@@ -1,17 +1,6 @@
 // This is auto-generated. DO NOT EDIT.
 
 // Soong config variable stanza added by packages/modules/ArtPrebuilt/update-art-module-prebuilts.py.
-package {
-    // See: http://go/android-license-faq
-    // A large-scale-change added 'default_applicable_licenses' to import
-    // all of the 'license_kinds' from "prebuilts_module_sdk_art_license"
-    // to get the below license kinds:
-    //   SPDX-license-identifier-Apache-2.0
-    //   SPDX-license-identifier-MIT
-    //   legacy_unencumbered
-    default_applicable_licenses: ["prebuilts_module_sdk_art_license"],
-}
-
 soong_config_module_type_import {
     from: "prebuilts/module_sdk/art/SoongConfig.bp",
     module_types: [
@@ -19,6 +8,12 @@ soong_config_module_type_import {
         "art_prebuilt_cc_prebuilt_library",
         "art_prebuilt_java_import",
     ],
+}
+
+package {
+    // A default list here prevents the license LSC from adding its own list which would
+    // be unnecessary as every module in the sdk already has its own licenses property.
+    default_applicable_licenses: ["Android-Apache-2.0"],
 }
 
 java_import {
@@ -32,6 +27,7 @@ java_import {
         "//prebuilts:__subpackages__",
     ],
     apex_available: ["//apex_available:platform"],
+    licenses: ["art-module-host-exports_libcore_license@current"],
     device_supported: false,
     host_supported: true,
     jars: ["java/art.module.api.annotations.jar"],
@@ -54,6 +50,7 @@ art_prebuilt_java_import {
         "//prebuilts:__subpackages__",
     ],
     apex_available: ["//apex_available:platform"],
+    licenses: ["art-module-host-exports_libcore_license"],
     device_supported: false,
     host_supported: true,
     jars: ["java/art.module.api.annotations.jar"],
@@ -69,6 +66,7 @@ java_import {
         "//prebuilts:__subpackages__",
     ],
     apex_available: ["//apex_available:platform"],
+    licenses: ["art-module-host-exports_external_okhttp_license@current"],
     device_supported: false,
     host_supported: true,
     jars: ["java/okhttp-norepackage.jar"],
@@ -90,62 +88,91 @@ art_prebuilt_java_import {
         "//prebuilts:__subpackages__",
     ],
     apex_available: ["//apex_available:platform"],
+    licenses: ["art-module-host-exports_external_okhttp_license"],
     device_supported: false,
     host_supported: true,
     jars: ["java/okhttp-norepackage.jar"],
 }
 
-cc_prebuilt_binary {
-    name: "art-module-host-exports_hiddenapi@current",
-    sdk_member_name: "hiddenapi",
-    visibility: [
-        "//art:__subpackages__",
-        "//prebuilts:__subpackages__",
+license {
+    name: "art-module-host-exports_art_license@current",
+    sdk_member_name: "art_license",
+    visibility: ["//visibility:private"],
+    license_kinds: [
+        "SPDX-license-identifier-Apache-2.0",
+        "SPDX-license-identifier-BSD",
+        "SPDX-license-identifier-GPL-2.0",
     ],
-    apex_available: ["//apex_available:platform"],
-    device_supported: false,
-    host_supported: true,
-    installable: false,
-    stl: "c++_static",
-    compile_multilib: "64",
-    target: {
-        host: {
-            enabled: false,
-        },
-        linux_glibc_x86_64: {
-            enabled: true,
-            srcs: ["x86_64/bin/hiddenapi"],
-        },
-    },
+    license_text: ["licenses/art/NOTICE"],
 }
 
-art_prebuilt_cc_prebuilt_binary {
-    name: "hiddenapi",
-    // Do not prefer prebuilt if SOONG_CONFIG_art_module_source_build is true.
-    prefer: true,
-    soong_config_variables: {
-        source_build: {
-            prefer: false,
-        },
-    },
-    visibility: [
-        "//art:__subpackages__",
-        "//prebuilts:__subpackages__",
+license {
+    name: "art-module-host-exports_art_license",
+    visibility: ["//visibility:private"],
+    license_kinds: [
+        "SPDX-license-identifier-Apache-2.0",
+        "SPDX-license-identifier-BSD",
+        "SPDX-license-identifier-GPL-2.0",
     ],
-    apex_available: ["//apex_available:platform"],
-    device_supported: false,
-    host_supported: true,
-    stl: "c++_static",
-    compile_multilib: "64",
-    target: {
-        host: {
-            enabled: false,
-        },
-        linux_glibc_x86_64: {
-            enabled: true,
-            srcs: ["x86_64/bin/hiddenapi"],
-        },
-    },
+    license_text: ["licenses/art/NOTICE"],
+}
+
+license {
+    name: "art-module-host-exports_libcore_license@current",
+    sdk_member_name: "libcore_license",
+    visibility: ["//visibility:private"],
+    license_kinds: [
+        "SPDX-license-identifier-Apache-2.0",
+        "SPDX-license-identifier-BSD",
+        "SPDX-license-identifier-GPL",
+        "SPDX-license-identifier-GPL-2.0",
+        "SPDX-license-identifier-LGPL",
+        "SPDX-license-identifier-MIT",
+        "SPDX-license-identifier-OpenSSL",
+        "SPDX-license-identifier-Unicode-DFS",
+        "SPDX-license-identifier-W3C",
+        "legacy_unencumbered",
+    ],
+    license_text: [
+        "licenses/libcore/LICENSE",
+        "licenses/libcore/NOTICE",
+    ],
+}
+
+license {
+    name: "art-module-host-exports_libcore_license",
+    visibility: ["//visibility:private"],
+    license_kinds: [
+        "SPDX-license-identifier-Apache-2.0",
+        "SPDX-license-identifier-BSD",
+        "SPDX-license-identifier-GPL",
+        "SPDX-license-identifier-GPL-2.0",
+        "SPDX-license-identifier-LGPL",
+        "SPDX-license-identifier-MIT",
+        "SPDX-license-identifier-OpenSSL",
+        "SPDX-license-identifier-Unicode-DFS",
+        "SPDX-license-identifier-W3C",
+        "legacy_unencumbered",
+    ],
+    license_text: [
+        "licenses/libcore/LICENSE",
+        "licenses/libcore/NOTICE",
+    ],
+}
+
+license {
+    name: "art-module-host-exports_external_okhttp_license@current",
+    sdk_member_name: "external_okhttp_license",
+    visibility: ["//visibility:private"],
+    license_kinds: ["SPDX-license-identifier-Apache-2.0"],
+    license_text: ["licenses/external/okhttp/LICENSE.txt"],
+}
+
+license {
+    name: "art-module-host-exports_external_okhttp_license",
+    visibility: ["//visibility:private"],
+    license_kinds: ["SPDX-license-identifier-Apache-2.0"],
+    license_text: ["licenses/external/okhttp/LICENSE.txt"],
 }
 
 cc_prebuilt_binary {
@@ -156,6 +183,7 @@ cc_prebuilt_binary {
         "com.android.art",
         "com.android.art.debug",
     ],
+    licenses: ["art-module-host-exports_art_license@current"],
     device_supported: false,
     host_supported: true,
     installable: false,
@@ -186,6 +214,7 @@ art_prebuilt_cc_prebuilt_binary {
         "com.android.art",
         "com.android.art.debug",
     ],
+    licenses: ["art-module-host-exports_art_license"],
     device_supported: false,
     host_supported: true,
     stl: "c++_static",
@@ -206,6 +235,7 @@ cc_prebuilt_binary {
     sdk_member_name: "dex2oatd",
     visibility: ["//visibility:public"],
     apex_available: ["com.android.art.debug"],
+    licenses: ["art-module-host-exports_art_license@current"],
     device_supported: false,
     host_supported: true,
     installable: false,
@@ -233,6 +263,7 @@ art_prebuilt_cc_prebuilt_binary {
     },
     visibility: ["//visibility:public"],
     apex_available: ["com.android.art.debug"],
+    licenses: ["art-module-host-exports_art_license"],
     device_supported: false,
     host_supported: true,
     stl: "c++_static",
@@ -249,6 +280,183 @@ art_prebuilt_cc_prebuilt_binary {
 }
 
 cc_prebuilt_binary {
+    name: "art-module-host-exports_dexdump@current",
+    sdk_member_name: "dexdump",
+    visibility: [
+        "//art:__subpackages__",
+        "//prebuilts:__subpackages__",
+    ],
+    apex_available: [
+        "com.android.art",
+        "com.android.art.debug",
+    ],
+    licenses: ["art-module-host-exports_art_license@current"],
+    device_supported: false,
+    host_supported: true,
+    installable: false,
+    stl: "libc++_static",
+    compile_multilib: "64",
+    target: {
+        host: {
+            enabled: false,
+        },
+        linux_glibc_x86_64: {
+            enabled: true,
+            srcs: ["x86_64/bin/dexdump"],
+        },
+    },
+}
+
+art_prebuilt_cc_prebuilt_binary {
+    name: "dexdump",
+    // Do not prefer prebuilt if SOONG_CONFIG_art_module_source_build is true.
+    prefer: true,
+    soong_config_variables: {
+        source_build: {
+            prefer: false,
+        },
+    },
+    visibility: [
+        "//art:__subpackages__",
+        "//prebuilts:__subpackages__",
+    ],
+    apex_available: [
+        "com.android.art",
+        "com.android.art.debug",
+    ],
+    licenses: ["art-module-host-exports_art_license"],
+    device_supported: false,
+    host_supported: true,
+    stl: "libc++_static",
+    compile_multilib: "64",
+    target: {
+        host: {
+            enabled: false,
+        },
+        linux_glibc_x86_64: {
+            enabled: true,
+            srcs: ["x86_64/bin/dexdump"],
+        },
+    },
+}
+
+cc_prebuilt_binary {
+    name: "art-module-host-exports_hiddenapi@current",
+    sdk_member_name: "hiddenapi",
+    visibility: [
+        "//art:__subpackages__",
+        "//prebuilts:__subpackages__",
+    ],
+    apex_available: ["//apex_available:platform"],
+    licenses: ["art-module-host-exports_art_license@current"],
+    device_supported: false,
+    host_supported: true,
+    installable: false,
+    stl: "c++_static",
+    compile_multilib: "64",
+    target: {
+        host: {
+            enabled: false,
+        },
+        linux_glibc_x86_64: {
+            enabled: true,
+            srcs: ["x86_64/bin/hiddenapi"],
+        },
+    },
+}
+
+art_prebuilt_cc_prebuilt_binary {
+    name: "hiddenapi",
+    // Do not prefer prebuilt if SOONG_CONFIG_art_module_source_build is true.
+    prefer: true,
+    soong_config_variables: {
+        source_build: {
+            prefer: false,
+        },
+    },
+    visibility: [
+        "//art:__subpackages__",
+        "//prebuilts:__subpackages__",
+    ],
+    apex_available: ["//apex_available:platform"],
+    licenses: ["art-module-host-exports_art_license"],
+    device_supported: false,
+    host_supported: true,
+    stl: "c++_static",
+    compile_multilib: "64",
+    target: {
+        host: {
+            enabled: false,
+        },
+        linux_glibc_x86_64: {
+            enabled: true,
+            srcs: ["x86_64/bin/hiddenapi"],
+        },
+    },
+}
+
+cc_prebuilt_binary {
+    name: "art-module-host-exports_oatdump@current",
+    sdk_member_name: "oatdump",
+    visibility: [
+        "//art:__subpackages__",
+        "//prebuilts:__subpackages__",
+    ],
+    apex_available: [
+        "com.android.art",
+        "com.android.art.debug",
+    ],
+    licenses: ["art-module-host-exports_art_license@current"],
+    device_supported: false,
+    host_supported: true,
+    installable: false,
+    stl: "c++_static",
+    compile_multilib: "64",
+    target: {
+        host: {
+            enabled: false,
+        },
+        linux_glibc_x86_64: {
+            enabled: true,
+            srcs: ["x86_64/bin/oatdump"],
+        },
+    },
+}
+
+art_prebuilt_cc_prebuilt_binary {
+    name: "oatdump",
+    // Do not prefer prebuilt if SOONG_CONFIG_art_module_source_build is true.
+    prefer: true,
+    soong_config_variables: {
+        source_build: {
+            prefer: false,
+        },
+    },
+    visibility: [
+        "//art:__subpackages__",
+        "//prebuilts:__subpackages__",
+    ],
+    apex_available: [
+        "com.android.art",
+        "com.android.art.debug",
+    ],
+    licenses: ["art-module-host-exports_art_license"],
+    device_supported: false,
+    host_supported: true,
+    stl: "c++_static",
+    compile_multilib: "64",
+    target: {
+        host: {
+            enabled: false,
+        },
+        linux_glibc_x86_64: {
+            enabled: true,
+            srcs: ["x86_64/bin/oatdump"],
+        },
+    },
+}
+
+cc_prebuilt_binary {
     name: "art-module-host-exports_profman@current",
     sdk_member_name: "profman",
     visibility: [
@@ -259,6 +467,7 @@ cc_prebuilt_binary {
         "com.android.art",
         "com.android.art.debug",
     ],
+    licenses: ["art-module-host-exports_art_license@current"],
     device_supported: false,
     host_supported: true,
     installable: false,
@@ -292,6 +501,7 @@ art_prebuilt_cc_prebuilt_binary {
         "com.android.art",
         "com.android.art.debug",
     ],
+    licenses: ["art-module-host-exports_art_license"],
     device_supported: false,
     host_supported: true,
     stl: "c++_static",
@@ -303,6 +513,61 @@ art_prebuilt_cc_prebuilt_binary {
         linux_glibc_x86_64: {
             enabled: true,
             srcs: ["x86_64/bin/profman"],
+        },
+    },
+}
+
+cc_prebuilt_binary {
+    name: "art-module-host-exports_veridex@current",
+    sdk_member_name: "veridex",
+    visibility: [
+        "//art:__subpackages__",
+        "//prebuilts:__subpackages__",
+    ],
+    apex_available: ["//apex_available:platform"],
+    licenses: ["art-module-host-exports_art_license@current"],
+    device_supported: false,
+    host_supported: true,
+    installable: false,
+    stl: "libc++_static",
+    compile_multilib: "64",
+    target: {
+        host: {
+            enabled: false,
+        },
+        linux_glibc_x86_64: {
+            enabled: true,
+            srcs: ["x86_64/bin/veridex"],
+        },
+    },
+}
+
+art_prebuilt_cc_prebuilt_binary {
+    name: "veridex",
+    // Do not prefer prebuilt if SOONG_CONFIG_art_module_source_build is true.
+    prefer: true,
+    soong_config_variables: {
+        source_build: {
+            prefer: false,
+        },
+    },
+    visibility: [
+        "//art:__subpackages__",
+        "//prebuilts:__subpackages__",
+    ],
+    apex_available: ["//apex_available:platform"],
+    licenses: ["art-module-host-exports_art_license"],
+    device_supported: false,
+    host_supported: true,
+    stl: "libc++_static",
+    compile_multilib: "64",
+    target: {
+        host: {
+            enabled: false,
+        },
+        linux_glibc_x86_64: {
+            enabled: true,
+            srcs: ["x86_64/bin/veridex"],
         },
     },
 }
@@ -320,6 +585,7 @@ cc_prebuilt_library {
         "com.android.art.debug",
         "com.android.runtime",
     ],
+    licenses: ["art-module-host-exports_art_license@current"],
     device_supported: false,
     host_supported: true,
     installable: false,
@@ -364,6 +630,7 @@ art_prebuilt_cc_prebuilt_library {
         "com.android.art.debug",
         "com.android.runtime",
     ],
+    licenses: ["art-module-host-exports_art_license"],
     device_supported: false,
     host_supported: true,
     compile_multilib: "64",
@@ -401,6 +668,7 @@ cc_prebuilt_library {
         "com.android.art",
         "com.android.art.debug",
     ],
+    licenses: ["art-module-host-exports_art_license@current"],
     device_supported: false,
     host_supported: true,
     installable: false,
@@ -452,6 +720,7 @@ art_prebuilt_cc_prebuilt_library {
         "com.android.art",
         "com.android.art.debug",
     ],
+    licenses: ["art-module-host-exports_art_license"],
     device_supported: false,
     host_supported: true,
     compile_multilib: "64",
@@ -495,10 +764,13 @@ module_exports_snapshot {
                 "art-module-host-exports_okhttp-norepackage@current",
             ],
             native_binaries: [
-                "art-module-host-exports_hiddenapi@current",
                 "art-module-host-exports_dex2oat@current",
                 "art-module-host-exports_dex2oatd@current",
+                "art-module-host-exports_dexdump@current",
+                "art-module-host-exports_hiddenapi@current",
+                "art-module-host-exports_oatdump@current",
                 "art-module-host-exports_profman@current",
+                "art-module-host-exports_veridex@current",
             ],
             native_libs: [
                 "art-module-host-exports_libartpalette@current",
