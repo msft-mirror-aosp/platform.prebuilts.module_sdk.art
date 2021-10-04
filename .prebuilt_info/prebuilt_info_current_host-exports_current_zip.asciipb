@@ -8,7 +8,7 @@ drops {
   version: ""
   version_group: ""
   git_project: "platform/prebuilts/module_sdk/art"
-  git_branch: "sc-dev"
+  git_branch: "sc-qpr1-dev"
   transform: TRANSFORM_UNZIP
   transform_options {
     rename {
