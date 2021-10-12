@@ -43,7 +43,6 @@ license {
         "SPDX-license-identifier-MIT",
         "SPDX-license-identifier-W3C",
         "SPDX-license-identifier-Zlib",
-        "legacy_restricted",
         "legacy_unencumbered",
     ],
     // large-scale-change unable to identify any license_text files
