@@ -578,6 +578,7 @@ java_sdk_library_import {
         stub_srcs: ["sdk_library/public/art.module.public.api.srcjar"],
         current_api: "sdk_library/public/art.module.public.api.txt",
         removed_api: "sdk_library/public/art.module.public.api-removed.txt",
+        annotations: "sdk_library/public/art.module.public.api_annotations.zip",
         sdk_version: "none",
     },
     system: {
@@ -585,6 +586,7 @@ java_sdk_library_import {
         stub_srcs: ["sdk_library/system/art.module.public.api.srcjar"],
         current_api: "sdk_library/system/art.module.public.api.txt",
         removed_api: "sdk_library/system/art.module.public.api-removed.txt",
+        annotations: "sdk_library/system/art.module.public.api_annotations.zip",
         sdk_version: "none",
     },
     module_lib: {
@@ -592,6 +594,7 @@ java_sdk_library_import {
         stub_srcs: ["sdk_library/module-lib/art.module.public.api.srcjar"],
         current_api: "sdk_library/module-lib/art.module.public.api.txt",
         removed_api: "sdk_library/module-lib/art.module.public.api-removed.txt",
+        annotations: "sdk_library/module-lib/art.module.public.api_annotations.zip",
         sdk_version: "none",
     },
 }
@@ -623,6 +626,7 @@ art_prebuilt_java_sdk_library_import {
         stub_srcs: ["sdk_library/public/art.module.public.api.srcjar"],
         current_api: "sdk_library/public/art.module.public.api.txt",
         removed_api: "sdk_library/public/art.module.public.api-removed.txt",
+        annotations: "sdk_library/public/art.module.public.api_annotations.zip",
         sdk_version: "none",
     },
     system: {
@@ -630,6 +634,7 @@ art_prebuilt_java_sdk_library_import {
         stub_srcs: ["sdk_library/system/art.module.public.api.srcjar"],
         current_api: "sdk_library/system/art.module.public.api.txt",
         removed_api: "sdk_library/system/art.module.public.api-removed.txt",
+        annotations: "sdk_library/system/art.module.public.api_annotations.zip",
         sdk_version: "none",
     },
     module_lib: {
@@ -637,6 +642,7 @@ art_prebuilt_java_sdk_library_import {
         stub_srcs: ["sdk_library/module-lib/art.module.public.api.srcjar"],
         current_api: "sdk_library/module-lib/art.module.public.api.txt",
         removed_api: "sdk_library/module-lib/art.module.public.api-removed.txt",
+        annotations: "sdk_library/module-lib/art.module.public.api_annotations.zip",
         sdk_version: "none",
     },
 }
