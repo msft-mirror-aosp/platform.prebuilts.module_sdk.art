@@ -1,6 +1,6 @@
 // This is auto-generated. DO NOT EDIT.
 
-// Soong config variable stanza added by vendor/unbundled_google/modules/ArtGooglePrebuilt/update-art-module-prebuilts.py.
+// Soong config variable stanza added by vendor/google/build/mainline_modules_sdks.py.
 soong_config_module_type_import {
     from: "prebuilts/module_sdk/art/SoongConfig.bp",
     module_types: [
@@ -12,6 +12,7 @@ soong_config_module_type_import {
         "art_prebuilt_java_system_modules_import",
         "art_prebuilt_prebuilt_bootclasspath_fragment",
         "art_prebuilt_prebuilt_platform_compat_config",
+        "art_prebuilt_prebuilt_systemserverclasspath_fragment",
     ],
 }
 
@@ -53,11 +54,12 @@ prebuilt_bootclasspath_fragment {
         max_target_o_low_priority: ["hiddenapi/hiddenapi-max-target-o-low-priority.txt"],
         blocked: ["hiddenapi/hiddenapi-blocked.txt"],
         unsupported_packages: ["hiddenapi/hiddenapi-unsupported-packages.txt"],
-        stub_flags: "hiddenapi/stub-flags.csv",
         annotation_flags: "hiddenapi/annotation-flags.csv",
         metadata: "hiddenapi/metadata.csv",
         index: "hiddenapi/index.csv",
-        all_flags: "hiddenapi/all-flags.csv",
+        signature_patterns: "hiddenapi/signature-patterns.csv",
+        filtered_stub_flags: "hiddenapi/filtered-stub-flags.csv",
+        filtered_flags: "hiddenapi/filtered-flags.csv",
     },
 }
 
@@ -99,11 +101,12 @@ art_prebuilt_prebuilt_bootclasspath_fragment {
         max_target_o_low_priority: ["hiddenapi/hiddenapi-max-target-o-low-priority.txt"],
         blocked: ["hiddenapi/hiddenapi-blocked.txt"],
         unsupported_packages: ["hiddenapi/hiddenapi-unsupported-packages.txt"],
-        stub_flags: "hiddenapi/stub-flags.csv",
         annotation_flags: "hiddenapi/annotation-flags.csv",
         metadata: "hiddenapi/metadata.csv",
         index: "hiddenapi/index.csv",
-        all_flags: "hiddenapi/all-flags.csv",
+        signature_patterns: "hiddenapi/signature-patterns.csv",
+        filtered_stub_flags: "hiddenapi/filtered-stub-flags.csv",
+        filtered_flags: "hiddenapi/filtered-flags.csv",
     },
 }
 
@@ -156,7 +159,7 @@ java_import {
         "com.android.art.debug",
     ],
     licenses: ["art-module-sdk_libcore_license@current"],
-    jars: ["java/core-oj.jar"],
+    jars: ["java_boot_libs/snapshot/jars/are/invalid/core-oj.jar"],
 }
 
 art_prebuilt_java_import {
@@ -182,7 +185,7 @@ art_prebuilt_java_import {
         "com.android.art.debug",
     ],
     licenses: ["art-module-sdk_libcore_license"],
-    jars: ["java/core-oj.jar"],
+    jars: ["java_boot_libs/snapshot/jars/are/invalid/core-oj.jar"],
 }
 
 java_import {
@@ -202,7 +205,7 @@ java_import {
         "com.android.art.debug",
     ],
     licenses: ["art-module-sdk_libcore_license@current"],
-    jars: ["java/core-libart.jar"],
+    jars: ["java_boot_libs/snapshot/jars/are/invalid/core-libart.jar"],
 }
 
 art_prebuilt_java_import {
@@ -228,7 +231,7 @@ art_prebuilt_java_import {
         "com.android.art.debug",
     ],
     licenses: ["art-module-sdk_libcore_license"],
-    jars: ["java/core-libart.jar"],
+    jars: ["java_boot_libs/snapshot/jars/are/invalid/core-libart.jar"],
 }
 
 java_import {
@@ -249,7 +252,7 @@ java_import {
         "com.android.art.debug",
     ],
     licenses: ["art-module-sdk_external_okhttp_license@current"],
-    jars: ["java/okhttp.jar"],
+    jars: ["java_boot_libs/snapshot/jars/are/invalid/okhttp.jar"],
 }
 
 art_prebuilt_java_import {
@@ -276,7 +279,7 @@ art_prebuilt_java_import {
         "com.android.art.debug",
     ],
     licenses: ["art-module-sdk_external_okhttp_license"],
-    jars: ["java/okhttp.jar"],
+    jars: ["java_boot_libs/snapshot/jars/are/invalid/okhttp.jar"],
 }
 
 java_import {
@@ -296,7 +299,7 @@ java_import {
         "com.android.art.debug",
     ],
     licenses: ["art-module-sdk_external_bouncycastle_license@current"],
-    jars: ["java/bouncycastle.jar"],
+    jars: ["java_boot_libs/snapshot/jars/are/invalid/bouncycastle.jar"],
 }
 
 art_prebuilt_java_import {
@@ -322,7 +325,7 @@ art_prebuilt_java_import {
         "com.android.art.debug",
     ],
     licenses: ["art-module-sdk_external_bouncycastle_license"],
-    jars: ["java/bouncycastle.jar"],
+    jars: ["java_boot_libs/snapshot/jars/are/invalid/bouncycastle.jar"],
 }
 
 java_import {
@@ -341,7 +344,7 @@ java_import {
         "com.android.art.debug",
     ],
     licenses: ["art-module-sdk_external_apache-xml_license@current"],
-    jars: ["java/apache-xml.jar"],
+    jars: ["java_boot_libs/snapshot/jars/are/invalid/apache-xml.jar"],
 }
 
 art_prebuilt_java_import {
@@ -366,7 +369,7 @@ art_prebuilt_java_import {
         "com.android.art.debug",
     ],
     licenses: ["art-module-sdk_external_apache-xml_license"],
-    jars: ["java/apache-xml.jar"],
+    jars: ["java_boot_libs/snapshot/jars/are/invalid/apache-xml.jar"],
 }
 
 java_import {
@@ -644,6 +647,72 @@ art_prebuilt_java_sdk_library_import {
         removed_api: "sdk_library/module-lib/art.module.public.api-removed.txt",
         annotations: "sdk_library/module-lib/art.module.public.api_annotations.zip",
         sdk_version: "none",
+    },
+}
+
+java_sdk_library_import {
+    name: "art-module-sdk_service-art@current",
+    sdk_member_name: "service-art",
+    visibility: ["//visibility:public"],
+    apex_available: [
+        "com.android.art",
+        "com.android.art.debug",
+    ],
+    licenses: ["art-module-sdk_art_license@current"],
+    shared_library: false,
+    compile_dex: true,
+    permitted_packages: ["com.android.server.art"],
+    public: {
+        jars: ["sdk_library/public/service-art-stubs.jar"],
+        stub_srcs: ["sdk_library/public/service-art.srcjar"],
+        current_api: "sdk_library/public/service-art.txt",
+        removed_api: "sdk_library/public/service-art-removed.txt",
+        annotations: "sdk_library/public/service-art_annotations.zip",
+        sdk_version: "core_current",
+    },
+    system_server: {
+        jars: ["sdk_library/system-server/service-art-stubs.jar"],
+        stub_srcs: ["sdk_library/system-server/service-art.srcjar"],
+        current_api: "sdk_library/system-server/service-art.txt",
+        removed_api: "sdk_library/system-server/service-art-removed.txt",
+        annotations: "sdk_library/system-server/service-art_annotations.zip",
+        sdk_version: "core_current",
+    },
+}
+
+art_prebuilt_java_sdk_library_import {
+    name: "service-art",
+    // Do not prefer prebuilt if SOONG_CONFIG_art_module_source_build is true.
+    prefer: true,
+    soong_config_variables: {
+        source_build: {
+            prefer: false,
+        },
+    },
+    visibility: ["//visibility:public"],
+    apex_available: [
+        "com.android.art",
+        "com.android.art.debug",
+    ],
+    licenses: ["art-module-sdk_art_license"],
+    shared_library: false,
+    compile_dex: true,
+    permitted_packages: ["com.android.server.art"],
+    public: {
+        jars: ["sdk_library/public/service-art-stubs.jar"],
+        stub_srcs: ["sdk_library/public/service-art.srcjar"],
+        current_api: "sdk_library/public/service-art.txt",
+        removed_api: "sdk_library/public/service-art-removed.txt",
+        annotations: "sdk_library/public/service-art_annotations.zip",
+        sdk_version: "core_current",
+    },
+    system_server: {
+        jars: ["sdk_library/system-server/service-art-stubs.jar"],
+        stub_srcs: ["sdk_library/system-server/service-art.srcjar"],
+        current_api: "sdk_library/system-server/service-art.txt",
+        removed_api: "sdk_library/system-server/service-art-removed.txt",
+        annotations: "sdk_library/system-server/service-art_annotations.zip",
+        sdk_version: "core_current",
     },
 }
 
@@ -959,6 +1028,8 @@ cc_prebuilt_library_headers {
     ],
     licenses: ["art-module-sdk_libnativehelper_license@current"],
     host_supported: true,
+    native_bridge_supported: true,
+    ramdisk_available: true,
     recovery_available: true,
     vendor_available: true,
     sdk_version: "minimum",
@@ -995,6 +1066,8 @@ art_prebuilt_cc_prebuilt_library_headers {
     ],
     licenses: ["art-module-sdk_libnativehelper_license"],
     host_supported: true,
+    native_bridge_supported: true,
+    ramdisk_available: true,
     recovery_available: true,
     vendor_available: true,
     sdk_version: "minimum",
@@ -1190,6 +1263,62 @@ art_prebuilt_cc_prebuilt_library_headers {
         "common_os/include/art/openjdkjvmti/include",
         "common_os/include/libnativehelper/include_jni",
     ],
+    target: {
+        host: {
+            enabled: false,
+        },
+        linux_glibc_x86_64: {
+            enabled: true,
+        },
+        linux_glibc_x86: {
+            enabled: true,
+        },
+    },
+}
+
+cc_prebuilt_library_headers {
+    name: "art-module-sdk_odrefresh_headers@current",
+    sdk_member_name: "odrefresh_headers",
+    visibility: ["//visibility:public"],
+    apex_available: ["//apex_available:platform"],
+    licenses: ["art-module-sdk_art_license@current"],
+    host_supported: true,
+    sdk_version: "minimum",
+    stl: "none",
+    compile_multilib: "both",
+    system_shared_libs: [],
+    export_include_dirs: ["common_os/include/art/odrefresh/include"],
+    target: {
+        host: {
+            enabled: false,
+        },
+        linux_glibc_x86_64: {
+            enabled: true,
+        },
+        linux_glibc_x86: {
+            enabled: true,
+        },
+    },
+}
+
+art_prebuilt_cc_prebuilt_library_headers {
+    name: "odrefresh_headers",
+    // Do not prefer prebuilt if SOONG_CONFIG_art_module_source_build is true.
+    prefer: true,
+    soong_config_variables: {
+        source_build: {
+            prefer: false,
+        },
+    },
+    visibility: ["//visibility:public"],
+    apex_available: ["//apex_available:platform"],
+    licenses: ["art-module-sdk_art_license"],
+    host_supported: true,
+    sdk_version: "minimum",
+    stl: "none",
+    compile_multilib: "both",
+    system_shared_libs: [],
+    export_include_dirs: ["common_os/include/art/odrefresh/include"],
     target: {
         host: {
             enabled: false,
@@ -2025,6 +2154,7 @@ cc_prebuilt_library_shared {
         "//external/perfetto:__subpackages__",
         "//frameworks/base/packages/Connectivity/tests/integration",
         "//frameworks/base/packages/Tethering:__subpackages__",
+        "//frameworks/libs/net/common/native/bpfmapjni",
         "//libcore:__subpackages__",
         "//libnativehelper:__subpackages__",
         "//packages/modules/Connectivity/Tethering:__subpackages__",
@@ -2081,6 +2211,7 @@ art_prebuilt_cc_prebuilt_library_shared {
         "//external/perfetto:__subpackages__",
         "//frameworks/base/packages/Connectivity/tests/integration",
         "//frameworks/base/packages/Tethering:__subpackages__",
+        "//frameworks/libs/net/common/native/bpfmapjni",
         "//libcore:__subpackages__",
         "//libnativehelper:__subpackages__",
         "//packages/modules/Connectivity/Tethering:__subpackages__",
@@ -2329,7 +2460,7 @@ cc_prebuilt_library_static {
         "common_os/include/system/libbase/include",
         "common_os/include/external/fmtlib/include",
         "common_os/include/art/libartpalette/include",
-        "common_os/include/system/logging/liblog/include",
+        "common_os/include/prebuilts/runtime/mainline/platform/sdk/common_os/include/system/logging/liblog/include",
         "common_os/include/external/zlib",
         "common_os/include/system/libziparchive/include",
         "common_os/include/external/googletest/googletest/include",
@@ -2388,7 +2519,7 @@ art_prebuilt_cc_prebuilt_library_static {
         "common_os/include/system/libbase/include",
         "common_os/include/external/fmtlib/include",
         "common_os/include/art/libartpalette/include",
-        "common_os/include/system/logging/liblog/include",
+        "common_os/include/prebuilts/runtime/mainline/platform/sdk/common_os/include/system/logging/liblog/include",
         "common_os/include/external/zlib",
         "common_os/include/system/libziparchive/include",
         "common_os/include/external/googletest/googletest/include",
@@ -2517,6 +2648,42 @@ art_prebuilt_cc_prebuilt_library_static {
     },
 }
 
+prebuilt_systemserverclasspath_fragment {
+    name: "art-module-sdk_art-systemserverclasspath-fragment@current",
+    sdk_member_name: "art-systemserverclasspath-fragment",
+    visibility: [
+        "//art:__subpackages__",
+        "//prebuilts:__subpackages__",
+    ],
+    apex_available: [
+        "com.android.art",
+        "com.android.art.debug",
+    ],
+    licenses: ["art-module-sdk_art_license@current"],
+    contents: ["art-module-sdk_service-art@current"],
+}
+
+art_prebuilt_prebuilt_systemserverclasspath_fragment {
+    name: "art-systemserverclasspath-fragment",
+    // Do not prefer prebuilt if SOONG_CONFIG_art_module_source_build is true.
+    prefer: true,
+    soong_config_variables: {
+        source_build: {
+            prefer: false,
+        },
+    },
+    visibility: [
+        "//art:__subpackages__",
+        "//prebuilts:__subpackages__",
+    ],
+    apex_available: [
+        "com.android.art",
+        "com.android.art.debug",
+    ],
+    licenses: ["art-module-sdk_art_license"],
+    contents: ["service-art"],
+}
+
 sdk_snapshot {
     name: "art-module-sdk@current",
     visibility: ["//art:__subpackages__"],
@@ -2542,7 +2709,10 @@ sdk_snapshot {
                 "art-module-sdk_core-lambda-stubs-for-system-modules@current",
                 "art-module-sdk_core-generated-annotation-stubs@current",
             ],
-            java_sdk_libs: ["art-module-sdk_art.module.public.api@current"],
+            java_sdk_libs: [
+                "art-module-sdk_art.module.public.api@current",
+                "art-module-sdk_service-art@current",
+            ],
             java_system_modules: [
                 "art-module-sdk_art-module-public-api-stubs-system-modules@current",
                 "art-module-sdk_art-module-lib-api-stubs-system-modules@current",
@@ -2553,6 +2723,7 @@ sdk_snapshot {
                 "art-module-sdk_libartpalette-headers@current",
                 "art-module-sdk_libnativehelper_header_only@current",
                 "art-module-sdk_libopenjdkjvmti_headers@current",
+                "art-module-sdk_odrefresh_headers@current",
                 "art-module-sdk_libnativeloader-headers@current",
             ],
             native_shared_libs: [
@@ -2566,6 +2737,7 @@ sdk_snapshot {
                 "art-module-sdk_libnativehelper_compat_libc++@current",
                 "art-module-sdk_libnativeloader_lazy@current",
             ],
+            systemserverclasspath_fragments: ["art-module-sdk_art-systemserverclasspath-fragment@current"],
         },
         linux_glibc: {
             native_header_libs: [
@@ -2573,6 +2745,7 @@ sdk_snapshot {
                 "art-module-sdk_libartpalette-headers@current",
                 "art-module-sdk_libnativehelper_header_only@current",
                 "art-module-sdk_libopenjdkjvmti_headers@current",
+                "art-module-sdk_odrefresh_headers@current",
             ],
             native_shared_libs: [
                 "art-module-sdk_libandroidio@current",
