@@ -77,6 +77,13 @@ std::string GetDefaultBootImageLocation(std::string* error_msg);
 std::string GetDefaultBootImageLocation(const std::string& android_root,
                                         bool deny_art_apex_data_files);
 
+// Returns the boot image path of the provided jar, on /system or /data.
+std::string GetBootImagePath(bool on_system, const std::string& jar_path);
+
+// Allows the name to be used for the dalvik cache directory (normally "dalvik-cache") to be
+// overridden with a new value.
+void OverrideDalvikCacheSubDirectory(std::string sub_dir);
+
 // Return true if we found the dalvik cache and stored it in the dalvik_cache argument.
 // `have_android_data` will be set to true if we have an ANDROID_DATA that exists,
 // `dalvik_cache_exists` will be true if there is a dalvik-cache directory that is present.
@@ -93,20 +100,20 @@ bool GetDalvikCacheFilename(const char* location, const char* cache_location,
 // than in an APEX. Returns the oat filename if `location` is valid, empty string otherwise.
 std::string GetApexDataOatFilename(std::string_view location, InstructionSet isa);
 
-// Gets the odex location in the ART APEX data directory for a DEX file installed anywhere other
-// than in an APEX. Returns the odex filename if `location` is valid, empty string otherwise.
+// Gets the odex location in the ART APEX data directory for a DEX file. Returns the odex filename
+// if `location` is valid, empty string otherwise.
 std::string GetApexDataOdexFilename(std::string_view location, InstructionSet isa);
 
 // Gets the boot image in the ART APEX data directory for a DEX file installed anywhere other
 // than in an APEX. Returns the image location if `dex_location` is valid, empty string otherwise.
 std::string GetApexDataBootImage(std::string_view dex_location);
 
-// Gets the image in the ART APEX data directory for a DEX file installed installed anywhere other
-// than in an APEX. Returns the image location if `dex_location` is valid, empty string otherwise.
+// Gets the image in the ART APEX data directory for a DEX file. Returns the image location if
+// `dex_location` is valid, empty string otherwise.
 std::string GetApexDataImage(std::string_view dex_location);
 
 // Gets the name of a file in the ART APEX directory dalvik-cache. This method assumes the
-// `dex_location` is for an application and that the `dex_location` is not within an APEX.
+// `dex_location` is for an application.
 // Returns the location of the file in the dalvik-cache
 std::string GetApexDataDalvikCacheFilename(std::string_view dex_location,
                                            InstructionSet isa,
@@ -118,6 +125,13 @@ std::string GetSystemImageFilename(const char* location, InstructionSet isa);
 
 // Returns the vdex filename for the given oat filename.
 std::string GetVdexFilename(const std::string& oat_filename);
+
+// Returns the dm filename for the given dex location.
+std::string GetDmFilename(const std::string& dex_location);
+
+// Returns the odex location on /system for a DEX file on /apex. The caller must make sure that
+// `location` is on /apex.
+std::string GetSystemOdexFilenameForApex(std::string_view location, InstructionSet isa);
 
 // Returns `filename` with the text after the last occurrence of '.' replaced with
 // `extension`. If `filename` does not contain a period, returns a string containing `filename`,
