@@ -1229,6 +1229,7 @@ java/lang/invoke/Transformers
 java/lang/invoke/VarHandle
 java/lang/invoke/VolatileCallSite
 java/lang/invoke/WrongMethodTypeException
+java/lang/ref/Cleaner
 java/lang/ref/FinalizerReference
 java/lang/ref/PhantomReference
 java/lang/ref/Reference
@@ -1691,6 +1692,8 @@ java/security/spec/RSAPrivateCrtKeySpec
 java/security/spec/RSAPrivateKeySpec
 java/security/spec/RSAPublicKeySpec
 java/security/spec/X509EncodedKeySpec
+java/security/spec/XECPrivateKeySpec
+java/security/spec/XECPublicKeySpec
 java/sql/Array
 java/sql/BatchUpdateException
 java/sql/Blob
@@ -2399,11 +2402,16 @@ jdk/internal/math/FDBigInteger
 jdk/internal/math/FloatConsts
 jdk/internal/math/FloatingDecimal
 jdk/internal/math/FormattedFloatingDecimal
+jdk/internal/misc/InnocuousThread
 jdk/internal/misc/JavaIOFileDescriptorAccess
 jdk/internal/misc/JavaObjectInputStreamAccess
 jdk/internal/misc/SharedSecrets
 jdk/internal/misc/Unsafe
 jdk/internal/misc/VM
+jdk/internal/ref/Cleaner
+jdk/internal/ref/CleanerFactory
+jdk/internal/ref/CleanerImpl
+jdk/internal/ref/PhantomCleanable
 jdk/internal/reflect/Reflection
 jdk/internal/util/ArraysSupport
 jdk/internal/util/Preconditions
@@ -3124,6 +3132,7 @@ sun/net/SocksProxy
 sun/net/TelnetInputStream
 sun/net/TelnetOutputStream
 sun/net/TelnetProtocolException
+sun/net/ext/ExtendedSocketOptions
 sun/net/ftp/FtpClient
 sun/net/ftp/FtpClientProvider
 sun/net/ftp/FtpDirEntry
