@@ -1667,6 +1667,7 @@ java/security/interfaces/RSAMultiPrimePrivateCrtKey
 java/security/interfaces/RSAPrivateCrtKey
 java/security/interfaces/RSAPrivateKey
 java/security/interfaces/RSAPublicKey
+java/security/interfaces/XECKey
 java/security/spec/DSAParameterSpec
 java/security/spec/DSAPrivateKeySpec
 java/security/spec/DSAPublicKeySpec
@@ -1683,6 +1684,7 @@ java/security/spec/EncodedKeySpec
 java/security/spec/InvalidKeySpecException
 java/security/spec/InvalidParameterSpecException
 java/security/spec/MGF1ParameterSpec
+java/security/spec/NamedParameterSpec
 java/security/spec/PKCS8EncodedKeySpec
 java/security/spec/PSSParameterSpec
 java/security/spec/RSAKeyGenParameterSpec
