@@ -1,6 +1,6 @@
 // This is auto-generated. DO NOT EDIT.
 
-// Soong config variable stanza added by packages/modules/ArtPrebuilt/update-art-module-prebuilts.py.
+// Soong config variable stanza added by packages/modules/common/build/mainline_modules_sdks.py.
 soong_config_module_type_import {
     from: "prebuilts/module_sdk/art/SoongConfig.bp",
     module_types: [
@@ -62,6 +62,7 @@ java_import {
         "//frameworks/base/location/tests/locationtests",
         "//frameworks/base/wifi/tests",
         "//libcore",
+        "//libcore/luni/src/test/java9compatibility",
         "//packages/modules/Wifi/framework/tests",
         "//prebuilts:__subpackages__",
     ],
@@ -88,6 +89,7 @@ art_prebuilt_java_import {
         "//frameworks/base/location/tests/locationtests",
         "//frameworks/base/wifi/tests",
         "//libcore",
+        "//libcore/luni/src/test/java9compatibility",
         "//packages/modules/Wifi/framework/tests",
         "//prebuilts:__subpackages__",
     ],

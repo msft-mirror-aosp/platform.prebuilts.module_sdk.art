@@ -150,8 +150,8 @@ Ljava/lang/String;-><init>(II[C)V,libcore/ojluni/annotations/hiddenapi/java/lang
 Ljava/lang/String;->getCharsNoCheck(II[CI)V,libcore/ojluni/annotations/hiddenapi/java/lang/String.java,141,5,141,69,maxTargetSdk=30&trackingBug=170729553L
 Ljava/lang/String;->indexOf([CII[CIII)I,libcore/ojluni/annotations/hiddenapi/java/lang/String.java,258,5,258,69,maxTargetSdk=30&trackingBug=170729553L
 Ljava/lang/String;->lastIndexOf([CII[CIII)I,libcore/ojluni/annotations/hiddenapi/java/lang/String.java,292,5,292,69,maxTargetSdk=30&trackingBug=170729553L
-Ljava/lang/String;->count:I,libcore/ojluni/annotations/hiddenapi/java/lang/String.java,453,5,453,25,
-Ljava/lang/String;->hash:I,libcore/ojluni/annotations/hiddenapi/java/lang/String.java,460,5,460,69,maxTargetSdk=30&trackingBug=170729553L
+Ljava/lang/String;->count:I,libcore/ojluni/annotations/hiddenapi/java/lang/String.java,463,5,463,25,
+Ljava/lang/String;->hash:I,libcore/ojluni/annotations/hiddenapi/java/lang/String.java,470,5,470,69,maxTargetSdk=30&trackingBug=170729553L
 Ljava/lang/System;-><init>()V,libcore/ojluni/annotations/hiddenapi/java/lang/System.java,34,5,34,69,maxTargetSdk=30&trackingBug=170729553L
 Ljava/lang/System;->arraycopy([CI[CII)V,libcore/ojluni/annotations/hiddenapi/java/lang/System.java,80,5,80,25,
 Ljava/lang/System;->arraycopy([BI[BII)V,libcore/ojluni/annotations/hiddenapi/java/lang/System.java,88,5,88,25,
