@@ -1,5 +1,15 @@
 // This is auto-generated. DO NOT EDIT.
 
+// Soong config variable stanza added by vendor/google/build/mainline_modules_sdks.py.
+soong_config_module_type_import {
+    from: "prebuilts/module_sdk/art/SoongConfig.bp",
+    module_types: [
+        "art_prebuilt_cc_prebuilt_binary",
+        "art_prebuilt_cc_prebuilt_library",
+        "art_prebuilt_java_import",
+    ],
+}
+
 package {
     // A default list here prevents the license LSC from adding its own list which would
     // be unnecessary as every module in the sdk already has its own licenses property.
@@ -23,9 +33,15 @@ java_import {
     jars: ["java/art.module.api.annotations.jar"],
 }
 
-java_import {
+art_prebuilt_java_import {
     name: "art.module.api.annotations",
-    prefer: false,
+    // Do not prefer prebuilt if SOONG_CONFIG_art_module_source_build is true.
+    prefer: true,
+    soong_config_variables: {
+        source_build: {
+            prefer: false,
+        },
+    },
     visibility: [
         "//art/build/sdk",
         "//external/icu/android_icu4j",
@@ -56,9 +72,15 @@ java_import {
     jars: ["java/okhttp-norepackage.jar"],
 }
 
-java_import {
+art_prebuilt_java_import {
     name: "okhttp-norepackage",
-    prefer: false,
+    // Do not prefer prebuilt if SOONG_CONFIG_art_module_source_build is true.
+    prefer: true,
+    soong_config_variables: {
+        source_build: {
+            prefer: false,
+        },
+    },
     visibility: [
         "//art/build/sdk",
         "//external/grpc-grpc-java/okhttp",
@@ -178,9 +200,15 @@ cc_prebuilt_binary {
     },
 }
 
-cc_prebuilt_binary {
+art_prebuilt_cc_prebuilt_binary {
     name: "dex2oat",
-    prefer: false,
+    // Do not prefer prebuilt if SOONG_CONFIG_art_module_source_build is true.
+    prefer: true,
+    soong_config_variables: {
+        source_build: {
+            prefer: false,
+        },
+    },
     visibility: ["//visibility:public"],
     apex_available: [
         "com.android.art",
@@ -224,9 +252,15 @@ cc_prebuilt_binary {
     },
 }
 
-cc_prebuilt_binary {
+art_prebuilt_cc_prebuilt_binary {
     name: "dex2oatd",
-    prefer: false,
+    // Do not prefer prebuilt if SOONG_CONFIG_art_module_source_build is true.
+    prefer: true,
+    soong_config_variables: {
+        source_build: {
+            prefer: false,
+        },
+    },
     visibility: ["//visibility:public"],
     apex_available: ["com.android.art.debug"],
     licenses: ["art-module-host-exports_art_license"],
@@ -273,9 +307,15 @@ cc_prebuilt_binary {
     },
 }
 
-cc_prebuilt_binary {
+art_prebuilt_cc_prebuilt_binary {
     name: "dexdump",
-    prefer: false,
+    // Do not prefer prebuilt if SOONG_CONFIG_art_module_source_build is true.
+    prefer: true,
+    soong_config_variables: {
+        source_build: {
+            prefer: false,
+        },
+    },
     visibility: [
         "//art:__subpackages__",
         "//prebuilts:__subpackages__",
@@ -325,9 +365,15 @@ cc_prebuilt_binary {
     },
 }
 
-cc_prebuilt_binary {
+art_prebuilt_cc_prebuilt_binary {
     name: "hiddenapi",
-    prefer: false,
+    // Do not prefer prebuilt if SOONG_CONFIG_art_module_source_build is true.
+    prefer: true,
+    soong_config_variables: {
+        source_build: {
+            prefer: false,
+        },
+    },
     visibility: [
         "//art:__subpackages__",
         "//prebuilts:__subpackages__",
@@ -377,9 +423,15 @@ cc_prebuilt_binary {
     },
 }
 
-cc_prebuilt_binary {
+art_prebuilt_cc_prebuilt_binary {
     name: "oatdump",
-    prefer: false,
+    // Do not prefer prebuilt if SOONG_CONFIG_art_module_source_build is true.
+    prefer: true,
+    soong_config_variables: {
+        source_build: {
+            prefer: false,
+        },
+    },
     visibility: [
         "//art:__subpackages__",
         "//prebuilts:__subpackages__",
@@ -432,9 +484,15 @@ cc_prebuilt_binary {
     },
 }
 
-cc_prebuilt_binary {
+art_prebuilt_cc_prebuilt_binary {
     name: "profman",
-    prefer: false,
+    // Do not prefer prebuilt if SOONG_CONFIG_art_module_source_build is true.
+    prefer: true,
+    soong_config_variables: {
+        source_build: {
+            prefer: false,
+        },
+    },
     visibility: [
         "//art:__subpackages__",
         "//prebuilts:__subpackages__",
@@ -484,9 +542,15 @@ cc_prebuilt_binary {
     },
 }
 
-cc_prebuilt_binary {
+art_prebuilt_cc_prebuilt_binary {
     name: "veridex",
-    prefer: false,
+    // Do not prefer prebuilt if SOONG_CONFIG_art_module_source_build is true.
+    prefer: true,
+    soong_config_variables: {
+        source_build: {
+            prefer: false,
+        },
+    },
     visibility: [
         "//art:__subpackages__",
         "//prebuilts:__subpackages__",
@@ -547,9 +611,15 @@ cc_prebuilt_library {
     },
 }
 
-cc_prebuilt_library {
+art_prebuilt_cc_prebuilt_library {
     name: "libartpalette",
-    prefer: false,
+    // Do not prefer prebuilt if SOONG_CONFIG_art_module_source_build is true.
+    prefer: true,
+    soong_config_variables: {
+        source_build: {
+            prefer: false,
+        },
+    },
     visibility: [
         "//art:__subpackages__",
         "//prebuilts/module_sdk/art/current/host-exports",
@@ -631,9 +701,15 @@ cc_prebuilt_library {
     },
 }
 
-cc_prebuilt_library {
+art_prebuilt_cc_prebuilt_library {
     name: "libartbase",
-    prefer: false,
+    // Do not prefer prebuilt if SOONG_CONFIG_art_module_source_build is true.
+    prefer: true,
+    soong_config_variables: {
+        source_build: {
+            prefer: false,
+        },
+    },
     visibility: [
         "//art:__subpackages__",
         "//packages/modules/NetworkStack/tests:__subpackages__",
