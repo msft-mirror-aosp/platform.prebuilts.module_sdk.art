@@ -1,8 +1,8 @@
 drops {
   android_build_drop {
-    build_id: "7756215"
+    build_id: "7924123"
     target: "mainline_modules-user"
-    source_file: "mainline-sdks/art-module-test-exports-current.zip"
+    source_file: "mainline-sdks/current/com.google.android.art/test-exports/art-module-test-exports-current.zip"
   }
   dest_file: "current/test-exports/current.zip"
   version: ""
