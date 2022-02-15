@@ -1,6 +1,6 @@
 // This is auto-generated. DO NOT EDIT.
 
-// Soong config variable stanza added by vendor/google/build/mainline_modules_sdks.py.
+// Soong config variable stanza added by packages/modules/common/build/mainline_modules_sdks.py.
 soong_config_module_type_import {
     from: "prebuilts/module_sdk/art/SoongConfig.bp",
     module_types: [
@@ -2155,9 +2155,11 @@ cc_prebuilt_library_shared {
         "//frameworks/base/packages/Connectivity/tests/integration",
         "//frameworks/base/packages/Tethering:__subpackages__",
         "//frameworks/libs/net/common/native/bpfmapjni",
+        "//frameworks/libs/net/common/native/bpfutiljni",
         "//libcore:__subpackages__",
         "//libnativehelper:__subpackages__",
         "//packages/modules/Connectivity/Tethering:__subpackages__",
+        "//packages/modules/Connectivity/service",
         "//packages/modules/Connectivity/tests:__subpackages__",
         "//packages/modules/ExtServices:__subpackages__",
         "//packages/modules/NetworkStack:__subpackages__",
@@ -2212,9 +2214,11 @@ art_prebuilt_cc_prebuilt_library_shared {
         "//frameworks/base/packages/Connectivity/tests/integration",
         "//frameworks/base/packages/Tethering:__subpackages__",
         "//frameworks/libs/net/common/native/bpfmapjni",
+        "//frameworks/libs/net/common/native/bpfutiljni",
         "//libcore:__subpackages__",
         "//libnativehelper:__subpackages__",
         "//packages/modules/Connectivity/Tethering:__subpackages__",
+        "//packages/modules/Connectivity/service",
         "//packages/modules/Connectivity/tests:__subpackages__",
         "//packages/modules/ExtServices:__subpackages__",
         "//packages/modules/NetworkStack:__subpackages__",
@@ -2358,6 +2362,7 @@ cc_prebuilt_library_static {
     export_include_dirs: [
         "common_os/include/art/libdexfile/external/include",
         "common_os/include/system/libbase/include",
+        "common_os/include/external/fmtlib/include",
     ],
     target: {
         host: {
@@ -2414,6 +2419,7 @@ art_prebuilt_cc_prebuilt_library_static {
     export_include_dirs: [
         "common_os/include/art/libdexfile/external/include",
         "common_os/include/system/libbase/include",
+        "common_os/include/external/fmtlib/include",
     ],
     target: {
         host: {
@@ -2460,7 +2466,7 @@ cc_prebuilt_library_static {
         "common_os/include/system/libbase/include",
         "common_os/include/external/fmtlib/include",
         "common_os/include/art/libartpalette/include",
-        "common_os/include/prebuilts/runtime/mainline/platform/sdk/common_os/include/system/logging/liblog/include",
+        "common_os/include/system/logging/liblog/include",
         "common_os/include/external/zlib",
         "common_os/include/system/libziparchive/include",
         "common_os/include/external/googletest/googletest/include",
@@ -2519,7 +2525,7 @@ art_prebuilt_cc_prebuilt_library_static {
         "common_os/include/system/libbase/include",
         "common_os/include/external/fmtlib/include",
         "common_os/include/art/libartpalette/include",
-        "common_os/include/prebuilts/runtime/mainline/platform/sdk/common_os/include/system/logging/liblog/include",
+        "common_os/include/system/logging/liblog/include",
         "common_os/include/external/zlib",
         "common_os/include/system/libziparchive/include",
         "common_os/include/external/googletest/googletest/include",
