@@ -162,9 +162,6 @@ package dalvik.annotation.optimization {
   @java.lang.annotation.Retention(java.lang.annotation.RetentionPolicy.CLASS) @java.lang.annotation.Target(java.lang.annotation.ElementType.METHOD) public @interface FastNative {
   }
 
-  @java.lang.annotation.Retention(java.lang.annotation.RetentionPolicy.CLASS) @java.lang.annotation.Target(java.lang.annotation.ElementType.METHOD) public @interface NeverCompile {
-  }
-
 }
 
 package dalvik.system {
@@ -229,7 +226,6 @@ package dalvik.system {
 
   public final class DelegateLastClassLoader extends dalvik.system.PathClassLoader {
     ctor public DelegateLastClassLoader(String, String, ClassLoader, ClassLoader[]);
-    ctor public DelegateLastClassLoader(String, String, ClassLoader, ClassLoader[], ClassLoader[]);
   }
 
   @Deprecated public final class DexFile {
@@ -250,7 +246,6 @@ package dalvik.system {
 
   public class PathClassLoader extends dalvik.system.BaseDexClassLoader {
     ctor public PathClassLoader(@NonNull String, @Nullable String, @Nullable ClassLoader, @Nullable ClassLoader[]);
-    ctor public PathClassLoader(@NonNull String, @Nullable String, @Nullable ClassLoader, @Nullable ClassLoader[], @Nullable ClassLoader[]);
   }
 
   public final class RuntimeHooks {
