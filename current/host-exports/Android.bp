@@ -1,6 +1,6 @@
 // This is auto-generated. DO NOT EDIT.
 
-// Soong config variable stanza added by packages/modules/common/build/mainline_modules_sdks.py.
+// Soong config variable stanza added by vendor/google/build/mainline_modules_sdks.py.
 soong_config_module_type_import {
     from: "prebuilts/module_sdk/art/SoongConfig.bp",
     module_types: [
@@ -14,56 +14,6 @@ package {
     // A default list here prevents the license LSC from adding its own list which would
     // be unnecessary as every module in the sdk already has its own licenses property.
     default_applicable_licenses: ["Android-Apache-2.0"],
-}
-
-java_import {
-    name: "art-module-host-exports_okhttp-norepackage@current",
-    sdk_member_name: "okhttp-norepackage",
-    visibility: [
-        "//art/build/sdk",
-        "//external/grpc-grpc-java/okhttp",
-        "//external/okhttp",
-        "//prebuilts:__subpackages__",
-    ],
-    apex_available: ["//apex_available:platform"],
-    licenses: ["art-module-host-exports_external_okhttp_license@current"],
-    host_supported: true,
-    target: {
-        android: {
-            jars: ["java/android/okhttp-norepackage.jar"],
-        },
-        linux_glibc: {
-            jars: ["java/linux_glibc/okhttp-norepackage.jar"],
-        },
-    },
-}
-
-art_prebuilt_java_import {
-    name: "okhttp-norepackage",
-    // Do not prefer prebuilt if SOONG_CONFIG_art_module_source_build is true.
-    prefer: true,
-    soong_config_variables: {
-        source_build: {
-            prefer: false,
-        },
-    },
-    visibility: [
-        "//art/build/sdk",
-        "//external/grpc-grpc-java/okhttp",
-        "//external/okhttp",
-        "//prebuilts:__subpackages__",
-    ],
-    apex_available: ["//apex_available:platform"],
-    licenses: ["art-module-host-exports_external_okhttp_license"],
-    host_supported: true,
-    target: {
-        android: {
-            jars: ["java/android/okhttp-norepackage.jar"],
-        },
-        linux_glibc: {
-            jars: ["java/linux_glibc/okhttp-norepackage.jar"],
-        },
-    },
 }
 
 java_import {
@@ -106,6 +56,44 @@ art_prebuilt_java_import {
     jars: ["java/art.module.api.annotations.jar"],
 }
 
+java_import {
+    name: "art-module-host-exports_okhttp-norepackage@current",
+    sdk_member_name: "okhttp-norepackage",
+    visibility: [
+        "//art/build/sdk",
+        "//external/grpc-grpc-java/okhttp",
+        "//external/okhttp",
+        "//prebuilts:__subpackages__",
+    ],
+    apex_available: ["//apex_available:platform"],
+    licenses: ["art-module-host-exports_external_okhttp_license@current"],
+    device_supported: false,
+    host_supported: true,
+    jars: ["java/okhttp-norepackage.jar"],
+}
+
+art_prebuilt_java_import {
+    name: "okhttp-norepackage",
+    // Do not prefer prebuilt if SOONG_CONFIG_art_module_source_build is true.
+    prefer: true,
+    soong_config_variables: {
+        source_build: {
+            prefer: false,
+        },
+    },
+    visibility: [
+        "//art/build/sdk",
+        "//external/grpc-grpc-java/okhttp",
+        "//external/okhttp",
+        "//prebuilts:__subpackages__",
+    ],
+    apex_available: ["//apex_available:platform"],
+    licenses: ["art-module-host-exports_external_okhttp_license"],
+    device_supported: false,
+    host_supported: true,
+    jars: ["java/okhttp-norepackage.jar"],
+}
+
 license {
     name: "art-module-host-exports_art_license@current",
     sdk_member_name: "art_license",
@@ -127,21 +115,6 @@ license {
         "SPDX-license-identifier-GPL-2.0",
     ],
     license_text: ["licenses/art/NOTICE"],
-}
-
-license {
-    name: "art-module-host-exports_external_okhttp_license@current",
-    sdk_member_name: "external_okhttp_license",
-    visibility: ["//visibility:private"],
-    license_kinds: ["SPDX-license-identifier-Apache-2.0"],
-    license_text: ["licenses/external/okhttp/LICENSE.txt"],
-}
-
-license {
-    name: "art-module-host-exports_external_okhttp_license",
-    visibility: ["//visibility:private"],
-    license_kinds: ["SPDX-license-identifier-Apache-2.0"],
-    license_text: ["licenses/external/okhttp/LICENSE.txt"],
 }
 
 license {
@@ -185,6 +158,21 @@ license {
         "licenses/libcore/LICENSE",
         "licenses/libcore/NOTICE",
     ],
+}
+
+license {
+    name: "art-module-host-exports_external_okhttp_license@current",
+    sdk_member_name: "external_okhttp_license",
+    visibility: ["//visibility:private"],
+    license_kinds: ["SPDX-license-identifier-Apache-2.0"],
+    license_text: ["licenses/external/okhttp/LICENSE.txt"],
+}
+
+license {
+    name: "art-module-host-exports_external_okhttp_license",
+    visibility: ["//visibility:private"],
+    license_kinds: ["SPDX-license-identifier-Apache-2.0"],
+    license_text: ["licenses/external/okhttp/LICENSE.txt"],
 }
 
 cc_prebuilt_binary {
@@ -296,7 +284,6 @@ cc_prebuilt_binary {
     sdk_member_name: "dexdump",
     visibility: [
         "//art:__subpackages__",
-        "//development/build",
         "//prebuilts:__subpackages__",
     ],
     apex_available: [
@@ -331,7 +318,6 @@ art_prebuilt_cc_prebuilt_binary {
     },
     visibility: [
         "//art:__subpackages__",
-        "//development/build",
         "//prebuilts:__subpackages__",
     ],
     apex_available: [
@@ -771,14 +757,11 @@ module_exports_snapshot {
     visibility: ["//art:__subpackages__"],
     host_supported: true,
     target: {
-        android: {
-            java_libs: ["art-module-host-exports_okhttp-norepackage@current"],
-        },
         linux_glibc: {
             compile_multilib: "64",
             java_libs: [
-                "art-module-host-exports_okhttp-norepackage@current",
                 "art-module-host-exports_art.module.api.annotations@current",
+                "art-module-host-exports_okhttp-norepackage@current",
             ],
             native_binaries: [
                 "art-module-host-exports_dex2oat@current",
