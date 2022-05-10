@@ -360,8 +360,8 @@ java_system_modules_import {
 }
 
 java_system_modules_import {
-    name: "art-module-sdk_core-current-stubs-system-modules@1",
-    sdk_member_name: "core-current-stubs-system-modules",
+    name: "art-module-sdk_core-public-stubs-system-modules@1",
+    sdk_member_name: "core-public-stubs-system-modules",
     visibility: ["//visibility:public"],
     licenses: ["art-module-sdk_libcore_license@1"],
     libs: ["art-module-sdk_core-current-stubs-for-system-modules@1"],
@@ -1262,7 +1262,7 @@ sdk_snapshot {
                 "art-module-sdk_art-module-public-api-stubs-system-modules@1",
                 "art-module-sdk_art-module-lib-api-stubs-system-modules@1",
                 "art-module-sdk_art-module-intra-core-api-stubs-system-modules@1",
-                "art-module-sdk_core-current-stubs-system-modules@1",
+                "art-module-sdk_core-public-stubs-system-modules@1",
                 "art-module-sdk_core-module-lib-stubs-system-modules@1",
                 "art-module-sdk_legacy-core-platform-api-stubs-system-modules@1",
                 "art-module-sdk_stable-core-platform-api-stubs-system-modules@1",
