@@ -1,19 +1,15 @@
 drops {
   android_build_drop {
-    build_id: "7734983"
-    target: "mainline_modules-user"
-    source_file: "mainline-sdks/art-module-sdk-current.zip"
+    build_id: "T1003987"
+    target: "train_build"
+    source_file: "mainline-sdks/for-latest-build/current/com.google.android.art/sdk/art-module-sdk-current.zip"
   }
   dest_file: "current/sdk/current.zip"
   version: ""
   version_group: ""
   git_project: "platform/prebuilts/module_sdk/art"
-  git_branch: "sc-dev"
+  git_branch: "tm-dev"
   transform: TRANSFORM_UNZIP
   transform_options {
-    rename {
-      from_path: "Android.bp"
-      to_path: "Android.bp.auto"
-    }
   }
 }
