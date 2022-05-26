@@ -691,7 +691,11 @@ cc_prebuilt_library_shared {
     sdk_member_name: "libdexfile",
     visibility: [
         "//art:__subpackages__",
+        "//external/perfetto",
         "//prebuilts:__subpackages__",
+        "//system/core/debuggerd",
+        "//system/extras/simpleperf",
+        "//system/unwinding/libunwindstack",
     ],
     apex_available: [
         "com.android.art",

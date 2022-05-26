@@ -726,6 +726,16 @@ package android.system {
     field public final String version;
   }
 
+  public final class SystemCleaner {
+    method @NonNull public static java.lang.ref.Cleaner cleaner();
+  }
+
+  public final class VmSocketAddress extends java.net.SocketAddress {
+    ctor public VmSocketAddress(int, int);
+    method public int getSvmCid();
+    method public int getSvmPort();
+  }
+
 }
 
 package dalvik.annotation {
@@ -2967,6 +2977,13 @@ package java.lang {
     method public Throwable getException();
   }
 
+  public abstract class ClassValue<T> {
+    ctor protected ClassValue();
+    method protected abstract T computeValue(Class<?>);
+    method public T get(Class<?>);
+    method public void remove(Class<?>);
+  }
+
   public class CloneNotSupportedException extends java.lang.Exception {
     ctor public CloneNotSupportedException();
     ctor public CloneNotSupportedException(String);
@@ -4341,26 +4358,39 @@ package java.lang.invoke {
     method public static java.lang.invoke.MethodHandle catchException(java.lang.invoke.MethodHandle, Class<? extends java.lang.Throwable>, java.lang.invoke.MethodHandle);
     method public static java.lang.invoke.MethodHandle collectArguments(java.lang.invoke.MethodHandle, int, java.lang.invoke.MethodHandle);
     method public static java.lang.invoke.MethodHandle constant(Class<?>, Object);
+    method public static java.lang.invoke.MethodHandle countedLoop(java.lang.invoke.MethodHandle, java.lang.invoke.MethodHandle, java.lang.invoke.MethodHandle);
+    method public static java.lang.invoke.MethodHandle countedLoop(java.lang.invoke.MethodHandle, java.lang.invoke.MethodHandle, java.lang.invoke.MethodHandle, java.lang.invoke.MethodHandle);
+    method public static java.lang.invoke.MethodHandle doWhileLoop(java.lang.invoke.MethodHandle, java.lang.invoke.MethodHandle, java.lang.invoke.MethodHandle);
     method public static java.lang.invoke.MethodHandle dropArguments(java.lang.invoke.MethodHandle, int, java.util.List<java.lang.Class<?>>);
     method public static java.lang.invoke.MethodHandle dropArguments(java.lang.invoke.MethodHandle, int, Class<?>...);
+    method public static java.lang.invoke.MethodHandle dropArgumentsToMatch(java.lang.invoke.MethodHandle, int, java.util.List<java.lang.Class<?>>, int);
+    method public static java.lang.invoke.MethodHandle dropReturn(java.lang.invoke.MethodHandle);
+    method public static java.lang.invoke.MethodHandle empty(java.lang.invoke.MethodType);
     method public static java.lang.invoke.MethodHandle exactInvoker(java.lang.invoke.MethodType);
     method public static java.lang.invoke.MethodHandle explicitCastArguments(java.lang.invoke.MethodHandle, java.lang.invoke.MethodType);
     method public static java.lang.invoke.MethodHandle filterArguments(java.lang.invoke.MethodHandle, int, java.lang.invoke.MethodHandle...);
     method public static java.lang.invoke.MethodHandle filterReturnValue(java.lang.invoke.MethodHandle, java.lang.invoke.MethodHandle);
     method public static java.lang.invoke.MethodHandle foldArguments(java.lang.invoke.MethodHandle, java.lang.invoke.MethodHandle);
+    method public static java.lang.invoke.MethodHandle foldArguments(java.lang.invoke.MethodHandle, int, java.lang.invoke.MethodHandle);
     method public static java.lang.invoke.MethodHandle guardWithTest(java.lang.invoke.MethodHandle, java.lang.invoke.MethodHandle, java.lang.invoke.MethodHandle);
     method public static java.lang.invoke.MethodHandle identity(Class<?>);
     method public static java.lang.invoke.MethodHandle insertArguments(java.lang.invoke.MethodHandle, int, java.lang.Object...);
     method public static java.lang.invoke.MethodHandle invoker(java.lang.invoke.MethodType);
+    method public static java.lang.invoke.MethodHandle iteratedLoop(java.lang.invoke.MethodHandle, java.lang.invoke.MethodHandle, java.lang.invoke.MethodHandle);
     method public static java.lang.invoke.MethodHandles.Lookup lookup();
+    method public static java.lang.invoke.MethodHandle loop(java.lang.invoke.MethodHandle[]...);
     method public static java.lang.invoke.MethodHandle permuteArguments(java.lang.invoke.MethodHandle, java.lang.invoke.MethodType, int...);
     method public static java.lang.invoke.MethodHandles.Lookup privateLookupIn(Class<?>, java.lang.invoke.MethodHandles.Lookup) throws java.lang.IllegalAccessException;
     method public static java.lang.invoke.MethodHandles.Lookup publicLookup();
     method public static <T extends java.lang.reflect.Member> T reflectAs(Class<T>, java.lang.invoke.MethodHandle);
     method public static java.lang.invoke.MethodHandle spreadInvoker(java.lang.invoke.MethodType, int);
+    method public static java.lang.invoke.MethodHandle tableSwitch(java.lang.invoke.MethodHandle, java.lang.invoke.MethodHandle...);
     method public static java.lang.invoke.MethodHandle throwException(Class<?>, Class<? extends java.lang.Throwable>);
+    method public static java.lang.invoke.MethodHandle tryFinally(java.lang.invoke.MethodHandle, java.lang.invoke.MethodHandle);
     method public static java.lang.invoke.MethodHandle varHandleExactInvoker(java.lang.invoke.VarHandle.AccessMode, java.lang.invoke.MethodType);
     method public static java.lang.invoke.MethodHandle varHandleInvoker(java.lang.invoke.VarHandle.AccessMode, java.lang.invoke.MethodType);
+    method public static java.lang.invoke.MethodHandle whileLoop(java.lang.invoke.MethodHandle, java.lang.invoke.MethodHandle, java.lang.invoke.MethodHandle);
+    method public static java.lang.invoke.MethodHandle zero(Class<?>);
   }
 
   public static final class MethodHandles.Lookup {
@@ -5129,6 +5159,7 @@ package java.net {
     method public java.net.InetAddress getLocalAddress();
     method public int getLocalPort();
     method public java.net.SocketAddress getLocalSocketAddress();
+    method public <T> T getOption(java.net.SocketOption<T>) throws java.io.IOException;
     method public int getPort();
     method public int getReceiveBufferSize() throws java.net.SocketException;
     method public java.net.SocketAddress getRemoteSocketAddress();
@@ -5143,11 +5174,13 @@ package java.net {
     method public void send(java.net.DatagramPacket) throws java.io.IOException;
     method public void setBroadcast(boolean) throws java.net.SocketException;
     method public static void setDatagramSocketImplFactory(java.net.DatagramSocketImplFactory) throws java.io.IOException;
+    method public <T> java.net.DatagramSocket setOption(java.net.SocketOption<T>, T) throws java.io.IOException;
     method public void setReceiveBufferSize(int) throws java.net.SocketException;
     method public void setReuseAddress(boolean) throws java.net.SocketException;
     method public void setSendBufferSize(int) throws java.net.SocketException;
     method public void setSoTimeout(int) throws java.net.SocketException;
     method public void setTrafficClass(int) throws java.net.SocketException;
+    method public java.util.Set<java.net.SocketOption<?>> supportedOptions();
   }
 
   public abstract class DatagramSocketImpl implements java.net.SocketOptions {
@@ -5159,6 +5192,7 @@ package java.net {
     method protected void disconnect();
     method protected java.io.FileDescriptor getFileDescriptor();
     method protected int getLocalPort();
+    method protected <T> T getOption(java.net.SocketOption<T>) throws java.io.IOException;
     method @Deprecated protected abstract byte getTTL() throws java.io.IOException;
     method protected abstract int getTimeToLive() throws java.io.IOException;
     method protected abstract void join(java.net.InetAddress) throws java.io.IOException;
@@ -5169,8 +5203,10 @@ package java.net {
     method protected abstract int peekData(java.net.DatagramPacket) throws java.io.IOException;
     method protected abstract void receive(java.net.DatagramPacket) throws java.io.IOException;
     method protected abstract void send(java.net.DatagramPacket) throws java.io.IOException;
+    method protected <T> void setOption(java.net.SocketOption<T>, T) throws java.io.IOException;
     method @Deprecated protected abstract void setTTL(byte) throws java.io.IOException;
     method protected abstract void setTimeToLive(int) throws java.io.IOException;
+    method protected java.util.Set<java.net.SocketOption<?>> supportedOptions();
     field protected java.io.FileDescriptor fd;
     field protected int localPort;
   }
@@ -5491,17 +5527,20 @@ package java.net {
     method public java.net.InetAddress getInetAddress();
     method public int getLocalPort();
     method public java.net.SocketAddress getLocalSocketAddress();
+    method public <T> T getOption(java.net.SocketOption<T>) throws java.io.IOException;
     method public int getReceiveBufferSize() throws java.net.SocketException;
     method public boolean getReuseAddress() throws java.net.SocketException;
     method public int getSoTimeout() throws java.io.IOException;
     method protected final void implAccept(java.net.Socket) throws java.io.IOException;
     method public boolean isBound();
     method public boolean isClosed();
+    method public <T> java.net.ServerSocket setOption(java.net.SocketOption<T>, T) throws java.io.IOException;
     method public void setPerformancePreferences(int, int, int);
     method public void setReceiveBufferSize(int) throws java.net.SocketException;
     method public void setReuseAddress(boolean) throws java.net.SocketException;
     method public void setSoTimeout(int) throws java.net.SocketException;
     method public static void setSocketFactory(java.net.SocketImplFactory) throws java.io.IOException;
+    method public java.util.Set<java.net.SocketOption<?>> supportedOptions();
   }
 
   public class Socket implements java.io.Closeable {
@@ -5526,6 +5565,7 @@ package java.net {
     method public int getLocalPort();
     method public java.net.SocketAddress getLocalSocketAddress();
     method public boolean getOOBInline() throws java.net.SocketException;
+    method public <T> T getOption(java.net.SocketOption<T>) throws java.io.IOException;
     method public java.io.OutputStream getOutputStream() throws java.io.IOException;
     method public int getPort();
     method public int getReceiveBufferSize() throws java.net.SocketException;
@@ -5544,6 +5584,7 @@ package java.net {
     method public void sendUrgentData(int) throws java.io.IOException;
     method public void setKeepAlive(boolean) throws java.net.SocketException;
     method public void setOOBInline(boolean) throws java.net.SocketException;
+    method public <T> java.net.Socket setOption(java.net.SocketOption<T>, T) throws java.io.IOException;
     method public void setPerformancePreferences(int, int, int);
     method public void setReceiveBufferSize(int) throws java.net.SocketException;
     method public void setReuseAddress(boolean) throws java.net.SocketException;
@@ -5555,6 +5596,7 @@ package java.net {
     method public void setTrafficClass(int) throws java.net.SocketException;
     method public void shutdownInput() throws java.io.IOException;
     method public void shutdownOutput() throws java.io.IOException;
+    method public java.util.Set<java.net.SocketOption<?>> supportedOptions();
   }
 
   public abstract class SocketAddress implements java.io.Serializable {
@@ -5580,13 +5622,16 @@ package java.net {
     method protected java.net.InetAddress getInetAddress();
     method protected abstract java.io.InputStream getInputStream() throws java.io.IOException;
     method protected int getLocalPort();
+    method protected <T> T getOption(java.net.SocketOption<T>) throws java.io.IOException;
     method protected abstract java.io.OutputStream getOutputStream() throws java.io.IOException;
     method protected int getPort();
     method protected abstract void listen(int) throws java.io.IOException;
     method protected abstract void sendUrgentData(int) throws java.io.IOException;
+    method protected <T> void setOption(java.net.SocketOption<T>, T) throws java.io.IOException;
     method protected void setPerformancePreferences(int, int, int);
     method protected void shutdownInput() throws java.io.IOException;
     method protected void shutdownOutput() throws java.io.IOException;
+    method protected java.util.Set<java.net.SocketOption<?>> supportedOptions();
     method protected boolean supportsUrgentData();
     field protected java.net.InetAddress address;
     field protected java.io.FileDescriptor fd;
@@ -7662,6 +7707,8 @@ package java.security {
     method public static java.security.KeyStore getInstance(String) throws java.security.KeyStoreException;
     method public static java.security.KeyStore getInstance(String, String) throws java.security.KeyStoreException, java.security.NoSuchProviderException;
     method public static java.security.KeyStore getInstance(String, java.security.Provider) throws java.security.KeyStoreException;
+    method public static final java.security.KeyStore getInstance(java.io.File, char[]) throws java.security.cert.CertificateException, java.io.IOException, java.security.KeyStoreException, java.security.NoSuchAlgorithmException;
+    method public static final java.security.KeyStore getInstance(java.io.File, java.security.KeyStore.LoadStoreParameter) throws java.security.cert.CertificateException, java.io.IOException, java.security.KeyStoreException, java.security.NoSuchAlgorithmException;
     method public final java.security.Key getKey(String, char[]) throws java.security.KeyStoreException, java.security.NoSuchAlgorithmException, java.security.UnrecoverableKeyException;
     method public final java.security.Provider getProvider();
     method public final String getType();
@@ -7684,6 +7731,7 @@ package java.security {
     method public abstract java.security.KeyStore.ProtectionParameter getProtectionParameter(String) throws java.security.KeyStoreException;
     method public static java.security.KeyStore.Builder newInstance(java.security.KeyStore, java.security.KeyStore.ProtectionParameter);
     method public static java.security.KeyStore.Builder newInstance(String, java.security.Provider, java.io.File, java.security.KeyStore.ProtectionParameter);
+    method public static java.security.KeyStore.Builder newInstance(java.io.File, java.security.KeyStore.ProtectionParameter);
     method public static java.security.KeyStore.Builder newInstance(String, java.security.Provider, java.security.KeyStore.ProtectionParameter);
   }
 
@@ -7759,6 +7807,7 @@ package java.security {
     method public abstract boolean engineIsKeyEntry(String);
     method public abstract void engineLoad(java.io.InputStream, char[]) throws java.security.cert.CertificateException, java.io.IOException, java.security.NoSuchAlgorithmException;
     method public void engineLoad(java.security.KeyStore.LoadStoreParameter) throws java.security.cert.CertificateException, java.io.IOException, java.security.NoSuchAlgorithmException;
+    method public boolean engineProbe(java.io.InputStream) throws java.io.IOException;
     method public abstract void engineSetCertificateEntry(String, java.security.cert.Certificate) throws java.security.KeyStoreException;
     method public void engineSetEntry(String, java.security.KeyStore.Entry, java.security.KeyStore.ProtectionParameter) throws java.security.KeyStoreException;
     method public abstract void engineSetKeyEntry(String, java.security.Key, char[], java.security.cert.Certificate[]) throws java.security.KeyStoreException;
@@ -8758,6 +8807,18 @@ package java.security.interfaces {
     field public static final long serialVersionUID = -3314988629879632826L; // 0xd1fecb679990cc46L
   }
 
+  public interface EdECKey {
+    method public java.security.spec.NamedParameterSpec getParams();
+  }
+
+  public interface EdECPrivateKey extends java.security.interfaces.EdECKey java.security.PrivateKey {
+    method public java.util.Optional<byte[]> getBytes();
+  }
+
+  public interface EdECPublicKey extends java.security.interfaces.EdECKey java.security.PublicKey {
+    method public java.security.spec.EdECPoint getPoint();
+  }
+
   public interface RSAKey {
     method public java.math.BigInteger getModulus();
   }
@@ -8795,6 +8856,14 @@ package java.security.interfaces {
 
   public interface XECKey {
     method public java.security.spec.AlgorithmParameterSpec getParams();
+  }
+
+  public interface XECPrivateKey extends java.security.interfaces.XECKey java.security.PrivateKey {
+    method public java.util.Optional<byte[]> getScalar();
+  }
+
+  public interface XECPublicKey extends java.security.interfaces.XECKey java.security.PublicKey {
+    method public java.math.BigInteger getU();
   }
 
 }
@@ -8847,9 +8916,8 @@ package java.security.spec {
     method public java.math.BigInteger getP();
   }
 
-  public class ECGenParameterSpec implements java.security.spec.AlgorithmParameterSpec {
+  public class ECGenParameterSpec extends java.security.spec.NamedParameterSpec implements java.security.spec.AlgorithmParameterSpec {
     ctor public ECGenParameterSpec(String);
-    method public String getName();
   }
 
   public class ECParameterSpec implements java.security.spec.AlgorithmParameterSpec {
@@ -8877,6 +8945,24 @@ package java.security.spec {
     ctor public ECPublicKeySpec(java.security.spec.ECPoint, java.security.spec.ECParameterSpec);
     method public java.security.spec.ECParameterSpec getParams();
     method public java.security.spec.ECPoint getW();
+  }
+
+  public final class EdECPoint {
+    ctor public EdECPoint(boolean, @NonNull java.math.BigInteger);
+    method @NonNull public java.math.BigInteger getY();
+    method public boolean isXOdd();
+  }
+
+  public final class EdECPrivateKeySpec implements java.security.spec.KeySpec {
+    ctor public EdECPrivateKeySpec(@NonNull java.security.spec.NamedParameterSpec, @NonNull byte[]);
+    method @NonNull public byte[] getBytes();
+    method @NonNull public java.security.spec.NamedParameterSpec getParams();
+  }
+
+  public final class EdECPublicKeySpec implements java.security.spec.KeySpec {
+    ctor public EdECPublicKeySpec(@NonNull java.security.spec.NamedParameterSpec, @NonNull java.security.spec.EdECPoint);
+    method @NonNull public java.security.spec.NamedParameterSpec getParams();
+    method @NonNull public java.security.spec.EdECPoint getPoint();
   }
 
   public class EllipticCurve {
@@ -8922,6 +9008,8 @@ package java.security.spec {
   public class NamedParameterSpec implements java.security.spec.AlgorithmParameterSpec {
     ctor public NamedParameterSpec(@NonNull String);
     method @NonNull public String getName();
+    field public static final java.security.spec.NamedParameterSpec ED25519;
+    field public static final java.security.spec.NamedParameterSpec ED448;
     field public static final java.security.spec.NamedParameterSpec X25519;
     field public static final java.security.spec.NamedParameterSpec X448;
   }
@@ -19713,6 +19801,7 @@ package org.json {
     ctor public JSONObject(@NonNull String) throws org.json.JSONException;
     ctor public JSONObject(@NonNull org.json.JSONObject, @NonNull String[]) throws org.json.JSONException;
     method @NonNull public org.json.JSONObject accumulate(@NonNull String, @Nullable Object) throws org.json.JSONException;
+    method @NonNull public org.json.JSONObject append(@NonNull String, @Nullable Object) throws org.json.JSONException;
     method @NonNull public Object get(@NonNull String) throws org.json.JSONException;
     method public boolean getBoolean(@NonNull String) throws org.json.JSONException;
     method public double getDouble(@NonNull String) throws org.json.JSONException;

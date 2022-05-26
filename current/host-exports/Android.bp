@@ -40,7 +40,7 @@ java_import {
 
 art_prebuilt_java_import {
     name: "okhttp-norepackage",
-    // Do not prefer prebuilt if SOONG_CONFIG_art_module_source_build is true.
+    // Do not prefer prebuilt if the Soong config variable "source_build" in namespace "art_module" is true.
     prefer: true,
     soong_config_variables: {
         source_build: {
@@ -85,7 +85,7 @@ java_import {
 
 art_prebuilt_java_import {
     name: "art.module.api.annotations",
-    // Do not prefer prebuilt if SOONG_CONFIG_art_module_source_build is true.
+    // Do not prefer prebuilt if the Soong config variable "source_build" in namespace "art_module" is true.
     prefer: true,
     soong_config_variables: {
         source_build: {
@@ -113,7 +113,6 @@ license {
     license_kinds: [
         "SPDX-license-identifier-Apache-2.0",
         "SPDX-license-identifier-BSD",
-        "SPDX-license-identifier-GPL-2.0",
     ],
     license_text: ["licenses/art/NOTICE"],
 }
@@ -124,7 +123,6 @@ license {
     license_kinds: [
         "SPDX-license-identifier-Apache-2.0",
         "SPDX-license-identifier-BSD",
-        "SPDX-license-identifier-GPL-2.0",
     ],
     license_text: ["licenses/art/NOTICE"],
 }
@@ -214,7 +212,7 @@ cc_prebuilt_binary {
 
 art_prebuilt_cc_prebuilt_binary {
     name: "dex2oat",
-    // Do not prefer prebuilt if SOONG_CONFIG_art_module_source_build is true.
+    // Do not prefer prebuilt if the Soong config variable "source_build" in namespace "art_module" is true.
     prefer: true,
     soong_config_variables: {
         source_build: {
@@ -266,7 +264,7 @@ cc_prebuilt_binary {
 
 art_prebuilt_cc_prebuilt_binary {
     name: "dex2oatd",
-    // Do not prefer prebuilt if SOONG_CONFIG_art_module_source_build is true.
+    // Do not prefer prebuilt if the Soong config variable "source_build" in namespace "art_module" is true.
     prefer: true,
     soong_config_variables: {
         source_build: {
@@ -322,7 +320,7 @@ cc_prebuilt_binary {
 
 art_prebuilt_cc_prebuilt_binary {
     name: "dexdump",
-    // Do not prefer prebuilt if SOONG_CONFIG_art_module_source_build is true.
+    // Do not prefer prebuilt if the Soong config variable "source_build" in namespace "art_module" is true.
     prefer: true,
     soong_config_variables: {
         source_build: {
@@ -381,7 +379,7 @@ cc_prebuilt_binary {
 
 art_prebuilt_cc_prebuilt_binary {
     name: "hiddenapi",
-    // Do not prefer prebuilt if SOONG_CONFIG_art_module_source_build is true.
+    // Do not prefer prebuilt if the Soong config variable "source_build" in namespace "art_module" is true.
     prefer: true,
     soong_config_variables: {
         source_build: {
@@ -439,7 +437,7 @@ cc_prebuilt_binary {
 
 art_prebuilt_cc_prebuilt_binary {
     name: "oatdump",
-    // Do not prefer prebuilt if SOONG_CONFIG_art_module_source_build is true.
+    // Do not prefer prebuilt if the Soong config variable "source_build" in namespace "art_module" is true.
     prefer: true,
     soong_config_variables: {
         source_build: {
@@ -500,7 +498,7 @@ cc_prebuilt_binary {
 
 art_prebuilt_cc_prebuilt_binary {
     name: "profman",
-    // Do not prefer prebuilt if SOONG_CONFIG_art_module_source_build is true.
+    // Do not prefer prebuilt if the Soong config variable "source_build" in namespace "art_module" is true.
     prefer: true,
     soong_config_variables: {
         source_build: {
@@ -558,7 +556,7 @@ cc_prebuilt_binary {
 
 art_prebuilt_cc_prebuilt_binary {
     name: "veridex",
-    // Do not prefer prebuilt if SOONG_CONFIG_art_module_source_build is true.
+    // Do not prefer prebuilt if the Soong config variable "source_build" in namespace "art_module" is true.
     prefer: true,
     soong_config_variables: {
         source_build: {
@@ -627,7 +625,7 @@ cc_prebuilt_library {
 
 art_prebuilt_cc_prebuilt_library {
     name: "libartpalette",
-    // Do not prefer prebuilt if SOONG_CONFIG_art_module_source_build is true.
+    // Do not prefer prebuilt if the Soong config variable "source_build" in namespace "art_module" is true.
     prefer: true,
     soong_config_variables: {
         source_build: {
@@ -696,6 +694,7 @@ cc_prebuilt_library {
     ],
     export_include_dirs: [
         "include/art/libartbase",
+        "include/external/tinyxml2",
         "include/system/libbase/include",
         "include/external/fmtlib/include",
     ],
@@ -717,7 +716,7 @@ cc_prebuilt_library {
 
 art_prebuilt_cc_prebuilt_library {
     name: "libartbase",
-    // Do not prefer prebuilt if SOONG_CONFIG_art_module_source_build is true.
+    // Do not prefer prebuilt if the Soong config variable "source_build" in namespace "art_module" is true.
     prefer: true,
     soong_config_variables: {
         source_build: {
@@ -747,6 +746,7 @@ art_prebuilt_cc_prebuilt_library {
     ],
     export_include_dirs: [
         "include/art/libartbase",
+        "include/external/tinyxml2",
         "include/system/libbase/include",
         "include/external/fmtlib/include",
     ],
