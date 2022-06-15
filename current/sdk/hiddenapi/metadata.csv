@@ -596,7 +596,6 @@ signature,maxTargetSdk,presentAfter,publicAlternatives,returnType,trackingBug
 |Ljava/text/DecimalFormatSymbols;->getPercentString()Ljava/lang/String;|,|30|,||,||,||,|170729553|
 |Ljava/text/NumberFormat;->getInstance(Ljava/util/Locale;I)Ljava/text/NumberFormat;|,|30|,||,||,||,|170729553|
 |Ljava/time/Duration;->toSeconds()Ljava/math/BigDecimal;|,||,||,||,||,|172313849|
-|Ljava/time/LocalDate;->getEra()Ljava/time/chrono/IsoEra;|,||,|33|,||,|Ljava/time/chrono/IsoEra;|,||
 |Ljava/time/OffsetDateTime;-><init>(Ljava/time/LocalDateTime;Ljava/time/ZoneOffset;)V|,|30|,||,||,||,|170729553|
 |Ljava/time/ZoneId;->of(Ljava/lang/String;Z)Ljava/time/ZoneId;|,|30|,||,||,||,|170729553|
 |Ljava/util/ArrayDeque;->elements:[Ljava/lang/Object;|,||,||,||,||,||
@@ -863,6 +862,7 @@ signature,maxTargetSdk,presentAfter,publicAlternatives,returnType,trackingBug
 |Lorg/json/JSONArray;->values:Ljava/util/List;|,||,||,||,||,||
 |Lorg/json/JSONArray;->writeTo(Lorg/json/JSONStringer;)V|,||,||,||,||,||
 |Lorg/json/JSONObject;->NEGATIVE_ZERO:Ljava/lang/Double;|,||,||,||,||,||
+|Lorg/json/JSONObject;->append(Ljava/lang/String;Ljava/lang/Object;)Lorg/json/JSONObject;|,||,||,||,||,||
 |Lorg/json/JSONObject;->checkName(Ljava/lang/String;)Ljava/lang/String;|,||,||,||,||,||
 |Lorg/json/JSONObject;->keySet()Ljava/util/Set;|,||,||,||,||,||
 |Lorg/json/JSONObject;->nameValuePairs:Ljava/util/LinkedHashMap;|,||,||,||,||,||

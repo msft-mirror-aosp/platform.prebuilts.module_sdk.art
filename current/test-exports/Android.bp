@@ -1,6 +1,6 @@
 // This is auto-generated. DO NOT EDIT.
 
-// Soong config variable stanza added by vendor/google/build/mainline_modules_sdks.py.
+// Soong config variable stanza added by vendor/unbundled_google/modules/ArtGooglePrebuilt/update-art-module-prebuilts.py.
 soong_config_module_type_import {
     from: "prebuilts/module_sdk/art/SoongConfig.bp",
     module_types: [
@@ -32,7 +32,7 @@ java_import {
 
 art_prebuilt_java_import {
     name: "core-compat-test-rules",
-    // Do not prefer prebuilt if the Soong config variable "source_build" in namespace "art_module" is true.
+    // Do not prefer prebuilt if SOONG_CONFIG_art_module_source_build is true.
     prefer: true,
     soong_config_variables: {
         source_build: {
@@ -62,7 +62,6 @@ java_import {
         "//frameworks/base/location/tests/locationtests",
         "//frameworks/base/wifi/tests",
         "//libcore",
-        "//libcore/luni/src/test/java9compatibility",
         "//packages/modules/Wifi/framework/tests",
         "//prebuilts:__subpackages__",
     ],
@@ -73,7 +72,7 @@ java_import {
 
 art_prebuilt_java_import {
     name: "core-test-rules",
-    // Do not prefer prebuilt if the Soong config variable "source_build" in namespace "art_module" is true.
+    // Do not prefer prebuilt if SOONG_CONFIG_art_module_source_build is true.
     prefer: true,
     soong_config_variables: {
         source_build: {
@@ -89,7 +88,6 @@ art_prebuilt_java_import {
         "//frameworks/base/location/tests/locationtests",
         "//frameworks/base/wifi/tests",
         "//libcore",
-        "//libcore/luni/src/test/java9compatibility",
         "//packages/modules/Wifi/framework/tests",
         "//prebuilts:__subpackages__",
     ],
@@ -123,7 +121,7 @@ java_import {
 
 art_prebuilt_java_import {
     name: "core-tests-support",
-    // Do not prefer prebuilt if the Soong config variable "source_build" in namespace "art_module" is true.
+    // Do not prefer prebuilt if SOONG_CONFIG_art_module_source_build is true.
     prefer: true,
     soong_config_variables: {
         source_build: {
@@ -166,7 +164,7 @@ java_import {
 
 art_prebuilt_java_import {
     name: "okhttp-tests-nojarjar",
-    // Do not prefer prebuilt if the Soong config variable "source_build" in namespace "art_module" is true.
+    // Do not prefer prebuilt if SOONG_CONFIG_art_module_source_build is true.
     prefer: true,
     soong_config_variables: {
         source_build: {
@@ -199,7 +197,7 @@ java_import {
 
 art_prebuilt_java_import {
     name: "art_cts_jvmti_test_library",
-    // Do not prefer prebuilt if the Soong config variable "source_build" in namespace "art_module" is true.
+    // Do not prefer prebuilt if SOONG_CONFIG_art_module_source_build is true.
     prefer: true,
     soong_config_variables: {
         source_build: {
@@ -232,7 +230,7 @@ java_import {
 
 art_prebuilt_java_import {
     name: "expected_cts_outputs",
-    // Do not prefer prebuilt if the Soong config variable "source_build" in namespace "art_module" is true.
+    // Do not prefer prebuilt if SOONG_CONFIG_art_module_source_build is true.
     prefer: true,
     soong_config_variables: {
         source_build: {
@@ -267,7 +265,7 @@ java_import {
 
 art_prebuilt_java_import {
     name: "core-libart-for-host",
-    // Do not prefer prebuilt if the Soong config variable "source_build" in namespace "art_module" is true.
+    // Do not prefer prebuilt if SOONG_CONFIG_art_module_source_build is true.
     prefer: true,
     soong_config_variables: {
         source_build: {
@@ -302,7 +300,7 @@ java_import {
 
 art_prebuilt_java_import {
     name: "okhttp-for-host",
-    // Do not prefer prebuilt if the Soong config variable "source_build" in namespace "art_module" is true.
+    // Do not prefer prebuilt if SOONG_CONFIG_art_module_source_build is true.
     prefer: true,
     soong_config_variables: {
         source_build: {
@@ -336,7 +334,7 @@ java_import {
 
 art_prebuilt_java_import {
     name: "libcore-expectations-knownfailures-jar",
-    // Do not prefer prebuilt if the Soong config variable "source_build" in namespace "art_module" is true.
+    // Do not prefer prebuilt if SOONG_CONFIG_art_module_source_build is true.
     prefer: true,
     soong_config_variables: {
         source_build: {
@@ -370,7 +368,7 @@ java_import {
 
 art_prebuilt_java_import {
     name: "libcore-expectations-virtualdeviceknownfailures-jar",
-    // Do not prefer prebuilt if the Soong config variable "source_build" in namespace "art_module" is true.
+    // Do not prefer prebuilt if SOONG_CONFIG_art_module_source_build is true.
     prefer: true,
     soong_config_variables: {
         source_build: {
@@ -404,7 +402,7 @@ java_import {
 
 art_prebuilt_java_import {
     name: "okhttp-nojarjar",
-    // Do not prefer prebuilt if the Soong config variable "source_build" in namespace "art_module" is true.
+    // Do not prefer prebuilt if SOONG_CONFIG_art_module_source_build is true.
     prefer: true,
     soong_config_variables: {
         source_build: {
@@ -439,7 +437,7 @@ java_test_import {
 
 art_prebuilt_java_test_import {
     name: "apache-harmony-jdwp-tests",
-    // Do not prefer prebuilt if the Soong config variable "source_build" in namespace "art_module" is true.
+    // Do not prefer prebuilt if SOONG_CONFIG_art_module_source_build is true.
     prefer: true,
     soong_config_variables: {
         source_build: {
@@ -475,7 +473,7 @@ java_test_import {
 
 art_prebuilt_java_test_import {
     name: "libcore-crypto-tests",
-    // Do not prefer prebuilt if the Soong config variable "source_build" in namespace "art_module" is true.
+    // Do not prefer prebuilt if SOONG_CONFIG_art_module_source_build is true.
     prefer: true,
     soong_config_variables: {
         source_build: {
@@ -511,7 +509,7 @@ java_test_import {
 
 art_prebuilt_java_test_import {
     name: "core-ojtests-public",
-    // Do not prefer prebuilt if the Soong config variable "source_build" in namespace "art_module" is true.
+    // Do not prefer prebuilt if SOONG_CONFIG_art_module_source_build is true.
     prefer: true,
     soong_config_variables: {
         source_build: {
@@ -547,7 +545,7 @@ java_test_import {
 
 art_prebuilt_java_test_import {
     name: "jsr166-tests",
-    // Do not prefer prebuilt if the Soong config variable "source_build" in namespace "art_module" is true.
+    // Do not prefer prebuilt if SOONG_CONFIG_art_module_source_build is true.
     prefer: true,
     soong_config_variables: {
         source_build: {
@@ -583,7 +581,7 @@ java_test_import {
 
 art_prebuilt_java_test_import {
     name: "apache-harmony-tests",
-    // Do not prefer prebuilt if the Soong config variable "source_build" in namespace "art_module" is true.
+    // Do not prefer prebuilt if SOONG_CONFIG_art_module_source_build is true.
     prefer: true,
     soong_config_variables: {
         source_build: {
@@ -619,7 +617,7 @@ java_test_import {
 
 art_prebuilt_java_test_import {
     name: "core-tests",
-    // Do not prefer prebuilt if the Soong config variable "source_build" in namespace "art_module" is true.
+    // Do not prefer prebuilt if SOONG_CONFIG_art_module_source_build is true.
     prefer: true,
     soong_config_variables: {
         source_build: {
@@ -645,6 +643,7 @@ license {
     license_kinds: [
         "SPDX-license-identifier-Apache-2.0",
         "SPDX-license-identifier-BSD",
+        "SPDX-license-identifier-GPL-2.0",
     ],
     license_text: ["licenses/art/NOTICE"],
 }
@@ -655,6 +654,7 @@ license {
     license_kinds: [
         "SPDX-license-identifier-Apache-2.0",
         "SPDX-license-identifier-BSD",
+        "SPDX-license-identifier-GPL-2.0",
     ],
     license_text: ["licenses/art/NOTICE"],
 }
@@ -790,7 +790,7 @@ cc_prebuilt_library_shared {
 
 art_prebuilt_cc_prebuilt_library_shared {
     name: "libjavacoretests",
-    // Do not prefer prebuilt if the Soong config variable "source_build" in namespace "art_module" is true.
+    // Do not prefer prebuilt if SOONG_CONFIG_art_module_source_build is true.
     prefer: true,
     soong_config_variables: {
         source_build: {

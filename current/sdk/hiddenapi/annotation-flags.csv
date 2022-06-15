@@ -595,7 +595,6 @@ Ljava/text/DateFormat;->is24Hour:Ljava/lang/Boolean;,unsupported
 Ljava/text/DecimalFormatSymbols;->getPercentString()Ljava/lang/String;,max-target-r
 Ljava/text/NumberFormat;->getInstance(Ljava/util/Locale;I)Ljava/text/NumberFormat;,max-target-r
 Ljava/time/Duration;->toSeconds()Ljava/math/BigDecimal;,unsupported
-Ljava/time/LocalDate;->getEra()Ljava/time/chrono/IsoEra;,public-api
 Ljava/time/OffsetDateTime;-><init>(Ljava/time/LocalDateTime;Ljava/time/ZoneOffset;)V,max-target-r
 Ljava/time/ZoneId;->of(Ljava/lang/String;Z)Ljava/time/ZoneId;,max-target-r
 Ljava/util/ArrayDeque;->elements:[Ljava/lang/Object;,unsupported
@@ -862,6 +861,7 @@ Lorg/apache/harmony/xml/dom/ElementImpl;->localName:Ljava/lang/String;,unsupport
 Lorg/json/JSONArray;->values:Ljava/util/List;,unsupported
 Lorg/json/JSONArray;->writeTo(Lorg/json/JSONStringer;)V,unsupported
 Lorg/json/JSONObject;->NEGATIVE_ZERO:Ljava/lang/Double;,unsupported
+Lorg/json/JSONObject;->append(Ljava/lang/String;Ljava/lang/Object;)Lorg/json/JSONObject;,unsupported
 Lorg/json/JSONObject;->checkName(Ljava/lang/String;)Ljava/lang/String;,unsupported
 Lorg/json/JSONObject;->keySet()Ljava/util/Set;,unsupported
 Lorg/json/JSONObject;->nameValuePairs:Ljava/util/LinkedHashMap;,unsupported
