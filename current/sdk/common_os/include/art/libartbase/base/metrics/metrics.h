@@ -30,7 +30,6 @@
 #include "android-base/logging.h"
 #include "base/bit_utils.h"
 #include "base/time_utils.h"
-#include "tinyxml2.h"
 
 #pragma clang diagnostic push
 #pragma clang diagnostic error "-Wconversion"
@@ -130,7 +129,7 @@ constexpr CompilationReason CompilationReasonFromName(std::string_view name) {
 }
 
 #undef REASON_NAME
-#undef REASON_FROM_NAME
+#undef ReasonFromName
 
 #define COMPILER_FILTER_REPORTING_LIST(V) \
   V(kError, "error") /* Error (invalid value) condition */ \
@@ -434,80 +433,12 @@ class MetricsAccumulator final : MetricsBase<T> {
   friend class ArtMetrics;
 };
 
-// Base class for formatting metrics into different formats
-// (human-readable text, JSON, etc.)
-class MetricsFormatter {
- public:
-  virtual ~MetricsFormatter() = default;
-
-  virtual void FormatBeginReport(uint64_t timestamp_since_start_ms,
-                                 const std::optional<SessionData>& session_data) = 0;
-  virtual void FormatEndReport() = 0;
-  virtual void FormatReportCounter(DatumId counter_type, uint64_t value) = 0;
-  virtual void FormatReportHistogram(DatumId histogram_type,
-                                     int64_t low_value,
-                                     int64_t high_value,
-                                     const std::vector<uint32_t>& buckets) = 0;
-  virtual std::string GetAndResetBuffer() = 0;
-
- protected:
-  const std::string version = "1.0";
-};
-
-// Formatter outputting metrics in human-readable text format
-class TextFormatter : public MetricsFormatter {
- public:
-  TextFormatter() = default;
-
-  void FormatBeginReport(uint64_t timestamp_millis,
-                         const std::optional<SessionData>& session_data) override;
-
-  void FormatReportCounter(DatumId counter_type, uint64_t value) override;
-
-  void FormatReportHistogram(DatumId histogram_type,
-                             int64_t low_value,
-                             int64_t high_value,
-                             const std::vector<uint32_t>& buckets) override;
-
-  void FormatEndReport() override;
-
-  std::string GetAndResetBuffer() override;
-
- private:
-  std::ostringstream os_;
-};
-
-// Formatter outputting metrics in XML format
-class XmlFormatter : public MetricsFormatter {
- public:
-  XmlFormatter() = default;
-
-  void FormatBeginReport(uint64_t timestamp_millis,
-                         const std::optional<SessionData>& session_data) override;
-
-  void FormatReportCounter(DatumId counter_type, uint64_t value) override;
-
-  void FormatReportHistogram(DatumId histogram_type,
-                             int64_t low_value,
-                             int64_t high_value,
-                             const std::vector<uint32_t>& buckets) override;
-
-  void FormatEndReport() override;
-
-  std::string GetAndResetBuffer() override;
-
- private:
-  tinyxml2::XMLDocument document_;
-};
-
-// A backend that writes metrics to a string.
-// The format of the metrics' output is delegated
-// to the MetricsFormatter class.
+// A backend that writes metrics in a human-readable format to a string.
 //
 // This is used as a base for LogBackend and FileBackend.
 class StringBackend : public MetricsBackend {
  public:
-  explicit StringBackend(std::unique_ptr<MetricsFormatter> formatter);
+  StringBackend();
 
   void BeginOrUpdateSession(const SessionData& session_data) override;
 
@@ -525,15 +456,14 @@ class StringBackend : public MetricsBackend {
   std::string GetAndResetBuffer();
 
  private:
-  std::unique_ptr<MetricsFormatter> formatter_;
+  std::ostringstream os_;
   std::optional<SessionData> session_data_;
 };
 
 // A backend that writes metrics in human-readable format to the log (i.e. logcat).
 class LogBackend : public StringBackend {
  public:
-  explicit LogBackend(std::unique_ptr<MetricsFormatter> formatter,
-                      android::base::LogSeverity level);
+  explicit LogBackend(android::base::LogSeverity level);
 
   void BeginReport(uint64_t timestamp_millis) override;
   void EndReport() override;
@@ -543,10 +473,12 @@ class LogBackend : public StringBackend {
 };
 
 // A backend that writes metrics to a file.
+//
+// These are currently written in the same human-readable format used by StringBackend and
+// LogBackend, but we will probably want a more machine-readable format in the future.
 class FileBackend : public StringBackend {
  public:
-  explicit FileBackend(std::unique_ptr<MetricsFormatter> formatter,
-                       const std::string& filename);
+  explicit FileBackend(const std::string& filename);
 
   void BeginReport(uint64_t timestamp_millis) override;
   void EndReport() override;
