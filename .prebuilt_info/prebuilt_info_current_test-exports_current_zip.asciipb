@@ -1,10 +1,6 @@
 drops {
   android_build_drop {
-<<<<<<< HEAD   (6e6f47 [automerger skipped] DO NOT MERGE - Merge TP1A.220624.013 am)
-    build_id: "T1004067"
-=======
-    build_id: "T1004275"
->>>>>>> CHANGE (9c99fa DO NOT MERGE Drop prebuilt files to android source tree.)
+    build_id: "T1004614"
     target: "train_build"
     source_file: "mainline-sdks/for-Tiramisu-build/current/com.google.android.art/test-exports/art-module-test-exports-current.zip"
   }
@@ -12,7 +8,7 @@ drops {
   version: ""
   version_group: ""
   git_project: "platform/prebuilts/module_sdk/art"
-  git_branch: "tm-dev"
+  git_branch: "master"
   transform: TRANSFORM_UNZIP
   transform_options {
   }
