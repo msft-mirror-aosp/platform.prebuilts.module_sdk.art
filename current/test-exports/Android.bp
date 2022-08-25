@@ -1,6 +1,6 @@
 // This is auto-generated. DO NOT EDIT.
 
-// Soong config variable stanza added by packages/modules/common/build/mainline_modules_sdks.py.
+// Soong config variable stanza added by vendor/google/build/mainline_modules_sdks.py.
 soong_config_module_type_import {
     from: "prebuilts/module_sdk/art/SoongConfig.bp",
     module_types: [
@@ -104,7 +104,6 @@ java_import {
     visibility: [
         "//art/build/sdk",
         "//cts/apps/CtsVerifier",
-        "//cts/hostsidetests/statsdatom/apps/statsdapp",
         "//cts/tests/tests/keystore",
         "//cts/tests/tests/net",
         "//cts/tests/tests/net/api23Test",
@@ -134,7 +133,6 @@ art_prebuilt_java_import {
     visibility: [
         "//art/build/sdk",
         "//cts/apps/CtsVerifier",
-        "//cts/hostsidetests/statsdatom/apps/statsdapp",
         "//cts/tests/tests/keystore",
         "//cts/tests/tests/net",
         "//cts/tests/tests/net/api23Test",
