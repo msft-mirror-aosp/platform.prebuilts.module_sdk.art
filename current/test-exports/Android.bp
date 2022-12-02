@@ -59,10 +59,12 @@ java_import {
     visibility: [
         "//art/build/sdk",
         "//cts/apps/CtsVerifier",
+        "//cts/hostsidetests/statsdatom/apps/statsdapp",
         "//cts/tests/tests/keystore",
         "//cts/tests/tests/net",
         "//cts/tests/tests/net/api23Test",
         "//external/apache-harmony",
+        "//frameworks/base/apct-tests/perftests/core",
         "//frameworks/base/core/tests/coretests",
         "//libcore",
         "//libcore/benchmarks",
@@ -74,6 +76,7 @@ java_import {
     apex_available: ["//apex_available:platform"],
     licenses: ["art-module-test-exports_libcore_license"],
     jars: ["java/core-tests-support.jar"],
+    min_sdk_version: "31",
 }
 
 java_import {
@@ -109,6 +112,7 @@ java_import {
     apex_available: ["//apex_available:platform"],
     licenses: ["art-module-test-exports_art_license"],
     jars: ["java/art_cts_jvmti_test_library.jar"],
+    min_sdk_version: "31",
 }
 
 java_import {
@@ -127,6 +131,7 @@ java_import {
     apex_available: ["//apex_available:platform"],
     licenses: ["art-module-test-exports_art_license"],
     jars: ["java/expected_cts_outputs.jar"],
+    min_sdk_version: "31",
 }
 
 java_import {
@@ -138,6 +143,7 @@ java_import {
     },
     visibility: [
         "//art/build/sdk",
+        "//external/robolectric",
         "//external/robolectric-shadows",
         "//frameworks/layoutlib",
         "//libcore",
@@ -158,6 +164,7 @@ java_import {
     visibility: [
         "//art/build/sdk",
         "//external/okhttp",
+        "//external/robolectric",
         "//external/robolectric-shadows",
         "//prebuilts:__subpackages__",
     ],
@@ -182,6 +189,7 @@ java_import {
     apex_available: ["//apex_available:platform"],
     licenses: ["art-module-test-exports_libcore_license"],
     jars: ["java/libcore-expectations-knownfailures-jar.jar"],
+    min_sdk_version: "31",
 }
 
 java_import {
@@ -200,6 +208,7 @@ java_import {
     apex_available: ["//apex_available:platform"],
     licenses: ["art-module-test-exports_libcore_license"],
     jars: ["java/libcore-expectations-virtualdeviceknownfailures-jar.jar"],
+    min_sdk_version: "31",
 }
 
 java_import {
@@ -268,11 +277,11 @@ java_test_import {
     visibility: [
         "//art/build/sdk",
         "//cts/tests/libcore/ojluni",
-        "//libcore",
+        "//libcore:__subpackages__",
         "//prebuilts:__subpackages__",
     ],
     apex_available: ["//apex_available:platform"],
-    licenses: ["art-module-test-exports_libcore_license"],
+    licenses: ["art-module-test-exports_libcore_ojluni_src_test_license"],
     jars: ["java/core-ojtests-public.jar"],
     test_config: "java/core-ojtests-public-AndroidTest.xml",
 }
@@ -325,7 +334,7 @@ java_test_import {
     visibility: [
         "//art/build/sdk",
         "//cts/tests/libcore/luni",
-        "//libcore",
+        "//libcore:__subpackages__",
         "//prebuilts:__subpackages__",
     ],
     apex_available: ["//apex_available:platform"],
@@ -350,9 +359,7 @@ license {
     license_kinds: [
         "SPDX-license-identifier-Apache-2.0",
         "SPDX-license-identifier-BSD",
-        "SPDX-license-identifier-GPL",
-        "SPDX-license-identifier-GPL-2.0",
-        "SPDX-license-identifier-LGPL",
+        "SPDX-license-identifier-GPL-2.0-with-classpath-exception",
         "SPDX-license-identifier-MIT",
         "SPDX-license-identifier-OpenSSL",
         "SPDX-license-identifier-Unicode-DFS",
@@ -362,6 +369,7 @@ license {
     license_text: [
         "licenses/libcore/LICENSE",
         "licenses/libcore/NOTICE",
+        "licenses/libcore/ojluni/src/main/NOTICE",
     ],
 }
 
@@ -381,6 +389,16 @@ license {
         "licenses/external/apache-harmony/jdwp/LICENSE.txt",
         "licenses/external/apache-harmony/jdwp/NOTICE.txt",
     ],
+}
+
+license {
+    name: "art-module-test-exports_libcore_ojluni_src_test_license",
+    visibility: ["//visibility:private"],
+    license_kinds: [
+        "SPDX-license-identifier-Apache-2.0",
+        "SPDX-license-identifier-GPL-2.0",
+    ],
+    license_text: ["licenses/libcore/ojluni/src/test/LICENSE"],
 }
 
 license {
