@@ -139,6 +139,7 @@ java_import {
     visibility: [
         "//art/build/sdk",
         "//external/robolectric-shadows",
+        "//external/robolectric",
         "//frameworks/layoutlib",
         "//libcore",
         "//prebuilts:__subpackages__",
@@ -159,6 +160,7 @@ java_import {
         "//art/build/sdk",
         "//external/okhttp",
         "//external/robolectric-shadows",
+        "//external/robolectric",
         "//prebuilts:__subpackages__",
     ],
     apex_available: ["//apex_available:platform"],
