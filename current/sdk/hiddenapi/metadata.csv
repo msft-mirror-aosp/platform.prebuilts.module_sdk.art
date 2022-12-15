@@ -701,7 +701,7 @@ signature,maxTargetSdk,presentAfter,publicAlternatives,returnType,trackingBug
 |Ljavax/net/ssl/SSLServerSocketFactory;->defaultServerSocketFactory:Ljavax/net/ssl/SSLServerSocketFactory;|,|28|,||,|Use {@link #getDefault()} to read the current default; from Android API level 21 onwards, apps should have no need to ever write this value because it is automatically recomputed when the set of {@link java.security.Provider} security providers changes.|,||,|118741276|
 |Ljavax/net/ssl/SSLSocketFactory;->createSocket(Ljava/net/Socket;Ljava/io/InputStream;Z)Ljava/net/Socket;|,||,||,||,||,||
 |Ljavax/net/ssl/SSLSocketFactory;->defaultSocketFactory:Ljavax/net/ssl/SSLSocketFactory;|,|28|,||,|Use {@link #getDefault()} to read the current default; from Android API level 21 onwards, apps should have no need to ever write this value because it is automatically recomputed when the set of {@link java.security.Provider} security providers changes.|,||,|118741276|
-|Llibcore/icu/DateIntervalFormat;->formatDateRange(JJILjava/lang/String;)Ljava/lang/String;|,||,||,||,||,||
+|Llibcore/icu/DateIntervalFormat;->formatDateRange(JJILjava/lang/String;)Ljava/lang/String;|,|33|,||,|Use {@code android.text.format.DateUtils#formatDateRange(Context, Formatter, long, long, int, String)} instead.|,||,||
 |Llibcore/icu/ICU;->CACHED_PATTERNS:Llibcore/util/BasicLruCache;|,||,||,||,||,||
 |Llibcore/icu/ICU;->addLikelySubtags(Ljava/lang/String;)Ljava/lang/String;|,||,||,||,||,||
 |Llibcore/icu/ICU;->addLikelySubtags(Ljava/util/Locale;)Ljava/util/Locale;|,||,||,||,||,||
