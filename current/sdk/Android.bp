@@ -79,8 +79,8 @@ java_import {
         "//art/build/apex",
         "//art/build/sdk",
         "//external/wycheproof",
-        "//libcore",
         "//libcore/benchmarks",
+        "//libcore:__subpackages__",
         "//packages/modules/ArtPrebuilt",
         "//prebuilts:__subpackages__",
     ],
@@ -90,6 +90,7 @@ java_import {
     ],
     licenses: ["art-module-sdk_libcore_license"],
     jars: ["java_boot_libs/snapshot/jars/are/invalid/core-oj.jar"],
+    min_sdk_version: "31",
 }
 
 java_import {
@@ -103,8 +104,8 @@ java_import {
         "//art/build/apex",
         "//art/build/sdk",
         "//external/wycheproof",
-        "//libcore",
         "//libcore/benchmarks",
+        "//libcore:__subpackages__",
         "//packages/modules/ArtPrebuilt",
         "//prebuilts:__subpackages__",
     ],
@@ -114,6 +115,7 @@ java_import {
     ],
     licenses: ["art-module-sdk_libcore_license"],
     jars: ["java_boot_libs/snapshot/jars/are/invalid/core-libart.jar"],
+    min_sdk_version: "31",
 }
 
 java_import {
@@ -128,8 +130,9 @@ java_import {
         "//art/build/sdk",
         "//external/grpc-grpc-java/okhttp",
         "//external/okhttp",
+        "//external/robolectric",
         "//external/robolectric-shadows",
-        "//libcore",
+        "//libcore:__subpackages__",
         "//packages/modules/ArtPrebuilt",
         "//prebuilts:__subpackages__",
     ],
@@ -139,6 +142,7 @@ java_import {
     ],
     licenses: ["art-module-sdk_external_okhttp_license"],
     jars: ["java_boot_libs/snapshot/jars/are/invalid/okhttp.jar"],
+    min_sdk_version: "31",
 }
 
 java_import {
@@ -153,7 +157,7 @@ java_import {
         "//art/build/sdk",
         "//external/bouncycastle",
         "//external/wycheproof",
-        "//libcore",
+        "//libcore:__subpackages__",
         "//packages/modules/ArtPrebuilt",
         "//prebuilts:__subpackages__",
     ],
@@ -163,6 +167,7 @@ java_import {
     ],
     licenses: ["art-module-sdk_external_bouncycastle_license"],
     jars: ["java_boot_libs/snapshot/jars/are/invalid/bouncycastle.jar"],
+    min_sdk_version: "31",
 }
 
 java_import {
@@ -186,6 +191,7 @@ java_import {
     ],
     licenses: ["art-module-sdk_external_apache-xml_license"],
     jars: ["java_boot_libs/snapshot/jars/are/invalid/apache-xml.jar"],
+    min_sdk_version: "31",
 }
 
 java_import {
@@ -199,6 +205,7 @@ java_import {
     apex_available: ["//apex_available:platform"],
     licenses: ["art-module-sdk_libcore_license"],
     jars: ["java/core-lambda-stubs.jar"],
+    min_sdk_version: "31",
 }
 
 java_import {
@@ -211,12 +218,13 @@ java_import {
     visibility: [
         "//art/build/sdk",
         "//build/soong/java/core-libraries",
-        "//libcore",
+        "//libcore:__subpackages__",
         "//prebuilts:__subpackages__",
     ],
     apex_available: ["//apex_available:platform"],
     licenses: ["art-module-sdk_libcore_license"],
     jars: ["java/core-lambda-stubs-for-system-modules.jar"],
+    min_sdk_version: "31",
 }
 
 java_import {
@@ -229,12 +237,13 @@ java_import {
     visibility: [
         "//art/build/sdk",
         "//build/soong/java/core-libraries",
-        "//libcore",
+        "//libcore:__subpackages__",
         "//prebuilts:__subpackages__",
     ],
     apex_available: ["//apex_available:platform"],
     licenses: ["art-module-sdk_libcore_license"],
     jars: ["java/core-generated-annotation-stubs.jar"],
+    min_sdk_version: "31",
 }
 
 java_import {
@@ -311,27 +320,27 @@ java_sdk_library_import {
     compile_dex: true,
     doctag_files: ["doctags/known_oj_tags.txt"],
     public: {
-        jars: ["sdk_library/public/art.module.public.api-stubs.jar"],
-        stub_srcs: ["sdk_library/public/art.module.public.api.srcjar"],
-        current_api: "sdk_library/public/art.module.public.api.txt",
-        removed_api: "sdk_library/public/art.module.public.api-removed.txt",
-        annotations: "sdk_library/public/art.module.public.api_annotations.zip",
+        jars: ["sdk_library/public/art-stubs.jar"],
+        stub_srcs: ["sdk_library/public/art.srcjar"],
+        current_api: "sdk_library/public/art.txt",
+        removed_api: "sdk_library/public/art-removed.txt",
+        annotations: "sdk_library/public/art_annotations.zip",
         sdk_version: "none",
     },
     system: {
-        jars: ["sdk_library/system/art.module.public.api-stubs.jar"],
-        stub_srcs: ["sdk_library/system/art.module.public.api.srcjar"],
-        current_api: "sdk_library/system/art.module.public.api.txt",
-        removed_api: "sdk_library/system/art.module.public.api-removed.txt",
-        annotations: "sdk_library/system/art.module.public.api_annotations.zip",
+        jars: ["sdk_library/system/art-stubs.jar"],
+        stub_srcs: ["sdk_library/system/art.srcjar"],
+        current_api: "sdk_library/system/art.txt",
+        removed_api: "sdk_library/system/art-removed.txt",
+        annotations: "sdk_library/system/art_annotations.zip",
         sdk_version: "none",
     },
     module_lib: {
-        jars: ["sdk_library/module-lib/art.module.public.api-stubs.jar"],
-        stub_srcs: ["sdk_library/module-lib/art.module.public.api.srcjar"],
-        current_api: "sdk_library/module-lib/art.module.public.api.txt",
-        removed_api: "sdk_library/module-lib/art.module.public.api-removed.txt",
-        annotations: "sdk_library/module-lib/art.module.public.api_annotations.zip",
+        jars: ["sdk_library/module-lib/art-stubs.jar"],
+        stub_srcs: ["sdk_library/module-lib/art.srcjar"],
+        current_api: "sdk_library/module-lib/art.txt",
+        removed_api: "sdk_library/module-lib/art-removed.txt",
+        annotations: "sdk_library/module-lib/art_annotations.zip",
         sdk_version: "none",
     },
 }
@@ -456,7 +465,7 @@ license {
     visibility: ["//visibility:private"],
     license_kinds: [
         "SPDX-license-identifier-Apache-2.0",
-        "SPDX-license-identifier-GPL-with-classpath-exception",
+        "SPDX-license-identifier-GPL-2.0-with-classpath-exception",
     ],
     license_text: ["licenses/art/openjdkjvmti/NOTICE"],
 }
@@ -467,9 +476,7 @@ license {
     license_kinds: [
         "SPDX-license-identifier-Apache-2.0",
         "SPDX-license-identifier-BSD",
-        "SPDX-license-identifier-GPL",
-        "SPDX-license-identifier-GPL-2.0",
-        "SPDX-license-identifier-LGPL",
+        "SPDX-license-identifier-GPL-2.0-with-classpath-exception",
         "SPDX-license-identifier-MIT",
         "SPDX-license-identifier-OpenSSL",
         "SPDX-license-identifier-Unicode-DFS",
@@ -479,6 +486,7 @@ license {
     license_text: [
         "licenses/libcore/LICENSE",
         "licenses/libcore/NOTICE",
+        "licenses/libcore/ojluni/src/main/NOTICE",
     ],
 }
 
@@ -790,6 +798,8 @@ cc_prebuilt_library_shared {
         "common_os/include/system/libbase/include",
         "common_os/include/external/fmtlib/include",
         "common_os/include/art/libartbase",
+        "common_os/include/external/tinyxml2",
+        "common_os/include/prebuilts/runtime/mainline/platform/sdk/common_os/include/external/libcap/libcap/include",
     ],
     stubs: {
         versions: [
@@ -1260,6 +1270,7 @@ cc_prebuilt_library_static {
     host_supported: true,
     compile_multilib: "both",
     export_include_dirs: [
+        "common_os/include/prebuilts/runtime/mainline/platform/sdk/common_os/include/external/libcap/libcap/include",
         "common_os/include/system/libbase/include",
         "common_os/include/external/fmtlib/include",
         "common_os/include/art/libartpalette/include",
@@ -1268,6 +1279,7 @@ cc_prebuilt_library_static {
         "common_os/include/system/libziparchive/include",
         "common_os/include/external/googletest/googletest/include",
         "common_os/include/art/libartbase",
+        "common_os/include/external/tinyxml2",
         "common_os/include/art/libdexfile",
         "common_os/include/libnativehelper/include_jni",
         "common_os/include/art/libdexfile/external/include",
