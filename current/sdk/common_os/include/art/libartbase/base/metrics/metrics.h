@@ -30,40 +30,67 @@
 #include "android-base/logging.h"
 #include "base/bit_utils.h"
 #include "base/time_utils.h"
+#include "tinyxml2.h"
 
 #pragma clang diagnostic push
 #pragma clang diagnostic error "-Wconversion"
 
 // See README.md in this directory for how to define metrics.
-#define ART_METRICS(METRIC)                                             \
-  METRIC(ClassLoadingTotalTime, MetricsCounter)                         \
-  METRIC(ClassVerificationTotalTime, MetricsCounter)                    \
-  METRIC(ClassVerificationCount, MetricsCounter)                        \
-  METRIC(WorldStopTimeDuringGCAvg, MetricsAverage)                      \
-  METRIC(YoungGcCount, MetricsCounter)                                  \
-  METRIC(FullGcCount, MetricsCounter)                                   \
-  METRIC(TotalBytesAllocated, MetricsCounter)                           \
-  METRIC(TotalGcCollectionTime, MetricsCounter)                         \
-  METRIC(YoungGcThroughputAvg, MetricsAverage)                          \
-  METRIC(FullGcThroughputAvg, MetricsAverage)                           \
-  METRIC(YoungGcTracingThroughputAvg, MetricsAverage)                   \
-  METRIC(FullGcTracingThroughputAvg, MetricsAverage)                    \
-  METRIC(JitMethodCompileTotalTime, MetricsCounter)                     \
-  METRIC(JitMethodCompileCount, MetricsCounter)                         \
-  METRIC(YoungGcCollectionTime, MetricsHistogram, 15, 0, 60'000)        \
-  METRIC(FullGcCollectionTime, MetricsHistogram, 15, 0, 60'000)         \
-  METRIC(YoungGcThroughput, MetricsHistogram, 15, 0, 10'000)            \
-  METRIC(FullGcThroughput, MetricsHistogram, 15, 0, 10'000)             \
-  METRIC(YoungGcTracingThroughput, MetricsHistogram, 15, 0, 10'000)     \
-  METRIC(FullGcTracingThroughput, MetricsHistogram, 15, 0, 10'000)      \
-  METRIC(GcWorldStopTime, MetricsCounter)                               \
-  METRIC(GcWorldStopCount, MetricsCounter)                              \
-  METRIC(YoungGcScannedBytes, MetricsCounter)                           \
-  METRIC(YoungGcFreedBytes, MetricsCounter)                             \
-  METRIC(YoungGcDuration, MetricsCounter)                               \
-  METRIC(FullGcScannedBytes, MetricsCounter)                            \
-  METRIC(FullGcFreedBytes, MetricsCounter)                              \
+
+// Metrics reported as Event Metrics.
+#define ART_EVENT_METRICS(METRIC)                                   \
+  METRIC(ClassLoadingTotalTime, MetricsCounter)                     \
+  METRIC(ClassVerificationTotalTime, MetricsCounter)                \
+  METRIC(ClassVerificationCount, MetricsCounter)                    \
+  METRIC(WorldStopTimeDuringGCAvg, MetricsAverage)                  \
+  METRIC(YoungGcCount, MetricsCounter)                              \
+  METRIC(FullGcCount, MetricsCounter)                               \
+  METRIC(TotalBytesAllocated, MetricsCounter)                       \
+  METRIC(TotalGcCollectionTime, MetricsCounter)                     \
+  METRIC(YoungGcThroughputAvg, MetricsAverage)                      \
+  METRIC(FullGcThroughputAvg, MetricsAverage)                       \
+  METRIC(YoungGcTracingThroughputAvg, MetricsAverage)               \
+  METRIC(FullGcTracingThroughputAvg, MetricsAverage)                \
+  METRIC(JitMethodCompileTotalTime, MetricsCounter)                 \
+  METRIC(JitMethodCompileCount, MetricsCounter)                     \
+  METRIC(YoungGcCollectionTime, MetricsHistogram, 15, 0, 60'000)    \
+  METRIC(FullGcCollectionTime, MetricsHistogram, 15, 0, 60'000)     \
+  METRIC(YoungGcThroughput, MetricsHistogram, 15, 0, 10'000)        \
+  METRIC(FullGcThroughput, MetricsHistogram, 15, 0, 10'000)         \
+  METRIC(YoungGcTracingThroughput, MetricsHistogram, 15, 0, 10'000) \
+  METRIC(FullGcTracingThroughput, MetricsHistogram, 15, 0, 10'000)  \
+  METRIC(GcWorldStopTime, MetricsCounter)                           \
+  METRIC(GcWorldStopCount, MetricsCounter)                          \
+  METRIC(YoungGcScannedBytes, MetricsCounter)                       \
+  METRIC(YoungGcFreedBytes, MetricsCounter)                         \
+  METRIC(YoungGcDuration, MetricsCounter)                           \
+  METRIC(FullGcScannedBytes, MetricsCounter)                        \
+  METRIC(FullGcFreedBytes, MetricsCounter)                          \
   METRIC(FullGcDuration, MetricsCounter)
+
+// Increasing counter metrics, reported as Value Metrics in delta increments.
+#define ART_VALUE_METRICS(METRIC)                              \
+  METRIC(GcWorldStopTimeDelta, MetricsDeltaCounter)            \
+  METRIC(GcWorldStopCountDelta, MetricsDeltaCounter)           \
+  METRIC(YoungGcScannedBytesDelta, MetricsDeltaCounter)        \
+  METRIC(YoungGcFreedBytesDelta, MetricsDeltaCounter)          \
+  METRIC(YoungGcDurationDelta, MetricsDeltaCounter)            \
+  METRIC(FullGcScannedBytesDelta, MetricsDeltaCounter)         \
+  METRIC(FullGcFreedBytesDelta, MetricsDeltaCounter)           \
+  METRIC(FullGcDurationDelta, MetricsDeltaCounter)             \
+  METRIC(JitMethodCompileTotalTimeDelta, MetricsDeltaCounter)  \
+  METRIC(JitMethodCompileCountDelta, MetricsDeltaCounter)      \
+  METRIC(ClassVerificationTotalTimeDelta, MetricsDeltaCounter) \
+  METRIC(ClassVerificationCountDelta, MetricsDeltaCounter)     \
+  METRIC(ClassLoadingTotalTimeDelta, MetricsDeltaCounter)      \
+  METRIC(TotalBytesAllocatedDelta, MetricsDeltaCounter)        \
+  METRIC(TotalGcCollectionTimeDelta, MetricsDeltaCounter)      \
+  METRIC(YoungGcCountDelta, MetricsDeltaCounter)               \
+  METRIC(FullGcCountDelta, MetricsDeltaCounter)
+
+#define ART_METRICS(METRIC) \
+  ART_EVENT_METRICS(METRIC) \
+  ART_VALUE_METRICS(METRIC)
 
 // A lot of the metrics implementation code is generated by passing one-off macros into ART_COUNTERS
 // and ART_HISTOGRAMS. This means metrics.h and metrics.cc are very #define-heavy, which can be
@@ -242,6 +269,8 @@ class MetricsBackend {
 
   template <DatumId counter_type, typename T>
   friend class MetricsCounter;
+  template <DatumId counter_type, typename T>
+  friend class MetricsDeltaCounter;
   template <DatumId histogram_type, size_t num_buckets, int64_t low_value, int64_t high_value>
   friend class MetricsHistogram;
   template <DatumId datum_id, typename T, const T& AccumulatorFunction(const T&, const T&)>
@@ -273,13 +302,14 @@ class MetricsCounter : public MetricsBase<T> {
   void AddOne() { Add(1u); }
   void Add(value_t value) { value_.fetch_add(value, std::memory_order::memory_order_relaxed); }
 
-  void Report(MetricsBackend* backend) const { backend->ReportCounter(counter_type, Value()); }
-
- protected:
-  void Reset() {
-    value_ = 0;
+  void Report(const std::vector<MetricsBackend*>& backends) const {
+    for (MetricsBackend* backend : backends) {
+      backend->ReportCounter(counter_type, Value());
+    }
   }
 
+ protected:
+  void Reset() { value_ = 0; }
   value_t Value() const { return value_.load(std::memory_order::memory_order_relaxed); }
 
  private:
@@ -316,11 +346,14 @@ class MetricsAverage final : public MetricsCounter<datum_id, T> {
     count_.fetch_add(1, std::memory_order::memory_order_release);
   }
 
-  void Report(MetricsBackend* backend) const {
+  void Report(const std::vector<MetricsBackend*>& backends) const {
+    count_t value = MetricsCounter<datum_id, value_t>::Value();
     count_t count = count_.load(std::memory_order::memory_order_acquire);
-    backend->ReportCounter(datum_id,
-                           // Avoid divide-by-0.
-                           count != 0 ? MetricsCounter<datum_id, value_t>::Value() / count : 0);
+    // Avoid divide-by-0.
+    count_t average_value = count != 0 ? value / count : 0;
+    for (MetricsBackend* backend : backends) {
+      backend->ReportCounter(datum_id, average_value);
+    }
   }
 
  protected:
@@ -332,6 +365,40 @@ class MetricsAverage final : public MetricsCounter<datum_id, T> {
  private:
   std::atomic<count_t> count_;
   static_assert(std::atomic<count_t>::is_always_lock_free);
+
+  friend class ArtMetrics;
+};
+
+template <DatumId datum_id, typename T = uint64_t>
+class MetricsDeltaCounter : public MetricsBase<T> {
+ public:
+  using value_t = T;
+
+  explicit constexpr MetricsDeltaCounter(uint64_t value = 0) : value_{value} {
+    // Ensure we do not have any unnecessary data in this class.
+    // Adding intptr_t to accommodate vtable, and rounding up to incorporate
+    // padding.
+    static_assert(RoundUp(sizeof(*this), sizeof(uint64_t)) ==
+                  RoundUp(sizeof(intptr_t) + sizeof(value_t), sizeof(uint64_t)));
+  }
+
+  void Add(value_t value) override {
+    value_.fetch_add(value, std::memory_order::memory_order_relaxed);
+  }
+  void AddOne() { Add(1u); }
+
+  void ReportAndReset(const std::vector<MetricsBackend*>& backends) {
+    value_t value = value_.exchange(0, std::memory_order::memory_order_relaxed);
+    for (MetricsBackend* backend : backends) {
+      backend->ReportCounter(datum_id, value);
+    }
+  }
+
+  void Reset() { value_ = 0; }
+
+ private:
+  std::atomic<value_t> value_;
+  static_assert(std::atomic<value_t>::is_always_lock_free);
 
   friend class ArtMetrics;
 };
@@ -360,8 +427,10 @@ class MetricsHistogram final : public MetricsBase<int64_t> {
     buckets_[i].fetch_add(1u, std::memory_order::memory_order_relaxed);
   }
 
-  void Report(MetricsBackend* backend) const {
-    backend->ReportHistogram(histogram_type_, minimum_value_, maximum_value_, GetBuckets());
+  void Report(const std::vector<MetricsBackend*>& backends) const {
+    for (MetricsBackend* backend : backends) {
+      backend->ReportHistogram(histogram_type_, minimum_value_, maximum_value_, GetBuckets());
+    }
   }
 
  protected:
@@ -441,12 +510,80 @@ class MetricsAccumulator final : MetricsBase<T> {
   friend class ArtMetrics;
 };
 
-// A backend that writes metrics in a human-readable format to a string.
+// Base class for formatting metrics into different formats
+// (human-readable text, JSON, etc.)
+class MetricsFormatter {
+ public:
+  virtual ~MetricsFormatter() = default;
+
+  virtual void FormatBeginReport(uint64_t timestamp_since_start_ms,
+                                 const std::optional<SessionData>& session_data) = 0;
+  virtual void FormatEndReport() = 0;
+  virtual void FormatReportCounter(DatumId counter_type, uint64_t value) = 0;
+  virtual void FormatReportHistogram(DatumId histogram_type,
+                                     int64_t low_value,
+                                     int64_t high_value,
+                                     const std::vector<uint32_t>& buckets) = 0;
+  virtual std::string GetAndResetBuffer() = 0;
+
+ protected:
+  const std::string version = "1.0";
+};
+
+// Formatter outputting metrics in human-readable text format
+class TextFormatter : public MetricsFormatter {
+ public:
+  TextFormatter() = default;
+
+  void FormatBeginReport(uint64_t timestamp_millis,
+                         const std::optional<SessionData>& session_data) override;
+
+  void FormatReportCounter(DatumId counter_type, uint64_t value) override;
+
+  void FormatReportHistogram(DatumId histogram_type,
+                             int64_t low_value,
+                             int64_t high_value,
+                             const std::vector<uint32_t>& buckets) override;
+
+  void FormatEndReport() override;
+
+  std::string GetAndResetBuffer() override;
+
+ private:
+  std::ostringstream os_;
+};
+
+// Formatter outputting metrics in XML format
+class XmlFormatter : public MetricsFormatter {
+ public:
+  XmlFormatter() = default;
+
+  void FormatBeginReport(uint64_t timestamp_millis,
+                         const std::optional<SessionData>& session_data) override;
+
+  void FormatReportCounter(DatumId counter_type, uint64_t value) override;
+
+  void FormatReportHistogram(DatumId histogram_type,
+                             int64_t low_value,
+                             int64_t high_value,
+                             const std::vector<uint32_t>& buckets) override;
+
+  void FormatEndReport() override;
+
+  std::string GetAndResetBuffer() override;
+
+ private:
+  tinyxml2::XMLDocument document_;
+};
+
+// A backend that writes metrics to a string.
+// The format of the metrics' output is delegated
+// to the MetricsFormatter class.
 //
 // This is used as a base for LogBackend and FileBackend.
 class StringBackend : public MetricsBackend {
  public:
-  StringBackend();
+  explicit StringBackend(std::unique_ptr<MetricsFormatter> formatter);
 
   void BeginOrUpdateSession(const SessionData& session_data) override;
 
@@ -464,14 +601,15 @@ class StringBackend : public MetricsBackend {
   std::string GetAndResetBuffer();
 
  private:
-  std::ostringstream os_;
+  std::unique_ptr<MetricsFormatter> formatter_;
   std::optional<SessionData> session_data_;
 };
 
 // A backend that writes metrics in human-readable format to the log (i.e. logcat).
 class LogBackend : public StringBackend {
  public:
-  explicit LogBackend(android::base::LogSeverity level);
+  explicit LogBackend(std::unique_ptr<MetricsFormatter> formatter,
+                      android::base::LogSeverity level);
 
   void BeginReport(uint64_t timestamp_millis) override;
   void EndReport() override;
@@ -481,12 +619,10 @@ class LogBackend : public StringBackend {
 };
 
 // A backend that writes metrics to a file.
-//
-// These are currently written in the same human-readable format used by StringBackend and
-// LogBackend, but we will probably want a more machine-readable format in the future.
 class FileBackend : public StringBackend {
  public:
-  explicit FileBackend(const std::string& filename);
+  explicit FileBackend(std::unique_ptr<MetricsFormatter> formatter,
+                       const std::string& filename);
 
   void BeginReport(uint64_t timestamp_millis) override;
   void EndReport() override;
@@ -571,8 +707,8 @@ class ArtMetrics {
  public:
   ArtMetrics();
 
-  void ReportAllMetrics(MetricsBackend* backend) const;
-  void DumpForSigQuit(std::ostream& os) const;
+  void ReportAllMetricsAndResetValueMetrics(const std::vector<MetricsBackend*>& backends);
+  void DumpForSigQuit(std::ostream& os);
 
   // Resets all metrics to their initial value. This is intended to be used after forking from the
   // zygote so we don't attribute parent values to the child process.
