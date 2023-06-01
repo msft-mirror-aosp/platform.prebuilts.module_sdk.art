@@ -1,5 +1,11 @@
 // This is auto-generated. DO NOT EDIT.
 
+// blueprint rules added by vendor/google/build/mainline_modules_sdks.py
+// to support coexistence.
+blueprint_package_includes {
+    match_all: ["com.android.mainline"]
+}
+
 package {
     // A default list here prevents the license LSC from adding its own list which would
     // be unnecessary as every module in the sdk already has its own licenses property.
@@ -19,7 +25,10 @@ java_import {
         "//external/okhttp",
         "//prebuilts:__subpackages__",
     ],
-    apex_available: ["com.android.adservices"],
+    apex_available: [
+        "com.android.adservices",
+        "com.android.extservices",
+    ],
     licenses: ["art-module-host-exports_external_okhttp_license"],
     host_supported: true,
     target: {

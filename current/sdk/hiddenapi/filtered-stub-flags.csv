@@ -1723,6 +1723,12 @@ Lcom/android/org/bouncycastle/jcajce/provider/symmetric/DESede$KeyFactory;->engi
 Lcom/android/org/bouncycastle/jcajce/provider/symmetric/DESede$KeyFactory;->engineGetKeySpec(Ljavax/crypto/SecretKey;Ljava/lang/Class;)Ljava/security/spec/KeySpec;,core-platform-api,public-api,system-api,test-api
 Lcom/android/org/bouncycastle/jcajce/provider/symmetric/DESede$KeyGenerator;->engineGenerateKey()Ljavax/crypto/SecretKey;,core-platform-api,public-api,system-api,test-api
 Lcom/android/org/bouncycastle/jcajce/provider/symmetric/DESede$KeyGenerator;->engineInit(ILjava/security/SecureRandom;)V,core-platform-api,public-api,system-api,test-api
+Lcom/android/org/bouncycastle/jcajce/provider/symmetric/PBEPBKDF2$AlgParams;->engineGetEncoded()[B,core-platform-api,public-api,system-api,test-api
+Lcom/android/org/bouncycastle/jcajce/provider/symmetric/PBEPBKDF2$AlgParams;->engineGetEncoded(Ljava/lang/String;)[B,core-platform-api,public-api,system-api,test-api
+Lcom/android/org/bouncycastle/jcajce/provider/symmetric/PBEPBKDF2$AlgParams;->engineInit(Ljava/security/spec/AlgorithmParameterSpec;)V,core-platform-api,public-api,system-api,test-api
+Lcom/android/org/bouncycastle/jcajce/provider/symmetric/PBEPBKDF2$AlgParams;->engineInit([B)V,core-platform-api,public-api,system-api,test-api
+Lcom/android/org/bouncycastle/jcajce/provider/symmetric/PBEPBKDF2$AlgParams;->engineInit([BLjava/lang/String;)V,core-platform-api,public-api,system-api,test-api
+Lcom/android/org/bouncycastle/jcajce/provider/symmetric/PBEPBKDF2$AlgParams;->engineToString()Ljava/lang/String;,core-platform-api,public-api,system-api,test-api
 Lcom/android/org/bouncycastle/jcajce/provider/symmetric/PBEPBKDF2$BasePBKDF2;->engineGenerateSecret(Ljava/security/spec/KeySpec;)Ljavax/crypto/SecretKey;,core-platform-api,public-api,system-api,test-api
 Lcom/android/org/bouncycastle/jcajce/provider/symmetric/PBEPKCS12$AlgParams;->engineGetEncoded()[B,core-platform-api,public-api,system-api,test-api
 Lcom/android/org/bouncycastle/jcajce/provider/symmetric/PBEPKCS12$AlgParams;->engineGetEncoded(Ljava/lang/String;)[B,core-platform-api,public-api,system-api,test-api

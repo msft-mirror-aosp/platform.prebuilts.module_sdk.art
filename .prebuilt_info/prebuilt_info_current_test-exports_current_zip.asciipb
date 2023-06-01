@@ -1,6 +1,6 @@
 drops {
   android_build_drop {
-    build_id: "T1005628"
+    build_id: "T1006563"
     target: "train_build"
     source_file: "mainline-sdks/for-Tiramisu-build/current/com.google.android.art/test-exports/art-module-test-exports-current.zip"
   }
