@@ -19,7 +19,7 @@ java_import {
         "//external/okhttp",
         "//prebuilts:__subpackages__",
     ],
-    apex_available: ["//apex_available:platform"],
+    apex_available: ["com.android.adservices"],
     licenses: ["art-module-host-exports_external_okhttp_license"],
     host_supported: true,
     target: {
@@ -76,9 +76,7 @@ license {
     license_kinds: [
         "SPDX-license-identifier-Apache-2.0",
         "SPDX-license-identifier-BSD",
-        "SPDX-license-identifier-GPL",
-        "SPDX-license-identifier-GPL-2.0",
-        "SPDX-license-identifier-LGPL",
+        "SPDX-license-identifier-GPL-2.0-with-classpath-exception",
         "SPDX-license-identifier-MIT",
         "SPDX-license-identifier-OpenSSL",
         "SPDX-license-identifier-Unicode-DFS",
@@ -88,6 +86,7 @@ license {
     license_text: [
         "licenses/libcore/LICENSE",
         "licenses/libcore/NOTICE",
+        "licenses/libcore/ojluni/src/main/NOTICE",
     ],
 }
 
@@ -366,6 +365,7 @@ cc_prebuilt_library {
     ],
     export_include_dirs: [
         "include/art/libartbase",
+        "include/external/tinyxml2",
         "include/system/libbase/include",
         "include/external/fmtlib/include",
     ],
