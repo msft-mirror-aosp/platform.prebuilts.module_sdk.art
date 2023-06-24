@@ -24227,6 +24227,7 @@ Llibcore/util/HexEncoding;->encodeToString([B)Ljava/lang/String;,core-platform-a
 Llibcore/util/HexEncoding;->encodeToString([BZ)Ljava/lang/String;,core-platform-api
 Llibcore/util/NativeAllocationRegistry$CleanerRunner;->run()V,core-platform-api,public-api,system-api,test-api
 Llibcore/util/NativeAllocationRegistry$CleanerThunk;->run()V,core-platform-api,public-api,system-api,test-api
+Llibcore/util/NativeAllocationRegistry$CleanerThunk;->toString()Ljava/lang/String;,core-platform-api,public-api,system-api,test-api
 Llibcore/util/NativeAllocationRegistry;-><init>(Ljava/lang/ClassLoader;JJ)V,core-platform-api
 Llibcore/util/NativeAllocationRegistry;->applyFreeFunction(JJ)V,core-platform-api
 Llibcore/util/NativeAllocationRegistry;->createMalloced(Ljava/lang/ClassLoader;J)Llibcore/util/NativeAllocationRegistry;,core-platform-api
