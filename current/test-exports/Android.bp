@@ -1,13 +1,9 @@
 // This is auto-generated. DO NOT EDIT.
 
-// Soong config variable stanza added by vendor/google/build/mainline_modules_sdks.py.
-soong_config_module_type_import {
-    from: "prebuilts/module_sdk/art/SoongConfig.bp",
-    module_types: [
-        "art_prebuilt_cc_prebuilt_library_shared",
-        "art_prebuilt_java_import",
-        "art_prebuilt_java_test_import",
-    ],
+// blueprint rules added by vendor/google/build/mainline_modules_sdks.py
+// to support coexistence.
+blueprint_package_includes {
+    match_all: ["com.android.mainline"]
 }
 
 package {
@@ -16,14 +12,12 @@ package {
     default_applicable_licenses: ["Android-Apache-2.0"],
 }
 
-art_prebuilt_java_import {
+java_import {
     name: "core-compat-test-rules",
     // Do not prefer prebuilt if the Soong config variable "source_build" in namespace "art_module" is true.
-    prefer: true,
-    soong_config_variables: {
-        source_build: {
-            prefer: false,
-        },
+    use_source_config_var: {
+        config_namespace: "art_module",
+        var_name: "source_build",
     },
     visibility: [
         "//art/build/sdk",
@@ -36,14 +30,12 @@ art_prebuilt_java_import {
     jars: ["java/core-compat-test-rules.jar"],
 }
 
-art_prebuilt_java_import {
+java_import {
     name: "core-test-rules",
     // Do not prefer prebuilt if the Soong config variable "source_build" in namespace "art_module" is true.
-    prefer: true,
-    soong_config_variables: {
-        source_build: {
-            prefer: false,
-        },
+    use_source_config_var: {
+        config_namespace: "art_module",
+        var_name: "source_build",
     },
     visibility: [
         "//art/build/sdk",
@@ -63,22 +55,22 @@ art_prebuilt_java_import {
     jars: ["java/core-test-rules.jar"],
 }
 
-art_prebuilt_java_import {
+java_import {
     name: "core-tests-support",
     // Do not prefer prebuilt if the Soong config variable "source_build" in namespace "art_module" is true.
-    prefer: true,
-    soong_config_variables: {
-        source_build: {
-            prefer: false,
-        },
+    use_source_config_var: {
+        config_namespace: "art_module",
+        var_name: "source_build",
     },
     visibility: [
         "//art/build/sdk",
         "//cts/apps/CtsVerifier",
+        "//cts/hostsidetests/statsdatom/apps/statsdapp",
         "//cts/tests/tests/keystore",
         "//cts/tests/tests/net",
         "//cts/tests/tests/net/api23Test",
         "//external/apache-harmony",
+        "//frameworks/base/apct-tests/perftests/core",
         "//frameworks/base/core/tests/coretests",
         "//libcore",
         "//libcore/benchmarks",
@@ -90,16 +82,15 @@ art_prebuilt_java_import {
     apex_available: ["//apex_available:platform"],
     licenses: ["art-module-test-exports_libcore_license"],
     jars: ["java/core-tests-support.jar"],
+    min_sdk_version: "31",
 }
 
-art_prebuilt_java_import {
+java_import {
     name: "okhttp-tests-nojarjar",
     // Do not prefer prebuilt if the Soong config variable "source_build" in namespace "art_module" is true.
-    prefer: true,
-    soong_config_variables: {
-        source_build: {
-            prefer: false,
-        },
+    use_source_config_var: {
+        config_namespace: "art_module",
+        var_name: "source_build",
     },
     visibility: [
         "//art/build/sdk",
@@ -112,14 +103,12 @@ art_prebuilt_java_import {
     jars: ["java/okhttp-tests-nojarjar.jar"],
 }
 
-art_prebuilt_java_import {
+java_import {
     name: "art_cts_jvmti_test_library",
     // Do not prefer prebuilt if the Soong config variable "source_build" in namespace "art_module" is true.
-    prefer: true,
-    soong_config_variables: {
-        source_build: {
-            prefer: false,
-        },
+    use_source_config_var: {
+        config_namespace: "art_module",
+        var_name: "source_build",
     },
     visibility: [
         "//art:__subpackages__",
@@ -129,16 +118,15 @@ art_prebuilt_java_import {
     apex_available: ["//apex_available:platform"],
     licenses: ["art-module-test-exports_art_license"],
     jars: ["java/art_cts_jvmti_test_library.jar"],
+    min_sdk_version: "31",
 }
 
-art_prebuilt_java_import {
+java_import {
     name: "expected_cts_outputs",
     // Do not prefer prebuilt if the Soong config variable "source_build" in namespace "art_module" is true.
-    prefer: true,
-    soong_config_variables: {
-        source_build: {
-            prefer: false,
-        },
+    use_source_config_var: {
+        config_namespace: "art_module",
+        var_name: "source_build",
     },
     visibility: [
         "//art/build/sdk",
@@ -149,19 +137,19 @@ art_prebuilt_java_import {
     apex_available: ["//apex_available:platform"],
     licenses: ["art-module-test-exports_art_license"],
     jars: ["java/expected_cts_outputs.jar"],
+    min_sdk_version: "31",
 }
 
-art_prebuilt_java_import {
+java_import {
     name: "core-libart-for-host",
     // Do not prefer prebuilt if the Soong config variable "source_build" in namespace "art_module" is true.
-    prefer: true,
-    soong_config_variables: {
-        source_build: {
-            prefer: false,
-        },
+    use_source_config_var: {
+        config_namespace: "art_module",
+        var_name: "source_build",
     },
     visibility: [
         "//art/build/sdk",
+        "//external/robolectric",
         "//external/robolectric-shadows",
         "//frameworks/layoutlib",
         "//libcore",
@@ -172,18 +160,17 @@ art_prebuilt_java_import {
     jars: ["java/core-libart-for-host.jar"],
 }
 
-art_prebuilt_java_import {
+java_import {
     name: "okhttp-for-host",
     // Do not prefer prebuilt if the Soong config variable "source_build" in namespace "art_module" is true.
-    prefer: true,
-    soong_config_variables: {
-        source_build: {
-            prefer: false,
-        },
+    use_source_config_var: {
+        config_namespace: "art_module",
+        var_name: "source_build",
     },
     visibility: [
         "//art/build/sdk",
         "//external/okhttp",
+        "//external/robolectric",
         "//external/robolectric-shadows",
         "//prebuilts:__subpackages__",
     ],
@@ -192,14 +179,12 @@ art_prebuilt_java_import {
     jars: ["java/okhttp-for-host.jar"],
 }
 
-art_prebuilt_java_import {
+java_import {
     name: "libcore-expectations-knownfailures-jar",
     // Do not prefer prebuilt if the Soong config variable "source_build" in namespace "art_module" is true.
-    prefer: true,
-    soong_config_variables: {
-        source_build: {
-            prefer: false,
-        },
+    use_source_config_var: {
+        config_namespace: "art_module",
+        var_name: "source_build",
     },
     visibility: [
         "//art/build/sdk",
@@ -210,16 +195,15 @@ art_prebuilt_java_import {
     apex_available: ["//apex_available:platform"],
     licenses: ["art-module-test-exports_libcore_license"],
     jars: ["java/libcore-expectations-knownfailures-jar.jar"],
+    min_sdk_version: "31",
 }
 
-art_prebuilt_java_import {
+java_import {
     name: "libcore-expectations-virtualdeviceknownfailures-jar",
     // Do not prefer prebuilt if the Soong config variable "source_build" in namespace "art_module" is true.
-    prefer: true,
-    soong_config_variables: {
-        source_build: {
-            prefer: false,
-        },
+    use_source_config_var: {
+        config_namespace: "art_module",
+        var_name: "source_build",
     },
     visibility: [
         "//art/build/sdk",
@@ -230,16 +214,15 @@ art_prebuilt_java_import {
     apex_available: ["//apex_available:platform"],
     licenses: ["art-module-test-exports_libcore_license"],
     jars: ["java/libcore-expectations-virtualdeviceknownfailures-jar.jar"],
+    min_sdk_version: "31",
 }
 
-art_prebuilt_java_import {
+java_import {
     name: "okhttp-nojarjar",
     // Do not prefer prebuilt if the Soong config variable "source_build" in namespace "art_module" is true.
-    prefer: true,
-    soong_config_variables: {
-        source_build: {
-            prefer: false,
-        },
+    use_source_config_var: {
+        config_namespace: "art_module",
+        var_name: "source_build",
     },
     visibility: [
         "//art/build/sdk",
@@ -252,14 +235,12 @@ art_prebuilt_java_import {
     jars: ["java/okhttp-nojarjar.jar"],
 }
 
-art_prebuilt_java_test_import {
+java_test_import {
     name: "apache-harmony-jdwp-tests",
     // Do not prefer prebuilt if the Soong config variable "source_build" in namespace "art_module" is true.
-    prefer: true,
-    soong_config_variables: {
-        source_build: {
-            prefer: false,
-        },
+    use_source_config_var: {
+        config_namespace: "art_module",
+        var_name: "source_build",
     },
     visibility: [
         "//art/build/sdk",
@@ -273,14 +254,12 @@ art_prebuilt_java_test_import {
     test_config: "java/apache-harmony-jdwp-tests-AndroidTest.xml",
 }
 
-art_prebuilt_java_test_import {
+java_test_import {
     name: "libcore-crypto-tests",
     // Do not prefer prebuilt if the Soong config variable "source_build" in namespace "art_module" is true.
-    prefer: true,
-    soong_config_variables: {
-        source_build: {
-            prefer: false,
-        },
+    use_source_config_var: {
+        config_namespace: "art_module",
+        var_name: "source_build",
     },
     visibility: [
         "//art/build/sdk",
@@ -294,35 +273,31 @@ art_prebuilt_java_test_import {
     test_config: "java/libcore-crypto-tests-AndroidTest.xml",
 }
 
-art_prebuilt_java_test_import {
+java_test_import {
     name: "core-ojtests-public",
     // Do not prefer prebuilt if the Soong config variable "source_build" in namespace "art_module" is true.
-    prefer: true,
-    soong_config_variables: {
-        source_build: {
-            prefer: false,
-        },
+    use_source_config_var: {
+        config_namespace: "art_module",
+        var_name: "source_build",
     },
     visibility: [
         "//art/build/sdk",
         "//cts/tests/libcore/ojluni",
-        "//libcore",
+        "//libcore:__subpackages__",
         "//prebuilts:__subpackages__",
     ],
     apex_available: ["//apex_available:platform"],
-    licenses: ["art-module-test-exports_libcore_license"],
+    licenses: ["art-module-test-exports_libcore_ojluni_src_test_license"],
     jars: ["java/core-ojtests-public.jar"],
     test_config: "java/core-ojtests-public-AndroidTest.xml",
 }
 
-art_prebuilt_java_test_import {
+java_test_import {
     name: "jsr166-tests",
     // Do not prefer prebuilt if the Soong config variable "source_build" in namespace "art_module" is true.
-    prefer: true,
-    soong_config_variables: {
-        source_build: {
-            prefer: false,
-        },
+    use_source_config_var: {
+        config_namespace: "art_module",
+        var_name: "source_build",
     },
     visibility: [
         "//art/build/sdk",
@@ -336,14 +311,12 @@ art_prebuilt_java_test_import {
     test_config: "java/jsr166-tests-AndroidTest.xml",
 }
 
-art_prebuilt_java_test_import {
+java_test_import {
     name: "apache-harmony-tests",
     // Do not prefer prebuilt if the Soong config variable "source_build" in namespace "art_module" is true.
-    prefer: true,
-    soong_config_variables: {
-        source_build: {
-            prefer: false,
-        },
+    use_source_config_var: {
+        config_namespace: "art_module",
+        var_name: "source_build",
     },
     visibility: [
         "//art/build/sdk",
@@ -357,19 +330,17 @@ art_prebuilt_java_test_import {
     test_config: "java/apache-harmony-tests-AndroidTest.xml",
 }
 
-art_prebuilt_java_test_import {
+java_test_import {
     name: "core-tests",
     // Do not prefer prebuilt if the Soong config variable "source_build" in namespace "art_module" is true.
-    prefer: true,
-    soong_config_variables: {
-        source_build: {
-            prefer: false,
-        },
+    use_source_config_var: {
+        config_namespace: "art_module",
+        var_name: "source_build",
     },
     visibility: [
         "//art/build/sdk",
         "//cts/tests/libcore/luni",
-        "//libcore",
+        "//libcore:__subpackages__",
         "//prebuilts:__subpackages__",
     ],
     apex_available: ["//apex_available:platform"],
@@ -394,9 +365,7 @@ license {
     license_kinds: [
         "SPDX-license-identifier-Apache-2.0",
         "SPDX-license-identifier-BSD",
-        "SPDX-license-identifier-GPL",
-        "SPDX-license-identifier-GPL-2.0",
-        "SPDX-license-identifier-LGPL",
+        "SPDX-license-identifier-GPL-2.0-with-classpath-exception",
         "SPDX-license-identifier-MIT",
         "SPDX-license-identifier-OpenSSL",
         "SPDX-license-identifier-Unicode-DFS",
@@ -406,6 +375,7 @@ license {
     license_text: [
         "licenses/libcore/LICENSE",
         "licenses/libcore/NOTICE",
+        "licenses/libcore/ojluni/src/main/NOTICE",
     ],
 }
 
@@ -428,20 +398,28 @@ license {
 }
 
 license {
+    name: "art-module-test-exports_libcore_ojluni_src_test_license",
+    visibility: ["//visibility:private"],
+    license_kinds: [
+        "SPDX-license-identifier-Apache-2.0",
+        "SPDX-license-identifier-GPL-2.0",
+    ],
+    license_text: ["licenses/libcore/ojluni/src/test/LICENSE"],
+}
+
+license {
     name: "art-module-test-exports_external_apache-harmony_license",
     visibility: ["//visibility:private"],
     license_kinds: ["SPDX-license-identifier-Apache-2.0"],
     license_text: ["licenses/external/apache-harmony/NOTICE"],
 }
 
-art_prebuilt_cc_prebuilt_library_shared {
+cc_prebuilt_library_shared {
     name: "libjavacoretests",
     // Do not prefer prebuilt if the Soong config variable "source_build" in namespace "art_module" is true.
-    prefer: true,
-    soong_config_variables: {
-        source_build: {
-            prefer: false,
-        },
+    use_source_config_var: {
+        config_namespace: "art_module",
+        var_name: "source_build",
     },
     visibility: [
         "//art/build/sdk",
