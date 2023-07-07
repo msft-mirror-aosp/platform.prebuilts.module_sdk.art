@@ -1,13 +1,9 @@
 // This is auto-generated. DO NOT EDIT.
 
-// Soong config variable stanza added by vendor/google/build/mainline_modules_sdks.py.
-soong_config_module_type_import {
-    from: "prebuilts/module_sdk/art/SoongConfig.bp",
-    module_types: [
-        "art_prebuilt_cc_prebuilt_binary",
-        "art_prebuilt_cc_prebuilt_library",
-        "art_prebuilt_java_import",
-    ],
+// blueprint rules added by vendor/google/build/mainline_modules_sdks.py
+// to support coexistence.
+blueprint_package_includes {
+    match_all: ["com.android.mainline"]
 }
 
 package {
@@ -16,14 +12,12 @@ package {
     default_applicable_licenses: ["Android-Apache-2.0"],
 }
 
-art_prebuilt_java_import {
+java_import {
     name: "okhttp-norepackage",
     // Do not prefer prebuilt if the Soong config variable "source_build" in namespace "art_module" is true.
-    prefer: true,
-    soong_config_variables: {
-        source_build: {
-            prefer: false,
-        },
+    use_source_config_var: {
+        config_namespace: "art_module",
+        var_name: "source_build",
     },
     visibility: [
         "//art/build/sdk",
@@ -31,9 +25,15 @@ art_prebuilt_java_import {
         "//external/okhttp",
         "//prebuilts:__subpackages__",
     ],
-    apex_available: ["//apex_available:platform"],
+    apex_available: [
+        "com.android.adservices",
+        "com.android.devicelock",
+        "com.android.extservices",
+        "com.android.ondevicepersonalization",
+    ],
     licenses: ["art-module-host-exports_external_okhttp_license"],
     host_supported: true,
+    min_sdk_version: "30",
     target: {
         android: {
             jars: ["java/android/okhttp-norepackage.jar"],
@@ -44,19 +44,18 @@ art_prebuilt_java_import {
     },
 }
 
-art_prebuilt_java_import {
+java_import {
     name: "art.module.api.annotations",
     // Do not prefer prebuilt if the Soong config variable "source_build" in namespace "art_module" is true.
-    prefer: true,
-    soong_config_variables: {
-        source_build: {
-            prefer: false,
-        },
+    use_source_config_var: {
+        config_namespace: "art_module",
+        var_name: "source_build",
     },
     visibility: [
         "//art/build/sdk",
         "//external/icu/android_icu4j",
         "//frameworks/base",
+        "//frameworks/base/api",
         "//libcore",
         "//prebuilts:__subpackages__",
     ],
@@ -65,6 +64,7 @@ art_prebuilt_java_import {
     device_supported: false,
     host_supported: true,
     jars: ["java/art.module.api.annotations.jar"],
+    min_sdk_version: "31",
 }
 
 license {
@@ -90,9 +90,7 @@ license {
     license_kinds: [
         "SPDX-license-identifier-Apache-2.0",
         "SPDX-license-identifier-BSD",
-        "SPDX-license-identifier-GPL",
-        "SPDX-license-identifier-GPL-2.0",
-        "SPDX-license-identifier-LGPL",
+        "SPDX-license-identifier-GPL-2.0-with-classpath-exception",
         "SPDX-license-identifier-MIT",
         "SPDX-license-identifier-OpenSSL",
         "SPDX-license-identifier-Unicode-DFS",
@@ -102,22 +100,22 @@ license {
     license_text: [
         "licenses/libcore/LICENSE",
         "licenses/libcore/NOTICE",
+        "licenses/libcore/ojluni/src/main/NOTICE",
     ],
 }
 
-art_prebuilt_cc_prebuilt_binary {
+cc_prebuilt_binary {
     name: "dex2oat",
     // Do not prefer prebuilt if the Soong config variable "source_build" in namespace "art_module" is true.
-    prefer: true,
-    soong_config_variables: {
-        source_build: {
-            prefer: false,
-        },
+    use_source_config_var: {
+        config_namespace: "art_module",
+        var_name: "source_build",
     },
     visibility: ["//visibility:public"],
     apex_available: [
         "com.android.art",
         "com.android.art.debug",
+        "test_broken_com.android.art",
     ],
     licenses: ["art-module-host-exports_art_license"],
     device_supported: false,
@@ -135,14 +133,12 @@ art_prebuilt_cc_prebuilt_binary {
     },
 }
 
-art_prebuilt_cc_prebuilt_binary {
+cc_prebuilt_binary {
     name: "dex2oatd",
     // Do not prefer prebuilt if the Soong config variable "source_build" in namespace "art_module" is true.
-    prefer: true,
-    soong_config_variables: {
-        source_build: {
-            prefer: false,
-        },
+    use_source_config_var: {
+        config_namespace: "art_module",
+        var_name: "source_build",
     },
     visibility: ["//visibility:public"],
     apex_available: ["com.android.art.debug"],
@@ -162,14 +158,12 @@ art_prebuilt_cc_prebuilt_binary {
     },
 }
 
-art_prebuilt_cc_prebuilt_binary {
+cc_prebuilt_binary {
     name: "dexdump",
     // Do not prefer prebuilt if the Soong config variable "source_build" in namespace "art_module" is true.
-    prefer: true,
-    soong_config_variables: {
-        source_build: {
-            prefer: false,
-        },
+    use_source_config_var: {
+        config_namespace: "art_module",
+        var_name: "source_build",
     },
     visibility: [
         "//art:__subpackages__",
@@ -179,6 +173,7 @@ art_prebuilt_cc_prebuilt_binary {
     apex_available: [
         "com.android.art",
         "com.android.art.debug",
+        "test_broken_com.android.art",
     ],
     licenses: ["art-module-host-exports_art_license"],
     device_supported: false,
@@ -196,14 +191,12 @@ art_prebuilt_cc_prebuilt_binary {
     },
 }
 
-art_prebuilt_cc_prebuilt_binary {
+cc_prebuilt_binary {
     name: "hiddenapi",
     // Do not prefer prebuilt if the Soong config variable "source_build" in namespace "art_module" is true.
-    prefer: true,
-    soong_config_variables: {
-        source_build: {
-            prefer: false,
-        },
+    use_source_config_var: {
+        config_namespace: "art_module",
+        var_name: "source_build",
     },
     visibility: [
         "//art:__subpackages__",
@@ -226,14 +219,12 @@ art_prebuilt_cc_prebuilt_binary {
     },
 }
 
-art_prebuilt_cc_prebuilt_binary {
+cc_prebuilt_binary {
     name: "oatdump",
     // Do not prefer prebuilt if the Soong config variable "source_build" in namespace "art_module" is true.
-    prefer: true,
-    soong_config_variables: {
-        source_build: {
-            prefer: false,
-        },
+    use_source_config_var: {
+        config_namespace: "art_module",
+        var_name: "source_build",
     },
     visibility: [
         "//art:__subpackages__",
@@ -242,6 +233,7 @@ art_prebuilt_cc_prebuilt_binary {
     apex_available: [
         "com.android.art",
         "com.android.art.debug",
+        "test_broken_com.android.art",
     ],
     licenses: ["art-module-host-exports_art_license"],
     device_supported: false,
@@ -259,14 +251,12 @@ art_prebuilt_cc_prebuilt_binary {
     },
 }
 
-art_prebuilt_cc_prebuilt_binary {
+cc_prebuilt_binary {
     name: "profman",
     // Do not prefer prebuilt if the Soong config variable "source_build" in namespace "art_module" is true.
-    prefer: true,
-    soong_config_variables: {
-        source_build: {
-            prefer: false,
-        },
+    use_source_config_var: {
+        config_namespace: "art_module",
+        var_name: "source_build",
     },
     visibility: [
         "//art:__subpackages__",
@@ -275,6 +265,7 @@ art_prebuilt_cc_prebuilt_binary {
     apex_available: [
         "com.android.art",
         "com.android.art.debug",
+        "test_broken_com.android.art",
     ],
     licenses: ["art-module-host-exports_art_license"],
     device_supported: false,
@@ -292,14 +283,12 @@ art_prebuilt_cc_prebuilt_binary {
     },
 }
 
-art_prebuilt_cc_prebuilt_binary {
+cc_prebuilt_binary {
     name: "veridex",
     // Do not prefer prebuilt if the Soong config variable "source_build" in namespace "art_module" is true.
-    prefer: true,
-    soong_config_variables: {
-        source_build: {
-            prefer: false,
-        },
+    use_source_config_var: {
+        config_namespace: "art_module",
+        var_name: "source_build",
     },
     visibility: [
         "//art:__subpackages__",
@@ -322,14 +311,12 @@ art_prebuilt_cc_prebuilt_binary {
     },
 }
 
-art_prebuilt_cc_prebuilt_library {
+cc_prebuilt_library {
     name: "libartpalette",
     // Do not prefer prebuilt if the Soong config variable "source_build" in namespace "art_module" is true.
-    prefer: true,
-    soong_config_variables: {
-        source_build: {
-            prefer: false,
-        },
+    use_source_config_var: {
+        config_namespace: "art_module",
+        var_name: "source_build",
     },
     visibility: [
         "//art:__subpackages__",
@@ -345,7 +332,10 @@ art_prebuilt_cc_prebuilt_library {
     device_supported: false,
     host_supported: true,
     compile_multilib: "64",
-    export_include_dirs: ["include/art/libartpalette/include"],
+    export_include_dirs: [
+        "include/art/libartpalette/include",
+        "include/libnativehelper/include_jni",
+    ],
     target: {
         host: {
             enabled: false,
@@ -366,14 +356,12 @@ art_prebuilt_cc_prebuilt_library {
     },
 }
 
-art_prebuilt_cc_prebuilt_library {
+cc_prebuilt_library {
     name: "libartbase",
     // Do not prefer prebuilt if the Soong config variable "source_build" in namespace "art_module" is true.
-    prefer: true,
-    soong_config_variables: {
-        source_build: {
-            prefer: false,
-        },
+    use_source_config_var: {
+        config_namespace: "art_module",
+        var_name: "source_build",
     },
     visibility: [
         "//art:__subpackages__",
@@ -390,14 +378,16 @@ art_prebuilt_cc_prebuilt_library {
     host_supported: true,
     compile_multilib: "64",
     shared_libs: [
-        "libbase",
         "libziparchive",
         "libz",
         "liblog",
         "libartpalette",
+        "libbase",
     ],
     export_include_dirs: [
         "include/art/libartbase",
+        "include/external/tinyxml2",
+        "include/external/libcap/libcap/include",
         "include/system/libbase/include",
         "include/external/fmtlib/include",
     ],
