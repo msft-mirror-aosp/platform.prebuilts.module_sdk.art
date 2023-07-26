@@ -18,6 +18,9 @@
   <compat-change description="If this change is enabled, {@link #getHardwareAddress()} returns null when the hardware address is &lt;a href=&quot;#access-restrictions&quot;&gt;inaccessible&lt;/a&gt;. If the change is disabled, the default MAC address (02:00:00:00:00:00) is returned instead." enableSinceTargetSdk="30" id="170188668" name="RETURN_NULL_HARDWARE_ADDRESS">
     <meta-data definedIn="java.net.NetworkInterface" sourcePosition="libcore/ojluni/src/main/java/java/net/NetworkInterface.java:79" />
   </compat-change>
+  <compat-change description="Since Android 14, {@link PriorityQueue#offer(E)} requires all elements to be comparable if there was no comparator. Previously, the first element being added did not need to be comparable. This flag is enabled for apps targeting Android 14+." enableSinceTargetSdk="34" id="289878283" name="PRIORITY_QUEUE_OFFER_NON_COMPARABLE_ONE_ELEMENT">
+    <meta-data definedIn="java.util.PriorityQueue" sourcePosition="libcore/ojluni/src/main/java/java/util/PriorityQueue.java:1002" />
+  </compat-change>
   <compat-change description="Since Android 14 {@link #fromString} does more strict input argument validation. This flag is enabled for apps targeting Android 14+." enableSinceTargetSdk="34" id="263076149" name="ENABLE_STRICT_VALIDATION">
     <meta-data definedIn="java.util.UUID" sourcePosition="libcore/ojluni/src/main/java/java/util/UUID.java:199" />
   </compat-change>
