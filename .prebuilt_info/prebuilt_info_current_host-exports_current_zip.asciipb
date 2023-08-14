@@ -1,6 +1,6 @@
 drops {
   android_build_drop {
-    build_id: "T1007458"
+    build_id: "T1007601"
     target: "train_build"
     source_file: "mainline-sdks/for-UpsideDownCake-build/current/com.google.android.art/host-exports/art-module-host-exports-current.zip"
   }
@@ -8,7 +8,7 @@ drops {
   version: ""
   version_group: ""
   git_project: "platform/prebuilts/module_sdk/art"
-  git_branch: "udc-dev"
+  git_branch: "udc-d1-dev"
   transform: TRANSFORM_UNZIP
   transform_options {
   }
