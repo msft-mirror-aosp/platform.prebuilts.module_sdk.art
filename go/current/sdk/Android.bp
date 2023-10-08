@@ -357,6 +357,9 @@ java_sdk_library_import {
     licenses: ["art-module-sdk_art_license"],
     shared_library: false,
     permitted_packages: ["com.android.server.art"],
+    dex_preopt: {
+        profile_guided: true,
+    },
     public: {
         jars: ["sdk_library/public/service-art-stubs.jar"],
         stub_srcs: ["sdk_library/public/service-art.srcjar"],
@@ -911,6 +914,7 @@ cc_prebuilt_library_shared {
         "common_os/include/libnativehelper/include_jni",
         "common_os/include/libnativehelper/include_platform",
         "common_os/include/libnativehelper/include_platform_header_only",
+        "common_os/include/system/logging/liblog/include",
     ],
     stubs: {
         versions: [
@@ -1121,6 +1125,7 @@ cc_prebuilt_library_shared {
         "//packages/modules/Connectivity:__subpackages__",
         "//packages/modules/ExtServices:__subpackages__",
         "//packages/modules/NetworkStack:__subpackages__",
+        "//packages/modules/Permission/tests/cts:__subpackages__",
         "//prebuilts:__subpackages__",
     ],
     apex_available: [
@@ -1138,6 +1143,7 @@ cc_prebuilt_library_shared {
         "include/libnativehelper/header_only_include",
         "include/libnativehelper/include",
         "include/libnativehelper/include_jni",
+        "include/system/logging/liblog/include",
     ],
     arch: {
         arm64: {
@@ -1209,8 +1215,6 @@ cc_prebuilt_library_static {
         "//apex_available:platform",
         "com.android.art",
         "com.android.art.debug",
-        "com.android.media",
-        "com.android.media.swcodec",
         "com.android.runtime",
     ],
     licenses: ["art-module-sdk_art_license"],
@@ -1323,6 +1327,7 @@ cc_prebuilt_library_static {
         "common_os/include/libnativehelper/include_jni",
         "common_os/include/libnativehelper/include_platform",
         "common_os/include/libnativehelper/include_platform_header_only",
+        "common_os/include/system/logging/liblog/include",
     ],
     target: {
         host: {
