@@ -1,6 +1,6 @@
 drops {
   android_build_drop {
-    build_id: "10917791"
+    build_id: "10928423"
     target: "mainline_modules_sdks-trunk-userdebug"
     source_file: "mainline-sdks/for-latest-build/current/com.google.android.art/sdk/art-module-sdk-current.zip"
   }
