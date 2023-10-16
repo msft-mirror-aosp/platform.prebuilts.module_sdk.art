@@ -1,5 +1,11 @@
 // This is auto-generated. DO NOT EDIT.
 
+// blueprint rules added by vendor/google/build/mainline_modules_sdks.py
+// to support coexistence.
+blueprint_package_includes {
+    match_all: ["com.android.mainline"]
+}
+
 package {
     // A default list here prevents the license LSC from adding its own list which would
     // be unnecessary as every module in the sdk already has its own licenses property.
@@ -19,10 +25,15 @@ java_import {
         "//external/okhttp",
         "//prebuilts:__subpackages__",
     ],
-    apex_available: ["com.android.adservices"],
+    apex_available: [
+        "com.android.adservices",
+        "com.android.devicelock",
+        "com.android.extservices",
+        "com.android.ondevicepersonalization",
+    ],
     licenses: ["art-module-host-exports_external_okhttp_license"],
     host_supported: true,
-    min_sdk_version: "31",
+    min_sdk_version: "30",
     target: {
         android: {
             jars: ["java/android/okhttp-norepackage.jar"],
@@ -44,6 +55,7 @@ java_import {
         "//art/build/sdk",
         "//external/icu/android_icu4j",
         "//frameworks/base",
+        "//frameworks/base/api",
         "//libcore",
         "//prebuilts:__subpackages__",
     ],
@@ -103,6 +115,7 @@ cc_prebuilt_binary {
     apex_available: [
         "com.android.art",
         "com.android.art.debug",
+        "test_broken_com.android.art",
     ],
     licenses: ["art-module-host-exports_art_license"],
     device_supported: false,
@@ -160,6 +173,7 @@ cc_prebuilt_binary {
     apex_available: [
         "com.android.art",
         "com.android.art.debug",
+        "test_broken_com.android.art",
     ],
     licenses: ["art-module-host-exports_art_license"],
     device_supported: false,
@@ -219,6 +233,7 @@ cc_prebuilt_binary {
     apex_available: [
         "com.android.art",
         "com.android.art.debug",
+        "test_broken_com.android.art",
     ],
     licenses: ["art-module-host-exports_art_license"],
     device_supported: false,
@@ -250,6 +265,7 @@ cc_prebuilt_binary {
     apex_available: [
         "com.android.art",
         "com.android.art.debug",
+        "test_broken_com.android.art",
     ],
     licenses: ["art-module-host-exports_art_license"],
     device_supported: false,
@@ -316,7 +332,10 @@ cc_prebuilt_library {
     device_supported: false,
     host_supported: true,
     compile_multilib: "64",
-    export_include_dirs: ["include/art/libartpalette/include"],
+    export_include_dirs: [
+        "include/art/libartpalette/include",
+        "include/libnativehelper/include_jni",
+    ],
     target: {
         host: {
             enabled: false,
@@ -359,16 +378,16 @@ cc_prebuilt_library {
     host_supported: true,
     compile_multilib: "64",
     shared_libs: [
-        "libbase",
         "libziparchive",
         "libz",
         "liblog",
         "libartpalette",
+        "libbase",
     ],
     export_include_dirs: [
         "include/art/libartbase",
         "include/external/tinyxml2",
-        "include/prebuilts/runtime/mainline/platform/sdk/common_os/include/external/libcap/libcap/include",
+        "include/external/libcap/libcap/include",
         "include/system/libbase/include",
         "include/external/fmtlib/include",
     ],
