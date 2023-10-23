@@ -39,7 +39,6 @@ java_import {
     },
     visibility: [
         "//art/build/sdk",
-        "//cts/tests/core/runner-axt",
         "//cts/tests/tests/util",
         "//external/conscrypt",
         "//external/conscrypt/apex/tests",
@@ -48,7 +47,6 @@ java_import {
         "//frameworks/base/wifi/tests",
         "//libcore",
         "//libcore/luni/src/test/java9compatibility",
-        "//libcore/ojluni/src/test",
         "//packages/modules/Wifi/framework/tests",
         "//prebuilts:__subpackages__",
     ],
@@ -324,7 +322,6 @@ java_test_import {
         "//art/build/sdk",
         "//cts/tests/libcore/luni",
         "//external/apache-harmony",
-        "//libcore",
         "//prebuilts:__subpackages__",
     ],
     apex_available: ["//apex_available:platform"],

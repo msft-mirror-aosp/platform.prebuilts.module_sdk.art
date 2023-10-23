@@ -12,40 +12,37 @@ package {
     default_applicable_licenses: ["Android-Apache-2.0"],
 }
 
-// TODO(b/293006869): There was a version upgrade of grpc-grpc-java recently and would not be compiled
-// with old version of okhttp-norepackage in prebuilt package. Thus, we will force this target to build
-// from source until the new version of okhttp-norepackage reflects in train build.
-// java_import {
-//     name: "okhttp-norepackage",
-//     // Do not prefer prebuilt if the Soong config variable "source_build" in namespace "art_module" is true.
-//     use_source_config_var: {
-//         config_namespace: "art_module",
-//         var_name: "source_build",
-//     },
-//     visibility: [
-//         "//art/build/sdk",
-//         "//external/grpc-grpc-java/okhttp",
-//         "//external/okhttp",
-//         "//prebuilts:__subpackages__",
-//     ],
-//     apex_available: [
-//         "com.android.adservices",
-//         "com.android.devicelock",
-//         "com.android.extservices",
-//         "com.android.ondevicepersonalization",
-//     ],
-//     licenses: ["art-module-host-exports_external_okhttp_license"],
-//     host_supported: true,
-//     min_sdk_version: "30",
-//     target: {
-//         android: {
-//             jars: ["java/android/okhttp-norepackage.jar"],
-//         },
-//         linux_glibc: {
-//             jars: ["java/linux_glibc/okhttp-norepackage.jar"],
-//         },
-//     },
-// }
+java_import {
+    name: "okhttp-norepackage",
+    // Do not prefer prebuilt if the Soong config variable "source_build" in namespace "art_module" is true.
+    use_source_config_var: {
+        config_namespace: "art_module",
+        var_name: "source_build",
+    },
+    visibility: [
+        "//art/build/sdk",
+        "//external/grpc-grpc-java/okhttp",
+        "//external/okhttp",
+        "//prebuilts:__subpackages__",
+    ],
+    apex_available: [
+        "com.android.adservices",
+        "com.android.devicelock",
+        "com.android.extservices",
+        "com.android.ondevicepersonalization",
+    ],
+    licenses: ["art-module-host-exports_external_okhttp_license"],
+    host_supported: true,
+    min_sdk_version: "30",
+    target: {
+        android: {
+            jars: ["java/android/okhttp-norepackage.jar"],
+        },
+        linux_glibc: {
+            jars: ["java/linux_glibc/okhttp-norepackage.jar"],
+        },
+    },
+}
 
 java_import {
     name: "art.module.api.annotations",
