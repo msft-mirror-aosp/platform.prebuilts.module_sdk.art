@@ -12232,9 +12232,6 @@ Ljava/text/ParsePosition;->hashCode()I,core-platform-api,public-api,system-api,t
 Ljava/text/ParsePosition;->setErrorIndex(I)V,core-platform-api,public-api,system-api,test-api
 Ljava/text/ParsePosition;->setIndex(I)V,core-platform-api,public-api,system-api,test-api
 Ljava/text/ParsePosition;->toString()Ljava/lang/String;,core-platform-api,public-api,system-api,test-api
-Ljava/text/PatternEntry;->equals(Ljava/lang/Object;)Z,core-platform-api,public-api,system-api,test-api
-Ljava/text/PatternEntry;->hashCode()I,core-platform-api,public-api,system-api,test-api
-Ljava/text/PatternEntry;->toString()Ljava/lang/String;,core-platform-api,public-api,system-api,test-api
 Ljava/text/RuleBasedCollator;-><init>(Ljava/lang/String;)V,core-platform-api,public-api,system-api,test-api
 Ljava/text/RuleBasedCollator;->clone()Ljava/lang/Object;,core-platform-api,public-api,system-api,test-api
 Ljava/text/RuleBasedCollator;->compare(Ljava/lang/String;Ljava/lang/String;)I,core-platform-api,public-api,system-api,test-api
