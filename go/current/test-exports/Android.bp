@@ -47,6 +47,7 @@ java_import {
         "//frameworks/base/wifi/tests",
         "//libcore",
         "//libcore/luni/src/test/java9compatibility",
+        "//libcore/ojluni/src/test",
         "//packages/modules/Wifi/framework/tests",
         "//prebuilts:__subpackages__",
     ],
