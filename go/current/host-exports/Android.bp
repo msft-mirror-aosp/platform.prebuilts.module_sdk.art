@@ -320,7 +320,7 @@ cc_prebuilt_library {
     },
     visibility: [
         "//art:__subpackages__",
-        "//prebuilts/module_sdk/art/current/host-exports",
+        "//prebuilts/module_sdk/art:__subpackages__",
         "//prebuilts:__subpackages__",
     ],
     apex_available: [
