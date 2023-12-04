@@ -51,14 +51,9 @@ class BitVector {
    *     // Use idx.
    *   }
    */
-  class IndexIterator {
+  class IndexIterator :
+      public std::iterator<std::forward_iterator_tag, uint32_t, ptrdiff_t, void, uint32_t> {
    public:
-    using iterator_category = std::forward_iterator_tag;
-    using value_type = uint32_t;
-    using difference_type = ptrdiff_t;
-    using pointer = void;
-    using reference = uint32_t;
-
     bool operator==(const IndexIterator& other) const;
 
     bool operator!=(const IndexIterator& other) const {
