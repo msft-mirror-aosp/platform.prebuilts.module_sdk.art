@@ -39,7 +39,6 @@ java_import {
     },
     visibility: [
         "//art/build/sdk",
-        "//cts/tests/core/runner-axt",
         "//cts/tests/tests/util",
         "//external/conscrypt",
         "//external/conscrypt/apex/tests",
