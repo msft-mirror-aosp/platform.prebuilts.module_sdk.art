@@ -23,14 +23,11 @@
 
 namespace art {
 
-template <typename T>
-class StrideIterator {
+template<typename T>
+class StrideIterator : public std::iterator<std::random_access_iterator_tag, T> {
  public:
-  using iterator_category = std::random_access_iterator_tag;
-  using value_type = T;
-  using difference_type = ptrdiff_t;
-  using pointer = value_type*;
-  using reference = value_type&;
+  using difference_type =
+      typename std::iterator<std::random_access_iterator_tag, T>::difference_type;
 
   StrideIterator(const StrideIterator&) = default;
   StrideIterator(StrideIterator&&) noexcept = default;
