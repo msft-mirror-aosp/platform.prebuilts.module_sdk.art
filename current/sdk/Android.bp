@@ -1124,6 +1124,7 @@ cc_prebuilt_library_shared {
         "//packages/modules/Connectivity:__subpackages__",
         "//packages/modules/ExtServices:__subpackages__",
         "//packages/modules/NetworkStack:__subpackages__",
+        "//packages/modules/Permission/tests/cts:__subpackages__",
         "//prebuilts:__subpackages__",
     ],
     apex_available: [
