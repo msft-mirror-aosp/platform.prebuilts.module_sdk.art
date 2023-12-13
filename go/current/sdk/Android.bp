@@ -357,6 +357,9 @@ java_sdk_library_import {
     licenses: ["art-module-sdk_art_license"],
     shared_library: false,
     permitted_packages: ["com.android.server.art"],
+    dex_preopt: {
+        profile_guided: true,
+    },
     public: {
         jars: ["sdk_library/public/service-art-stubs.jar"],
         stub_srcs: ["sdk_library/public/service-art.srcjar"],
