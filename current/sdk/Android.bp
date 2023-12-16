@@ -778,7 +778,6 @@ cc_prebuilt_library_shared {
     visibility: [
         "//art:__subpackages__",
         "//external/perfetto",
-        "//frameworks/base/services/core/jni",
         "//prebuilts:__subpackages__",
         "//system/core/debuggerd",
         "//system/extras/simpleperf",
