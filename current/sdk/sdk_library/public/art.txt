@@ -350,6 +350,7 @@ package android.system {
     field public static final int IPV6_MULTICAST_HOPS;
     field public static final int IPV6_MULTICAST_IF;
     field public static final int IPV6_MULTICAST_LOOP;
+    field public static final int IPV6_PKTINFO;
     field public static final int IPV6_RECVDSTOPTS;
     field public static final int IPV6_RECVHOPLIMIT;
     field public static final int IPV6_RECVHOPOPTS;
@@ -409,6 +410,7 @@ package android.system {
     field public static final int O_SYNC;
     field public static final int O_TRUNC;
     field public static final int O_WRONLY;
+    field public static final int PACKET_IGNORE_OUTGOING;
     field public static final int POLLERR;
     field public static final int POLLHUP;
     field public static final int POLLIN;
@@ -482,6 +484,7 @@ package android.system {
     field public static final int SOCK_RAW;
     field public static final int SOCK_SEQPACKET;
     field public static final int SOCK_STREAM;
+    field public static final int SOL_PACKET;
     field public static final int SOL_SOCKET;
     field public static final int SOL_UDP;
     field public static final int SO_BINDTODEVICE;
@@ -2395,6 +2398,7 @@ package java.lang {
     method @NonNull public default java.util.stream.IntStream chars();
     method @NonNull public default java.util.stream.IntStream codePoints();
     method public static int compare(@NonNull CharSequence, @NonNull CharSequence);
+    method public default boolean isEmpty();
     method public int length();
     method @NonNull public CharSequence subSequence(int, int);
     method @NonNull public String toString();
@@ -2412,6 +2416,7 @@ package java.lang {
     method public static int codePointBefore(char[], int, int);
     method public static int codePointCount(@NonNull CharSequence, int, int);
     method public static int codePointCount(char[], int, int);
+    method public static int codePointOf(@NonNull String);
     method public static int compare(char, char);
     method public int compareTo(@NonNull Character);
     method public static int digit(char, int);
@@ -2480,6 +2485,7 @@ package java.lang {
     method public static char toLowerCase(char);
     method public static int toLowerCase(int);
     method @NonNull public static String toString(char);
+    method @NonNull public static String toString(int);
     method public static char toTitleCase(char);
     method public static int toTitleCase(int);
     method public static char toUpperCase(char);
@@ -2880,7 +2886,7 @@ package java.lang {
   }
 
   public enum Character.UnicodeScript {
-    method @NonNull public static java.lang.Character.UnicodeScript forName(@NonNull String);
+    method @NonNull public static final java.lang.Character.UnicodeScript forName(@NonNull String);
     method @NonNull public static java.lang.Character.UnicodeScript of(int);
     enum_constant public static final java.lang.Character.UnicodeScript ADLAM;
     enum_constant public static final java.lang.Character.UnicodeScript AHOM;
@@ -3144,7 +3150,7 @@ package java.lang {
     method protected java.net.URL findResource(String);
     method protected java.util.Enumeration<java.net.URL> findResources(String) throws java.io.IOException;
     method protected final Class<?> findSystemClass(String) throws java.lang.ClassNotFoundException;
-    method protected Package getPackage(String);
+    method @Deprecated protected Package getPackage(String);
     method protected Package[] getPackages();
     method public final ClassLoader getParent();
     method public java.net.URL getResource(String);
@@ -4074,7 +4080,6 @@ package java.lang {
     method public int indexOf(@NonNull String, int);
     method @NonNull public String intern();
     method public boolean isBlank();
-    method public boolean isEmpty();
     method @NonNull public static String join(@NonNull CharSequence, @Nullable java.lang.CharSequence...);
     method @NonNull public static String join(@NonNull CharSequence, @NonNull Iterable<? extends java.lang.CharSequence>);
     method public int lastIndexOf(int);
@@ -4106,6 +4111,7 @@ package java.lang {
     method public char[] toCharArray();
     method @NonNull public String toLowerCase(@NonNull java.util.Locale);
     method @NonNull public String toLowerCase();
+    method @NonNull public String toString();
     method @NonNull public String toUpperCase(@NonNull java.util.Locale);
     method @NonNull public String toUpperCase();
     method public <R> R transform(@NonNull java.util.function.Function<? super java.lang.String,? extends R>);
@@ -4177,6 +4183,7 @@ package java.lang {
     method @NonNull public CharSequence subSequence(int, int);
     method @NonNull public String substring(int);
     method @NonNull public String substring(int, int);
+    method @NonNull public String toString();
     method public void trimToSize();
   }
 
@@ -4234,6 +4241,7 @@ package java.lang {
     method @NonNull public CharSequence subSequence(int, int);
     method @NonNull public String substring(int);
     method @NonNull public String substring(int, int);
+    method @NonNull public String toString();
     method public void trimToSize();
   }
 
@@ -4561,8 +4569,8 @@ package java.lang.invoke {
     method public java.lang.invoke.MethodHandle asType(java.lang.invoke.MethodType);
     method public java.lang.invoke.MethodHandle asVarargsCollector(Class<?>);
     method public java.lang.invoke.MethodHandle bindTo(Object);
-    method public final Object invoke(java.lang.Object...) throws java.lang.Throwable;
-    method public final Object invokeExact(java.lang.Object...) throws java.lang.Throwable;
+    method public final native Object invoke(java.lang.Object...) throws java.lang.Throwable;
+    method public final native Object invokeExact(java.lang.Object...) throws java.lang.Throwable;
     method public Object invokeWithArguments(java.lang.Object...) throws java.lang.Throwable;
     method public Object invokeWithArguments(java.util.List<?>) throws java.lang.Throwable;
     method public boolean isVarargsCollector();
@@ -4735,45 +4743,45 @@ package java.lang.invoke {
   public abstract class VarHandle {
     method public final java.lang.invoke.MethodType accessModeType(java.lang.invoke.VarHandle.AccessMode);
     method public static void acquireFence();
-    method public final Object compareAndExchange(java.lang.Object...);
-    method public final Object compareAndExchangeAcquire(java.lang.Object...);
-    method public final Object compareAndExchangeRelease(java.lang.Object...);
-    method public final boolean compareAndSet(java.lang.Object...);
+    method public final native Object compareAndExchange(java.lang.Object...);
+    method public final native Object compareAndExchangeAcquire(java.lang.Object...);
+    method public final native Object compareAndExchangeRelease(java.lang.Object...);
+    method public final native boolean compareAndSet(java.lang.Object...);
     method public final java.util.List<java.lang.Class<?>> coordinateTypes();
     method public static void fullFence();
-    method public final Object get(java.lang.Object...);
-    method public final Object getAcquire(java.lang.Object...);
-    method public final Object getAndAdd(java.lang.Object...);
-    method public final Object getAndAddAcquire(java.lang.Object...);
-    method public final Object getAndAddRelease(java.lang.Object...);
-    method public final Object getAndBitwiseAnd(java.lang.Object...);
-    method public final Object getAndBitwiseAndAcquire(java.lang.Object...);
-    method public final Object getAndBitwiseAndRelease(java.lang.Object...);
-    method public final Object getAndBitwiseOr(java.lang.Object...);
-    method public final Object getAndBitwiseOrAcquire(java.lang.Object...);
-    method public final Object getAndBitwiseOrRelease(java.lang.Object...);
-    method public final Object getAndBitwiseXor(java.lang.Object...);
-    method public final Object getAndBitwiseXorAcquire(java.lang.Object...);
-    method public final Object getAndBitwiseXorRelease(java.lang.Object...);
-    method public final Object getAndSet(java.lang.Object...);
-    method public final Object getAndSetAcquire(java.lang.Object...);
-    method public final Object getAndSetRelease(java.lang.Object...);
-    method public final Object getOpaque(java.lang.Object...);
-    method public final Object getVolatile(java.lang.Object...);
+    method public final native Object get(java.lang.Object...);
+    method public final native Object getAcquire(java.lang.Object...);
+    method public final native Object getAndAdd(java.lang.Object...);
+    method public final native Object getAndAddAcquire(java.lang.Object...);
+    method public final native Object getAndAddRelease(java.lang.Object...);
+    method public final native Object getAndBitwiseAnd(java.lang.Object...);
+    method public final native Object getAndBitwiseAndAcquire(java.lang.Object...);
+    method public final native Object getAndBitwiseAndRelease(java.lang.Object...);
+    method public final native Object getAndBitwiseOr(java.lang.Object...);
+    method public final native Object getAndBitwiseOrAcquire(java.lang.Object...);
+    method public final native Object getAndBitwiseOrRelease(java.lang.Object...);
+    method public final native Object getAndBitwiseXor(java.lang.Object...);
+    method public final native Object getAndBitwiseXorAcquire(java.lang.Object...);
+    method public final native Object getAndBitwiseXorRelease(java.lang.Object...);
+    method public final native Object getAndSet(java.lang.Object...);
+    method public final native Object getAndSetAcquire(java.lang.Object...);
+    method public final native Object getAndSetRelease(java.lang.Object...);
+    method public final native Object getOpaque(java.lang.Object...);
+    method public final native Object getVolatile(java.lang.Object...);
     method public final boolean isAccessModeSupported(java.lang.invoke.VarHandle.AccessMode);
     method public static void loadLoadFence();
     method public static void releaseFence();
-    method public final void set(java.lang.Object...);
-    method public final void setOpaque(java.lang.Object...);
-    method public final void setRelease(java.lang.Object...);
-    method public final void setVolatile(java.lang.Object...);
+    method public final native void set(java.lang.Object...);
+    method public final native void setOpaque(java.lang.Object...);
+    method public final native void setRelease(java.lang.Object...);
+    method public final native void setVolatile(java.lang.Object...);
     method public static void storeStoreFence();
     method public final java.lang.invoke.MethodHandle toMethodHandle(java.lang.invoke.VarHandle.AccessMode);
     method public final Class<?> varType();
-    method public final boolean weakCompareAndSet(java.lang.Object...);
-    method public final boolean weakCompareAndSetAcquire(java.lang.Object...);
-    method public final boolean weakCompareAndSetPlain(java.lang.Object...);
-    method public final boolean weakCompareAndSetRelease(java.lang.Object...);
+    method public final native boolean weakCompareAndSet(java.lang.Object...);
+    method public final native boolean weakCompareAndSetAcquire(java.lang.Object...);
+    method public final native boolean weakCompareAndSetPlain(java.lang.Object...);
+    method public final native boolean weakCompareAndSetRelease(java.lang.Object...);
   }
 
   public enum VarHandle.AccessMode {
@@ -6312,6 +6320,7 @@ package java.nio {
     method public abstract java.nio.CharBuffer slice();
     method public abstract java.nio.CharBuffer slice(int, int);
     method public abstract java.nio.CharBuffer subSequence(int, int);
+    method public String toString();
     method public static java.nio.CharBuffer wrap(char[], int, int);
     method public static java.nio.CharBuffer wrap(char[]);
     method public static java.nio.CharBuffer wrap(CharSequence, int, int);
@@ -6427,9 +6436,16 @@ package java.nio {
   }
 
   public abstract class MappedByteBuffer extends java.nio.ByteBuffer {
+    method public final java.nio.Buffer clear();
+    method public final java.nio.Buffer flip();
     method public final java.nio.MappedByteBuffer force();
     method public final boolean isLoaded();
+    method public final java.nio.Buffer limit(int);
     method public final java.nio.MappedByteBuffer load();
+    method public final java.nio.Buffer mark();
+    method public final java.nio.Buffer position(int);
+    method public final java.nio.Buffer reset();
+    method public final java.nio.Buffer rewind();
     method public abstract java.nio.MappedByteBuffer slice(int, int);
   }
 
@@ -7590,6 +7606,7 @@ package java.nio.file.attribute {
   }
 
   public interface PosixFileAttributeView extends java.nio.file.attribute.BasicFileAttributeView java.nio.file.attribute.FileOwnerAttributeView {
+    method public String name();
     method public java.nio.file.attribute.PosixFileAttributes readAttributes() throws java.io.IOException;
     method public void setGroup(java.nio.file.attribute.GroupPrincipal) throws java.io.IOException;
     method public void setPermissions(java.util.Set<java.nio.file.attribute.PosixFilePermission>) throws java.io.IOException;
@@ -7884,10 +7901,12 @@ package java.security {
     method @Deprecated public final String getName();
     method @Deprecated public java.security.PublicKey getPublicKey();
     method @Deprecated public final java.security.IdentityScope getScope();
+    method @Deprecated public int hashCode();
     method @Deprecated protected boolean identityEquals(java.security.Identity);
     method @Deprecated public void removeCertificate(java.security.Certificate) throws java.security.KeyManagementException;
     method @Deprecated public void setInfo(String);
     method @Deprecated public void setPublicKey(java.security.PublicKey) throws java.security.KeyManagementException;
+    method @Deprecated public String toString();
     method @Deprecated public String toString(boolean);
   }
 
@@ -8271,32 +8290,13 @@ package java.security {
 
   public abstract class Provider extends java.util.Properties {
     ctor protected Provider(String, double, String);
-    method public Object compute(Object, java.util.function.BiFunction<? super java.lang.Object,? super java.lang.Object,?>);
-    method public Object computeIfAbsent(Object, java.util.function.Function<? super java.lang.Object,?>);
-    method public Object computeIfPresent(Object, java.util.function.BiFunction<? super java.lang.Object,? super java.lang.Object,?>);
-    method public java.util.Enumeration<java.lang.Object> elements();
-    method public java.util.Set<java.util.Map.Entry<java.lang.Object,java.lang.Object>> entrySet();
-    method public void forEach(java.util.function.BiConsumer<? super java.lang.Object,? super java.lang.Object>);
-    method public Object get(Object);
     method public String getInfo();
     method public String getName();
-    method public Object getOrDefault(Object, Object);
     method public java.security.Provider.Service getService(String, String);
     method public java.util.Set<java.security.Provider.Service> getServices();
     method public double getVersion();
-    method public java.util.Set<java.lang.Object> keySet();
-    method public java.util.Enumeration<java.lang.Object> keys();
-    method public Object merge(Object, Object, java.util.function.BiFunction<? super java.lang.Object,? super java.lang.Object,?>);
-    method public Object put(Object, Object);
-    method public void putAll(java.util.Map<?,?>);
-    method public Object putIfAbsent(Object, Object);
     method protected void putService(java.security.Provider.Service);
-    method public Object remove(Object);
     method protected void removeService(java.security.Provider.Service);
-    method public boolean replace(Object, Object, Object);
-    method public Object replace(Object, Object);
-    method public void replaceAll(java.util.function.BiFunction<? super java.lang.Object,? super java.lang.Object,?>);
-    method public java.util.Collection<java.lang.Object> values();
   }
 
   public static class Provider.Service {
@@ -9098,12 +9098,12 @@ package java.security.interfaces {
 
   public interface DSAPrivateKey extends java.security.interfaces.DSAKey java.security.PrivateKey {
     method public java.math.BigInteger getX();
-    field public static final long serialVersionUID = 7776497482533790279L; // 0x6bebab423b256247L
+    field @Deprecated @java.io.Serial public static final long serialVersionUID = 7776497482533790279L; // 0x6bebab423b256247L
   }
 
   public interface DSAPublicKey extends java.security.interfaces.DSAKey java.security.PublicKey {
     method public java.math.BigInteger getY();
-    field public static final long serialVersionUID = 1234526332779022332L; // 0x1121eb28ab28c7fcL
+    field @Deprecated @java.io.Serial public static final long serialVersionUID = 1234526332779022332L; // 0x1121eb28ab28c7fcL
   }
 
   public interface ECKey {
@@ -9112,12 +9112,12 @@ package java.security.interfaces {
 
   public interface ECPrivateKey extends java.security.PrivateKey java.security.interfaces.ECKey {
     method public java.math.BigInteger getS();
-    field public static final long serialVersionUID = -7896394956925609184L; // 0x926a5e9fa2435b20L
+    field @Deprecated @java.io.Serial public static final long serialVersionUID = -7896394956925609184L; // 0x926a5e9fa2435b20L
   }
 
   public interface ECPublicKey extends java.security.PublicKey java.security.interfaces.ECKey {
     method public java.security.spec.ECPoint getW();
-    field public static final long serialVersionUID = -3314988629879632826L; // 0xd1fecb679990cc46L
+    field @Deprecated @java.io.Serial public static final long serialVersionUID = -3314988629879632826L; // 0xd1fecb679990cc46L
   }
 
   public interface EdECKey {
@@ -9134,6 +9134,7 @@ package java.security.interfaces {
 
   public interface RSAKey {
     method public java.math.BigInteger getModulus();
+    method public default java.security.spec.AlgorithmParameterSpec getParams();
   }
 
   public interface RSAMultiPrimePrivateCrtKey extends java.security.interfaces.RSAPrivateKey {
@@ -9144,7 +9145,7 @@ package java.security.interfaces {
     method public java.math.BigInteger getPrimeP();
     method public java.math.BigInteger getPrimeQ();
     method public java.math.BigInteger getPublicExponent();
-    field public static final long serialVersionUID = 618058533534628008L; // 0x893c8f62dbaf8a8L
+    field @Deprecated @java.io.Serial public static final long serialVersionUID = 618058533534628008L; // 0x893c8f62dbaf8a8L
   }
 
   public interface RSAPrivateCrtKey extends java.security.interfaces.RSAPrivateKey {
@@ -9154,17 +9155,17 @@ package java.security.interfaces {
     method public java.math.BigInteger getPrimeP();
     method public java.math.BigInteger getPrimeQ();
     method public java.math.BigInteger getPublicExponent();
-    field public static final long serialVersionUID = -5682214253527700368L; // 0xb124b83df8d1ec70L
+    field @Deprecated @java.io.Serial public static final long serialVersionUID = -5682214253527700368L; // 0xb124b83df8d1ec70L
   }
 
   public interface RSAPrivateKey extends java.security.PrivateKey java.security.interfaces.RSAKey {
     method public java.math.BigInteger getPrivateExponent();
-    field public static final long serialVersionUID = 5187144804936595022L; // 0x47fc70b7a8c2364eL
+    field @Deprecated @java.io.Serial public static final long serialVersionUID = 5187144804936595022L; // 0x47fc70b7a8c2364eL
   }
 
   public interface RSAPublicKey extends java.security.PublicKey java.security.interfaces.RSAKey {
     method public java.math.BigInteger getPublicExponent();
-    field public static final long serialVersionUID = -8727434096241101194L; // 0x86e1ecedeceab676L
+    field @Deprecated @java.io.Serial public static final long serialVersionUID = -8727434096241101194L; // 0x86e1ecedeceab676L
   }
 
   public interface XECKey {
@@ -10797,6 +10798,7 @@ package java.text {
     method public abstract int compare(String, String);
     method public int compare(Object, Object);
     method public boolean equals(String, String);
+    method public boolean equals(Object);
     method public static java.util.Locale[] getAvailableLocales();
     method public abstract java.text.CollationKey getCollationKey(String);
     method public int getDecomposition();
@@ -11131,6 +11133,7 @@ package java.text {
     method public java.text.CollationElementIterator getCollationElementIterator(java.text.CharacterIterator);
     method public java.text.CollationKey getCollationKey(String);
     method public String getRules();
+    method public int hashCode();
   }
 
   public class SimpleDateFormat extends java.text.DateFormat {
@@ -11329,6 +11332,7 @@ package java.time {
     method public java.time.OffsetDateTime atTime(java.time.OffsetTime);
     method public java.util.stream.Stream<java.time.LocalDate> datesUntil(java.time.LocalDate);
     method public java.util.stream.Stream<java.time.LocalDate> datesUntil(java.time.LocalDate, java.time.Period);
+    method public boolean equals(Object);
     method public static java.time.LocalDate from(java.time.temporal.TemporalAccessor);
     method public java.time.chrono.IsoChronology getChronology();
     method public int getDayOfMonth();
@@ -11338,6 +11342,9 @@ package java.time {
     method public java.time.Month getMonth();
     method public int getMonthValue();
     method public int getYear();
+    method public int hashCode();
+    method public boolean isSupported(java.time.temporal.TemporalField);
+    method public boolean isSupported(java.time.temporal.TemporalUnit);
     method public int lengthOfMonth();
     method public java.time.LocalDate minus(java.time.temporal.TemporalAmount);
     method public java.time.LocalDate minus(long, java.time.temporal.TemporalUnit);
@@ -11362,6 +11369,7 @@ package java.time {
     method public java.time.LocalDate plusWeeks(long);
     method public java.time.LocalDate plusYears(long);
     method public long toEpochSecond(java.time.LocalTime, java.time.ZoneOffset);
+    method public String toString();
     method public long until(java.time.temporal.Temporal, java.time.temporal.TemporalUnit);
     method public java.time.Period until(java.time.chrono.ChronoLocalDate);
     method public java.time.LocalDate with(java.time.temporal.TemporalAdjuster);
@@ -11378,6 +11386,7 @@ package java.time {
   public final class LocalDateTime implements java.time.chrono.ChronoLocalDateTime<java.time.LocalDate> java.io.Serializable java.time.temporal.Temporal java.time.temporal.TemporalAdjuster {
     method public java.time.OffsetDateTime atOffset(java.time.ZoneOffset);
     method public java.time.ZonedDateTime atZone(java.time.ZoneId);
+    method public boolean equals(Object);
     method public static java.time.LocalDateTime from(java.time.temporal.TemporalAccessor);
     method public int getDayOfMonth();
     method public java.time.DayOfWeek getDayOfWeek();
@@ -11390,7 +11399,9 @@ package java.time {
     method public int getNano();
     method public int getSecond();
     method public int getYear();
+    method public int hashCode();
     method public boolean isSupported(java.time.temporal.TemporalField);
+    method public boolean isSupported(java.time.temporal.TemporalUnit);
     method public java.time.LocalDateTime minus(java.time.temporal.TemporalAmount);
     method public java.time.LocalDateTime minus(long, java.time.temporal.TemporalUnit);
     method public java.time.LocalDateTime minusDays(long);
@@ -11427,6 +11438,7 @@ package java.time {
     method public java.time.LocalDateTime plusYears(long);
     method public java.time.LocalDate toLocalDate();
     method public java.time.LocalTime toLocalTime();
+    method public String toString();
     method public java.time.LocalDateTime truncatedTo(java.time.temporal.TemporalUnit);
     method public long until(java.time.temporal.Temporal, java.time.temporal.TemporalUnit);
     method public java.time.LocalDateTime with(java.time.temporal.TemporalAdjuster);
@@ -11689,6 +11701,7 @@ package java.time {
   public final class Period implements java.time.chrono.ChronoPeriod java.io.Serializable {
     method public java.time.temporal.Temporal addTo(java.time.temporal.Temporal);
     method public static java.time.Period between(java.time.LocalDate, java.time.LocalDate);
+    method public boolean equals(Object);
     method public static java.time.Period from(java.time.temporal.TemporalAmount);
     method public long get(java.time.temporal.TemporalUnit);
     method public java.time.chrono.IsoChronology getChronology();
@@ -11696,6 +11709,7 @@ package java.time {
     method public int getMonths();
     method public java.util.List<java.time.temporal.TemporalUnit> getUnits();
     method public int getYears();
+    method public int hashCode();
     method public java.time.Period minus(java.time.temporal.TemporalAmount);
     method public java.time.Period minusDays(long);
     method public java.time.Period minusMonths(long);
@@ -11714,6 +11728,7 @@ package java.time {
     method public java.time.Period plusMonths(long);
     method public java.time.Period plusYears(long);
     method public java.time.temporal.Temporal subtractFrom(java.time.temporal.Temporal);
+    method public String toString();
     method public long toTotalMonths();
     method public java.time.Period withDays(int);
     method public java.time.Period withMonths(int);
@@ -11834,11 +11849,13 @@ package java.time {
   }
 
   public final class ZonedDateTime implements java.time.chrono.ChronoZonedDateTime<java.time.LocalDate> java.io.Serializable java.time.temporal.Temporal {
+    method public boolean equals(Object);
     method public static java.time.ZonedDateTime from(java.time.temporal.TemporalAccessor);
     method public int getDayOfMonth();
     method public java.time.DayOfWeek getDayOfWeek();
     method public int getDayOfYear();
     method public int getHour();
+    method public long getLong(java.time.temporal.TemporalField);
     method public int getMinute();
     method public java.time.Month getMonth();
     method public int getMonthValue();
@@ -11847,7 +11864,9 @@ package java.time {
     method public int getSecond();
     method public int getYear();
     method public java.time.ZoneId getZone();
+    method public int hashCode();
     method public boolean isSupported(java.time.temporal.TemporalField);
+    method public boolean isSupported(java.time.temporal.TemporalUnit);
     method public java.time.ZonedDateTime minus(java.time.temporal.TemporalAmount);
     method public java.time.ZonedDateTime minus(long, java.time.temporal.TemporalUnit);
     method public java.time.ZonedDateTime minusDays(long);
@@ -11883,6 +11902,7 @@ package java.time {
     method public java.time.LocalDate toLocalDate();
     method public java.time.LocalDateTime toLocalDateTime();
     method public java.time.OffsetDateTime toOffsetDateTime();
+    method public String toString();
     method public java.time.ZonedDateTime truncatedTo(java.time.temporal.TemporalUnit);
     method public long until(java.time.temporal.Temporal, java.time.temporal.TemporalUnit);
     method public java.time.ZonedDateTime with(java.time.temporal.TemporalAdjuster);
@@ -11909,7 +11929,10 @@ package java.time.chrono {
   public abstract class AbstractChronology implements java.time.chrono.Chronology {
     ctor protected AbstractChronology();
     method public int compareTo(java.time.chrono.Chronology);
+    method public boolean equals(Object);
+    method public int hashCode();
     method public java.time.chrono.ChronoLocalDate resolveDate(java.util.Map<java.time.temporal.TemporalField,java.lang.Long>, java.time.format.ResolverStyle);
+    method public String toString();
   }
 
   public interface ChronoLocalDate extends java.time.temporal.Temporal java.lang.Comparable<java.time.chrono.ChronoLocalDate> java.time.temporal.TemporalAdjuster {
@@ -12099,6 +12122,7 @@ package java.time.chrono {
     method public static java.time.chrono.HijrahDate of(int, int, int);
     method public java.time.chrono.HijrahDate plus(java.time.temporal.TemporalAmount);
     method public java.time.chrono.HijrahDate plus(long, java.time.temporal.TemporalUnit);
+    method public String toString();
     method public java.time.chrono.ChronoPeriod until(java.time.chrono.ChronoLocalDate);
     method public long until(java.time.temporal.Temporal, java.time.temporal.TemporalUnit);
     method public java.time.chrono.HijrahDate with(java.time.temporal.TemporalField, long);
@@ -12184,6 +12208,7 @@ package java.time.chrono {
     method public static java.time.chrono.JapaneseDate of(int, int, int);
     method public java.time.chrono.JapaneseDate plus(java.time.temporal.TemporalAmount);
     method public java.time.chrono.JapaneseDate plus(long, java.time.temporal.TemporalUnit);
+    method public String toString();
     method public java.time.chrono.ChronoPeriod until(java.time.chrono.ChronoLocalDate);
     method public long until(java.time.temporal.Temporal, java.time.temporal.TemporalUnit);
     method public java.time.chrono.JapaneseDate with(java.time.temporal.TemporalField, long);
@@ -12241,6 +12266,7 @@ package java.time.chrono {
     method public static java.time.chrono.MinguoDate of(int, int, int);
     method public java.time.chrono.MinguoDate plus(java.time.temporal.TemporalAmount);
     method public java.time.chrono.MinguoDate plus(long, java.time.temporal.TemporalUnit);
+    method public String toString();
     method public java.time.chrono.ChronoPeriod until(java.time.chrono.ChronoLocalDate);
     method public long until(java.time.temporal.Temporal, java.time.temporal.TemporalUnit);
     method public java.time.chrono.MinguoDate with(java.time.temporal.TemporalField, long);
@@ -12293,6 +12319,7 @@ package java.time.chrono {
     method public static java.time.chrono.ThaiBuddhistDate of(int, int, int);
     method public java.time.chrono.ThaiBuddhistDate plus(java.time.temporal.TemporalAmount);
     method public java.time.chrono.ThaiBuddhistDate plus(long, java.time.temporal.TemporalUnit);
+    method public String toString();
     method public java.time.chrono.ChronoPeriod until(java.time.chrono.ChronoLocalDate);
     method public long until(java.time.temporal.Temporal, java.time.temporal.TemporalUnit);
     method public java.time.chrono.ThaiBuddhistDate with(java.time.temporal.TemporalField, long);
@@ -12756,6 +12783,8 @@ package java.util {
     ctor protected AbstractList();
     method public void add(int, E);
     method public boolean addAll(int, @NonNull java.util.Collection<? extends E>);
+    method public boolean equals(@Nullable Object);
+    method public int hashCode();
     method public int indexOf(@Nullable Object);
     method @NonNull public java.util.Iterator<E> iterator();
     method public int lastIndexOf(@Nullable Object);
@@ -12773,7 +12802,9 @@ package java.util {
     method public void clear();
     method public boolean containsKey(@Nullable Object);
     method public boolean containsValue(@Nullable Object);
+    method public boolean equals(@Nullable Object);
     method @Nullable public V get(@Nullable Object);
+    method public int hashCode();
     method public boolean isEmpty();
     method @NonNull public java.util.Set<K> keySet();
     method @Nullable public V put(K, V);
@@ -12786,16 +12817,20 @@ package java.util {
   public static class AbstractMap.SimpleEntry<K, V> implements java.util.Map.Entry<K,V> java.io.Serializable {
     ctor public AbstractMap.SimpleEntry(K, V);
     ctor public AbstractMap.SimpleEntry(@NonNull java.util.Map.Entry<? extends K,? extends V>);
+    method public boolean equals(@Nullable Object);
     method public K getKey();
     method public V getValue();
+    method public int hashCode();
     method public V setValue(V);
   }
 
   public static class AbstractMap.SimpleImmutableEntry<K, V> implements java.util.Map.Entry<K,V> java.io.Serializable {
     ctor public AbstractMap.SimpleImmutableEntry(K, V);
     ctor public AbstractMap.SimpleImmutableEntry(@NonNull java.util.Map.Entry<? extends K,? extends V>);
+    method public boolean equals(@Nullable Object);
     method public K getKey();
     method public V getValue();
+    method public int hashCode();
     method public V setValue(V);
   }
 
@@ -12812,6 +12847,8 @@ package java.util {
 
   public abstract class AbstractSet<E> extends java.util.AbstractCollection<E> implements java.util.Set<E> {
     ctor protected AbstractSet();
+    method public boolean equals(@Nullable Object);
+    method public int hashCode();
   }
 
   public class ArrayDeque<E> extends java.util.AbstractCollection<E> implements java.lang.Cloneable java.util.Deque<E> java.io.Serializable {
@@ -13498,6 +13535,7 @@ package java.util {
     ctor public EnumMap(java.util.Map<K,? extends V>);
     method public java.util.EnumMap<K,V> clone();
     method public java.util.Set<java.util.Map.Entry<K,V>> entrySet();
+    method public V put(K, V);
   }
 
   public abstract class EnumSet<E extends java.lang.Enum<E>> extends java.util.AbstractSet<E> implements java.lang.Cloneable java.io.Serializable {
@@ -13645,7 +13683,9 @@ package java.util {
     method public boolean containsValue(Object);
     method public java.util.Enumeration<V> elements();
     method public java.util.Set<java.util.Map.Entry<K,V>> entrySet();
+    method public boolean equals(Object);
     method public V get(Object);
+    method public int hashCode();
     method public boolean isEmpty();
     method public java.util.Set<K> keySet();
     method public java.util.Enumeration<K> keys();
@@ -13792,6 +13832,7 @@ package java.util {
     method public E element();
     method public E getFirst();
     method public E getLast();
+    method @NonNull public java.util.ListIterator<E> listIterator(int);
     method public boolean offer(E);
     method public boolean offerFirst(E);
     method public boolean offerLast(E);
@@ -14034,6 +14075,7 @@ package java.util {
     method @NonNull public static <K, V> java.util.Comparator<java.util.Map.Entry<K,V>> comparingByKey(@NonNull java.util.Comparator<? super K>);
     method @NonNull public static <K, V extends java.lang.Comparable<? super V>> java.util.Comparator<java.util.Map.Entry<K,V>> comparingByValue();
     method @NonNull public static <K, V> java.util.Comparator<java.util.Map.Entry<K,V>> comparingByValue(@NonNull java.util.Comparator<? super V>);
+    method @NonNull public static <K, V> java.util.Map.Entry<K,V> copyOf(@NonNull java.util.Map.Entry<? extends K,? extends V>);
     method public boolean equals(@Nullable Object);
     method public K getKey();
     method public V getValue();
@@ -14249,23 +14291,44 @@ package java.util {
 
   public class Properties extends java.util.Hashtable<java.lang.Object,java.lang.Object> {
     ctor public Properties();
+    ctor public Properties(int);
     ctor public Properties(java.util.Properties);
+    method public Object compute(Object, java.util.function.BiFunction<? super java.lang.Object,? super java.lang.Object,?>);
+    method public Object computeIfAbsent(Object, java.util.function.Function<? super java.lang.Object,?>);
+    method public Object computeIfPresent(Object, java.util.function.BiFunction<? super java.lang.Object,? super java.lang.Object,?>);
+    method public java.util.Enumeration<java.lang.Object> elements();
+    method public java.util.Set<java.util.Map.Entry<java.lang.Object,java.lang.Object>> entrySet();
+    method public void forEach(java.util.function.BiConsumer<? super java.lang.Object,? super java.lang.Object>);
+    method public Object get(Object);
+    method public Object getOrDefault(Object, Object);
     method public String getProperty(String);
     method public String getProperty(String, String);
+    method public java.util.Set<java.lang.Object> keySet();
+    method public java.util.Enumeration<java.lang.Object> keys();
     method public void list(java.io.PrintStream);
     method public void list(java.io.PrintWriter);
     method public void load(java.io.Reader) throws java.io.IOException;
     method public void load(java.io.InputStream) throws java.io.IOException;
     method public void loadFromXML(java.io.InputStream) throws java.io.IOException, java.util.InvalidPropertiesFormatException;
+    method public Object merge(Object, Object, java.util.function.BiFunction<? super java.lang.Object,? super java.lang.Object,?>);
     method public java.util.Enumeration<?> propertyNames();
+    method public Object put(Object, Object);
+    method public void putAll(java.util.Map<?,?>);
+    method public Object putIfAbsent(Object, Object);
+    method public Object remove(Object);
+    method public boolean replace(Object, Object, Object);
+    method public Object replace(Object, Object);
+    method public void replaceAll(java.util.function.BiFunction<? super java.lang.Object,? super java.lang.Object,?>);
     method @Deprecated public void save(java.io.OutputStream, String);
     method public Object setProperty(String, String);
     method public void store(java.io.Writer, String) throws java.io.IOException;
     method public void store(java.io.OutputStream, String) throws java.io.IOException;
     method public void storeToXML(java.io.OutputStream, String) throws java.io.IOException;
     method public void storeToXML(java.io.OutputStream, String, String) throws java.io.IOException;
+    method public void storeToXML(java.io.OutputStream, String, java.nio.charset.Charset) throws java.io.IOException;
     method public java.util.Set<java.lang.String> stringPropertyNames();
-    field protected java.util.Properties defaults;
+    method public java.util.Collection<java.lang.Object> values();
+    field protected volatile java.util.Properties defaults;
   }
 
   public final class PropertyPermission extends java.security.BasicPermission {
@@ -14445,6 +14508,12 @@ package java.util {
     method public static <S> java.util.ServiceLoader<S> load(Class<S>);
     method public static <S> java.util.ServiceLoader<S> loadInstalled(Class<S>);
     method public void reload();
+    method public java.util.stream.Stream<java.util.ServiceLoader.Provider<S>> stream();
+  }
+
+  public static interface ServiceLoader.Provider<S> extends java.util.function.Supplier<S> {
+    method public S get();
+    method public Class<? extends S> type();
   }
 
   public interface Set<E> extends java.util.Collection<E> {
@@ -14884,12 +14953,22 @@ package java.util.concurrent {
   }
 
   public interface BlockingDeque<E> extends java.util.concurrent.BlockingQueue<E> java.util.Deque<E> {
+    method public boolean add(E);
+    method public boolean contains(Object);
+    method public E element();
+    method public java.util.Iterator<E> iterator();
+    method public boolean offer(E);
     method public boolean offerFirst(E, long, java.util.concurrent.TimeUnit) throws java.lang.InterruptedException;
     method public boolean offerLast(E, long, java.util.concurrent.TimeUnit) throws java.lang.InterruptedException;
+    method public E peek();
+    method public E poll();
     method public E pollFirst(long, java.util.concurrent.TimeUnit) throws java.lang.InterruptedException;
     method public E pollLast(long, java.util.concurrent.TimeUnit) throws java.lang.InterruptedException;
     method public void putFirst(E) throws java.lang.InterruptedException;
     method public void putLast(E) throws java.lang.InterruptedException;
+    method public E remove();
+    method public boolean remove(Object);
+    method public int size();
     method public E takeFirst() throws java.lang.InterruptedException;
     method public E takeLast() throws java.lang.InterruptedException;
   }
@@ -15084,6 +15163,7 @@ package java.util.concurrent {
     method public long mappingCount();
     method @NonNull public static <K> java.util.concurrent.ConcurrentHashMap.KeySetView<K,java.lang.Boolean> newKeySet();
     method @NonNull public static <K> java.util.concurrent.ConcurrentHashMap.KeySetView<K,java.lang.Boolean> newKeySet(int);
+    method @Nullable public V putIfAbsent(@NonNull K, @NonNull V);
     method @Nullable public <U> U reduce(long, @NonNull java.util.function.BiFunction<? super K,? super V,? extends U>, @NonNull java.util.function.BiFunction<? super U,? super U,? extends U>);
     method @Nullable public java.util.Map.Entry<K,V> reduceEntries(long, @NonNull java.util.function.BiFunction<java.util.Map.Entry<K,V>,java.util.Map.Entry<K,V>,? extends java.util.Map.Entry<K,V>>);
     method @Nullable public <U> U reduceEntries(long, @NonNull java.util.function.Function<java.util.Map.Entry<K,V>,? extends U>, @NonNull java.util.function.BiFunction<? super U,? super U,? extends U>);
@@ -15103,6 +15183,9 @@ package java.util.concurrent {
     method public double reduceValuesToDouble(long, @NonNull java.util.function.ToDoubleFunction<? super V>, double, @NonNull java.util.function.DoubleBinaryOperator);
     method public int reduceValuesToInt(long, @NonNull java.util.function.ToIntFunction<? super V>, int, @NonNull java.util.function.IntBinaryOperator);
     method public long reduceValuesToLong(long, @NonNull java.util.function.ToLongFunction<? super V>, long, @NonNull java.util.function.LongBinaryOperator);
+    method public boolean remove(@NonNull Object, @Nullable Object);
+    method public boolean replace(@NonNull K, @NonNull V, @NonNull V);
+    method @Nullable public V replace(@NonNull K, @NonNull V);
     method @Nullable public <U> U search(long, @NonNull java.util.function.BiFunction<? super K,? super V,? extends U>);
     method @Nullable public <U> U searchEntries(long, @NonNull java.util.function.Function<java.util.Map.Entry<K,V>,? extends U>);
     method @Nullable public <U> U searchKeys(long, @NonNull java.util.function.Function<? super K,? extends U>);
@@ -15115,9 +15198,11 @@ package java.util.concurrent {
     method public final void clear();
     method public boolean contains(@NonNull Object);
     method public final boolean containsAll(@NonNull java.util.Collection<?>);
+    method public boolean equals(@Nullable Object);
     method public void forEach(@NonNull java.util.function.Consumer<? super K>);
     method @NonNull public java.util.concurrent.ConcurrentHashMap<K,V> getMap();
     method @Nullable public V getMappedValue();
+    method public int hashCode();
     method public final boolean isEmpty();
     method @NonNull public java.util.Iterator<K> iterator();
     method public boolean remove(@NonNull Object);
@@ -15217,6 +15302,10 @@ package java.util.concurrent {
     method public java.util.NavigableSet<K> navigableKeySet();
     method public java.util.Map.Entry<K,V> pollFirstEntry();
     method public java.util.Map.Entry<K,V> pollLastEntry();
+    method public V putIfAbsent(K, V);
+    method public boolean remove(Object, Object);
+    method public boolean replace(K, V, V);
+    method public V replace(K, V);
     method public java.util.concurrent.ConcurrentNavigableMap<K,V> subMap(K, boolean, K, boolean);
     method public java.util.concurrent.ConcurrentNavigableMap<K,V> subMap(K, K);
     method public java.util.concurrent.ConcurrentNavigableMap<K,V> tailMap(K, boolean);
@@ -15264,8 +15353,10 @@ package java.util.concurrent {
     method @NonNull public Object clone();
     method public boolean contains(@Nullable Object);
     method public boolean containsAll(@NonNull java.util.Collection<?>);
+    method public boolean equals(@Nullable Object);
     method public void forEach(@NonNull java.util.function.Consumer<? super E>);
     method public E get(int);
+    method public int hashCode();
     method public int indexOf(@Nullable Object);
     method public int indexOf(@Nullable E, int);
     method public boolean isEmpty();
@@ -15341,6 +15432,7 @@ package java.util.concurrent {
   public class DelayQueue<E extends java.util.concurrent.Delayed> extends java.util.AbstractQueue<E> implements java.util.concurrent.BlockingQueue<E> {
     ctor public DelayQueue();
     ctor public DelayQueue(java.util.Collection<? extends E>);
+    method public boolean add(E);
     method public int drainTo(java.util.Collection<? super E>);
     method public int drainTo(java.util.Collection<? super E>, int);
     method public java.util.Iterator<E> iterator();
@@ -16762,9 +16854,11 @@ package java.util.jar {
     method public boolean containsKey(Object);
     method public boolean containsValue(Object);
     method public java.util.Set<java.util.Map.Entry<java.lang.Object,java.lang.Object>> entrySet();
+    method public boolean equals(Object);
     method public Object get(Object);
     method public String getValue(String);
     method public String getValue(java.util.jar.Attributes.Name);
+    method public int hashCode();
     method public boolean isEmpty();
     method public java.util.Set<java.lang.Object> keySet();
     method public Object put(Object, Object);
@@ -17342,6 +17436,7 @@ package java.util.prefs {
     method protected abstract void removeSpi(String);
     method public void sync() throws java.util.prefs.BackingStoreException;
     method protected abstract void syncSpi() throws java.util.prefs.BackingStoreException;
+    method public String toString();
     field protected final Object lock;
     field protected boolean newNode;
   }
@@ -17578,6 +17673,7 @@ package java.util.stream {
     method public static <T> java.util.stream.Collector<T,?,java.lang.Double> summingDouble(java.util.function.ToDoubleFunction<? super T>);
     method public static <T> java.util.stream.Collector<T,?,java.lang.Integer> summingInt(java.util.function.ToIntFunction<? super T>);
     method public static <T> java.util.stream.Collector<T,?,java.lang.Long> summingLong(java.util.function.ToLongFunction<? super T>);
+    method public static <T, R1, R2, R> java.util.stream.Collector<T,?,R> teeing(java.util.stream.Collector<? super T,?,R1>, java.util.stream.Collector<? super T,?,R2>, java.util.function.BiFunction<? super R1,? super R2,R>);
     method public static <T, C extends java.util.Collection<T>> java.util.stream.Collector<T,?,C> toCollection(java.util.function.Supplier<C>);
     method public static <T, K, U> java.util.stream.Collector<T,?,java.util.concurrent.ConcurrentMap<K,U>> toConcurrentMap(java.util.function.Function<? super T,? extends K>, java.util.function.Function<? super T,? extends U>);
     method public static <T, K, U> java.util.stream.Collector<T,?,java.util.concurrent.ConcurrentMap<K,U>> toConcurrentMap(java.util.function.Function<? super T,? extends K>, java.util.function.Function<? super T,? extends U>, java.util.function.BinaryOperator<U>);
@@ -17603,6 +17699,7 @@ package java.util.stream {
     method public static java.util.stream.DoubleStream concat(java.util.stream.DoubleStream, java.util.stream.DoubleStream);
     method public long count();
     method public java.util.stream.DoubleStream distinct();
+    method public default java.util.stream.DoubleStream dropWhile(java.util.function.DoublePredicate);
     method public static java.util.stream.DoubleStream empty();
     method public java.util.stream.DoubleStream filter(java.util.function.DoublePredicate);
     method public java.util.OptionalDouble findAny();
@@ -17612,9 +17709,11 @@ package java.util.stream {
     method public void forEachOrdered(java.util.function.DoubleConsumer);
     method public static java.util.stream.DoubleStream generate(java.util.function.DoubleSupplier);
     method public static java.util.stream.DoubleStream iterate(double, java.util.function.DoubleUnaryOperator);
+    method public static java.util.stream.DoubleStream iterate(double, java.util.function.DoublePredicate, java.util.function.DoubleUnaryOperator);
     method public java.util.PrimitiveIterator.OfDouble iterator();
     method public java.util.stream.DoubleStream limit(long);
     method public java.util.stream.DoubleStream map(java.util.function.DoubleUnaryOperator);
+    method public default java.util.stream.DoubleStream mapMulti(java.util.stream.DoubleStream.DoubleMapMultiConsumer);
     method public java.util.stream.IntStream mapToInt(java.util.function.DoubleToIntFunction);
     method public java.util.stream.LongStream mapToLong(java.util.function.DoubleToLongFunction);
     method public <U> java.util.stream.Stream<U> mapToObj(java.util.function.DoubleFunction<? extends U>);
@@ -17633,12 +17732,17 @@ package java.util.stream {
     method public java.util.Spliterator.OfDouble spliterator();
     method public double sum();
     method public java.util.DoubleSummaryStatistics summaryStatistics();
+    method public default java.util.stream.DoubleStream takeWhile(java.util.function.DoublePredicate);
     method public double[] toArray();
   }
 
   public static interface DoubleStream.Builder extends java.util.function.DoubleConsumer {
     method public default java.util.stream.DoubleStream.Builder add(double);
     method public java.util.stream.DoubleStream build();
+  }
+
+  @java.lang.FunctionalInterface public static interface DoubleStream.DoubleMapMultiConsumer {
+    method public void accept(double, java.util.function.DoubleConsumer);
   }
 
   public interface IntStream extends java.util.stream.BaseStream<java.lang.Integer,java.util.stream.IntStream> {
@@ -17653,6 +17757,7 @@ package java.util.stream {
     method public static java.util.stream.IntStream concat(java.util.stream.IntStream, java.util.stream.IntStream);
     method public long count();
     method public java.util.stream.IntStream distinct();
+    method public default java.util.stream.IntStream dropWhile(java.util.function.IntPredicate);
     method public static java.util.stream.IntStream empty();
     method public java.util.stream.IntStream filter(java.util.function.IntPredicate);
     method public java.util.OptionalInt findAny();
@@ -17662,9 +17767,11 @@ package java.util.stream {
     method public void forEachOrdered(java.util.function.IntConsumer);
     method public static java.util.stream.IntStream generate(java.util.function.IntSupplier);
     method public static java.util.stream.IntStream iterate(int, java.util.function.IntUnaryOperator);
+    method public static java.util.stream.IntStream iterate(int, java.util.function.IntPredicate, java.util.function.IntUnaryOperator);
     method public java.util.PrimitiveIterator.OfInt iterator();
     method public java.util.stream.IntStream limit(long);
     method public java.util.stream.IntStream map(java.util.function.IntUnaryOperator);
+    method public default java.util.stream.IntStream mapMulti(java.util.stream.IntStream.IntMapMultiConsumer);
     method public java.util.stream.DoubleStream mapToDouble(java.util.function.IntToDoubleFunction);
     method public java.util.stream.LongStream mapToLong(java.util.function.IntToLongFunction);
     method public <U> java.util.stream.Stream<U> mapToObj(java.util.function.IntFunction<? extends U>);
@@ -17685,12 +17792,17 @@ package java.util.stream {
     method public java.util.Spliterator.OfInt spliterator();
     method public int sum();
     method public java.util.IntSummaryStatistics summaryStatistics();
+    method public default java.util.stream.IntStream takeWhile(java.util.function.IntPredicate);
     method public int[] toArray();
   }
 
   public static interface IntStream.Builder extends java.util.function.IntConsumer {
     method public default java.util.stream.IntStream.Builder add(int);
     method public java.util.stream.IntStream build();
+  }
+
+  @java.lang.FunctionalInterface public static interface IntStream.IntMapMultiConsumer {
+    method public void accept(int, java.util.function.IntConsumer);
   }
 
   public interface LongStream extends java.util.stream.BaseStream<java.lang.Long,java.util.stream.LongStream> {
@@ -17704,6 +17816,7 @@ package java.util.stream {
     method public static java.util.stream.LongStream concat(java.util.stream.LongStream, java.util.stream.LongStream);
     method public long count();
     method public java.util.stream.LongStream distinct();
+    method public default java.util.stream.LongStream dropWhile(java.util.function.LongPredicate);
     method public static java.util.stream.LongStream empty();
     method public java.util.stream.LongStream filter(java.util.function.LongPredicate);
     method public java.util.OptionalLong findAny();
@@ -17713,9 +17826,11 @@ package java.util.stream {
     method public void forEachOrdered(java.util.function.LongConsumer);
     method public static java.util.stream.LongStream generate(java.util.function.LongSupplier);
     method public static java.util.stream.LongStream iterate(long, java.util.function.LongUnaryOperator);
+    method public static java.util.stream.LongStream iterate(long, java.util.function.LongPredicate, java.util.function.LongUnaryOperator);
     method public java.util.PrimitiveIterator.OfLong iterator();
     method public java.util.stream.LongStream limit(long);
     method public java.util.stream.LongStream map(java.util.function.LongUnaryOperator);
+    method public default java.util.stream.LongStream mapMulti(java.util.stream.LongStream.LongMapMultiConsumer);
     method public java.util.stream.DoubleStream mapToDouble(java.util.function.LongToDoubleFunction);
     method public java.util.stream.IntStream mapToInt(java.util.function.LongToIntFunction);
     method public <U> java.util.stream.Stream<U> mapToObj(java.util.function.LongFunction<? extends U>);
@@ -17736,12 +17851,17 @@ package java.util.stream {
     method public java.util.Spliterator.OfLong spliterator();
     method public long sum();
     method public java.util.LongSummaryStatistics summaryStatistics();
+    method public default java.util.stream.LongStream takeWhile(java.util.function.LongPredicate);
     method public long[] toArray();
   }
 
   public static interface LongStream.Builder extends java.util.function.LongConsumer {
     method public default java.util.stream.LongStream.Builder add(long);
     method public java.util.stream.LongStream build();
+  }
+
+  @java.lang.FunctionalInterface public static interface LongStream.LongMapMultiConsumer {
+    method public void accept(long, java.util.function.LongConsumer);
   }
 
   public interface Stream<T> extends java.util.stream.BaseStream<T,java.util.stream.Stream<T>> {
@@ -17995,6 +18115,7 @@ package java.util.zip {
     method public String getName();
     method public long getSize();
     method public long getTime();
+    method public java.time.LocalDateTime getTimeLocal();
     method public boolean isDirectory();
     method public void setComment(String);
     method public void setCompressedSize(long);
@@ -18006,6 +18127,7 @@ package java.util.zip {
     method public void setMethod(int);
     method public void setSize(long);
     method public void setTime(long);
+    method public void setTimeLocal(java.time.LocalDateTime);
     field public static final int CENATT = 36; // 0x24
     field public static final int CENATX = 38; // 0x26
     field public static final int CENCOM = 32; // 0x20
@@ -19203,10 +19325,13 @@ package javax.security.auth.x500 {
     ctor public X500Principal(String, java.util.Map<java.lang.String,java.lang.String>);
     ctor public X500Principal(byte[]);
     ctor public X500Principal(java.io.InputStream);
+    method public boolean equals(Object);
     method public byte[] getEncoded();
     method public String getName();
     method public String getName(String);
     method public String getName(String, java.util.Map<java.lang.String,java.lang.String>);
+    method public int hashCode();
+    method public String toString();
     field public static final String CANONICAL = "CANONICAL";
     field public static final String RFC1779 = "RFC1779";
     field public static final String RFC2253 = "RFC2253";
