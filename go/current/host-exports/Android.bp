@@ -3,7 +3,7 @@
 // blueprint rules added by vendor/google/build/mainline_modules_sdks.py
 // to support coexistence.
 blueprint_package_includes {
-    match_all: ["com.android.mainline_go"]
+    match_all: ["com.android.mainline_go"],
 }
 
 package {
@@ -172,6 +172,7 @@ cc_prebuilt_binary {
         "//art:__subpackages__",
         "//development/build",
         "//prebuilts:__subpackages__",
+        "//vendor:__subpackages__",
     ],
     apex_available: [
         "com.android.art",
