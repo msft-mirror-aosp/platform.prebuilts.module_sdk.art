@@ -151,6 +151,7 @@ java_import {
         "//art/build/sdk",
         "//external/robolectric",
         "//external/robolectric-shadows",
+        "//frameworks/base",
         "//frameworks/layoutlib",
         "//libcore",
         "//prebuilts:__subpackages__",
