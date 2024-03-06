@@ -22,6 +22,8 @@
 
 #include "dex_file.h"
 
+extern "C" int LLVMFuzzerTestOneInput(const uint8_t* data, size_t size);
+
 namespace art {
 
 class OatDexFile;
@@ -94,6 +96,7 @@ class StandardDexFile : public DexFile {
 
   // Returns true if the byte string points to the magic value.
   static bool IsMagicValid(const uint8_t* magic);
+  static bool IsMagicValid(DexFile::Magic magic) { return IsMagicValid(magic.data()); }
   bool IsMagicValid() const override;
 
   // Returns true if the byte string after the magic is the correct value.
@@ -113,14 +116,12 @@ class StandardDexFile : public DexFile {
 
  private:
   StandardDexFile(const uint8_t* base,
-                  size_t size,
                   const std::string& location,
                   uint32_t location_checksum,
                   const OatDexFile* oat_dex_file,
                   // Shared since several dex files may be stored in the same logical container.
                   std::shared_ptr<DexFileContainer> container)
       : DexFile(base,
-                size,
                 location,
                 location_checksum,
                 oat_dex_file,
@@ -132,6 +133,7 @@ class StandardDexFile : public DexFile {
 
   ART_FRIEND_TEST(ClassLinkerTest, RegisterDexFileName);  // for constructor
   friend class OptimizingUnitTestHelper;  // for constructor
+  friend int ::LLVMFuzzerTestOneInput(const uint8_t*, size_t);  // for constructor
 
   DISALLOW_COPY_AND_ASSIGN(StandardDexFile);
 };
