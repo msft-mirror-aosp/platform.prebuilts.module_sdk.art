@@ -253,7 +253,7 @@ class _NODISCARD_ expected {
   ~expected() = default;
 
   // assignment
-  // Note: SFNAIE doesn't work here because assignment operator should be
+  // Note: SFINAE doesn't work here because assignment operator should be
   // non-template. We could workaround this by defining a templated parent class
   // having the assignment operator. This incomplete implementation however
   // doesn't allow us to copy assign expected<T,E> even when T is non-copy
@@ -261,7 +261,7 @@ class _NODISCARD_ expected {
   // anyway though the error message won't be clear.
   expected& operator=(const expected& rhs) = default;
 
-  // Note for SFNAIE above applies to here as well
+  // Note for SFINAE above applies to here as well
   expected& operator=(expected&& rhs) noexcept(
       std::is_nothrow_move_assignable_v<T>&& std::is_nothrow_move_assignable_v<E>) = default;
 
@@ -332,6 +332,7 @@ class _NODISCARD_ expected {
 
   constexpr bool has_value() const noexcept { return var_.index() == 0; }
   constexpr bool ok() const noexcept { return has_value(); }
+  constexpr explicit operator bool() const noexcept { return has_value(); }
 
   constexpr const T& value() const& { return std::get<T>(var_); }
   constexpr T& value() & { return std::get<T>(var_); }
@@ -517,7 +518,7 @@ class _NODISCARD_ expected<void, E> {
   ~expected() = default;
 
   // assignment
-  // Note: SFNAIE doesn't work here because assignment operator should be
+  // Note: SFINAE doesn't work here because assignment operator should be
   // non-template. We could workaround this by defining a templated parent class
   // having the assignment operator. This incomplete implementation however
   // doesn't allow us to copy assign expected<T,E> even when T is non-copy
@@ -525,7 +526,7 @@ class _NODISCARD_ expected<void, E> {
   // anyway though the error message won't be clear.
   expected& operator=(const expected& rhs) = default;
 
-  // Note for SFNAIE above applies to here as well
+  // Note for SFINAE above applies to here as well
   expected& operator=(expected&& rhs) noexcept(std::is_nothrow_move_assignable_v<E>) = default;
 
   template<class G = E>
@@ -559,6 +560,7 @@ class _NODISCARD_ expected<void, E> {
   // observers
   constexpr bool has_value() const noexcept { return var_.index() == 0; }
   constexpr bool ok() const noexcept { return has_value(); }
+  constexpr explicit operator bool() const noexcept { return has_value(); }
 
   constexpr void value() const& { if (!has_value()) std::get<0>(var_); }
 
