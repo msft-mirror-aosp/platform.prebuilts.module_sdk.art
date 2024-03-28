@@ -1,4 +1,5 @@
 android/compat/**
+android/crypto/hpke/**
 android/system/*
 com/android/okhttp/**
 com/android/org/bouncycastle/**

@@ -137,13 +137,18 @@ struct ResultError {
     return android::base::unexpected(ResultError<E>(message_, code_));
   }
 
-  std::string message() const { return message_; }
+  const std::string& message() const { return message_; }
   const E& code() const { return code_; }
 
  private:
   std::string message_;
   E code_;
 };
+
+template <typename E>
+auto format_as(ResultError<E, true> error) {
+  return error.message();
+}
 
 template <typename E>
 struct ResultError<E, /* include_message */ false> {
@@ -245,11 +250,11 @@ class Error {
   Error& operator=(const Error&) = delete;
   Error& operator=(Error&&) = delete;
 
-  template <typename T, typename... Args>
-  friend Error ErrorfImpl(const T&& fmt, const Args&... args);
+  template <typename... Args>
+  friend Error ErrorfImpl(fmt::format_string<Args...> fmt, const Args&... args);
 
-  template <typename T, typename... Args>
-  friend Error ErrnoErrorfImpl(const T&& fmt, const Args&... args);
+  template <typename... Args>
+  friend Error ErrnoErrorfImpl(fmt::format_string<Args...> fmt, const Args&... args);
 
  private:
   Error(bool has_code, E code, const std::string& message) : code_(code), has_code_(has_code) {
@@ -280,14 +285,15 @@ inline E ErrorCode(E code, T&& t, const Args&... args) {
   return ErrorCode(code, args...);
 }
 
-template <typename T, typename... Args>
-inline Error<Errno> ErrorfImpl(const T&& fmt, const Args&... args) {
-  return Error(false, ErrorCode(Errno{}, args...), fmt::format(fmt, args...));
+template <typename... Args>
+inline Error<Errno> ErrorfImpl(fmt::format_string<Args...> fmt, const Args&... args) {
+  return Error(false, ErrorCode(Errno{}, args...),
+               fmt::vformat(fmt.get(), fmt::make_format_args(args...)));
 }
 
-template <typename T, typename... Args>
-inline Error<Errno> ErrnoErrorfImpl(const T&& fmt, const Args&... args) {
-  return Error<Errno>(true, Errno{errno}, fmt::format(fmt, args...));
+template <typename... Args>
+inline Error<Errno> ErrnoErrorfImpl(fmt::format_string<Args...> fmt, const Args&... args) {
+  return Error<Errno>(true, Errno{errno}, fmt::vformat(fmt.get(), fmt::make_format_args(args...)));
 }
 
 #define Errorf(fmt, ...) android::base::ErrorfImpl(FMT_STRING(fmt), ##__VA_ARGS__)
