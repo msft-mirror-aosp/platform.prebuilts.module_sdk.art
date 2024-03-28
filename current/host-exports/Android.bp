@@ -12,40 +12,21 @@ package {
     default_applicable_licenses: ["Android-Apache-2.0"],
 }
 
-// TODO(b/293006869): There was a version upgrade of grpc-grpc-java recently and would not be compiled
-// with old version of okhttp-norepackage in prebuilt package. Thus, we will force this target to build
-// from source until the new version of okhttp-norepackage reflects in train build.
-// java_import {
-//     name: "okhttp-norepackage",
-//     // Do not prefer prebuilt if the Soong config variable "source_build" in namespace "art_module" is true.
-//     use_source_config_var: {
-//         config_namespace: "art_module",
-//         var_name: "source_build",
-//     },
-//     visibility: [
-//         "//art/build/sdk",
-//         "//external/grpc-grpc-java/okhttp",
-//         "//external/okhttp",
-//         "//prebuilts:__subpackages__",
-//     ],
-//     apex_available: [
-//         "com.android.adservices",
-//         "com.android.devicelock",
-//         "com.android.extservices",
-//         "com.android.ondevicepersonalization",
-//     ],
-//     licenses: ["art-module-host-exports_external_okhttp_license"],
-//     host_supported: true,
-//     min_sdk_version: "30",
-//     target: {
-//         android: {
-//             jars: ["java/android/okhttp-norepackage.jar"],
-//         },
-//         linux_glibc: {
-//             jars: ["java/linux_glibc/okhttp-norepackage.jar"],
-//         },
-//     },
-// }
+apex_contributions_defaults {
+    name: "art-module-host-exports.contributions",
+    contents: [
+        "prebuilt_art.module.api.annotations",
+        "prebuilt_dex2oat",
+        "prebuilt_dex2oatd",
+        "prebuilt_dexdump",
+        "prebuilt_hiddenapi",
+        "prebuilt_oatdump",
+        "prebuilt_profman",
+        "prebuilt_veridex",
+        "prebuilt_libartpalette",
+        "prebuilt_libartbase",
+    ],
+}
 
 java_import {
     name: "art.module.api.annotations",
@@ -78,13 +59,6 @@ license {
         "SPDX-license-identifier-BSD",
     ],
     license_text: ["licenses/art/NOTICE"],
-}
-
-license {
-    name: "art-module-host-exports_external_okhttp_license",
-    visibility: ["//visibility:private"],
-    license_kinds: ["SPDX-license-identifier-Apache-2.0"],
-    license_text: ["licenses/external/okhttp/LICENSE.txt"],
 }
 
 license {
