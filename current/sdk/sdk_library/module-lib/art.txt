@@ -530,7 +530,7 @@ package java.text {
 
 package java.util {
 
-  public class LinkedHashMap<K, V> extends java.util.HashMap<K,V> implements java.util.Map<K,V> {
+  public class LinkedHashMap<K, V> extends java.util.HashMap<K,V> implements java.util.Map<K,V> java.util.SequencedMap<K,V> {
     method public java.util.Map.Entry<K,V> eldest();
   }
 
@@ -548,6 +548,10 @@ package javax.crypto {
 
   public class Cipher {
     method public javax.crypto.CipherSpi getCurrentSpi();
+  }
+
+  public class KeyAgreement {
+    method public javax.crypto.KeyAgreementSpi getCurrentSpi();
   }
 
   public class Mac implements java.lang.Cloneable {
