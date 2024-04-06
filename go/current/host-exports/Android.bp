@@ -23,8 +23,6 @@ apex_contributions_defaults {
         "prebuilt_oatdump",
         "prebuilt_profman",
         "prebuilt_veridex",
-        "prebuilt_libartpalette",
-        "prebuilt_libartbase",
     ],
 }
 
