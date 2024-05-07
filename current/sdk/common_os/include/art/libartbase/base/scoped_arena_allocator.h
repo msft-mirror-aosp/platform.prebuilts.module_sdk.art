@@ -171,7 +171,7 @@ class ScopedArenaAllocator
   size_t ApproximatePeakBytes();
 
   // Allow a delete-expression to destroy but not deallocate allocators created by Create().
-  static void operator delete([[maybe_unused]] void* ptr) {}
+  static void operator delete(void* ptr ATTRIBUTE_UNUSED) {}
 
  private:
   ArenaStack* arena_stack_;

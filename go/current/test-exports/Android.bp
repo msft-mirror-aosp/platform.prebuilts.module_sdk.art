@@ -51,6 +51,7 @@ java_import {
         "//libcore/ojluni/src/test",
         "//packages/modules/Wifi/framework/tests",
         "//prebuilts:__subpackages__",
+        "//libcore/ojluni/src/test",
     ],
     apex_available: ["//apex_available:platform"],
     licenses: ["art-module-test-exports_libcore_license"],
