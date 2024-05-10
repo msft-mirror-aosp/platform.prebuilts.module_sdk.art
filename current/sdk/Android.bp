@@ -1,5 +1,11 @@
 // This is auto-generated. DO NOT EDIT.
 
+// blueprint rules added by vendor/google/build/mainline_modules_sdks.py
+// to support coexistence.
+blueprint_package_includes {
+    match_all: ["com.android.mainline"]
+}
+
 package {
     // A default list here prevents the license LSC from adding its own list which would
     // be unnecessary as every module in the sdk already has its own licenses property.
@@ -218,6 +224,8 @@ java_import {
     visibility: [
         "//art/build/sdk",
         "//build/soong/java/core-libraries",
+        "//frameworks/base",
+        "//frameworks/base/api",
         "//libcore:__subpackages__",
         "//prebuilts:__subpackages__",
     ],
@@ -237,6 +245,8 @@ java_import {
     visibility: [
         "//art/build/sdk",
         "//build/soong/java/core-libraries",
+        "//frameworks/base",
+        "//frameworks/base/api",
         "//libcore:__subpackages__",
         "//prebuilts:__subpackages__",
     ],
@@ -257,19 +267,6 @@ java_import {
     apex_available: ["//apex_available:platform"],
     licenses: ["art-module-sdk_libcore_license"],
     jars: ["java/art.module.api.annotations.for.system.modules.jar"],
-}
-
-java_import {
-    name: "art-module-sdk_stub-annotations",
-    // Do not prefer prebuilt if the Soong config variable "source_build" in namespace "art_module" is true.
-    use_source_config_var: {
-        config_namespace: "art_module",
-        var_name: "source_build",
-    },
-    visibility: ["//visibility:private"],
-    apex_available: ["//apex_available:platform"],
-    licenses: ["art-module-sdk_Android-Apache-2.0"],
-    jars: ["java/stub-annotations.jar"],
 }
 
 java_import {
@@ -387,19 +384,17 @@ java_system_modules_import {
     },
     visibility: [
         "//art/build/sdk",
+        "//build/soong/java/core-libraries",
         "//external/conscrypt",
         "//external/icu/android_icu4j",
         "//external/wycheproof",
-        "//libcore",
         "//prebuilts:__subpackages__",
     ],
-    licenses: ["art-module-sdk_libcore_license"],
+    licenses: ["art-module-sdk_Android-Apache-2.0"],
     libs: [
         "art.module.public.api.stubs",
         "core-lambda-stubs-for-system-modules",
-        "core-generated-annotation-stubs",
         "art-module-sdk_art.module.api.annotations.for.system.modules",
-        "art-module-sdk_stub-annotations",
     ],
 }
 
@@ -412,12 +407,12 @@ java_system_modules_import {
     },
     visibility: [
         "//art/build/sdk",
+        "//build/soong/java/core-libraries",
         "//external/conscrypt",
         "//external/icu/android_icu4j",
-        "//libcore",
         "//prebuilts:__subpackages__",
     ],
-    licenses: ["art-module-sdk_libcore_license"],
+    licenses: ["art-module-sdk_Android-Apache-2.0"],
     libs: ["art.module.public.api.stubs.module_lib"],
 }
 
@@ -430,13 +425,13 @@ java_system_modules_import {
     },
     visibility: [
         "//art/build/sdk",
+        "//build/soong/java/core-libraries",
         "//external/bouncycastle",
         "//external/conscrypt",
         "//external/icu/android_icu4j",
-        "//libcore/mmodules/intracoreapi",
         "//prebuilts:__subpackages__",
     ],
-    licenses: ["art-module-sdk_libcore_license"],
+    licenses: ["art-module-sdk_Android-Apache-2.0"],
     libs: [
         "art-module-sdk_art.module.intra.core.api.stubs",
         "art-module-sdk_art-module-intra-core-api-stubs-system-modules-lib",
@@ -467,7 +462,7 @@ license {
         "SPDX-license-identifier-Apache-2.0",
         "SPDX-license-identifier-GPL-2.0-with-classpath-exception",
     ],
-    license_text: ["licenses/art/openjdkjvmti/NOTICE"],
+    license_text: ["licenses/art/openjdkjvmti/LICENSE"],
 }
 
 license {
@@ -543,6 +538,7 @@ cc_prebuilt_library_headers {
     ramdisk_available: true,
     recovery_available: true,
     vendor_available: true,
+    product_available: true,
     sdk_version: "minimum",
     stl: "none",
     compile_multilib: "both",
@@ -779,6 +775,7 @@ cc_prebuilt_library_shared {
     visibility: [
         "//art:__subpackages__",
         "//external/perfetto",
+        "//frameworks/base/services/core/jni",
         "//prebuilts:__subpackages__",
         "//system/core/debuggerd",
         "//system/extras/simpleperf",
@@ -787,6 +784,7 @@ cc_prebuilt_library_shared {
     apex_available: [
         "com.android.art",
         "com.android.art.debug",
+        "test_broken_com.android.art",
     ],
     licenses: ["art-module-sdk_art_license"],
     host_supported: true,
@@ -799,7 +797,7 @@ cc_prebuilt_library_shared {
         "common_os/include/external/fmtlib/include",
         "common_os/include/art/libartbase",
         "common_os/include/external/tinyxml2",
-        "common_os/include/prebuilts/runtime/mainline/platform/sdk/common_os/include/external/libcap/libcap/include",
+        "common_os/include/external/libcap/libcap/include",
     ],
     stubs: {
         versions: [
@@ -850,6 +848,7 @@ cc_prebuilt_library_shared {
     apex_available: [
         "com.android.art",
         "com.android.art.debug",
+        "test_broken_com.android.art",
     ],
     licenses: ["art-module-sdk_art_license"],
     host_supported: true,
@@ -913,6 +912,7 @@ cc_prebuilt_library_shared {
         "common_os/include/libnativehelper/include_jni",
         "common_os/include/libnativehelper/include_platform",
         "common_os/include/libnativehelper/include_platform_header_only",
+        "common_os/include/system/logging/liblog/include",
     ],
     stubs: {
         versions: [
@@ -963,6 +963,7 @@ cc_prebuilt_library_shared {
     apex_available: [
         "com.android.art",
         "com.android.art.debug",
+        "test_broken_com.android.art",
     ],
     licenses: ["art-module-sdk_art_license"],
     host_supported: true,
@@ -1019,6 +1020,7 @@ cc_prebuilt_library_shared {
     apex_available: [
         "com.android.art",
         "com.android.art.debug",
+        "test_broken_com.android.art",
     ],
     licenses: ["art-module-sdk_art_license"],
     host_supported: true,
@@ -1121,6 +1123,7 @@ cc_prebuilt_library_shared {
         "//packages/modules/Connectivity:__subpackages__",
         "//packages/modules/ExtServices:__subpackages__",
         "//packages/modules/NetworkStack:__subpackages__",
+        "//packages/modules/Permission/tests/cts:__subpackages__",
         "//prebuilts:__subpackages__",
     ],
     apex_available: [
@@ -1138,6 +1141,7 @@ cc_prebuilt_library_shared {
         "include/libnativehelper/header_only_include",
         "include/libnativehelper/include",
         "include/libnativehelper/include_jni",
+        "include/system/logging/liblog/include",
     ],
     arch: {
         arm64: {
@@ -1209,22 +1213,13 @@ cc_prebuilt_library_static {
         "//apex_available:platform",
         "com.android.art",
         "com.android.art.debug",
-        "com.android.media",
-        "com.android.media.swcodec",
         "com.android.runtime",
     ],
     licenses: ["art-module-sdk_art_license"],
     host_supported: true,
     compile_multilib: "both",
-    shared_libs: [
-        "liblog",
-        "libbase",
-    ],
-    export_include_dirs: [
-        "common_os/include/art/libdexfile/external/include",
-        "common_os/include/system/libbase/include",
-        "common_os/include/external/fmtlib/include",
-    ],
+    shared_libs: ["liblog"],
+    export_include_dirs: ["common_os/include/art/libdexfile/external/include"],
     target: {
         host: {
             enabled: false,
@@ -1270,10 +1265,11 @@ cc_prebuilt_library_static {
     host_supported: true,
     compile_multilib: "both",
     export_include_dirs: [
-        "common_os/include/prebuilts/runtime/mainline/platform/sdk/common_os/include/external/libcap/libcap/include",
+        "common_os/include/external/libcap/libcap/include",
         "common_os/include/system/libbase/include",
         "common_os/include/external/fmtlib/include",
         "common_os/include/art/libartpalette/include",
+        "common_os/include/libnativehelper/include_jni",
         "common_os/include/system/logging/liblog/include",
         "common_os/include/external/zlib",
         "common_os/include/system/libziparchive/include",
@@ -1281,7 +1277,6 @@ cc_prebuilt_library_static {
         "common_os/include/art/libartbase",
         "common_os/include/external/tinyxml2",
         "common_os/include/art/libdexfile",
-        "common_os/include/libnativehelper/include_jni",
         "common_os/include/art/libdexfile/external/include",
     ],
     target: {
@@ -1330,6 +1325,7 @@ cc_prebuilt_library_static {
         "common_os/include/libnativehelper/include_jni",
         "common_os/include/libnativehelper/include_platform",
         "common_os/include/libnativehelper/include_platform_header_only",
+        "common_os/include/system/logging/liblog/include",
     ],
     target: {
         host: {
