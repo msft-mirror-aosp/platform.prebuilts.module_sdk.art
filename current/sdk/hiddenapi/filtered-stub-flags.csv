@@ -1616,7 +1616,6 @@ Lcom/android/org/bouncycastle/jcajce/provider/symmetric/DES$DESPBEKeyFactory;->e
 Lcom/android/org/bouncycastle/jcajce/provider/symmetric/DES$KeyFactory;->engineGenerateSecret(Ljava/security/spec/KeySpec;)Ljavax/crypto/SecretKey;,core-platform-api,public-api,system-api,test-api
 Lcom/android/org/bouncycastle/jcajce/provider/symmetric/DES$KeyFactory;->engineGetKeySpec(Ljavax/crypto/SecretKey;Ljava/lang/Class;)Ljava/security/spec/KeySpec;,core-platform-api,public-api,system-api,test-api
 Lcom/android/org/bouncycastle/jcajce/provider/symmetric/DES$KeyGenerator;->engineGenerateKey()Ljavax/crypto/SecretKey;,core-platform-api,public-api,system-api,test-api
-Lcom/android/org/bouncycastle/jcajce/provider/symmetric/DES$KeyGenerator;->engineInit(ILjava/security/SecureRandom;)V,core-platform-api,public-api,system-api,test-api
 Lcom/android/org/bouncycastle/jcajce/provider/symmetric/PBEPBKDF2$BasePBKDF2;->engineGenerateSecret(Ljava/security/spec/KeySpec;)Ljavax/crypto/SecretKey;,core-platform-api,public-api,system-api,test-api
 Lcom/android/org/bouncycastle/jcajce/provider/symmetric/PBEPKCS12$AlgParams;->engineGetEncoded()[B,core-platform-api,public-api,system-api,test-api
 Lcom/android/org/bouncycastle/jcajce/provider/symmetric/PBEPKCS12$AlgParams;->engineGetEncoded(Ljava/lang/String;)[B,core-platform-api,public-api,system-api,test-api

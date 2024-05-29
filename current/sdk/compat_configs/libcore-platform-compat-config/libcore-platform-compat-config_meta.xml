@@ -15,19 +15,22 @@
   <compat-change description="Allow apps accessing @TestApi APIs. &lt;p&gt;This will always be disabled by default and should only be used by platform test code." disabled="true" id="166236554" name="ALLOW_TEST_API_ACCESS">
     <meta-data definedIn="dalvik.system.VMRuntime" sourcePosition="libcore/libart/src/main/java/dalvik/system/VMRuntime.java:97" />
   </compat-change>
+  <compat-change description="Canonicalize the parent directory of the root directory when app targets SDK level 35 (Android 15) or higher. &quot;/..&quot; can be canonicalized into &quot;/&quot; according to POSIX." enableSinceTargetSdk="35" id="312399441" name="CANONICALIZE_PARENT_OF_ROOT_DIR">
+    <meta-data definedIn="java.io.File" sourcePosition="libcore/ojluni/src/main/java/java/io/File.java:626" />
+  </compat-change>
   <compat-change description="If this change is enabled, {@link #getHardwareAddress()} returns null when the hardware address is &lt;a href=&quot;#access-restrictions&quot;&gt;inaccessible&lt;/a&gt;. If the change is disabled, the default MAC address (02:00:00:00:00:00) is returned instead." enableSinceTargetSdk="30" id="170188668" name="RETURN_NULL_HARDWARE_ADDRESS">
     <meta-data definedIn="java.net.NetworkInterface" sourcePosition="libcore/ojluni/src/main/java/java/net/NetworkInterface.java:79" />
   </compat-change>
-  <compat-change description="Since Android 15 Arrays.asList(...).toArray()'s component type is {@link Object}, not the underlying array's elements type. So the following code will throw {@link ClassCastException}: &lt;pre&gt;{@code String[] elements = (String[]) Arrays.asList(&quot;one&quot;, &quot;two&quot;).toArray(); }&lt;/pre&gt; You can overcome this by using {@link Collection#toArray(Object[])}: &lt;pre&gt;{@code String[] elements = Arrays.asList(&quot;two&quot;, &quot;one&quot;).toArray(new String[0]); }&lt;/pre&gt;" enableSinceTargetSdk="10000" id="202956589" name="DO_NOT_CLONE_IN_ARRAYS_AS_LIST">
+  <compat-change description="Since Android 15 Arrays.asList(...).toArray()'s component type is {@link Object}, not the underlying array's elements type. So the following code will throw {@link ClassCastException}: &lt;pre&gt;{@code String[] elements = (String[]) Arrays.asList(&quot;one&quot;, &quot;two&quot;).toArray(); }&lt;/pre&gt; You can overcome this by using {@link Collection#toArray(Object[])}: &lt;pre&gt;{@code String[] elements = Arrays.asList(&quot;two&quot;, &quot;one&quot;).toArray(new String[0]); }&lt;/pre&gt;" enableSinceTargetSdk="35" id="202956589" name="DO_NOT_CLONE_IN_ARRAYS_AS_LIST">
     <meta-data definedIn="java.util.Arrays" sourcePosition="libcore/ojluni/src/main/java/java/util/Arrays.java:4186" />
   </compat-change>
-  <compat-change description="Prior to Android 15 (V), validations of argument index, flags, width, and precision were lax - it was allowed to use 0 and Integer.MAX_VALUE + 1 as argument index. &lt;p&gt; Now it will throw exception, as documentation says. Flag is enabled on Android 15+." enableSinceTargetSdk="10000" id="270674727" name="ENABLE_STRICT_FORMATTER_VALIDATION">
+  <compat-change description="Prior to Android 15 (V), validations of argument index, flags, width, and precision were lax - it was allowed to use 0 and Integer.MAX_VALUE + 1 as argument index. &lt;p&gt; Now it will throw exception, as documentation says. Flag is enabled on Android 15+." enableSinceTargetSdk="35" id="270674727" name="ENABLE_STRICT_FORMATTER_VALIDATION">
     <meta-data definedIn="java.util.Formatter" sourcePosition="libcore/ojluni/src/main/java/java/util/Formatter.java:2893" />
   </compat-change>
   <compat-change description="Since Android 14, {@link PriorityQueue#offer(E)} requires all elements to be comparable if there was no comparator. Previously, the first element being added did not need to be comparable. This flag is enabled for apps targeting Android 14+." enableSinceTargetSdk="34" id="289878283" name="PRIORITY_QUEUE_OFFER_NON_COMPARABLE_ONE_ELEMENT">
     <meta-data definedIn="java.util.PriorityQueue" sourcePosition="libcore/ojluni/src/main/java/java/util/PriorityQueue.java:1002" />
   </compat-change>
-  <compat-change description="After https://bugs.openjdk.org/browse/JDK-8301574 ints() and long() methods generate different sequence of number than nextInt() and nextLong() calls would." enableSinceTargetSdk="10000" id="308103782" name="STREAM_INT_DIFFERS_FROM_NEXT_INT">
+  <compat-change description="After https://bugs.openjdk.org/browse/JDK-8301574 ints() and long() methods generate different sequence of number than nextInt() and nextLong() calls would." enableSinceTargetSdk="35" id="308103782" name="STREAM_INT_DIFFERS_FROM_NEXT_INT">
     <meta-data definedIn="java.util.Random" sourcePosition="libcore/ojluni/src/main/java/java/util/Random.java:119" />
   </compat-change>
   <compat-change description="Since Android 14 {@link #fromString} does more strict input argument validation. This flag is enabled for apps targeting Android 14+." enableSinceTargetSdk="34" id="263076149" name="ENABLE_STRICT_VALIDATION">
@@ -42,7 +45,7 @@
   <compat-change description="Since Android 11, formatter classes, e.g. java.text.SimpleDateFormat, no longer provide English data when Locale.ROOT format is requested. Please use Locale.ENGLISH to format in English. Note that Locale.ROOT is used as language/country neutral locale or fallback locale, and does not guarantee to represent English locale. This flag is only for documentation and can't be overridden by app. Please use {@code targetSdkVersion} to enable the new behavior." enableAfterTargetSdk="29" id="159047832" name="USE_REAL_ROOT_LOCALE">
     <meta-data definedIn="libcore.icu.LocaleData" sourcePosition="libcore/luni/src/main/java/libcore/icu/LocaleData.java:77" />
   </compat-change>
-  <compat-change description="On Android V+ when this flag is enabled language codes are no longer converted to their obsolete forms: iw maps to he, ji maps to yi, and in maps to id." enableSinceTargetSdk="10000" id="291868760" name="USE_NEW_ISO_LOCALE_CODES">
+  <compat-change description="On Android V+ when this flag is enabled language codes are no longer converted to their obsolete forms: iw maps to he, ji maps to yi, and in maps to id." enableSinceTargetSdk="35" id="291868760" name="USE_NEW_ISO_LOCALE_CODES">
     <meta-data definedIn="sun.util.locale.BaseLocale" sourcePosition="libcore/ojluni/src/main/java/sun/util/locale/BaseLocale.java:115" />
   </compat-change>
 </config>
