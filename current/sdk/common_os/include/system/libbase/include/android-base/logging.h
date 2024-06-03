@@ -119,6 +119,9 @@ void StderrLogger(LogId log_buffer_id, LogSeverity severity, const char* tag, co
 // Errors are also prefixed by the program name (as with err(3)/error(3)).
 // Useful for replacing printf(3)/perror(3)/err(3)/error(3) in command-line tools.
 void StdioLogger(LogId log_buffer_id, LogSeverity severity, const char* tag, const char* file, unsigned int line, const char* message);
+// Returns a log function which tees (outputs to both) log streams.
+// For example: InitLogging(argv, TeeLogger(&StderrLogger, LogdLogger()))
+LogFunction TeeLogger(LogFunction&& l1, LogFunction&& l2);
 
 void DefaultAborter(const char* abort_message);
 
