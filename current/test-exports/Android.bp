@@ -1,15 +1,33 @@
 // This is auto-generated. DO NOT EDIT.
 
-// blueprint rules added by vendor/google/build/mainline_modules_sdks.py
-// to support coexistence.
-blueprint_package_includes {
-    match_all: ["com.android.mainline"]
-}
-
 package {
     // A default list here prevents the license LSC from adding its own list which would
     // be unnecessary as every module in the sdk already has its own licenses property.
     default_applicable_licenses: ["Android-Apache-2.0"],
+}
+
+apex_contributions_defaults {
+    name: "art-module-test-exports.contributions",
+    contents: [
+        "prebuilt_core-compat-test-rules",
+        "prebuilt_core-test-rules",
+        "prebuilt_core-tests-support",
+        "prebuilt_okhttp-tests-nojarjar",
+        "prebuilt_art_cts_jvmti_test_library",
+        "prebuilt_expected_cts_outputs",
+        "prebuilt_core-libart-for-host",
+        "prebuilt_okhttp-for-host",
+        "prebuilt_libcore-expectations-knownfailures-jar",
+        "prebuilt_libcore-expectations-virtualdeviceknownfailures-jar",
+        "prebuilt_okhttp-nojarjar",
+        "prebuilt_apache-harmony-jdwp-tests",
+        "prebuilt_libcore-crypto-tests",
+        "prebuilt_core-ojtests-public",
+        "prebuilt_jsr166-tests",
+        "prebuilt_apache-harmony-tests",
+        "prebuilt_core-tests",
+        "prebuilt_libjavacoretests",
+    ],
 }
 
 java_import {
@@ -39,6 +57,7 @@ java_import {
     },
     visibility: [
         "//art/build/sdk",
+        "//cts/tests/core/runner-axt",
         "//cts/tests/tests/util",
         "//external/conscrypt",
         "//external/conscrypt/apex/tests",
@@ -47,9 +66,9 @@ java_import {
         "//frameworks/base/wifi/tests",
         "//libcore",
         "//libcore/luni/src/test/java9compatibility",
+        "//libcore/ojluni/src/test",
         "//packages/modules/Wifi/framework/tests",
         "//prebuilts:__subpackages__",
-        "//libcore/ojluni/src/test",
     ],
     apex_available: ["//apex_available:platform"],
     licenses: ["art-module-test-exports_libcore_license"],
@@ -152,6 +171,7 @@ java_import {
         "//art/build/sdk",
         "//external/robolectric",
         "//external/robolectric-shadows",
+        "//frameworks/base",
         "//frameworks/layoutlib",
         "//libcore",
         "//prebuilts:__subpackages__",
@@ -323,6 +343,7 @@ java_test_import {
         "//art/build/sdk",
         "//cts/tests/libcore/luni",
         "//external/apache-harmony",
+        "//libcore",
         "//prebuilts:__subpackages__",
     ],
     apex_available: ["//apex_available:platform"],
