@@ -93,7 +93,7 @@ using ArenaHashMap = HashMap<Key,
 template <typename Key,
           typename Value,
           typename Hash = std::hash<Key>,
-          typename Pred = std::equal_to<Key>>
+          typename Pred = std::equal_to<Value>>
 using ArenaUnorderedMap = std::unordered_map<Key,
                                              Value,
                                              Hash,
@@ -109,7 +109,7 @@ template <>
 class ArenaAllocatorAdapterKindImpl<false> {
  public:
   // Not tracking allocations, ignore the supplied kind and arbitrarily provide kArenaAllocSTL.
-  explicit ArenaAllocatorAdapterKindImpl([[maybe_unused]] ArenaAllocKind kind) {}
+  explicit ArenaAllocatorAdapterKindImpl(ArenaAllocKind kind ATTRIBUTE_UNUSED) {}
   ArenaAllocatorAdapterKindImpl(const ArenaAllocatorAdapterKindImpl&) = default;
   ArenaAllocatorAdapterKindImpl& operator=(const ArenaAllocatorAdapterKindImpl&) = default;
   ArenaAllocKind Kind() { return kArenaAllocSTL; }
@@ -199,7 +199,7 @@ class ArenaAllocatorAdapter : private ArenaAllocatorAdapterKind {
   const_pointer address(const_reference x) const { return &x; }
 
   pointer allocate(size_type n,
-                   [[maybe_unused]] ArenaAllocatorAdapter<void>::pointer hint = nullptr) {
+                   ArenaAllocatorAdapter<void>::pointer hint ATTRIBUTE_UNUSED = nullptr) {
     DCHECK_LE(n, max_size());
     return allocator_->AllocArray<T>(n, ArenaAllocatorAdapterKind::Kind());
   }
