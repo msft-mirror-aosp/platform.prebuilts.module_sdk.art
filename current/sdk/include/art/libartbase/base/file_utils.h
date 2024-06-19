@@ -127,10 +127,8 @@ void GetDalvikCache(const char* subdir, bool create_if_absent, std::string* dalv
 
 // Returns the absolute dalvik-cache path for a DexFile or OatFile. The path returned will be
 // rooted at `cache_location`.
-bool GetDalvikCacheFilename(std::string_view location,
-                            std::string_view cache_location,
-                            std::string* filename,
-                            std::string* error_msg);
+bool GetDalvikCacheFilename(const char* location, const char* cache_location,
+                            std::string* filename, std::string* error_msg);
 
 // Returns the absolute dalvik-cache path. The path may include the instruction set sub-directory
 // if specified.
