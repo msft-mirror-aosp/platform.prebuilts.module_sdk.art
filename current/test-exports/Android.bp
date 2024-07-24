@@ -1,11 +1,5 @@
 // This is auto-generated. DO NOT EDIT.
 
-// blueprint rules added by vendor/google/build/mainline_modules_sdks.py
-// to support coexistence.
-blueprint_package_includes {
-    match_all: ["com.android.mainline"]
-}
-
 package {
     // A default list here prevents the license LSC from adding its own list which would
     // be unnecessary as every module in the sdk already has its own licenses property.
@@ -22,7 +16,7 @@ java_import {
     visibility: [
         "//art/build/sdk",
         "//frameworks/base/tests/PlatformCompatGating/test-rules",
-        "//libcore",
+        "//libcore:__subpackages__",
         "//prebuilts:__subpackages__",
     ],
     apex_available: ["//apex_available:platform"],
@@ -39,6 +33,7 @@ java_import {
     },
     visibility: [
         "//art/build/sdk",
+        "//cts/tests/core/runner-axt",
         "//cts/tests/tests/util",
         "//external/conscrypt",
         "//external/conscrypt/apex/tests",
@@ -47,8 +42,10 @@ java_import {
         "//frameworks/base/wifi/tests",
         "//libcore",
         "//libcore/luni/src/test/java9compatibility",
+        "//libcore/ojluni/src/test",
         "//packages/modules/Wifi/framework/tests",
         "//prebuilts:__subpackages__",
+        "//libcore/ojluni/src/test",
     ],
     apex_available: ["//apex_available:platform"],
     licenses: ["art-module-test-exports_libcore_license"],
@@ -323,6 +320,7 @@ java_test_import {
         "//art/build/sdk",
         "//cts/tests/libcore/luni",
         "//external/apache-harmony",
+        "//libcore",
         "//prebuilts:__subpackages__",
     ],
     apex_available: ["//apex_available:platform"],

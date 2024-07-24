@@ -1,11 +1,5 @@
 // This is auto-generated. DO NOT EDIT.
 
-// blueprint rules added by vendor/google/build/mainline_modules_sdks.py
-// to support coexistence.
-blueprint_package_includes {
-    match_all: ["com.android.mainline"]
-}
-
 package {
     // A default list here prevents the license LSC from adding its own list which would
     // be unnecessary as every module in the sdk already has its own licenses property.
@@ -357,6 +351,9 @@ java_sdk_library_import {
     licenses: ["art-module-sdk_art_license"],
     shared_library: false,
     permitted_packages: ["com.android.server.art"],
+    dex_preopt: {
+        profile_guided: true,
+    },
     public: {
         jars: ["sdk_library/public/service-art-stubs.jar"],
         stub_srcs: ["sdk_library/public/service-art.srcjar"],
@@ -1108,28 +1105,9 @@ cc_prebuilt_library_shared {
         config_namespace: "art_module",
         var_name: "source_build",
     },
-    visibility: [
-        "//art:__subpackages__",
-        "//cts:__subpackages__",
-        "//external/perfetto:__subpackages__",
-        "//frameworks/base/packages/Connectivity/tests/integration",
-        "//frameworks/base/packages/ConnectivityT:__subpackages__",
-        "//frameworks/base/packages/Tethering:__subpackages__",
-        "//frameworks/libs/net/common/native/bpfmapjni",
-        "//frameworks/libs/net/common/native/bpfutiljni",
-        "//libcore:__subpackages__",
-        "//libnativehelper:__subpackages__",
-        "//packages/modules/Connectivity:__subpackages__",
-        "//packages/modules/ExtServices:__subpackages__",
-        "//packages/modules/NetworkStack:__subpackages__",
-        "//prebuilts:__subpackages__",
-    ],
     apex_available: [
+        "//apex_available:anyapex",
         "//apex_available:platform",
-        "com.android.art",
-        "com.android.art.debug",
-        "com.android.extservices",
-        "com.android.tethering",
     ],
     licenses: ["art-module-sdk_libnativehelper_license"],
     stl: "none",
