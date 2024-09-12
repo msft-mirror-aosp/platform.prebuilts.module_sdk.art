@@ -22,6 +22,11 @@ apex_contributions_defaults {
 
 java_import {
     name: "art.module.api.annotations",
+    // Do not prefer prebuilt if the Soong config variable "source_build" in namespace "art_module" is true.
+    use_source_config_var: {
+        config_namespace: "art_module",
+        var_name: "source_build",
+    },
     visibility: [
         "//art/build/sdk",
         "//external/icu/android_icu4j",
@@ -70,6 +75,11 @@ license {
 
 cc_prebuilt_binary {
     name: "dex2oat",
+    // Do not prefer prebuilt if the Soong config variable "source_build" in namespace "art_module" is true.
+    use_source_config_var: {
+        config_namespace: "art_module",
+        var_name: "source_build",
+    },
     visibility: ["//visibility:public"],
     apex_available: [
         "com.android.art",
@@ -94,6 +104,11 @@ cc_prebuilt_binary {
 
 cc_prebuilt_binary {
     name: "dex2oatd",
+    // Do not prefer prebuilt if the Soong config variable "source_build" in namespace "art_module" is true.
+    use_source_config_var: {
+        config_namespace: "art_module",
+        var_name: "source_build",
+    },
     visibility: ["//visibility:public"],
     apex_available: ["com.android.art.debug"],
     licenses: ["art-module-host-exports_art_license"],
@@ -114,6 +129,11 @@ cc_prebuilt_binary {
 
 cc_prebuilt_binary {
     name: "dexdump",
+    // Do not prefer prebuilt if the Soong config variable "source_build" in namespace "art_module" is true.
+    use_source_config_var: {
+        config_namespace: "art_module",
+        var_name: "source_build",
+    },
     visibility: [
         "//art:__subpackages__",
         "//development/build",
@@ -143,6 +163,11 @@ cc_prebuilt_binary {
 
 cc_prebuilt_binary {
     name: "hiddenapi",
+    // Do not prefer prebuilt if the Soong config variable "source_build" in namespace "art_module" is true.
+    use_source_config_var: {
+        config_namespace: "art_module",
+        var_name: "source_build",
+    },
     visibility: [
         "//art:__subpackages__",
         "//prebuilts:__subpackages__",
@@ -166,6 +191,11 @@ cc_prebuilt_binary {
 
 cc_prebuilt_binary {
     name: "oatdump",
+    // Do not prefer prebuilt if the Soong config variable "source_build" in namespace "art_module" is true.
+    use_source_config_var: {
+        config_namespace: "art_module",
+        var_name: "source_build",
+    },
     visibility: [
         "//art:__subpackages__",
         "//prebuilts:__subpackages__",
@@ -193,6 +223,11 @@ cc_prebuilt_binary {
 
 cc_prebuilt_binary {
     name: "profman",
+    // Do not prefer prebuilt if the Soong config variable "source_build" in namespace "art_module" is true.
+    use_source_config_var: {
+        config_namespace: "art_module",
+        var_name: "source_build",
+    },
     visibility: [
         "//art:__subpackages__",
         "//prebuilts:__subpackages__",
@@ -220,6 +255,11 @@ cc_prebuilt_binary {
 
 cc_prebuilt_binary {
     name: "veridex",
+    // Do not prefer prebuilt if the Soong config variable "source_build" in namespace "art_module" is true.
+    use_source_config_var: {
+        config_namespace: "art_module",
+        var_name: "source_build",
+    },
     visibility: [
         "//art:__subpackages__",
         "//prebuilts:__subpackages__",

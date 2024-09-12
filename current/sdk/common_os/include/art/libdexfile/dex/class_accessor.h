@@ -351,7 +351,6 @@ class ClassAccessor {
   }
 
   const char* GetDescriptor() const;
-  std::string_view GetDescriptorView() const;
 
   dex::TypeIndex GetClassIdx() const;
 

@@ -154,10 +154,6 @@ inline const char* ClassAccessor::GetDescriptor() const {
   return dex_file_.GetTypeDescriptor(GetClassIdx());
 }
 
-inline std::string_view ClassAccessor::GetDescriptorView() const {
-  return dex_file_.GetTypeDescriptorView(GetClassIdx());
-}
-
 inline const dex::CodeItem* ClassAccessor::Method::GetCodeItem() const {
   return dex_file_.GetCodeItem(code_off_);
 }
