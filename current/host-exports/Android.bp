@@ -6,48 +6,22 @@ package {
     default_applicable_licenses: ["Android-Apache-2.0"],
 }
 
-// TODO(b/293006869): There was a version upgrade of grpc-grpc-java recently and would not be compiled
-// with old version of okhttp-norepackage in prebuilt package. Thus, we will force this target to build
-// from source until the new version of okhttp-norepackage reflects in train build.
-// java_import {
-//     name: "okhttp-norepackage",
-//     // Do not prefer prebuilt if the Soong config variable "source_build" in namespace "art_module" is true.
-//     use_source_config_var: {
-//         config_namespace: "art_module",
-//         var_name: "source_build",
-//     },
-//     visibility: [
-//         "//art/build/sdk",
-//         "//external/grpc-grpc-java/okhttp",
-//         "//external/okhttp",
-//         "//prebuilts:__subpackages__",
-//     ],
-//     apex_available: [
-//         "com.android.adservices",
-//         "com.android.devicelock",
-//         "com.android.extservices",
-//         "com.android.ondevicepersonalization",
-//     ],
-//     licenses: ["art-module-host-exports_external_okhttp_license"],
-//     host_supported: true,
-//     min_sdk_version: "30",
-//     target: {
-//         android: {
-//             jars: ["java/android/okhttp-norepackage.jar"],
-//         },
-//         linux_glibc: {
-//             jars: ["java/linux_glibc/okhttp-norepackage.jar"],
-//         },
-//     },
-// }
+apex_contributions_defaults {
+    name: "art-module-host-exports.contributions",
+    contents: [
+        "prebuilt_art.module.api.annotations",
+        "prebuilt_dex2oat",
+        "prebuilt_dex2oatd",
+        "prebuilt_dexdump",
+        "prebuilt_hiddenapi",
+        "prebuilt_oatdump",
+        "prebuilt_profman",
+        "prebuilt_veridex",
+    ],
+}
 
 java_import {
     name: "art.module.api.annotations",
-    // Do not prefer prebuilt if the Soong config variable "source_build" in namespace "art_module" is true.
-    use_source_config_var: {
-        config_namespace: "art_module",
-        var_name: "source_build",
-    },
     visibility: [
         "//art/build/sdk",
         "//external/icu/android_icu4j",
@@ -75,13 +49,6 @@ license {
 }
 
 license {
-    name: "art-module-host-exports_external_okhttp_license",
-    visibility: ["//visibility:private"],
-    license_kinds: ["SPDX-license-identifier-Apache-2.0"],
-    license_text: ["licenses/external/okhttp/LICENSE.txt"],
-}
-
-license {
     name: "art-module-host-exports_libcore_license",
     visibility: ["//visibility:private"],
     license_kinds: [
@@ -103,11 +70,6 @@ license {
 
 cc_prebuilt_binary {
     name: "dex2oat",
-    // Do not prefer prebuilt if the Soong config variable "source_build" in namespace "art_module" is true.
-    use_source_config_var: {
-        config_namespace: "art_module",
-        var_name: "source_build",
-    },
     visibility: ["//visibility:public"],
     apex_available: [
         "com.android.art",
@@ -132,11 +94,6 @@ cc_prebuilt_binary {
 
 cc_prebuilt_binary {
     name: "dex2oatd",
-    // Do not prefer prebuilt if the Soong config variable "source_build" in namespace "art_module" is true.
-    use_source_config_var: {
-        config_namespace: "art_module",
-        var_name: "source_build",
-    },
     visibility: ["//visibility:public"],
     apex_available: ["com.android.art.debug"],
     licenses: ["art-module-host-exports_art_license"],
@@ -157,11 +114,6 @@ cc_prebuilt_binary {
 
 cc_prebuilt_binary {
     name: "dexdump",
-    // Do not prefer prebuilt if the Soong config variable "source_build" in namespace "art_module" is true.
-    use_source_config_var: {
-        config_namespace: "art_module",
-        var_name: "source_build",
-    },
     visibility: [
         "//art:__subpackages__",
         "//development/build",
@@ -191,11 +143,6 @@ cc_prebuilt_binary {
 
 cc_prebuilt_binary {
     name: "hiddenapi",
-    // Do not prefer prebuilt if the Soong config variable "source_build" in namespace "art_module" is true.
-    use_source_config_var: {
-        config_namespace: "art_module",
-        var_name: "source_build",
-    },
     visibility: [
         "//art:__subpackages__",
         "//prebuilts:__subpackages__",
@@ -219,11 +166,6 @@ cc_prebuilt_binary {
 
 cc_prebuilt_binary {
     name: "oatdump",
-    // Do not prefer prebuilt if the Soong config variable "source_build" in namespace "art_module" is true.
-    use_source_config_var: {
-        config_namespace: "art_module",
-        var_name: "source_build",
-    },
     visibility: [
         "//art:__subpackages__",
         "//prebuilts:__subpackages__",
@@ -251,11 +193,6 @@ cc_prebuilt_binary {
 
 cc_prebuilt_binary {
     name: "profman",
-    // Do not prefer prebuilt if the Soong config variable "source_build" in namespace "art_module" is true.
-    use_source_config_var: {
-        config_namespace: "art_module",
-        var_name: "source_build",
-    },
     visibility: [
         "//art:__subpackages__",
         "//prebuilts:__subpackages__",
@@ -283,11 +220,6 @@ cc_prebuilt_binary {
 
 cc_prebuilt_binary {
     name: "veridex",
-    // Do not prefer prebuilt if the Soong config variable "source_build" in namespace "art_module" is true.
-    use_source_config_var: {
-        config_namespace: "art_module",
-        var_name: "source_build",
-    },
     visibility: [
         "//art:__subpackages__",
         "//prebuilts:__subpackages__",
@@ -305,102 +237,6 @@ cc_prebuilt_binary {
         linux_glibc_x86_64: {
             enabled: true,
             srcs: ["x86_64/bin/veridex"],
-        },
-    },
-}
-
-cc_prebuilt_library {
-    name: "libartpalette",
-    // Do not prefer prebuilt if the Soong config variable "source_build" in namespace "art_module" is true.
-    use_source_config_var: {
-        config_namespace: "art_module",
-        var_name: "source_build",
-    },
-    visibility: [
-        "//art:__subpackages__",
-        "//prebuilts/module_sdk/art:__subpackages__",
-        "//prebuilts:__subpackages__",
-    ],
-    apex_available: [
-        "com.android.art",
-        "com.android.art.debug",
-        "com.android.runtime",
-    ],
-    licenses: ["art-module-host-exports_art_license"],
-    device_supported: false,
-    host_supported: true,
-    compile_multilib: "64",
-    export_include_dirs: [
-        "include/art/libartpalette/include",
-        "include/libnativehelper/include_jni",
-    ],
-    target: {
-        host: {
-            enabled: false,
-        },
-        linux_glibc_x86_64: {
-            enabled: true,
-            static: {
-                srcs: ["x86_64/lib/libartpalette.a"],
-            },
-            shared: {
-                srcs: ["x86_64/lib/libartpalette.so"],
-                shared_libs: [
-                    "libbase",
-                    "liblog",
-                ],
-            },
-        },
-    },
-}
-
-cc_prebuilt_library {
-    name: "libartbase",
-    // Do not prefer prebuilt if the Soong config variable "source_build" in namespace "art_module" is true.
-    use_source_config_var: {
-        config_namespace: "art_module",
-        var_name: "source_build",
-    },
-    visibility: [
-        "//art:__subpackages__",
-        "//packages/modules/NetworkStack/tests:__subpackages__",
-        "//prebuilts/module_sdk/art/current/host-exports",
-        "//prebuilts:__subpackages__",
-    ],
-    apex_available: [
-        "com.android.art",
-        "com.android.art.debug",
-    ],
-    licenses: ["art-module-host-exports_art_license"],
-    device_supported: false,
-    host_supported: true,
-    compile_multilib: "64",
-    shared_libs: [
-        "libziparchive",
-        "libz",
-        "liblog",
-        "libartpalette",
-        "libbase",
-    ],
-    export_include_dirs: [
-        "include/art/libartbase",
-        "include/external/tinyxml2",
-        "include/external/libcap/libcap/include",
-        "include/system/libbase/include",
-        "include/external/fmtlib/include",
-    ],
-    target: {
-        host: {
-            enabled: false,
-        },
-        linux_glibc_x86_64: {
-            enabled: true,
-            static: {
-                srcs: ["x86_64/lib/libartbase.a"],
-            },
-            shared: {
-                srcs: ["x86_64/lib/libartbase.so"],
-            },
         },
     },
 }

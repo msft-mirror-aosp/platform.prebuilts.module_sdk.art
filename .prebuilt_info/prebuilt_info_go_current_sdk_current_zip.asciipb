@@ -1,8 +1,8 @@
 drops {
   android_build_drop {
-    build_id: "T1009472"
+    build_id: "T1009843"
     target: "train_build"
-    source_file: "mainline-sdks/for-UpsideDownCake-build/current/com.google.android.go.art/sdk/art-module-sdk-current.zip"
+    source_file: "mainline-sdks/for-latest-build/current/com.google.android.go.art/sdk/art-module-sdk-current.zip"
   }
   dest_file: "go/current/sdk/current.zip"
   version: ""
