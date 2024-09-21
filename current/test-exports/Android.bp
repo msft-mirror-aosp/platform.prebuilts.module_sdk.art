@@ -380,4 +380,7 @@ cc_prebuilt_library_shared {
             srcs: ["x86/lib/libjavacoretests.so"],
         },
     },
+    strip: {
+        none: true,
+    },
 }
