@@ -35,6 +35,11 @@ apex_contributions_defaults {
 
 prebuilt_bootclasspath_fragment {
     name: "art-bootclasspath-fragment",
+    // Do not prefer prebuilt if the Soong config variable "source_build" in namespace "art_module" is true.
+    use_source_config_var: {
+        config_namespace: "art_module",
+        var_name: "source_build",
+    },
     visibility: [
         "//art/build/apex",
         "//art/build/boot",
@@ -75,6 +80,11 @@ prebuilt_bootclasspath_fragment {
 
 prebuilt_platform_compat_config {
     name: "libcore-platform-compat-config",
+    // Do not prefer prebuilt if the Soong config variable "source_build" in namespace "art_module" is true.
+    use_source_config_var: {
+        config_namespace: "art_module",
+        var_name: "source_build",
+    },
     visibility: [
         "//art/build/apex",
         "//art/build/sdk",
@@ -87,6 +97,11 @@ prebuilt_platform_compat_config {
 
 java_import {
     name: "core-oj",
+    // Do not prefer prebuilt if the Soong config variable "source_build" in namespace "art_module" is true.
+    use_source_config_var: {
+        config_namespace: "art_module",
+        var_name: "source_build",
+    },
     visibility: [
         "//art/build/apex",
         "//art/build/sdk",
@@ -107,6 +122,11 @@ java_import {
 
 java_import {
     name: "core-libart",
+    // Do not prefer prebuilt if the Soong config variable "source_build" in namespace "art_module" is true.
+    use_source_config_var: {
+        config_namespace: "art_module",
+        var_name: "source_build",
+    },
     visibility: [
         "//art/build/apex",
         "//art/build/sdk",
@@ -127,6 +147,11 @@ java_import {
 
 java_import {
     name: "okhttp",
+    // Do not prefer prebuilt if the Soong config variable "source_build" in namespace "art_module" is true.
+    use_source_config_var: {
+        config_namespace: "art_module",
+        var_name: "source_build",
+    },
     visibility: [
         "//art/build/apex",
         "//art/build/sdk",
@@ -149,6 +174,11 @@ java_import {
 
 java_import {
     name: "bouncycastle",
+    // Do not prefer prebuilt if the Soong config variable "source_build" in namespace "art_module" is true.
+    use_source_config_var: {
+        config_namespace: "art_module",
+        var_name: "source_build",
+    },
     visibility: [
         "//art/build/apex",
         "//art/build/sdk",
@@ -168,6 +198,11 @@ java_import {
 
 java_import {
     name: "apache-xml",
+    // Do not prefer prebuilt if the Soong config variable "source_build" in namespace "art_module" is true.
+    use_source_config_var: {
+        config_namespace: "art_module",
+        var_name: "source_build",
+    },
     visibility: [
         "//art/build/apex",
         "//art/build/sdk",
@@ -187,6 +222,11 @@ java_import {
 
 java_import {
     name: "core-lambda-stubs",
+    // Do not prefer prebuilt if the Soong config variable "source_build" in namespace "art_module" is true.
+    use_source_config_var: {
+        config_namespace: "art_module",
+        var_name: "source_build",
+    },
     visibility: ["//visibility:public"],
     apex_available: ["//apex_available:platform"],
     licenses: ["art-module-sdk_libcore_license"],
@@ -196,6 +236,11 @@ java_import {
 
 java_import {
     name: "core-lambda-stubs-for-system-modules",
+    // Do not prefer prebuilt if the Soong config variable "source_build" in namespace "art_module" is true.
+    use_source_config_var: {
+        config_namespace: "art_module",
+        var_name: "source_build",
+    },
     visibility: [
         "//art/build/sdk",
         "//build/soong/java/core-libraries",
@@ -212,6 +257,11 @@ java_import {
 
 java_import {
     name: "core-generated-annotation-stubs",
+    // Do not prefer prebuilt if the Soong config variable "source_build" in namespace "art_module" is true.
+    use_source_config_var: {
+        config_namespace: "art_module",
+        var_name: "source_build",
+    },
     visibility: [
         "//art/build/sdk",
         "//build/soong/java/core-libraries",
@@ -228,6 +278,11 @@ java_import {
 
 java_import {
     name: "art-module-sdk_art.module.api.annotations.for.system.modules",
+    // Do not prefer prebuilt if the Soong config variable "source_build" in namespace "art_module" is true.
+    use_source_config_var: {
+        config_namespace: "art_module",
+        var_name: "source_build",
+    },
     visibility: ["//visibility:private"],
     apex_available: ["//apex_available:platform"],
     licenses: ["art-module-sdk_libcore_license"],
@@ -236,6 +291,11 @@ java_import {
 
 java_import {
     name: "art-module-sdk_art.module.intra.core.api.stubs",
+    // Do not prefer prebuilt if the Soong config variable "source_build" in namespace "art_module" is true.
+    use_source_config_var: {
+        config_namespace: "art_module",
+        var_name: "source_build",
+    },
     visibility: ["//visibility:private"],
     apex_available: ["//apex_available:platform"],
     licenses: ["art-module-sdk_libcore_license"],
@@ -244,6 +304,11 @@ java_import {
 
 java_import {
     name: "art-module-sdk_art-module-intra-core-api-stubs-system-modules-lib",
+    // Do not prefer prebuilt if the Soong config variable "source_build" in namespace "art_module" is true.
+    use_source_config_var: {
+        config_namespace: "art_module",
+        var_name: "source_build",
+    },
     visibility: ["//visibility:private"],
     apex_available: ["//apex_available:platform"],
     licenses: ["art-module-sdk_libcore_license"],
@@ -252,6 +317,11 @@ java_import {
 
 java_sdk_library_import {
     name: "art.module.public.api",
+    // Do not prefer prebuilt if the Soong config variable "source_build" in namespace "art_module" is true.
+    use_source_config_var: {
+        config_namespace: "art_module",
+        var_name: "source_build",
+    },
     visibility: [
         "//art/build/sdk",
         "//build/soong/java/core-libraries",
@@ -294,6 +364,11 @@ java_sdk_library_import {
 
 java_sdk_library_import {
     name: "service-art",
+    // Do not prefer prebuilt if the Soong config variable "source_build" in namespace "art_module" is true.
+    use_source_config_var: {
+        config_namespace: "art_module",
+        var_name: "source_build",
+    },
     visibility: ["//visibility:public"],
     apex_available: [
         "com.android.art",
@@ -325,6 +400,11 @@ java_sdk_library_import {
 
 java_system_modules_import {
     name: "art-module-public-api-stubs-system-modules",
+    // Do not prefer prebuilt if the Soong config variable "source_build" in namespace "art_module" is true.
+    use_source_config_var: {
+        config_namespace: "art_module",
+        var_name: "source_build",
+    },
     visibility: [
         "//art/build/sdk",
         "//build/soong/java/core-libraries",
@@ -343,6 +423,11 @@ java_system_modules_import {
 
 java_system_modules_import {
     name: "art-module-lib-api-stubs-system-modules",
+    // Do not prefer prebuilt if the Soong config variable "source_build" in namespace "art_module" is true.
+    use_source_config_var: {
+        config_namespace: "art_module",
+        var_name: "source_build",
+    },
     visibility: [
         "//art/build/sdk",
         "//build/soong/java/core-libraries",
@@ -356,6 +441,11 @@ java_system_modules_import {
 
 java_system_modules_import {
     name: "art-module-intra-core-api-stubs-system-modules",
+    // Do not prefer prebuilt if the Soong config variable "source_build" in namespace "art_module" is true.
+    use_source_config_var: {
+        config_namespace: "art_module",
+        var_name: "source_build",
+    },
     visibility: [
         "//art/build/sdk",
         "//build/soong/java/core-libraries",
@@ -455,6 +545,11 @@ license {
 
 cc_prebuilt_library_headers {
     name: "jni_headers",
+    // Do not prefer prebuilt if the Soong config variable "source_build" in namespace "art_module" is true.
+    use_source_config_var: {
+        config_namespace: "art_module",
+        var_name: "source_build",
+    },
     visibility: ["//visibility:public"],
     apex_available: [
         "//apex_available:anyapex",
@@ -487,6 +582,11 @@ cc_prebuilt_library_headers {
 
 cc_prebuilt_library_headers {
     name: "libartpalette-headers",
+    // Do not prefer prebuilt if the Soong config variable "source_build" in namespace "art_module" is true.
+    use_source_config_var: {
+        config_namespace: "art_module",
+        var_name: "source_build",
+    },
     visibility: [
         "//art:__subpackages__",
         "//prebuilts:__subpackages__",
@@ -512,6 +612,11 @@ cc_prebuilt_library_headers {
 
 cc_prebuilt_library_headers {
     name: "libnativehelper_header_only",
+    // Do not prefer prebuilt if the Soong config variable "source_build" in namespace "art_module" is true.
+    use_source_config_var: {
+        config_namespace: "art_module",
+        var_name: "source_build",
+    },
     visibility: ["//visibility:public"],
     apex_available: [
         "//apex_available:anyapex",
@@ -540,6 +645,11 @@ cc_prebuilt_library_headers {
 
 cc_prebuilt_library_headers {
     name: "libopenjdkjvmti_headers",
+    // Do not prefer prebuilt if the Soong config variable "source_build" in namespace "art_module" is true.
+    use_source_config_var: {
+        config_namespace: "art_module",
+        var_name: "source_build",
+    },
     visibility: ["//visibility:public"],
     apex_available: [
         "//apex_available:platform",
@@ -569,6 +679,11 @@ cc_prebuilt_library_headers {
 
 cc_prebuilt_library_headers {
     name: "odrefresh_headers",
+    // Do not prefer prebuilt if the Soong config variable "source_build" in namespace "art_module" is true.
+    use_source_config_var: {
+        config_namespace: "art_module",
+        var_name: "source_build",
+    },
     visibility: ["//visibility:public"],
     apex_available: ["//apex_available:platform"],
     licenses: ["art-module-sdk_art_license"],
@@ -593,6 +708,11 @@ cc_prebuilt_library_headers {
 
 cc_prebuilt_library_headers {
     name: "libnativeloader-headers",
+    // Do not prefer prebuilt if the Soong config variable "source_build" in namespace "art_module" is true.
+    use_source_config_var: {
+        config_namespace: "art_module",
+        var_name: "source_build",
+    },
     visibility: [
         "//art:__subpackages__",
         "//frameworks/av/media/libstagefright",
@@ -616,6 +736,11 @@ cc_prebuilt_library_headers {
 
 cc_prebuilt_library_shared {
     name: "libandroidio",
+    // Do not prefer prebuilt if the Soong config variable "source_build" in namespace "art_module" is true.
+    use_source_config_var: {
+        config_namespace: "art_module",
+        var_name: "source_build",
+    },
     visibility: [
         "//art/build/apex",
         "//art/build/sdk",
@@ -668,6 +793,11 @@ cc_prebuilt_library_shared {
 
 cc_prebuilt_library_shared {
     name: "libnativebridge",
+    // Do not prefer prebuilt if the Soong config variable "source_build" in namespace "art_module" is true.
+    use_source_config_var: {
+        config_namespace: "art_module",
+        var_name: "source_build",
+    },
     visibility: [
         "//art:__subpackages__",
         "//frameworks/base/cmds/app_process",
@@ -724,6 +854,11 @@ cc_prebuilt_library_shared {
 
 cc_prebuilt_library_shared {
     name: "libnativehelper",
+    // Do not prefer prebuilt if the Soong config variable "source_build" in namespace "art_module" is true.
+    use_source_config_var: {
+        config_namespace: "art_module",
+        var_name: "source_build",
+    },
     visibility: ["//visibility:public"],
     apex_available: [
         "com.android.art",
@@ -779,6 +914,11 @@ cc_prebuilt_library_shared {
 
 cc_prebuilt_library_shared {
     name: "libnativeloader",
+    // Do not prefer prebuilt if the Soong config variable "source_build" in namespace "art_module" is true.
+    use_source_config_var: {
+        config_namespace: "art_module",
+        var_name: "source_build",
+    },
     visibility: [
         "//art:__subpackages__",
         "//frameworks/base/cmds/app_process",
@@ -835,6 +975,11 @@ cc_prebuilt_library_shared {
 
 cc_prebuilt_library_shared {
     name: "libsigchain",
+    // Do not prefer prebuilt if the Soong config variable "source_build" in namespace "art_module" is true.
+    use_source_config_var: {
+        config_namespace: "art_module",
+        var_name: "source_build",
+    },
     visibility: [
         "//art:__subpackages__",
         "//frameworks/base/cmds/app_process",
@@ -887,6 +1032,11 @@ cc_prebuilt_library_shared {
 
 cc_prebuilt_library_shared {
     name: "libdexfile",
+    // Do not prefer prebuilt if the Soong config variable "source_build" in namespace "art_module" is true.
+    use_source_config_var: {
+        config_namespace: "art_module",
+        var_name: "source_build",
+    },
     visibility: [
         "//art:__subpackages__",
         "//external/perfetto",
@@ -940,6 +1090,11 @@ cc_prebuilt_library_shared {
 
 prebuilt_systemserverclasspath_fragment {
     name: "art-systemserverclasspath-fragment",
+    // Do not prefer prebuilt if the Soong config variable "source_build" in namespace "art_module" is true.
+    use_source_config_var: {
+        config_namespace: "art_module",
+        var_name: "source_build",
+    },
     visibility: [
         "//art:__subpackages__",
         "//prebuilts:__subpackages__",
