@@ -27,14 +27,7 @@ java_import {
         config_namespace: "art_module",
         var_name: "source_build",
     },
-    visibility: [
-        "//art/build/sdk",
-        "//external/icu/android_icu4j",
-        "//frameworks/base",
-        "//frameworks/base/api",
-        "//libcore",
-        "//prebuilts:__subpackages__",
-    ],
+    visibility: ["//visibility:public"],
     apex_available: ["//apex_available:platform"],
     licenses: ["art-module-host-exports_libcore_license"],
     device_supported: false,
@@ -134,12 +127,7 @@ cc_prebuilt_binary {
         config_namespace: "art_module",
         var_name: "source_build",
     },
-    visibility: [
-        "//art:__subpackages__",
-        "//development/build",
-        "//prebuilts:__subpackages__",
-        "//vendor:__subpackages__",
-    ],
+    visibility: ["//visibility:public"],
     apex_available: [
         "com.android.art",
         "com.android.art.debug",
@@ -168,10 +156,7 @@ cc_prebuilt_binary {
         config_namespace: "art_module",
         var_name: "source_build",
     },
-    visibility: [
-        "//art:__subpackages__",
-        "//prebuilts:__subpackages__",
-    ],
+    visibility: ["//visibility:public"],
     apex_available: ["//apex_available:platform"],
     licenses: ["art-module-host-exports_art_license"],
     device_supported: false,
@@ -196,10 +181,7 @@ cc_prebuilt_binary {
         config_namespace: "art_module",
         var_name: "source_build",
     },
-    visibility: [
-        "//art:__subpackages__",
-        "//prebuilts:__subpackages__",
-    ],
+    visibility: ["//visibility:public"],
     apex_available: [
         "com.android.art",
         "com.android.art.debug",
@@ -228,10 +210,7 @@ cc_prebuilt_binary {
         config_namespace: "art_module",
         var_name: "source_build",
     },
-    visibility: [
-        "//art:__subpackages__",
-        "//prebuilts:__subpackages__",
-    ],
+    visibility: ["//visibility:public"],
     apex_available: [
         "com.android.art",
         "com.android.art.debug",
@@ -260,10 +239,7 @@ cc_prebuilt_binary {
         config_namespace: "art_module",
         var_name: "source_build",
     },
-    visibility: [
-        "//art:__subpackages__",
-        "//prebuilts:__subpackages__",
-    ],
+    visibility: ["//visibility:public"],
     apex_available: ["//apex_available:platform"],
     licenses: ["art-module-host-exports_art_license"],
     device_supported: false,
