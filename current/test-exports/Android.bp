@@ -6,6 +6,30 @@ package {
     default_applicable_licenses: ["Android-Apache-2.0"],
 }
 
+apex_contributions_defaults {
+    name: "art-module-test-exports.contributions",
+    contents: [
+        "prebuilt_core-compat-test-rules",
+        "prebuilt_core-test-rules",
+        "prebuilt_core-tests-support",
+        "prebuilt_okhttp-tests-nojarjar",
+        "prebuilt_art_cts_jvmti_test_library",
+        "prebuilt_expected_cts_outputs",
+        "prebuilt_core-libart-for-host",
+        "prebuilt_okhttp-for-host",
+        "prebuilt_libcore-expectations-knownfailures-jar",
+        "prebuilt_libcore-expectations-virtualdeviceknownfailures-jar",
+        "prebuilt_okhttp-nojarjar",
+        "prebuilt_apache-harmony-jdwp-tests",
+        "prebuilt_libcore-crypto-tests",
+        "prebuilt_core-ojtests-public",
+        "prebuilt_jsr166-tests",
+        "prebuilt_apache-harmony-tests",
+        "prebuilt_core-tests",
+        "prebuilt_libjavacoretests",
+    ],
+}
+
 java_import {
     name: "core-compat-test-rules",
     // Do not prefer prebuilt if the Soong config variable "source_build" in namespace "art_module" is true.
@@ -45,7 +69,6 @@ java_import {
         "//libcore/ojluni/src/test",
         "//packages/modules/Wifi/framework/tests",
         "//prebuilts:__subpackages__",
-        "//libcore/ojluni/src/test",
     ],
     apex_available: ["//apex_available:platform"],
     licenses: ["art-module-test-exports_libcore_license"],
@@ -446,5 +469,8 @@ cc_prebuilt_library_shared {
         x86: {
             srcs: ["x86/lib/libjavacoretests.so"],
         },
+    },
+    strip: {
+        none: true,
     },
 }

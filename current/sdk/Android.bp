@@ -6,6 +6,33 @@ package {
     default_applicable_licenses: ["Android-Apache-2.0"],
 }
 
+apex_contributions_defaults {
+    name: "art-module-sdk.contributions",
+    contents: [
+        "prebuilt_libcore-platform-compat-config",
+        "prebuilt_core-lambda-stubs",
+        "prebuilt_core-lambda-stubs-for-system-modules",
+        "prebuilt_core-generated-annotation-stubs",
+        "prebuilt_art.module.public.api",
+        "prebuilt_service-art",
+        "prebuilt_art-module-public-api-stubs-system-modules",
+        "prebuilt_art-module-lib-api-stubs-system-modules",
+        "prebuilt_art-module-intra-core-api-stubs-system-modules",
+        "prebuilt_jni_headers",
+        "prebuilt_libartpalette-headers",
+        "prebuilt_libnativehelper_header_only",
+        "prebuilt_libopenjdkjvmti_headers",
+        "prebuilt_odrefresh_headers",
+        "prebuilt_libnativeloader-headers",
+        "prebuilt_libandroidio",
+        "prebuilt_libnativebridge",
+        "prebuilt_libnativehelper",
+        "prebuilt_libnativeloader",
+        "prebuilt_libsigchain",
+        "prebuilt_libdexfile",
+    ],
+}
+
 prebuilt_bootclasspath_fragment {
     name: "art-bootclasspath-fragment",
     // Do not prefer prebuilt if the Soong config variable "source_build" in namespace "art_module" is true.
@@ -36,7 +63,7 @@ prebuilt_bootclasspath_fragment {
         stub_libs: ["art.module.public.api"],
     },
     core_platform_api: {
-        stub_libs: ["art.module.public.api.stubs.module_lib"],
+        stub_libs: ["art.module.public.api.stubs.exportable.module_lib"],
     },
     hidden_api: {
         max_target_o_low_priority: ["hiddenapi/hiddenapi-max-target-o-low-priority.txt"],
@@ -156,7 +183,6 @@ java_import {
         "//art/build/apex",
         "//art/build/sdk",
         "//external/bouncycastle",
-        "//external/wycheproof",
         "//libcore:__subpackages__",
         "//packages/modules/ArtPrebuilt",
         "//prebuilts:__subpackages__",
@@ -760,72 +786,8 @@ cc_prebuilt_library_shared {
             srcs: ["linux_glibc/x86/lib/libandroidio.so"],
         },
     },
-}
-
-cc_prebuilt_library_shared {
-    name: "libdexfile",
-    // Do not prefer prebuilt if the Soong config variable "source_build" in namespace "art_module" is true.
-    use_source_config_var: {
-        config_namespace: "art_module",
-        var_name: "source_build",
-    },
-    visibility: [
-        "//art:__subpackages__",
-        "//external/perfetto",
-        "//frameworks/base/services/core/jni",
-        "//prebuilts:__subpackages__",
-        "//system/core/debuggerd",
-        "//system/extras/simpleperf",
-        "//system/unwinding/libunwindstack",
-    ],
-    apex_available: [
-        "com.android.art",
-        "com.android.art.debug",
-        "test_broken_com.android.art",
-    ],
-    licenses: ["art-module-sdk_art_license"],
-    host_supported: true,
-    compile_multilib: "both",
-    export_include_dirs: [
-        "common_os/include/art/libdexfile",
-        "common_os/include/libnativehelper/include_jni",
-        "common_os/include/art/libdexfile/external/include",
-        "common_os/include/system/libbase/include",
-        "common_os/include/external/fmtlib/include",
-        "common_os/include/art/libartbase",
-        "common_os/include/external/tinyxml2",
-        "common_os/include/external/libcap/libcap/include",
-    ],
-    stubs: {
-        versions: [
-            "1",
-            "current",
-        ],
-    },
-    target: {
-        host: {
-            enabled: false,
-        },
-        android_arm64: {
-            srcs: ["android/arm64/lib/libdexfile.so"],
-        },
-        android_x86_64: {
-            srcs: ["android/x86_64/lib/libdexfile.so"],
-        },
-        android_arm: {
-            srcs: ["android/arm/lib/libdexfile.so"],
-        },
-        android_x86: {
-            srcs: ["android/x86/lib/libdexfile.so"],
-        },
-        linux_glibc_x86_64: {
-            enabled: true,
-            srcs: ["linux_glibc/x86_64/lib/libdexfile.so"],
-        },
-        linux_glibc_x86: {
-            enabled: true,
-            srcs: ["linux_glibc/x86/lib/libdexfile.so"],
-        },
+    strip: {
+        none: true,
     },
 }
 
@@ -885,6 +847,9 @@ cc_prebuilt_library_shared {
             srcs: ["linux_glibc/x86/lib/libnativebridge.so"],
         },
     },
+    strip: {
+        none: true,
+    },
 }
 
 cc_prebuilt_library_shared {
@@ -909,6 +874,7 @@ cc_prebuilt_library_shared {
         "common_os/include/libnativehelper/include_jni",
         "common_os/include/libnativehelper/include_platform",
         "common_os/include/libnativehelper/include_platform_header_only",
+        "common_os/include/system/logging/liblog/include",
     ],
     stubs: {
         versions: [
@@ -940,6 +906,9 @@ cc_prebuilt_library_shared {
             enabled: true,
             srcs: ["linux_glibc/x86/lib/libnativehelper.so"],
         },
+    },
+    strip: {
+        none: true,
     },
 }
 
@@ -999,6 +968,9 @@ cc_prebuilt_library_shared {
             srcs: ["linux_glibc/x86/lib/libnativeloader.so"],
         },
     },
+    strip: {
+        none: true,
+    },
 }
 
 cc_prebuilt_library_shared {
@@ -1053,89 +1025,13 @@ cc_prebuilt_library_shared {
             srcs: ["linux_glibc/x86/lib/libsigchain.so"],
         },
     },
-}
-
-cc_prebuilt_library_shared {
-    name: "libnativebridge_lazy",
-    // Do not prefer prebuilt if the Soong config variable "source_build" in namespace "art_module" is true.
-    use_source_config_var: {
-        config_namespace: "art_module",
-        var_name: "source_build",
-    },
-    visibility: [
-        "//art/libnativebridge/tests",
-        "//art:__subpackages__",
-        "//frameworks/base/core/jni",
-        "//frameworks/native/opengl/libs",
-        "//frameworks/native/vulkan/libvulkan",
-        "//prebuilts:__subpackages__",
-    ],
-    apex_available: [
-        "//apex_available:platform",
-        "com.android.media",
-        "com.android.media.swcodec",
-    ],
-    licenses: ["art-module-sdk_art_license"],
-    compile_multilib: "both",
-    shared_libs: ["liblog"],
-    export_include_dirs: [
-        "include/libnativehelper/include_jni",
-        "include/art/libnativebridge/include",
-    ],
-    arch: {
-        arm64: {
-            srcs: ["arm64/lib/libnativebridge_lazy.so"],
-        },
-        x86_64: {
-            srcs: ["x86_64/lib/libnativebridge_lazy.so"],
-        },
-        arm: {
-            srcs: ["arm/lib/libnativebridge_lazy.so"],
-        },
-        x86: {
-            srcs: ["x86/lib/libnativebridge_lazy.so"],
-        },
+    strip: {
+        none: true,
     },
 }
 
 cc_prebuilt_library_shared {
-    name: "libnativehelper_compat_libc++",
-    // Do not prefer prebuilt if the Soong config variable "source_build" in namespace "art_module" is true.
-    use_source_config_var: {
-        config_namespace: "art_module",
-        var_name: "source_build",
-    },
-    apex_available: [
-        "//apex_available:anyapex",
-        "//apex_available:platform",
-    ],
-    licenses: ["art-module-sdk_libnativehelper_license"],
-    stl: "none",
-    compile_multilib: "both",
-    shared_libs: ["liblog"],
-    export_include_dirs: [
-        "include/libnativehelper/header_only_include",
-        "include/libnativehelper/include",
-        "include/libnativehelper/include_jni",
-    ],
-    arch: {
-        arm64: {
-            srcs: ["arm64/lib/libnativehelper_compat_libc++.so"],
-        },
-        x86_64: {
-            srcs: ["x86_64/lib/libnativehelper_compat_libc++.so"],
-        },
-        arm: {
-            srcs: ["arm/lib/libnativehelper_compat_libc++.so"],
-        },
-        x86: {
-            srcs: ["x86/lib/libnativehelper_compat_libc++.so"],
-        },
-    },
-}
-
-cc_prebuilt_library_shared {
-    name: "libnativeloader_lazy",
+    name: "libdexfile",
     // Do not prefer prebuilt if the Soong config variable "source_build" in namespace "art_module" is true.
     use_source_config_var: {
         config_namespace: "art_module",
@@ -1143,190 +1039,52 @@ cc_prebuilt_library_shared {
     },
     visibility: [
         "//art:__subpackages__",
-        "//frameworks/base/core/jni",
-        "//frameworks/native/opengl/libs",
-        "//frameworks/native/vulkan/libvulkan",
+        "//external/perfetto",
+        "//frameworks/base/services/core/jni",
         "//prebuilts:__subpackages__",
+        "//system/core/debuggerd",
+        "//system/extras/simpleperf",
+        "//system/unwinding/libunwindstack",
     ],
     apex_available: [
-        "//apex_available:platform",
-        "com.android.media",
-        "com.android.media.swcodec",
-    ],
-    licenses: ["art-module-sdk_art_license"],
-    compile_multilib: "both",
-    shared_libs: ["liblog"],
-    export_include_dirs: [
-        "include/art/libnativeloader/include",
-        "include/libnativehelper/include_jni",
-    ],
-    arch: {
-        arm64: {
-            srcs: ["arm64/lib/libnativeloader_lazy.so"],
-        },
-        x86_64: {
-            srcs: ["x86_64/lib/libnativeloader_lazy.so"],
-        },
-        arm: {
-            srcs: ["arm/lib/libnativeloader_lazy.so"],
-        },
-        x86: {
-            srcs: ["x86/lib/libnativeloader_lazy.so"],
-        },
-    },
-}
-
-cc_prebuilt_library_static {
-    name: "libdexfile_support",
-    // Do not prefer prebuilt if the Soong config variable "source_build" in namespace "art_module" is true.
-    use_source_config_var: {
-        config_namespace: "art_module",
-        var_name: "source_build",
-    },
-    visibility: ["//visibility:public"],
-    apex_available: [
-        "//apex_available:platform",
         "com.android.art",
         "com.android.art.debug",
-        "com.android.media",
-        "com.android.media.swcodec",
-        "com.android.runtime",
+        "test_broken_com.android.art",
     ],
     licenses: ["art-module-sdk_art_license"],
-    host_supported: true,
-    compile_multilib: "both",
-    shared_libs: ["liblog"],
-    export_include_dirs: ["common_os/include/art/libdexfile/external/include"],
-    target: {
-        host: {
-            enabled: false,
-        },
-        android_arm64: {
-            srcs: ["android/arm64/lib/libdexfile_support.a"],
-        },
-        android_x86_64: {
-            srcs: ["android/x86_64/lib/libdexfile_support.a"],
-        },
-        android_arm: {
-            srcs: ["android/arm/lib/libdexfile_support.a"],
-        },
-        android_x86: {
-            srcs: ["android/x86/lib/libdexfile_support.a"],
-        },
-        linux_glibc_x86_64: {
-            enabled: true,
-            srcs: ["linux_glibc/x86_64/lib/libdexfile_support.a"],
-        },
-        linux_glibc_x86: {
-            enabled: true,
-            srcs: ["linux_glibc/x86/lib/libdexfile_support.a"],
-        },
-    },
-}
-
-cc_prebuilt_library_static {
-    name: "libdexfile_static",
-    // Do not prefer prebuilt if the Soong config variable "source_build" in namespace "art_module" is true.
-    use_source_config_var: {
-        config_namespace: "art_module",
-        var_name: "source_build",
-    },
-    visibility: [
-        "//art:__subpackages__",
-        "//cts/tests/tests/simpleperf",
-        "//prebuilts:__subpackages__",
-        "//system/extras/simpleperf",
-    ],
-    apex_available: ["//apex_available:platform"],
-    licenses: ["art-module-sdk_art_license"],
-    host_supported: true,
     compile_multilib: "both",
     export_include_dirs: [
-        "common_os/include/external/libcap/libcap/include",
-        "common_os/include/system/libbase/include",
-        "common_os/include/external/fmtlib/include",
-        "common_os/include/art/libartpalette/include",
-        "common_os/include/libnativehelper/include_jni",
-        "common_os/include/system/logging/liblog/include",
-        "common_os/include/external/zlib",
-        "common_os/include/system/libziparchive/include",
-        "common_os/include/external/googletest/googletest/include",
-        "common_os/include/art/libartbase",
-        "common_os/include/external/tinyxml2",
-        "common_os/include/art/libdexfile",
-        "common_os/include/art/libdexfile/external/include",
+        "include/art/libdexfile",
+        "include/libnativehelper/include_jni",
+        "include/art/libdexfile/external/include",
+        "include/system/libbase/include",
+        "include/external/fmtlib/include",
+        "include/art/libartbase",
+        "include/external/tinyxml2",
+        "include/external/libcap/libcap/include",
     ],
-    target: {
-        host: {
-            enabled: false,
+    stubs: {
+        versions: [
+            "1",
+            "current",
+        ],
+    },
+    arch: {
+        arm64: {
+            srcs: ["arm64/lib/libdexfile.so"],
         },
-        android_arm64: {
-            srcs: ["android/arm64/lib/libdexfile_static.a"],
+        x86_64: {
+            srcs: ["x86_64/lib/libdexfile.so"],
         },
-        android_x86_64: {
-            srcs: ["android/x86_64/lib/libdexfile_static.a"],
+        arm: {
+            srcs: ["arm/lib/libdexfile.so"],
         },
-        android_arm: {
-            srcs: ["android/arm/lib/libdexfile_static.a"],
-        },
-        android_x86: {
-            srcs: ["android/x86/lib/libdexfile_static.a"],
-        },
-        linux_glibc_x86_64: {
-            enabled: true,
-            srcs: ["linux_glibc/x86_64/lib/libdexfile_static.a"],
-        },
-        linux_glibc_x86: {
-            enabled: true,
-            srcs: ["linux_glibc/x86/lib/libdexfile_static.a"],
+        x86: {
+            srcs: ["x86/lib/libdexfile.so"],
         },
     },
-}
-
-cc_prebuilt_library_static {
-    name: "libnativehelper_lazy",
-    // Do not prefer prebuilt if the Soong config variable "source_build" in namespace "art_module" is true.
-    use_source_config_var: {
-        config_namespace: "art_module",
-        var_name: "source_build",
-    },
-    visibility: ["//visibility:public"],
-    apex_available: ["//apex_available:platform"],
-    licenses: ["art-module-sdk_libnativehelper_license"],
-    host_supported: true,
-    compile_multilib: "both",
-    shared_libs: ["liblog"],
-    export_include_dirs: [
-        "common_os/include/libnativehelper/header_only_include",
-        "common_os/include/libnativehelper/include",
-        "common_os/include/libnativehelper/include_jni",
-        "common_os/include/libnativehelper/include_platform",
-        "common_os/include/libnativehelper/include_platform_header_only",
-    ],
-    target: {
-        host: {
-            enabled: false,
-        },
-        android_arm64: {
-            srcs: ["android/arm64/lib/libnativehelper_lazy.a"],
-        },
-        android_x86_64: {
-            srcs: ["android/x86_64/lib/libnativehelper_lazy.a"],
-        },
-        android_arm: {
-            srcs: ["android/arm/lib/libnativehelper_lazy.a"],
-        },
-        android_x86: {
-            srcs: ["android/x86/lib/libnativehelper_lazy.a"],
-        },
-        linux_glibc_x86_64: {
-            enabled: true,
-            srcs: ["linux_glibc/x86_64/lib/libnativehelper_lazy.a"],
-        },
-        linux_glibc_x86: {
-            enabled: true,
-            srcs: ["linux_glibc/x86/lib/libnativehelper_lazy.a"],
-        },
+    strip: {
+        none: true,
     },
 }
 
