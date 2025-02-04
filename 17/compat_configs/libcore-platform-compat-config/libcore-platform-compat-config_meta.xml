@@ -1,0 +1,57 @@
+<?xml version='1.0' encoding='utf-8'?>
+<config>
+  <compat-change enableAfterTargetSdk="33" id="218865702" name="ENFORCE_READ_ONLY_JAVA_DCL">
+    <meta-data definedIn="dalvik.system.DexFile" sourcePosition="libcore/dalvik/src/main/java/dalvik/system/DexFile.java:74" />
+  </compat-change>
+  <compat-change enableSinceTargetSdk="30" id="142365358" name="PREVENT_META_REFLECTION_BLOCKLIST_ACCESS">
+    <meta-data definedIn="dalvik.system.VMRuntime" sourcePosition="libcore/libart/src/main/java/dalvik/system/VMRuntime.java:80" />
+  </compat-change>
+  <compat-change enableSinceTargetSdk="29" id="149997251" name="HIDE_MAXTARGETSDK_P_HIDDEN_APIS">
+    <meta-data definedIn="dalvik.system.VMRuntime" sourcePosition="libcore/libart/src/main/java/dalvik/system/VMRuntime.java:88" />
+  </compat-change>
+  <compat-change enableSinceTargetSdk="30" id="149994052" name="HIDE_MAXTARGETSDK_Q_HIDDEN_APIS">
+    <meta-data definedIn="dalvik.system.VMRuntime" sourcePosition="libcore/libart/src/main/java/dalvik/system/VMRuntime.java:95" />
+  </compat-change>
+  <compat-change disabled="true" id="166236554" name="ALLOW_TEST_API_ACCESS">
+    <meta-data definedIn="dalvik.system.VMRuntime" sourcePosition="libcore/libart/src/main/java/dalvik/system/VMRuntime.java:104" />
+  </compat-change>
+  <compat-change enableSinceTargetSdk="35" id="312399441" name="CANONICALIZE_PARENT_OF_ROOT_DIR">
+    <meta-data definedIn="java.io.File" sourcePosition="libcore/ojluni/src/main/java/java/io/File.java:626" />
+  </compat-change>
+  <compat-change enableSinceTargetSdk="30" id="170188668" name="RETURN_NULL_HARDWARE_ADDRESS">
+    <meta-data definedIn="java.net.NetworkInterface" sourcePosition="libcore/ojluni/src/main/java/java/net/NetworkInterface.java:79" />
+  </compat-change>
+  <compat-change enableSinceTargetSdk="35" id="202956589" name="DO_NOT_CLONE_IN_ARRAYS_AS_LIST">
+    <meta-data definedIn="java.util.Arrays" sourcePosition="libcore/ojluni/src/main/java/java/util/Arrays.java:4540" />
+  </compat-change>
+  <compat-change enableSinceTargetSdk="35" id="270674727" name="ENABLE_STRICT_FORMATTER_VALIDATION">
+    <meta-data definedIn="java.util.Formatter" sourcePosition="libcore/ojluni/src/main/java/java/util/Formatter.java:2893" />
+  </compat-change>
+  <compat-change enableSinceTargetSdk="34" id="289878283" name="PRIORITY_QUEUE_OFFER_NON_COMPARABLE_ONE_ELEMENT">
+    <meta-data definedIn="java.util.PriorityQueue" sourcePosition="libcore/ojluni/src/main/java/java/util/PriorityQueue.java:1002" />
+  </compat-change>
+  <compat-change enableSinceTargetSdk="35" id="308103782" name="STREAM_INT_DIFFERS_FROM_NEXT_INT">
+    <meta-data definedIn="java.util.Random" sourcePosition="libcore/ojluni/src/main/java/java/util/Random.java:327" />
+  </compat-change>
+  <compat-change enableAfterTargetSdk="35" id="351566728" name="SKIP_MULTIPLE_MISSED_PERIODIC_TASKS">
+    <meta-data definedIn="java.util.Timer" sourcePosition="libcore/ojluni/src/main/java/java/util/Timer.java:110" />
+  </compat-change>
+  <compat-change enableSinceTargetSdk="34" id="263076149" name="ENABLE_STRICT_VALIDATION">
+    <meta-data definedIn="java.util.UUID" sourcePosition="libcore/ojluni/src/main/java/java/util/UUID.java:235" />
+  </compat-change>
+  <compat-change enableAfterTargetSdk="35" id="288912692" name="STPE_SKIP_MULTIPLE_MISSED_PERIODIC_TASKS">
+    <meta-data definedIn="java.util.concurrent.ScheduledThreadPoolExecutor" sourcePosition="libcore/ojluni/src/main/java/java/util/concurrent/ScheduledThreadPoolExecutor.java:157" />
+  </compat-change>
+  <compat-change enableSinceTargetSdk="34" id="247079863" name="DISALLOW_INVALID_GROUP_REFERENCE">
+    <meta-data definedIn="java.util.regex.Matcher" sourcePosition="libcore/ojluni/src/main/java/java/util/regex/Matcher.java:881" />
+  </compat-change>
+  <compat-change enableSinceTargetSdk="34" id="288845345" name="SPLIT_AS_STREAM_RETURNS_SINGLE_EMPTY_STRING">
+    <meta-data definedIn="java.util.regex.Pattern" sourcePosition="libcore/ojluni/src/main/java/java/util/regex/Pattern.java:5797" />
+  </compat-change>
+  <compat-change enableAfterTargetSdk="29" id="159047832" name="USE_REAL_ROOT_LOCALE">
+    <meta-data definedIn="libcore.icu.LocaleData" sourcePosition="libcore/luni/src/main/java/libcore/icu/LocaleData.java:77" />
+  </compat-change>
+  <compat-change enableSinceTargetSdk="35" id="291868760" name="USE_NEW_ISO_LOCALE_CODES">
+    <meta-data definedIn="sun.util.locale.BaseLocale" sourcePosition="libcore/ojluni/src/main/java/sun/util/locale/BaseLocale.java:115" />
+  </compat-change>
+</config>
