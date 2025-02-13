@@ -25262,6 +25262,13 @@ Ljdk/internal/util/random/RandomSupport$RandomLongsSpliterator;->trySplit()Ljava
 Ljdk/internal/util/random/RandomSupport$RandomLongsSpliterator;->trySplit()Ljava/util/Spliterator;,core-platform-api,public-api,system-api,test-api
 Ljdk/internal/util/random/RandomSupport$RandomSpliterator;->characteristics()I,core-platform-api,public-api,system-api,test-api
 Ljdk/internal/util/random/RandomSupport$RandomSpliterator;->estimateSize()J,core-platform-api,public-api,system-api,test-api
+Ljdk/internal/vm/Continuation$$ExternalSyntheticLambda0;->apply(Ljava/lang/Object;)Ljava/lang/Object;,core-platform-api,public-api,system-api,test-api
+Ljdk/internal/vm/Continuation$$ExternalSyntheticLambda1;->apply(I)Ljava/lang/Object;,core-platform-api,public-api,system-api,test-api
+Ljdk/internal/vm/Continuation$$ExternalSyntheticLambda2;->apply(Ljava/lang/Object;)Ljava/lang/Object;,core-platform-api,public-api,system-api,test-api
+Ljdk/internal/vm/Continuation;->toString()Ljava/lang/String;,core-platform-api,public-api,system-api,test-api
+Ljdk/internal/vm/ContinuationScope;->equals(Ljava/lang/Object;)Z,core-platform-api,public-api,system-api,test-api
+Ljdk/internal/vm/ContinuationScope;->hashCode()I,core-platform-api,public-api,system-api,test-api
+Ljdk/internal/vm/ContinuationScope;->toString()Ljava/lang/String;,core-platform-api,public-api,system-api,test-api
 Ljdk/net/ExtendedSocketOptions$ExtSocketOption;->name()Ljava/lang/String;,core-platform-api,public-api,system-api,test-api
 Ljdk/net/ExtendedSocketOptions$ExtSocketOption;->toString()Ljava/lang/String;,core-platform-api,public-api,system-api,test-api
 Ljdk/net/ExtendedSocketOptions$ExtSocketOption;->type()Ljava/lang/Class;,core-platform-api,public-api,system-api,test-api
