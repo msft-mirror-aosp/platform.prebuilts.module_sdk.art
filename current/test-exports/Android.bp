@@ -32,11 +32,6 @@ apex_contributions_defaults {
 
 java_import {
     name: "core-compat-test-rules",
-    // Do not prefer prebuilt if the Soong config variable "source_build" in namespace "art_module" is true.
-    use_source_config_var: {
-        config_namespace: "art_module",
-        var_name: "source_build",
-    },
     visibility: ["//visibility:public"],
     apex_available: ["//apex_available:platform"],
     licenses: ["art-module-test-exports_libcore_license"],
@@ -45,11 +40,6 @@ java_import {
 
 java_import {
     name: "core-test-rules",
-    // Do not prefer prebuilt if the Soong config variable "source_build" in namespace "art_module" is true.
-    use_source_config_var: {
-        config_namespace: "art_module",
-        var_name: "source_build",
-    },
     visibility: ["//visibility:public"],
     apex_available: ["//apex_available:platform"],
     licenses: ["art-module-test-exports_libcore_license"],
@@ -58,11 +48,6 @@ java_import {
 
 java_import {
     name: "core-tests-support",
-    // Do not prefer prebuilt if the Soong config variable "source_build" in namespace "art_module" is true.
-    use_source_config_var: {
-        config_namespace: "art_module",
-        var_name: "source_build",
-    },
     visibility: ["//visibility:public"],
     apex_available: ["//apex_available:platform"],
     licenses: ["art-module-test-exports_libcore_license"],
@@ -72,11 +57,6 @@ java_import {
 
 java_import {
     name: "okhttp-tests-nojarjar",
-    // Do not prefer prebuilt if the Soong config variable "source_build" in namespace "art_module" is true.
-    use_source_config_var: {
-        config_namespace: "art_module",
-        var_name: "source_build",
-    },
     visibility: ["//visibility:public"],
     apex_available: ["//apex_available:platform"],
     licenses: ["art-module-test-exports_external_okhttp_license"],
@@ -85,11 +65,6 @@ java_import {
 
 java_import {
     name: "art_cts_jvmti_test_library",
-    // Do not prefer prebuilt if the Soong config variable "source_build" in namespace "art_module" is true.
-    use_source_config_var: {
-        config_namespace: "art_module",
-        var_name: "source_build",
-    },
     visibility: ["//visibility:public"],
     apex_available: ["//apex_available:platform"],
     licenses: ["art-module-test-exports_art_license"],
@@ -99,11 +74,6 @@ java_import {
 
 java_import {
     name: "expected_cts_outputs",
-    // Do not prefer prebuilt if the Soong config variable "source_build" in namespace "art_module" is true.
-    use_source_config_var: {
-        config_namespace: "art_module",
-        var_name: "source_build",
-    },
     visibility: ["//visibility:public"],
     apex_available: ["//apex_available:platform"],
     licenses: ["art-module-test-exports_art_license"],
@@ -113,11 +83,6 @@ java_import {
 
 java_import {
     name: "core-libart-for-host",
-    // Do not prefer prebuilt if the Soong config variable "source_build" in namespace "art_module" is true.
-    use_source_config_var: {
-        config_namespace: "art_module",
-        var_name: "source_build",
-    },
     visibility: ["//visibility:public"],
     apex_available: ["//apex_available:platform"],
     licenses: ["art-module-test-exports_libcore_license"],
@@ -126,11 +91,6 @@ java_import {
 
 java_import {
     name: "okhttp-for-host",
-    // Do not prefer prebuilt if the Soong config variable "source_build" in namespace "art_module" is true.
-    use_source_config_var: {
-        config_namespace: "art_module",
-        var_name: "source_build",
-    },
     visibility: ["//visibility:public"],
     apex_available: ["//apex_available:platform"],
     licenses: ["art-module-test-exports_external_okhttp_license"],
@@ -139,11 +99,6 @@ java_import {
 
 java_import {
     name: "libcore-expectations-knownfailures-jar",
-    // Do not prefer prebuilt if the Soong config variable "source_build" in namespace "art_module" is true.
-    use_source_config_var: {
-        config_namespace: "art_module",
-        var_name: "source_build",
-    },
     visibility: ["//visibility:public"],
     apex_available: ["//apex_available:platform"],
     licenses: ["art-module-test-exports_libcore_license"],
@@ -153,11 +108,6 @@ java_import {
 
 java_import {
     name: "libcore-expectations-virtualdeviceknownfailures-jar",
-    // Do not prefer prebuilt if the Soong config variable "source_build" in namespace "art_module" is true.
-    use_source_config_var: {
-        config_namespace: "art_module",
-        var_name: "source_build",
-    },
     visibility: ["//visibility:public"],
     apex_available: ["//apex_available:platform"],
     licenses: ["art-module-test-exports_libcore_license"],
@@ -167,11 +117,6 @@ java_import {
 
 java_import {
     name: "okhttp-nojarjar",
-    // Do not prefer prebuilt if the Soong config variable "source_build" in namespace "art_module" is true.
-    use_source_config_var: {
-        config_namespace: "art_module",
-        var_name: "source_build",
-    },
     visibility: ["//visibility:public"],
     apex_available: ["//apex_available:platform"],
     licenses: ["art-module-test-exports_external_okhttp_license"],
@@ -180,11 +125,6 @@ java_import {
 
 java_test_import {
     name: "apache-harmony-jdwp-tests",
-    // Do not prefer prebuilt if the Soong config variable "source_build" in namespace "art_module" is true.
-    use_source_config_var: {
-        config_namespace: "art_module",
-        var_name: "source_build",
-    },
     visibility: ["//visibility:public"],
     apex_available: ["//apex_available:platform"],
     licenses: ["art-module-test-exports_external_apache-harmony_jdwp_license"],
@@ -194,11 +134,6 @@ java_test_import {
 
 java_test_import {
     name: "libcore-crypto-tests",
-    // Do not prefer prebuilt if the Soong config variable "source_build" in namespace "art_module" is true.
-    use_source_config_var: {
-        config_namespace: "art_module",
-        var_name: "source_build",
-    },
     visibility: ["//visibility:public"],
     apex_available: ["//apex_available:platform"],
     licenses: ["art-module-test-exports_libcore_license"],
@@ -208,11 +143,6 @@ java_test_import {
 
 java_test_import {
     name: "core-ojtests-public",
-    // Do not prefer prebuilt if the Soong config variable "source_build" in namespace "art_module" is true.
-    use_source_config_var: {
-        config_namespace: "art_module",
-        var_name: "source_build",
-    },
     visibility: ["//visibility:public"],
     apex_available: ["//apex_available:platform"],
     licenses: ["art-module-test-exports_libcore_ojluni_src_test_license"],
@@ -222,11 +152,6 @@ java_test_import {
 
 java_test_import {
     name: "jsr166-tests",
-    // Do not prefer prebuilt if the Soong config variable "source_build" in namespace "art_module" is true.
-    use_source_config_var: {
-        config_namespace: "art_module",
-        var_name: "source_build",
-    },
     visibility: ["//visibility:public"],
     apex_available: ["//apex_available:platform"],
     licenses: ["art-module-test-exports_libcore_license"],
@@ -236,11 +161,6 @@ java_test_import {
 
 java_test_import {
     name: "apache-harmony-tests",
-    // Do not prefer prebuilt if the Soong config variable "source_build" in namespace "art_module" is true.
-    use_source_config_var: {
-        config_namespace: "art_module",
-        var_name: "source_build",
-    },
     visibility: ["//visibility:public"],
     apex_available: ["//apex_available:platform"],
     licenses: ["art-module-test-exports_external_apache-harmony_license"],
@@ -250,11 +170,6 @@ java_test_import {
 
 java_test_import {
     name: "core-tests",
-    // Do not prefer prebuilt if the Soong config variable "source_build" in namespace "art_module" is true.
-    use_source_config_var: {
-        config_namespace: "art_module",
-        var_name: "source_build",
-    },
     visibility: ["//visibility:public"],
     apex_available: ["//apex_available:platform"],
     licenses: ["art-module-test-exports_libcore_license"],
@@ -296,7 +211,7 @@ license {
     name: "art-module-test-exports_external_okhttp_license",
     visibility: ["//visibility:private"],
     license_kinds: ["SPDX-license-identifier-Apache-2.0"],
-    license_text: ["licenses/external/okhttp/LICENSE.txt"],
+    license_text: ["licenses/external/okhttp/LICENSE"],
 }
 
 license {
@@ -329,11 +244,6 @@ license {
 
 cc_prebuilt_library_shared {
     name: "libjavacoretests",
-    // Do not prefer prebuilt if the Soong config variable "source_build" in namespace "art_module" is true.
-    use_source_config_var: {
-        config_namespace: "art_module",
-        var_name: "source_build",
-    },
     visibility: ["//visibility:public"],
     apex_available: ["//apex_available:platform"],
     licenses: ["art-module-test-exports_libcore_license"],
