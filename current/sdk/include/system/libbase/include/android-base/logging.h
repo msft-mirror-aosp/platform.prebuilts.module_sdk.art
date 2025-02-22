@@ -212,10 +212,7 @@ struct LogAbortAfterFullExpr {
 // Get an ostream that can be used for logging at the given severity and to the default
 // destination.
 //
-// Notes:
-// 1) This will not check whether the severity is high enough. One should use WOULD_LOG to filter
-//    usage manually.
-// 2) This does not save and restore errno.
+// Note that this does not save and restore errno.
 #define LOG_STREAM(severity)                                                                    \
   ::android::base::LogMessage(__FILE__, __LINE__, SEVERITY_LAMBDA(severity), _LOG_TAG_INTERNAL, \
                               -1)                                                               \
