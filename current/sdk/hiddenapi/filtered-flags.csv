@@ -2674,6 +2674,8 @@ Lcom/android/org/bouncycastle/asn1/ConstructedBitStream;->read([BII)I,core-platf
 Lcom/android/org/bouncycastle/asn1/ConstructedOctetStream;->read()I,core-platform-api,public-api,sdk,system-api,test-api
 Lcom/android/org/bouncycastle/asn1/ConstructedOctetStream;->read([BII)I,core-platform-api,public-api,sdk,system-api,test-api
 Lcom/android/org/bouncycastle/asn1/DERBitString;-><init>([B)V,unsupported
+Lcom/android/org/bouncycastle/asn1/DERInteger;-><init>(J)V,unsupported
+Lcom/android/org/bouncycastle/asn1/DERInteger;-><init>(Ljava/math/BigInteger;)V,max-target-r
 Lcom/android/org/bouncycastle/asn1/DERNull;->INSTANCE:Lcom/android/org/bouncycastle/asn1/DERNull;,unsupported
 Lcom/android/org/bouncycastle/asn1/DEROctetString;-><init>([B)V,max-target-r
 Lcom/android/org/bouncycastle/asn1/DEROutputStream;-><init>(Ljava/io/OutputStream;)V,max-target-r
