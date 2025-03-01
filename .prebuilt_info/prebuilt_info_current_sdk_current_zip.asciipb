@@ -1,8 +1,8 @@
 drops {
   android_build_drop {
-    build_id: "12785903"
+    build_id: "13128073"
     target: "train_build"
-    source_file: "mainline-sdks/for-latest-build/current/com.google.android.art/sdk/art-module-sdk-current.zip"
+    source_file: "mainline-sdks/for-Baklava-build/current/com.google.android.art/sdk/art-module-sdk-current.zip"
   }
   dest_file: "current/sdk/current.zip"
   version: ""

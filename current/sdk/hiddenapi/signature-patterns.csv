@@ -1,6 +1,8 @@
 android/compat/**
 android/crypto/hpke/**
 android/system/*
+com/android/art/flags/**
+com/android/libcore/**
 com/android/okhttp/**
 com/android/org/bouncycastle/**
 com/android/org/kxml2/**
