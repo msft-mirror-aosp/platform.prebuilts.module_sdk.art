@@ -197,6 +197,8 @@ Lcom/android/org/bouncycastle/asn1/ASN1InputStream;-><init>([B)V,unsupported
 Lcom/android/org/bouncycastle/asn1/ASN1InputStream;->readObject()Lcom/android/org/bouncycastle/asn1/ASN1Primitive;,unsupported
 Lcom/android/org/bouncycastle/asn1/ASN1Integer;-><init>(Ljava/math/BigInteger;)V,unsupported
 Lcom/android/org/bouncycastle/asn1/DERBitString;-><init>([B)V,unsupported
+Lcom/android/org/bouncycastle/asn1/DERInteger;-><init>(J)V,unsupported
+Lcom/android/org/bouncycastle/asn1/DERInteger;-><init>(Ljava/math/BigInteger;)V,max-target-r
 Lcom/android/org/bouncycastle/asn1/DERNull;->INSTANCE:Lcom/android/org/bouncycastle/asn1/DERNull;,unsupported
 Lcom/android/org/bouncycastle/asn1/DEROctetString;-><init>([B)V,max-target-r
 Lcom/android/org/bouncycastle/asn1/DEROutputStream;-><init>(Ljava/io/OutputStream;)V,max-target-r

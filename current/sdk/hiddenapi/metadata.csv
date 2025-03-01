@@ -198,6 +198,8 @@ signature,maxTargetSdk,presentAfter,publicAlternatives,returnType,trackingBug
 |Lcom/android/org/bouncycastle/asn1/ASN1InputStream;->readObject()Lcom/android/org/bouncycastle/asn1/ASN1Primitive;|,||,||,||,||,||
 |Lcom/android/org/bouncycastle/asn1/ASN1Integer;-><init>(Ljava/math/BigInteger;)V|,||,||,||,||,||
 |Lcom/android/org/bouncycastle/asn1/DERBitString;-><init>([B)V|,||,||,||,||,||
+|Lcom/android/org/bouncycastle/asn1/DERInteger;-><init>(J)V|,||,||,||,||,||
+|Lcom/android/org/bouncycastle/asn1/DERInteger;-><init>(Ljava/math/BigInteger;)V|,|30|,||,||,||,|170729553|
 |Lcom/android/org/bouncycastle/asn1/DERNull;->INSTANCE:Lcom/android/org/bouncycastle/asn1/DERNull;|,||,||,||,||,||
 |Lcom/android/org/bouncycastle/asn1/DEROctetString;-><init>([B)V|,|30|,||,||,||,|170729553|
 |Lcom/android/org/bouncycastle/asn1/DEROutputStream;-><init>(Ljava/io/OutputStream;)V|,|30|,||,||,||,|170729553|
