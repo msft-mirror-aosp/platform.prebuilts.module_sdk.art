@@ -591,7 +591,7 @@ class DexFile {
                              uint32_t signature_length) const;
   const dex::ProtoId* FindProtoId(dex::TypeIndex return_type_idx,
                                   const std::vector<dex::TypeIndex>& signature_type_idxs) const {
-    return FindProtoId(return_type_idx, &signature_type_idxs[0], signature_type_idxs.size());
+    return FindProtoId(return_type_idx, signature_type_idxs.data(), signature_type_idxs.size());
   }
 
   // Given a signature place the type ids into the given vector, returns true on success
@@ -911,6 +911,7 @@ class DexFile {
   static int CompareDescriptors(std::string_view lhs, std::string_view rhs);
   static int CompareMemberNames(std::string_view lhs, std::string_view rhs);
 
+  static size_t Utf8Length(const char* utf8_data, size_t utf16_length);
   static std::string_view StringViewFromUtf16Length(const char* utf8_data, size_t utf16_length);
 
  protected:
