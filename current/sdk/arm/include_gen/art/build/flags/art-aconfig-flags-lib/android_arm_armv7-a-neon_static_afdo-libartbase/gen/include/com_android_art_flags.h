@@ -13,6 +13,9 @@
 #ifndef COM_ANDROID_ART_FLAGS_EXECUTABLE_METHOD_FILE_OFFSETS
 #define COM_ANDROID_ART_FLAGS_EXECUTABLE_METHOD_FILE_OFFSETS true
 #endif
+#ifndef COM_ANDROID_ART_FLAGS_EXECUTABLE_METHOD_FILE_OFFSETS_V2
+#define COM_ANDROID_ART_FLAGS_EXECUTABLE_METHOD_FILE_OFFSETS_V2 false
+#endif
 #ifndef COM_ANDROID_ART_FLAGS_FAST_BASELINE_COMPILER
 #define COM_ANDROID_ART_FLAGS_FAST_BASELINE_COMPILER false
 #endif
@@ -38,6 +41,7 @@ public:
     virtual bool always_enable_profile_code() = 0;
     virtual bool art_service_v3() = 0;
     virtual bool executable_method_file_offsets() = 0;
+    virtual bool executable_method_file_offsets_v2() = 0;
     virtual bool fast_baseline_compiler() = 0;
     virtual bool test() = 0;
     virtual bool use_generational_cmc() = 0;
@@ -55,6 +59,9 @@ constexpr inline bool art_service_v3() {
 }
 constexpr inline bool executable_method_file_offsets() {
     return COM_ANDROID_ART_FLAGS_EXECUTABLE_METHOD_FILE_OFFSETS;
+}
+constexpr inline bool executable_method_file_offsets_v2() {
+    return COM_ANDROID_ART_FLAGS_EXECUTABLE_METHOD_FILE_OFFSETS_V2;
 }
 constexpr inline bool fast_baseline_compiler() {
     return COM_ANDROID_ART_FLAGS_FAST_BASELINE_COMPILER;
@@ -78,6 +85,7 @@ extern "C" {
 bool com_android_art_flags_always_enable_profile_code();
 bool com_android_art_flags_art_service_v3();
 bool com_android_art_flags_executable_method_file_offsets();
+bool com_android_art_flags_executable_method_file_offsets_v2();
 bool com_android_art_flags_fast_baseline_compiler();
 bool com_android_art_flags_test();
 bool com_android_art_flags_use_generational_cmc();
