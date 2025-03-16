@@ -45,6 +45,7 @@ Landroid/system/PacketSocketAddress;-><init>(SI)V,unsupported
 Lcom/android/art/flags/CustomFeatureFlags;->alwaysEnableProfileCode()Z,unsupported
 Lcom/android/art/flags/CustomFeatureFlags;->artServiceV3()Z,unsupported
 Lcom/android/art/flags/CustomFeatureFlags;->executableMethodFileOffsets()Z,unsupported
+Lcom/android/art/flags/CustomFeatureFlags;->executableMethodFileOffsetsV2()Z,unsupported
 Lcom/android/art/flags/CustomFeatureFlags;->fastBaselineCompiler()Z,unsupported
 Lcom/android/art/flags/CustomFeatureFlags;->test()Z,unsupported
 Lcom/android/art/flags/CustomFeatureFlags;->useGenerationalCmc()Z,unsupported
@@ -52,6 +53,7 @@ Lcom/android/art/flags/CustomFeatureFlags;->virtualThreadImplV1()Z,unsupported
 Lcom/android/art/flags/FeatureFlags;->alwaysEnableProfileCode()Z,unsupported
 Lcom/android/art/flags/FeatureFlags;->artServiceV3()Z,unsupported
 Lcom/android/art/flags/FeatureFlags;->executableMethodFileOffsets()Z,unsupported
+Lcom/android/art/flags/FeatureFlags;->executableMethodFileOffsetsV2()Z,unsupported
 Lcom/android/art/flags/FeatureFlags;->fastBaselineCompiler()Z,unsupported
 Lcom/android/art/flags/FeatureFlags;->test()Z,unsupported
 Lcom/android/art/flags/FeatureFlags;->useGenerationalCmc()Z,unsupported
@@ -59,6 +61,7 @@ Lcom/android/art/flags/FeatureFlags;->virtualThreadImplV1()Z,unsupported
 Lcom/android/art/flags/FeatureFlagsImpl;->alwaysEnableProfileCode()Z,unsupported
 Lcom/android/art/flags/FeatureFlagsImpl;->artServiceV3()Z,unsupported
 Lcom/android/art/flags/FeatureFlagsImpl;->executableMethodFileOffsets()Z,unsupported
+Lcom/android/art/flags/FeatureFlagsImpl;->executableMethodFileOffsetsV2()Z,unsupported
 Lcom/android/art/flags/FeatureFlagsImpl;->fastBaselineCompiler()Z,unsupported
 Lcom/android/art/flags/FeatureFlagsImpl;->test()Z,unsupported
 Lcom/android/art/flags/FeatureFlagsImpl;->useGenerationalCmc()Z,unsupported
@@ -66,6 +69,7 @@ Lcom/android/art/flags/FeatureFlagsImpl;->virtualThreadImplV1()Z,unsupported
 Lcom/android/art/flags/Flags;->alwaysEnableProfileCode()Z,unsupported
 Lcom/android/art/flags/Flags;->artServiceV3()Z,unsupported
 Lcom/android/art/flags/Flags;->executableMethodFileOffsets()Z,unsupported
+Lcom/android/art/flags/Flags;->executableMethodFileOffsetsV2()Z,unsupported
 Lcom/android/art/flags/Flags;->fastBaselineCompiler()Z,unsupported
 Lcom/android/art/flags/Flags;->test()Z,unsupported
 Lcom/android/art/flags/Flags;->useGenerationalCmc()Z,unsupported

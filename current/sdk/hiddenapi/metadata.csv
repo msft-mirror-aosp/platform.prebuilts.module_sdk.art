@@ -46,6 +46,7 @@ signature,maxTargetSdk,presentAfter,publicAlternatives,returnType,trackingBug
 |Lcom/android/art/flags/CustomFeatureFlags;->alwaysEnableProfileCode()Z|,||,||,||,||,||
 |Lcom/android/art/flags/CustomFeatureFlags;->artServiceV3()Z|,||,||,||,||,||
 |Lcom/android/art/flags/CustomFeatureFlags;->executableMethodFileOffsets()Z|,||,||,||,||,||
+|Lcom/android/art/flags/CustomFeatureFlags;->executableMethodFileOffsetsV2()Z|,||,||,||,||,||
 |Lcom/android/art/flags/CustomFeatureFlags;->fastBaselineCompiler()Z|,||,||,||,||,||
 |Lcom/android/art/flags/CustomFeatureFlags;->test()Z|,||,||,||,||,||
 |Lcom/android/art/flags/CustomFeatureFlags;->useGenerationalCmc()Z|,||,||,||,||,||
@@ -53,6 +54,7 @@ signature,maxTargetSdk,presentAfter,publicAlternatives,returnType,trackingBug
 |Lcom/android/art/flags/FeatureFlags;->alwaysEnableProfileCode()Z|,||,||,||,||,||
 |Lcom/android/art/flags/FeatureFlags;->artServiceV3()Z|,||,||,||,||,||
 |Lcom/android/art/flags/FeatureFlags;->executableMethodFileOffsets()Z|,||,||,||,||,||
+|Lcom/android/art/flags/FeatureFlags;->executableMethodFileOffsetsV2()Z|,||,||,||,||,||
 |Lcom/android/art/flags/FeatureFlags;->fastBaselineCompiler()Z|,||,||,||,||,||
 |Lcom/android/art/flags/FeatureFlags;->test()Z|,||,||,||,||,||
 |Lcom/android/art/flags/FeatureFlags;->useGenerationalCmc()Z|,||,||,||,||,||
@@ -60,6 +62,7 @@ signature,maxTargetSdk,presentAfter,publicAlternatives,returnType,trackingBug
 |Lcom/android/art/flags/FeatureFlagsImpl;->alwaysEnableProfileCode()Z|,||,||,||,||,||
 |Lcom/android/art/flags/FeatureFlagsImpl;->artServiceV3()Z|,||,||,||,||,||
 |Lcom/android/art/flags/FeatureFlagsImpl;->executableMethodFileOffsets()Z|,||,||,||,||,||
+|Lcom/android/art/flags/FeatureFlagsImpl;->executableMethodFileOffsetsV2()Z|,||,||,||,||,||
 |Lcom/android/art/flags/FeatureFlagsImpl;->fastBaselineCompiler()Z|,||,||,||,||,||
 |Lcom/android/art/flags/FeatureFlagsImpl;->test()Z|,||,||,||,||,||
 |Lcom/android/art/flags/FeatureFlagsImpl;->useGenerationalCmc()Z|,||,||,||,||,||
@@ -67,6 +70,7 @@ signature,maxTargetSdk,presentAfter,publicAlternatives,returnType,trackingBug
 |Lcom/android/art/flags/Flags;->alwaysEnableProfileCode()Z|,||,||,||,||,||
 |Lcom/android/art/flags/Flags;->artServiceV3()Z|,||,||,||,||,||
 |Lcom/android/art/flags/Flags;->executableMethodFileOffsets()Z|,||,||,||,||,||
+|Lcom/android/art/flags/Flags;->executableMethodFileOffsetsV2()Z|,||,||,||,||,||
 |Lcom/android/art/flags/Flags;->fastBaselineCompiler()Z|,||,||,||,||,||
 |Lcom/android/art/flags/Flags;->test()Z|,||,||,||,||,||
 |Lcom/android/art/flags/Flags;->useGenerationalCmc()Z|,||,||,||,||,||
