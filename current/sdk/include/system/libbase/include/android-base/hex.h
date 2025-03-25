@@ -19,6 +19,8 @@
 #include <string>
 #include <vector>
 
+#include <stdint.h>
+
 namespace android {
 namespace base {
 
