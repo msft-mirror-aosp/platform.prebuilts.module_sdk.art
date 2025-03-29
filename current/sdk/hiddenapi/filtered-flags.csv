@@ -9118,6 +9118,8 @@ Ljava/lang/invoke/ConstantCallSite;->dynamicInvoker()Ljava/lang/invoke/MethodHan
 Ljava/lang/invoke/ConstantCallSite;->getTarget()Ljava/lang/invoke/MethodHandle;,core-platform-api,public-api,sdk,system-api,test-api
 Ljava/lang/invoke/ConstantCallSite;->isFrozen:Z,lo-prio,max-target-o
 Ljava/lang/invoke/ConstantCallSite;->setTarget(Ljava/lang/invoke/MethodHandle;)V,core-platform-api,public-api,sdk,system-api,test-api
+Ljava/lang/invoke/DirectMethodHandle$MethodKey;->equals(Ljava/lang/Object;)Z,core-platform-api,public-api,sdk,system-api,test-api
+Ljava/lang/invoke/DirectMethodHandle$MethodKey;->hashCode()I,core-platform-api,public-api,sdk,system-api,test-api
 Ljava/lang/invoke/LambdaConversionException;-><init>()V,core-platform-api,public-api,sdk,system-api,test-api
 Ljava/lang/invoke/LambdaConversionException;-><init>(Ljava/lang/String;)V,core-platform-api,public-api,sdk,system-api,test-api
 Ljava/lang/invoke/LambdaConversionException;-><init>(Ljava/lang/String;Ljava/lang/Throwable;)V,core-platform-api,public-api,sdk,system-api,test-api
