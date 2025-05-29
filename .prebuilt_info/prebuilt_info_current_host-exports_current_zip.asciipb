@@ -8,7 +8,7 @@ drops {
   version: ""
   version_group: ""
   git_project: "platform/prebuilts/module_sdk/art"
-  git_branch: "main"
+  git_branch: "25Q2-release"
   transform: TRANSFORM_UNZIP
   transform_options {
   }
