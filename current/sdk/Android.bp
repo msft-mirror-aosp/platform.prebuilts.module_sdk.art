@@ -327,6 +327,12 @@ license {
 }
 
 license {
+    name: "art-module-sdk_opensourcerequest",
+    visibility: ["//visibility:private"],
+    license_text: ["licenses/build/soong/licenses/opensourcerequest"],
+}
+
+license {
     name: "art-module-sdk_external_okhttp_license",
     visibility: ["//visibility:private"],
     license_kinds: ["SPDX-license-identifier-Apache-2.0"],
