@@ -1,6 +1,6 @@
 drops {
   android_build_drop {
-    build_id: "13611887"
+    build_id: "13709189"
     target: "train_build"
     source_file: "mainline-sdks/for-Baklava-build/current/com.google.android.art/host-exports/art-module-host-exports-current.zip"
   }
@@ -8,7 +8,7 @@ drops {
   version: ""
   version_group: ""
   git_project: "platform/prebuilts/module_sdk/art"
-  git_branch: "main"
+  git_branch: "25Q3-release"
   transform: TRANSFORM_UNZIP
   transform_options {
   }
