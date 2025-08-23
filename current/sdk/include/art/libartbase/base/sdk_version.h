@@ -39,6 +39,8 @@ enum class SdkVersion : uint32_t {
   kS_V2  = 32u,
   kT     = 33u,
   kU     = 34u,
+  kV     = 35u,
+  kB     = 36u,
   kMax   = std::numeric_limits<uint32_t>::max(),
 };
 
@@ -56,6 +58,10 @@ inline bool IsSdkVersionSetAndAtMost(uint32_t lhs, SdkVersion rhs) {
 
 inline bool IsSdkVersionSetAndLessThan(uint32_t lhs, SdkVersion rhs) {
   return lhs != static_cast<uint32_t>(SdkVersion::kUnset) && lhs < static_cast<uint32_t>(rhs);
+}
+
+inline bool IsSdkVersionUnsetOrMoreThan(uint32_t lhs, SdkVersion rhs) {
+  return lhs == static_cast<uint32_t>(SdkVersion::kUnset) || lhs > static_cast<uint32_t>(rhs);
 }
 
 }  // namespace art
