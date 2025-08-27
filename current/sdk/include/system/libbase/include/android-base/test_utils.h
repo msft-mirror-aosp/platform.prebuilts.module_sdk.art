@@ -23,6 +23,8 @@
 #include <android-base/file.h>
 #include <android-base/macros.h>
 
+extern "C" void __hwasan_init() __attribute__((weak));
+
 namespace android {
 namespace base {
 
@@ -37,6 +39,12 @@ template <class T>
 static inline void DoNotOptimize(T& value) {
   asm volatile("" : "+r,m"(value) : : "memory");
 }
+
+static inline bool running_with_hwasan() {
+  return &__hwasan_init != nullptr;
+}
+
+#define SKIP_WITH_HWASAN if (android::base::running_with_hwasan()) GTEST_SKIP()
 
 class CapturedStdFd {
  public:
@@ -108,10 +116,3 @@ class CapturedStdout : public android::base::CapturedStdFd {
       ADD_FAILURE() << "regex mismatch: expected to not find " << (__pattern) << " in:\n" << __s; \
     }                                                                                             \
   } while (0)
-
-extern "C" void __hwasan_init() __attribute__((weak));
-static inline bool running_with_hwasan() {
-  return &__hwasan_init != nullptr;
-}
-
-#define SKIP_WITH_HWASAN if (running_with_hwasan()) GTEST_SKIP()
