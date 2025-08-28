@@ -848,6 +848,7 @@ Lcom/android/libcore/CustomFeatureFlags$$ExternalSyntheticLambda11;->test(Ljava/
 Lcom/android/libcore/CustomFeatureFlags$$ExternalSyntheticLambda12;->test(Ljava/lang/Object;)Z,core-platform-api,public-api,system-api,test-api
 Lcom/android/libcore/CustomFeatureFlags$$ExternalSyntheticLambda13;->test(Ljava/lang/Object;)Z,core-platform-api,public-api,system-api,test-api
 Lcom/android/libcore/CustomFeatureFlags$$ExternalSyntheticLambda14;->test(Ljava/lang/Object;)Z,core-platform-api,public-api,system-api,test-api
+Lcom/android/libcore/CustomFeatureFlags$$ExternalSyntheticLambda15;->test(Ljava/lang/Object;)Z,core-platform-api,public-api,system-api,test-api
 Lcom/android/libcore/CustomFeatureFlags$$ExternalSyntheticLambda1;->test(Ljava/lang/Object;)Z,core-platform-api,public-api,system-api,test-api
 Lcom/android/libcore/CustomFeatureFlags$$ExternalSyntheticLambda2;->test(Ljava/lang/Object;)Z,core-platform-api,public-api,system-api,test-api
 Lcom/android/libcore/CustomFeatureFlags$$ExternalSyntheticLambda3;->test(Ljava/lang/Object;)Z,core-platform-api,public-api,system-api,test-api
@@ -6037,6 +6038,9 @@ Ljava/lang/constant/ReferenceClassDescImpl;->descriptorString()Ljava/lang/String
 Ljava/lang/constant/ReferenceClassDescImpl;->equals(Ljava/lang/Object;)Z,core-platform-api,public-api,system-api,test-api
 Ljava/lang/constant/ReferenceClassDescImpl;->hashCode()I,core-platform-api,public-api,system-api,test-api
 Ljava/lang/constant/ReferenceClassDescImpl;->toString()Ljava/lang/String;,core-platform-api,public-api,system-api,test-api
+Ljava/lang/foreign/Arena;->close()V,core-platform-api,public-api,system-api,test-api
+Ljava/lang/foreign/MemorySegment;->equals(Ljava/lang/Object;)Z,core-platform-api,public-api,system-api,test-api
+Ljava/lang/foreign/MemorySegment;->hashCode()I,core-platform-api,public-api,system-api,test-api
 Ljava/lang/invoke/CallSite;->dynamicInvoker()Ljava/lang/invoke/MethodHandle;,core-platform-api,public-api,system-api,test-api
 Ljava/lang/invoke/CallSite;->getTarget()Ljava/lang/invoke/MethodHandle;,core-platform-api,public-api,system-api,test-api
 Ljava/lang/invoke/CallSite;->setTarget(Ljava/lang/invoke/MethodHandle;)V,core-platform-api,public-api,system-api,test-api
@@ -25023,6 +25027,13 @@ Ljavax/xml/xpath/XPathFunctionException;-><init>(Ljava/lang/String;)V,core-platf
 Ljavax/xml/xpath/XPathFunctionException;-><init>(Ljava/lang/Throwable;)V,core-platform-api,public-api,system-api,test-api
 Ljavax/xml/xpath/XPathFunctionResolver;->resolveFunction(Ljavax/xml/namespace/QName;I)Ljavax/xml/xpath/XPathFunction;,core-platform-api,public-api,system-api,test-api
 Ljavax/xml/xpath/XPathVariableResolver;->resolveVariable(Ljavax/xml/namespace/QName;)Ljava/lang/Object;,core-platform-api,public-api,system-api,test-api
+Ljdk/internal/foreign/AbstractMemorySegmentImpl;->equals(Ljava/lang/Object;)Z,core-platform-api,public-api,system-api,test-api
+Ljdk/internal/foreign/AbstractMemorySegmentImpl;->hashCode()I,core-platform-api,public-api,system-api,test-api
+Ljdk/internal/foreign/ArenaImpl;->close()V,core-platform-api,public-api,system-api,test-api
+Ljdk/internal/foreign/MemorySessionImpl$$ExternalSyntheticLambda0;->get()Ljava/lang/Object;,core-platform-api,public-api,system-api,test-api
+Ljdk/internal/foreign/MemorySessionImpl$$ExternalSyntheticLambda1;->get()Ljava/lang/Object;,core-platform-api,public-api,system-api,test-api
+Ljdk/internal/foreign/MemorySessionImpl$ResourceList;->run()V,core-platform-api,public-api,system-api,test-api
+Ljdk/internal/foreign/MemorySessionImpl;->clone()Ljava/lang/Object;,core-platform-api,public-api,system-api,test-api
 Ljdk/internal/math/FDBigInteger;->toString()Ljava/lang/String;,core-platform-api,public-api,system-api,test-api
 Ljdk/internal/math/FloatingDecimal$1;->initialValue()Ljava/lang/Object;,core-platform-api,public-api,system-api,test-api
 Ljdk/internal/math/FormattedFloatingDecimal$1;->initialValue()Ljava/lang/Object;,core-platform-api,public-api,system-api,test-api
