@@ -15,6 +15,7 @@ class flag_provider_interface {
 public:
     virtual ~flag_provider_interface() = default;
     virtual bool assume_value_sdk_int() = 0;
+    virtual bool auto_tune_time_based_gc_triggering() = 0;
     virtual bool enable_profile_code_rw() = 0;
     virtual bool enable_time_based_gc_triggering() = 0;
     virtual bool madvise_type_lookup_table() = 0;
@@ -27,6 +28,9 @@ public:
 
 
 inline bool assume_value_sdk_int() {
+    return false;
+}
+inline bool auto_tune_time_based_gc_triggering() {
     return false;
 }
 inline bool enable_profile_code_rw() {
@@ -55,6 +59,7 @@ extern "C" {
 
 
 bool com_android_art_rw_flags_assume_value_sdk_int();
+bool com_android_art_rw_flags_auto_tune_time_based_gc_triggering();
 bool com_android_art_rw_flags_enable_profile_code_rw();
 bool com_android_art_rw_flags_enable_time_based_gc_triggering();
 bool com_android_art_rw_flags_madvise_type_lookup_table();
