@@ -934,6 +934,7 @@ Lcom/android/libcore/CustomFeatureFlags$$ExternalSyntheticLambda12;->test(Ljava/
 Lcom/android/libcore/CustomFeatureFlags$$ExternalSyntheticLambda13;->test(Ljava/lang/Object;)Z,core-platform-api,public-api,sdk,system-api,test-api
 Lcom/android/libcore/CustomFeatureFlags$$ExternalSyntheticLambda14;->test(Ljava/lang/Object;)Z,core-platform-api,public-api,sdk,system-api,test-api
 Lcom/android/libcore/CustomFeatureFlags$$ExternalSyntheticLambda15;->test(Ljava/lang/Object;)Z,core-platform-api,public-api,sdk,system-api,test-api
+Lcom/android/libcore/CustomFeatureFlags$$ExternalSyntheticLambda16;->test(Ljava/lang/Object;)Z,core-platform-api,public-api,sdk,system-api,test-api
 Lcom/android/libcore/CustomFeatureFlags$$ExternalSyntheticLambda1;->test(Ljava/lang/Object;)Z,core-platform-api,public-api,sdk,system-api,test-api
 Lcom/android/libcore/CustomFeatureFlags$$ExternalSyntheticLambda2;->test(Ljava/lang/Object;)Z,core-platform-api,public-api,sdk,system-api,test-api
 Lcom/android/libcore/CustomFeatureFlags$$ExternalSyntheticLambda3;->test(Ljava/lang/Object;)Z,core-platform-api,public-api,sdk,system-api,test-api
@@ -7688,8 +7689,6 @@ Ljava/lang/Math;->tanh(D)D,core-platform-api,public-api,sdk,system-api,test-api
 Ljava/lang/Math;->toDegrees(D)D,core-platform-api,public-api,sdk,system-api,test-api
 Ljava/lang/Math;->toIntExact(J)I,core-platform-api,public-api,sdk,system-api,test-api
 Ljava/lang/Math;->toRadians(D)D,core-platform-api,public-api,sdk,system-api,test-api
-Ljava/lang/Math;->twoToTheDoubleScaleDown:D,lo-prio,max-target-o
-Ljava/lang/Math;->twoToTheDoubleScaleUp:D,lo-prio,max-target-o
 Ljava/lang/Math;->ulp(D)D,core-platform-api,public-api,sdk,system-api,test-api
 Ljava/lang/Math;->ulp(F)F,core-platform-api,public-api,sdk,system-api,test-api
 Ljava/lang/Math;->unsignedMultiplyHigh(JJ)J,core-platform-api,public-api,sdk,system-api,test-api

@@ -22,6 +22,9 @@
 #ifndef COM_ANDROID_LIBCORE_NATIVE_METRICS
 #define COM_ANDROID_LIBCORE_NATIVE_METRICS true
 #endif
+#ifndef COM_ANDROID_LIBCORE_NETWORK_SECURITY_POLICY_ECH_API
+#define COM_ANDROID_LIBCORE_NETWORK_SECURITY_POLICY_ECH_API false
+#endif
 #ifndef COM_ANDROID_LIBCORE_NETWORK_SECURITY_POLICY_REASON_CT_ENABLED_API
 #define COM_ANDROID_LIBCORE_NETWORK_SECURITY_POLICY_REASON_CT_ENABLED_API false
 #endif
@@ -70,6 +73,7 @@ public:
     virtual bool hpke_v_apis() = 0;
     virtual bool madvise_api() = 0;
     virtual bool native_metrics() = 0;
+    virtual bool network_security_policy_ech_api() = 0;
     virtual bool network_security_policy_reason_ct_enabled_api() = 0;
     virtual bool niceness_apis() = 0;
     virtual bool openjdk21_stringconcat() = 0;
@@ -100,6 +104,9 @@ constexpr inline bool madvise_api() {
 }
 constexpr inline bool native_metrics() {
     return COM_ANDROID_LIBCORE_NATIVE_METRICS;
+}
+constexpr inline bool network_security_policy_ech_api() {
+    return COM_ANDROID_LIBCORE_NETWORK_SECURITY_POLICY_ECH_API;
 }
 constexpr inline bool network_security_policy_reason_ct_enabled_api() {
     return COM_ANDROID_LIBCORE_NETWORK_SECURITY_POLICY_REASON_CT_ENABLED_API;
@@ -146,6 +153,7 @@ bool com_android_libcore_hpke_public_api();
 bool com_android_libcore_hpke_v_apis();
 bool com_android_libcore_madvise_api();
 bool com_android_libcore_native_metrics();
+bool com_android_libcore_network_security_policy_ech_api();
 bool com_android_libcore_network_security_policy_reason_ct_enabled_api();
 bool com_android_libcore_niceness_apis();
 bool com_android_libcore_openjdk21_stringconcat();

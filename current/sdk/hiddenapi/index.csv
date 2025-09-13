@@ -30,11 +30,11 @@ Lcom/android/org/bouncycastle/asn1/x509/V3TBSCertificateGenerator;->setEndDate(L
 Lcom/android/org/bouncycastle/asn1/x509/V3TBSCertificateGenerator;->setSubject(Lcom/android/org/bouncycastle/asn1/x509/X509Name;)V,
 Lcom/android/org/bouncycastle/asn1/x509/V3TBSCertificateGenerator;->setSubjectPublicKeyInfo(Lcom/android/org/bouncycastle/asn1/x509/SubjectPublicKeyInfo;)V,
 Lcom/android/org/bouncycastle/asn1/x509/V3TBSCertificateGenerator;->generateTBSCertificate()Lcom/android/org/bouncycastle/asn1/x509/TBSCertificate;,
-Lcom/android/org/bouncycastle/asn1/x509/X509Name;->CN:Lcom/android/org/bouncycastle/asn1/ASN1ObjectIdentifier;,maxTargetSdk=30&trackingBug=170729553L
 Lcom/android/org/bouncycastle/asn1/x509/X509Name;-><init>(Lcom/android/org/bouncycastle/asn1/ASN1Sequence;)V,maxTargetSdk=30&trackingBug=170729553L
 Lcom/android/org/bouncycastle/asn1/x509/X509Name;-><init>(Ljava/lang/String;)V,
 Lcom/android/org/bouncycastle/asn1/x509/X509Name;->getOIDs()Ljava/util/Vector;,maxTargetSdk=30&trackingBug=170729553L
 Lcom/android/org/bouncycastle/asn1/x509/X509Name;->getValues()Ljava/util/Vector;,maxTargetSdk=30&trackingBug=170729553L
+Lcom/android/org/bouncycastle/asn1/x509/X509Name;->CN:Lcom/android/org/bouncycastle/asn1/ASN1ObjectIdentifier;,maxTargetSdk=30&trackingBug=170729553L
 Lcom/android/org/bouncycastle/asn1/x9/X9ObjectIdentifiers;->ecdsa_with_SHA256:Lcom/android/org/bouncycastle/asn1/ASN1ObjectIdentifier;,
 Lcom/android/org/bouncycastle/jce/X509Principal;-><init>([B)V,
 Lcom/android/org/bouncycastle/jce/provider/BouncyCastleProvider;-><init>()V,
