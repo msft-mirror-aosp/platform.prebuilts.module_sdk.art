@@ -31,7 +31,7 @@ public:
 
 
 inline bool assume_value_sdk_int() {
-    return false;
+    return true;
 }
 inline bool auto_tune_time_based_gc_triggering() {
     return false;
