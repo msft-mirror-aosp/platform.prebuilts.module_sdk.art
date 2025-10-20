@@ -54,7 +54,7 @@ class BitTableBase {
     column_offset_[0] = 0;
     for (uint32_t i = 0; i < kNumColumns; i++) {
       size_t column_end = column_offset_[i] + header[i + 1];
-      column_offset_[i + 1] = dchecked_integral_cast<uint16_t>(column_end);
+      column_offset_[i + 1] = dchecked_integral_cast<uint32_t>(column_end);
     }
 
     // Record the region which contains the table data and skip past it.
@@ -98,7 +98,7 @@ class BitTableBase {
  protected:
   BitMemoryRegion table_data_;
   uint32_t num_rows_ = 0;
-  uint16_t column_offset_[kNumColumns + 1] = {};
+  uint32_t column_offset_[kNumColumns + 1] = {};
 };
 
 // Helper class which can be used to create BitTable accessors with named getters.
@@ -291,6 +291,7 @@ class BitTableBuilderBase {
   explicit BitTableBuilderBase(ScopedArenaAllocator* allocator)
       : rows_(allocator->Adapter(kArenaAllocBitTableBuilder)),
         dedup_(8, allocator->Adapter(kArenaAllocBitTableBuilder)) {
+    rows_.reserve(8);
   }
 
   Entry& operator[](size_t row) { return rows_[row]; }
@@ -387,7 +388,7 @@ class BitTableBuilderBase {
   }
 
  protected:
-  ScopedArenaDeque<Entry> rows_;
+  ScopedArenaVector<Entry> rows_;
   ScopedArenaUnorderedMultimap<uint32_t, uint32_t> dedup_;  // Hash -> row index.
 };
 
@@ -404,6 +405,7 @@ class BitmapTableBuilder {
       : allocator_(allocator),
         rows_(allocator->Adapter(kArenaAllocBitTableBuilder)),
         dedup_(8, allocator_->Adapter(kArenaAllocBitTableBuilder)) {
+    rows_.reserve(8);
   }
 
   MemoryRegion operator[](size_t row) { return rows_[row]; }
@@ -423,7 +425,7 @@ class BitmapTableBuilder {
     // Check if we have already added identical bitmap.
     auto range = dedup_.equal_range(hash);
     for (auto it = range.first; it != range.second; ++it) {
-      if (MemoryRegion::ContentEquals()(region, rows_[it->second])) {
+      if (region == rows_[it->second]) {
         return it->second;
       }
     }
@@ -479,7 +481,7 @@ class BitmapTableBuilder {
 
  private:
   ScopedArenaAllocator* const allocator_;
-  ScopedArenaDeque<MemoryRegion> rows_;
+  ScopedArenaVector<MemoryRegion> rows_;
   ScopedArenaUnorderedMultimap<uint32_t, uint32_t> dedup_;  // Hash -> row index.
   size_t max_num_bits_ = 0u;
 };

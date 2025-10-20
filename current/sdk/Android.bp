@@ -805,19 +805,35 @@ cc_prebuilt_library_shared {
     arch: {
         arm64: {
             srcs: ["arm64/lib/libdexfile.so"],
-            export_include_dirs: ["arm64/include_gen/art/build/flags/art-aconfig-flags-lib/android_arm64_armv8-a_static_afdo-libartbase/gen/include"],
+            export_include_dirs: [
+                "arm64/include_gen/art/build/flags/art-aconfig-flags-lib/android_arm64_armv8-a_static_afdo-libartbase/gen/include",
+                "arm64/include_gen/art/build/flags/art-aconfig-rw-flags-lib/android_arm64_armv8-a_static_afdo-libartbase/gen/include",
+                "arm64/include_gen/libcore/libcore-aconfig-flags-native-lib/android_arm64_armv8-a_static_afdo-libartbase/gen/include",
+            ],
         },
         x86_64: {
             srcs: ["x86_64/lib/libdexfile.so"],
-            export_include_dirs: ["x86_64/include_gen/art/build/flags/art-aconfig-flags-lib/android_x86_64_static_afdo-libartbase/gen/include"],
+            export_include_dirs: [
+                "x86_64/include_gen/art/build/flags/art-aconfig-flags-lib/android_x86_64_static_afdo-libartbase/gen/include",
+                "x86_64/include_gen/art/build/flags/art-aconfig-rw-flags-lib/android_x86_64_static_afdo-libartbase/gen/include",
+                "x86_64/include_gen/libcore/libcore-aconfig-flags-native-lib/android_x86_64_static_afdo-libartbase/gen/include",
+            ],
         },
         arm: {
             srcs: ["arm/lib/libdexfile.so"],
-            export_include_dirs: ["arm/include_gen/art/build/flags/art-aconfig-flags-lib/android_arm_armv7-a-neon_static_afdo-libartbase/gen/include"],
+            export_include_dirs: [
+                "arm/include_gen/art/build/flags/art-aconfig-flags-lib/android_arm_armv7-a-neon_static_afdo-libartbase/gen/include",
+                "arm/include_gen/art/build/flags/art-aconfig-rw-flags-lib/android_arm_armv7-a-neon_static_afdo-libartbase/gen/include",
+                "arm/include_gen/libcore/libcore-aconfig-flags-native-lib/android_arm_armv7-a-neon_static_afdo-libartbase/gen/include",
+            ],
         },
         x86: {
             srcs: ["x86/lib/libdexfile.so"],
-            export_include_dirs: ["x86/include_gen/art/build/flags/art-aconfig-flags-lib/android_x86_static_afdo-libartbase/gen/include"],
+            export_include_dirs: [
+                "x86/include_gen/art/build/flags/art-aconfig-flags-lib/android_x86_static_afdo-libartbase/gen/include",
+                "x86/include_gen/art/build/flags/art-aconfig-rw-flags-lib/android_x86_static_afdo-libartbase/gen/include",
+                "x86/include_gen/libcore/libcore-aconfig-flags-native-lib/android_x86_static_afdo-libartbase/gen/include",
+            ],
         },
     },
     strip: {
