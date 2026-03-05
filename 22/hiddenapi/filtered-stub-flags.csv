@@ -890,6 +890,9 @@ Lcom/android/libcore/CustomFeatureFlags$$ExternalSyntheticLambda12;->test(Ljava/
 Lcom/android/libcore/CustomFeatureFlags$$ExternalSyntheticLambda13;->test(Ljava/lang/Object;)Z,core-platform-api,public-api,system-api,test-api
 Lcom/android/libcore/CustomFeatureFlags$$ExternalSyntheticLambda14;->test(Ljava/lang/Object;)Z,core-platform-api,public-api,system-api,test-api
 Lcom/android/libcore/CustomFeatureFlags$$ExternalSyntheticLambda15;->test(Ljava/lang/Object;)Z,core-platform-api,public-api,system-api,test-api
+Lcom/android/libcore/CustomFeatureFlags$$ExternalSyntheticLambda16;->test(Ljava/lang/Object;)Z,core-platform-api,public-api,system-api,test-api
+Lcom/android/libcore/CustomFeatureFlags$$ExternalSyntheticLambda17;->test(Ljava/lang/Object;)Z,core-platform-api,public-api,system-api,test-api
+Lcom/android/libcore/CustomFeatureFlags$$ExternalSyntheticLambda18;->test(Ljava/lang/Object;)Z,core-platform-api,public-api,system-api,test-api
 Lcom/android/libcore/CustomFeatureFlags$$ExternalSyntheticLambda1;->test(Ljava/lang/Object;)Z,core-platform-api,public-api,system-api,test-api
 Lcom/android/libcore/CustomFeatureFlags$$ExternalSyntheticLambda2;->test(Ljava/lang/Object;)Z,core-platform-api,public-api,system-api,test-api
 Lcom/android/libcore/CustomFeatureFlags$$ExternalSyntheticLambda3;->test(Ljava/lang/Object;)Z,core-platform-api,public-api,system-api,test-api
@@ -2514,6 +2517,7 @@ Ldalvik/system/VMRuntime;->updateProcessState(I)V,core-platform-api
 Ldalvik/system/VMRuntime;->vmInstructionSet()Ljava/lang/String;,core-platform-api
 Ldalvik/system/VMRuntime;->vmLibrary()Ljava/lang/String;,core-platform-api
 Ldalvik/system/VMStack;->getAnnotatedThreadStackTrace(Ljava/lang/Thread;)[Ldalvik/system/AnnotatedStackTraceElement;,core-platform-api
+Ldalvik/system/VirtualThreadContext$$ExternalSyntheticLambda0;->run()V,core-platform-api,public-api,system-api,test-api
 Ldalvik/system/VirtualThreadContext;->run()V,core-platform-api,public-api,system-api,test-api
 Ldalvik/system/ZipPathValidator$Callback;->onZipEntryAccess(Ljava/lang/String;)V,core-platform-api,public-api,system-api,test-api
 Ldalvik/system/ZipPathValidator;->clearCallback()V,core-platform-api,public-api,system-api,test-api
@@ -4658,6 +4662,9 @@ Ljava/lang/ClassNotFoundException;-><init>()V,core-platform-api,public-api,syste
 Ljava/lang/ClassNotFoundException;-><init>(Ljava/lang/String;)V,core-platform-api,public-api,system-api,test-api
 Ljava/lang/ClassNotFoundException;-><init>(Ljava/lang/String;Ljava/lang/Throwable;)V,core-platform-api,public-api,system-api,test-api
 Ljava/lang/ClassNotFoundException;->getException()Ljava/lang/Throwable;,core-platform-api,public-api,system-api,test-api
+Ljava/lang/ClassValue$Version;->equals(Ljava/lang/Object;)Z,core-platform-api,public-api,system-api,test-api
+Ljava/lang/ClassValue$Version;->hashCode()I,core-platform-api,public-api,system-api,test-api
+Ljava/lang/ClassValue$Version;->toString()Ljava/lang/String;,core-platform-api,public-api,system-api,test-api
 Ljava/lang/ClassValue;-><init>()V,core-platform-api,public-api,system-api,test-api
 Ljava/lang/ClassValue;->computeValue(Ljava/lang/Class;)Ljava/lang/Object;,core-platform-api,public-api,system-api,test-api
 Ljava/lang/ClassValue;->get(Ljava/lang/Class;)Ljava/lang/Object;,core-platform-api,public-api,system-api,test-api
@@ -13649,10 +13656,6 @@ Ljava/time/chrono/HijrahChronology$$ExternalSyntheticLambda0;->apply(Ljava/lang/
 Ljava/time/chrono/HijrahChronology$$ExternalSyntheticLambda1;->test(Ljava/lang/Object;)Z,core-platform-api,public-api,system-api,test-api
 Ljava/time/chrono/HijrahChronology$$ExternalSyntheticLambda2;->apply(Ljava/lang/Object;)Ljava/lang/Object;,core-platform-api,public-api,system-api,test-api
 Ljava/time/chrono/HijrahChronology$$ExternalSyntheticLambda3;->accept(Ljava/lang/Object;)V,core-platform-api,public-api,system-api,test-api
-Ljava/time/chrono/HijrahChronology$$ExternalSyntheticLambda4;->run()Ljava/lang/Object;,core-platform-api,public-api,system-api,test-api
-Ljava/time/chrono/HijrahChronology$$ExternalSyntheticLambda5;->run()Ljava/lang/Object;,core-platform-api,public-api,system-api,test-api
-Ljava/time/chrono/HijrahChronology$$ExternalSyntheticLambda6;->get()Ljava/lang/Object;,core-platform-api,public-api,system-api,test-api
-Ljava/time/chrono/HijrahChronology$$ExternalSyntheticLambda7;->get()Ljava/lang/Object;,core-platform-api,public-api,system-api,test-api
 Ljava/time/chrono/HijrahChronology;->INSTANCE:Ljava/time/chrono/HijrahChronology;,core-platform-api,public-api,system-api,test-api
 Ljava/time/chrono/HijrahChronology;->date(III)Ljava/time/chrono/ChronoLocalDate;,core-platform-api,public-api,system-api,test-api
 Ljava/time/chrono/HijrahChronology;->date(III)Ljava/time/chrono/HijrahDate;,core-platform-api,public-api,system-api,test-api
@@ -25463,6 +25466,7 @@ Llibcore/internal/Java21LanguageFeatures$Point;->hashCode()I,core-platform-api,p
 Llibcore/internal/Java21LanguageFeatures$Point;->toString()Ljava/lang/String;,core-platform-api,public-api,system-api,test-api
 Llibcore/io/BlockGuardOs;->access(Ljava/lang/String;I)Z,core-platform-api
 Llibcore/io/BlockGuardOs;->open(Ljava/lang/String;II)Ljava/io/FileDescriptor;,core-platform-api
+Llibcore/io/BlockGuardOs;->recvmsgNoThrow(Ljava/io/FileDescriptor;Landroid/system/StructMsghdr;I)I,core-platform-api
 Llibcore/io/BlockGuardOs;->remove(Ljava/lang/String;)V,core-platform-api
 Llibcore/io/BlockGuardOs;->rename(Ljava/lang/String;Ljava/lang/String;)V,core-platform-api
 Llibcore/io/BlockGuardOs;->stat(Ljava/lang/String;)Landroid/system/StructStat;,core-platform-api
@@ -25477,6 +25481,7 @@ Llibcore/io/ClassPathURLStreamHandler;->openConnection(Ljava/net/URL;)Ljava/net/
 Llibcore/io/ForwardingOs;-><init>(Llibcore/io/Os;)V,core-platform-api
 Llibcore/io/ForwardingOs;->access(Ljava/lang/String;I)Z,core-platform-api
 Llibcore/io/ForwardingOs;->open(Ljava/lang/String;II)Ljava/io/FileDescriptor;,core-platform-api
+Llibcore/io/ForwardingOs;->recvmsgNoThrow(Ljava/io/FileDescriptor;Landroid/system/StructMsghdr;I)I,core-platform-api
 Llibcore/io/ForwardingOs;->remove(Ljava/lang/String;)V,core-platform-api
 Llibcore/io/ForwardingOs;->rename(Ljava/lang/String;Ljava/lang/String;)V,core-platform-api
 Llibcore/io/ForwardingOs;->stat(Ljava/lang/String;)Landroid/system/StructStat;,core-platform-api
