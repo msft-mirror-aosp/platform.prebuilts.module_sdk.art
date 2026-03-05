@@ -15,13 +15,13 @@
   <compat-change disabled="true" id="166236554" name="ALLOW_TEST_API_ACCESS">
     <meta-data definedIn="dalvik.system.VMRuntime" />
   </compat-change>
-  <compat-change enableSinceTargetSdk="10000" id="463348571" name="THROW_ERROR_FOR_WRITABLE_DCL">
+  <compat-change enableSinceTargetSdk="37" id="463348571" name="THROW_ERROR_FOR_WRITABLE_DCL">
     <meta-data definedIn="dalvik.system.VMRuntime" />
   </compat-change>
   <compat-change enableSinceTargetSdk="35" id="312399441" name="CANONICALIZE_PARENT_OF_ROOT_DIR">
     <meta-data definedIn="java.io.File" />
   </compat-change>
-  <compat-change enableSinceTargetSdk="10000" id="418924588" name="OVERRIDDEN_THREAD_START_METHOD">
+  <compat-change enableSinceTargetSdk="37" id="418924588" name="OVERRIDDEN_THREAD_START_METHOD">
     <meta-data definedIn="java.lang.Thread" />
   </compat-change>
   <compat-change enableSinceTargetSdk="30" id="170188668" name="RETURN_NULL_HARDWARE_ADDRESS">
