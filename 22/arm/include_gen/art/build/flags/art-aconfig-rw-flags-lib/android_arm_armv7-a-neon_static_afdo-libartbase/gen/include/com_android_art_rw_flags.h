@@ -19,6 +19,7 @@ public:
     virtual bool enable_secure_compilation() = 0;
     virtual bool enable_time_based_gc_triggering() = 0;
     virtual bool hybrid_pre_reboot_dexopt() = 0;
+    virtual bool jfield_id_change() = 0;
     virtual bool lower_young_gc_throughput_expectation() = 0;
     virtual bool lse_quick_lock() = 0;
     virtual bool madvise_dex_using_profile() = 0;
@@ -53,14 +54,17 @@ inline bool enable_time_based_gc_triggering() {
 inline bool hybrid_pre_reboot_dexopt() {
     return false;
 }
-inline bool lower_young_gc_throughput_expectation() {
+inline bool jfield_id_change() {
     return false;
+}
+inline bool lower_young_gc_throughput_expectation() {
+    return true;
 }
 inline bool lse_quick_lock() {
     return false;
 }
 inline bool madvise_dex_using_profile() {
-    return false;
+    return true;
 }
 inline bool madvise_optimized_readahead() {
     return false;
@@ -107,6 +111,7 @@ bool com_android_art_rw_flags_enable_profile_code_rw();
 bool com_android_art_rw_flags_enable_secure_compilation();
 bool com_android_art_rw_flags_enable_time_based_gc_triggering();
 bool com_android_art_rw_flags_hybrid_pre_reboot_dexopt();
+bool com_android_art_rw_flags_jfield_id_change();
 bool com_android_art_rw_flags_lower_young_gc_throughput_expectation();
 bool com_android_art_rw_flags_lse_quick_lock();
 bool com_android_art_rw_flags_madvise_dex_using_profile();

@@ -975,6 +975,9 @@ Lcom/android/libcore/CustomFeatureFlags$$ExternalSyntheticLambda12;->test(Ljava/
 Lcom/android/libcore/CustomFeatureFlags$$ExternalSyntheticLambda13;->test(Ljava/lang/Object;)Z,core-platform-api,public-api,sdk,system-api,test-api
 Lcom/android/libcore/CustomFeatureFlags$$ExternalSyntheticLambda14;->test(Ljava/lang/Object;)Z,core-platform-api,public-api,sdk,system-api,test-api
 Lcom/android/libcore/CustomFeatureFlags$$ExternalSyntheticLambda15;->test(Ljava/lang/Object;)Z,core-platform-api,public-api,sdk,system-api,test-api
+Lcom/android/libcore/CustomFeatureFlags$$ExternalSyntheticLambda16;->test(Ljava/lang/Object;)Z,core-platform-api,public-api,sdk,system-api,test-api
+Lcom/android/libcore/CustomFeatureFlags$$ExternalSyntheticLambda17;->test(Ljava/lang/Object;)Z,core-platform-api,public-api,sdk,system-api,test-api
+Lcom/android/libcore/CustomFeatureFlags$$ExternalSyntheticLambda18;->test(Ljava/lang/Object;)Z,core-platform-api,public-api,sdk,system-api,test-api
 Lcom/android/libcore/CustomFeatureFlags$$ExternalSyntheticLambda1;->test(Ljava/lang/Object;)Z,core-platform-api,public-api,sdk,system-api,test-api
 Lcom/android/libcore/CustomFeatureFlags$$ExternalSyntheticLambda2;->test(Ljava/lang/Object;)Z,core-platform-api,public-api,sdk,system-api,test-api
 Lcom/android/libcore/CustomFeatureFlags$$ExternalSyntheticLambda3;->test(Ljava/lang/Object;)Z,core-platform-api,public-api,sdk,system-api,test-api
@@ -4133,6 +4136,7 @@ Ldalvik/system/VMStack;->getClosestUserClassLoader()Ljava/lang/ClassLoader;,lo-p
 Ldalvik/system/VMStack;->getStackClass1()Ljava/lang/Class;,lo-prio,max-target-o
 Ldalvik/system/VMStack;->getStackClass2()Ljava/lang/Class;,unsupported
 Ldalvik/system/VMStack;->getThreadStackTrace(Ljava/lang/Thread;)[Ljava/lang/StackTraceElement;,unsupported
+Ldalvik/system/VirtualThreadContext$$ExternalSyntheticLambda0;->run()V,core-platform-api,public-api,sdk,system-api,test-api
 Ldalvik/system/VirtualThreadContext;->run()V,core-platform-api,public-api,sdk,system-api,test-api
 Ldalvik/system/ZipPathValidator$Callback;->onZipEntryAccess(Ljava/lang/String;)V,core-platform-api,public-api,sdk,system-api,test-api
 Ldalvik/system/ZipPathValidator;->clearCallback()V,core-platform-api,public-api,sdk,system-api,test-api
@@ -7247,6 +7251,9 @@ Ljava/lang/ClassNotFoundException;->readObject(Ljava/io/ObjectInputStream;)V,sdk
 Ljava/lang/ClassNotFoundException;->serialPersistentFields:[Ljava/io/ObjectStreamField;,sdk
 Ljava/lang/ClassNotFoundException;->serialVersionUID:J,sdk
 Ljava/lang/ClassNotFoundException;->writeObject(Ljava/io/ObjectOutputStream;)V,sdk
+Ljava/lang/ClassValue$Version;->equals(Ljava/lang/Object;)Z,core-platform-api,public-api,sdk,system-api,test-api
+Ljava/lang/ClassValue$Version;->hashCode()I,core-platform-api,public-api,sdk,system-api,test-api
+Ljava/lang/ClassValue$Version;->toString()Ljava/lang/String;,core-platform-api,public-api,sdk,system-api,test-api
 Ljava/lang/ClassValue;-><init>()V,core-platform-api,public-api,sdk,system-api,test-api
 Ljava/lang/ClassValue;->computeValue(Ljava/lang/Class;)Ljava/lang/Object;,core-platform-api,public-api,sdk,system-api,test-api
 Ljava/lang/ClassValue;->get(Ljava/lang/Class;)Ljava/lang/Object;,core-platform-api,public-api,sdk,system-api,test-api
@@ -19486,10 +19493,6 @@ Ljava/time/chrono/HijrahChronology$$ExternalSyntheticLambda0;->apply(Ljava/lang/
 Ljava/time/chrono/HijrahChronology$$ExternalSyntheticLambda1;->test(Ljava/lang/Object;)Z,core-platform-api,public-api,sdk,system-api,test-api
 Ljava/time/chrono/HijrahChronology$$ExternalSyntheticLambda2;->apply(Ljava/lang/Object;)Ljava/lang/Object;,core-platform-api,public-api,sdk,system-api,test-api
 Ljava/time/chrono/HijrahChronology$$ExternalSyntheticLambda3;->accept(Ljava/lang/Object;)V,core-platform-api,public-api,sdk,system-api,test-api
-Ljava/time/chrono/HijrahChronology$$ExternalSyntheticLambda4;->run()Ljava/lang/Object;,core-platform-api,public-api,sdk,system-api,test-api
-Ljava/time/chrono/HijrahChronology$$ExternalSyntheticLambda5;->run()Ljava/lang/Object;,core-platform-api,public-api,sdk,system-api,test-api
-Ljava/time/chrono/HijrahChronology$$ExternalSyntheticLambda6;->get()Ljava/lang/Object;,core-platform-api,public-api,sdk,system-api,test-api
-Ljava/time/chrono/HijrahChronology$$ExternalSyntheticLambda7;->get()Ljava/lang/Object;,core-platform-api,public-api,sdk,system-api,test-api
 Ljava/time/chrono/HijrahChronology;->INSTANCE:Ljava/time/chrono/HijrahChronology;,core-platform-api,public-api,sdk,system-api,test-api
 Ljava/time/chrono/HijrahChronology;->KEY_ID:Ljava/lang/String;,lo-prio,max-target-o
 Ljava/time/chrono/HijrahChronology;->KEY_ISO_START:Ljava/lang/String;,lo-prio,max-target-o
@@ -19933,12 +19936,7 @@ Ljava/time/chrono/Ser;->readResolve()Ljava/lang/Object;,sdk
 Ljava/time/chrono/Ser;->serialVersionUID:J,sdk
 Ljava/time/chrono/Ser;->writeExternal(Ljava/io/ObjectOutput;)V,core-platform-api,public-api,sdk,system-api,test-api
 Ljava/time/chrono/ThaiBuddhistChronology;-><init>()V,lo-prio,max-target-o
-Ljava/time/chrono/ThaiBuddhistChronology;->ERA_FULL_NAMES:Ljava/util/HashMap;,lo-prio,max-target-o
-Ljava/time/chrono/ThaiBuddhistChronology;->ERA_NARROW_NAMES:Ljava/util/HashMap;,lo-prio,max-target-o
-Ljava/time/chrono/ThaiBuddhistChronology;->ERA_SHORT_NAMES:Ljava/util/HashMap;,lo-prio,max-target-o
-Ljava/time/chrono/ThaiBuddhistChronology;->FALLBACK_LANGUAGE:Ljava/lang/String;,lo-prio,max-target-o
 Ljava/time/chrono/ThaiBuddhistChronology;->INSTANCE:Ljava/time/chrono/ThaiBuddhistChronology;,core-platform-api,public-api,sdk,system-api,test-api
-Ljava/time/chrono/ThaiBuddhistChronology;->TARGET_LANGUAGE:Ljava/lang/String;,lo-prio,max-target-o
 Ljava/time/chrono/ThaiBuddhistChronology;->YEARS_DIFFERENCE:I,lo-prio,max-target-o
 Ljava/time/chrono/ThaiBuddhistChronology;->date(III)Ljava/time/chrono/ChronoLocalDate;,core-platform-api,public-api,sdk,system-api,test-api
 Ljava/time/chrono/ThaiBuddhistChronology;->date(III)Ljava/time/chrono/ThaiBuddhistDate;,core-platform-api,public-api,sdk,system-api,test-api
@@ -36469,6 +36467,7 @@ Llibcore/io/BlockGuardOs;->read(Ljava/io/FileDescriptor;[BII)I,unsupported
 Llibcore/io/BlockGuardOs;->readlink(Ljava/lang/String;)Ljava/lang/String;,unsupported
 Llibcore/io/BlockGuardOs;->readv(Ljava/io/FileDescriptor;[Ljava/lang/Object;[I[I)I,unsupported
 Llibcore/io/BlockGuardOs;->realpath(Ljava/lang/String;)Ljava/lang/String;,unsupported
+Llibcore/io/BlockGuardOs;->recvmsgNoThrow(Ljava/io/FileDescriptor;Landroid/system/StructMsghdr;I)I,blocked,core-platform-api
 Llibcore/io/BlockGuardOs;->remove(Ljava/lang/String;)V,core-platform-api,unsupported
 Llibcore/io/BlockGuardOs;->rename(Ljava/lang/String;Ljava/lang/String;)V,core-platform-api,unsupported
 Llibcore/io/BlockGuardOs;->stat(Ljava/lang/String;)Landroid/system/StructStat;,core-platform-api,unsupported
@@ -36504,6 +36503,7 @@ Llibcore/io/ForwardingOs;->mkfifo(Ljava/lang/String;I)V,unsupported
 Llibcore/io/ForwardingOs;->open(Ljava/lang/String;II)Ljava/io/FileDescriptor;,core-platform-api,unsupported
 Llibcore/io/ForwardingOs;->os:Llibcore/io/Os;,unsupported
 Llibcore/io/ForwardingOs;->readlink(Ljava/lang/String;)Ljava/lang/String;,unsupported
+Llibcore/io/ForwardingOs;->recvmsgNoThrow(Ljava/io/FileDescriptor;Landroid/system/StructMsghdr;I)I,blocked,core-platform-api
 Llibcore/io/ForwardingOs;->remove(Ljava/lang/String;)V,core-platform-api,unsupported
 Llibcore/io/ForwardingOs;->removexattr(Ljava/lang/String;Ljava/lang/String;)V,unsupported
 Llibcore/io/ForwardingOs;->rename(Ljava/lang/String;Ljava/lang/String;)V,core-platform-api,unsupported

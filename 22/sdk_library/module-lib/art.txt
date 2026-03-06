@@ -614,6 +614,7 @@ package libcore.io {
     ctor protected ForwardingOs(@NonNull libcore.io.Os);
     method public boolean access(@Nullable String, int) throws android.system.ErrnoException;
     method public java.io.FileDescriptor open(@Nullable String, int, int) throws android.system.ErrnoException;
+    method public int recvmsgNoThrow(java.io.FileDescriptor, android.system.StructMsghdr, int);
     method public void remove(@Nullable String) throws android.system.ErrnoException;
     method public void rename(@Nullable String, @Nullable String) throws android.system.ErrnoException;
     method @Nullable public android.system.StructStat stat(@Nullable String) throws android.system.ErrnoException;
