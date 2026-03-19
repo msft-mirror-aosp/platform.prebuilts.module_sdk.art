@@ -347,11 +347,6 @@ class BitVector {
   int GetHighestBitSet() const;
 
   /**
-   * @return the lowest bit cleared, -1 if all are set
-   */
-  int GetLowestBitCleared() const;
-
-  /**
    * @return true if there are any bits set, false otherwise.
    */
   bool IsAnyBitSet() const {
