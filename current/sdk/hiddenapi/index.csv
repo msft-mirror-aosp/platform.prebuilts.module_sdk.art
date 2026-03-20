@@ -117,7 +117,6 @@ Ljava/lang/Class;->getDeclaredMethodsUnchecked(Z)[Ljava/lang/reflect/Method;,
 Ljava/lang/Class;->getMethod(Ljava/lang/String;[Ljava/lang/Class;Z)Ljava/lang/reflect/Method;,
 Ljava/lang/Class;->accessFlags:I,
 Ljava/lang/Class;->classLoader:Ljava/lang/ClassLoader;,
-Ljava/lang/Class;->clinitThreadId:I,maxTargetSdk=30&trackingBug=170729553L
 Ljava/lang/Class;->dexCache:Ljava/lang/Object;,
 Ljava/lang/Class;->dexClassDefIndex:I,
 Ljava/lang/Class;->ifTable:[Ljava/lang/Object;,

@@ -7,11 +7,17 @@
 #define COM_ANDROID_LIBCORE(FLAG) COM_ANDROID_LIBCORE_##FLAG
 #endif
 
+#ifndef COM_ANDROID_LIBCORE_ALWAYS_FALSE_TEST_FLAG
+#define COM_ANDROID_LIBCORE_ALWAYS_FALSE_TEST_FLAG false
+#endif
 #ifndef COM_ANDROID_LIBCORE_APPINFO
 #define COM_ANDROID_LIBCORE_APPINFO true
 #endif
+#ifndef COM_ANDROID_LIBCORE_ENABLE_PCC_FRAMEWORK_SUPPORT
+#define COM_ANDROID_LIBCORE_ENABLE_PCC_FRAMEWORK_SUPPORT false
+#endif
 #ifndef COM_ANDROID_LIBCORE_HPKE_PUBLIC_API
-#define COM_ANDROID_LIBCORE_HPKE_PUBLIC_API false
+#define COM_ANDROID_LIBCORE_HPKE_PUBLIC_API true
 #endif
 #ifndef COM_ANDROID_LIBCORE_HPKE_V_APIS
 #define COM_ANDROID_LIBCORE_HPKE_V_APIS true
@@ -23,10 +29,10 @@
 #define COM_ANDROID_LIBCORE_NATIVE_METRICS true
 #endif
 #ifndef COM_ANDROID_LIBCORE_NETWORK_SECURITY_POLICY_ECH_API
-#define COM_ANDROID_LIBCORE_NETWORK_SECURITY_POLICY_ECH_API false
+#define COM_ANDROID_LIBCORE_NETWORK_SECURITY_POLICY_ECH_API true
 #endif
 #ifndef COM_ANDROID_LIBCORE_NETWORK_SECURITY_POLICY_REASON_CT_ENABLED_API
-#define COM_ANDROID_LIBCORE_NETWORK_SECURITY_POLICY_REASON_CT_ENABLED_API false
+#define COM_ANDROID_LIBCORE_NETWORK_SECURITY_POLICY_REASON_CT_ENABLED_API true
 #endif
 #ifndef COM_ANDROID_LIBCORE_NICENESS_APIS
 #define COM_ANDROID_LIBCORE_NICENESS_APIS true
@@ -41,16 +47,19 @@
 #define COM_ANDROID_LIBCORE_OPENJDK_21_V2_APIS true
 #endif
 #ifndef COM_ANDROID_LIBCORE_OPENJDK_25_V1_APIS
-#define COM_ANDROID_LIBCORE_OPENJDK_25_V1_APIS false
+#define COM_ANDROID_LIBCORE_OPENJDK_25_V1_APIS true
+#endif
+#ifndef COM_ANDROID_LIBCORE_OPENJDK_25_V2_APIS
+#define COM_ANDROID_LIBCORE_OPENJDK_25_V2_APIS false
+#endif
+#ifndef COM_ANDROID_LIBCORE_OS_NO_THROW_APIS
+#define COM_ANDROID_LIBCORE_OS_NO_THROW_APIS false
 #endif
 #ifndef COM_ANDROID_LIBCORE_POST_CLEANUP_APIS
 #define COM_ANDROID_LIBCORE_POST_CLEANUP_APIS true
 #endif
 #ifndef COM_ANDROID_LIBCORE_READ_ONLY_DYNAMIC_CODE_LOAD
 #define COM_ANDROID_LIBCORE_READ_ONLY_DYNAMIC_CODE_LOAD true
-#endif
-#ifndef COM_ANDROID_LIBCORE_SCHEDULE_AT_FIXED_RATE_NEW_BEHAVIOR
-#define COM_ANDROID_LIBCORE_SCHEDULE_AT_FIXED_RATE_NEW_BEHAVIOR true
 #endif
 #ifndef COM_ANDROID_LIBCORE_V_APIS
 #define COM_ANDROID_LIBCORE_V_APIS true
@@ -68,7 +77,9 @@ namespace com::android::libcore {
 class flag_provider_interface {
 public:
     virtual ~flag_provider_interface() = default;
+    virtual bool always_false_test_flag() = 0;
     virtual bool appinfo() = 0;
+    virtual bool enable_pcc_framework_support() = 0;
     virtual bool hpke_public_api() = 0;
     virtual bool hpke_v_apis() = 0;
     virtual bool madvise_api() = 0;
@@ -80,9 +91,10 @@ public:
     virtual bool openjdk_21_v1_apis() = 0;
     virtual bool openjdk_21_v2_apis() = 0;
     virtual bool openjdk_25_v1_apis() = 0;
+    virtual bool openjdk_25_v2_apis() = 0;
+    virtual bool os_no_throw_apis() = 0;
     virtual bool post_cleanup_apis() = 0;
     virtual bool read_only_dynamic_code_load() = 0;
-    virtual bool schedule_at_fixed_rate_new_behavior() = 0;
     virtual bool v_apis() = 0;
     virtual bool virtual_thread_api_v1() = 0;
 };
@@ -90,8 +102,14 @@ public:
  extern std::unique_ptr<flag_provider_interface> provider_;
 
 
+constexpr inline bool always_false_test_flag() {
+    return COM_ANDROID_LIBCORE_ALWAYS_FALSE_TEST_FLAG;
+}
 constexpr inline bool appinfo() {
     return COM_ANDROID_LIBCORE_APPINFO;
+}
+constexpr inline bool enable_pcc_framework_support() {
+    return COM_ANDROID_LIBCORE_ENABLE_PCC_FRAMEWORK_SUPPORT;
 }
 constexpr inline bool hpke_public_api() {
     return COM_ANDROID_LIBCORE_HPKE_PUBLIC_API;
@@ -126,14 +144,17 @@ constexpr inline bool openjdk_21_v2_apis() {
 constexpr inline bool openjdk_25_v1_apis() {
     return COM_ANDROID_LIBCORE_OPENJDK_25_V1_APIS;
 }
+constexpr inline bool openjdk_25_v2_apis() {
+    return COM_ANDROID_LIBCORE_OPENJDK_25_V2_APIS;
+}
+constexpr inline bool os_no_throw_apis() {
+    return COM_ANDROID_LIBCORE_OS_NO_THROW_APIS;
+}
 constexpr inline bool post_cleanup_apis() {
     return COM_ANDROID_LIBCORE_POST_CLEANUP_APIS;
 }
 constexpr inline bool read_only_dynamic_code_load() {
     return COM_ANDROID_LIBCORE_READ_ONLY_DYNAMIC_CODE_LOAD;
-}
-constexpr inline bool schedule_at_fixed_rate_new_behavior() {
-    return COM_ANDROID_LIBCORE_SCHEDULE_AT_FIXED_RATE_NEW_BEHAVIOR;
 }
 constexpr inline bool v_apis() {
     return COM_ANDROID_LIBCORE_V_APIS;
@@ -148,7 +169,9 @@ extern "C" {
 #endif // __cplusplus
 
 
+bool com_android_libcore_always_false_test_flag();
 bool com_android_libcore_appinfo();
+bool com_android_libcore_enable_pcc_framework_support();
 bool com_android_libcore_hpke_public_api();
 bool com_android_libcore_hpke_v_apis();
 bool com_android_libcore_madvise_api();
@@ -160,9 +183,10 @@ bool com_android_libcore_openjdk21_stringconcat();
 bool com_android_libcore_openjdk_21_v1_apis();
 bool com_android_libcore_openjdk_21_v2_apis();
 bool com_android_libcore_openjdk_25_v1_apis();
+bool com_android_libcore_openjdk_25_v2_apis();
+bool com_android_libcore_os_no_throw_apis();
 bool com_android_libcore_post_cleanup_apis();
 bool com_android_libcore_read_only_dynamic_code_load();
-bool com_android_libcore_schedule_at_fixed_rate_new_behavior();
 bool com_android_libcore_v_apis();
 bool com_android_libcore_virtual_thread_api_v1();
 
