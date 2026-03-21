@@ -318,6 +318,7 @@ Ljava/lang/Character;->value:C,max-target-p
 Ljava/lang/Class;-><init>()V,unsupported
 Ljava/lang/Class;->accessFlags:I,unsupported
 Ljava/lang/Class;->classLoader:Ljava/lang/ClassLoader;,unsupported
+Ljava/lang/Class;->clinitThreadId:I,max-target-r
 Ljava/lang/Class;->dexCache:Ljava/lang/Object;,unsupported
 Ljava/lang/Class;->dexClassDefIndex:I,unsupported
 Ljava/lang/Class;->getDeclaredMethodsUnchecked(Z)[Ljava/lang/reflect/Method;,unsupported

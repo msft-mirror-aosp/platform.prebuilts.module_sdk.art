@@ -52,10 +52,6 @@ struct MapList {
 struct StringId {
   uint32_t string_data_off_;  // offset in bytes from the base address
 
-  static constexpr size_t StringDataOffsetOffset() {
-    return OFFSETOF_MEMBER(StringId, string_data_off_);
-  }
-
  private:
   DISALLOW_COPY_AND_ASSIGN(StringId);
 };
@@ -85,10 +81,6 @@ struct ProtoId {
   uint16_t pad_;                    // padding = 0
   uint32_t parameters_off_;         // file offset to type_list for parameter types
 
-  static constexpr size_t ShortyIndexOffset() {
-    return OFFSETOF_MEMBER(ProtoId, shorty_idx_);
-  }
-
  private:
   DISALLOW_COPY_AND_ASSIGN(ProtoId);
 };
@@ -98,10 +90,6 @@ struct MethodId {
   dex::TypeIndex class_idx_;   // index into type_ids_ array for defining class
   dex::ProtoIndex proto_idx_;  // index into proto_ids_ array for method prototype
   dex::StringIndex name_idx_;  // index into string_ids_ array for method name
-
-  static constexpr size_t ProtoIndexOffset() {
-    return OFFSETOF_MEMBER(MethodId, proto_idx_);
-  }
 
  private:
   DISALLOW_COPY_AND_ASSIGN(MethodId);
