@@ -5,7 +5,6 @@ package com.android.server.art {
     method @NonNull public static java.util.List<java.lang.String> filterPathsForApk(@NonNull java.util.List<java.lang.String>, @NonNull String);
     method @NonNull public static String getTargetPathForApk(@NonNull String, @NonNull String);
     method public static boolean isArtManaged(@NonNull String);
-    method @CheckResult @NonNull public static java.util.List<com.android.server.art.model.ValidationResult> validateFiles(@NonNull java.util.List<java.lang.String>);
   }
 
   public final class ArtManagerLocal {
@@ -65,7 +64,6 @@ package com.android.server.art {
 
   public class DexUseManagerLocal {
     method @NonNull public static com.android.server.art.DexUseManagerLocal createInstance(@NonNull android.content.Context);
-    method public long getPackageLastUsedAtMillis(@NonNull String);
     method @NonNull public java.util.List<com.android.server.art.model.DexContainerFileUseInfo> getSecondaryDexContainerFileUseInfo(@NonNull String);
     method public void notifyDexContainersLoaded(@NonNull com.android.server.pm.PackageManagerLocal.FilteredSnapshot, @NonNull String, @NonNull java.util.Map<java.lang.String,java.lang.String>);
     method public void systemReady();
@@ -87,7 +85,6 @@ package com.android.server.art {
     field public static final String REASON_INSTALL_BULK_SECONDARY_DOWNGRADED = "install-bulk-secondary-downgraded";
     field public static final String REASON_INSTALL_FAST = "install-fast";
     field public static final String REASON_PRE_REBOOT_DEXOPT = "ab-ota";
-    field public static final String REASON_PRE_REBOOT_DEXOPT_SYNC = "ab-ota-sync";
   }
 
 }
@@ -212,16 +209,6 @@ package com.android.server.art.model {
 
   public abstract class OperationProgress {
     method public int getPercentage();
-  }
-
-  public class ValidationResult {
-    method public int getCode();
-    method @Nullable public String getMessage();
-    method @NonNull public String getPath();
-    field public static final int RESULT_ACCEPTED = 0; // 0x0
-    field public static final int RESULT_SHOULD_DELETE_AND_CONTINUE = 2; // 0x2
-    field public static final int RESULT_SHOULD_FAIL = 3; // 0x3
-    field public static final int RESULT_UNRECOGNIZED = 1; // 0x1
   }
 
 }

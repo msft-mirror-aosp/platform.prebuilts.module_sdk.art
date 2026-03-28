@@ -275,7 +275,6 @@ package dalvik.system {
     method public static void dumpReferenceTables();
     method public static int getAllocCount(int);
     method @Nullable public static dalvik.system.VMDebug.ExecutableMethodFileOffsets getExecutableMethodFileOffsets(@NonNull java.lang.reflect.Method);
-    method @Nullable public static dalvik.system.VMDebug.ExecutableMethodFileOffsets getExecutableMethodFileOffsets(@NonNull java.lang.reflect.Executable);
     method public static int getLoadedClassCount();
     method public static int getMethodTracingMode();
     method public static String getRuntimeStat(String);
@@ -329,7 +328,7 @@ package dalvik.system {
     method public static String getInstructionSet(String);
     method public static dalvik.system.VMRuntime getRuntime();
     method public int getTargetSdkVersion();
-    method public int getThreadNiceness(@NonNull Thread);
+    method public int getThreadNiceness(Thread);
     method public boolean is64Bit();
     method public static boolean is64BitAbi(String);
     method public static boolean is64BitInstructionSet(String);
@@ -358,7 +357,7 @@ package dalvik.system {
     method public static void setProcessDataDirectory(String);
     method public static void setProcessPackageName(String);
     method public void setTargetSdkVersion(int);
-    method public boolean setThreadNiceness(@NonNull Thread, int);
+    method public boolean setThreadNiceness(Thread, int);
     method public void updateProcessState(int);
     method public String vmInstructionSet();
     method public String vmLibrary();
@@ -614,7 +613,6 @@ package libcore.io {
     ctor protected ForwardingOs(@NonNull libcore.io.Os);
     method public boolean access(@Nullable String, int) throws android.system.ErrnoException;
     method public java.io.FileDescriptor open(@Nullable String, int, int) throws android.system.ErrnoException;
-    method public int recvmsgNoThrow(java.io.FileDescriptor, android.system.StructMsghdr, int);
     method public void remove(@Nullable String) throws android.system.ErrnoException;
     method public void rename(@Nullable String, @Nullable String) throws android.system.ErrnoException;
     method @Nullable public android.system.StructStat stat(@Nullable String) throws android.system.ErrnoException;
@@ -676,21 +674,11 @@ package libcore.net {
 
   public abstract class NetworkSecurityPolicy {
     ctor public NetworkSecurityPolicy();
-    method public int getCertificateTransparencyVerificationReason(@NonNull String);
-    method public int getDomainEncryptionMode(@NonNull String);
     method public static libcore.net.NetworkSecurityPolicy getInstance();
     method public abstract boolean isCertificateTransparencyVerificationRequired(String);
     method public abstract boolean isCleartextTrafficPermitted();
     method public abstract boolean isCleartextTrafficPermitted(String);
     method public static void setInstance(libcore.net.NetworkSecurityPolicy);
-    field public static final int CERTIFICATE_TRANSPARENCY_REASON_APP_OPT_IN = 2; // 0x2
-    field public static final int CERTIFICATE_TRANSPARENCY_REASON_DOMAIN_OPT_IN = 3; // 0x3
-    field public static final int CERTIFICATE_TRANSPARENCY_REASON_SDK_TARGET_DEFAULT_ENABLED = 1; // 0x1
-    field public static final int CERTIFICATE_TRANSPARENCY_REASON_UNKNOWN = 0; // 0x0
-    field public static final int DOMAIN_ENCRYPTION_MODE_DISABLED = 1; // 0x1
-    field public static final int DOMAIN_ENCRYPTION_MODE_ENABLED = 3; // 0x3
-    field public static final int DOMAIN_ENCRYPTION_MODE_OPPORTUNISTIC = 2; // 0x2
-    field public static final int DOMAIN_ENCRYPTION_MODE_UNKNOWN = 0; // 0x0
   }
 
 }

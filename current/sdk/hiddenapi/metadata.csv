@@ -319,6 +319,7 @@ signature,maxTargetSdk,presentAfter,publicAlternatives,returnType,trackingBug
 |Ljava/lang/Class;-><init>()V|,||,||,||,||,||
 |Ljava/lang/Class;->accessFlags:I|,||,||,||,||,||
 |Ljava/lang/Class;->classLoader:Ljava/lang/ClassLoader;|,||,||,||,||,||
+|Ljava/lang/Class;->clinitThreadId:I|,|30|,||,||,||,|170729553|
 |Ljava/lang/Class;->dexCache:Ljava/lang/Object;|,||,||,||,||,||
 |Ljava/lang/Class;->dexClassDefIndex:I|,||,||,||,||,||
 |Ljava/lang/Class;->getDeclaredMethodsUnchecked(Z)[Ljava/lang/reflect/Method;|,||,||,||,||,||

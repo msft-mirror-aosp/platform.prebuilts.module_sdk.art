@@ -26,6 +26,7 @@ extern "C" int LLVMFuzzerTestOneInput(const uint8_t* data, size_t size);
 
 namespace art {
 
+class Compiler;
 // Forward declaration for the friend statement below.
 namespace fuzzer {
 ALWAYS_INLINE std::unique_ptr<StandardDexFile> VerifyDexFile(const uint8_t* data,
@@ -33,19 +34,16 @@ ALWAYS_INLINE std::unique_ptr<StandardDexFile> VerifyDexFile(const uint8_t* data
                                                              const std::string& location);
 
 class FuzzerCompilerCallbacks;
-template <typename CompilerOrCompilerOptions, typename CompileFn>
-ALWAYS_INLINE int FuzzerTestOneInputCommon(
+ALWAYS_INLINE int CompilerFuzzerTestOneInput(
     const uint8_t* data,
     size_t size,
-    CompilerOrCompilerOptions* compiler_or_compiler_options,
+    Compiler* compiler,
     FuzzerCompilerCallbacks* callbacks,
     int* skipped_gc_iterations,
     int max_skip_gc_iterations,
     bool debug_prints,
     std::vector<std::unique_ptr<uint8_t[]>>& data_to_delete,
-    std::vector<std::unique_ptr<StandardDexFile>>& dex_files_to_delete,
-    CompileFn compile_fn);
-
+    std::vector<std::unique_ptr<StandardDexFile>>& dex_files_to_delete);
 }  // namespace fuzzer
 
 class OatDexFile;
@@ -159,19 +157,17 @@ class StandardDexFile : public DexFile {
       const uint8_t* data,
       size_t size,
       const std::string& location);  // for constructor
-
-  template <typename CompilerOrCompilerOptions, typename CompileFn>
-  friend ALWAYS_INLINE int fuzzer::FuzzerTestOneInputCommon(
+  friend ALWAYS_INLINE int fuzzer::CompilerFuzzerTestOneInput(
       const uint8_t* data,
       size_t size,
-      CompilerOrCompilerOptions* compiler_or_compiler_options,
+      Compiler* compiler,
       fuzzer::FuzzerCompilerCallbacks* callbacks,
       int* skipped_gc_iterations,
       int max_skip_gc_iterations,
       bool debug_prints,
       std::vector<std::unique_ptr<uint8_t[]>>& data_to_delete,
-      std::vector<std::unique_ptr<StandardDexFile>>& dex_files_to_delete,
-      CompileFn compile_fn);  // for constructor
+      std::vector<std::unique_ptr<StandardDexFile>>& dex_files_to_delete);  // for constructor
+
   DISALLOW_COPY_AND_ASSIGN(StandardDexFile);
 };
 

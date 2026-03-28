@@ -55,9 +55,6 @@ prebuilt_bootclasspath_fragment {
     core_platform_api: {
         stub_libs: ["art.module.public.api.stubs.exportable.module_lib"],
     },
-    dex_preopt: {
-        profile_guided: true,
-    },
     hidden_api: {
         max_target_o_low_priority: ["hiddenapi/hiddenapi-max-target-o-low-priority.txt"],
         blocked: ["hiddenapi/hiddenapi-blocked.txt"],
