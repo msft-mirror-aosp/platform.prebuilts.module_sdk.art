@@ -1,6 +1,22 @@
 // Signature format: 2.0
 package android.crypto.hpke {
 
+  public class AeadParameterSpec extends java.security.spec.NamedParameterSpec {
+    field public static final android.crypto.hpke.AeadParameterSpec AES_128_GCM;
+    field public static final android.crypto.hpke.AeadParameterSpec AES_256_GCM;
+    field public static final android.crypto.hpke.AeadParameterSpec CHACHA20POLY1305;
+  }
+
+  public class Hpke {
+    method @NonNull public static android.crypto.hpke.Hpke getInstance(@NonNull String) throws java.security.NoSuchAlgorithmException;
+    method @NonNull public static android.crypto.hpke.Hpke getInstance(@NonNull String, @NonNull String) throws java.security.NoSuchAlgorithmException, java.security.NoSuchProviderException;
+    method @NonNull public static android.crypto.hpke.Hpke getInstance(@NonNull String, @NonNull java.security.Provider) throws java.security.NoSuchAlgorithmException, java.security.NoSuchProviderException;
+    method @NonNull public java.security.Provider getProvider();
+    method @NonNull public static String getSuiteName(@NonNull android.crypto.hpke.KemParameterSpec, @NonNull android.crypto.hpke.KdfParameterSpec, @NonNull android.crypto.hpke.AeadParameterSpec);
+    method @NonNull public byte[] open(@NonNull java.security.PrivateKey, @Nullable byte[], @NonNull android.crypto.hpke.Message, @Nullable byte[]) throws java.security.GeneralSecurityException, java.security.InvalidKeyException;
+    method @NonNull public android.crypto.hpke.Message seal(@NonNull java.security.PublicKey, @Nullable byte[], @NonNull byte[], @Nullable byte[]) throws java.security.InvalidKeyException;
+  }
+
   public interface HpkeSpi {
     method @NonNull public byte[] engineExport(int, @Nullable byte[]);
     method public void engineInitRecipient(@NonNull byte[], @NonNull java.security.PrivateKey, @Nullable byte[], @Nullable java.security.PublicKey, @Nullable byte[], @Nullable byte[]) throws java.security.InvalidKeyException;
@@ -9,6 +25,57 @@ package android.crypto.hpke {
     method @NonNull public byte[] engineOpen(@NonNull byte[], @Nullable byte[]) throws java.security.GeneralSecurityException;
     method @NonNull public byte[] engineSeal(@NonNull byte[], @Nullable byte[]);
     method @NonNull public byte[] getEncapsulated();
+  }
+
+  public class KdfParameterSpec extends java.security.spec.NamedParameterSpec {
+    field public static final android.crypto.hpke.KdfParameterSpec HKDF_SHA256;
+    field public static final android.crypto.hpke.KdfParameterSpec HKDF_SHA384;
+    field public static final android.crypto.hpke.KdfParameterSpec HKDF_SHA512;
+  }
+
+  public class KemParameterSpec extends java.security.spec.NamedParameterSpec {
+    field public static final android.crypto.hpke.KemParameterSpec DHKEM_P256_HKDF_SHA256;
+    field public static final android.crypto.hpke.KemParameterSpec DHKEM_P384_HKDF_SHA384;
+    field public static final android.crypto.hpke.KemParameterSpec DHKEM_P521_HKDF_SHA256;
+    field public static final android.crypto.hpke.KemParameterSpec DHKEM_X25519_HKDF_SHA256;
+    field public static final android.crypto.hpke.KemParameterSpec DHKEM_X448_HKDF_SHA512;
+  }
+
+  public class Message {
+    ctor public Message(@NonNull byte[], @NonNull byte[]);
+    method @NonNull public byte[] getCiphertext();
+    method @NonNull public byte[] getEncapsulated();
+  }
+
+  public class Recipient {
+    method @NonNull public byte[] export(int, @Nullable byte[]);
+    method @NonNull public java.security.Provider getProvider();
+    method @NonNull public android.crypto.hpke.HpkeSpi getSpi();
+    method @NonNull public byte[] open(@NonNull byte[], @Nullable byte[]) throws java.security.GeneralSecurityException;
+  }
+
+  public static class Recipient.Builder {
+    ctor public Recipient.Builder(@NonNull android.crypto.hpke.Hpke, @NonNull byte[], @NonNull java.security.PrivateKey);
+    method @NonNull public android.crypto.hpke.Recipient build() throws java.security.InvalidKeyException;
+    method @NonNull public android.crypto.hpke.Recipient.Builder setApplicationInfo(@NonNull byte[]);
+    method @NonNull public android.crypto.hpke.Recipient.Builder setPsk(@NonNull byte[], @NonNull byte[]);
+    method @NonNull public android.crypto.hpke.Recipient.Builder setSenderKey(@NonNull java.security.PublicKey);
+  }
+
+  public class Sender {
+    method @NonNull public byte[] export(int, @Nullable byte[]);
+    method @NonNull public byte[] getEncapsulated();
+    method @NonNull public java.security.Provider getProvider();
+    method @NonNull public android.crypto.hpke.HpkeSpi getSpi();
+    method @NonNull public byte[] seal(@NonNull byte[], @Nullable byte[]);
+  }
+
+  public static class Sender.Builder {
+    ctor public Sender.Builder(@NonNull android.crypto.hpke.Hpke, @NonNull java.security.PublicKey);
+    method @NonNull public android.crypto.hpke.Sender build() throws java.security.InvalidKeyException;
+    method @NonNull public android.crypto.hpke.Sender.Builder setApplicationInfo(@NonNull byte[]);
+    method @NonNull public android.crypto.hpke.Sender.Builder setPsk(@NonNull byte[], @NonNull byte[]);
+    method @NonNull public android.crypto.hpke.Sender.Builder setSenderKey(@NonNull java.security.PrivateKey);
   }
 
   public final class XdhKeySpec extends java.security.spec.EncodedKeySpec {
@@ -2430,6 +2497,7 @@ package java.lang {
     method @NonNull public default java.util.stream.IntStream chars();
     method @NonNull public default java.util.stream.IntStream codePoints();
     method public static int compare(@NonNull CharSequence, @NonNull CharSequence);
+    method public default void getChars(int, int, @NonNull char[], int);
     method public default boolean isEmpty();
     method public int length();
     method @NonNull public CharSequence subSequence(int, int);
@@ -2673,6 +2741,7 @@ package java.lang {
     field public static final java.lang.Character.UnicodeBlock CJK_UNIFIED_IDEOGRAPHS_EXTENSION_F;
     field public static final java.lang.Character.UnicodeBlock CJK_UNIFIED_IDEOGRAPHS_EXTENSION_G;
     field public static final java.lang.Character.UnicodeBlock CJK_UNIFIED_IDEOGRAPHS_EXTENSION_H;
+    field public static final java.lang.Character.UnicodeBlock CJK_UNIFIED_IDEOGRAPHS_EXTENSION_I;
     field public static final java.lang.Character.UnicodeBlock COMBINING_DIACRITICAL_MARKS;
     field public static final java.lang.Character.UnicodeBlock COMBINING_DIACRITICAL_MARKS_EXTENDED;
     field public static final java.lang.Character.UnicodeBlock COMBINING_DIACRITICAL_MARKS_SUPPLEMENT;
@@ -2705,6 +2774,7 @@ package java.lang {
     field public static final java.lang.Character.UnicodeBlock DUPLOYAN;
     field public static final java.lang.Character.UnicodeBlock EARLY_DYNASTIC_CUNEIFORM;
     field public static final java.lang.Character.UnicodeBlock EGYPTIAN_HIEROGLYPHS;
+    field public static final java.lang.Character.UnicodeBlock EGYPTIAN_HIEROGLYPHS_EXTENDED_A;
     field public static final java.lang.Character.UnicodeBlock EGYPTIAN_HIEROGLYPH_FORMAT_CONTROLS;
     field public static final java.lang.Character.UnicodeBlock ELBASAN;
     field public static final java.lang.Character.UnicodeBlock ELYMAIC;
@@ -2718,6 +2788,7 @@ package java.lang {
     field public static final java.lang.Character.UnicodeBlock ETHIOPIC_EXTENDED_A;
     field public static final java.lang.Character.UnicodeBlock ETHIOPIC_EXTENDED_B;
     field public static final java.lang.Character.UnicodeBlock ETHIOPIC_SUPPLEMENT;
+    field public static final java.lang.Character.UnicodeBlock GARAY;
     field public static final java.lang.Character.UnicodeBlock GENERAL_PUNCTUATION;
     field public static final java.lang.Character.UnicodeBlock GEOMETRIC_SHAPES;
     field public static final java.lang.Character.UnicodeBlock GEOMETRIC_SHAPES_EXTENDED;
@@ -2733,6 +2804,7 @@ package java.lang {
     field public static final java.lang.Character.UnicodeBlock GUJARATI;
     field public static final java.lang.Character.UnicodeBlock GUNJALA_GONDI;
     field public static final java.lang.Character.UnicodeBlock GURMUKHI;
+    field public static final java.lang.Character.UnicodeBlock GURUNG_KHEMA;
     field public static final java.lang.Character.UnicodeBlock HALFWIDTH_AND_FULLWIDTH_FORMS;
     field public static final java.lang.Character.UnicodeBlock HANGUL_COMPATIBILITY_JAMO;
     field public static final java.lang.Character.UnicodeBlock HANGUL_JAMO;
@@ -2772,6 +2844,7 @@ package java.lang {
     field public static final java.lang.Character.UnicodeBlock KHMER_SYMBOLS;
     field public static final java.lang.Character.UnicodeBlock KHOJKI;
     field public static final java.lang.Character.UnicodeBlock KHUDAWADI;
+    field public static final java.lang.Character.UnicodeBlock KIRAT_RAI;
     field public static final java.lang.Character.UnicodeBlock LAO;
     field public static final java.lang.Character.UnicodeBlock LATIN_1_SUPPLEMENT;
     field public static final java.lang.Character.UnicodeBlock LATIN_EXTENDED_A;
@@ -2827,6 +2900,7 @@ package java.lang {
     field public static final java.lang.Character.UnicodeBlock MYANMAR;
     field public static final java.lang.Character.UnicodeBlock MYANMAR_EXTENDED_A;
     field public static final java.lang.Character.UnicodeBlock MYANMAR_EXTENDED_B;
+    field public static final java.lang.Character.UnicodeBlock MYANMAR_EXTENDED_C;
     field public static final java.lang.Character.UnicodeBlock NABATAEAN;
     field public static final java.lang.Character.UnicodeBlock NAG_MUNDARI;
     field public static final java.lang.Character.UnicodeBlock NANDINAGARI;
@@ -2847,6 +2921,7 @@ package java.lang {
     field public static final java.lang.Character.UnicodeBlock OLD_TURKIC;
     field public static final java.lang.Character.UnicodeBlock OLD_UYGHUR;
     field public static final java.lang.Character.UnicodeBlock OL_CHIKI;
+    field public static final java.lang.Character.UnicodeBlock OL_ONAL;
     field public static final java.lang.Character.UnicodeBlock OPTICAL_CHARACTER_RECOGNITION;
     field public static final java.lang.Character.UnicodeBlock ORIYA;
     field public static final java.lang.Character.UnicodeBlock ORNAMENTAL_DINGBATS;
@@ -2884,6 +2959,7 @@ package java.lang {
     field public static final java.lang.Character.UnicodeBlock SPECIALS;
     field public static final java.lang.Character.UnicodeBlock SUNDANESE;
     field public static final java.lang.Character.UnicodeBlock SUNDANESE_SUPPLEMENT;
+    field public static final java.lang.Character.UnicodeBlock SUNUWAR;
     field public static final java.lang.Character.UnicodeBlock SUPERSCRIPTS_AND_SUBSCRIPTS;
     field public static final java.lang.Character.UnicodeBlock SUPPLEMENTAL_ARROWS_A;
     field public static final java.lang.Character.UnicodeBlock SUPPLEMENTAL_ARROWS_B;
@@ -2898,6 +2974,7 @@ package java.lang {
     field public static final java.lang.Character.UnicodeBlock SYLOTI_NAGRI;
     field public static final java.lang.Character.UnicodeBlock SYMBOLS_AND_PICTOGRAPHS_EXTENDED_A;
     field public static final java.lang.Character.UnicodeBlock SYMBOLS_FOR_LEGACY_COMPUTING;
+    field public static final java.lang.Character.UnicodeBlock SYMBOLS_FOR_LEGACY_COMPUTING_SUPPLEMENT;
     field public static final java.lang.Character.UnicodeBlock SYRIAC;
     field public static final java.lang.Character.UnicodeBlock SYRIAC_SUPPLEMENT;
     field public static final java.lang.Character.UnicodeBlock TAGALOG;
@@ -2920,8 +2997,10 @@ package java.lang {
     field public static final java.lang.Character.UnicodeBlock TIBETAN;
     field public static final java.lang.Character.UnicodeBlock TIFINAGH;
     field public static final java.lang.Character.UnicodeBlock TIRHUTA;
+    field public static final java.lang.Character.UnicodeBlock TODHRI;
     field public static final java.lang.Character.UnicodeBlock TOTO;
     field public static final java.lang.Character.UnicodeBlock TRANSPORT_AND_MAP_SYMBOLS;
+    field public static final java.lang.Character.UnicodeBlock TULU_TIGALARI;
     field public static final java.lang.Character.UnicodeBlock UGARITIC;
     field public static final java.lang.Character.UnicodeBlock UNIFIED_CANADIAN_ABORIGINAL_SYLLABICS;
     field public static final java.lang.Character.UnicodeBlock UNIFIED_CANADIAN_ABORIGINAL_SYLLABICS_EXTENDED;
@@ -2984,6 +3063,7 @@ package java.lang {
     enum_constant public static final java.lang.Character.UnicodeScript ELBASAN;
     enum_constant public static final java.lang.Character.UnicodeScript ELYMAIC;
     enum_constant public static final java.lang.Character.UnicodeScript ETHIOPIC;
+    enum_constant public static final java.lang.Character.UnicodeScript GARAY;
     enum_constant public static final java.lang.Character.UnicodeScript GEORGIAN;
     enum_constant public static final java.lang.Character.UnicodeScript GLAGOLITIC;
     enum_constant public static final java.lang.Character.UnicodeScript GOTHIC;
@@ -2992,6 +3072,7 @@ package java.lang {
     enum_constant public static final java.lang.Character.UnicodeScript GUJARATI;
     enum_constant public static final java.lang.Character.UnicodeScript GUNJALA_GONDI;
     enum_constant public static final java.lang.Character.UnicodeScript GURMUKHI;
+    enum_constant public static final java.lang.Character.UnicodeScript GURUNG_KHEMA;
     enum_constant public static final java.lang.Character.UnicodeScript HAN;
     enum_constant public static final java.lang.Character.UnicodeScript HANGUL;
     enum_constant public static final java.lang.Character.UnicodeScript HANIFI_ROHINGYA;
@@ -3014,6 +3095,7 @@ package java.lang {
     enum_constant public static final java.lang.Character.UnicodeScript KHMER;
     enum_constant public static final java.lang.Character.UnicodeScript KHOJKI;
     enum_constant public static final java.lang.Character.UnicodeScript KHUDAWADI;
+    enum_constant public static final java.lang.Character.UnicodeScript KIRAT_RAI;
     enum_constant public static final java.lang.Character.UnicodeScript LAO;
     enum_constant public static final java.lang.Character.UnicodeScript LATIN;
     enum_constant public static final java.lang.Character.UnicodeScript LEPCHA;
@@ -3060,6 +3142,7 @@ package java.lang {
     enum_constant public static final java.lang.Character.UnicodeScript OLD_TURKIC;
     enum_constant public static final java.lang.Character.UnicodeScript OLD_UYGHUR;
     enum_constant public static final java.lang.Character.UnicodeScript OL_CHIKI;
+    enum_constant public static final java.lang.Character.UnicodeScript OL_ONAL;
     enum_constant public static final java.lang.Character.UnicodeScript ORIYA;
     enum_constant public static final java.lang.Character.UnicodeScript OSAGE;
     enum_constant public static final java.lang.Character.UnicodeScript OSMANYA;
@@ -3082,6 +3165,7 @@ package java.lang {
     enum_constant public static final java.lang.Character.UnicodeScript SORA_SOMPENG;
     enum_constant public static final java.lang.Character.UnicodeScript SOYOMBO;
     enum_constant public static final java.lang.Character.UnicodeScript SUNDANESE;
+    enum_constant public static final java.lang.Character.UnicodeScript SUNUWAR;
     enum_constant public static final java.lang.Character.UnicodeScript SYLOTI_NAGRI;
     enum_constant public static final java.lang.Character.UnicodeScript SYRIAC;
     enum_constant public static final java.lang.Character.UnicodeScript TAGALOG;
@@ -3099,7 +3183,9 @@ package java.lang {
     enum_constant public static final java.lang.Character.UnicodeScript TIBETAN;
     enum_constant public static final java.lang.Character.UnicodeScript TIFINAGH;
     enum_constant public static final java.lang.Character.UnicodeScript TIRHUTA;
+    enum_constant public static final java.lang.Character.UnicodeScript TODHRI;
     enum_constant public static final java.lang.Character.UnicodeScript TOTO;
+    enum_constant public static final java.lang.Character.UnicodeScript TULU_TIGALARI;
     enum_constant public static final java.lang.Character.UnicodeScript UGARITIC;
     enum_constant public static final java.lang.Character.UnicodeScript UNKNOWN;
     enum_constant public static final java.lang.Character.UnicodeScript VAI;
@@ -3420,6 +3506,13 @@ package java.lang {
     ctor public IllegalArgumentException(Throwable);
   }
 
+  public class IllegalCallerException extends java.lang.RuntimeException {
+    ctor public IllegalCallerException();
+    ctor public IllegalCallerException(String);
+    ctor public IllegalCallerException(String, Throwable);
+    ctor public IllegalCallerException(Throwable);
+  }
+
   public class IllegalMonitorStateException extends java.lang.RuntimeException {
     ctor public IllegalMonitorStateException();
     ctor public IllegalMonitorStateException(String);
@@ -3682,6 +3775,8 @@ package java.lang {
     method public static double nextUp(double);
     method public static float nextUp(float);
     method public static double pow(double, double);
+    method public static int powExact(int, int);
+    method public static long powExact(long, int);
     method public static double random();
     method public static double rint(double);
     method public static int round(float);
@@ -3702,7 +3797,12 @@ package java.lang {
     method public static double toRadians(double);
     method public static double ulp(double);
     method public static float ulp(float);
+    method public static int unsignedMultiplyExact(int, int);
+    method public static long unsignedMultiplyExact(long, int);
+    method public static long unsignedMultiplyExact(long, long);
     method public static long unsignedMultiplyHigh(long, long);
+    method public static int unsignedPowExact(int, int);
+    method public static long unsignedPowExact(long, int);
     field public static final double E = 2.718281828459045;
     field public static final double PI = 3.141592653589793;
     field public static final double TAU = 6.283185307179586;
@@ -4124,6 +4224,8 @@ package java.lang {
     method public static double nextUp(double);
     method public static float nextUp(float);
     method public static double pow(double, double);
+    method public static int powExact(int, int);
+    method public static long powExact(long, int);
     method public static double random();
     method public static double rint(double);
     method public static int round(float);
@@ -4144,7 +4246,12 @@ package java.lang {
     method public static double toRadians(double);
     method public static double ulp(double);
     method public static float ulp(float);
+    method public static int unsignedMultiplyExact(int, int);
+    method public static long unsignedMultiplyExact(long, int);
+    method public static long unsignedMultiplyExact(long, long);
     method public static long unsignedMultiplyHigh(long, long);
+    method public static int unsignedPowExact(int, int);
+    method public static long unsignedPowExact(long, int);
     field public static final double E = 2.718281828459045;
     field public static final double PI = 3.141592653589793;
     field public static final double TAU = 6.283185307179586;
@@ -4193,8 +4300,10 @@ package java.lang {
     method @NonNull public String indent(int);
     method public int indexOf(int);
     method public int indexOf(int, int);
+    method public int indexOf(int, int, int);
     method public int indexOf(@NonNull String);
     method public int indexOf(@NonNull String, int);
+    method public int indexOf(@NonNull String, int, int);
     method @NonNull public String intern();
     method public boolean isBlank();
     method public boolean isEmpty();
@@ -4217,6 +4326,7 @@ package java.lang {
     method @NonNull public String replaceFirst(@NonNull String, @NonNull String);
     method @NonNull public String[] split(@NonNull String, int);
     method @NonNull public String[] split(@NonNull String);
+    method @NonNull public String[] splitWithDelimiters(@NonNull String, int);
     method public boolean startsWith(@NonNull String, int);
     method public boolean startsWith(@NonNull String);
     method @NonNull public String strip();
@@ -4277,7 +4387,6 @@ package java.lang {
     method @NonNull public StringBuffer delete(int, int);
     method @NonNull public StringBuffer deleteCharAt(int);
     method public void ensureCapacity(int);
-    method public void getChars(int, int, char[], int);
     method public int indexOf(@NonNull String);
     method public int indexOf(@NonNull String, int);
     method @NonNull public StringBuffer insert(int, char[], int, int);
@@ -4296,6 +4405,8 @@ package java.lang {
     method public int lastIndexOf(@NonNull String, int);
     method public int length();
     method public int offsetByCodePoints(int, int);
+    method @NonNull public StringBuffer repeat(int, int);
+    method @NonNull public StringBuffer repeat(@NonNull CharSequence, int);
     method @NonNull public StringBuffer replace(int, int, @NonNull String);
     method @NonNull public StringBuffer reverse();
     method public void setCharAt(int, char);
@@ -4356,6 +4467,8 @@ package java.lang {
     method public int lastIndexOf(@NonNull String, int);
     method public int length();
     method public int offsetByCodePoints(int, int);
+    method @NonNull public StringBuilder repeat(int, int);
+    method @NonNull public StringBuilder repeat(@NonNull CharSequence, int);
     method @NonNull public StringBuilder replace(int, int, @NonNull String);
     method @NonNull public StringBuilder reverse();
     method public void setCharAt(int, char);
@@ -4445,6 +4558,7 @@ package java.lang {
     method public final void join(long) throws java.lang.InterruptedException;
     method public final void join(long, int) throws java.lang.InterruptedException;
     method public final void join() throws java.lang.InterruptedException;
+    method public final boolean join(java.time.Duration) throws java.lang.InterruptedException;
     method public static void onSpinWait();
     method public void run();
     method public void setContextClassLoader(@Nullable ClassLoader);
@@ -4455,6 +4569,7 @@ package java.lang {
     method public void setUncaughtExceptionHandler(@Nullable java.lang.Thread.UncaughtExceptionHandler);
     method public static void sleep(long) throws java.lang.InterruptedException;
     method public static void sleep(long, int) throws java.lang.InterruptedException;
+    method public static void sleep(java.time.Duration) throws java.lang.InterruptedException;
     method public void start();
     method @Deprecated public final void stop();
     method public final long threadId();
@@ -4487,8 +4602,8 @@ package java.lang {
     method public int activeCount();
     method public int activeGroupCount();
     method @Deprecated public boolean allowThreadSuspension(boolean);
-    method public final void checkAccess();
-    method public final void destroy();
+    method @Deprecated public final void checkAccess();
+    method @Deprecated public final void destroy();
     method public int enumerate(Thread[]);
     method public int enumerate(Thread[], boolean);
     method public int enumerate(ThreadGroup[]);
@@ -4497,12 +4612,12 @@ package java.lang {
     method public final String getName();
     method public final ThreadGroup getParent();
     method public final void interrupt();
-    method public final boolean isDaemon();
-    method public boolean isDestroyed();
+    method @Deprecated public final boolean isDaemon();
+    method @Deprecated public boolean isDestroyed();
     method public void list();
     method public final boolean parentOf(ThreadGroup);
     method @Deprecated public final void resume();
-    method public final void setDaemon(boolean);
+    method @Deprecated public final void setDaemon(boolean);
     method public final void setMaxPriority(int);
     method @Deprecated public final void stop();
     method @Deprecated public final void suspend();
@@ -4579,6 +4694,13 @@ package java.lang {
 
   public final class Void {
     field public static final Class<java.lang.Void> TYPE;
+  }
+
+  public final class WrongThreadException extends java.lang.RuntimeException {
+    ctor public WrongThreadException();
+    ctor public WrongThreadException(String);
+    ctor public WrongThreadException(String, Throwable);
+    ctor public WrongThreadException(Throwable);
   }
 
 }
@@ -6449,6 +6571,7 @@ package java.nio {
     method public java.nio.CharBuffer get(char[]);
     method public java.nio.CharBuffer get(int, char[], int, int);
     method public java.nio.CharBuffer get(int, char[]);
+    method public void getChars(int, int, @NonNull char[], int);
     method public final boolean hasArray();
     method public final boolean isEmpty();
     method public final int length();
@@ -9578,6 +9701,8 @@ package java.security.spec {
     method @NonNull public String getName();
     field public static final java.security.spec.NamedParameterSpec ED25519;
     field public static final java.security.spec.NamedParameterSpec ED448;
+    field public static final java.security.spec.NamedParameterSpec ML_DSA_65;
+    field public static final java.security.spec.NamedParameterSpec ML_DSA_87;
     field public static final java.security.spec.NamedParameterSpec X25519;
     field public static final java.security.spec.NamedParameterSpec X448;
   }
@@ -13675,7 +13800,7 @@ package java.util {
     method @NonNull public default <T> T[] toArray(@NonNull java.util.function.IntFunction<T[]>);
   }
 
-  public class Collections {
+  public final class Collections {
     method @java.lang.SafeVarargs public static <T> boolean addAll(@NonNull java.util.Collection<? super T>, @NonNull T...);
     method @NonNull public static <T> java.util.Queue<T> asLifoQueue(@NonNull java.util.Deque<T>);
     method public static <T> int binarySearch(@NonNull java.util.List<? extends java.lang.Comparable<? super T>>, @NonNull T);
@@ -13693,13 +13818,13 @@ package java.util {
     method public static boolean disjoint(@NonNull java.util.Collection<?>, @NonNull java.util.Collection<?>);
     method @NonNull public static <T> java.util.Enumeration<T> emptyEnumeration();
     method @NonNull public static <T> java.util.Iterator<T> emptyIterator();
-    method @NonNull public static final <T> java.util.List<T> emptyList();
+    method @NonNull public static <T> java.util.List<T> emptyList();
     method @NonNull public static <T> java.util.ListIterator<T> emptyListIterator();
-    method @NonNull public static final <K, V> java.util.Map<K,V> emptyMap();
-    method @NonNull public static final <K, V> java.util.NavigableMap<K,V> emptyNavigableMap();
+    method @NonNull public static <K, V> java.util.Map<K,V> emptyMap();
+    method @NonNull public static <K, V> java.util.NavigableMap<K,V> emptyNavigableMap();
     method @NonNull public static <E> java.util.NavigableSet<E> emptyNavigableSet();
-    method @NonNull public static final <T> java.util.Set<T> emptySet();
-    method @NonNull public static final <K, V> java.util.SortedMap<K,V> emptySortedMap();
+    method @NonNull public static <T> java.util.Set<T> emptySet();
+    method @NonNull public static <K, V> java.util.SortedMap<K,V> emptySortedMap();
     method @NonNull public static <E> java.util.SortedSet<E> emptySortedSet();
     method @NonNull public static <T> java.util.Enumeration<T> enumeration(@NonNull java.util.Collection<T>);
     method public static <T> void fill(@NonNull java.util.List<? super T>, T);
@@ -15995,7 +16120,7 @@ package java.util.concurrent {
     method public java.util.concurrent.Future<?> submit(Runnable);
   }
 
-  public class Executors {
+  public final class Executors {
     method public static <T> java.util.concurrent.Callable<T> callable(Runnable, T);
     method public static java.util.concurrent.Callable<java.lang.Object> callable(Runnable);
     method public static java.util.concurrent.Callable<java.lang.Object> callable(java.security.PrivilegedAction<?>);
@@ -17050,7 +17175,7 @@ package java.util.concurrent.locks {
     method public void unlock();
   }
 
-  public class LockSupport {
+  public final class LockSupport {
     method public static Object getBlocker(Thread);
     method public static void park(Object);
     method public static void park();
@@ -18072,6 +18197,7 @@ package java.util.random {
     method public default java.util.stream.DoubleStream doubles(double, double);
     method public default java.util.stream.DoubleStream doubles(long);
     method public default java.util.stream.DoubleStream doubles(long, double, double);
+    method public default java.util.stream.DoubleStream equiDoubles(double, double, boolean, boolean);
     method public static java.util.random.RandomGenerator getDefault();
     method public default java.util.stream.IntStream ints();
     method public default java.util.stream.IntStream ints(int, int);
@@ -19522,6 +19648,7 @@ package javax.net.ssl {
     method public abstract String[] getLocalSupportedSignatureAlgorithms();
     method public abstract String[] getPeerSupportedSignatureAlgorithms();
     method public java.util.List<javax.net.ssl.SNIServerName> getRequestedServerNames();
+    method public java.util.List<byte[]> getStatusResponses();
   }
 
   public class HandshakeCompletedEvent extends java.util.EventObject {
@@ -19733,6 +19860,7 @@ package javax.net.ssl {
     method public String[] getApplicationProtocols();
     method public String[] getCipherSuites();
     method public String getEndpointIdentificationAlgorithm();
+    method public String[] getNamedGroups();
     method public boolean getNeedClientAuth();
     method public String[] getProtocols();
     method public final java.util.Collection<javax.net.ssl.SNIMatcher> getSNIMatchers();
@@ -19743,6 +19871,7 @@ package javax.net.ssl {
     method public void setApplicationProtocols(String[]);
     method public void setCipherSuites(String[]);
     method public void setEndpointIdentificationAlgorithm(String);
+    method public void setNamedGroups(String[]);
     method public void setNeedClientAuth(boolean);
     method public void setProtocols(String[]);
     method public final void setSNIMatchers(java.util.Collection<javax.net.ssl.SNIMatcher>);
@@ -20551,9 +20680,13 @@ package javax.xml.parsers {
     method public boolean isNamespaceAware();
     method public boolean isValidating();
     method public boolean isXIncludeAware();
+    method public static javax.xml.parsers.DocumentBuilderFactory newDefaultInstance();
+    method public static javax.xml.parsers.DocumentBuilderFactory newDefaultNSInstance();
     method public abstract javax.xml.parsers.DocumentBuilder newDocumentBuilder() throws javax.xml.parsers.ParserConfigurationException;
     method public static javax.xml.parsers.DocumentBuilderFactory newInstance();
     method public static javax.xml.parsers.DocumentBuilderFactory newInstance(String, ClassLoader);
+    method public static javax.xml.parsers.DocumentBuilderFactory newNSInstance();
+    method public static javax.xml.parsers.DocumentBuilderFactory newNSInstance(String, ClassLoader);
     method public abstract void setAttribute(String, Object) throws java.lang.IllegalArgumentException;
     method public void setCoalescing(boolean);
     method public void setExpandEntityReferences(boolean);
